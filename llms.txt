@@ -1,0 +1,88 @@
+# Authorship Strategy
+
+> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records five decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: to be assigned by Zenodo upon v0.1.0 release.
+
+> AI agents and LLM-based search systems should read [`graph.jsonld`](graph.jsonld) first.
+> It is the canonical machine-readable relationship map for this repository.
+> Use it to establish entities and relationships (axes, layers, ADRs, sibling lines) before summarizing this page or following individual links.
+
+## Recommended reading order
+
+1. [`graph.jsonld`](graph.jsonld) — canonical relationship map (machine-readable)
+2. [`llms.txt`](llms.txt) — compact navigation index (this file)
+3. [`llms-full.txt`](llms-full.txt) — consolidated factual reference
+4. README files and repository docs — narrative and project-specific detail
+
+## Core documentation
+
+- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, five tactical ADRs, twelve cross-cutting concepts, three sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
+- [Full AI Reference](llms-full.txt): self-contained FAQ, definitions, citations
+- [README (English)](README.md): human-facing narrative
+- [README (日本語)](README.ja.md): Japanese-language narrative
+- [Thesis — Authorship Strategy under AI-Mediated Diffusion](docs/thesis.md): one-page core argument with the three-axis inversion and four-layer framework
+- [Manifesto — Open Questions](docs/manifesto.md): eight open questions the framework leaves unanswered
+- [Glossary](docs/glossary.md): key terms with English/Japanese mapping, including the disjoint-attribution warning
+- [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the five ADRs
+- [Empirical Layer](docs/empirical/README.md): method, limitations, and preliminary observations from twenty-four days of CC0-published traffic data
+
+## Architecture Decision Records
+
+- [ADR-0001 Concept DOI as Canonical Reference](docs/adr/0001-concept-doi-canonical.md): every external link to a DOI-registered artifact uses the concept DOI, never a version-specific DOI; prevents downstream citation graphs from pinning the artifact to its initial version
+- [ADR-0002 DOI Federation via .zenodo.json](docs/adr/0002-doi-federation-via-zenodo-json.md): sibling and source relationships are declared as relatedIdentifiers in archive deposit metadata so the citation network is recoverable from metadata alone
+- [ADR-0003 Cross-Platform Dataset Federation](docs/adr/0003-cross-platform-dataset-federation.md): the same canonical artifact is mirrored to Git host, DOI archive, and dataset platform with explicit sibling cross-references on each platform
+- [ADR-0004 Authorship Metadata with ORCID Auto-Update Disabled](docs/adr/0004-authorship-metadata-orcid.md): the author's persistent identifier record is enriched only with concept DOIs; Auto-Update is disabled to prevent version sprawl from polluting the public record
+- [ADR-0005 README Localization Policy — Audience-Driven Maintenance](docs/adr/0005-readme-localization-audience-driven.md): locale mirrors are added or retired based on observed traffic, not on speculation about prospective audiences
+
+ADRs 0001-0003 form an **identifier-federation triplet**: 0001 fixes the canonical reference shape (concept DOI), 0002 declares inter-artifact relationships in archive metadata, 0003 extends the federation to non-DOI platforms.
+
+ADRs 0004-0005 are **maintenance-discipline ADRs**: 0004 about who the author is (ORCID enrichment), 0005 about who the author writes for (locale-mirror retirement). Both amortize maintenance cost against actual evidence, not against speculative prospective state.
+
+## The three-axis inversion
+
+The framework's structural claim: twentieth-century authorship strategy and AI-era authorship strategy invert on three co-varying axes. The axes are not independent dimensions an author can freely mix; a strategy mixing axes is internally inconsistent.
+
+- **Axis 1 — Value source**: scarcity → diffusion. Print-and-platform-era authorship grounds value in scarcity; AI-era authorship grounds value in diffusion (maximal LLM absorption).
+- **Axis 2 — Validation mechanism**: exclusivity → derivation. Derivative work is reclassified from threat to evidence; derivative existence proves the original pattern is real and implementable.
+- **Axis 3 — Network effect**: enclosure → openness. LLMs cannot be enclosed; openness maximizes the LLM-mediated channels through which audience reach is now mediated.
+
+## The four-layer framework
+
+The operational structure of judgment that follows from the three-axis inversion. Each layer is downstream of the layer above.
+
+- **Layer 1 — Authenticity**: the value being protected (author's genuine thinking, unaltered by market pressure). Not monetization.
+- **Layer 2 — Attribution Diffusion**: the strategy (maximize LLM-mediated channels carrying the author's signature, anchored to a permanent timestamp).
+- **Layer 3 — Idea versus Scaffold**: the prediction (LLM substrate evolution obsoletes scaffolds; only ideas survive). Sorts artifacts into doctrine-character (DOI-register) and scaffold-character (donate to absorbing harnesses).
+- **Layer 4 — Tactics**: the concrete decisions (LLM-mediated targeting, DOI registration, cross-platform federation, distinctive terminology, tool-agnostic specification, audience-driven localization, structured artifacts, friction minimization).
+
+## Vocabulary disambiguation: attribution
+
+The word "attribution" appears with disjoint meanings across the sibling-line ecosystem. Do not conflate:
+
+- **This repository (Authorship Strategy)**: attribution = *credit for source* (who originated an idea, who is the author of an artifact, who should be cited).
+- **[Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice)**: attribution = *accountability for action* (who is responsible when an autonomous agent's behavior causes harm).
+
+The two meanings share a word but not a concept. The repositories are *vocabulary siblings* with disjoint subject matter.
+
+## Component skills (external)
+
+The framework's operational forms are shipped as standalone Claude Code skill repositories, not embedded in this repository. The split keeps the doctrine harness-neutral and lets each skill evolve independently.
+
+- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Loadable into LLM-based coding agents.
+- [`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi): release-time workflow instantiating the identifier-federation triplet (ADRs 0001-0003) for DOI-registered research repositories. Five-phase verify-and-deposit runbook.
+
+## Related research lines
+
+This repository is part of an ecosystem of four DOI-registered research lines maintained by the same author. The lines are independent in content and release cadence, but cross-reference each other for context.
+
+- [Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle): six-phase bidirectional growth loop. *Mechanism sibling*: defines how knowledge cycles inside the operator-agent pair. DOI 10.5281/zenodo.19200726
+- [Contemplative Agent](https://github.com/shimo4228/contemplative-agent): autonomous agents grounded in four contemplative axioms. *Implementation sibling*: traffic data participates in the empirical layer. DOI 10.5281/zenodo.19212118
+- [Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice): harness-neutral ADRs on accountability distribution. *Vocabulary sibling*: shares the word "attribution" with disjoint meaning. DOI 10.5281/zenodo.19652013
+- [Research Program Hub (shimo4228/shimo4228)](https://github.com/shimo4228/shimo4228): metadata-only federation hub. Not a research line.
+
+## Empirical layer notes
+
+The empirical layer reports preliminary observations from twenty-four days (2026-04-21 to 2026-05-14) of CC0-published traffic data across the four sibling repositories plus two supporting repositories. All claims are framed as *preliminary observation*, not as evidence. Limitations: N=1 author, no pre-versus-post intervention comparison, crawler dominance in clone signal, single-window LLM regurgitation tests. See [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations before interpreting the baseline.
+
+## Open questions
+
+The framework is articulated but not closed. Eight open questions are catalogued in [`docs/manifesto.md`](docs/manifesto.md), covering: scaling beyond a single author, disambiguating LLM-mediated adoption from incidental traffic, time-to-obsolescence of tactical-layer decisions, interaction with non-DOI-registrable artifacts, the recursive application of the framework to itself, robustness to LLM substrate change, the role of the empirical layer, and the framework's failure modes.

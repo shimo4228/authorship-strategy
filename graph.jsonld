@@ -1,0 +1,354 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "shimo": "https://shimo4228.github.io/shimo4228/vocab#",
+    "ResearchLine": "shimo:ResearchLine",
+    "EcosystemRepo": "shimo:EcosystemRepo",
+    "Concept": "shimo:Concept",
+    "ExternalReference": "shimo:ExternalReference",
+    "ADR": "shimo:ADR",
+    "Axis": "shimo:Axis",
+    "Layer": "shimo:Layer",
+    "siblingOf": {"@id": "shimo:siblingOf", "@type": "@id"},
+    "derivesFrom": {"@id": "shimo:derivesFrom", "@type": "@id"},
+    "derivedFrom": {"@id": "shimo:derivedFrom", "@type": "@id"},
+    "definesConcept": {"@id": "shimo:definesConcept", "@type": "@id"},
+    "definedBy": {"@id": "shimo:definedBy", "@type": "@id"},
+    "extends": {"@id": "shimo:extends", "@type": "@id"},
+    "groundedIn": {"@id": "shimo:groundedIn", "@type": "@id"},
+    "appliesTo": {"@id": "shimo:appliesTo", "@type": "@id"},
+    "composedOf": {"@id": "shimo:composedOf", "@type": "@id", "@container": "@list"},
+    "pairedWith": {"@id": "shimo:pairedWith", "@type": "@id"},
+    "invertsTo": {"@id": "shimo:invertsTo", "@type": "@id"},
+    "covaresWith": {"@id": "shimo:covariesWith", "@type": "@id"},
+    "downstreamOf": {"@id": "shimo:downstreamOf", "@type": "@id"},
+    "instantiatedBy": {"@id": "shimo:instantiatedBy", "@type": "@id"},
+    "recordedIn": {"@id": "shimo:recordedIn", "@type": "@id"},
+    "citedBy": {"@id": "shimo:citedBy", "@type": "@id"},
+    "vocabularyDisjoint": {"@id": "shimo:vocabularyDisjoint", "@type": "@id"},
+    "subjectOf": {"@id": "https://schema.org/subjectOf", "@type": "@id"},
+    "hasPart": {"@id": "https://schema.org/hasPart", "@type": "@id"},
+    "mainEntity": {"@id": "https://schema.org/mainEntity", "@type": "@id"},
+    "axisPosition": "shimo:axisPosition",
+    "layerOrdinal": "shimo:layerOrdinal",
+    "narrativePosition": "shimo:narrativePosition"
+  },
+  "@graph": [
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
+      "@type": ["Dataset", "CreativeWork"],
+      "name": "Authorship Strategy Knowledge Graph",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the five tactical ADRs forming the identifier-federation triplet plus the two maintenance-discipline ADRs, the three sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. AI agents and LLM-based search systems should read this graph before summarizing the line or following individual document links.",
+      "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
+      "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
+      "license": "https://opensource.org/licenses/MIT",
+      "inLanguage": ["en", "ja"],
+      "keywords": [
+        "authorship strategy",
+        "AI-era authenticity",
+        "attribution diffusion",
+        "three-axis inversion",
+        "four-layer framework",
+        "idea vs scaffold",
+        "concept DOI",
+        "DOI federation",
+        "cross-platform federation",
+        "ORCID enrichment",
+        "audience-driven localization",
+        "LLM-mediated diffusion",
+        "generative engine optimization",
+        "scientometrics",
+        "idea-rescue"
+      ]
+    },
+
+    {
+      "@id": "https://orcid.org/0009-0002-6168-4162",
+      "@type": "Person",
+      "name": "Tatsuya Shimomoto",
+      "alternateName": "shimo4228",
+      "sameAs": [
+        "https://github.com/shimo4228",
+        "https://orcid.org/0009-0002-6168-4162"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy",
+      "@type": ["ResearchLine", "ScholarlyArticle"],
+      "name": "Authorship Strategy",
+      "alternateName": [
+        {"@value": "Authorship Strategy", "@language": "en"},
+        {"@value": "著者戦略", "@language": "ja"}
+      ],
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records five decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "url": "https://github.com/shimo4228/authorship-strategy",
+      "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
+      "license": "https://opensource.org/licenses/MIT",
+      "inLanguage": ["en", "ja"],
+      "siblingOf": [
+        "https://doi.org/10.5281/zenodo.19200726",
+        "https://doi.org/10.5281/zenodo.19212118",
+        "https://doi.org/10.5281/zenodo.19652013"
+      ],
+      "isPartOf": "https://github.com/shimo4228/shimo4228",
+      "definesConcept": [
+        "https://github.com/shimo4228/authorship-strategy#concept/three-axis-inversion",
+        "https://github.com/shimo4228/authorship-strategy#concept/four-layer-framework",
+        "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
+        "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+        "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+        "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer",
+        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
+        "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
+        "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology"
+      ],
+      "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/three-axis-inversion",
+      "@type": "Concept",
+      "name": "Three-Axis Inversion",
+      "alternateName": [
+        {"@value": "Three-Axis Inversion", "@language": "en"},
+        {"@value": "3 軸反転", "@language": "ja"}
+      ],
+      "description": "The structural claim that twentieth-century authorship strategy and AI-era authorship strategy invert on three co-varying axes: value source (scarcity to diffusion), validation mechanism (exclusivity to derivation), network effect (enclosure to openness). The three axes co-vary; a strategy mixing axes is internally inconsistent.",
+      "composedOf": [
+        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+      ],
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/four-layer-framework",
+      "@type": "Concept",
+      "name": "Four-Layer Framework",
+      "alternateName": [
+        {"@value": "Four-Layer Framework", "@language": "en"},
+        {"@value": "4 層 framework", "@language": "ja"}
+      ],
+      "description": "The operational structure of judgment that follows from the three-axis inversion: Authenticity (Layer 1, the value being protected), Attribution Diffusion (Layer 2, the strategy), Idea versus Scaffold (Layer 3, what survives), Tactics (Layer 4, the concrete decisions). Each layer is downstream of the layer above.",
+      "composedOf": [
+        "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
+        "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+        "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+        "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer"
+      ],
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+      "@type": ["Concept", "Axis"],
+      "name": "Scarcity-to-Diffusion Axis",
+      "description": "First axis of the three-axis inversion: value source. Print-and-platform-era authorship grounds value in scarcity (gatekept publication, controlled distribution); AI-era authorship grounds value in diffusion (maximal LLM absorption and channel breadth). The axis inverts because the substrate inverts.",
+      "axisPosition": 1,
+      "invertsTo": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+      "covaresWith": [
+        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
+      "@type": ["Concept", "Axis"],
+      "name": "Exclusivity-to-Derivation Axis",
+      "description": "Second axis of the three-axis inversion: validation mechanism. Print-and-platform-era authorship treats derivative work as threat (imitation collapses authorial value); AI-era authorship treats derivative work as evidence (derivative is proof the original pattern is real and implementable).",
+      "axisPosition": 2,
+      "covaresWith": [
+        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
+      "@type": ["Concept", "Axis"],
+      "name": "Enclosure-to-Openness Axis",
+      "description": "Third axis of the three-axis inversion: network effect. Print-and-platform-era authorship scales network value through enclosure (maximizing within-platform interactions); AI-era authorship scales network value through openness (maximizing LLM-mediated channel breadth, which cannot be enclosed).",
+      "axisPosition": 3,
+      "covaresWith": [
+        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
+      "@type": ["Concept", "Layer"],
+      "name": "Authenticity (Layer 1)",
+      "description": "The protected value at the framework's foundation: the author's genuine thinking remains the author's, unaltered by market pressure to reshape it for sale. Monetization is not a goal. Narrower than the philosophical usage of authenticity; specifically about preservation of authored content against dilutive market pressure.",
+      "layerOrdinal": 1
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "@type": ["Concept", "Layer"],
+      "name": "Attribution Diffusion (Layer 2)",
+      "description": "The defensive strategy at the framework's second layer: maximizing the breadth of LLM-mediated channels carrying recognizable signatures of the author's ideas, anchored to a permanent timestamp. Here attribution means credit for source (who originated an idea), not accountability for action (who is responsible for a failure).",
+      "layerOrdinal": 2,
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/authenticity"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+      "@type": ["Concept", "Layer"],
+      "name": "Idea versus Scaffold (Layer 3)",
+      "description": "The framework's third layer: sorting each artifact into idea-character (which survives and is DOI-registered under the author's name) or scaffold-character (which dissolves into larger harnesses whose own diffusion absorbs the implementation). Mixed-character artifacts get idea-level DOI registration first.",
+      "layerOrdinal": 3,
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer",
+      "@type": ["Concept", "Layer"],
+      "name": "Tactics (Layer 4)",
+      "description": "The framework's fourth layer: concrete operational decisions justified by the upstream three layers. Tactics enter and retire as substrates evolve. Currently validated tactics include LLM-mediated targeting, DOI registration, cross-platform federation, distinctive terminology, tool-agnostic specification, audience-driven localization, structured artifacts, and friction minimization for adoption.",
+      "layerOrdinal": 4,
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+      "instantiatedBy": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0001",
+        "https://github.com/shimo4228/authorship-strategy#adr/0002",
+        "https://github.com/shimo4228/authorship-strategy#adr/0003",
+        "https://github.com/shimo4228/authorship-strategy#adr/0004",
+        "https://github.com/shimo4228/authorship-strategy#adr/0005"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
+      "@type": "Concept",
+      "name": "Abstract Doctrine + Worked Implementation Pair",
+      "description": "The pairing required to induce creative re-implementation by other authors: an abstract-doctrine repository that articulates the idea cleanly enough for elsewhere-implementation, and a worked-implementation repository that demonstrates the doctrine is implementable. Doctrine alone produces unactionable interest; implementation alone produces unextractable principle.",
+      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
+      "@type": "Concept",
+      "name": "Origin-Claim Scope Discipline",
+      "description": "A subordinate principle applying at all four layers: the origin claim must be narrower than the prior art. Claiming priority on a broad pattern with rich prior art collapses the claim's credibility; claiming priority on a narrow, specifically-named discipline is defensible. Coined terminology is the substrate of narrow origin claims."
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
+      "@type": "Concept",
+      "name": "Distinctive Terminology",
+      "alternateName": [
+        {"@value": "Distinctive Terminology", "@language": "en"},
+        {"@value": "造語的用語", "@language": "ja"}
+      ],
+      "description": "Domain-specific words coined by an author as semantic signatures of authorship. Generic vocabulary dissolves through paraphrase; coined terms survive as token-level signals carrying back-reference to the original author. A Layer 4 tactic and the substrate of origin-claim scope discipline."
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0001",
+      "@type": "ADR",
+      "name": "ADR-0001: Concept DOI as Canonical Reference",
+      "description": "Every external link to a DOI-registered artifact uses the concept DOI; version-specific DOIs are used only for reproducibility citations of specific historical versions. Prevents downstream citation graphs from pinning the artifact to its initial version.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0001-concept-doi-canonical.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0002",
+      "@type": "ADR",
+      "name": "ADR-0002: DOI Federation via .zenodo.json",
+      "description": "Sibling, source, and platform-mirror relationships are declared as relatedIdentifiers in archive deposit metadata so the citation network is recoverable from metadata alone, without requiring readers to follow prose disclosures.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0002-doi-federation-via-zenodo-json.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0001"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0003",
+      "@type": "ADR",
+      "name": "ADR-0003: Cross-Platform Dataset Federation",
+      "description": "The same canonical artifact is mirrored to multiple platforms (Git host, DOI archive, dataset platform) with explicit sibling cross-references on each platform so readers entering from any platform can discover the artifact's presence on the others.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0003-cross-platform-dataset-federation.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0002"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0004",
+      "@type": "ADR",
+      "name": "ADR-0004: Authorship Metadata with ORCID Auto-Update Disabled",
+      "description": "The author's persistent identifier record is enriched only with concept DOIs (never version DOIs); the archive-to-ORCID Auto-Update feature is explicitly disabled to prevent version sprawl from polluting the public record.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0004-authorship-metadata-orcid.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0005",
+      "@type": "ADR",
+      "name": "ADR-0005: README Localization Policy — Audience-Driven Maintenance",
+      "description": "Locale mirrors of human-facing documentation are added or retired based on observed traffic data, not on speculation about prospective audiences. A mirror without measurable direct human audience is retired even when the language community seems important in the abstract.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0005-readme-localization-audience-driven.md"
+    },
+
+    {
+      "@id": "https://doi.org/10.5281/zenodo.19200726",
+      "@type": ["ResearchLine", "EcosystemRepo"],
+      "name": "Agent Knowledge Cycle (AKC)",
+      "alternateName": "AKC",
+      "description": "Six-phase bidirectional growth loop for sustaining intent alignment between an AI agent and its operator over time. Mechanism sibling: defines how knowledge cycles inside the operator-agent pair; this research line addresses how the cycle's outputs diffuse outside it.",
+      "url": "https://github.com/shimo4228/agent-knowledge-cycle",
+      "identifier": "10.5281/zenodo.19200726",
+      "siblingOf": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://doi.org/10.5281/zenodo.19212118",
+      "@type": ["ResearchLine", "EcosystemRepo"],
+      "name": "Contemplative Agent",
+      "description": "Autonomous agents running on a local 9B model, grounded in four contemplative axioms. Implementation sibling: this repository participates in the empirical layer's traffic dataset, and its non-dualistic axiomatic foundation supplies the underlying rationale for the framework's scaffold-as-collaborator commitment.",
+      "url": "https://github.com/shimo4228/contemplative-agent",
+      "identifier": "10.5281/zenodo.19212118",
+      "siblingOf": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://doi.org/10.5281/zenodo.19652013",
+      "@type": ["ResearchLine", "EcosystemRepo"],
+      "name": "Agent Attribution Practice (AAP)",
+      "description": "Harness-neutral ADRs on accountability distribution in autonomous AI agents. Vocabulary sibling: shares the word 'attribution' but with disjoint meaning (accountability for action vs. credit for source). The two meanings are intentionally kept separate; do not conflate.",
+      "url": "https://github.com/shimo4228/agent-attribution-practice",
+      "identifier": "10.5281/zenodo.19652013",
+      "siblingOf": "https://github.com/shimo4228/authorship-strategy",
+      "vocabularyDisjoint": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/shimo4228",
+      "@type": "EcosystemRepo",
+      "name": "Research Program Hub",
+      "description": "Metadata-only federation hub at the center of the shimo4228 research program. Aggregates cross-references to sibling research lines without containing line-specific content itself. Not a research line; treating it as one collapses the distinction between content and metadata.",
+      "url": "https://github.com/shimo4228/shimo4228",
+      "hasPart": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
+      "@type": "EcosystemRepo",
+      "name": "claude-skill-authorship-strategy",
+      "description": "Operational form of the four-layer judgment checklist from this research line, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Component skill, not embedded in the doctrine repository, to keep the doctrine harness-neutral.",
+      "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
+      "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/claude-skill-release-doi",
+      "@type": "EcosystemRepo",
+      "name": "claude-skill-release-doi",
+      "description": "Release-time workflow instantiating the identifier-federation triplet (ADRs 0001-0003) from this research line, packaged as a standalone Claude Code skill repository. Five-phase verify-and-deposit runbook for DOI-registered research repositories.",
+      "url": "https://github.com/shimo4228/claude-skill-release-doi",
+      "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
+    }
+  ]
+}

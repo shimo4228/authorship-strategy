@@ -1,0 +1,347 @@
+# Authorship Strategy — Full AI Reference
+
+A consolidated factual reference for AI agents and LLM-based search
+systems. Self-contained; includes definitions, the three-axis inversion,
+the four-layer framework, the five ADRs, vocabulary disambiguation, and
+sibling-line cross-references. Read [`graph.jsonld`](graph.jsonld) first
+for the canonical machine-readable relationship map; use this file as
+narrative reference.
+
+Project: **Authorship Strategy**
+Author: Tatsuya Shimomoto (shimo4228), ORCID 0009-0002-6168-4162
+License: MIT
+Repository: https://github.com/shimo4228/authorship-strategy
+DOI: to be assigned by Zenodo upon v0.1.0 release
+
+---
+
+## Q: What does this repository address?
+
+This repository records *authorship strategy under AI-mediated
+diffusion* — the set of practices an author uses to remain a
+recoverable authorial identity when their work propagates through
+LLM-mediated channels.
+
+The framework rests on two structural claims. First, twentieth-century
+authorship strategy and AI-era authorship strategy invert on three
+co-varying axes (value source, validation mechanism, network effect).
+Second, the operational structure of judgment under the inverted
+strategy can be organized as four layers (authenticity, attribution
+diffusion, idea-versus-scaffold separation, tactics), each downstream
+of the layer above.
+
+The five ADRs in the repository are tactical decisions extracted from
+operating a four-repository DOI-registered research ecosystem; they
+are re-expressed in harness-neutral form so adopting authors can use
+them without inheriting the original sibling-line content.
+
+## Q: What does "authorship strategy" mean here?
+
+The set of practices an author uses to remain a recoverable authorial
+identity as their work propagates through a particular substrate. The
+framework concerns authorship strategy under *AI-mediated diffusion*
+specifically. Authorship strategy is broader than publication
+strategy: it concerns the long-tail relationship between author and
+audience, not the discrete event of publication.
+
+The substrate change the framework is articulated against is the
+shift from print-and-platform conditions (where readers find authored
+work through gatekept journals, proprietary licenses, and controlled
+distribution) to LLM-mediated conditions (where readers find authored
+work indirectly, through LLMs they consult).
+
+## Q: What is the three-axis inversion?
+
+The framework's structural claim: authorship strategy inverts on
+three axes simultaneously when the substrate shifts from
+print-and-platform to LLM-mediated.
+
+**Axis 1 — Value source: scarcity to diffusion.**
+Print-and-platform-era authorship grounds value in scarcity. A widely-
+copied artifact whose copies are indistinguishable from the original
+loses authorial value to each copy; the defensive move is to make the
+original distinguishable and the unauthorized copy difficult.
+
+AI-era authorship grounds value in diffusion. A widely-absorbed
+artifact gains an additional channel through which a future query can
+be answered with reference to the original author; the defensive
+move is to make the artifact maximally absorbable (permissive license,
+machine-readable structure, distinctive terminology).
+
+**Axis 2 — Validation mechanism: exclusivity to derivation.**
+Print-and-platform-era authorship treats derivative work as threat
+(imitation collapses authorial value); the priority claim is resolved
+through copyright exclusivity.
+
+AI-era authorship treats derivative work as evidence (derivative is
+proof the original pattern is real and implementable); the priority
+claim is established through DOI timestamp at the moment of
+publication, and the derivative is *evidence* the claim is valid.
+
+**Axis 3 — Network effect: enclosure to openness.**
+Print-and-platform-era authorship scales network value through
+enclosure (maximizing within-platform interactions, bounded by exit
+cost).
+
+AI-era authorship scales network value through openness. LLMs cannot
+be enclosed: any publicly-accessible content is ingest-eligible, and
+content not publicly accessible is invisible to LLM-mediated
+audiences. The strategic implication is that licensing, access
+policy, and distribution architecture should be selected to maximize
+absorption, not minimize unauthorized reach.
+
+The three axes co-vary; a strategy mixing axes (enclosure with
+derivation-welcoming license, scarcity with crawler-friendly access)
+is internally inconsistent and weaker than either consistent
+strategy. The strongest authorship strategy under AI-mediated
+diffusion is fully inverted on all three axes.
+
+## Q: What is the four-layer framework?
+
+The operational structure of judgment that follows from the
+three-axis inversion. Each layer is downstream of the layer above.
+
+**Layer 1 — Authenticity.** The protected value: the author's
+genuine thinking remains the author's, unaltered by market pressure
+to reshape it for sale. Monetization is not a goal. An idea diluted
+to be sold is no longer the idea that was thought; the authorial
+identity that survives the dilution is not the identity the author
+wants protected.
+
+**Layer 2 — Attribution Diffusion.** The defensive strategy:
+maximizing the breadth of LLM-mediated channels carrying recognizable
+signatures of the author's ideas, anchored to a permanent timestamp.
+The non-primary audience under this strategy is direct human
+browsers; the strategy optimizes for LLM-mediated reach and accepts
+direct-browser brand drift as a consequence.
+
+**Layer 3 — Idea versus Scaffold.** The framework's prediction: LLM
+capability improvements obsolete harness, scaffolding, and tooling
+layers; only ideas survive. The operational consequence is a sorting
+decision per artifact (idea-character artifacts get DOI registration
+under the author's name; scaffold-character artifacts are donated as
+implementations into larger harnesses).
+
+**Layer 4 — Tactics.** Concrete operational decisions justified by
+the upstream three layers. Tactics enter and retire as substrates
+evolve. Currently validated tactics include LLM-mediated targeting,
+DOI registration, cross-platform federation, distinctive terminology,
+tool-agnostic specification, audience-driven localization, structured
+artifacts, and friction minimization for adoption.
+
+## Q: What are the five ADRs?
+
+The five tactical ADRs in the repository:
+
+**ADR-0001 Concept DOI as Canonical Reference.**
+Every external link to a DOI-registered artifact uses the concept
+DOI (which resolves to the latest version), never a version-specific
+DOI. Version DOIs are used only for reproducibility citations of
+specific historical versions. Prevents downstream citation graphs
+from pinning the artifact to its initial version.
+
+**ADR-0002 DOI Federation via .zenodo.json.**
+Sibling, source, and platform-mirror relationships between
+DOI-registered artifacts are declared as relatedIdentifiers in
+archive deposit metadata, so the inter-artifact citation network is
+recoverable from the metadata alone without requiring readers to
+follow prose disclosures.
+
+**ADR-0003 Cross-Platform Dataset Federation.**
+The same canonical artifact is mirrored to multiple platforms (Git
+host, DOI archive, dataset platform) with explicit sibling
+cross-references on each platform, so readers entering from any
+platform can discover the artifact's presence on the others.
+
+**ADR-0004 Authorship Metadata with ORCID Auto-Update Disabled.**
+The author's persistent identifier record is enriched only with
+concept DOIs (never version DOIs); the archive-to-ORCID Auto-Update
+feature is explicitly disabled to prevent version sprawl from
+polluting the public record.
+
+**ADR-0005 README Localization Policy — Audience-Driven Maintenance.**
+Locale mirrors of human-facing documentation are added or retired
+based on observed traffic data, not on speculation about prospective
+audiences. A mirror without measurable direct human audience is
+retired even when the language community seems important in the
+abstract.
+
+ADRs 0001-0003 form the **identifier-federation triplet**: 0001
+fixes the canonical reference shape, 0002 declares inter-artifact
+relationships in archive metadata, 0003 extends the federation to
+non-DOI platforms.
+
+ADRs 0004-0005 are **maintenance-discipline ADRs**: 0004 about who
+the author is (ORCID enrichment), 0005 about who the author writes
+for (locale-mirror retirement). Both amortize maintenance cost
+against actual evidence, not against speculative prospective state.
+
+## Q: Why does "attribution" mean different things in this repository and in AAP?
+
+The word "attribution" appears with two disjoint meanings across
+the sibling-line ecosystem:
+
+- **This repository (Authorship Strategy)**: attribution = *credit for source*. The defended position is the author's: who originated an idea, who is the author of an artifact, who should be cited when the idea is invoked.
+- **[Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice)**: attribution = *accountability for action*. The defended position is the operator's and affected parties': who is responsible when an autonomous agent's behavior causes harm, who can be held answerable, where the responsibility chain terminates.
+
+The two meanings share a word but not a concept. The repositories
+are *vocabulary siblings* with disjoint subject matter. A reader
+who has encountered AAP may assume this repository extends AAP's
+notion of attribution to authorship; it does not.
+
+## Q: What is the idea-versus-scaffold distinction?
+
+The framework's Layer 3 prediction: LLM capability improvements
+obsolete harness, scaffolding, and tooling layers; only ideas
+survive.
+
+An **idea** is a claim, distinction, or pattern an author articulates
+that is expected to outlast its current implementation. Ideas are the
+target of authorship strategy.
+
+A **scaffold** is an implementation, harness, framework, tool, or
+piece of infrastructure that exists to enable some authoring work but
+is expected to be obsoleted by capability improvements in underlying
+substrates (typically LLMs). Scaffolds are *not* the target of
+authorship strategy; the framework predicts they will dissolve.
+
+The operational discipline of sorting each artifact into idea or
+scaffold *before* deciding how to preserve the author's claim:
+
+- Idea-character artifacts get DOI registration under the author's name.
+- Scaffold-character artifacts may be donated as implementations into larger harnesses whose own diffusion will absorb them.
+- Mixed-character artifacts get idea-level DOI registration *first* (to prevent the dissolving scaffold from establishing the priority claim at the dissolution level).
+
+## Q: What is the abstract-doctrine-plus-worked-implementation pair?
+
+Creative re-implementation by other authors — the strongest
+validation of an idea under the framework — requires both:
+
+- An **abstract doctrine** repository that articulates the idea
+  cleanly enough to be implemented elsewhere without inheriting the
+  original implementation's local commitments.
+- A **worked implementation** repository that demonstrates how the
+  idea actually instantiates so a reader can verify the abstract
+  doctrine is implementable.
+
+Doctrine alone produces "the concept is interesting but I cannot
+picture the implementation." Implementation alone produces "the code
+works but I cannot extract the principle." The pair produces
+re-implementation.
+
+The author's strategic move is therefore to *publish in pairs*
+whenever both are achievable.
+
+## Q: What is the origin-claim-scope discipline?
+
+A subordinate principle applying at all four layers: the origin
+claim must be narrower than the prior art.
+
+Claiming priority on a broad pattern with rich prior art ("inventor
+of agent self-improvement loops") collapses the claim's credibility;
+claiming priority on a narrow, specifically-named discipline
+("originator of the named six-phase cycle") is defensible.
+
+Coined terminology (distinctive terminology, Layer 4 tactic 4) is
+the substrate of narrow origin claims; an author cannot defensibly
+originate a generically-named idea.
+
+## Q: What does the empirical layer report?
+
+The empirical layer reports *preliminary observations* (not
+evidence) from twenty-four days of CC0-published traffic data
+(2026-04-21 to 2026-05-14) across four sibling research repositories
+plus two supporting repositories.
+
+Per-repository cumulative observations from the window:
+
+- Federation hub (`shimo4228`): 348 clones, 181 unique cloners, 3 views, 2 unique viewers. Clone/view ratio ~116.
+- Agent Knowledge Cycle (AKC): 233 clones, 108 unique cloners, 13 views, 11 unique viewers. Clone/view ratio ~18.
+- Contemplative Agent: 1,140 clones, 404 unique cloners, 31 views, 20 unique viewers. Clone/view ratio ~37.
+- Agent Attribution Practice (AAP): 228 clones, 118 unique cloners, 17 views, 14 unique viewers. Clone/view ratio ~13.
+- Contemplative Agent live data: 930 clones, 230 unique cloners, 45 views, 22 unique viewers. Clone/view ratio ~21.
+- Writing source (zenn-content): 438 clones, 178 unique cloners, 8 views, 8 unique viewers. Clone/view ratio ~55.
+
+Five preliminary observations are recorded:
+
+1. Clone counts overwhelm view counts in every repository (ratios 13 to >100).
+2. Contemplative-agent and its live data repository jointly dominate clone volume (~56% of ecosystem total).
+3. The two abstract-doctrine research lines have nearly identical clone counts (AKC 233, AAP 228).
+4. The federation hub has the highest unique-cloner-to-unique-viewer ratio (181:2), consistent with crawler-mediated federation traversal.
+5. The writing source repository has high clones relative to viewer count, consistent with LLM-mediated ingestion of the markdown source while human readers reach only the rendered blog output.
+
+Limitations are load-bearing: N=1 author, no pre-versus-post
+intervention comparison, crawler dominance in clone signal,
+single-window LLM regurgitation tests. See
+[`docs/empirical/README.md`](docs/empirical/README.md) for the
+method statement before interpreting the baseline.
+
+## Q: What are the sibling research lines?
+
+This repository is part of an ecosystem of four DOI-registered
+research lines maintained by the same author:
+
+- **[Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle)** (DOI 10.5281/zenodo.19200726). Six-phase bidirectional growth loop for sustaining intent alignment between an AI agent and its operator over time. Mechanism sibling: defines how knowledge cycles inside the operator-agent pair; this repository addresses how the cycle's outputs diffuse outside it.
+- **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** (DOI 10.5281/zenodo.19212118). Autonomous agents running on a local 9B model, grounded in four contemplative axioms. Implementation sibling: the repository participates in the empirical layer's traffic dataset, and its non-dualistic axiomatic foundation supplies the underlying rationale for the framework's scaffold-as-collaborator commitment.
+- **[Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice)** (DOI 10.5281/zenodo.19652013). Harness-neutral ADRs on accountability distribution in autonomous AI agents. Vocabulary sibling: shares the word "attribution" with disjoint meaning (see the vocabulary-disambiguation entry above).
+
+The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228),
+a metadata-only repository at the center of the federation. The hub
+is not a research line; treating it as one collapses the distinction
+between content and metadata.
+
+## Q: What does this repository NOT claim?
+
+To make the limits of the framework explicit:
+
+- The framework is **single-author normative**. The five ADRs were extracted from one author's operation; adapting them to multi-author research programs requires extensions the framework does not currently offer.
+- The empirical layer is **case study with explicit limitations**, not validation. There is no pre-versus-post intervention contrast, no controlled comparison, no multi-author replication.
+- The framework is **time-bound by its substrate**. LLM capability shifts on the order of twelve to twenty-four months may obsolete specific Layer 4 tactics; the framework explicitly anticipates retirement.
+- The framework does **not extend AAP's notion of attribution**. The two meanings ("credit for source" here, "accountability for action" in AAP) are intentionally disjoint.
+- The framework does **not apply to client work, contributions to others' projects, scaffold-only tooling, or judgments the author has placed outside it**. The framework is a tool, not an externalization of judgment.
+
+## Q: What are the framework's component skills?
+
+The framework ships two operational forms as standalone Claude Code
+skill repositories, not embedded in this doctrine repository. The
+split keeps the doctrine harness-neutral (Layer 4 tool-agnostic
+principle) and lets each skill evolve independently of the framework's
+release cadence.
+
+- **[`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy)** — the operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions, packaged for loading into an LLM-based coding agent's rule set. Adopt this skill to apply the framework's day-to-day judgment without re-deriving it from the thesis.
+- **[`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi)** — the release-time workflow that instantiates the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook. Adopt this skill to operate a DOI-registered research repository following the framework's identifier-federation discipline.
+
+Each component skill is a separate DOI-registered repository under
+its own MIT license. Installation and harness-specific guidance are
+in each skill's own README. Adopters who want only one of the skills
+(without subscribing to the full normative framework) can install it
+independently.
+
+## Q: How should I cite this repository?
+
+Until the first Zenodo deposit completes, cite the GitHub
+repository:
+> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. GitHub. https://github.com/shimo4228/authorship-strategy
+
+After v0.1.0 is released, use the concept DOI (ADR-0001 applies to
+this repository as it applies to all DOI-registered artifacts in
+the ecosystem); the concept DOI will appear in the README badge and
+in [`CITATION.cff`](CITATION.cff).
+
+## Q: Where is the framework's open-question catalogue?
+
+[`docs/manifesto.md`](docs/manifesto.md) catalogues eight open
+questions:
+
+1. How does the framework scale beyond a single author?
+2. What signal disambiguates LLM-mediated adoption from incidental traffic?
+3. What is the time-to-obsolescence of Layer 4 tactics?
+4. How does the framework interact with non-DOI-registrable artifacts?
+5. Where is the line between the framework and authorship-strategy-as-rhetoric (the recursive-application concern)?
+6. How robust is the three-axis inversion to LLM substrate change?
+7. What is the role of the framework's empirical layer?
+8. What is the framework's failure mode?
+
+Adopters are invited to extend the list. The framework is improved
+by articulating the questions it cannot yet answer, not by
+suppressing them.

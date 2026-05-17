@@ -1,0 +1,74 @@
+{
+  "upload_type": "software",
+  "title": "Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem",
+  "creators": [
+    {
+      "name": "Shimomoto, Tatsuya",
+      "orcid": "0009-0002-6168-4162"
+    }
+  ],
+  "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog formalizes five decisions extracted from operating a DOI-registered research ecosystem of four sibling repositories: concept DOI as canonical reference, DOI federation via .zenodo.json, cross-platform dataset federation (GitHub, Zenodo, Hugging Face Datasets), authorship metadata with ORCID auto-update disabled, and audience-driven README localization. An empirical section reports preliminary observations from twenty-five days of CC0-published traffic data across the four sibling repositories, with explicit limitations on sample size and the absence of pre-versus-post intervention comparison. Sibling research lines (Agent Knowledge Cycle, Contemplative Agent, Agent Attribution Practice) are referenced but not extended.",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "authorship strategy",
+    "AI-era authenticity",
+    "attribution diffusion",
+    "DOI federation",
+    "concept DOI",
+    "Zenodo",
+    "Hugging Face Datasets",
+    "ORCID",
+    "llms.txt",
+    "JSON-LD knowledge graph",
+    "LLM-mediated discovery",
+    "generative engine optimization",
+    "GEO",
+    "scientometrics",
+    "idea-rescue",
+    "scaffold dissolution",
+    "permissive licensing",
+    "open access",
+    "traffic analytics",
+    "case study"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19200726",
+      "relation": "references",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.19212118",
+      "relation": "references",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.19652013",
+      "relation": "references",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/shimo4228/shimo4228",
+      "relation": "isPartOf",
+      "resource_type": "other",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://huggingface.co/datasets/Shimo4228/authorship-strategy",
+      "relation": "isVariantFormOf",
+      "resource_type": "dataset",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://raw.githubusercontent.com/shimo4228/shimo4228/main/graph.jsonld",
+      "relation": "isDocumentedBy",
+      "resource_type": "dataset",
+      "scheme": "url"
+    }
+  ]
+}
