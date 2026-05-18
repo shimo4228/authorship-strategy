@@ -2,8 +2,7 @@ Language: English | [日本語](README.ja.md)
 
 # authorship-strategy
 
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PLACEHOLDER.svg)](https://doi.org/10.5281/zenodo.PLACEHOLDER) -->
-<!-- DOI badge to be filled post-Zenodo registration -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20263316.svg)](https://doi.org/10.5281/zenodo.20263316)
 
 > **Authorship Strategy** — a normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion.
 
@@ -116,9 +115,16 @@ The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4
 
 ## How to cite
 
-Until the first Zenodo deposit completes, cite the GitHub repository.
-After v0.1.0 is released, citation metadata is in [`CITATION.cff`](CITATION.cff)
-and the concept DOI badge will appear at the top of this README.
+Cite this repository using the **concept DOI** (which always resolves to
+the latest version):
+
+> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
+
+Full citation metadata is in [`CITATION.cff`](CITATION.cff). For
+reproducibility citation of a specific version, follow the concept DOI
+to its version listing on Zenodo and cite the version-specific DOI
+explicitly. See [ADR-0001](docs/adr/0001-concept-doi-canonical.md) for
+the canonical-reference discipline.
 
 ## License
 

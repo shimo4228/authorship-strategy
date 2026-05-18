@@ -11,7 +11,8 @@ Project: **Authorship Strategy**
 Author: Tatsuya Shimomoto (shimo4228), ORCID 0009-0002-6168-4162
 License: MIT
 Repository: https://github.com/shimo4228/authorship-strategy
-DOI: to be assigned by Zenodo upon v0.1.0 release
+Concept DOI (canonical): 10.5281/zenodo.20263316
+v0.1.0 version DOI (use only for reproducibility citation): 10.5281/zenodo.20263317
 
 ---
 
@@ -341,14 +342,17 @@ read it as "peer component".
 
 ## Q: How should I cite this repository?
 
-Until the first Zenodo deposit completes, cite the GitHub
-repository:
-> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. GitHub. https://github.com/shimo4228/authorship-strategy
+Cite using the **concept DOI** (ADR-0001 applies to this repository
+as it applies to all DOI-registered artifacts in the ecosystem; the
+concept DOI always resolves to the latest version):
 
-After v0.1.0 is released, use the concept DOI (ADR-0001 applies to
-this repository as it applies to all DOI-registered artifacts in
-the ecosystem); the concept DOI will appear in the README badge and
-in [`CITATION.cff`](CITATION.cff).
+> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
+
+For reproducibility citation of a specific historical version (when
+explicitly needed), follow the concept DOI to its version listing on
+Zenodo and cite the version-specific DOI. The v0.1.0 version DOI is
+10.5281/zenodo.20263317; use it only when version-specific reference
+is required. Full citation metadata is in [`CITATION.cff`](CITATION.cff).
 
 ## Q: Where is the framework's open-question catalogue?
 

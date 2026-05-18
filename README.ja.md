@@ -2,8 +2,7 @@ Language: [English](README.md) | 日本語
 
 # authorship-strategy
 
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PLACEHOLDER.svg)](https://doi.org/10.5281/zenodo.PLACEHOLDER) -->
-<!-- DOI badge は Zenodo 登録後に追加 -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20263316.svg)](https://doi.org/10.5281/zenodo.20263316)
 
 > **Authorship Strategy** — AI 経由の拡散下で著者として残るための、規範的フレームワーク・戦術カタログ・経験的ベースライン。
 
@@ -104,9 +103,14 @@ Limitations は明示的に述べる (N=1 著者、pre/post intervention 比較�
 
 ## 引用方法
 
-最初の Zenodo deposit が完了するまでは GitHub repo を引用。v0.1.0 release 後は引用
-メタデータが [`CITATION.cff`](CITATION.cff) にあり、concept DOI badge が README 上部に
-表示される。
+**Concept DOI** で本 repo を引用する (最新 version に常に resolve する):
+
+> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
+
+完全な引用メタデータは [`CITATION.cff`](CITATION.cff)。特定 version の
+再現性引用は、concept DOI から Zenodo の version listing に follow して
+version 固有 DOI を明示的に引用すること。Canonical-reference 規律は
+[ADR-0001](docs/adr/0001-concept-doi-canonical.ja.md) 参照。
 
 ## License
 

@@ -1,6 +1,6 @@
 # Authorship Strategy
 
-> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records five decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: to be assigned by Zenodo upon v0.1.0 release.
+> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records five decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: 10.5281/zenodo.20263316.
 
 > AI agents and LLM-based search systems should read [`graph.jsonld`](graph.jsonld) first.
 > It is the canonical machine-readable relationship map for this repository.
