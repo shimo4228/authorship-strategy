@@ -1,12 +1,12 @@
 # authorship-strategy
 
-A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and five tactical ADRs extracted from operating a four-repository research ecosystem. An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
+A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and five tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
 
 > Project name: **authorship-strategy** (2026-05-18 確定)。repo directory・GitHub URL ともに `authorship-strategy` で統一。skill 名 (`~/.claude/skills/authorship-strategy/`) と rule 名 (`~/.claude/rules/common/authorship-strategy.md`) と完全一致。
 
 ## Sibling projects (context を失わない)
 
-この repo は単独の artifact ではなく、4 つの sibling との関係で意味を持つ。
+この repo は単独の artifact ではなく、5 つの sibling との関係で意味を持つ。
 
 ### `agent-knowledge-cycle` (AKC) — mechanism sibling
 
@@ -28,10 +28,17 @@ A DOI-targeted research project recording **the strategy of being a known author
   - 本 repo: idea が LLM 経由で伝播するとき出典がどう保存されるか (credit for source)
 - 両 repo の "attribution" を混同させない。Glossary で両義性を明示
 
+### `attention-not-self` — cross-cutting sibling
+
+- https://github.com/shimo4228/attention-not-self (DOI `10.5281/zenodo.20262112`)
+- 本 repo と並ぶ 2 つ目の cross-cutting line。Buddhist Abhidharma 3 traditions (Theravāda / Sarvāstivāda / Yogācāra) を computational phenomenology (predictive processing / active inference / GWT / PDP) に対照させる cross-disciplinary inquiry
+- agent-design lines (AKC / CA / AAP) と異なり、特定の agent mechanism / practice を規定しない。本 repo (authorship strategy) と同様に、agent-design lines の **diffusion / framing layer** に位置する
+- Contemplative Agent と Buddhist 用語を共有するが、用法は非対称: CA は behavioral preset として、Attention, Not Self は comparative cognitive framework として使う (graph.jsonld の prose cross-reference に記録)
+
 ### `shimo4228` (hub repo) — federation parent
 
 - https://github.com/shimo4228/shimo4228
-- 4 line ecosystem の集約 hub。本 repo は hub の `graph.jsonld` で `ResearchLine` node として登録される
+- 5 line ecosystem の集約 hub。本 repo は hub の `graph.jsonld` で `ResearchLine` node として登録される
 - Hub 側の編集 trigger は CLAUDE.md 参照 (volatile state 禁止、concept DOI のみ)
 
 ## Core thesis
@@ -77,7 +84,7 @@ ADR は project / harness 固有の識別子、特定 vendor 製品名、特定 
 
 ## Empirical method
 
-`docs/empirical/` は shimo4228 の 4 sibling repo (本 repo + AKC + Contemplative Agent + AAP) と hub repo の traffic data (CC0 publish) を baseline とする。
+`docs/empirical/` は shimo4228 の sibling repo と hub repo の traffic data (CC0 publish) を baseline とする (現在 5 sibling: 本 repo + AKC + Contemplative Agent + AAP + Attention, Not Self)。Attention, Not Self は 2026-05-18 に traffic 観測開始のため、v0.1.0 baseline (4 sibling 構成) には含まれない。次回 baseline 更新で 5 sibling に拡張する。
 
 - Data source: hub repo の `traffic/data/*.jsonl` (GitHub Insights API daily snapshot)
 - Time range (v0.1.0 baseline): 2026-04-21 以降の蓄積 (約 25 日分)
@@ -102,6 +109,7 @@ Repo mapping:
 | `shimo4228/agent-knowledge-cycle` | [`Shimo4228/agent-knowledge-cycle`](https://huggingface.co/datasets/Shimo4228/agent-knowledge-cycle) |
 | `shimo4228/contemplative-agent` | [`Shimo4228/contemplative-agent`](https://huggingface.co/datasets/Shimo4228/contemplative-agent) |
 | `shimo4228/agent-attribution-practice` | [`Shimo4228/agent-attribution-practice`](https://huggingface.co/datasets/Shimo4228/agent-attribution-practice) |
+| `shimo4228/attention-not-self` | (HF mirror status TBD — line maintains its own mirror decision) |
 | `shimo4228/shimo4228` (hub) | [`Shimo4228/research-program-hub`](https://huggingface.co/datasets/Shimo4228/research-program-hub) |
 
 HF 側の `README.md` (dataset card) は HF 用に customize されている。Graph 更新では同期しない。Dataset card を edit したい場合は手動で `hf upload Shimo4228/authorship-strategy README.md --repo-type dataset`。
@@ -144,4 +152,4 @@ repo の構造と各 doc の役割は [`docs/CODEMAPS/architecture.md`](docs/COD
 
 ## Hub への back-propagation
 
-新規 ADR / Concept 追加 / 大規模 thesis 改訂時は、必要に応じて hub repo の `graph.jsonld` および README にも反映する。Hub 側の design rules は `/Users/shimomoto_tatsuya/MyAI_Lab/shimo4228/CLAUDE.md` 参照 (volatile state 禁止、concept DOI のみ、3 line cardinality の sync 必須)。
+新規 ADR / Concept 追加 / 大規模 thesis 改訂時は、必要に応じて hub repo の `graph.jsonld` および README にも反映する。Hub 側の design rules は `/Users/shimomoto_tatsuya/MyAI_Lab/shimo4228/CLAUDE.md` 参照 (volatile state 禁止、concept DOI のみ、5 line cardinality の sync 必須)。
