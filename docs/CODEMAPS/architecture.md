@@ -44,7 +44,7 @@ authorship-strategy/
 | Tactical decisions | `docs/adr/000N-*.md` | Each ADR: Status / Date / Context / Decision / Alternatives / Consequences / Lineage. Harness-neutral body, lineage records the implementation-specific origin. |
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
-| Component skills index | `docs/skills/README.md` | Reference index pointing to external `claude-skill-authorship-strategy` and `claude-skill-release-doi` repositories. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. |
+| Component skills index | `docs/skills/README.md` | Reference index pointing to four external component skill repositories (`claude-skill-authorship-strategy`, `claude-skill-release-doi`, `claude-skill-llms-txt-writer`, `claude-skill-jsonld-knowledge-graph`) plus an adjacent-ecosystem-skills section. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. The component-status criterion (the skill operationalizes content the doctrine explicitly names) is documented in the file itself. |
 | AI landing | `llms.txt` | Answer.AI convention. Compact navigator + canonical reading order. |
 | AI reference | `llms-full.txt` | Self-contained Q&A. |
 | AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + five ADRs + sibling lines + disjoint-vocabulary edge to AAP. |

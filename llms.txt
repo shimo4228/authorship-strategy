@@ -65,10 +65,14 @@ The two meanings share a word but not a concept. The repositories are *vocabular
 
 ## Component skills (external)
 
-The framework's operational forms are shipped as standalone Claude Code skill repositories, not embedded in this repository. The split keeps the doctrine harness-neutral and lets each skill evolve independently.
+The framework's operational forms are shipped as four standalone Claude Code skill repositories, not embedded in this repository. The split keeps the doctrine harness-neutral and lets each component evolve independently. A skill is a *component* when it operationalizes content the doctrine explicitly names; skills useful to adopters but not named by the doctrine are *adjacent ecosystem skills* (see below).
 
-- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Loadable into LLM-based coding agents.
-- [`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi): release-time workflow instantiating the identifier-federation triplet (ADRs 0001-0003) for DOI-registered research repositories. Five-phase verify-and-deposit runbook.
+- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Operationalizes the thesis and the five ADRs.
+- [`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi): release-time workflow operationalizing the identifier-federation triplet (ADRs 0001-0003) for DOI-registered research repositories. Five-phase verify-and-deposit runbook.
+- [`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer): operationalizes Layer 4 tactic 7's Answer.AI `llms.txt` convention. Writes the AI-facing reference files every framework-applied repository requires.
+- [`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph): operationalizes Layer 4 tactic 7's JSON-LD knowledge graph. Ships `graph.jsonld` next to `llms.txt` for projects with stable concept-level structure.
+
+Adjacent ecosystem skills the framework does *not* depend on but adopters may additionally use: [`claude-skill-context-sync`](https://github.com/shimo4228/claude-skill-context-sync), [`claude-skill-writing-ecosystem`](https://github.com/shimo4228/claude-skill-writing-ecosystem) (note: targets human-primary audience, orthogonal to the framework's LLM-mediated diffusion strategy), [`claude-skill-search-first`](https://github.com/shimo4228/claude-skill-search-first), and others. Listed for reference, not required.
 
 ## Related research lines
 

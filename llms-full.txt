@@ -302,20 +302,42 @@ To make the limits of the framework explicit:
 
 ## Q: What are the framework's component skills?
 
-The framework ships two operational forms as standalone Claude Code
+The framework ships four operational forms as standalone Claude Code
 skill repositories, not embedded in this doctrine repository. The
 split keeps the doctrine harness-neutral (Layer 4 tool-agnostic
-principle) and lets each skill evolve independently of the framework's
-release cadence.
+principle) and lets each component evolve independently of the
+framework's release cadence.
 
-- **[`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy)** — the operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions, packaged for loading into an LLM-based coding agent's rule set. Adopt this skill to apply the framework's day-to-day judgment without re-deriving it from the thesis.
-- **[`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi)** — the release-time workflow that instantiates the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook. Adopt this skill to operate a DOI-registered research repository following the framework's identifier-federation discipline.
+A skill is a *component* when it operationalizes content the doctrine
+explicitly names — either the judgment framework itself, or a Layer 4
+tactic that names a canonical artifact or discipline. Skills useful to
+adopters but not specifically named by the doctrine
+(`context-sync`, `writing-ecosystem`, `update-codemaps`, etc.) are
+*adjacent ecosystem skills*, not components.
 
-Each component skill is a separate DOI-registered repository under
-its own MIT license. Installation and harness-specific guidance are
-in each skill's own README. Adopters who want only one of the skills
+- **[`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy)** — the operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions, packaged for loading into an LLM-based coding agent's rule set. Adopt this component to apply the framework's day-to-day judgment without re-deriving it from the thesis.
+- **[`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi)** — the release-time workflow that operationalizes the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook. Adopt this component to operate a DOI-registered research repository following the framework's identifier-federation discipline.
+- **[`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer)** — writes the AI-facing reference files (`llms.txt`, `llms-full.txt`, FAQ, glossary) that Layer 4 tactic 7 names as required structured artifacts. Combines the Answer.AI `llms.txt` standard with generative-engine-optimization static analysis. Every framework-applied repository requires the `llms.txt` artifact this component produces.
+- **[`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph)** — designs and ships the JSON-LD knowledge graph (`graph.jsonld`) that Layer 4 tactic 7 names as a structured-artifact form. Provides nine reusable design moves (dual `@type`, language-tagged literals, schema absence enforces invariants, cross-graph `@id` reuse, volatile-state exclusion, matrix-as-paired-edges, root `Dataset` node, reading-order block, hub-and-spoke reverse-link). Every framework-applied repository with stable concept-level structure requires the `graph.jsonld` artifact this component produces.
+
+Each component skill is a separate repository under its own MIT
+license. Installation and harness-specific guidance are in each
+skill's own README. Adopters who want only one of the components
 (without subscribing to the full normative framework) can install it
 independently.
+
+## Q: How does this repository use the word "sibling"?
+
+To avoid term overloading, this repository reserves *sibling* for the
+research-program level only — it refers to the four DOI-registered
+research lines (AKC, Contemplative Agent, AAP, this one) as peers of
+one another. At the skill level, the terms used are *component*
+(operationalizes named doctrine content), *peer component* (a fellow
+component within the same framework), and *adjacent ecosystem skill*
+(present in the broader Claude Code skill ecosystem but not specifically
+required by this framework). The phrase "sibling component skill" is
+deliberately avoided; readers encountering it in early drafts should
+read it as "peer component".
 
 ## Q: How should I cite this repository?
 

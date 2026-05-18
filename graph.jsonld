@@ -337,7 +337,7 @@
       "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "@type": "EcosystemRepo",
       "name": "claude-skill-authorship-strategy",
-      "description": "Operational form of the four-layer judgment checklist from this research line, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Component skill, not embedded in the doctrine repository, to keep the doctrine harness-neutral.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the five ADRs.",
       "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
@@ -346,8 +346,26 @@
       "@id": "https://github.com/shimo4228/claude-skill-release-doi",
       "@type": "EcosystemRepo",
       "name": "claude-skill-release-doi",
-      "description": "Release-time workflow instantiating the identifier-federation triplet (ADRs 0001-0003) from this research line, packaged as a standalone Claude Code skill repository. Five-phase verify-and-deposit runbook for DOI-registered research repositories.",
+      "description": "Component skill of this research line. Release-time workflow operationalizing the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook for DOI-registered research repositories.",
       "url": "https://github.com/shimo4228/claude-skill-release-doi",
+      "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/claude-skill-llms-txt-writer",
+      "@type": "EcosystemRepo",
+      "name": "claude-skill-llms-txt-writer",
+      "description": "Component skill of this research line. Operationalizes Layer 4 tactic 7 — Answer.AI llms.txt convention. Writes the AI-facing reference files (llms.txt, llms-full.txt, FAQ, glossary) that every framework-applied repository requires.",
+      "url": "https://github.com/shimo4228/claude-skill-llms-txt-writer",
+      "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
+      "@type": "EcosystemRepo",
+      "name": "claude-skill-jsonld-knowledge-graph",
+      "description": "Component skill of this research line. Operationalizes Layer 4 tactic 7 — JSON-LD knowledge graph. Designs and ships graph.jsonld next to llms.txt for projects with stable concept-level structure.",
+      "url": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     }
   ]

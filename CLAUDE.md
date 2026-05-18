@@ -108,16 +108,28 @@ HF 側の `README.md` (dataset card) は HF 用に customize されている。G
 
 ## Component skills (external)
 
-本 repo は **doctrine repository** であり、operational form は別 repo に外出ししている:
+本 repo は **doctrine repository** であり、operational form は 4 つの component skill として別 repo に外出ししている。Component の判別 criterion: その skill が produce する artifact / 執行する discipline が、本 doctrine (thesis / ADR / Layer 4 tactic list) で specifically に名指しされているか。
 
-| Component skill repo | Role |
+| Component skill repo | Operationalizes |
 |---|---|
-| `claude-skill-authorship-strategy` (予定) | 4 層判断 checklist / 禁止事項 / 奨励事項を LLM-based agent の rule set として load 可能な形式に |
-| `claude-skill-release-doi` (予定) | identifier-federation triplet ADRs を release-time workflow として instantiate |
+| `claude-skill-authorship-strategy` | 判断 framework 全体 (3 軸 inversion + 4 層 stack + 禁止/奨励 actions + 11-item checklist) |
+| `claude-skill-release-doi` | 識別子 federation triplet (ADRs 0001-0003) の release-time workflow |
+| `claude-skill-llms-txt-writer` | Layer 4 tactic 7 ── Answer.AI `llms.txt` convention の operational form |
+| `claude-skill-jsonld-knowledge-graph` | Layer 4 tactic 7 ── JSON-LD knowledge graph の operational form |
 
 各 component skill は独自の repository で canonical maintain する。本 repo の `docs/skills/README.md` は reference index であって、skill body の copy は含めない。
 
-**Why**: framework の tool-agnostic 原則 (Layer 4) に従い、doctrine と implementation を分離。copy は drift vector であり、single source of truth を各 skill repo に置く。Adopter は framework 全体を subscribe しなくても individual skill を install できる。
+### Terminology 規約 (load-bearing)
+
+「sibling」は **research line レベルでのみ** 使う (AKC / Contemplative / AAP / authorship-strategy)。Skill レベルでは:
+
+- **Component** = doctrine が specifically 名指しする skill (4 つ)
+- **Peer component** = 同 framework 内の他 component
+- **Adjacent ecosystem skill** = ecosystem には存在するが、本 framework では required ではない skill (`context-sync` / `writing-ecosystem` / `update-codemaps` 等)
+
+`sibling component skill` 表記は使わない (overloaded で意味不明瞭)。
+
+**Why**: framework の tool-agnostic 原則 (Layer 4) に従い、doctrine と implementation を分離。copy は drift vector であり、single source of truth を各 skill repo に置く。Adopter は framework 全体を subscribe しなくても individual component を install できる。
 
 ## ディレクトリ
 
