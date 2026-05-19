@@ -15,6 +15,9 @@ top-down に prescribe されたものではない。
 | [0003](0003-cross-platform-dataset-federation.ja.md) | クロスプラットフォーム データセット federation | accepted |
 | [0004](0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ | accepted |
 | [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 | accepted |
+| [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points | accepted |
+
+ADR set は thesis の異なる層を tracking する 3 つの cluster に分かれる:
 
 ADR 0001-0003 は **identifier-federation triplet** を形成する: ADR-0001 が canonical
 reference の形 (version DOI ではなく concept DOI) を fix し、ADR-0002 が archive
@@ -27,6 +30,15 @@ ADR 0004-0005 は **maintenance-discipline ADR** である: ADR-0004 は著者�
 (ORCID enrichment policy)、ADR-0005 は著者が誰 *のために* 書くか (locale-mirror
 retirement policy) について。両方とも同じ基底の動きをする —— 維持コストは推測される
 将来状態ではなく実際の evidence で amortize される。
+
+ADR-0006 は **LLM-first ingest decision** である: artifact は prose-form navigator と
+concept-form graph を補完的な pair として deploy し、各々が他方では到達できない
+distinct な LLM-mediated reader sub-population に serve する。Federation triplet が
+artifact を複数 platform に *reach* させ、maintenance pair が edit を跨いで *coherent*
+に保つのに対し、ADR-0006 は各 platform で artifact が取らなければならない *form* を
+規定し、そこで operating する LLM-mediated channel が absorb できるようにする。
+Thesis の Axis 1 反転 (enclosure → openness) を ingest 表面で直接 operationalize
+するのは本 ADR のみである。
 
 ## Format
 

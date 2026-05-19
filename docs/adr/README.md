@@ -15,6 +15,10 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0003](0003-cross-platform-dataset-federation.md) | Cross-Platform Dataset Federation | accepted |
 | [0004](0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled | accepted |
 | [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance | accepted |
+| [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
+
+The set groups into three clusters, each tracking a distinct layer of the
+thesis:
 
 ADRs 0001-0003 form an **identifier-federation triplet**: ADR-0001 fixes the
 canonical reference shape (concept DOI, not version DOI), ADR-0002 declares
@@ -29,6 +33,16 @@ author *is* (ORCID enrichment policy), ADR-0005 about who the author *writes
 for* (locale-mirror retirement policy). Both make the same underlying move —
 maintenance cost is amortized against actual evidence, not against speculative
 prospective state.
+
+ADR-0006 is the **LLM-first ingest decision**: the artifact deploys a
+prose-form navigator and a concept-form graph as a complementary pair, each
+serving a distinct LLM-mediated reader sub-population that the other cannot
+reach. Where the federation triplet ensures the artifact *reaches* multiple
+platforms and the maintenance pair ensures it stays *coherent* across edits,
+ADR-0006 specifies what *form* the artifact must take at each platform so the
+LLM-mediated channels operating there can absorb it. It is the only ADR that
+directly operationalizes the thesis's Axis 1 inversion (enclosure → openness)
+on the ingest surface.
 
 ## Format
 
