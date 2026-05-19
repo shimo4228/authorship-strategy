@@ -198,7 +198,7 @@ retire する。
 4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は著者への back-reference を運ぶ token-level signal として生き残る
 5. **Tool-agnostic specification** —— 特定実装にコミットせず書かれた仕様は再実装で reach 可能; 特定実装に coupled な仕様は実装の老化とともに audience を失う
 6. **Audience-driven な多言語化** —— locale mirror は観測された traffic に基づいて追加・退役させ、想定 audience の推測に基づかない ([ADR-0005](adr/0005-readme-localization-audience-driven.ja.md) 参照)
-7. **構造化 artifact** —— glossary、ADR、JSON schema、JSON-LD knowledge graph、AI-facing reference file (例: Answer.AI llms.txt convention) は artifact を LLM と crawler に対して機械可読にする
+7. **構造化 artifact** —— glossary、ADR、JSON schema、JSON-LD knowledge graph、AI-facing reference file (例: Answer.AI llms.txt convention) は artifact を LLM と crawler に対して機械可読にする。中でも llms.txt + JSON-LD knowledge graph の pair は LLM-mediated ingest のための dual entry point として normatively required ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 参照)
 8. **Adoption の friction 最小化** —— 再実装 path は clone-and-copy で済むべきで、signup、API key、専用 infrastructure を要しない。著者制御 infrastructure で gate された adoption は著者が減らした adoption である
 
 ### Origin-claim scope の規律

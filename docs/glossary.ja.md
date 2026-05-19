@@ -136,6 +136,54 @@ AI-assistant suggestion (AI coding assistant を使う開発者が content か�
 text を見せられる)。Framework の戦略的 target は著者の署名を運ぶ LLM 経由チャネルの
 *breadth* であって、特定チャネルの depth ではない。
 
+[ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 下では、
+ingest design の目的で LLM-mediated channel は構造的に異なる 2 sub-population に
+resolve する: *prose-reading channels* (会話型 LLM、in-context documentation
+consultation) と *structured-data-ingesting channels* (training pipeline、
+knowledge-graph crawler、dataset SDK を用いる programmatic reader)。両 sub-population
+は *dual entry point* によって addressed される。
+
+## Dual entry point
+
+Framework に governed される artifact が、補完的な 2 種の structured entry point ——
+*prose-form navigator* と *concept-form graph* —— を並列に deploy し、versioned
+release ごとに同期的に release するという structural な決定。各 entry point は他方が
+到達できない distinct な LLM-mediated channel sub-population を addressing する:
+prose navigator は prose-reading channels を orient し、concept graph は
+structured-data-ingesting channels に concept 間関係を expose する。Pair は
+*enclosure-to-openness* axis を ingest 表面で operational embody したもので、
+片方しか deploy しないと戦略は片肺になる。[ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md)
+下で normatively required。
+
+## llms.txt convention
+
+Artifact の root に置かれる単一の prose-form text file (`llms.txt`) を用いて、primary
+document を 1 行説明と推奨 reading order 付きで列挙する community-curated AI-facing
+reference convention。Prose-reading [LLM-mediated channels](#llm-mediated-channel) を
+target とする: 会話型 LLM、in-context で documentation を consult する AI assistant、
+summarization のために prose を fetch する citation-graph annotator。
+[Dual entry point](#dual-entry-point) の prose-form 側を担う。本著者は Answer.AI に
+よる本 convention の specification を採用しているが、framework decision は prose
+navigator を deploy することであり、この specific convention を mandate するもの
+ではない。Operational form は外部 skill
+[`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer)
+に存在する。
+
+## JSON-LD knowledge graph
+
+Artifact の concept-level entity と inter-entity 関係を、structured-data vocabulary
+(本 repo では schema.org + local `shimo:` namespace) で machine-parseable な triple
+として encode する linked-data file (本 repo では `graph.jsonld`)。
+Structured-data-ingesting [LLM-mediated channels](#llm-mediated-channel) を target
+とする: training pipeline、knowledge-graph crawler、dataset SDK を用いる
+programmatic reader。[Dual entry point](#dual-entry-point) の concept-form 側を担い、
+file-level documentation (`docs/CODEMAPS/` に存在) が prose で暗黙にしておく
+concept-level structure を encode することで補完する。Framework decision は concept
+graph を deploy することであり、specific linked-data vocabulary を mandate するもの
+ではない。Operational form は外部 skill
+[`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph)
+に存在する。
+
 ## Distinctive terminology (造語的用語)
 
 著者が特定アイデアを指すために造語する領域固有の語。Distinctive terminology は

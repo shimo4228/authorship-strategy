@@ -173,6 +173,57 @@ from the content). The framework's strategic target is the
 *breadth* of LLM-mediated channels carrying the author's
 signature, not the depth of any single channel.
 
+Under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md),
+LLM-mediated channels resolve into two structurally distinct
+sub-populations for ingest-design purposes: *prose-reading channels*
+(conversational LLMs, in-context documentation consultation) and
+*structured-data-ingesting channels* (training pipelines,
+knowledge-graph crawlers, programmatic readers using dataset SDKs).
+The two sub-populations are addressed by the *dual entry point*.
+
+## Dual entry point
+
+The structural decision that any framework-governed artifact deploys
+two complementary structured entry points — a *prose-form navigator*
+and a *concept-form graph* — released synchronously at every versioned
+release. Each entry point addresses a distinct LLM-mediated channel
+sub-population the other cannot reach: the prose navigator orients
+prose-reading channels, the concept graph exposes inter-concept
+relationships to structured-data-ingesting channels. The pair is the
+operational embodiment of the *enclosure-to-openness* axis on the
+ingest surface; deploying only one half leaves the strategy one-lunged.
+Normatively required under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md).
+
+## llms.txt convention
+
+A community-curated AI-facing reference convention that uses a single
+prose-form text file (`llms.txt`) at the root of an artifact to enumerate
+its primary documents with one-line descriptions and a recommended
+reading order. Targets prose-reading [LLM-mediated channels](#llm-mediated-channel):
+conversational LLMs, AI assistants consulting documentation in-context,
+citation-graph annotators fetching prose for summarization. The
+prose-form half of the [dual entry point](#dual-entry-point). The
+present author adopts the Answer.AI specification of this convention;
+the framework decision is to deploy a prose navigator, not to mandate
+this specific convention. Operational form lives in the external skill
+[`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer).
+
+## JSON-LD knowledge graph
+
+A linked-data file (in this repository, `graph.jsonld`) that encodes
+the artifact's concept-level entities and inter-entity relationships
+as machine-parseable triples in a structured-data vocabulary
+(in this repository, schema.org plus a local `shimo:` namespace).
+Targets structured-data-ingesting [LLM-mediated channels](#llm-mediated-channel):
+training pipelines, knowledge-graph crawlers, programmatic readers
+using dataset SDKs. The concept-form half of the
+[dual entry point](#dual-entry-point); complements file-level
+documentation (which lives in `docs/CODEMAPS/`) by encoding
+concept-level structure that prose leaves implicit. The framework
+decision is to deploy a concept graph, not to mandate a specific
+linked-data vocabulary. Operational form lives in the external skill
+[`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph).
+
 ## Distinctive terminology (or coined terminology)
 
 Domain-specific words coined by an author to refer to specific

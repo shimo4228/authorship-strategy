@@ -246,7 +246,7 @@ Tactics validated at the time of this thesis (v0.1.0):
 4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level signal carrying back-reference to the author.
 5. **Tool-agnostic specification** — specifications written without commitment to a specific implementation are reachable by re-implementation; specifications coupled to a specific implementation lose audience as the implementation ages.
 6. **Multilingual localization, audience-driven** — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences (see [ADR-0005](adr/0005-readme-localization-audience-driven.md)).
-7. **Structured artifacts** — glossary, ADR, JSON schema, JSON-LD knowledge graph, and AI-facing reference files (e.g., the Answer.AI llms.txt convention) make the artifact machine-readable to LLMs and crawlers.
+7. **Structured artifacts** — glossary, ADR, JSON schema, JSON-LD knowledge graph, and AI-facing reference files (e.g., the Answer.AI llms.txt convention) make the artifact machine-readable to LLMs and crawlers. The llms.txt + JSON-LD knowledge graph pair specifically is normatively required as the dual entry point for LLM-mediated ingest (see [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)).
 8. **Friction minimization for adoption** — re-implementation paths should require clone-and-copy, not signup, not API key, not bespoke infrastructure. Adoption gated by author-controlled infrastructure is adoption the author has reduced.
 
 ### Origin-claim scope discipline

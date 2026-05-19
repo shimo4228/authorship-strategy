@@ -38,7 +38,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the five tactical ADRs forming the identifier-federation triplet plus the two maintenance-discipline ADRs, the three sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. AI agents and LLM-based search systems should read this graph before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the six tactical ADRs in three clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006), the three sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -57,6 +57,9 @@
         "ORCID enrichment",
         "audience-driven localization",
         "LLM-mediated diffusion",
+        "dual entry point",
+        "llms.txt convention",
+        "JSON-LD knowledge graph",
         "generative engine optimization",
         "scientometrics",
         "idea-rescue"
@@ -107,7 +110,10 @@
         "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
         "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
-        "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology"
+        "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
+        "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
+        "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
+        "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph"
       ],
       "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
     },
@@ -223,7 +229,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0002",
         "https://github.com/shimo4228/authorship-strategy#adr/0003",
         "https://github.com/shimo4228/authorship-strategy#adr/0004",
-        "https://github.com/shimo4228/authorship-strategy#adr/0005"
+        "https://github.com/shimo4228/authorship-strategy#adr/0005",
+        "https://github.com/shimo4228/authorship-strategy#adr/0006"
       ]
     },
 
@@ -251,6 +258,52 @@
         {"@value": "造語的用語", "@language": "ja"}
       ],
       "description": "Domain-specific words coined by an author as semantic signatures of authorship. Generic vocabulary dissolves through paraphrase; coined terms survive as token-level signals carrying back-reference to the original author. A Layer 4 tactic and the substrate of origin-claim scope discipline."
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
+      "@type": "Concept",
+      "name": "Dual Entry Point",
+      "alternateName": [
+        {"@value": "Dual Entry Point", "@language": "en"},
+        {"@value": "Dual Entry Point", "@language": "ja"}
+      ],
+      "description": "The structural decision that any framework-governed artifact deploys two complementary structured entry points — a prose-form navigator and a concept-form graph — released synchronously at every versioned release. Each entry point addresses a distinct LLM-mediated channel sub-population the other cannot reach. The pair is the operational embodiment of the enclosure-to-openness axis on the ingest surface; deploying only one half leaves the strategy one-lunged.",
+      "composedOf": [
+        "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
+        "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph"
+      ],
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
+      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0006",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
+      "@type": "Concept",
+      "name": "llms.txt Convention",
+      "alternateName": [
+        {"@value": "llms.txt convention", "@language": "en"},
+        {"@value": "llms.txt convention", "@language": "ja"}
+      ],
+      "description": "A community-curated AI-facing reference convention that uses a single prose-form text file (llms.txt) at the root of an artifact to enumerate its primary documents with one-line descriptions and a recommended reading order. Targets prose-reading LLM-mediated channels: conversational LLMs, AI assistants consulting documentation in-context, citation-graph annotators fetching prose for summarization. The prose-form half of the dual entry point.",
+      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
+      "instantiatedBy": "https://github.com/shimo4228/claude-skill-llms-txt-writer",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
+      "@type": "Concept",
+      "name": "JSON-LD Knowledge Graph",
+      "alternateName": [
+        {"@value": "JSON-LD knowledge graph", "@language": "en"},
+        {"@value": "JSON-LD knowledge graph", "@language": "ja"}
+      ],
+      "description": "A linked-data file that encodes an artifact's concept-level entities and inter-entity relationships as machine-parseable triples in a structured-data vocabulary (typically schema.org plus a local namespace). Targets structured-data-ingesting LLM-mediated channels: training pipelines, knowledge-graph crawlers, programmatic readers using dataset SDKs. The concept-form half of the dual entry point; complements file-level documentation by encoding concept-level structure that prose leaves implicit.",
+      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
+      "instantiatedBy": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
 
     {
@@ -293,6 +346,14 @@
       "name": "ADR-0005: README Localization Policy — Audience-Driven Maintenance",
       "description": "Locale mirrors of human-facing documentation are added or retired based on observed traffic data, not on speculation about prospective audiences. A mirror without measurable direct human audience is retired even when the language community seems important in the abstract.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0005-readme-localization-audience-driven.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0006",
+      "@type": "ADR",
+      "name": "ADR-0006: LLM-First Ingest via Dual Entry Points",
+      "description": "Specifies that any framework-governed artifact deploys a prose-form navigator and a concept-form linked-data graph as a complementary pair, released synchronously. Each entry point addresses a distinct LLM-mediated reader sub-population the other cannot reach. The pair is the operational embodiment of the Axis 1 inversion (enclosure to openness) on the ingest surface.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
 
     {
