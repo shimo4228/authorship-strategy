@@ -139,6 +139,16 @@ HF 側の `README.md` (dataset card) は HF 用に customize されている。G
 
 **Why**: framework の tool-agnostic 原則 (Layer 4) に従い、doctrine と implementation を分離。copy は drift vector であり、single source of truth を各 skill repo に置く。Adopter は framework 全体を subscribe しなくても individual component を install できる。
 
+## Ecosystem repos (data siblings)
+
+Component skill とは別に、Layer 4 tactic を **specific deliverable** として instantiate する ecosystem repo がある。Skill (執行手順) ではなく **artifact** (成果物) を carry する点で component skill と分離する。Hub `graph.jsonld` には `EcosystemRepo` node として `extends → 10.5281/zenodo.20263316` で登録される。
+
+| Ecosystem repo | Operationalizes | Identifier |
+|---|---|---|
+| [`doctrine-corpus`](https://github.com/shimo4228/doctrine-corpus) | Layer 4 tactic 7 (LLM-first ingest) の corpus 形 implementation。4 sibling research line の documented judgment を bilingual (EN + JA) judgment-eliciting Q&A pair として encode する CC0 dataset。Corpus が deliverable、verification LoRA は使い捨て probe (FAIL verdict は ADR-0001 の corpus-as-primary-artifact policy 下で deliverable status を damage しない) | [10.5281/zenodo.20337008](https://doi.org/10.5281/zenodo.20337008) |
+
+Adopter は doctrine-corpus を **standalone fine-tune package としてではなく ingredient (RAG retrieval material / larger instruction-tuning mix への混入 / human reading) として** 使うことが想定される。詳細は doctrine-corpus README の "Intended uses and current limitations" 参照。
+
 ## ディレクトリ
 
 repo の構造と各 doc の役割は [`docs/CODEMAPS/architecture.md`](docs/CODEMAPS/architecture.md) を参照 (canonical)。
