@@ -6,27 +6,18 @@ Language: English | [日本語](README.ja.md)
 
 > **Authorship Strategy** — a normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion.
 
-<details>
-<summary>AI-facing reading order</summary>
+If your readers include LLMs — as training data, as in-context consultants,
+as the discovery layer other researchers consult — then the strategies that
+protect authorship have inverted. Closing your work off *reduces*, not
+increases, the chance that a future trace lands on you. This repository
+records the inverted strategy: what it is, why it holds, and six tactical
+decisions extracted from operating a four-repository DOI-registered research
+ecosystem.
 
-1. [`graph.jsonld`](graph.jsonld) — canonical machine-readable relationship map (Concepts, ADRs, axes of inversion)
-2. [`llms.txt`](llms.txt) — compact navigation index
-3. [`llms-full.txt`](llms-full.txt) — consolidated factual reference
-4. README and project-specific docs — narrative and detail
-
-For the canonical relationship map of shimo4228's research ecosystem, see:
-https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
-
-</details>
-
-A normative framework and tactical catalog for **authorship strategy** — the
-practice of remaining a recoverable author when ideas propagate through
-LLM-mediated channels. The framework rests on a three-axis inversion of
-twentieth-century authorship strategy (scarcity to diffusion, exclusivity to
-derivation, enclosure to openness) and a four-layer judgment stack
-(authenticity, attribution diffusion, idea-versus-scaffold separation,
-tactics). The tactical catalog records five decisions extracted from
-operating a four-repository DOI-registered research ecosystem.
+The framework rests on a three-axis inversion of twentieth-century authorship
+strategy (scarcity to diffusion, exclusivity to derivation, enclosure to
+openness) and a four-layer judgment stack (authenticity, attribution
+diffusion, idea-versus-scaffold separation, tactics).
 
 An empirical layer reports preliminary observations from the same
 ecosystem's CC0-published traffic data; the empirical claims are
@@ -50,6 +41,9 @@ beyond the author's own ecosystem.
 
 ## Core thesis
 
+> The claim is counterintuitive: in the AI era, protecting your authorship
+> means opening your work, not closing it.
+
 > Authenticity-validating power inverts. Where twentieth-century
 > authorship protected origin claim through scarcity, AI-era authorship
 > protects origin claim through diffusion. Closing reduces LLM
@@ -63,7 +57,7 @@ operational implications form the four-layer framework, also in the
 thesis document. The framework's open questions are catalogued in
 [`docs/manifesto.md`](docs/manifesto.md).
 
-## The five tactical ADRs
+## The six tactical ADRs
 
 | ADR | Decision |
 |-----|----------|
@@ -72,8 +66,9 @@ thesis document. The framework's open questions are catalogued in
 | [0003](docs/adr/0003-cross-platform-dataset-federation.md) | Cross-Platform Dataset Federation — the same canonical artifact is mirrored to GitHub, Zenodo, and a dataset platform with explicit sibling cross-references on each platform |
 | [0004](docs/adr/0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled — the author identifier is enriched only with concept DOIs to prevent version sprawl from polluting the public record |
 | [0005](docs/adr/0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences |
+| [0006](docs/adr/0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points — every framework-governed artifact ships a prose-form navigator and a concept-form linked-data graph as a complementary, synchronously released pair, each reaching an LLM-mediated reader sub-population the other cannot |
 
-The five ADRs are not deduced from a framework; they were extracted from
+The six ADRs are not deduced from a framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form
 so that another author can adopt the same decisions without inheriting
 the original implementation details. See [`docs/adr/README.md`](docs/adr/README.md)
@@ -82,12 +77,17 @@ for the full index and lineage.
 ## Empirical baseline (preliminary)
 
 The [`docs/empirical/`](docs/empirical/) directory reports preliminary
-observations from twenty-five days of CC0-published traffic data
-across four sibling repositories. Limitations are stated explicitly
-(N=1 author, no pre-versus-post intervention comparison, crawler
-dominance), and all claims are framed as preliminary observation
-rather than evidence. The full traffic data is published under CC0
-at `https://shimo4228.github.io/shimo4228/traffic/dashboard/`.
+observations from twenty-five days of CC0-published traffic data across
+four sibling repositories — published CC0 so they can be independently
+verified. The clearest observation so far: clone counts are dominated by
+automated tools (training-pipeline ingest, AI-assistant context-fetch,
+crawlers), with the ecosystem's view-to-clone ratio ranging from roughly
+13 to over 100 — which raises the question of what "diffusion" even means
+when most access is non-human. Limitations are stated explicitly (N=1
+author, no pre-versus-post intervention comparison, crawler dominance),
+and all claims are framed as preliminary observation rather than evidence.
+The full traffic data is published under CC0 at
+`https://shimo4228.github.io/shimo4228/traffic/dashboard/`.
 
 The empirical layer is intended to grow with time; subsequent releases
 will accumulate longer time series and (where possible) report
@@ -95,23 +95,43 @@ pre-versus-post intervention contrasts for individual tactics.
 
 ## Sibling research lines
 
-This repository is part of an ecosystem of four DOI-registered research
+This repository is part of an ecosystem of five DOI-registered research
 lines maintained by the same author. The lines are independent in
 content and release cadence, but cross-reference each other for
-context.
+context. (The empirical baseline below covers the four lines whose
+traffic was being recorded during the baseline window; Attention, Not
+Self began traffic observation later and joins at the next baseline
+update.)
 
 - **[Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle)** — six-phase bidirectional growth loop for sustaining intent alignment between an AI agent and its operator over time. [DOI 10.5281/zenodo.19200726](https://doi.org/10.5281/zenodo.19200726). *Mechanism sibling*: AKC defines how knowledge cycles inside the operator-agent pair; this repository addresses how the cycle's outputs diffuse outside it.
 - **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** — autonomous agents running on a local 9B model, grounded in four contemplative axioms. [DOI 10.5281/zenodo.19212118](https://doi.org/10.5281/zenodo.19212118). *Implementation sibling*: the contemplative agent's repository participates in the empirical layer's traffic dataset.
 - **[Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice)** — harness-neutral ADRs on accountability distribution in autonomous AI agents. [DOI 10.5281/zenodo.19652013](https://doi.org/10.5281/zenodo.19652013). *Vocabulary sibling*: AAP and this repository both use the word "attribution" but with disjoint meanings (accountability for action vs. credit for source). The two meanings are intentionally kept separate; see the glossary.
+- **[Attention, Not Self](https://github.com/shimo4228/attention-not-self)** — a cross-disciplinary inquiry contrasting three Buddhist Abhidharma traditions (Theravāda, Sarvāstivāda, Yogācāra) with computational phenomenology (predictive processing, active inference, global workspace theory, parallel distributed processing). [DOI 10.5281/zenodo.20262112](https://doi.org/10.5281/zenodo.20262112). *Cross-cutting sibling*: unlike the agent-design lines, it specifies no agent mechanism or practice; like this repository, it occupies their diffusion/framing layer.
 
 The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228).
 
 ## How to read this repository
 
-- Researchers and authors evaluating strategy: start with [`docs/thesis.md`](docs/thesis.md), then read the five ADRs in numerical order.
-- Practitioners adopting individual tactics: read the ADR for the tactic you are considering, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
-- LLM agents and crawlers: follow the AI-facing reading order above (`graph.jsonld` → `llms.txt` → `llms-full.txt`).
-- Reviewers of the empirical claims: start with [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations before reading the baseline data.
+Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then
+the six ADRs in order. Two paths need a non-obvious entry point:
+
+- **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
+- **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.
+
+LLM agents and crawlers: see the AI-facing reading order at the bottom of this page.
+
+<details>
+<summary>AI-facing reading order (for LLM agents and crawlers)</summary>
+
+1. [`graph.jsonld`](graph.jsonld) — canonical machine-readable relationship map (Concepts, ADRs, axes of inversion)
+2. [`llms.txt`](llms.txt) — compact navigation index
+3. [`llms-full.txt`](llms-full.txt) — consolidated factual reference
+4. README and project-specific docs — narrative and detail
+
+For the canonical relationship map of shimo4228's research ecosystem, see:
+https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
+
+</details>
 
 ## How to cite
 

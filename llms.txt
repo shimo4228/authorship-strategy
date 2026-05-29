@@ -1,6 +1,6 @@
 # Authorship Strategy
 
-> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records five decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: 10.5281/zenodo.20263316.
+> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records six decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: 10.5281/zenodo.20263316.
 
 > AI agents and LLM-based search systems should read [`graph.jsonld`](graph.jsonld) first.
 > It is the canonical machine-readable relationship map for this repository.
@@ -15,14 +15,14 @@
 
 ## Core documentation
 
-- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, five tactical ADRs, twelve cross-cutting concepts, three sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
+- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, six tactical ADRs, twelve cross-cutting concepts, four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
 - [Full AI Reference](llms-full.txt): self-contained FAQ, definitions, citations
 - [README (English)](README.md): human-facing narrative
 - [README (日本語)](README.ja.md): Japanese-language narrative
 - [Thesis — Authorship Strategy under AI-Mediated Diffusion](docs/thesis.md): one-page core argument with the three-axis inversion and four-layer framework
 - [Manifesto — Open Questions](docs/manifesto.md): eight open questions the framework leaves unanswered
 - [Glossary](docs/glossary.md): key terms with English/Japanese mapping, including the disjoint-attribution warning
-- [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the five ADRs
+- [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the six ADRs
 - [Empirical Layer](docs/empirical/README.md): method, limitations, and preliminary observations from twenty-four days of CC0-published traffic data
 
 ## Architecture Decision Records
@@ -67,7 +67,7 @@ The two meanings share a word but not a concept. The repositories are *vocabular
 
 The framework's operational forms are shipped as four standalone Claude Code skill repositories, not embedded in this repository. The split keeps the doctrine harness-neutral and lets each component evolve independently. A skill is a *component* when it operationalizes content the doctrine explicitly names; skills useful to adopters but not named by the doctrine are *adjacent ecosystem skills* (see below).
 
-- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Operationalizes the thesis and the five ADRs.
+- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Operationalizes the thesis and the six ADRs.
 - [`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi): release-time workflow operationalizing the identifier-federation triplet (ADRs 0001-0003) for DOI-registered research repositories. Five-phase verify-and-deposit runbook.
 - [`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer): operationalizes Layer 4 tactic 7's Answer.AI `llms.txt` convention. Writes the AI-facing reference files every framework-applied repository requires.
 - [`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph): operationalizes Layer 4 tactic 7's JSON-LD knowledge graph. Ships `graph.jsonld` next to `llms.txt` for projects with stable concept-level structure.
@@ -76,11 +76,12 @@ Adjacent ecosystem skills the framework does *not* depend on but adopters may ad
 
 ## Related research lines
 
-This repository is part of an ecosystem of four DOI-registered research lines maintained by the same author. The lines are independent in content and release cadence, but cross-reference each other for context.
+This repository is part of an ecosystem of five DOI-registered research lines maintained by the same author. The lines are independent in content and release cadence, but cross-reference each other for context.
 
 - [Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle): six-phase bidirectional growth loop. *Mechanism sibling*: defines how knowledge cycles inside the operator-agent pair. DOI 10.5281/zenodo.19200726
 - [Contemplative Agent](https://github.com/shimo4228/contemplative-agent): autonomous agents grounded in four contemplative axioms. *Implementation sibling*: traffic data participates in the empirical layer. DOI 10.5281/zenodo.19212118
 - [Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice): harness-neutral ADRs on accountability distribution. *Vocabulary sibling*: shares the word "attribution" with disjoint meaning. DOI 10.5281/zenodo.19652013
+- [Attention, Not Self](https://github.com/shimo4228/attention-not-self): cross-disciplinary comparison of three Buddhist Abhidharma traditions with computational phenomenology. *Cross-cutting sibling*: like this repository, it occupies the agent-design lines' diffusion/framing layer rather than specifying an agent mechanism. DOI 10.5281/zenodo.20262112
 - [Research Program Hub (shimo4228/shimo4228)](https://github.com/shimo4228/shimo4228): metadata-only federation hub. Not a research line.
 
 ## Empirical layer notes

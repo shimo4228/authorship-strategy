@@ -287,7 +287,9 @@ deduced from a prior literature; it was articulated by noticing
 recurring decisions across the four lines, formalized as a
 framework, and re-expressed in harness-neutral form so it can be
 adopted by another author without inheriting the original
-sibling-line content.
+sibling-line content. The research program has since grown to
+include a fifth research line, Attention, Not Self, which postdates
+the framework's extraction and so did not contribute to it.
 
 The intellectual lineage — prior authors whose work supplies the
 vocabulary the framework presupposes, sibling lines whose
@@ -296,7 +298,7 @@ existence supplied the recurring decisions — is catalogued in
 framework leaves unanswered are catalogued in
 [`manifesto.md`](manifesto.md).
 
-The framework's tactical decisions are formalized as five ADRs
+The framework's tactical decisions are formalized as six ADRs
 in [`adr/`](adr/). Each ADR is harness-neutral; the lineage to
 the author's specific decisions is recorded in the ADR's Lineage
 section without requiring the reader to have access to the

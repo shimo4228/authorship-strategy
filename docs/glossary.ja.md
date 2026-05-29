@@ -245,10 +245,11 @@ defensible である。
 ## Sibling research line (姉妹研究ライン)
 
 同じ著者によって維持される、独立した content と release cadence だが共有された
-著者的アイデンティティを持つ、peer DOI 登録 research line。本 repo には 3 つの
+著者的アイデンティティを持つ、peer DOI 登録 research line。本 repo には 4 つの
 sibling line がある: [Agent Knowledge Cycle](https://github.com/shimo4228/agent-knowledge-cycle)、
 [Contemplative Agent](https://github.com/shimo4228/contemplative-agent)、
-[Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice)。
+[Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice)、
+[Attention, Not Self](https://github.com/shimo4228/attention-not-self)。
 関係性は [`CLAUDE.md`](../CLAUDE.md) 参照。
 
 ## Hub (repository federation における)

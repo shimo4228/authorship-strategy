@@ -38,7 +38,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the six tactical ADRs in three clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006), the three sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the six tactical ADRs in three clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -85,7 +85,7 @@
         {"@value": "Authorship Strategy", "@language": "en"},
         {"@value": "著者戦略", "@language": "ja"}
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records five decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records six decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": "https://doi.org/10.5281/zenodo.20263316",
@@ -95,7 +95,8 @@
       "siblingOf": [
         "https://doi.org/10.5281/zenodo.19200726",
         "https://doi.org/10.5281/zenodo.19212118",
-        "https://doi.org/10.5281/zenodo.19652013"
+        "https://doi.org/10.5281/zenodo.19652013",
+        "https://doi.org/10.5281/zenodo.20262112"
       ],
       "isPartOf": "https://github.com/shimo4228/shimo4228",
       "definesConcept": [
@@ -389,6 +390,16 @@
     },
 
     {
+      "@id": "https://doi.org/10.5281/zenodo.20262112",
+      "@type": ["ResearchLine", "EcosystemRepo"],
+      "name": "Attention, Not Self",
+      "description": "A cross-disciplinary inquiry contrasting three Buddhist Abhidharma traditions (Theravāda, Sarvāstivāda, Yogācāra) with computational phenomenology (predictive processing, active inference, global workspace theory, parallel distributed processing). Cross-cutting sibling: unlike the agent-design lines (AKC, Contemplative Agent, AAP) it specifies no agent mechanism or practice; like this research line it occupies the agent-design lines' diffusion and framing layer. Shares Buddhist terminology with Contemplative Agent but with asymmetric usage: Contemplative Agent uses it as a behavioral preset, this line as a comparative cognitive framework. Began traffic observation after the v0.1.0 empirical baseline window.",
+      "url": "https://github.com/shimo4228/attention-not-self",
+      "identifier": "10.5281/zenodo.20262112",
+      "siblingOf": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
       "@id": "https://github.com/shimo4228/shimo4228",
       "@type": "EcosystemRepo",
       "name": "Research Program Hub",
@@ -401,7 +412,7 @@
       "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "@type": "EcosystemRepo",
       "name": "claude-skill-authorship-strategy",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the five ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the six ADRs.",
       "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

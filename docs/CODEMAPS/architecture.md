@@ -26,7 +26,7 @@ authorship-strategy/
     ├── manifesto.md                     eight open questions the framework leaves unanswered
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
-    ├── adr/                             5 ADRs (English) + 5 mirrors (.ja.md) + README + README.ja
+    ├── adr/                             6 ADRs (English) + 6 mirrors (.ja.md) + README + README.ja
     ├── empirical/                       preliminary observation layer (method + 2026-05 baseline)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
@@ -39,15 +39,15 @@ authorship-strategy/
 | Core thesis | `docs/thesis.md` | Three-axis inversion + four-layer framework. English primary. |
 | Open questions | `docs/manifesto.md` | Eight items. Adopters invited to extend. |
 | Vocabulary | `docs/glossary.md` | Includes load-bearing disjoint-attribution disambiguation vs. AAP. |
-| Lineage | `docs/inspiration.md` | Prior literature (Foucault, Chartier, Shapiro & Varian, Lessig, scientometrics, GEO); sibling-line origins of the five ADRs. |
-| ADR index | `docs/adr/README.md` | Five ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005). |
+| Lineage | `docs/inspiration.md` | Prior literature (Foucault, Chartier, Shapiro & Varian, Lessig, scientometrics, GEO); sibling-line origins of the six ADRs. |
+| ADR index | `docs/adr/README.md` | Six ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006). |
 | Tactical decisions | `docs/adr/000N-*.md` | Each ADR: Status / Date / Context / Decision / Alternatives / Consequences / Lineage. Harness-neutral body, lineage records the implementation-specific origin. |
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
 | Component skills index | `docs/skills/README.md` | Reference index pointing to four external component skill repositories (`claude-skill-authorship-strategy`, `claude-skill-release-doi`, `claude-skill-llms-txt-writer`, `claude-skill-jsonld-knowledge-graph`) plus an adjacent-ecosystem-skills section. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. The component-status criterion (the skill operationalizes content the doctrine explicitly names) is documented in the file itself. |
 | AI landing | `llms.txt` | Answer.AI convention. Compact navigator + canonical reading order. |
 | AI reference | `llms-full.txt` | Self-contained Q&A. |
-| AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + five ADRs + sibling lines + disjoint-vocabulary edge to AAP. |
+| AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + six ADRs + sibling lines + disjoint-vocabulary edge to AAP. |
 | Citation metadata | `CITATION.cff` | Concept DOI populated post-Zenodo. |
 | Deposit metadata | `.zenodo.json` | `relatedIdentifiers` declare the DOI federation. |
 
@@ -60,7 +60,7 @@ the empirical layer is downstream of all ADRs and references them only
 to disclaim that the observations do not validate the ADRs.
 
 ```
-thesis.md ──────► (cited by) ─► all 5 ADRs
+thesis.md ──────► (cited by) ─► all 6 ADRs
               ─► manifesto.md (uses thesis vocabulary)
               ─► glossary.md (defines thesis terminology)
 
@@ -91,7 +91,7 @@ violated by routine maintenance:
 - **Preliminary-observation tone in empirical layer.** Empirical claims use phrasing like "consistent with" or "preliminary observation"; not "evidence" or "validation". The empirical layer is a case study with explicit limitations, not an experiment.
 - **CODEMAPS file-level / graph.jsonld concept-level.** This file describes the repository at the *file* level (where does X live as a file); `graph.jsonld` describes the repository at the *concept* level (what is X, how does it relate to Y). The two never duplicate each other; new ADRs, new Concepts, new EcosystemRepo entries must update both.
 - **Hub back-propagation.** New ADRs, new Concepts, or large thesis revisions trigger updates to the federation hub (`/Users/shimomoto_tatsuya/MyAI_Lab/shimo4228/`): its `graph.jsonld` adds the new entities; its README cross-references the new content. Routine in-repository ADR refinements do not require hub updates.
-- **Sibling `.zenodo.json` cross-reference.** When this repository receives its concept DOI, the three sibling research lines' `.zenodo.json` files are updated to add `references` or `isReferencedBy` entries pointing to it, so the citation network is recoverable from any sibling's deposit metadata.
+- **Sibling `.zenodo.json` cross-reference.** When this repository receives its concept DOI, the four sibling research lines' `.zenodo.json` files are updated to add `references` or `isReferencedBy` entries pointing to it, so the citation network is recoverable from any sibling's deposit metadata.
 
 ## What lives where (FAQ for new contributors)
 

@@ -12,7 +12,8 @@ to extend it or to operate within its current scope.
 ## Open question 1: How does the framework scale beyond a single author?
 
 The framework was extracted from a single author's research
-program (four sibling research lines). The extracted decisions
+program (four research lines at the time of extraction; the
+program now comprises five, the fifth being Attention, Not Self). The extracted decisions
 are, by construction, decisions one author could plausibly make
 without coordination. Multi-author research programs introduce
 considerations the framework does not currently address:

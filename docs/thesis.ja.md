@@ -232,14 +232,16 @@ repo (Agent Knowledge Cycle、Contemplative Agent、Agent Attribution Practice�
 連合 hub) の運用から抽出された。先行文献から演繹されたのではなく、4 つの line に
 わたる recurring decision に気づくことで articulate され、framework として
 formalize され、harness-neutral な形式に再表現された。これにより、他の著者が
-原 sibling-line content を継承せずに採用できる。
+原 sibling-line content を継承せずに採用できる。Research program は以降、
+framework 抽出後に加わった 5 つ目の research line、Attention, Not Self を
+含むまで成長した（抽出には寄与していない）。
 
 知的系譜 —— framework が presupposes する語彙を供給する先行著者、recurring
 decision を供給した sibling line —— は [`inspiration.md`](inspiration.md) に
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 5 つの ADR として formalize されて
+Framework の戦術的判断は [`adr/`](adr/) に 6 つの ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 

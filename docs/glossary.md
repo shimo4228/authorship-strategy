@@ -302,10 +302,11 @@ is defensible.
 
 A peer DOI-registered research line maintained by the same
 author, with independent content and release cadence but shared
-authorial identity. This repository has three sibling lines:
+authorial identity. This repository has four sibling lines:
 [Agent Knowledge Cycle](https://github.com/shimo4228/agent-knowledge-cycle),
 [Contemplative Agent](https://github.com/shimo4228/contemplative-agent),
-and [Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice).
+[Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice),
+and [Attention, Not Self](https://github.com/shimo4228/attention-not-self).
 See [`CLAUDE.md`](../CLAUDE.md) for the relationships.
 
 ## Hub (in repository federation)
