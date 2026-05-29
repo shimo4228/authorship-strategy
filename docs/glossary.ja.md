@@ -206,6 +206,18 @@ traffic data に基づいて追加・退役させる維持 policy。
 [ADR-0005](adr/0005-readme-localization-audience-driven.ja.md) 参照。Operative principle:
 維持コストは hoped-for audience ではなく actual audience で amortize される。
 
+## Human-Attention Signal (人間注意シグナル)
+
+platform-level な human-attention metric —— Git-host の star 数または
+repository の page-view 数 —— であって、[ADR-0007](adr/0007-human-attention-signals-not-a-metric.ja.md)
+下で framework の success metric として reject されるもの。Star 数は
+*gameable* (購入可能) で、page-view は *LLM-mediated reach に対して
+structurally blind* なので、主 audience が LLM 経由である著者にとって
+どちらも valid な最適化対象でも success metric でもない。Framework は
+success を著者の署名を運ぶ LLM-mediated channel の breadth で測る;
+on-page な human quality は growth lever ではなく hygiene として保たれ、
+off-page な人間向け distribution labor は red-ocean な活動として declines される。
+
 ## Diffusion
 
 substrate を通じた artifact の伝播。本 repo の framework では、validation が依存する

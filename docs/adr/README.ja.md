@@ -16,8 +16,9 @@ top-down に prescribe されたものではない。
 | [0004](0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ | accepted |
 | [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points | accepted |
+| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
 
-ADR set は thesis の異なる層を tracking する 3 つの cluster に分かれる:
+ADR set は thesis の異なる層を tracking する 4 つの cluster に分かれる:
 
 ADR 0001-0003 は **identifier-federation triplet** を形成する: ADR-0001 が canonical
 reference の形 (version DOI ではなく concept DOI) を fix し、ADR-0002 が archive
@@ -39,6 +40,17 @@ artifact を複数 platform に *reach* させ、maintenance pair が edit を�
 規定し、そこで operating する LLM-mediated channel が absorb できるようにする。
 Thesis の Axis 1 反転 (enclosure → openness) を ingest 表面で直接 operationalize
 するのは本 ADR のみである。
+
+ADR-0007 は **metric-rejection decision** である: framework が何を optimize
+*しない* かを fix する。Platform の human-attention signal —— Git-host の star
+(gameable: 購入可能) と page-view (LLM-mediated reach に盲目) —— を success metric
+から除外し、off-page の human-distribution 労働を、human 到達がほぼ空の funnel
+(実測 clone:view ≈ 16:1) の上で動く red-ocean 活動として却下する。ADR-0006 が
+LLM-mediated audience に向けて artifact が取る *form* を規定するのに対し、ADR-0007
+はその audience —— platform の human-attention ではなく —— が *success の尺度* で
+あると宣言し、program の従来型 engagement 数値がほぼ 0 であることを、直すべき欠陥
+ではなく受容された consequence として grounding する。Thesis の scarcity →
+diffusion 反転の metric 側の対応物である。
 
 ## Format
 

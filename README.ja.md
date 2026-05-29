@@ -10,7 +10,7 @@ Language: [English](README.md) | 日本語
 他の研究者が参照する discovery layer として —— 著者性を守る戦略は反転している。
 作品を閉じ込めることは、未来の trace が自分に辿り着く確率を増やすのではなく *減らす*。
 この repo は反転した戦略を記録する: それが何で、なぜ成り立ち、それを運用する中で
-抽出された 6 つの戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
+抽出された 7 つの戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
 
 フレームワークは 20 世紀的 authorship strategy の 3 軸反転
 （scarcity → diffusion / exclusivity → derivation / enclosure → openness）と、
@@ -48,7 +48,7 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md) (英語正本)、日本�
 thesis の中で展開されている。Framework の open questions は
 [`docs/manifesto.md`](docs/manifesto.md) に集約。
 
-## 6 つの戦術 ADR
+## 7 つの戦術 ADR
 
 | ADR | 判断 |
 |-----|------|
@@ -58,8 +58,9 @@ thesis の中で展開されている。Framework の open questions は
 | [0004](docs/adr/0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ —— 著者識別子は concept DOI のみで enrich し、version sprawl による公開記録の汚染を防ぐ |
 | [0005](docs/adr/0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— 観測された traffic に基づいて locale mirror を追加/退役させ、想定 audience の推測には基づかない |
 | [0006](docs/adr/0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points —— framework が統べる artifact は prose 形 navigator と concept 形 linked-data graph を同期 release される相補ペアとして deploy し、各 entry point は他方が届かない LLM 経由の読者 sub-population に届く |
+| [0007](docs/adr/0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric —— Git-host の star 数（gameable: 購入可能）と repository の page-view 数（LLM 経由の reach に対して構造的に blind）を最適化対象・success metric から除外する; off-page な人間向け distribution labor は red-ocean な活動として declines する; success は著者の署名を運ぶ LLM 経由チャネルの breadth で測る |
 
-6 つの ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
+7 つの ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
 抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral な
 形式で再表現された。完全な index と lineage は [`docs/adr/README.md`](docs/adr/README.md)
 を参照。
@@ -97,7 +98,7 @@ framing する。完全な traffic data は CC0 で
 
 ## この repo の読み方
 
-戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 6 つの ADR を番号順に。
+戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 7 つの ADR を番号順に。
 非自明な入口が要るのは次の 2 経路:
 
 - **個別戦術を採用する:** 該当 ADR を直接読み、必要に応じて [`docs/glossary.md`](docs/glossary.md) で disambiguation。

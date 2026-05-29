@@ -16,8 +16,9 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0004](0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled | accepted |
 | [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
+| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
 
-The set groups into three clusters, each tracking a distinct layer of the
+The set groups into four clusters, each tracking a distinct layer of the
 thesis:
 
 ADRs 0001-0003 form an **identifier-federation triplet**: ADR-0001 fixes the
@@ -43,6 +44,18 @@ ADR-0006 specifies what *form* the artifact must take at each platform so the
 LLM-mediated channels operating there can absorb it. It is the only ADR that
 directly operationalizes the thesis's Axis 1 inversion (enclosure → openness)
 on the ingest surface.
+
+ADR-0007 is the **metric-rejection decision**: it fixes what the framework
+does *not* optimize for. Platform human-attention signals — Git-host stars
+(gameable: purchasable) and page-views (blind to LLM-mediated reach) — are
+excluded as success metrics, and off-page human-distribution labor is declined
+as a red-ocean activity operating on a near-empty human-arrival funnel
+(empirically clone:view ≈ 16:1). Where ADR-0006 specifies the *form* the
+artifact takes for its LLM-mediated audience, ADR-0007 declares that this
+audience — not platform human-attention — is the *measure of success*,
+grounding the program's near-zero conventional engagement numbers as an
+accepted consequence rather than a defect to fix. It is the metric-side
+counterpart to the thesis's scarcity → diffusion inversion.
 
 ## Format
 

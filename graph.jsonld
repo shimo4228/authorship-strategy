@@ -38,7 +38,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the six tactical ADRs in three clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the seven tactical ADRs in four clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -231,7 +231,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0003",
         "https://github.com/shimo4228/authorship-strategy#adr/0004",
         "https://github.com/shimo4228/authorship-strategy#adr/0005",
-        "https://github.com/shimo4228/authorship-strategy#adr/0006"
+        "https://github.com/shimo4228/authorship-strategy#adr/0006",
+        "https://github.com/shimo4228/authorship-strategy#adr/0007"
       ]
     },
 
@@ -308,6 +309,20 @@
     },
 
     {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection",
+      "@type": "Concept",
+      "name": "Human-Attention Signal Rejection",
+      "alternateName": [
+        {"@value": "Human-Attention Signal Rejection", "@language": "en"},
+        {"@value": "人間アテンション signal の却下", "@language": "ja"}
+      ],
+      "description": "The decision to exclude platform-level human-attention metrics — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach, since a human reading the work through an LLM answer generates no view) — from the framework's success definition, and to decline off-page human-distribution labor as a red-ocean activity operating on a near-empty human-arrival funnel (empirically clone:view approximately 16:1). Success is measured by the breadth of LLM-mediated channels instead. The metric-side embodiment of the scarcity-to-diffusion axis: the framework does not compete for scarce human attention on platform terms but diffuses through LLM-mediated channels.",
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0007",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
+    },
+
+    {
       "@id": "https://github.com/shimo4228/authorship-strategy#adr/0001",
       "@type": "ADR",
       "name": "ADR-0001: Concept DOI as Canonical Reference",
@@ -355,6 +370,14 @@
       "name": "ADR-0006: LLM-First Ingest via Dual Entry Points",
       "description": "Specifies that any framework-governed artifact deploys a prose-form navigator and a concept-form linked-data graph as a complementary pair, released synchronously. Each entry point addresses a distinct LLM-mediated reader sub-population the other cannot reach. The pair is the operational embodiment of the Axis 1 inversion (enclosure to openness) on the ingest surface.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0007",
+      "@type": "ADR",
+      "name": "ADR-0007: Human-Attention Platform Signals Are Not a Success Metric",
+      "description": "Platform human-attention signals — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach) — are excluded as optimization targets and success metrics, and off-page human-distribution labor is declined as a red-ocean activity operating on a near-empty human-arrival funnel. Success is measured by the breadth of LLM-mediated channels carrying the author's signature. The metric-side counterpart to the scarcity-to-diffusion inversion; on-page human quality is maintained as hygiene, not as a growth lever.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
     },
 
     {

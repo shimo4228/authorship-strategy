@@ -92,7 +92,7 @@ idea-versus-scaffold) layers above it.
 
 The framework was extracted from four sibling research lines
 maintained by the same author. The four lines supplied the
-recurring tactical decisions that became the framework's six
+recurring tactical decisions that became the framework's seven
 ADRs. Each sibling line is independent in content; the framework
 is downstream of all four. (The research program has since added
 a fifth line, Attention, Not Self, which postdates the extraction
@@ -121,9 +121,9 @@ and so is not among the four that supplied the recurring decisions.)
 - Repository: https://github.com/shimo4228/shimo4228
 - Lineage to this repository: the hub supplies the *federation pattern* (a metadata-only repository at the center of a sibling network, cross-referenced from each sibling and CC0-licensed) that the present framework's Cross-Platform Dataset Federation ADR generalizes. The hub also publishes the traffic data the empirical layer draws on, under a CC0 license.
 
-## Operational origins of the six ADRs
+## Operational origins of the seven ADRs
 
-Each of the framework's six ADRs traces to a recurring decision
+Each of the framework's seven ADRs traces to a recurring decision
 in the sibling-line operation. The lineage is recorded in each
 ADR's *Lineage* section; this document summarizes the chain.
 
@@ -135,6 +135,7 @@ ADR's *Lineage* section; this document summarizes the chain.
 | 0004 Authorship Metadata with ORCID Auto-Update OFF | The author's deliberate choice (May 2026) to enrich the ORCID record only with concept DOIs (not version DOIs) and to disable Auto-Update, to prevent version sprawl from polluting the public record while retaining manual push capability. |
 | 0005 README Localization Audience-Driven | The author's retirement (May 2026) of four locale-mirror README files (Simplified Chinese, Traditional Chinese, Brazilian Portuguese, Spanish) after thirty days of traffic data showed statistically zero direct human readers in those languages, against a maintenance cost of approximately six-times-feature multiplication. |
 | 0006 LLM-First Ingest via Dual Entry Points | The author's practice (May 2026) of shipping a prose-form AI navigator (`llms.txt`) and a concept-form knowledge graph (`graph.jsonld`) together across the sibling lines, after observing that each entry point reaches an LLM-mediated reader sub-population the other does not; formalized as a synchronously released, required pair. |
+| 0007 Human-Attention Platform Signals Are Not a Success Metric | The author's analysis (2026-05-29) of the CC0-published traffic data showing clones outnumber human page-views by roughly 16:1 with human views ≈ 0, establishing that the binding constraint on human attention is off-page distribution (a red-ocean activity), combined with the observation that Git-host star counts are purchasable; together these excluded star counts and page-views as success metrics and fixed success on LLM-mediated reach instead. |
 
 ## On the recursive application of the framework to itself
 
@@ -163,7 +164,7 @@ debts and the sibling decisions that informed it could read in
 this order:
 
 1. [`thesis.md`](thesis.md) for the framework's core claim.
-2. The six ADRs in [`adr/`](adr/), in numerical order, for the tactical decisions.
+2. The seven ADRs in [`adr/`](adr/), in numerical order, for the tactical decisions.
 3. The sibling repositories' READMEs (AKC, Contemplative Agent, AAP) for the operational context the framework was extracted from.
 4. The prior literature cited above for the framework's grounding in book history, platform economics, and scientometrics.
 5. [`manifesto.md`](manifesto.md) for the open questions the framework leaves unanswered.

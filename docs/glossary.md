@@ -252,6 +252,19 @@ data, not *speculated* prospective audiences. See
 operative principle: maintenance cost is amortized over actual
 audience, not over hoped-for audience.
 
+## Human-Attention Signal
+
+A platform-level human-attention metric — a Git-host star count or a
+repository page-view count — rejected as a framework success metric
+under [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md). Star
+counts are *gameable* (purchasable) and page-views are *structurally
+blind to LLM-mediated reach*, so neither is a valid optimization target
+or success metric for an author whose primary audience is LLM-mediated.
+The framework measures success by the breadth of LLM-mediated channels
+carrying the author's signature; on-page human quality is kept as
+hygiene, not a growth lever, and off-page human-distribution labor is
+declined as a red-ocean activity.
+
 ## Diffusion
 
 The propagation of an artifact through a substrate. In this

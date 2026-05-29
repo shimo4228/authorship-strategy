@@ -9,6 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 (no unreleased changes)
 
+## [0.2.0] - 2026-05-29
+
+Records two ADRs since v0.1.0 — ADR-0006 (committed post-tag, not previously
+released) and ADR-0007 (new) — and synchronizes the ADR set across all living
+surfaces.
+
+**Concept DOI (canonical): [10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)**
+
+### Added
+
+- ADR-0006: LLM-First Ingest via Dual Entry Points — every framework-governed artifact ships a prose-form navigator and a concept-form linked-data graph as a complementary, synchronously released pair, each reaching an LLM-mediated reader sub-population the other cannot.
+- ADR-0007: Human-Attention Platform Signals Are Not a Success Metric — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach) are excluded as optimization targets and success metrics; off-page human-distribution labor is declined as a red-ocean activity; success is measured by the breadth of LLM-mediated channels. On-page human quality is maintained as hygiene, not as a growth lever.
+
+### Changed
+
+- ADR-count surfaces updated from six to seven; `docs/adr/README` regrouped into four clusters (added the metric-rejection cluster).
+- `graph.jsonld`: added the ADR-0007 node, a `human-attention-signal-rejection` concept downstream of the scarcity-to-diffusion axis, and the ADR-0007 instantiation in the Tactics layer; Dataset description updated to seven ADRs / four clusters.
+- `llms.txt`: ADR list completed (ADR-0006 was absent) and extended with ADR-0007; cluster prose updated.
+
+### Notes
+
+- No version DOI is embedded in citation surfaces yet; the v0.2.0 version DOI is filled in post-release once Zenodo mints it. Per ADR-0001 the concept DOI remains canonical for display.
+
 ## [0.1.0] - 2026-05-18
 
 Initial public release.
