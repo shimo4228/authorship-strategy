@@ -15,7 +15,7 @@
 
 ## Core documentation
 
-- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, seven tactical ADRs, twelve cross-cutting concepts, four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
+- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, seven tactical ADRs, sixteen cross-cutting concepts, four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
 - [Full AI Reference](llms-full.txt): self-contained FAQ, definitions, citations
 - [README (English)](README.md): human-facing narrative
 - [README (日本語)](README.ja.md): Japanese-language narrative

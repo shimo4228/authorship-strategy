@@ -85,7 +85,7 @@
         {"@value": "Authorship Strategy", "@language": "en"},
         {"@value": "著者戦略", "@language": "ja"}
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records six decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records seven decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": "https://doi.org/10.5281/zenodo.20263316",
@@ -114,7 +114,8 @@
         "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
         "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
         "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
-        "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph"
+        "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
+        "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection"
       ],
       "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
     },
@@ -160,7 +161,6 @@
       "name": "Scarcity-to-Diffusion Axis",
       "description": "First axis of the three-axis inversion: value source. Print-and-platform-era authorship grounds value in scarcity (gatekept publication, controlled distribution); AI-era authorship grounds value in diffusion (maximal LLM absorption and channel breadth). The axis inverts because the substrate inverts.",
       "axisPosition": 1,
-      "invertsTo": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
       "covaresWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
@@ -435,7 +435,7 @@
       "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "@type": "EcosystemRepo",
       "name": "claude-skill-authorship-strategy",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the six ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the seven ADRs.",
       "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
