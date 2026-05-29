@@ -30,7 +30,7 @@ surfaces.
 
 ### Notes
 
-- No version DOI is embedded in citation surfaces yet; the v0.2.0 version DOI is filled in post-release once Zenodo mints it. Per ADR-0001 the concept DOI remains canonical for display.
+- v0.2.0 version DOI (for reproducibility citation only): [10.5281/zenodo.20446331](https://doi.org/10.5281/zenodo.20446331). Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation; the version DOI is recorded here for reproducibility only.
 
 ## [0.1.0] - 2026-05-18
 
