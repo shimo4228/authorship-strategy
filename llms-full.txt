@@ -327,8 +327,13 @@ A skill is a *component* when it operationalizes content the doctrine
 explicitly names — either the judgment framework itself, or a Layer 4
 tactic that names a canonical artifact or discipline. Skills useful to
 adopters but not specifically named by the doctrine
-(`context-sync`, `writing-ecosystem`, `update-codemaps`, etc.) are
-*adjacent ecosystem skills*, not components.
+(`context-sync`, `writing-ecosystem`, `readme-writer`,
+`update-codemaps`, etc.) are *adjacent ecosystem skills*, not
+components. For example, `readme-writer` is the human-surface
+counterpart to the `llms-txt-writer` component: the doctrine requires
+the AI-facing `llms.txt` artifact (Layer 4 tactic 7) but does not name
+human-facing README content quality, so the human-surface writer is
+adjacent rather than a component.
 
 - **[`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy)** — the operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions, packaged for loading into an LLM-based coding agent's rule set. Adopt this component to apply the framework's day-to-day judgment without re-deriving it from the thesis.
 - **[`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi)** — the release-time workflow that operationalizes the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook. Adopt this component to operate a DOI-registered research repository following the framework's identifier-federation discipline.

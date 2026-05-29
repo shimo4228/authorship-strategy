@@ -105,7 +105,7 @@ Repo mapping:
 
 | GitHub | HF dataset |
 |---|---|
-| `shimo4228/authorship-strategy` ← **this repo** | [`Shimo4228/authorship-strategy`](https://huggingface.co/datasets/Shimo4228/authorship-strategy) (作成予定) |
+| `shimo4228/authorship-strategy` ← **this repo** | [`Shimo4228/authorship-strategy`](https://huggingface.co/datasets/Shimo4228/authorship-strategy) |
 | `shimo4228/agent-knowledge-cycle` | [`Shimo4228/agent-knowledge-cycle`](https://huggingface.co/datasets/Shimo4228/agent-knowledge-cycle) |
 | `shimo4228/contemplative-agent` | [`Shimo4228/contemplative-agent`](https://huggingface.co/datasets/Shimo4228/contemplative-agent) |
 | `shimo4228/agent-attribution-practice` | [`Shimo4228/agent-attribution-practice`](https://huggingface.co/datasets/Shimo4228/agent-attribution-practice) |
@@ -133,7 +133,7 @@ HF 側の `README.md` (dataset card) は HF 用に customize されている。G
 
 - **Component** = doctrine が specifically 名指しする skill (4 つ)
 - **Peer component** = 同 framework 内の他 component
-- **Adjacent ecosystem skill** = ecosystem には存在するが、本 framework では required ではない skill (`context-sync` / `writing-ecosystem` / `update-codemaps` 等)
+- **Adjacent ecosystem skill** = ecosystem には存在するが、本 framework では required ではない skill (`context-sync` / `writing-ecosystem` / `readme-writer` / `update-codemaps` 等)。`readme-writer` は component `llms-txt-writer` の人間 surface 対応物 (AI surface = llms.txt は doctrine required、人間 surface = README は required でない) → 詳細は [docs/skills/README.md](docs/skills/README.md)
 
 `sibling component skill` 表記は使わない (overloaded で意味不明瞭)。
 

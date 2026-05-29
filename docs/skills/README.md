@@ -19,7 +19,7 @@ depend on any specific implementation surviving.
 
 To avoid ambiguity, this repository uses the following terms:
 
-- **Sibling research line** — peer at the research-program level. Reserved for the four DOI-registered research lines ([AKC](https://github.com/shimo4228/agent-knowledge-cycle), [Contemplative Agent](https://github.com/shimo4228/contemplative-agent), [AAP](https://github.com/shimo4228/agent-attribution-practice), and this one).
+- **Sibling research line** — peer at the research-program level. Reserved for the five DOI-registered research lines ([AKC](https://github.com/shimo4228/agent-knowledge-cycle), [Contemplative Agent](https://github.com/shimo4228/contemplative-agent), [AAP](https://github.com/shimo4228/agent-attribution-practice), [Attention, Not Self](https://github.com/shimo4228/attention-not-self), and this one).
 - **Component (skill)** — skill that operationalizes content this doctrine explicitly names. The framework cannot be applied without it.
 - **Peer component** — relative to one component skill, the other components of the same framework.
 - **Adjacent ecosystem skill** — skill that exists in the broader Claude Code skill ecosystem but is not specifically required by this framework. Adopters may choose to use it; the framework does not depend on it.
@@ -60,7 +60,7 @@ designed to be loaded into an agent's rule set rather than read as
 prose.
 
 - Repository: `https://github.com/shimo4228/claude-skill-authorship-strategy`
-- Operationalizes: [`thesis.md`](../thesis.md) and the five [ADRs](../adr/README.md)
+- Operationalizes: [`thesis.md`](../thesis.md) and the six [ADRs](../adr/README.md)
 - Audience: LLM-based coding agents and their operators
 
 ### `claude-skill-release-doi`
@@ -150,6 +150,7 @@ not specifically require:
 
 - [`claude-skill-context-sync`](https://github.com/shimo4228/claude-skill-context-sync) — cross-document drift audits
 - [`claude-skill-writing-ecosystem`](https://github.com/shimo4228/claude-skill-writing-ecosystem) — human-facing writing orchestrator (note: targets human-primary audience, which the framework's Layer 2 identifies as non-primary; useful for adopters who additionally produce blog posts, essays, or articles but not aligned with the framework's diffusion strategy)
+- `readme-writer` (available in the author's [`claude-harness`](https://github.com/shimo4228/claude-harness), not yet a standalone repository) — the **human-surface counterpart to the `llms-txt-writer` component**. Where `llms-txt-writer` writes the AI-facing `llms.txt` / `llms-full.txt` the doctrine *requires* (Layer 4 tactic 7), `readme-writer` writes the human-facing `README`. It is **adjacent, not a component**: the doctrine names the AI-facing structured artifacts as required, but README content quality (lead, value proposition, narrative) is not doctrine-named — so a framework-applied repository can be complete without it. Like `writing-ecosystem`, it serves the human-primary surface the framework treats as non-primary; distinct from `writing-ecosystem` in scope (the single canonical README landing page vs. long-form prose).
 - [`claude-skill-search-first`](https://github.com/shimo4228/claude-skill-search-first) — research-before-coding workflow
 - `claude-skill-update-codemaps` (where available) — file-level architecture map regeneration
 
