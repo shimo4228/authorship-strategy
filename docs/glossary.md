@@ -193,6 +193,12 @@ relationships to structured-data-ingesting channels. The pair is the
 operational embodiment of the *enclosure-to-openness* axis on the
 ingest surface; deploying only one half leaves the strategy one-lunged.
 Normatively required under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md).
+[ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) amends this on
+2026 evidence: the two entry points are not co-equal on the *citation*
+axis — the concept-form graph carries retrieval-time citation while the
+prose navigator's citation effect is noise — so the pair is retained but
+made *asymmetric*, the navigator rescoped to a Business-to-Agent (B2A)
+context surface rather than an AI-search citation lever.
 
 ## llms.txt convention
 
@@ -276,6 +282,28 @@ re-implementation by another author. Diffusion is observable
 through traffic data; adoption requires separate signal (see
 *Epistemic humility about diffusion signals* in
 [`thesis.md`](thesis.md)).
+
+## Two-Channel Attribution Diffusion
+
+The refinement of [Attribution Diffusion](#attribution-diffusion-layer-2)
+into two mechanisms with opposite time constants and opposite levers,
+introduced in [ADR-0008](adr/0008-rag-era-attribution-diffusion.md). The
+*parametric channel* absorbs the idea into model weights at training time
+(slow; driven by broad cross-platform co-occurrence of distinctive
+vocabulary with its source). The *retrieval channel* fetches the artifact
+at query time (fast; driven by freshness and structured data). The two are
+optimized and measured separately and run in parallel; optimizing one does
+not buy the other.
+
+## Ghost Citation
+
+The failure mode in which a retrieval-augmented system cites an artifact's
+URL but does not name or recommend its author, because the author's name
+was never burned into parametric memory. Identified in
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.md) as the reason the
+parametric and retrieval channels must be pursued in parallel: a working
+retrieval channel atop absent parametric burn-in produces a citation
+without resurfacing the attribution.
 
 ## Derivation (in derivative work)
 

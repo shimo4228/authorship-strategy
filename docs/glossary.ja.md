@@ -153,7 +153,11 @@ prose navigator は prose-reading channels を orient し、concept graph は
 structured-data-ingesting channels に concept 間関係を expose する。Pair は
 *enclosure-to-openness* axis を ingest 表面で operational embody したもので、
 片方しか deploy しないと戦略は片肺になる。[ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md)
-下で normatively required。
+下で normatively required。[ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.ja.md) は
+これを 2026 年の証拠に基づき amend する: 2 つの entry point は *citation* 軸で
+co-equal でない —— concept-form graph が検索時 citation を担い、prose navigator の
+citation 効果は noise —— ので pair は retain しつつ *非対称* にし、navigator を
+AI-search citation lever でなく Business-to-Agent (B2A) context surface に rescope する。
 
 ## llms.txt convention
 
@@ -225,6 +229,24 @@ operative concept (Layer 2)。Framework は *diffusion* と *adoption* を区別
 diffusion は伝播 event (ingestion、citation、mention); adoption は別著者による
 再実装。Diffusion は traffic data で観測可能; adoption には別の signal が必要
 (see *Epistemic humility about diffusion signals* in [`thesis.ja.md`](thesis.ja.md))。
+
+## Two-Channel Attribution Diffusion (2 チャネル化された Attribution Diffusion)
+
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) で導入された、
+[Attribution Diffusion](#attribution-diffusion-layer-2) を時定数もレバーも
+正反対の 2 機構に精緻化したもの。*parametric channel* はアイデアを訓練時に
+モデルの重みへ吸収する (遅い; 固有語彙とその出典の広範なクロスプラットフォーム
+共起が駆動)。*retrieval channel* はクエリ時に artifact を fetch する (速い;
+新鮮さと structured data が駆動)。両者は別々に最適化・測定され並行で回る;
+一方の最適化はもう一方を買わない。
+
+## Ghost Citation (幽霊引用)
+
+retrieval-augmented system が artifact の URL を cite するが、著者の名前が
+parametric 記憶に焼き込まれていないため著者を名指しも推薦もしない failure mode。
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) で、parametric と
+retrieval の 2 チャネルを並行で追うべき理由として特定された: parametric 焼き込み
+不在の上で動く retrieval channel は、帰属を再浮上させずに citation だけを生む。
 
 ## Derivation (derivative work における)
 
