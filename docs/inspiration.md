@@ -88,6 +88,66 @@ the framework treats it as one layer of a strategy that has
 non-technical (Layer 1 authenticity) and predictive (Layer 3
 idea-versus-scaffold) layers above it.
 
+### Empirical citation-mechanics literature (2026)
+
+A distinct strand of 2026 work measures the *mechanics* of LLM
+citation directly, and it is this strand — not the author's own
+traffic data alone — that grounds the two-channel refinement in
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.md). The
+relationship is downstream: the two-channel mechanism was
+articulated after, and on the basis of, this literature. The
+framework's contribution is the *normative placement* of the
+mechanism inside an authorship-diffusion strategy, not the
+underlying citation mechanics, which the framework adopts from the
+prior art rather than originates.
+
+- *GhostCite* (Xu et al., arXiv:2602.06718) audits 2.2 million
+  citations across 56,381 published papers and benchmarks thirteen
+  LLMs, establishing both the term *ghost citation* and the
+  large-scale evidence (1.07% of papers carry invalid citations)
+  that author attribution is routinely lost under LLM-mediated
+  citation. ADR-0008's use of ghost citation as the diagnostic that
+  the parametric and retrieval channels are distinct rests on this
+  prior art; the framework adopts the term, it does not coin it.
+- Seer Interactive's study of 541,213 LLM responses across twenty
+  brands and six AI platforms supplies the closest external
+  statement of the two-channel mechanism the framework has found.
+  Its leading hypothesis is that citations are post-hoc: "The LLM
+  generates its answer first, deciding which brands to name from
+  its parametric memory (the knowledge encoded during training).
+  Then, in a retrieval step, it goes looking for sources to support
+  those choices" — which the study summarizes as "the citations are
+  the bibliography, not the brainstorm." The same study reports a
+  brand citation rate of 53.1% when the brand is named against
+  10.6% when it is not, consistent with the framework's claim that
+  the parametric channel gates the retrieval channel rather than
+  the reverse.
+- *From Citation Selection to Citation Absorption* (Zhang et al.,
+  arXiv:2604.25707) separates which sources a platform fetches from
+  how much a fetched page contributes to the answer, across ChatGPT,
+  Google AI Overview/Gemini, and Perplexity. It grounds the
+  retrieval-channel measurement caution — also recorded in
+  [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md) —
+  that a raw citation count is not a measure of influence.
+- *Diagnosing and Repairing Citation Failures in Generative Engine
+  Optimization* (Tian et al., arXiv:2603.09296) supplies a taxonomy
+  of citation-failure modes and shows the retrieval channel is an
+  optimizable surface (a 5% content change yielding over 40% more
+  citations), while warning that generic optimization degrades
+  long-tail content.
+
+The framing of this literature is marketing-optimization: how to
+make a brand win citations. The framework reads the same mechanics
+the other way, through the human-attention-signal rejection
+([ADR-0007](adr/0007-human-attention-signals-not-a-metric.md)) and
+the Layer 1 anti-monetization commitment: it asks not how to
+capture citations but whether an author's *signature* survives
+diffusion. The mechanism is borrowed; the normative orientation is
+not. These figures are external published findings, not the
+present author's measurements, and are kept in this lineage
+document rather than in the ADR bodies, which remain
+vendor-and-framework-neutral by convention.
+
 ## Sibling research lines (the recurring decisions)
 
 The framework was extracted from four sibling research lines

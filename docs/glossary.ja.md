@@ -238,15 +238,22 @@ diffusion は伝播 event (ingestion、citation、mention); adoption は別著�
 モデルの重みへ吸収する (遅い; 固有語彙とその出典の広範なクロスプラットフォーム
 共起が駆動)。*retrieval channel* はクエリ時に artifact を fetch する (速い;
 新鮮さと structured data が駆動)。両者は別々に最適化・測定され並行で回る;
-一方の最適化はもう一方を買わない。
+一方の最適化はもう一方を買わない。parametric が先・retrieval が後という機構は
+2026 年の generative-engine-optimization 文献で独立に報告されており (英語版
+[inspiration.md](inspiration.md) 参照)、本 framework の寄与は
+authorship-diffusion strategy への placement であって、根底の citation
+mechanics そのものではない。
 
 ## Ghost Citation (幽霊引用)
 
 retrieval-augmented system が artifact の URL を cite するが、著者の名前が
 parametric 記憶に焼き込まれていないため著者を名指しも推薦もしない failure mode。
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) で、parametric と
-retrieval の 2 チャネルを並行で追うべき理由として特定された: parametric 焼き込み
-不在の上で動く retrieval channel は、帰属を再浮上させずに citation だけを生む。
+この語は 2026 年の generative-engine-optimization 文献 (GhostCite,
+arXiv:2602.06718; Seer Interactive の 541,213 応答調査) に由来し、本 framework は
+造語ではなく adopt している。[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md)
+はこれを 2 チャネル機構の中に、parametric と retrieval の 2 チャネルが distinct で
+並行で追うべきことの diagnostic として位置づける: parametric 焼き込み不在の上で
+動く retrieval channel は、帰属を再浮上させずに citation だけを生む。
 
 ## Derivation (derivative work における)
 

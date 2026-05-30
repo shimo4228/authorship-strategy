@@ -293,17 +293,24 @@ introduced in [ADR-0008](adr/0008-rag-era-attribution-diffusion.md). The
 vocabulary with its source). The *retrieval channel* fetches the artifact
 at query time (fast; driven by freshness and structured data). The two are
 optimized and measured separately and run in parallel; optimizing one does
-not buy the other.
+not buy the other. The parametric-first, retrieval-second mechanism is
+independently reported in the 2026 generative-engine-optimization literature
+(see [inspiration.md](inspiration.md)); the framework's contribution is its
+placement inside the authorship-diffusion strategy, not the underlying
+citation mechanics.
 
 ## Ghost Citation
 
 The failure mode in which a retrieval-augmented system cites an artifact's
 URL but does not name or recommend its author, because the author's name
-was never burned into parametric memory. Identified in
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.md) as the reason the
-parametric and retrieval channels must be pursued in parallel: a working
-retrieval channel atop absent parametric burn-in produces a citation
-without resurfacing the attribution.
+was never burned into parametric memory. The term originates in the 2026
+generative-engine-optimization literature (GhostCite, arXiv:2602.06718;
+Seer Interactive's 541,213-response study), which this framework adopts
+rather than coins. [ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
+places it inside the two-channel mechanism as the diagnostic that the
+parametric and retrieval channels are distinct and must be pursued in
+parallel: a working retrieval channel atop absent parametric burn-in
+produces a citation without resurfacing the attribution.
 
 ## Derivation (in derivative work)
 

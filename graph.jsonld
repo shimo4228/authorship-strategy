@@ -29,6 +29,7 @@
     "subjectOf": {"@id": "https://schema.org/subjectOf", "@type": "@id"},
     "hasPart": {"@id": "https://schema.org/hasPart", "@type": "@id"},
     "mainEntity": {"@id": "https://schema.org/mainEntity", "@type": "@id"},
+    "citation": {"@id": "https://schema.org/citation", "@type": "@id"},
     "axisPosition": "shimo:axisPosition",
     "layerOrdinal": "shimo:layerOrdinal",
     "narrativePosition": "shimo:narrativePosition"
@@ -61,6 +62,10 @@
         "llms.txt convention",
         "JSON-LD knowledge graph",
         "generative engine optimization",
+        "ghost citation",
+        "citation absorption",
+        "parametric channel",
+        "retrieval channel",
         "scientometrics",
         "idea-rescue"
       ]
@@ -117,6 +122,11 @@
         "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
         "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection",
         "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion"
+      ],
+      "citation": [
+        "https://arxiv.org/abs/2602.06718",
+        "https://arxiv.org/abs/2604.25707",
+        "https://arxiv.org/abs/2603.09296"
       ],
       "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
     },
@@ -339,6 +349,11 @@
       "description": "The refinement of Attribution Diffusion (Layer 2) into two mechanisms with opposite time constants and opposite levers: a parametric channel (the idea absorbed into model weights at training time — slow, driven by broad cross-platform co-occurrence of distinctive vocabulary with its source; cross-platform mention spread correlates ~0.664 with being named, far above enclosed inbound links ~0.218) and a retrieval channel (the artifact fetched at query time — fast, 3–5 day citation-pool entry and ~13-week decay, driven by freshness and structured data). Ghost citation — the source is cited but the author is not named — is the failure mode of a working retrieval channel atop absent parametric burn-in, so the two channels are optimized and measured separately and run in parallel.",
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0008",
+      "groundedIn": [
+        "https://arxiv.org/abs/2602.06718",
+        "https://arxiv.org/abs/2604.25707",
+        "https://arxiv.org/abs/2603.09296"
+      ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
     },
 
@@ -503,6 +518,39 @@
       "description": "Component skill of this research line. Operationalizes Layer 4 tactic 7 — JSON-LD knowledge graph. Designs and ships graph.jsonld next to llms.txt for projects with stable concept-level structure.",
       "url": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2602.06718",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "GhostCite: A Large-Scale Analysis of Citation Validity in the Age of Large Language Models",
+      "author": "Zuyao Xu et al.",
+      "datePublished": "2026-02-06",
+      "identifier": "arXiv:2602.06718",
+      "url": "https://arxiv.org/abs/2602.06718",
+      "description": "Large-scale audit of citation validity across thirteen LLMs and 56,381 published papers (2.2 million citations checked; 1.07% of papers carry invalid citations). Source of the term 'ghost citation' and large-scale external evidence that author attribution is routinely lost under LLM-mediated citation. Grounds the ghost-citation failure mode of Two-Channel Attribution Diffusion (ADR-0008); this research line adopts the term rather than coining it."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2604.25707",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms",
+      "author": ["Zhang Kai", "He Xinyue", "Yao Jingang"],
+      "datePublished": "2026-04-28",
+      "identifier": "arXiv:2604.25707",
+      "url": "https://arxiv.org/abs/2604.25707",
+      "description": "Two-stage GEO measurement framework separating citation selection (which sources a platform fetches) from citation absorption (how much a fetched page contributes to the answer), across ChatGPT, Google AI Overview/Gemini, and Perplexity (602 prompts, 21,143 valid citations). External grounding for the retrieval channel's measurement layer (ADR-0008) and for the metric-rejection logic of ADR-0007: a raw citation count is not a measure of citation influence."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2603.09296",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Diagnosing and Repairing Citation Failures in Generative Engine Optimization",
+      "author": ["Zhihua Tian", "Yuhan Chen", "Yao Tang", "Jian Liu", "Ruoxi Jia"],
+      "datePublished": "2026-03-10",
+      "identifier": "arXiv:2603.09296",
+      "url": "https://arxiv.org/abs/2603.09296",
+      "description": "A taxonomy of GEO citation-failure modes plus AgentGEO, an agentic system that raises citation rates by over 40% while modifying only 5% of content, against a 25% modification baseline. External grounding for the retrieval channel as an optimizable surface (ADR-0008), with the caution — consistent with this framework's distrust of generic optimization — that broad optimization degrades long-tail content."
     }
   ]
 }
