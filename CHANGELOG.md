@@ -34,7 +34,7 @@ surfaces.
 
 - Empirical grounding for both ADRs is drawn from a 2026-05 daily-research ingest (recorded in a companion concept wiki, pages `GEO` and `authorship-strategy`); the specific figures and vendors are recorded in each ADR's Lineage section, keeping the ADR bodies harness-neutral.
 - Glossary term additions for the new vocabulary (two-channel diffusion, ghost citation, B2A context) are deferred to a follow-up docs commit; the terms are defined in the ADR bodies in the interim.
-- v0.3.0 version DOI (for reproducibility citation only): recorded post-release once Zenodo mints it. Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
+- v0.3.0 version DOI (for reproducibility citation only): [10.5281/zenodo.20453455](https://doi.org/10.5281/zenodo.20453455). Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
 
 ## [0.2.0] - 2026-05-29
 
