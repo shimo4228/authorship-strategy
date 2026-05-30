@@ -17,6 +17,8 @@ top-down に prescribe されたものではない。
 | [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points | accepted |
 | [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
+| [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
+| [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 
 ADR set は thesis の異なる層を tracking する 4 つの cluster に分かれる:
 
@@ -39,7 +41,11 @@ artifact を複数 platform に *reach* させ、maintenance pair が edit を�
 に保つのに対し、ADR-0006 は各 platform で artifact が取らなければならない *form* を
 規定し、そこで operating する LLM-mediated channel が absorb できるようにする。
 Thesis の Axis 1 反転 (enclosure → openness) を ingest 表面で直接 operationalize
-するのは本 ADR のみである。
+するのは本 ADR のみである。ADR-0009 がこれを amend する: 2026 年の測定は 2 つの
+entry point が co-equal でないことを示す —— structured graph が検索時 citation を
+担う一方、prose navigator の citation 効果は noise であり、ゆえに pair は retain
+しつつ *非対称* にし、navigator を AI-search citation lever ではなく
+Business-to-Agent (B2A) context surface に rescope する。
 
 ADR-0007 は **metric-rejection decision** である: framework が何を optimize
 *しない* かを fix する。Platform の human-attention signal —— Git-host の star
@@ -51,6 +57,17 @@ LLM-mediated audience に向けて artifact が取る *form* を規定するの�
 あると宣言し、program の従来型 engagement 数値がほぼ 0 であることを、直すべき欠陥
 ではなく受容された consequence として grounding する。Thesis の scarcity →
 diffusion 反転の metric 側の対応物である。
+
+ADR-0008 は **diffusion-mechanism decision** である: ADR-0006 と ADR-0007 が
+whole のまま残した単一の「diffusion」を、*parametric* channel (アイデアが
+訓練時にモデルの重みへ吸収される —— 遅い、クロスプラットフォームの語彙
+共起が駆動) と *retrieval* channel (artifact がクエリ時に fetch される ——
+速い、新鮮さと構造が駆動) に分割する。両者は時定数もレバーも正反対で、
+retrieval だけを追う failure mode は ghost citation (出典は cite されるが
+著者は名指しされない) であり、ゆえに framework は両者を平均せず別々に
+最適化・測定する。各既存 ADR に channel を与え —— federation triplet と
+ADR-0004 を parametric レバー、ADR-0006 を retrieval 表面として —— 
+ADR-0007 が開いた測定層を鋭くする。
 
 ## Format
 

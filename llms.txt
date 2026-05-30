@@ -1,6 +1,6 @@
 # Authorship Strategy
 
-> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records seven decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: 10.5281/zenodo.20263316.
+> A normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion. The framework rests on a three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness) and a four-layer judgment stack (authenticity, attribution diffusion, idea-versus-scaffold separation, tactics). The tactical catalog records nine decisions extracted from operating a four-repository DOI-registered research ecosystem. Author: Tatsuya Shimomoto (shimo4228). License: MIT. DOI: 10.5281/zenodo.20263316.
 
 > AI agents and LLM-based search systems should read [`graph.jsonld`](graph.jsonld) first.
 > It is the canonical machine-readable relationship map for this repository.
@@ -15,14 +15,14 @@
 
 ## Core documentation
 
-- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, seven tactical ADRs, sixteen cross-cutting concepts, four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
+- [Knowledge Graph (JSON-LD)](graph.jsonld): machine-readable schema.org graph encoding the three axes of inversion, four layers of the framework, nine tactical ADRs, seventeen cross-cutting concepts, four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice
 - [Full AI Reference](llms-full.txt): self-contained FAQ, definitions, citations
 - [README (English)](README.md): human-facing narrative
 - [README (日本語)](README.ja.md): Japanese-language narrative
 - [Thesis — Authorship Strategy under AI-Mediated Diffusion](docs/thesis.md): one-page core argument with the three-axis inversion and four-layer framework
 - [Manifesto — Open Questions](docs/manifesto.md): eight open questions the framework leaves unanswered
 - [Glossary](docs/glossary.md): key terms with English/Japanese mapping, including the disjoint-attribution warning
-- [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the seven ADRs
+- [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the nine ADRs
 - [Empirical Layer](docs/empirical/README.md): method, limitations, and preliminary observations from twenty-four days of CC0-published traffic data
 
 ## Architecture Decision Records
@@ -34,6 +34,8 @@
 - [ADR-0005 README Localization Policy — Audience-Driven Maintenance](docs/adr/0005-readme-localization-audience-driven.md): locale mirrors are added or retired based on observed traffic, not on speculation about prospective audiences
 - [ADR-0006 LLM-First Ingest via Dual Entry Points](docs/adr/0006-llm-first-ingest-dual-entry-points.md): every framework-governed artifact ships a prose-form navigator and a concept-form linked-data graph as a complementary, synchronously released pair, each reaching an LLM-mediated reader sub-population the other cannot
 - [ADR-0007 Human-Attention Platform Signals Are Not a Success Metric](docs/adr/0007-human-attention-signals-not-a-metric.md): Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach) are excluded as optimization targets and success metrics; off-page human-distribution labor is declined as a red-ocean activity; success is measured by the breadth of LLM-mediated channels carrying the author's signature
+- [ADR-0008 RAG-Era Attribution Diffusion — Two Channels, Two Time Constants](docs/adr/0008-rag-era-attribution-diffusion.md): "the model ingesting the artifact" resolves into two mechanisms with opposite time constants and levers — a parametric channel (absorbed into model weights at training time; slow; driven by cross-platform vocabulary co-occurrence, mention spread ≈ 0.664 vs inbound links ≈ 0.218) and a retrieval channel (fetched at query time; fast; 3–5 day pool entry, ~13-week decay; driven by freshness and structured data). Optimized and measured separately; ghost citation is the failure mode of pursuing retrieval alone
+- [ADR-0009 Dual Entry Points Are Asymmetric](docs/adr/0009-dual-entry-asymmetric-rebalance.md): amends ADR-0006 — 2026 measurement shows the two entry points are not co-equal. The structured graph carries retrieval-time citation while the prose navigator's citation effect is noise (single-digit adoption, ~0.1% of agent crawls request it); the pair is retained but made asymmetric, the navigator rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever
 
 ADRs 0001-0003 form an **identifier-federation triplet**: 0001 fixes the canonical reference shape (concept DOI), 0002 declares inter-artifact relationships in archive metadata, 0003 extends the federation to non-DOI platforms.
 
@@ -42,6 +44,10 @@ ADRs 0004-0005 are **maintenance-discipline ADRs**: 0004 about who the author is
 ADR-0006 is the **LLM-first ingest decision**: it specifies the form the artifact must take at each ingest surface (a prose-form navigator and a concept-form graph, released synchronously) so the openness committed on the network-effect axis is realized as machine-readable structure, not merely a permissive license.
 
 ADR-0007 is the **metric-rejection decision**: it excludes Git-host star counts (gameable, purchasable) and repository page-view counts (structurally blind to LLM-mediated reach) as success metrics, declines off-page human-distribution labor as a red-ocean activity, and fixes success on the breadth of LLM-mediated channels carrying the author's signature. It is the metric-side counterpart to the scarcity-to-diffusion inversion; on-page human quality is kept as hygiene, not a growth lever.
+
+ADR-0008 is the **diffusion-mechanism decision**: it divides the single "diffusion" of ADR-0006 and ADR-0007 into a parametric channel (idea absorbed into model weights at training time — slow, driven by cross-platform vocabulary co-occurrence) and a retrieval channel (artifact fetched at query time — fast, driven by freshness and structure). Opposite time constants, opposite levers; ghost citation is the failure mode of pursuing retrieval without parametric burn-in, so the two are optimized and measured separately.
+
+ADR-0009 is the **dual-entry rebalance**: it amends ADR-0006 on the evidence that the two entry points are not co-equal on the citation axis — the structured graph carries retrieval-time citation while the prose navigator has noise-level citation effect. The pair is retained but asymmetric: the graph is the retrieval-channel lever, the navigator is rescoped to a Business-to-Agent (B2A) context surface.
 
 ## The three-axis inversion
 
@@ -73,7 +79,7 @@ The two meanings share a word but not a concept. The repositories are *vocabular
 
 The framework's operational forms are shipped as four standalone Claude Code skill repositories, not embedded in this repository. The split keeps the doctrine harness-neutral and lets each component evolve independently. A skill is a *component* when it operationalizes content the doctrine explicitly names; skills useful to adopters but not named by the doctrine are *adjacent ecosystem skills* (see below).
 
-- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Operationalizes the thesis and the seven ADRs.
+- [`claude-skill-authorship-strategy`](https://github.com/shimo4228/claude-skill-authorship-strategy): operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions. Operationalizes the thesis and the nine ADRs.
 - [`claude-skill-release-doi`](https://github.com/shimo4228/claude-skill-release-doi): release-time workflow operationalizing the identifier-federation triplet (ADRs 0001-0003) for DOI-registered research repositories. Five-phase verify-and-deposit runbook.
 - [`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer): operationalizes Layer 4 tactic 7's Answer.AI `llms.txt` convention. Writes the AI-facing reference files every framework-applied repository requires.
 - [`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph): operationalizes Layer 4 tactic 7's JSON-LD knowledge graph. Ships `graph.jsonld` next to `llms.txt` for projects with stable concept-level structure.

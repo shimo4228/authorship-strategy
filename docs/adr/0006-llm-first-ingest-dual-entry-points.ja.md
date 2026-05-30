@@ -11,6 +11,14 @@ Language: [English](0006-llm-first-ingest-dual-entry-points.md) | 日本語
 > この pair は thesis の Axis 1 反転 (enclosure → openness) の operational
 > embodiment であり、artifact の戦略的立場を machine-legible にするものである。
 
+> **[ADR-0009](0009-dual-entry-asymmetric-rebalance.ja.md) により amend
+> された。** 以下の「co-equal pair」framing は *coverage* 軸では成り立つ
+> (各 entry point は他方が到達できない sub-population に reach する) が、
+> *citation* 軸では成り立たない: 2026 年の測定は structured graph が検索時
+> citation を担い、prose navigator の citation 効果は noise であることを
+>示す。ADR-0009 は両 surface を retain しつつ役割を非対称にする —— 現在の
+> weighting はそちらを参照。
+
 ## Status
 accepted
 

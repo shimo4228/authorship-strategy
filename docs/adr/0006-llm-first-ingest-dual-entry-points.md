@@ -12,6 +12,14 @@ Language: English | [日本語](0006-llm-first-ingest-dual-entry-points.ja.md)
 > embodiment of the thesis's Axis 1 inversion (enclosure → openness)
 > and is what makes the artifact's strategic stance machine-legible.
 
+> **Amended by [ADR-0009](0009-dual-entry-asymmetric-rebalance.md).** The
+> "co-equal pair" framing below holds on the *coverage* dimension (each
+> entry point reaches a sub-population the other cannot) but not on the
+> *citation* dimension: 2026 measurement shows the structured graph
+> carries retrieval-time citation while the prose navigator's citation
+> effect is noise. ADR-0009 retains both surfaces but makes their roles
+> asymmetric — see it for the current weighting.
+
 ## Status
 accepted
 

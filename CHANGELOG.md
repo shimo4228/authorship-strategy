@@ -9,6 +9,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 (no unreleased changes)
 
+## [0.3.0] - 2026-05-30
+
+Records two ADRs since v0.2.0 — ADR-0008 (RAG-era attribution diffusion as
+two channels) and ADR-0009 (dual entry points rebalanced to asymmetric
+roles, amending ADR-0006) — and synchronizes the ADR set across all living
+surfaces.
+
+**Concept DOI (canonical): [10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)**
+
+### Added
+
+- ADR-0008: RAG-Era Attribution Diffusion — Two Channels, Two Time Constants. "The model ingesting the artifact" resolves into two mechanisms with opposite time constants and levers: a parametric channel (absorbed into model weights at training time; slow; driven by cross-platform vocabulary co-occurrence) and a retrieval channel (fetched at query time; fast; driven by freshness and structured data). The two are optimized and measured separately; ghost citation — the source is cited but the author is not named — is the failure mode of pursuing retrieval without parametric burn-in.
+- ADR-0009: Dual Entry Points Are Asymmetric. Amends ADR-0006 on 2026 measurement that the two entry points are not co-equal: the concept-form graph carries retrieval-time citation while the prose navigator's citation effect is noise. The pair is retained but made asymmetric — the graph is the retrieval-channel citation lever, the navigator is rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever.
+
+### Changed
+
+- ADR-count surfaces updated from seven to nine; `docs/adr/README` measurement cluster extended with ADR-0008 and the LLM-first ingest cluster annotated as amended by ADR-0009. ADR-0006 carries a forward-reference note to ADR-0009.
+- `graph.jsonld`: added the ADR-0008 and ADR-0009 nodes (both `extends` ADR-0006), a `two-channel-attribution-diffusion` concept downstream of Attribution Diffusion, the two ADRs in the Tactics-layer instantiation list, and the asymmetric-rebalance amendment to the `dual-entry-point` concept (now `instantiatedBy` ADR-0006 and ADR-0009). Dataset description updated to nine ADRs.
+- `llms.txt` / `llms-full.txt`: ADR list and cluster prose extended with ADR-0008 and ADR-0009; concept count updated to seventeen.
+- `README` (en/ja), `docs/thesis` (en/ja), `docs/CODEMAPS/architecture`: ADR count updated to nine; ADR table extended.
+
+### Notes
+
+- Empirical grounding for both ADRs is drawn from a 2026-05 daily-research ingest (recorded in a companion concept wiki, pages `GEO` and `authorship-strategy`); the specific figures and vendors are recorded in each ADR's Lineage section, keeping the ADR bodies harness-neutral.
+- Glossary term additions for the new vocabulary (two-channel diffusion, ghost citation, B2A context) are deferred to a follow-up docs commit; the terms are defined in the ADR bodies in the interim.
+- v0.3.0 version DOI (for reproducibility citation only): recorded post-release once Zenodo mints it. Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
+
 ## [0.2.0] - 2026-05-29
 
 Records two ADRs since v0.1.0 — ADR-0006 (committed post-tag, not previously

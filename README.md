@@ -10,7 +10,7 @@ If your readers include LLMs — as training data, as in-context consultants,
 as the discovery layer other researchers consult — then the strategies that
 protect authorship have inverted. Closing your work off *reduces*, not
 increases, the chance that a future trace lands on you. This repository
-records the inverted strategy: what it is, why it holds, and seven tactical
+records the inverted strategy: what it is, why it holds, and nine tactical
 decisions extracted from operating a four-repository DOI-registered research
 ecosystem.
 
@@ -57,7 +57,7 @@ operational implications form the four-layer framework, also in the
 thesis document. The framework's open questions are catalogued in
 [`docs/manifesto.md`](docs/manifesto.md).
 
-## The seven tactical ADRs
+## The nine tactical ADRs
 
 | ADR | Decision |
 |-----|----------|
@@ -68,8 +68,10 @@ thesis document. The framework's open questions are catalogued in
 | [0005](docs/adr/0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences |
 | [0006](docs/adr/0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points — every framework-governed artifact ships a prose-form navigator and a concept-form linked-data graph as a complementary, synchronously released pair, each reaching an LLM-mediated reader sub-population the other cannot |
 | [0007](docs/adr/0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach) are excluded as optimization targets and success metrics; off-page human-distribution labor is declined as a red-ocean activity; success is measured by the breadth of LLM-mediated channels carrying the author's signature |
+| [0008](docs/adr/0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants — "the model ingesting the artifact" resolves into two mechanisms with opposite time constants and levers: a parametric channel (absorbed into model weights at training time; slow; driven by cross-platform vocabulary co-occurrence) and a retrieval channel (fetched at query time; fast; driven by freshness and structure). Optimized and measured separately; ghost citation is the failure mode of pursuing retrieval alone |
+| [0009](docs/adr/0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — amends ADR-0006: 2026 measurement shows the two entry points are not co-equal. The structured graph carries retrieval-time citation while the prose navigator's citation effect is noise; the pair is retained but made asymmetric, the navigator rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever |
 
-The seven ADRs are not deduced from a framework; they were extracted from
+The nine ADRs are not deduced from a framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form
 so that another author can adopt the same decisions without inheriting
 the original implementation details. See [`docs/adr/README.md`](docs/adr/README.md)
@@ -114,7 +116,7 @@ The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4
 ## How to read this repository
 
 Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then
-the seven ADRs in order. Two paths need a non-obvious entry point:
+the nine ADRs in order. Two paths need a non-obvious entry point:
 
 - **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
 - **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.

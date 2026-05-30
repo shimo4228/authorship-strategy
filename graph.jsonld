@@ -38,7 +38,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the seven tactical ADRs in four clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the nine tactical ADRs in four clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism pair 0008-0009 with 0009 amending 0006), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -85,7 +85,7 @@
         {"@value": "Authorship Strategy", "@language": "en"},
         {"@value": "著者戦略", "@language": "ja"}
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records seven decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records nine decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": "https://doi.org/10.5281/zenodo.20263316",
@@ -115,7 +115,8 @@
         "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
         "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
         "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
-        "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection"
+        "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection",
+        "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion"
       ],
       "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
     },
@@ -232,7 +233,9 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0004",
         "https://github.com/shimo4228/authorship-strategy#adr/0005",
         "https://github.com/shimo4228/authorship-strategy#adr/0006",
-        "https://github.com/shimo4228/authorship-strategy#adr/0007"
+        "https://github.com/shimo4228/authorship-strategy#adr/0007",
+        "https://github.com/shimo4228/authorship-strategy#adr/0008",
+        "https://github.com/shimo4228/authorship-strategy#adr/0009"
       ]
     },
 
@@ -270,13 +273,16 @@
         {"@value": "Dual Entry Point", "@language": "en"},
         {"@value": "Dual Entry Point", "@language": "ja"}
       ],
-      "description": "The structural decision that any framework-governed artifact deploys two complementary structured entry points — a prose-form navigator and a concept-form graph — released synchronously at every versioned release. Each entry point addresses a distinct LLM-mediated channel sub-population the other cannot reach. The pair is the operational embodiment of the enclosure-to-openness axis on the ingest surface; deploying only one half leaves the strategy one-lunged.",
+      "description": "The structural decision that any framework-governed artifact deploys two complementary structured entry points — a prose-form navigator and a concept-form graph — released synchronously at every versioned release. Each entry point addresses a distinct LLM-mediated channel sub-population the other cannot reach. ADR-0009 amends this on 2026 evidence: the two are not co-equal on the citation axis — the concept-form graph carries retrieval-time citation while the prose navigator's citation effect is noise — so the pair is retained but made asymmetric, the navigator rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever.",
       "composedOf": [
         "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
         "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph"
       ],
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
-      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0006",
+      "instantiatedBy": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0006",
+        "https://github.com/shimo4228/authorship-strategy#adr/0009"
+      ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
 
@@ -320,6 +326,20 @@
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0007",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
+      "@type": ["Concept", "Layer"],
+      "name": "Two-Channel Attribution Diffusion",
+      "alternateName": [
+        {"@value": "Two-Channel Attribution Diffusion", "@language": "en"},
+        {"@value": "2 チャネル Attribution Diffusion", "@language": "ja"}
+      ],
+      "description": "The refinement of Attribution Diffusion (Layer 2) into two mechanisms with opposite time constants and opposite levers: a parametric channel (the idea absorbed into model weights at training time — slow, driven by broad cross-platform co-occurrence of distinctive vocabulary with its source; cross-platform mention spread correlates ~0.664 with being named, far above enclosed inbound links ~0.218) and a retrieval channel (the artifact fetched at query time — fast, 3–5 day citation-pool entry and ~13-week decay, driven by freshness and structured data). Ghost citation — the source is cited but the author is not named — is the failure mode of a working retrieval channel atop absent parametric burn-in, so the two channels are optimized and measured separately and run in parallel.",
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0008",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
     },
 
     {
@@ -381,6 +401,24 @@
     },
 
     {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0008",
+      "@type": "ADR",
+      "name": "ADR-0008: RAG-Era Attribution Diffusion — Two Channels, Two Time Constants",
+      "description": "Treats Attribution Diffusion as two channels with opposite time constants and levers: a parametric channel (idea absorbed into model weights at training time — slow, driven by cross-platform vocabulary co-occurrence) and a retrieval channel (artifact fetched at query time — fast, driven by freshness and structured data). The two are optimized and measured separately; ghost citation (source cited but author not named) is the failure mode of pursuing retrieval without parametric burn-in. Divides the single 'diffusion' of ADR-0006 and refines the measurement layer of ADR-0007.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0006"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0009",
+      "@type": "ADR",
+      "name": "ADR-0009: Dual Entry Points Are Asymmetric",
+      "description": "Amends ADR-0006 on 2026 evidence that the two entry points are not co-equal: the concept-form structured graph carries retrieval-time citation while the prose-form navigator's citation effect is noise (single-digit adoption, ~0.1% of agent crawls request it). The pair is retained but made asymmetric — the graph is the retrieval-channel citation lever, the navigator is rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever. ADR-0006's synchronization discipline is unchanged.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0009-dual-entry-asymmetric-rebalance.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0006"
+    },
+
+    {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Agent Knowledge Cycle (AKC)",
@@ -435,7 +473,7 @@
       "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "@type": "EcosystemRepo",
       "name": "claude-skill-authorship-strategy",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the seven ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the nine ADRs.",
       "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

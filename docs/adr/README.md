@@ -17,6 +17,8 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
 | [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
+| [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
+| [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 
 The set groups into four clusters, each tracking a distinct layer of the
 thesis:
@@ -43,7 +45,11 @@ platforms and the maintenance pair ensures it stays *coherent* across edits,
 ADR-0006 specifies what *form* the artifact must take at each platform so the
 LLM-mediated channels operating there can absorb it. It is the only ADR that
 directly operationalizes the thesis's Axis 1 inversion (enclosure → openness)
-on the ingest surface.
+on the ingest surface. ADR-0009 amends it: 2026 measurement shows the two
+entry points are not co-equal — the structured graph carries retrieval-time
+citation while the prose navigator's citation effect is noise, so the pair is
+retained but made *asymmetric*, the navigator rescoped to a Business-to-Agent
+(B2A) context surface rather than an AI-search citation lever.
 
 ADR-0007 is the **metric-rejection decision**: it fixes what the framework
 does *not* optimize for. Platform human-attention signals — Git-host stars
@@ -56,6 +62,19 @@ audience — not platform human-attention — is the *measure of success*,
 grounding the program's near-zero conventional engagement numbers as an
 accepted consequence rather than a defect to fix. It is the metric-side
 counterpart to the thesis's scarcity → diffusion inversion.
+
+ADR-0008 is the **diffusion-mechanism decision**: it divides the single
+"diffusion" that ADR-0006 and ADR-0007 left whole into a *parametric*
+channel (the idea absorbed into model weights at training time — slow,
+driven by cross-platform vocabulary co-occurrence) and a *retrieval*
+channel (the artifact fetched at query time — fast, driven by freshness
+and structure). The two have opposite time constants and opposite
+levers, the failure mode of pursuing retrieval alone is ghost citation
+(the source is cited but the author is not named), and so the framework
+optimizes and measures each separately rather than averaging them. It
+gives every prior ADR a channel — the federation triplet and ADR-0004 as
+parametric levers, ADR-0006 as the retrieval surface — and sharpens the
+measurement layer ADR-0007 opened.
 
 ## Format
 
