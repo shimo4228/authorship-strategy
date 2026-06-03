@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-(no unreleased changes)
+### Changed
+
+- `graph.jsonld`: cited Concept Influence (arXiv:2602.14869) and Mechanistic Data Attribution (arXiv:2601.21996) as upstream **white-box** evidence for the parametric channel. Registered both as `ScholarlyArticle` nodes; linked Concept Influence to the `idea-vs-scaffold-separation` concept via `groundedIn` (an idea is retained as a parametric concept direction, not verbatim text — mechanistic grounding for the Layer-3 wager) and both papers to `two-channel-attribution-diffusion`. The framework adopts them as upstream evidence only: being white-box, they do not measure burn-in inside a closed commercial LLM and do not close the parametric-channel measurement gap ADR-0008 leaves open.
+- `docs/glossary` (en/ja): added an external-evidence note to the Two-Channel Attribution Diffusion entry recording that parametric-channel measurability is taken up by 2026 training-data-attribution work, with the same white-box boundary stated.
 
 ## [0.3.0] - 2026-05-30
 

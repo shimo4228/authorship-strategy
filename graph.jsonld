@@ -226,7 +226,10 @@
       "description": "The framework's third layer: sorting each artifact into idea-character (which survives and is DOI-registered under the author's name) or scaffold-character (which dissolves into larger harnesses whose own diffusion absorbs the implementation). Mixed-character artifacts get idea-level DOI registration first.",
       "layerOrdinal": 3,
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
-      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair"
+      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
+      "groundedIn": [
+        "https://arxiv.org/abs/2602.14869"
+      ]
     },
 
     {
@@ -352,7 +355,9 @@
       "groundedIn": [
         "https://arxiv.org/abs/2602.06718",
         "https://arxiv.org/abs/2604.25707",
-        "https://arxiv.org/abs/2603.09296"
+        "https://arxiv.org/abs/2603.09296",
+        "https://arxiv.org/abs/2602.14869",
+        "https://arxiv.org/abs/2601.21996"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
     },
@@ -551,6 +556,28 @@
       "identifier": "arXiv:2603.09296",
       "url": "https://arxiv.org/abs/2603.09296",
       "description": "A taxonomy of GEO citation-failure modes plus AgentGEO, an agentic system that raises citation rates by over 40% while modifying only 5% of content, against a 25% modification baseline. External grounding for the retrieval channel as an optimizable surface (ADR-0008), with the caution — consistent with this framework's distrust of generic optimization — that broad optimization degrades long-tail content."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2602.14869",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Concept Influence: Leveraging Interpretability to Improve Performance and Efficiency in Training Data Attribution",
+      "author": ["Matthew Kowal", "Goncalo Paulo", "Louis Jaburi", "Tom Tseng", "Lev E McKinney", "Stefan Heimersheim", "Aaron David Tucker", "Adam Gleave", "Kellin Pelrine"],
+      "datePublished": "2026-02-16",
+      "identifier": "arXiv:2602.14869",
+      "url": "https://arxiv.org/abs/2602.14869",
+      "description": "A training-data-attribution method that replaces classical influence functions' per-test-example gradient with a semantic direction — a linear probe or sparse-autoencoder feature — asking which training data shaped a concept rather than an exact string (training on the top 10–20% highest-influence data alone raises an unsafe-code score roughly tenfold, at ~20× the speed of classical influence functions). External white-box grounding for the Layer-3 wager (idea-versus-scaffold separation): an author's idea is retained in a model as a parametric concept direction, not verbatim text — which is what survives when the implementation dissolves. Boundary: it requires white-box access to a model one trains oneself, so it does not measure burn-in inside a closed commercial LLM and does not close the parametric-channel measurement gap ADR-0008 leaves open."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2601.21996",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+      "author": ["Jianhui Chen", "Yuzhang Luo", "Liangming Pan"],
+      "datePublished": "2026-01-29",
+      "identifier": "arXiv:2601.21996",
+      "url": "https://arxiv.org/abs/2601.21996",
+      "description": "A framework that traces interpretable units inside a model — notably induction heads, the circuits underlying in-context learning — back to the training samples that formed them, using influence functions. On the Pythia family it causally validates the link: removing high-influence samples suppresses induction-head emergence while random interventions do not, and high-influence samples are dominated by repetitive structural data (LaTeX, XML, code; power-law influence). External circuit-level grounding for the parametric channel of Two-Channel Attribution Diffusion (ADR-0008). Boundary: white-box and retraining-scale, so it is upstream mechanistic evidence, not an attribution probe applicable to a closed commercial model."
     }
   ]
 }

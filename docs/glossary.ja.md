@@ -244,6 +244,15 @@ diffusion は伝播 event (ingestion、citation、mention); adoption は別著�
 authorship-diffusion strategy への placement であって、根底の citation
 mechanics そのものではない。
 
+parametric channel が *測定* できるか —— 単に主張されるだけでなく
+([ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) が残した open question)
+—— は 2026 年の training-data-attribution 研究が扱う: Concept Influence
+(arXiv:2602.14869) はアイデアを逐語テキストではなく parametric な概念 *方向* として
+復元し、Mechanistic Data Attribution (arXiv:2601.21996) は interpretable な回路を
+訓練サンプルへ遡及する。いずれも *white-box* 手法で、自分で訓練したモデルにしか
+適用できない; 閉じた商用 LLM 内の焼き込みを測るものではないため、本 framework は
+これらを measurement gap の解消ではなく upstream evidence として adopt する。
+
 ## Ghost Citation (幽霊引用)
 
 retrieval-augmented system が artifact の URL を cite するが、著者の名前が

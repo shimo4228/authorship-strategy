@@ -299,6 +299,16 @@ independently reported in the 2026 generative-engine-optimization literature
 placement inside the authorship-diffusion strategy, not the underlying
 citation mechanics.
 
+Whether the parametric channel can be *measured* — not merely asserted, the
+open question [ADR-0008](adr/0008-rag-era-attribution-diffusion.md) leaves — is
+taken up by 2026 training-data-attribution work: Concept Influence
+(arXiv:2602.14869) recovers an idea as a parametric concept *direction* rather
+than verbatim text, and Mechanistic Data Attribution (arXiv:2601.21996) traces
+interpretable circuits back to their training samples. Both are *white-box*
+methods, applicable only to a model one trains oneself; they do not measure
+burn-in inside a closed commercial LLM, so this framework adopts them as
+upstream evidence, not as a closure of the gap.
+
 ## Ghost Citation
 
 The failure mode in which a retrieval-augmented system cites an artifact's
