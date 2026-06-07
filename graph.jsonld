@@ -76,10 +76,7 @@
       "@type": "Person",
       "name": "Tatsuya Shimomoto",
       "alternateName": "shimo4228",
-      "sameAs": [
-        "https://github.com/shimo4228",
-        "https://orcid.org/0009-0002-6168-4162"
-      ]
+      "sameAs": ["https://github.com/shimo4228", "https://orcid.org/0009-0002-6168-4162", "https://www.wikidata.org/wiki/Q140090100"]
     },
 
     {
@@ -93,7 +90,7 @@
       "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records nine decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
-      "sameAs": "https://doi.org/10.5281/zenodo.20263316",
+      "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
       "license": "https://opensource.org/licenses/MIT",
       "inLanguage": ["en", "ja"],
@@ -440,6 +437,7 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
+      "sameAs": "https://www.wikidata.org/wiki/Q140090186",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Agent Knowledge Cycle (AKC)",
       "alternateName": "AKC",
@@ -451,6 +449,7 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19212118",
+      "sameAs": "https://www.wikidata.org/wiki/Q140090187",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Contemplative Agent",
       "description": "Autonomous agents running on a local 9B model, grounded in four contemplative axioms. Implementation sibling: this repository participates in the empirical layer's traffic dataset, and its non-dualistic axiomatic foundation supplies the underlying rationale for the framework's scaffold-as-collaborator commitment.",
@@ -461,6 +460,7 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19652013",
+      "sameAs": "https://www.wikidata.org/wiki/Q140090188",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Agent Attribution Practice (AAP)",
       "description": "Harness-neutral ADRs on accountability distribution in autonomous AI agents. Vocabulary sibling: shares the word 'attribution' but with disjoint meaning (accountability for action vs. credit for source). The two meanings are intentionally kept separate; do not conflate.",
@@ -472,6 +472,7 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.20262112",
+      "sameAs": "https://www.wikidata.org/wiki/Q140090189",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Attention, Not Self",
       "description": "A cross-disciplinary inquiry contrasting three Buddhist Abhidharma traditions (Theravāda, Sarvāstivāda, Yogācāra) with computational phenomenology (predictive processing, active inference, global workspace theory, parallel distributed processing). Cross-cutting sibling: unlike the agent-design lines (AKC, Contemplative Agent, AAP) it specifies no agent mechanism or practice; like this research line it occupies the agent-design lines' diffusion and framing layer. Shares Buddhist terminology with Contemplative Agent but with asymmetric usage: Contemplative Agent uses it as a behavioral preset, this line as a comparative cognitive framework. Began traffic observation after the v0.1.0 empirical baseline window.",
