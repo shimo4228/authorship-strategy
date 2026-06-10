@@ -75,7 +75,7 @@
       "@id": "https://orcid.org/0009-0002-6168-4162",
       "@type": "Person",
       "name": "Tatsuya Shimomoto",
-      "alternateName": "shimo4228",
+      "alternateName": ["shimo4228", {"@value": "下本竜也", "@language": "ja"}],
       "sameAs": ["https://github.com/shimo4228", "https://orcid.org/0009-0002-6168-4162", "https://www.wikidata.org/wiki/Q140090100"]
     },
 
