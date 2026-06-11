@@ -647,6 +647,17 @@
       "identifier": "arXiv:2510.08506",
       "url": "https://arxiv.org/abs/2510.08506",
       "description": "Trains a single new token embedding (all other parameters frozen) to make a model express a concept, and reports machine-only synonyms — words that look unrelated to humans but trigger the same model-internal concept (the ordinary word 'lack' acts as a synonym for a trained brevity neologism) — plus self-verbalization, where the model explains a learned neologism in natural language (questionnaire-based verbalizations close on average 83% of the behavioral gap). Surfaces the human-model anchor-correspondence question for Vocabulary Discipline (ADR-0010): anchors chosen for human-readable semantic proximity need not remain anchors at the parametric-representation level. Boundary: a post-hoc steering-token regime, not pretraining absorption; it qualifies only the parametric rationale of the anchoring obligation, leaving the retrieval-channel and graph-edge rationales untouched. Recorded as an open-question candidate in the empirical layer's 2026-06 external-literature note."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2605.06426",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181349",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "From 124 Million Tokens to 1,021 Neologisms: A Large-Scale Pipeline for Automatic Neologism Detection",
+      "datePublished": "2026-05-07",
+      "identifier": "arXiv:2605.06426",
+      "url": "https://arxiv.org/abs/2605.06426",
+      "description": "A large-scale automatic neologism-detection pipeline reporting substantial cross-model disagreement about which candidate words are neologisms (599 of 1,021 candidates, 58.7%, confirmed by manual validation). Cited in the empirical layer's 2026-06 external-literature note as a methodological warning for Vocabulary Discipline (ADR-0010): any future regurgitation-test protocol asking whether a model recognizes a coined term will get model-dependent answers, so single-model probes cannot be cured by simply picking a better model."
     }
   ]
 }
