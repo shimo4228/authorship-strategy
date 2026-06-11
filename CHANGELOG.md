@@ -7,10 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-06-11
+
+Records one ADR since v0.3.0 — ADR-0010 (vocabulary discipline: coin
+sparingly, anchor densely) — and applies the discipline retroactively to
+the existing vocabulary: the 2026 GEO and training-data-attribution
+literature is cited as upstream evidence for the two-channel concepts,
+Wikidata QIDs federate the author and research-line identities, and the
+knowledge graph's cross-reference values are fixed to resolve as RDF
+edges.
+
+**Concept DOI (canonical): [10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)**
+
 ### Added
 
 - ADR-0010: Vocabulary Discipline — Coin Sparingly, Anchor Densely. Defines the vocabulary discipline ADR-0008 named as the parametric-channel lever but left undefined. A coined term's power comes from its edge density, not from the count of coinages: a term is coined only when three conditions all hold (join-novelty, definitional anchoring, uncontested namespace), and every retained coinage is anchored densely — glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges, repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. The vocabulary-level enforcement of origin-claim scope discipline.
 - `docs/glossary` (en/ja): added a Vocabulary Discipline entry (consolidating the term ADR-0008 introduced) and cross-referenced it from the Distinctive Terminology entry.
+- `docs/glossary` (en/ja): added entries for Two-Channel Attribution Diffusion and Ghost Citation, fulfilling the glossary deferral recorded in the v0.3.0 Notes.
+- `graph.jsonld`: registered GhostCite (arXiv:2602.06718), the citation-absorption GEO framework (arXiv:2604.25707), and AgentGEO (arXiv:2603.09296) as `ScholarlyArticle` nodes grounding the two-channel concepts — the program adopts the term *ghost citation* from this literature rather than coining a synonym.
+- `graph.jsonld`: Wikidata QID `sameAs` cross-references for the author and the research lines, and a kanji `alternateName` on the Person node.
 
 ### Changed
 
@@ -19,9 +34,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `graph.jsonld`: added the ADR-0010 node (`extends` ADR-0008), a `vocabulary-discipline` concept (appliesTo distinctive-terminology, downstream of two-channel-attribution-diffusion and origin-claim-scope-discipline), the ADR-0010 instantiation in the Tactics layer, and the vocabulary-discipline keyword; distinctive-terminology description updated; Dataset and ResearchLine descriptions updated to ten ADRs.
 - `llms.txt` / `llms-full.txt`: ADR list and cluster prose extended with ADR-0010; concept count updated to eighteen.
 - `README` (en/ja), `docs/CODEMAPS/architecture`: ADR count updated to ten; ADR table extended.
-
 - `graph.jsonld`: cited Concept Influence (arXiv:2602.14869) and Mechanistic Data Attribution (arXiv:2601.21996) as upstream **white-box** evidence for the parametric channel. Registered both as `ScholarlyArticle` nodes; linked Concept Influence to the `idea-vs-scaffold-separation` concept via `groundedIn` (an idea is retained as a parametric concept direction, not verbatim text — mechanistic grounding for the Layer-3 wager) and both papers to `two-channel-attribution-diffusion`. The framework adopts them as upstream evidence only: being white-box, they do not measure burn-in inside a closed commercial LLM and do not close the parametric-channel measurement gap ADR-0008 leaves open.
 - `docs/glossary` (en/ja): added an external-evidence note to the Two-Channel Attribution Diffusion entry recording that parametric-channel measurability is taken up by 2026 training-data-attribution work, with the same white-box boundary stated.
+- `CLAUDE.md`: recorded the read-only research-wiki consultation workflow and the graph registration scope decision (data siblings aggregate at the hub graph). `docs/empirical/README.md`: clarified that the four-line baseline describes the data window, not the current ecosystem size.
+
+### Fixed
+
+- `graph.jsonld`: `sameAs` / `isBasedOn` / `isPartOf` coerced to `@id` in the `@context` — their URL values were previously parsed as RDF string literals, not graph edges.
+
+### Notes
+
+- The release is itself a worked example of ADR-0010: the discipline's name reuses the phrase ADR-0008 introduced (no new coinage), and the new concept node ships with edges to existing concepts and external references.
 
 ## [0.3.0] - 2026-05-30
 
