@@ -45,6 +45,7 @@ edges.
 ### Notes
 
 - The release is itself a worked example of ADR-0010: the discipline's name reuses the phrase ADR-0008 introduced (no new coinage), and the new concept node ships with edges to existing concepts and external references.
+- v0.4.0 version DOI (for reproducibility citation only): [10.5281/zenodo.20641478](https://doi.org/10.5281/zenodo.20641478). Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
 
 ## [0.3.0] - 2026-05-30
 
