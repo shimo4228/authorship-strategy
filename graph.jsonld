@@ -567,6 +567,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.06718",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181232",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "GhostCite: A Large-Scale Analysis of Citation Validity in the Age of Large Language Models",
       "author": "Zuyao Xu et al.",
@@ -578,6 +579,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.25707",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181278",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms",
       "author": ["Zhang Kai", "He Xinyue", "Yao Jingang"],
@@ -589,6 +591,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2603.09296",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181267",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Diagnosing and Repairing Citation Failures in Generative Engine Optimization",
       "author": ["Zhihua Tian", "Yuhan Chen", "Yao Tang", "Jian Liu", "Ruoxi Jia"],
@@ -600,6 +603,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.14869",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181265",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Concept Influence: Leveraging Interpretability to Improve Performance and Efficiency in Training Data Attribution",
       "author": ["Matthew Kowal", "Goncalo Paulo", "Louis Jaburi", "Tom Tseng", "Lev E McKinney", "Stefan Heimersheim", "Aaron David Tucker", "Adam Gleave", "Kellin Pelrine"],
@@ -611,6 +615,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2601.21996",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181263",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
       "author": ["Jianhui Chen", "Yuzhang Luo", "Liangming Pan"],
@@ -622,6 +627,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2402.12261",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181239",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "NEO-BENCH: Evaluating Robustness of Large Language Models with Neologisms",
       "author": ["Jonathan Zheng", "Alan Ritter", "Wei Xu"],
@@ -633,6 +639,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2510.08506",
+      "sameAs": "https://www.wikidata.org/wiki/Q140181254",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Neologism Learning for Controllability and Self-Verbalization",
       "author": ["John Hewitt", "Oyvind Tafjord", "Robert Geirhos", "Been Kim"],
