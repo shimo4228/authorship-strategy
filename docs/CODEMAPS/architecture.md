@@ -1,4 +1,4 @@
-<!-- Generated: 2026-06-11 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
+<!-- Generated: 2026-06-12 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
 # Document Architecture
 
 Authorship Strategy is a **judgment-artifact repository**, not a code
@@ -27,7 +27,7 @@ authorship-strategy/
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
     ├── adr/                             10 ADRs (English) + 10 mirrors (.ja.md) + README + README.ja
-    ├── empirical/                       preliminary observation layer (method + 2026-05 baseline)
+    ├── empirical/                       preliminary observation layer (method + 2026-05 baseline + 2026-06 external-literature note)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
 ```
@@ -44,6 +44,7 @@ authorship-strategy/
 | Tactical decisions | `docs/adr/000N-*.md` | Each ADR: Status / Date / Context / Decision / Alternatives / Consequences / Lineage. Harness-neutral body, lineage records the implementation-specific origin. |
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
+| External-literature note | `docs/empirical/neologism-survival-2026-06.md` | 2024–2026 neology-and-LLM literature read against ADR-0010; records the human-model anchor-correspondence open question. |
 | Component skills index | `docs/skills/README.md` | Reference index pointing to four external component skill repositories (`claude-skill-authorship-strategy`, `claude-skill-release-doi`, `claude-skill-llms-txt-writer`, `claude-skill-jsonld-knowledge-graph`) plus an adjacent-ecosystem-skills section. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. The component-status criterion (the skill operationalizes content the doctrine explicitly names) is documented in the file itself. |
 | AI landing | `llms.txt` | Answer.AI convention. Compact navigator + canonical reading order. |
 | AI reference | `llms-full.txt` | Self-contained Q&A. |

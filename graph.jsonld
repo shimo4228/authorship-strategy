@@ -128,7 +128,9 @@
       "citation": [
         "https://arxiv.org/abs/2602.06718",
         "https://arxiv.org/abs/2604.25707",
-        "https://arxiv.org/abs/2603.09296"
+        "https://arxiv.org/abs/2603.09296",
+        "https://arxiv.org/abs/2402.12261",
+        "https://arxiv.org/abs/2510.08506"
       ],
       "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
     },
@@ -296,6 +298,10 @@
         "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline"
       ],
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0010",
+      "groundedIn": [
+        "https://arxiv.org/abs/2402.12261",
+        "https://arxiv.org/abs/2510.08506"
+      ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md"
     },
 
@@ -612,6 +618,28 @@
       "identifier": "arXiv:2601.21996",
       "url": "https://arxiv.org/abs/2601.21996",
       "description": "A framework that traces interpretable units inside a model — notably induction heads, the circuits underlying in-context learning — back to the training samples that formed them, using influence functions. On the Pythia family it causally validates the link: removing high-influence samples suppresses induction-head emergence while random interventions do not, and high-influence samples are dominated by repetitive structural data (LaTeX, XML, code; power-law influence). External circuit-level grounding for the parametric channel of Two-Channel Attribution Diffusion (ADR-0008). Boundary: white-box and retraining-scale, so it is upstream mechanistic evidence, not an attribution probe applicable to a closed commercial model."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2402.12261",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "NEO-BENCH: Evaluating Robustness of Large Language Models with Neologisms",
+      "author": ["Jonathan Zheng", "Alan Ritter", "Wei Xu"],
+      "datePublished": "2024-02-19",
+      "identifier": "arXiv:2402.12261",
+      "url": "https://arxiv.org/abs/2402.12261",
+      "description": "Benchmark study (ACL 2024) showing that machine-translation performance is nearly halved when a single neologism is introduced into a sentence, and that models with later knowledge cutoffs show lower perplexity on neologisms and better downstream performance — absorption tracks training-data presence. External grounding for the premise of Vocabulary Discipline (ADR-0010): an unabsorbed coinage does not merely fail to carry signature, it degrades processing of the text around it. Boundary: measures training-data presence, not document-level anchor density — it supports the coin-sparingly cost model while the anchor-densely remedy (dense anchoring raises absorption probability via co-occurrence) remains this framework's own hypothesis."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2510.08506",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Neologism Learning for Controllability and Self-Verbalization",
+      "author": ["John Hewitt", "Oyvind Tafjord", "Robert Geirhos", "Been Kim"],
+      "datePublished": "2025-10-09",
+      "identifier": "arXiv:2510.08506",
+      "url": "https://arxiv.org/abs/2510.08506",
+      "description": "Trains a single new token embedding (all other parameters frozen) to make a model express a concept, and reports machine-only synonyms — words that look unrelated to humans but trigger the same model-internal concept (the ordinary word 'lack' acts as a synonym for a trained brevity neologism) — plus self-verbalization, where the model explains a learned neologism in natural language (questionnaire-based verbalizations close on average 83% of the behavioral gap). Surfaces the human-model anchor-correspondence question for Vocabulary Discipline (ADR-0010): anchors chosen for human-readable semantic proximity need not remain anchors at the parametric-representation level. Boundary: a post-hoc steering-token regime, not pretraining absorption; it qualifies only the parametric rationale of the anchoring obligation, leaving the retrieval-channel and graph-edge rationales untouched. Recorded as an open-question candidate in the empirical layer's 2026-06 external-literature note."
     }
   ]
 }

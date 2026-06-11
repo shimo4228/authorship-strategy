@@ -23,7 +23,7 @@
 - [Manifesto — Open Questions](docs/manifesto.md): eight open questions the framework leaves unanswered
 - [Glossary](docs/glossary.md): key terms with English/Japanese mapping, including the disjoint-attribution warning
 - [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the ADRs
-- [Empirical Layer](docs/empirical/README.md): method, limitations, and preliminary observations from twenty-four days of CC0-published traffic data
+- [Empirical Layer](docs/empirical/README.md): method, limitations, and preliminary observations from twenty-four days of CC0-published traffic data, plus an external-literature note reading the 2024–2026 neology-and-LLM literature against ADR-0010
 
 ## Architecture Decision Records
 
@@ -102,6 +102,8 @@ This repository is part of an ecosystem of five DOI-registered research lines ma
 ## Empirical layer notes
 
 The empirical layer reports preliminary observations from twenty-four days (2026-04-21 to 2026-05-14) of CC0-published traffic data across the four sibling repositories plus two supporting repositories. All claims are framed as *preliminary observation*, not as evidence. Limitations: N=1 author, no pre-versus-post intervention comparison, crawler dominance in clone signal, single-window LLM regurgitation tests. See [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations before interpreting the baseline.
+
+The layer also carries an external-literature note ([`docs/empirical/neologism-survival-2026-06.md`](docs/empirical/neologism-survival-2026-06.md)) reading the 2024–2026 neology-and-LLM literature (NEO-BENCH arXiv:2402.12261, neologism learning with machine-only synonyms arXiv:2510.08506, the NeoLLM2026 workshop at LREC 2026) against ADR-0010: the literature externally supports the coin-sparingly cost model (an unabsorbed coinage degrades LLM processing; absorption tracks training-data presence), leaves the anchor-densely remedy as the framework's own hypothesis, and records one open question — whether anchors chosen for human-readable semantic proximity remain anchors at the parametric-representation level (machine-only synonyms show the two levels can dissociate).
 
 ## Open questions
 
