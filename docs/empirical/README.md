@@ -54,14 +54,17 @@ forward by any reader interpreting the data.
 
 ### N=1 author, four repositories, twenty-four days
 
-The full ecosystem at the time of this release consists of four
-DOI-registered sibling research lines plus a federation hub plus two
-supporting repositories (a writing source repository and a
-contemplative-agent live data repository), all maintained by one
-author. The dataset covers the period from 2026-04-21 to 2026-05-14
-inclusive — twenty-four daily snapshots. Generalizations across
-authors, ecosystems, or longer time periods are not supported by the
-dataset and should not be inferred.
+During the data window — 2026-04-21 to 2026-05-14 inclusive, twenty-four
+daily snapshots — four DOI-registered sibling research lines had
+accumulated traffic, alongside a federation hub and two supporting
+repositories (a writing source repository and a contemplative-agent live
+data repository), all maintained by one author. A fifth research line
+(Attention, Not Self) was DOI-registered but its traffic observation
+began 2026-05-18, after this window closed, so it is absent from this
+baseline; subsequent baselines will include it. This paragraph describes
+the window the dataset covers, not the current size of the ecosystem.
+Generalizations across authors, ecosystems, or longer time periods are
+not supported by the dataset and should not be inferred.
 
 ### No pre-versus-post intervention comparison
 

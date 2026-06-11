@@ -149,6 +149,12 @@ Component skill とは別に、Layer 4 tactic を **specific deliverable** と�
 
 Adopter は doctrine-corpus を **standalone fine-tune package としてではなく ingredient (RAG retrieval material / larger instruction-tuning mix への混入 / human reading) として** 使うことが想定される。詳細は doctrine-corpus README の "Intended uses and current limitations" 参照。
 
+### graph 登録 scope (data sibling は hub に集約)
+
+本 repo 自身の [`graph.jsonld`](graph.jsonld) は **doctrine concept + component skill** に scope を限定する。data-sibling ecosystem repo (`doctrine-corpus`) は本 repo の graph には node を持たず、hub `graph.jsonld` に `extends → 10.5281/zenodo.20263316` 付きで登録される (意図的 — 重複登録を避け federation 集約点を hub に一本化する)。本 repo graph に doctrine-corpus が無いのは gap ではなく設計判断。
+
+`existence-proof` ([10.5281/zenodo.20558800](https://doi.org/10.5281/zenodo.20558800)) は同じ infrastructure pattern (llms.txt / knowledge graph / DOI / 固有用語) を別 payload・別受益者で reuse する **pre-line complement** だが、`extends` edge を持たず Layer 4 tactic も operationalize しない (graph node 自身が disjoint-by-design と宣言)。**data sibling でも research line でもない**ため本 repo には登録せず、hub graph にのみ `EcosystemRepo` として存在する。本 repo の registry に現れないのは正しい状態。
+
 ## ディレクトリ
 
 repo の構造と各 doc の役割は [`docs/CODEMAPS/architecture.md`](docs/CODEMAPS/architecture.md) を参照 (canonical)。
@@ -159,6 +165,21 @@ repo の構造と各 doc の役割は [`docs/CODEMAPS/architecture.md`](docs/COD
 - **graph.jsonld = concept-level**: 「X とは何か、X と Y はどう関係するか」を JSON-LD triples で encode
 
 両者は重複せず相補的。新規 ADR / Concept 追加時は **両面で更新** する。役割境界の正本定義は `~/.claude/skills/jsonld-knowledge-graph/SKILL.md` の "CODEMAPS との関係" section 参照。
+
+## Research Wiki Consultation (read-only)
+
+ADR の起草・改訂、glossary / graph.jsonld 更新、release 前には、research wiki (Obsidian vault) の対応 concept ページを **read-only** で参照する。wiki は本 repo の graph.jsonld を gap 検出基盤として daily-research が積んだノートの合成層であり、ここでの参照 → repo への昇格が research loop を閉じる。
+
+- 場所: `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/wiki/concept/`
+- 主担当ページ: `authorship-strategy.md`。隣接: `GEO.md` / `オーセンティシティ.md` / `AKC.md` / `LLM.md`
+- 見る節と用途:
+  1. **オープンクエスチョン** の「ADR 候補」マーク → 新規 ADR の種
+  2. **矛盾・論争** → thesis / ADR と衝突する新事実の stale 照合
+  3. **Key Claims の外部出典** (arXiv ID・実証データ) → `graph.jsonld` の `ExternalReference` / 参考文献候補
+  4. **関連概念リンク** → repo graph に無い辺・新 Concept の候補
+- **Normative / Empirical routing**: wiki 由来の観測 (GEO 実証・traffic 系) は `docs/empirical/` 候補として "preliminary observation" tone で扱う。原則を変える証拠になる場合は ADR 改訂として記録する (証拠で原則を改訂する流れを断たない)
+- 引用規律: 公開成果物には wiki ページや vault パスを引用しない。wiki が指す **一次出典まで遡って** それを引く (ADR 本文の harness / vendor 中立規約も維持)。wiki はレンズであって citable source ではない
+- wiki への書き込みは行わない (ingest / 概念ページ更新は vault セッションの領域)
 
 ## Hub への back-propagation
 
