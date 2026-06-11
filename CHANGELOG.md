@@ -7,7 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- ADR-0010: Vocabulary Discipline — Coin Sparingly, Anchor Densely. Defines the vocabulary discipline ADR-0008 named as the parametric-channel lever but left undefined. A coined term's power comes from its edge density, not from the count of coinages: a term is coined only when three conditions all hold (join-novelty, definitional anchoring, uncontested namespace), and every retained coinage is anchored densely — glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges, repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. The vocabulary-level enforcement of origin-claim scope discipline.
+- `docs/glossary` (en/ja): added a Vocabulary Discipline entry (consolidating the term ADR-0008 introduced) and cross-referenced it from the Distinctive Terminology entry.
+
 ### Changed
+
+- ADR-count surfaces updated from nine to ten; `docs/adr/README` (en/ja) extended with the vocabulary-discipline cluster paragraph; the diffusion-mechanism pair (0008-0009) becomes the diffusion-mechanism cluster (0008-0010).
+- `docs/thesis` (en/ja): Layer 4 tactic 4 (Distinctive terminology) now states the coinage discipline — coin sparingly (join-novelty, one-sentence definability in existing vocabulary, uncontested namespace), anchor densely — with a reference to ADR-0010.
+- `graph.jsonld`: added the ADR-0010 node (`extends` ADR-0008), a `vocabulary-discipline` concept (appliesTo distinctive-terminology, downstream of two-channel-attribution-diffusion and origin-claim-scope-discipline), the ADR-0010 instantiation in the Tactics layer, and the vocabulary-discipline keyword; distinctive-terminology description updated; Dataset and ResearchLine descriptions updated to ten ADRs.
+- `llms.txt` / `llms-full.txt`: ADR list and cluster prose extended with ADR-0010; concept count updated to eighteen.
+- `README` (en/ja), `docs/CODEMAPS/architecture`: ADR count updated to ten; ADR table extended.
 
 - `graph.jsonld`: cited Concept Influence (arXiv:2602.14869) and Mechanistic Data Attribution (arXiv:2601.21996) as upstream **white-box** evidence for the parametric channel. Registered both as `ScholarlyArticle` nodes; linked Concept Influence to the `idea-vs-scaffold-separation` concept via `groundedIn` (an idea is retained as a parametric concept direction, not verbatim text — mechanistic grounding for the Layer-3 wager) and both papers to `two-channel-attribution-diffusion`. The framework adopts them as upstream evidence only: being white-box, they do not measure burn-in inside a closed commercial LLM and do not close the parametric-channel measurement gap ADR-0008 leaves open.
 - `docs/glossary` (en/ja): added an external-evidence note to the Two-Channel Attribution Diffusion entry recording that parametric-channel measurability is taken up by 2026 training-data-attribution work, with the same white-box boundary stated.

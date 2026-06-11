@@ -195,6 +195,23 @@ authorship の semantic 署名として機能する: generic vocabulary は para
 が、造語は LLM 経由チャネルが原著者に back-reference できる token-level signal
 として生き残る。本 repo の例: *three-axis inversion*、*idea-versus-scaffold
 separation*、*attribution diffusion*、*abstract-doctrine-plus-worked-implementation*。
+造語は [vocabulary discipline](#vocabulary-discipline-語彙規律) に統べられる:
+造語の力は造語の数ではなく edge 密度から来る。
+
+## Vocabulary discipline (語彙規律)
+
+いつ distinctive term を造語し、いつ既存語彙を使うかを統べる規律。
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) で parametric channel の
+レバーとして導入され、[ADR-0010](adr/0010-vocabulary-discipline.ja.md) で定義された。
+造語するのは 3 条件がすべて成立するときのみ —— 概念が既存概念の結合点に立つ
+genuine な新規物である、既存語彙だけで一文定義が書ける、namespace が競合して
+いない —— そして採用したすべての造語を密に anchor する: 既存語彙での glossary
+定義、prior art が存在する場合の上流 citation、既存概念と外部文献への
+knowledge-graph edge、本文中での反復使用。それ以外はすべて既存語彙で書き、
+上流の出典を cite する。Rationale: 造語のコスト (孤立・読者の信頼・維持) は
+語数に線形に増えるが、利益は各語の edge 密度に依存する。ゆえに密に anchor
+された少数の語が孤立した多数の語を支配する。Origin-claim scope discipline の
+語彙レベルでの執行。
 
 ## ORCID
 

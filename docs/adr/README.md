@@ -19,8 +19,9 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
 | [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
+| [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
 
-The set groups into four clusters, each tracking a distinct layer of the
+The set groups into clusters, each tracking a distinct layer of the
 thesis:
 
 ADRs 0001-0003 form an **identifier-federation triplet**: ADR-0001 fixes the
@@ -75,6 +76,17 @@ optimizes and measures each separately rather than averaging them. It
 gives every prior ADR a channel — the federation triplet and ADR-0004 as
 parametric levers, ADR-0006 as the retrieval surface — and sharpens the
 measurement layer ADR-0007 opened.
+
+ADR-0010 is the **vocabulary-discipline decision**: it defines the
+discipline ADR-0008 named as the parametric-channel lever but left
+undefined. A coined term's power comes from its edge density, not from
+the count of coinages, so the program coins a term only when three
+conditions all hold (join-novelty, definitional anchoring, uncontested
+namespace) and anchors every retained coinage densely — glossary
+definition in existing vocabulary, upstream citations, knowledge-graph
+edges, repeated work in the body. Everything else is said in existing
+vocabulary with the upstream source cited. It is the vocabulary-level
+enforcement of the thesis's origin-claim scope discipline.
 
 ## Format
 

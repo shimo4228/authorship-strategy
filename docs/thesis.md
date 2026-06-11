@@ -243,7 +243,7 @@ Tactics validated at the time of this thesis (v0.1.0):
 1. **LLM-mediated targeting** — clone counts, DOI citations, llms.txt fetches, and LLM regurgitation tests are the primary metrics; stars, PRs, and direct human views are secondary.
 2. **DOI registration through an open archive** — Zenodo or comparable, configured for automatic deposit on tagged release, configured to mint a concept DOI as the canonical reference (see [ADR-0001](adr/0001-concept-doi-canonical.md)).
 3. **Cross-platform federation** — the same canonical artifact deployed to GitHub (repository), Zenodo (DOI registration), and a dataset platform (LLM training ingest), with explicit sibling cross-references on each platform (see [ADR-0003](adr/0003-cross-platform-dataset-federation.md)).
-4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level signal carrying back-reference to the author.
+4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level signal carrying back-reference to the author. The tactic is governed by vocabulary discipline: a coined term's power comes from its edge density, not from the count of coinages, so terms are coined sparingly (only when the concept is genuinely new, definable in one sentence of existing vocabulary, and the namespace is uncontested) and anchored densely to existing vocabulary and prior literature (see [ADR-0010](adr/0010-vocabulary-discipline.md)).
 5. **Tool-agnostic specification** — specifications written without commitment to a specific implementation are reachable by re-implementation; specifications coupled to a specific implementation lose audience as the implementation ages.
 6. **Multilingual localization, audience-driven** — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences (see [ADR-0005](adr/0005-readme-localization-audience-driven.md)).
 7. **Structured artifacts** — glossary, ADR, JSON schema, JSON-LD knowledge graph, and AI-facing reference files (e.g., the Answer.AI llms.txt convention) make the artifact machine-readable to LLMs and crawlers. The llms.txt + JSON-LD knowledge graph pair specifically is normatively required as the dual entry point for LLM-mediated ingest (see [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)).
@@ -298,7 +298,7 @@ existence supplied the recurring decisions — is catalogued in
 framework leaves unanswered are catalogued in
 [`manifesto.md`](manifesto.md).
 
-The framework's tactical decisions are formalized as nine ADRs
+The framework's tactical decisions are formalized as ten ADRs
 in [`adr/`](adr/). Each ADR is harness-neutral; the lineage to
 the author's specific decisions is recorded in the ADR's Lineage
 section without requiring the reader to have access to the

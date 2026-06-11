@@ -1,6 +1,6 @@
 # authorship-strategy
 
-A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and seven tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
+A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and ten tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
 
 > Project name: **authorship-strategy** (2026-05-18 確定)。repo directory・GitHub URL ともに `authorship-strategy` で統一。skill 名 (`~/.claude/skills/authorship-strategy/`) と rule 名 (`~/.claude/rules/common/authorship-strategy.md`) と完全一致。
 
@@ -120,7 +120,7 @@ HF 側の `README.md` (dataset card) は HF 用に customize されている。G
 
 | Component skill repo | Operationalizes |
 |---|---|
-| `claude-skill-authorship-strategy` | 判断 framework 全体 (3 軸 inversion + 4 層 stack + 禁止/奨励 actions + 11-item checklist) |
+| `claude-skill-authorship-strategy` | 判断 framework 全体 (3 軸 inversion + 4 層 stack + 禁止/奨励 actions + 12-item checklist) |
 | `claude-skill-release-doi` | 識別子 federation triplet (ADRs 0001-0003) の release-time workflow |
 | `claude-skill-llms-txt-writer` | Layer 4 tactic 7 ── Answer.AI `llms.txt` convention の operational form |
 | `claude-skill-jsonld-knowledge-graph` | Layer 4 tactic 7 ── JSON-LD knowledge graph の operational form |

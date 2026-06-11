@@ -239,6 +239,28 @@ but coined terms survive as token-level signals that LLM-mediated
 channels can carry back to the original author. Examples in
 this repository: *three-axis inversion*, *idea-versus-scaffold
 separation*, *attribution diffusion*, *abstract-doctrine-plus-worked-implementation*.
+Coinage is governed by [vocabulary discipline](#vocabulary-discipline):
+a coined term's power comes from its edge density, not from the
+count of coinages.
+
+## Vocabulary discipline
+
+The discipline governing when to coin a distinctive term and when to
+use existing vocabulary instead, introduced as the parametric-channel
+lever in [ADR-0008](adr/0008-rag-era-attribution-diffusion.md) and
+defined in [ADR-0010](adr/0010-vocabulary-discipline.md). A term is
+coined only when three conditions all hold — the concept is genuinely
+new at a join of existing concepts, a one-sentence definition in
+existing vocabulary is possible, and the namespace is uncontested —
+and every retained coinage is anchored densely: a glossary definition
+in existing vocabulary, upstream citations where prior art exists,
+knowledge-graph edges to existing concepts and references, and
+repeated work in the body. Everything else is said in existing
+vocabulary with the upstream source cited. Rationale: the costs of
+coinage (isolation, reader trust, maintenance) grow linearly with the
+number of terms, while the benefit depends on each term's edge
+density, so few densely-anchored terms dominate many isolated ones.
+The vocabulary-level enforcement of origin-claim scope discipline.
 
 ## ORCID
 

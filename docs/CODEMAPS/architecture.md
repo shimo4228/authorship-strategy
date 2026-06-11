@@ -1,4 +1,4 @@
-<!-- Generated: 2026-05-30 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
+<!-- Generated: 2026-06-11 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
 # Document Architecture
 
 Authorship Strategy is a **judgment-artifact repository**, not a code
@@ -26,7 +26,7 @@ authorship-strategy/
     ├── manifesto.md                     eight open questions the framework leaves unanswered
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
-    ├── adr/                             9 ADRs (English) + 9 mirrors (.ja.md) + README + README.ja
+    ├── adr/                             10 ADRs (English) + 10 mirrors (.ja.md) + README + README.ja
     ├── empirical/                       preliminary observation layer (method + 2026-05 baseline)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
@@ -39,15 +39,15 @@ authorship-strategy/
 | Core thesis | `docs/thesis.md` | Three-axis inversion + four-layer framework. English primary. |
 | Open questions | `docs/manifesto.md` | Eight items. Adopters invited to extend. |
 | Vocabulary | `docs/glossary.md` | Includes load-bearing disjoint-attribution disambiguation vs. AAP. |
-| Lineage | `docs/inspiration.md` | Prior literature (Foucault, Chartier, Shapiro & Varian, Lessig, scientometrics, GEO); sibling-line origins of the nine ADRs. |
-| ADR index | `docs/adr/README.md` | Nine ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006) + metric-rejection decision (0007) + diffusion-mechanism pair (0008-0009, 0009 amending 0006). |
+| Lineage | `docs/inspiration.md` | Prior literature (Foucault, Chartier, Shapiro & Varian, Lessig, scientometrics, GEO); sibling-line origins of the ADRs. |
+| ADR index | `docs/adr/README.md` | Ten ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006) + metric-rejection decision (0007) + diffusion-mechanism cluster (0008-0010; 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names). |
 | Tactical decisions | `docs/adr/000N-*.md` | Each ADR: Status / Date / Context / Decision / Alternatives / Consequences / Lineage. Harness-neutral body, lineage records the implementation-specific origin. |
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
 | Component skills index | `docs/skills/README.md` | Reference index pointing to four external component skill repositories (`claude-skill-authorship-strategy`, `claude-skill-release-doi`, `claude-skill-llms-txt-writer`, `claude-skill-jsonld-knowledge-graph`) plus an adjacent-ecosystem-skills section. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. The component-status criterion (the skill operationalizes content the doctrine explicitly names) is documented in the file itself. |
 | AI landing | `llms.txt` | Answer.AI convention. Compact navigator + canonical reading order. |
 | AI reference | `llms-full.txt` | Self-contained Q&A. |
-| AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + nine ADRs + sibling lines + disjoint-vocabulary edge to AAP. |
+| AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + ten ADRs + sibling lines + disjoint-vocabulary edge to AAP. |
 | Citation metadata | `CITATION.cff` | Concept DOI populated post-Zenodo. |
 | Deposit metadata | `.zenodo.json` | `relatedIdentifiers` declare the DOI federation. |
 
@@ -60,12 +60,12 @@ the empirical layer is downstream of all ADRs and references them only
 to disclaim that the observations do not validate the ADRs.
 
 ```
-thesis.md ──────► (cited by) ─► all 9 ADRs
+thesis.md ──────► (cited by) ─► all 10 ADRs
               ─► manifesto.md (uses thesis vocabulary)
               ─► glossary.md (defines thesis terminology)
 
 adr/000N-*.md ─► thesis.md  (every ADR cites thesis for normative grounding)
-              ─► adr/000M-*.md (only within the identifier-federation triplet: 0002 extends 0001, 0003 extends 0002)
+              ─► adr/000M-*.md (within clusters: 0002 extends 0001, 0003 extends 0002; 0008 extends 0006, 0009 amends 0006, 0010 extends 0008)
 
 empirical/*.md ─► thesis.md (observation context)
                ─► adr/*.md  (observation consistent with vs. not evidence for)

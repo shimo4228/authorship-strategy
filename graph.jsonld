@@ -42,7 +42,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the nine tactical ADRs in four clusters (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism pair 0008-0009 with 0009 amending 0006), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the ten tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0010 with 0009 amending 0006 and 0010 defining the vocabulary discipline 0008 names), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -64,6 +64,7 @@
         "dual entry point",
         "llms.txt convention",
         "JSON-LD knowledge graph",
+        "vocabulary discipline",
         "generative engine optimization",
         "ghost citation",
         "citation absorption",
@@ -90,7 +91,7 @@
         {"@value": "Authorship Strategy", "@language": "en"},
         {"@value": "著者戦略", "@language": "ja"}
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records nine decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records ten decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
@@ -117,6 +118,7 @@
         "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
         "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
         "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
+        "https://github.com/shimo4228/authorship-strategy#concept/vocabulary-discipline",
         "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
         "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
         "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
@@ -248,7 +250,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0006",
         "https://github.com/shimo4228/authorship-strategy#adr/0007",
         "https://github.com/shimo4228/authorship-strategy#adr/0008",
-        "https://github.com/shimo4228/authorship-strategy#adr/0009"
+        "https://github.com/shimo4228/authorship-strategy#adr/0009",
+        "https://github.com/shimo4228/authorship-strategy#adr/0010"
       ]
     },
 
@@ -275,7 +278,25 @@
         {"@value": "Distinctive Terminology", "@language": "en"},
         {"@value": "造語的用語", "@language": "ja"}
       ],
-      "description": "Domain-specific words coined by an author as semantic signatures of authorship. Generic vocabulary dissolves through paraphrase; coined terms survive as token-level signals carrying back-reference to the original author. A Layer 4 tactic and the substrate of origin-claim scope discipline."
+      "description": "Domain-specific words coined by an author as semantic signatures of authorship. Generic vocabulary dissolves through paraphrase; coined terms survive as token-level signals carrying back-reference to the original author. A Layer 4 tactic and the substrate of origin-claim scope discipline. Coinage is governed by vocabulary discipline (ADR-0010): a coined term's power comes from its edge density, not from the count of coinages."
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/vocabulary-discipline",
+      "@type": "Concept",
+      "name": "Vocabulary Discipline",
+      "alternateName": [
+        {"@value": "Vocabulary Discipline", "@language": "en"},
+        {"@value": "語彙規律", "@language": "ja"}
+      ],
+      "description": "The discipline governing when to coin a distinctive term and when to use existing vocabulary instead: coin sparingly, anchor densely. A term is coined only when three conditions all hold — the concept is genuinely new at a join of existing concepts (join-novelty), a one-sentence definition in existing vocabulary is possible (definitional anchoring), and the namespace is uncontested — and every retained coinage carries a glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges to existing concepts and references, and repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. Rationale: the costs of coinage (isolation, reader trust, maintenance) grow linearly with the number of terms while the benefit depends on each term's edge density, so few densely-anchored terms dominate many isolated ones — an isolated coinage is paraphrased away by the parametric channel exactly as generic vocabulary is, and the retrieval channel is queried in existing vocabulary. Named as the parametric-channel lever in ADR-0008, defined in ADR-0010. The vocabulary-level enforcement of origin-claim scope discipline.",
+      "appliesTo": "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
+      "downstreamOf": [
+        "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
+        "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline"
+      ],
+      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0010",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md"
     },
 
     {
@@ -439,6 +460,15 @@
     },
 
     {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0010",
+      "@type": "ADR",
+      "name": "ADR-0010: Vocabulary Discipline — Coin Sparingly, Anchor Densely",
+      "description": "Defines the vocabulary discipline ADR-0008 named as the parametric-channel lever but left undefined. A coined term's power comes from its edge density, not from the count of coinages: a term is coined only when three conditions all hold (join-novelty, definitional anchoring, uncontested namespace), and every retained coinage is anchored densely — glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges, repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. The vocabulary-level enforcement of origin-claim scope discipline.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0008"
+    },
+
+    {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
       "sameAs": "https://www.wikidata.org/wiki/Q140090186",
       "@type": ["ResearchLine", "EcosystemRepo"],
@@ -497,7 +527,7 @@
       "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "@type": "EcosystemRepo",
       "name": "claude-skill-authorship-strategy",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the nine ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the ten ADRs.",
       "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

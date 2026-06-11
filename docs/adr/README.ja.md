@@ -19,8 +19,9 @@ top-down に prescribe されたものではない。
 | [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
 | [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
+| [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
 
-ADR set は thesis の異なる層を tracking する 4 つの cluster に分かれる:
+ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
 ADR 0001-0003 は **identifier-federation triplet** を形成する: ADR-0001 が canonical
 reference の形 (version DOI ではなく concept DOI) を fix し、ADR-0002 が archive
@@ -68,6 +69,15 @@ retrieval だけを追う failure mode は ghost citation (出典は cite され
 最適化・測定する。各既存 ADR に channel を与え —— federation triplet と
 ADR-0004 を parametric レバー、ADR-0006 を retrieval 表面として —— 
 ADR-0007 が開いた測定層を鋭くする。
+
+ADR-0010 は **vocabulary-discipline decision** である: ADR-0008 が
+parametric channel のレバーとして名指ししながら未定義のまま残した規律を
+定義する。造語の力は造語の数ではなく edge 密度から来る。ゆえにプログラムは
+3 条件がすべて成立するときのみ造語し (join-novelty、definitional
+anchoring、uncontested namespace)、採用したすべての造語を密に anchor する
+—— 既存語彙での glossary 定義、上流 citation、knowledge-graph edge、
+本文中での反復使用。それ以外はすべて既存語彙で書き、上流の出典を cite
+する。Thesis の origin-claim scope discipline の語彙レベルでの執行である。
 
 ## Format
 

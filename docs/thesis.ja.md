@@ -195,7 +195,7 @@ retire する。
 1. **LLM 経由 targeting** —— clone 数、DOI 引用、llms.txt fetch、LLM regurgitation test を primary metric にする; star、PR、direct human view は secondary
 2. **Open archive 経由の DOI 登録** —— Zenodo もしくは同等、tag release で自動 deposit に configure、canonical reference として concept DOI を発行するように configure ([ADR-0001](adr/0001-concept-doi-canonical.ja.md) 参照)
 3. **クロスプラットフォーム federation** —— 同一の canonical artifact を GitHub (リポジトリ)、Zenodo (DOI 登録)、データセット platform (LLM training ingest) に配置し、各 platform 上で sibling 相互参照を明示する ([ADR-0003](adr/0003-cross-platform-dataset-federation.ja.md) 参照)
-4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は著者への back-reference を運ぶ token-level signal として生き残る
+4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は著者への back-reference を運ぶ token-level signal として生き残る。この戦術は vocabulary discipline (語彙規律) に統べられる: 造語の力は造語の数ではなく edge 密度から来るので、造語は控えめに行い (概念が genuine に新規で、既存語彙の一文で定義でき、namespace が競合していないときのみ)、既存語彙と先行文献へ密に anchor する ([ADR-0010](adr/0010-vocabulary-discipline.ja.md) 参照)
 5. **Tool-agnostic specification** —— 特定実装にコミットせず書かれた仕様は再実装で reach 可能; 特定実装に coupled な仕様は実装の老化とともに audience を失う
 6. **Audience-driven な多言語化** —— locale mirror は観測された traffic に基づいて追加・退役させ、想定 audience の推測に基づかない ([ADR-0005](adr/0005-readme-localization-audience-driven.ja.md) 参照)
 7. **構造化 artifact** —— glossary、ADR、JSON schema、JSON-LD knowledge graph、AI-facing reference file (例: Answer.AI llms.txt convention) は artifact を LLM と crawler に対して機械可読にする。中でも llms.txt + JSON-LD knowledge graph の pair は LLM-mediated ingest のための dual entry point として normatively required ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 参照)
@@ -241,7 +241,7 @@ decision を供給した sibling line —— は [`inspiration.md`](inspiration.
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 9 つの ADR として formalize されて
+Framework の戦術的判断は [`adr/`](adr/) に 10 の ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 
