@@ -13,10 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/glossary` (en/ja): added a Retrieval-Suppressed Naming Probe entry; extended the Ghost Citation entry (now a measured rate under ADR-0011) and the Two-Channel Attribution Diffusion measurability note (ADR-0011 closes the black-box side of the gap the white-box methods leave open).
 - `graph.jsonld`: ADR-0011 node (`extends` ADR-0008), `retrieval-suppressed-naming-probe` concept (downstream of two-channel-attribution-diffusion, grounded in arXiv:2602.06718 / 2604.25707 / 2603.09296), Tactics-layer instantiation.
 
+- `docs/empirical/probe-baseline-2026-06.md`: first run of the ADR-0011 protocol (2026-06-12, four providers, probe set v1, detector v2). Records the parametric channel's over-determined zero as the pre-intervention baseline the traffic layer lacks, a clean negative-control floor, one full retrieval attribution via owned artifacts (including the AI-facing entry point), citation-selection losses on topical queries elsewhere, and the instrument shakedown notes (echo guard, reasoning-token starvation, endpoint-dependent citation metadata).
+
 ### Changed
 
 - ADR-count surfaces updated from ten to eleven; `docs/adr/README` (en/ja) extended with the measurement-instrument cluster paragraph; the diffusion-mechanism cluster becomes 0008-0011.
-- `docs/empirical/README.md`: the single-window regurgitation-test limitation now points to ADR-0011's protocol as its structured successor; the paragraph is retained as the record of the only pre-protocol observations.
+- `docs/empirical/README.md`: the single-window regurgitation-test limitation now points to ADR-0011's protocol as its structured successor; the paragraph is retained as the record of the only pre-protocol observations. "What the layer contains" gains the probe baseline.
 
 ## [0.4.0] - 2026-06-11
 

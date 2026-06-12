@@ -27,7 +27,7 @@ authorship-strategy/
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
     ├── adr/                             11 ADRs (English) + 11 mirrors (.ja.md) + README + README.ja
-    ├── empirical/                       preliminary observation layer (method + 2026-05 baseline + 2026-06 external-literature note)
+    ├── empirical/                       preliminary observation layer (method + 2026-05 traffic baseline + 2026-06 external-literature note + 2026-06 probe baseline)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
 ```
@@ -45,6 +45,7 @@ authorship-strategy/
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
 | External-literature note | `docs/empirical/neologism-survival-2026-06.md` | 2024–2026 neology-and-LLM literature read against ADR-0010; records the human-model anchor-correspondence open question. |
+| Probe baseline | `docs/empirical/probe-baseline-2026-06.md` | First ADR-0011 protocol run: parametric zero pre-baseline, negative-control floor, per-provider retrieval observations. Raw data in the hub's `probes/` (CC0). |
 | Component skills index | `docs/skills/README.md` | Reference index pointing to four external component skill repositories (`claude-skill-authorship-strategy`, `claude-skill-release-doi`, `claude-skill-llms-txt-writer`, `claude-skill-jsonld-knowledge-graph`) plus an adjacent-ecosystem-skills section. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. The component-status criterion (the skill operationalizes content the doctrine explicitly names) is documented in the file itself. |
 | AI landing | `llms.txt` | Answer.AI convention. Compact navigator + canonical reading order. |
 | AI reference | `llms-full.txt` | Self-contained Q&A. |

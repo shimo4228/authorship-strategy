@@ -111,6 +111,7 @@ remain the only pre-protocol observations.
 
 - **[`traffic-baseline-2026-05.md`](traffic-baseline-2026-05.md)** — the per-repository baseline summary for the twenty-four-day data window. Cumulative clones, unique cloners, views, unique viewers, and clone/view ratio per repository, with brief interpretive notes flagging the cross-repository patterns the author finds noteworthy.
 - **[`neologism-survival-2026-06.md`](neologism-survival-2026-06.md)** — an external-literature note (a different genre from the traffic baseline: external publications, not ecosystem data) on when coined words survive LLM processing. Reads the 2024–2026 neology-and-LLM literature (NEO-BENCH, neologism learning and machine-only synonyms, the NeoLLM2026 workshop) against ADR-0010's premises, records the human-model anchor-correspondence open question, and changes nothing normative.
+- **[`probe-baseline-2026-06.md`](probe-baseline-2026-06.md)** — first run of the ADR-0011 two-channel probe protocol. Establishes the parametric channel's pre-intervention zero baseline (over-determined by training cutoffs), a clean negative-control floor, and the first per-provider retrieval observations (one full attribution via owned artifacts including the AI-facing entry point; citation-selection losses elsewhere). Raw data lives in the federation hub's `probes/` directory (CC0).
 
 The layer is intentionally small at v0.1.0. Subsequent releases will
 add: pre-versus-post intervention contrasts where the data permits;
