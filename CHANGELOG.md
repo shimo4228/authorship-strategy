@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- ADR-0011: Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (**experimental**). Builds the measurement instrument ADR-0008's Consequences demanded: a scheduled two-channel probe protocol interrogating frontier models with search suppressed (retrieval-suppressed naming probe, parametric channel) and search enabled (citation probe, retrieval channel — making ghost citation observable within a single answer as an owned identifier cited while the author goes unnamed in prose). Detection is deterministic string matching against a versioned lexicon over retained raw responses, never model judging; prompts are fixed single-variable templates with a negative control quantifying the confabulation noise floor; every change to prompts, models, or lexicon is a visible series break; channels run on matched cadences and are never blended. The public probe log feeds the parametric channel it measures — recorded as a stated confound and an on-thesis act of diffusion. The instrument itself lives in the federation hub beside the traffic log (see Lineage).
+- `docs/glossary` (en/ja): added a Retrieval-Suppressed Naming Probe entry; extended the Ghost Citation entry (now a measured rate under ADR-0011) and the Two-Channel Attribution Diffusion measurability note (ADR-0011 closes the black-box side of the gap the white-box methods leave open).
+- `graph.jsonld`: ADR-0011 node (`extends` ADR-0008), `retrieval-suppressed-naming-probe` concept (downstream of two-channel-attribution-diffusion, grounded in arXiv:2602.06718 / 2604.25707 / 2603.09296), Tactics-layer instantiation.
+
+### Changed
+
+- ADR-count surfaces updated from ten to eleven; `docs/adr/README` (en/ja) extended with the measurement-instrument cluster paragraph; the diffusion-mechanism cluster becomes 0008-0011.
+- `docs/empirical/README.md`: the single-window regurgitation-test limitation now points to ADR-0011's protocol as its structured successor; the paragraph is retained as the record of the only pre-protocol observations.
+
 ## [0.4.0] - 2026-06-11
 
 Records one ADR since v0.3.0 — ADR-0010 (vocabulary discipline: coin

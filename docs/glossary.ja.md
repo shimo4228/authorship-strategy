@@ -269,6 +269,9 @@ parametric channel が *測定* できるか —— 単に主張されるだけ�
 訓練サンプルへ遡及する。いずれも *white-box* 手法で、自分で訓練したモデルにしか
 適用できない; 閉じた商用 LLM 内の焼き込みを測るものではないため、本 framework は
 これらを measurement gap の解消ではなく upstream evidence として adopt する。
+gap の *black-box* 側 —— 閉じた商用モデルに対する行動的測定 —— は
+[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md) の retrieval-suppressed
+naming probe が閉じる。
 
 ## Ghost Citation (幽霊引用)
 
@@ -280,6 +283,21 @@ arXiv:2602.06718; Seer Interactive の 541,213 応答調査) に由来し、本 
 はこれを 2 チャネル機構の中に、parametric と retrieval の 2 チャネルが distinct で
 並行で追うべきことの diagnostic として位置づける: parametric 焼き込み不在の上で
 動く retrieval channel は、帰属を再浮上させずに citation だけを生む。
+[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md) 下では ghost citation は
+測定された rate になる: owned identifier が引用されながら著者が prose 中で
+無名のまま、という状態を独立に記録された boolean から導出する。
+
+## Retrieval-Suppressed Naming Probe (検索抑制 naming probe)
+
+parametric channel の測定器: search / grounding tool をすべて抑制した状態で
+モデルに送る固定・単一変数の prompt。概念とは何か、誰が coined / maintain して
+いるかを問う。成功は、モデルが訓練済み weights のみから概念とその著者名を
+産出すること —— 上記の white-box な training-data-attribution 手法に対する、
+行動的・black-box な対応物である。[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md)
+が、検索有効の双子 (citation probe — ghost citation を単一回答内で観測可能に
+する) および negative-control probe (もっともらしい架空概念 — それへの自信
+ありげな帰属が、誘導質問の生む confabulation noise floor を定量化する) と
+ともに定義・運用する。
 
 ## Derivation (derivative work における)
 

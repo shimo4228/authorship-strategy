@@ -1,0 +1,220 @@
+Language: English | [日本語](0011-two-channel-probe-protocol.ja.md)
+
+# ADR-0011: Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument
+
+> **Summary.** ADR-0008 split Attribution Diffusion into a parametric
+> channel and a retrieval channel and conceded, in its own Consequences,
+> that parametric success was *asserted, not measured*. This ADR builds
+> the missing instrument: a scheduled probe protocol that interrogates
+> frontier models on two settings — search suppressed (does the trained
+> model name the concept and its author?) and search enabled (are the
+> program's identifiers cited, and does the author's name survive
+> alongside the citation?). Detection is deterministic string matching
+> over retained raw responses, never model judging; probe prompts are
+> fixed single-variable templates with a negative control; every change
+> to prompts, models, or detection lexicon is a visible series break.
+> The instrument is public, which means it feeds the very channel it
+> measures — a confound the protocol states rather than hides.
+
+## Status
+**experimental** — adopted for operation; to be confirmed as `accepted`
+after the protocol survives three scheduled runs without revision to its
+core rules.
+
+## Date
+2026-06-12
+
+## Context
+
+ADR-0007 fixed what counts as success — LLM-mediated reach, not
+human-attention signals — and recorded that the program had no
+instrument for it. ADR-0008 divided that reach into two channels with
+opposite time constants and ended with the same admission, now sharper:
+retrieval success is observable today (the artifact appears among cited
+sources), but parametric success requires a *retrieval-suppressed naming
+probe* that did not exist. Until it exists, the framework's central
+claim — that openness drives name burn-in — floats free of measurement.
+
+The empirical layer's only standing instrument has been the traffic log:
+daily snapshots of clone and view counts. Those are exactly the
+human-attention-adjacent signals ADR-0007 demoted, kept because they are
+free and continuous, not because they answer the question. The one
+direct measurement to date — three ad-hoc regurgitation tests against
+three assistants in one week of May 2026 — was a single-window, single-run
+observation with no fixed prompts, no controls, and no repetition: an
+anecdote, not a series.
+
+Meanwhile the 2026 measurement literature converged on the missing
+pieces. Large-scale citation-validity studies quantified how often
+models fabricate or strip attribution; a cross-platform measurement
+framework separated *citation selection* (which sources a platform
+fetches) from *citation absorption* (how much a fetched source shapes
+the answer), using controlled prompt sets in the hundreds; and the
+practitioner literature gave the failure mode a name and a mechanism —
+ghost citation: the answer cites the page while the parametric memory
+that would have named its author was never formed. These designs are
+reproducible at individual-author scale: fixed prompt templates varying
+a single term, independent boolean outcomes, derived rates.
+
+What remained was a protocol decision: what exactly to ask, how to
+detect an answer's verdict without introducing a second model's
+judgment, how to store observations so that detection mistakes are
+recoverable, and how to keep a public instrument honest about the fact
+that it contaminates its own object of measurement.
+
+## Decision
+
+Operate a **two-channel probe protocol** as the program's primary
+measurement instrument. One probe run interrogates several frontier
+models (currently four providers) through a unified model-API client,
+on two settings that are never blended:
+
+1. **Parametric probe — search suppressed.** No search or grounding tool
+   is offered. The probe asks what a concept is and who coined or
+   maintains it, or what the model knows about the author. Success on
+   this channel is the model producing the concept and the author's name
+   from weights alone. This is the retrieval-suppressed naming probe
+   ADR-0008 called for.
+
+2. **Retrieval probe — search enabled.** The provider's server-side
+   search tool is enabled. The probe asks for sources on the program's
+   topics, explicitly requesting URLs *and author names*, so that ghost
+   citation is observable within a single answer: an owned identifier
+   cited while the author goes unnamed.
+
+The protocol's internal rules, each load-bearing:
+
+- **Deterministic detection.** Verdicts are produced by string and
+  regular-expression matching against a versioned lexicon of author
+  aliases, owned identifiers, and project terms — never by asking a
+  second model to judge the first. An auditable false positive is worth
+  more than an unexplainable true one.
+- **Independent booleans, derived rates.** *Author named*, *project
+  named*, and *owned identifier cited* are recorded independently;
+  *ghost citation* is derived (`cited && !author-named`) and therefore
+  always re-derivable. Naming counts only in prose: an author handle
+  visible solely inside a cited URL is the ghost-citation scenario, not
+  attribution.
+- **Raw retention.** The full response text is stored with every
+  verdict, so a revised lexicon can re-score all history. The detector
+  version travels with each record.
+- **Controlled prompts with a negative control.** Templates are fixed
+  and vary a single term per probe. One parametric probe asks about a
+  plausible concept that does not exist; any confident attribution it
+  elicits is the confabulation noise floor against which true-positive
+  rates are read.
+- **Visible series breaks.** Prompt set, pinned model identifiers, and
+  detection lexicon are versioned; the version travels with every
+  record, and the model identifier the provider actually served is
+  recorded beside the one requested. Nothing about the instrument
+  changes silently.
+- **Channel-matched cadence.** The retrieval probe runs on a fast
+  cadence (weekly), matching the days-scale entry and decay dynamics of
+  the retrieval pool. The parametric probe runs slowly (monthly) —
+  training cycles move in months, and oversampling a slow channel only
+  manufactures noise. Scheduling begins after the protocol survives
+  manual prototype runs.
+- **Public log.** The probe data is published under a public-domain
+  dedication beside the traffic log, in the same append-only time-series
+  form, consistent with the openness axis of the thesis.
+
+## Alternatives Considered
+
+**Keep the status quo: ad-hoc regurgitation tests.** Zero build cost.
+Rejected: single-window tests with unfixed prompts cannot distinguish
+model drift from prompt drift from chance, and the empirical layer had
+already flagged them as its weakest observation. The gap they leave is
+the one ADR-0008 documented.
+
+**Model-judged detection.** Ask a second model whether the response
+names the author. More tolerant of paraphrase and indirection than
+string matching. Rejected: it stacks a second, unversioned source of
+drift on top of the first, makes verdicts unauditable, and quietly
+re-introduces the measured system as the measuring system. The
+deterministic lexicon misses paraphrase — accepted as a known,
+inspectable bias, mitigated by retaining raw responses for re-scoring.
+
+**Third-party visibility-monitoring services.** A commercial sector now
+sells AI-visibility tracking. Rejected: the services are
+retrieval-channel only (no search-suppressed mode, hence blind to
+exactly the channel the program cannot otherwise see), closed about
+their probe construction, and vendor-coupled in a way the framework's
+tool-agnosticism rejects.
+
+**A single blended visibility score.** Average the channels into one
+number for legibility. Rejected outright by ADR-0008: a blended metric
+hides which channel is failing, and the channels' time constants differ
+by orders of magnitude.
+
+## Consequences
+
+**Positive.**
+
+- The measurement gap that ADR-0007 opened and ADR-0008 sharpened is
+  closed by an operating instrument: parametric success becomes a
+  measured rate rather than an assertion, and ghost citation becomes a
+  number with a time series.
+- The negative control converts the protocol's worst systematic error —
+  models confabulating agreeably about concepts a leading question
+  presupposes — into a measured noise floor instead of an unknown.
+- Raw retention plus versioned detection makes the instrument
+  self-correcting: a detection bug is a re-scoring, not a lost year of
+  observations.
+- The public log extends the program's existing observation discipline
+  (the traffic log) to the metric layer ADR-0007 actually endorses, and
+  gives any adopting author a reference protocol to replicate at their
+  own scale.
+
+**Negative.**
+
+- **Self-contamination.** The published probe log contains the coined
+  terms, the owned identifiers, and the author's name; future training
+  runs may ingest it, so the instrument feeds the parametric channel it
+  measures. This is a real confound — and simultaneously an on-thesis
+  act of diffusion. The protocol states it in the data's own
+  documentation rather than hiding it, and holds the distinction between
+  *instrument* and *intervention* lightly, per the framework's emptiness
+  clause, as ADR-0008 already holds the channel boundary itself.
+- **Leading-question bias.** Concept-recognition prompts presuppose the
+  concept's existence. The negative control measures but does not remove
+  this; rates are read against the floor, not as absolutes.
+- **Provider drift.** Models are pinned but providers retire and
+  redirect them; every model change is a series break, and the series
+  will accumulate breaks. The protocol records drift rather than
+  preventing it.
+- **A new standing cost.** Scheduled runs, per-search fees, lexicon
+  maintenance, and prompt-set curation are a permanent, if small,
+  operational load — the price of the program having a measurement
+  layer at all. A per-run cost ceiling bounds the worst case.
+- N=1 remains N=1: one author's ecosystem, a handful of probes, a few
+  providers. The protocol produces preliminary observations under the
+  empirical layer's standing limitations, not generalizable findings.
+
+## Lineage
+
+Originating demand: ADR-0008's Consequences ("the program must build a
+retrieval-suppressed naming probe to measure the parametric channel at
+all"), itself downstream of the measurement layer ADR-0007 opened.
+Immediate trigger: a 2026-05-31/2026-06-10 ingest cluster in the
+companion concept wiki covering the 2026 measurement literature — the
+large-scale citation-validity study (GhostCite, arXiv:2602.06718), the
+selection/absorption measurement framework and its 602-prompt controlled
+design (arXiv:2604.25707, reference implementation `geo-citation-lab`),
+the citation-failure diagnosis work (arXiv:2603.09296), and the
+practitioner ghost-citation analyses (Seer Interactive; Growth Memo).
+The independent-boolean recording rule and single-variable templates are
+adapted from the 2604.25707 design.
+
+Specific instances abstracted out of the body: the instrument lives in
+the hub repository's `probes/` directory beside `traffic/`; the unified
+model-API client is litellm; the four providers are Anthropic (Claude),
+OpenAI (GPT), Google (Gemini), and xAI (Grok), with retrieval enabled
+via each provider's server-side search tool (Anthropic/OpenAI web
+search, Google grounding, xAI agent tools); scheduling is the hub's
+existing daily-snapshot automation pattern; the public-domain dedication
+is CC0 1.0. The prototype gate (manual runs with a cost ceiling before
+scheduling) follows the harness's prototype-before-scale rule. The open
+question this ADR leaves for the empirical layer — whether
+prose-only naming is too strict a criterion once assistants render
+citations as rich author cards — is recorded in the probe data's
+documentation rather than resolved here.

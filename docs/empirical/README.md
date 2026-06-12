@@ -98,9 +98,14 @@ terminology is recognized and whether responses cite the author. The
 tests were not designed as repeatable experiments and the LLMs'
 behavior drifts release-to-release, so the test results function as
 *single-point evidence* of LLM-mediated reach, not as a sustained
-measurement. Subsequent releases may institute a structured
-regurgitation-test protocol if the methodological problems can be
-addressed.
+measurement. The structured successor to these tests is the
+two-channel probe protocol of
+[ADR-0011](../adr/0011-two-channel-probe-protocol.md): fixed
+single-variable prompts with a negative control, deterministic
+detection over retained raw responses, and channel-matched cadences,
+logged as a public append-only time series beside the traffic data.
+This limitation paragraph is retained because the May 2026 tests
+remain the only pre-protocol observations.
 
 ## What the layer contains
 

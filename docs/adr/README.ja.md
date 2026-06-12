@@ -20,6 +20,7 @@ top-down に prescribe されたものではない。
 | [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 | [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
+| [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る | **experimental** |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -78,6 +79,18 @@ anchoring、uncontested namespace)、採用したすべての造語を密に anc
 —— 既存語彙での glossary 定義、上流 citation、knowledge-graph edge、
 本文中での反復使用。それ以外はすべて既存語彙で書き、上流の出典を cite
 する。Thesis の origin-claim scope discipline の語彙レベルでの執行である。
+
+ADR-0011 は **measurement-instrument decision** である: ADR-0008 自身の
+Consequences が要求したもの——retrieval-suppressed naming probe が存在する
+まで parametric の成功は主張であって測定ではない——を構築する。protocol は
+frontier model を決して混合されない 2 つの設定で probe し (parametric
+channel には検索抑制、retrieval channel には検索有効——後者は ghost
+citation を単一回答内で観測可能にする)、verdict はモデル判定ではなく
+保持された raw response への決定論的文字列照合で検出し、true-positive
+rate は negative-control probe の confabulation floor と対照して読む。
+これにより cluster は loop を閉じる: ADR-0007 が成功の定義を fix し、
+ADR-0008 が機構を分割し、ADR-0010 が parametric channel のレバーを定義し、
+ADR-0011 がその 3 つを測定可能にする。
 
 ## Format
 

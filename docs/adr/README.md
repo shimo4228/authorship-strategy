@@ -20,6 +20,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 | [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
+| [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument | **experimental** |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -87,6 +88,19 @@ definition in existing vocabulary, upstream citations, knowledge-graph
 edges, repeated work in the body. Everything else is said in existing
 vocabulary with the upstream source cited. It is the vocabulary-level
 enforcement of the thesis's origin-claim scope discipline.
+
+ADR-0011 is the **measurement-instrument decision**: it builds what
+ADR-0008's own Consequences demanded — until a retrieval-suppressed
+naming probe exists, parametric success is asserted, not measured. The
+protocol probes frontier models on two settings that are never blended
+(search suppressed for the parametric channel, search enabled for the
+retrieval channel, the latter making ghost citation observable within a
+single answer), detects verdicts by deterministic string matching over
+retained raw responses rather than model judging, and reads
+true-positive rates against a negative-control probe's confabulation
+floor. With it the cluster closes a loop: ADR-0007 fixed what success
+is, ADR-0008 divided the mechanism, ADR-0010 defined the
+parametric-channel lever, and ADR-0011 makes all three measurable.
 
 ## Format
 

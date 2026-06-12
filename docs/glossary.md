@@ -329,7 +329,10 @@ than verbatim text, and Mechanistic Data Attribution (arXiv:2601.21996) traces
 interpretable circuits back to their training samples. Both are *white-box*
 methods, applicable only to a model one trains oneself; they do not measure
 burn-in inside a closed commercial LLM, so this framework adopts them as
-upstream evidence, not as a closure of the gap.
+upstream evidence, not as a closure of the gap. The *black-box* side of the
+gap — behavioral measurement against closed commercial models — is closed by
+the retrieval-suppressed naming probe of
+[ADR-0011](adr/0011-two-channel-probe-protocol.md).
 
 ## Ghost Citation
 
@@ -342,7 +345,24 @@ rather than coins. [ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
 places it inside the two-channel mechanism as the diagnostic that the
 parametric and retrieval channels are distinct and must be pursued in
 parallel: a working retrieval channel atop absent parametric burn-in
-produces a citation without resurfacing the attribution.
+produces a citation without resurfacing the attribution. Under
+[ADR-0011](adr/0011-two-channel-probe-protocol.md) ghost citation is a
+measured rate: an owned identifier cited while the author goes unnamed in
+prose, derived from independently recorded booleans.
+
+## Retrieval-Suppressed Naming Probe
+
+The measurement instrument for the parametric channel: a fixed,
+single-variable prompt sent to a model with all search and grounding tools
+suppressed, asking what a concept is and who coined or maintains it. Success
+is the model producing the concept and its author's name from trained
+weights alone — the behavioral, black-box counterpart to the white-box
+training-data-attribution methods above. Defined and operated by
+[ADR-0011](adr/0011-two-channel-probe-protocol.md) together with its
+search-enabled twin (the citation probe, which makes ghost citation
+observable within a single answer) and a negative-control probe — a
+plausible nonexistent concept whose confident attributions quantify the
+confabulation noise floor that leading questions create.
 
 ## Derivation (in derivative work)
 

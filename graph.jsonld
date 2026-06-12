@@ -253,7 +253,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0007",
         "https://github.com/shimo4228/authorship-strategy#adr/0008",
         "https://github.com/shimo4228/authorship-strategy#adr/0009",
-        "https://github.com/shimo4228/authorship-strategy#adr/0010"
+        "https://github.com/shimo4228/authorship-strategy#adr/0010",
+        "https://github.com/shimo4228/authorship-strategy#adr/0011"
       ]
     },
 
@@ -390,6 +391,25 @@
     },
 
     {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/retrieval-suppressed-naming-probe",
+      "@type": "Concept",
+      "name": "Retrieval-Suppressed Naming Probe",
+      "alternateName": [
+        {"@value": "Retrieval-Suppressed Naming Probe", "@language": "en"},
+        {"@value": "検索抑制 naming probe", "@language": "ja"}
+      ],
+      "description": "The measurement instrument for the parametric channel of Two-Channel Attribution Diffusion: a controlled prompt sent to a model with all search and grounding tools suppressed, asking what a concept is and who coined or maintains it. Success is the model producing the concept and the author's name from trained weights alone. Paired with a search-enabled citation probe that measures the retrieval channel and makes ghost citation observable within a single answer (owned identifier cited, author unnamed in prose). Detection is deterministic string matching against a versioned lexicon over retained raw responses — never model judging — with fixed single-variable templates and a negative-control probe (a plausible nonexistent concept) that quantifies the confabulation noise floor. The public probe log feeds the parametric channel it measures; the protocol records this self-contamination as a stated confound rather than hiding it.",
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
+      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0011",
+      "groundedIn": [
+        "https://arxiv.org/abs/2602.06718",
+        "https://arxiv.org/abs/2604.25707",
+        "https://arxiv.org/abs/2603.09296"
+      ],
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md"
+    },
+
+    {
       "@id": "https://github.com/shimo4228/authorship-strategy#adr/0001",
       "@type": "ADR",
       "name": "ADR-0001: Concept DOI as Canonical Reference",
@@ -471,6 +491,15 @@
       "name": "ADR-0010: Vocabulary Discipline — Coin Sparingly, Anchor Densely",
       "description": "Defines the vocabulary discipline ADR-0008 named as the parametric-channel lever but left undefined. A coined term's power comes from its edge density, not from the count of coinages: a term is coined only when three conditions all hold (join-novelty, definitional anchoring, uncontested namespace), and every retained coinage is anchored densely — glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges, repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. The vocabulary-level enforcement of origin-claim scope discipline.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0008"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0011",
+      "@type": "ADR",
+      "name": "ADR-0011: Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument",
+      "description": "Builds the measurement instrument ADR-0008 demanded: a scheduled two-channel probe protocol interrogating frontier models with search suppressed (does the trained model name the concept and its author?) and search enabled (are owned identifiers cited, and does the author's name survive in prose alongside the citation?). Detection is deterministic string matching against a versioned lexicon over retained raw responses, never model judging; prompts are fixed single-variable templates with a negative control; every change to prompts, models, or lexicon is a visible series break. The channels are measured on matched cadences (retrieval fast, parametric slow) and never blended. The public probe log feeds the parametric channel it measures — a stated confound and an on-thesis act of diffusion.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0008"
     },
 
