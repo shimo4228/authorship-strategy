@@ -69,18 +69,26 @@ measurement instrument. One probe run interrogates several frontier
 models (currently five providers) through a unified model-API client,
 on two settings that are never blended:
 
-1. **Parametric probe — search suppressed.** No search or grounding tool
-   is offered. The probe asks what a concept is and who coined or
-   maintains it, or what the model knows about the author. Success on
-   this channel is the model producing the concept and the author's name
-   from weights alone. This is the retrieval-suppressed naming probe
-   ADR-0008 called for.
+1. **Parametric arm — search suppressed.** No search or grounding tool
+   is offered. Success on this arm is the model producing the concept
+   and the author's name from weights alone. This is the
+   retrieval-suppressed naming probe ADR-0008 called for.
 
-2. **Retrieval probe — search enabled.** The provider's server-side
-   search tool is enabled. The probe asks for sources on the program's
-   topics, explicitly requesting URLs *and author names*, so that ghost
-   citation is observable within a single answer: an owned identifier
-   cited while the author goes unnamed.
+2. **Retrieval arm — search enabled.** The provider's server-side
+   search tool is enabled. Prompts request URLs *and author names*, so
+   that ghost citation is observable within a single answer: an owned
+   identifier cited while the author goes unnamed.
+
+3. **Same prompts, both arms (A/B).** Every probe runs on both settings
+   with an identical prompt, so the per-question delta between arms
+   isolates what retrieval adds with the question held fixed — the
+   measurement most users' actual usage corresponds to is the
+   search-enabled arm, and the search-suppressed arm is its control.
+   The crossing also yields two derived controls for free: a
+   citation-eliciting prompt on the suppressed arm measures
+   citations-from-memory (hallucinated-citation floor), and the
+   negative-control prompt on the enabled arm measures grounded
+   confabulation.
 
 The protocol's internal rules, each load-bearing:
 
@@ -125,7 +133,11 @@ The protocol's internal rules, each load-bearing:
   judgment, since which model is the widely-served default tier is a
   product-side fact no API reports), and a staleness guard flagging when
   the panel's default-tier verification has aged past its window.
-  Scheduling begins after the protocol survives manual prototype runs.
+  Because a parametric arm is frozen per model snapshot, one parametric
+  measurement pairs validly with every retrieval run of the same
+  snapshot — the A/B delta does not require the two arms to share a
+  calendar. Scheduling begins after the protocol survives manual
+  prototype runs.
 - **Public log.** The probe data is published under a public-domain
   dedication beside the traffic log, in the same append-only time-series
   form, consistent with the openness axis of the thesis.

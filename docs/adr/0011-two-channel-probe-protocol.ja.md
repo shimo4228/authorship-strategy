@@ -63,16 +63,23 @@ parametric memory は一度も形成されていない。これらの設計は�
 1 回の probe run は複数の frontier model (現在 5 provider) に統一
 model-API client を通じて問いかけ、決して混合されない 2 つの設定で行う:
 
-1. **Parametric probe — 検索抑制.** search / grounding tool を一切
-   提供しない。概念とは何か・誰が coined / maintain しているか、または
-   著者について何を知っているかを問う。このチャネルの成功は、モデルが
-   weights のみから概念と著者名を産出することである。これが ADR-0008 の
-   要求した retrieval-suppressed naming probe にあたる。
+1. **Parametric arm — 検索抑制.** search / grounding tool を一切
+   提供しない。この arm の成功は、モデルが weights のみから概念と著者名を
+   産出することである。これが ADR-0008 の要求した retrieval-suppressed
+   naming probe にあたる。
 
-2. **Retrieval probe — 検索有効.** provider の server-side search tool を
-   有効にする。プログラムの主題に関するソースを、URL **と著者名** を
-   明示的に要求して問う。これにより ghost citation——owned identifier が
-   引用されながら著者が無名のまま——が単一の回答の中で観測可能になる。
+2. **Retrieval arm — 検索有効.** provider の server-side search tool を
+   有効にする。prompt は URL **と著者名** を明示的に要求する。これにより
+   ghost citation——owned identifier が引用されながら著者が無名のまま——が
+   単一の回答の中で観測可能になる。
+
+3. **同一 prompt を両 arm で (A/B).** すべての probe は同一の prompt で
+   両設定を走る。質問を固定したまま arm 間の差分が「retrieval が何を
+   足したか」を分離する——実際のユーザー利用の大半に対応するのは検索有効
+   arm であり、検索抑制 arm はその対照群である。この crossing は副産物と
+   して 2 つの対照を無償で与える: 引用誘発 prompt の抑制 arm は記憶からの
+   引用 (hallucinated-citation floor) を測り、negative-control prompt の
+   有効 arm は grounded confabulation を測る。
 
 protocol の内部規則。いずれも load-bearing である:
 
@@ -110,6 +117,9 @@ protocol の内部規則。いずれも load-bearing である:
   採用は人間の判断に残る——どのモデルが広く served される default tier かは
   どの API も報告しない製品側の事実であるため)、そして panel の default-tier
   検証が window を超えて古びたことを flag する staleness guard。
+  parametric arm は model snapshot ごとに凍結されているため、1 回の
+  parametric 測定は同一 snapshot のすべての retrieval run と有効にペアに
+  なる——A/B 差分は両 arm が同じ calendar を共有することを要求しない。
   scheduling は protocol が手動 prototype run を生き延びた後に開始する。
 - **公開 log.** probe データは traffic log の隣に public-domain
   dedication で公開し、同じ append-only 時系列形式を取る。thesis の
