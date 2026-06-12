@@ -42,6 +42,19 @@ model-generation event — a panel model whose training window covers the
 ecosystem's public period — which the protocol's currency check is
 designed to detect.
 
+**Pre-registered expectation** (recorded 2026-06-12, before any such
+model exists): given typical cutoff-to-release lags of three to six
+months and the ecosystem's public window opening ~2026-04, the earliest
+panel generation that *could* show a parametric transition is one
+released from roughly autumn 2026 onward. If a transition occurs, it is
+expected to appear **partially first** — concept recognized without the
+author named (`project_named` without `author_named`, the parametric
+analogue of ghost citation) — because two months of co-occurrence
+density may suffice for concept recognition before name burn-in. A
+transition observed outside these conditions, or a full author-level
+transition appearing without an intermediate stage, would count against
+this reading, not for it.
+
 ### 2. Negative control: clean floor
 
 Twelve calls asking about a plausible nonexistent concept produced zero
