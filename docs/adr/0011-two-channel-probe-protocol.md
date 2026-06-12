@@ -238,9 +238,11 @@ pre-protocol test continuity, a non-Western training corpus, and the
 only open-weight family, to which white-box training-data-attribution
 methods could later apply), with retrieval enabled via each provider's
 server-side search tool (Anthropic/OpenAI web search, Google grounding,
-xAI agent tools, DashScope search); scheduling is the hub's
-existing daily-snapshot automation pattern; the public-domain dedication
-is CC0 1.0. The prototype gate (manual runs with a cost ceiling before
+xAI agent tools, DashScope search); scheduling is local calendar
+automation on the author's workstation (launchd), chosen over the hub's
+CI automation because the probes fetch nothing from the code host,
+hosted cron is best-effort, and the credentials stay local; the
+public-domain dedication is CC0 1.0. The prototype gate (manual runs with a cost ceiling before
 scheduling) follows the harness's prototype-before-scale rule. The open
 question this ADR leaves for the empirical layer — whether
 prose-only naming is too strict a criterion once assistants render

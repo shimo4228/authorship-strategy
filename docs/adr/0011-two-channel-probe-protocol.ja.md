@@ -209,8 +209,10 @@ event として追加 — 2026 年 5 月の pre-protocol test との連続性、
 訓練 corpus、そして panel 唯一の open-weight 系で将来 white-box
 training-data-attribution 手法を適用しうる) で、retrieval は各 provider の
 server-side search tool (Anthropic / OpenAI web search、Google grounding、
-xAI agent tools、DashScope search) で有効化する; scheduling は hub の
-既存 daily-snapshot automation pattern;
+xAI agent tools、DashScope search) で有効化する; scheduling は著者
+workstation 上のローカル calendar 自動化 (launchd) — probe は code host
+から何も取得せず、hosted cron は best-effort であり、credential を
+ローカルに留めるため、hub の CI automation ではなくこちらを選んだ;
 public-domain dedication は CC0 1.0。prototype gate (scheduling 前の
 cost ceiling つき手動 run) は harness の prototype-before-scale rule に
 従う。本 ADR が empirical layer に残す open question——assistant が
