@@ -66,7 +66,7 @@ that it contaminates its own object of measurement.
 
 Operate a **two-channel probe protocol** as the program's primary
 measurement instrument. One probe run interrogates several frontier
-models (currently four providers) through a unified model-API client,
+models (currently five providers) through a unified model-API client,
 on two settings that are never blended:
 
 1. **Parametric probe — search suppressed.** No search or grounding tool
@@ -219,10 +219,14 @@ adapted from the 2604.25707 design.
 
 Specific instances abstracted out of the body: the instrument lives in
 the hub repository's `probes/` directory beside `traffic/`; the unified
-model-API client is litellm; the four providers are Anthropic (Claude),
-OpenAI (GPT), Google (Gemini), and xAI (Grok), with retrieval enabled
-via each provider's server-side search tool (Anthropic/OpenAI web
-search, Google grounding, xAI agent tools); scheduling is the hub's
+model-API client is litellm; the five providers are Anthropic (Claude),
+OpenAI (GPT), Google (Gemini), xAI (Grok), and Alibaba (Qwen via
+DashScope; added 2026-06-12 as the panel's first entry event — May 2026
+pre-protocol test continuity, a non-Western training corpus, and the
+only open-weight family, to which white-box training-data-attribution
+methods could later apply), with retrieval enabled via each provider's
+server-side search tool (Anthropic/OpenAI web search, Google grounding,
+xAI agent tools, DashScope search); scheduling is the hub's
 existing daily-snapshot automation pattern; the public-domain dedication
 is CC0 1.0. The prototype gate (manual runs with a cost ceiling before
 scheduling) follows the harness's prototype-before-scale rule. The open

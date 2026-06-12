@@ -60,7 +60,7 @@ parametric memory は一度も形成されていない。これらの設計は�
 ## Decision
 
 **two-channel probe protocol** をプログラムの主測定器として運用する。
-1 回の probe run は複数の frontier model (現在 4 provider) に統一
+1 回の probe run は複数の frontier model (現在 5 provider) に統一
 model-API client を通じて問いかけ、決して混合されない 2 つの設定で行う:
 
 1. **Parametric probe — 検索抑制.** search / grounding tool を一切
@@ -193,10 +193,14 @@ template は 2604.25707 の設計から適応した。
 
 本文から抽象化した具体 instance: 測定器は hub repository の `probes/`
 directory に `traffic/` の隣として住む; 統一 model-API client は litellm;
-4 provider は Anthropic (Claude)・OpenAI (GPT)・Google (Gemini)・xAI
-(Grok) で、retrieval は各 provider の server-side search tool
-(Anthropic / OpenAI web search、Google grounding、xAI agent tools) で
-有効化する; scheduling は hub の既存 daily-snapshot automation pattern;
+5 provider は Anthropic (Claude)・OpenAI (GPT)・Google (Gemini)・xAI
+(Grok)・Alibaba (Qwen、DashScope 経由; 2026-06-12 に panel 初の参入
+event として追加 — 2026 年 5 月の pre-protocol test との連続性、非西側の
+訓練 corpus、そして panel 唯一の open-weight 系で将来 white-box
+training-data-attribution 手法を適用しうる) で、retrieval は各 provider の
+server-side search tool (Anthropic / OpenAI web search、Google grounding、
+xAI agent tools、DashScope search) で有効化する; scheduling は hub の
+既存 daily-snapshot automation pattern;
 public-domain dedication は CC0 1.0。prototype gate (scheduling 前の
 cost ceiling つき手動 run) は harness の prototype-before-scale rule に
 従う。本 ADR が empirical layer に残す open question——assistant が
