@@ -96,11 +96,21 @@ protocol の内部規則。いずれも load-bearing である:
   lexicon は versioned であり、version は各レコードに付帯する。provider が
   実際に返した model identifier を要求した identifier の隣に記録する。
   測定器のいかなる変更も silent には起きない。
-- **チャネル整合 cadence.** retrieval probe は速い cadence (週次) で走り、
-  retrieval pool の日単位の entry / decay 動態に合わせる。parametric
-  probe は遅く (月次) 走る——訓練サイクルは月単位で動き、遅いチャネルの
-  oversampling はノイズを製造するだけである。scheduling は protocol が
-  手動 prototype run を生き延びた後に開始する。
+- **チャネル整合 scheduling.** retrieval probe は速い calendar cadence
+  (週次) で走り、retrieval pool の日単位の entry / decay 動態に合わせる。
+  parametric probe は calendar 駆動ではなく *event 駆動* である: 凍結された
+  モデルの weights は run 間で変化し得ないため、同一モデルへの再 probe は
+  応答分散しか測らず、parametric の関心信号はモデル世代間にしか住まない。
+  full parametric set はモデルが panel に参入したとき、または変化が観測
+  されたときに発火し、event ごとに少数の反復で within-model 分散を推定する。
+  代わりに calendar に載るのは月次の *currency check* —— 変化 event の
+  3 つの自動検出器である: provider ごとの最小 call で served model identity
+  を前回観測と比較する (非日付 alias の裏での silent swap)、provider
+  catalog の diff で新規公開モデルを浮上させる (検出は自動; panel への
+  採用は人間の判断に残る——どのモデルが広く served される default tier かは
+  どの API も報告しない製品側の事実であるため)、そして panel の default-tier
+  検証が window を超えて古びたことを flag する staleness guard。
+  scheduling は protocol が手動 prototype run を生き延びた後に開始する。
 - **公開 log.** probe データは traffic log の隣に public-domain
   dedication で公開し、同じ append-only 時系列形式を取る。thesis の
   openness 軸と整合する。

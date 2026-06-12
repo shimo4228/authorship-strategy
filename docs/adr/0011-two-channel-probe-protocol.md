@@ -108,12 +108,24 @@ The protocol's internal rules, each load-bearing:
   record, and the model identifier the provider actually served is
   recorded beside the one requested. Nothing about the instrument
   changes silently.
-- **Channel-matched cadence.** The retrieval probe runs on a fast
-  cadence (weekly), matching the days-scale entry and decay dynamics of
-  the retrieval pool. The parametric probe runs slowly (monthly) —
-  training cycles move in months, and oversampling a slow channel only
-  manufactures noise. Scheduling begins after the protocol survives
-  manual prototype runs.
+- **Channel-matched scheduling.** The retrieval probe runs on a fast
+  calendar cadence (weekly), matching the days-scale entry and decay
+  dynamics of the retrieval pool. The parametric probe is
+  *event-driven*, not calendar-driven: a frozen model's weights cannot
+  change between runs, so re-probing the same model measures only
+  response variance, and the parametric signal of interest lives across
+  model generations. The full parametric set fires when a model enters
+  the panel or is observed to have changed, with a small number of
+  repetitions per event to estimate within-model variance. What runs on
+  the calendar instead is a monthly *currency check* — three automated
+  detectors of change events: a minimal call per provider comparing the
+  served model identity against the last observation (silent swaps
+  behind non-dated aliases), a provider-catalog diff surfacing newly
+  published models (detection automated; panel adoption stays a human
+  judgment, since which model is the widely-served default tier is a
+  product-side fact no API reports), and a staleness guard flagging when
+  the panel's default-tier verification has aged past its window.
+  Scheduling begins after the protocol survives manual prototype runs.
 - **Public log.** The probe data is published under a public-domain
   dedication beside the traffic log, in the same append-only time-series
   form, consistent with the openness axis of the thesis.
