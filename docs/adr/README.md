@@ -23,6 +23,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument | **experimental** |
 | [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
 | [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
+| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -135,6 +136,22 @@ substitute priority-claim mechanism, closing the manifesto's open
 question 4. Archival there also opens a second parametric-channel
 ingest surface (code-focused training corpora source from the archive)
 at zero marginal authoring cost.
+
+ADR-0014 is the **implementation-tracking decision**: it is the only
+ADR about *operating* the framework rather than a tactic the framework
+deploys. The program already publishes a dated intervention timeline in
+the empirical layer, but that timeline's conventions (no effect claims,
+the ADR-0012 host abstraction, normative/empirical separation) bar it
+from doubling as a planning surface. So tracking splits into two tiers:
+a private implementation ledger carries operational status, ranked
+candidate interventions, and working detail; the public timeline is its
+dated, effect-claim-free projection. A periodic gap-review compares
+deployed tactics against the Layer 4 catalog and the manifesto's open
+questions to generate the next proposals — a self-application of the
+framework that bears on the open questions about the empirical layer's
+role and the framework's recursive application to itself. The review
+procedure lives in the framework's operational skill; only the wiring
+(which artifacts are this program's ledger and timeline) is project-specific.
 
 ## Format
 

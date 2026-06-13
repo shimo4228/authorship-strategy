@@ -5,6 +5,17 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- ADR-0014: Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review. The one ADR about *operating* the framework over time rather than a tactic it deploys. Implementation tracking splits into a private implementation ledger (operational status, ranked candidate interventions, working detail) and the public intervention timeline (`docs/empirical/implementation-log.md`) as its dated, effect-claim-free projection — never merged, since the timeline's empirical-layer conventions (no effect claims, ADR-0012 host abstraction, normative/empirical separation) bar it from doubling as a planning surface. A periodic gap-review compares deployed tactics against the Layer 4 catalog and the manifesto's open questions to generate the next proposals, each run through the judgment checklist — a self-application of the framework. The generic review procedure lives in the framework's operational skill; only the project-specific wiring lives in the project's context file. ADR count 13 → 14 across all carriers; graph.jsonld gains the ADR-0014 node + Tactics-layer instantiation.
+- `docs/empirical/implementation-log.md`: a "How this log is maintained" note recording that the log is a maintained projection of a private working ledger, curated to dated interventions without operational detail (cross-references ADR-0014).
+
+### Changed
+
+- `docs/empirical/implementation-log.md` intervention dates backfilled from git history: the "pre-baseline" cells in the identifier-federation and AI-facing-ingest sections were replaced with exact author-dates recovered by scanning each ecosystem repository's git history (first-add commit per artifact), the intro reframed around the 2026-04-21 traffic-window boundary, and a "What the deployment order shows" note added (the contemplative-agent / AKC pioneer order supports the extracted-from-operating-the-ecosystem claim, with the hub localization / `.zenodo.json` anomalies recorded honestly).
+
 ## [0.6.0] - 2026-06-13
 
 Records ADR-0013 (the intrinsic content-derived identifier layer that

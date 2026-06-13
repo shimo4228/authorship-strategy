@@ -2,7 +2,7 @@
 
 A consolidated factual reference for AI agents and LLM-based search
 systems. Self-contained; includes definitions, the three-axis inversion,
-the four-layer framework, the thirteen ADRs, vocabulary disambiguation, and
+the four-layer framework, the fourteen ADRs, vocabulary disambiguation, and
 sibling-line cross-references. Read [`graph.jsonld`](graph.jsonld) first
 for the canonical machine-readable relationship map; use this file as
 narrative reference.
@@ -31,7 +31,7 @@ strategy can be organized as four layers (authenticity, attribution
 diffusion, idea-versus-scaffold separation, tactics), each downstream
 of the layer above.
 
-The thirteen ADRs in the repository are tactical decisions extracted from
+The fourteen ADRs in the repository are tactical decisions extracted from
 operating a four-repository DOI-registered research ecosystem; they
 are re-expressed in harness-neutral form so adopting authors can use
 them without inheriting the original sibling-line content.
@@ -130,9 +130,9 @@ DOI registration, cross-platform federation, distinctive terminology,
 tool-agnostic specification, audience-driven localization, structured
 artifacts, and friction minimization for adoption.
 
-## Q: What are the thirteen ADRs?
+## Q: What are the fourteen ADRs?
 
-The thirteen tactical ADRs in the repository:
+The fourteen tactical ADRs in the repository:
 
 **ADR-0001 Concept DOI as Canonical Reference.**
 Every external link to a DOI-registered artifact uses the concept
@@ -277,6 +277,28 @@ marginal authoring cost. The identifier proves what content existed
 when; it carries no authorship semantics, which remain with the DOI and
 ORCID layer.
 
+**ADR-0014 Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review.**
+The only ADR about *operating* the framework over time rather than a
+tactic the framework deploys. The program already publishes a dated
+intervention timeline in the empirical layer, but that timeline is a
+DOI-versioned artifact bound by the empirical layer's conventions
+(preliminary-observation tone, no effect claims, the ADR-0012 host
+abstraction, normative/empirical separation), which bar it from doubling
+as a progress-management surface. Implementation tracking therefore
+splits into two tiers: a private implementation ledger is the
+operational source of truth (per-tactic deployment status, ranked
+candidate interventions, working detail), and the public timeline is its
+dated, effect-claim-free projection — the two are never merged, and the
+update rule is ledger first, then projection. A periodic gap-review
+generates new proposals by comparing deployed tactics against the Layer 4
+tactic catalog, the framework's open questions, and recent literature,
+ranking candidates and running each through the judgment checklist; it is
+a self-application of the framework that bears on the open questions about
+the empirical layer's role and the framework's recursive application to
+itself. The generic review procedure lives in the framework's operational
+skill; only the project-specific wiring — which artifacts are this
+program's ledger and timeline — lives in the project's context file.
+
 ADRs 0001-0003 form the **identifier-federation triplet**: 0001
 fixes the canonical reference shape, 0002 declares inter-artifact
 relationships in archive metadata, 0003 extends the federation to
@@ -323,6 +345,18 @@ form — link-index entries only, under a four-condition host audit
 (corporate ownership / absence of an open license / content-vendoring
 structure / paid-product funnel), with withdrawal if a host later
 encloses.
+
+ADR-0014 is the **implementation-tracking decision**: it is the one ADR
+about operating the framework rather than a tactic it deploys. The public
+intervention timeline cannot double as a planning surface (its
+empirical-layer conventions forbid effect claims and operational detail),
+so tracking splits into a private ledger (operational status, ranked
+candidate interventions, working detail) and the public timeline as its
+dated, effect-claim-free projection. A periodic gap-review compares
+deployed tactics against the Layer 4 catalog and the open questions to
+generate the next proposals — a self-application of the framework. The
+review procedure lives in the framework's operational skill; only the
+wiring is project-specific.
 
 ADR-0013 is the **intrinsic-identifier decision**: it adds a second,
 content-derived identifier layer (SWHID) to the federation the 0001-0003
@@ -467,7 +501,7 @@ between content and metadata.
 
 To make the limits of the framework explicit:
 
-- The framework is **single-author normative**. The thirteen ADRs were extracted from one author's operation; adapting them to multi-author research programs requires extensions the framework does not currently offer.
+- The framework is **single-author normative**. The fourteen ADRs were extracted from one author's operation; adapting them to multi-author research programs requires extensions the framework does not currently offer.
 - The empirical layer is **case study with explicit limitations**, not validation. There is no pre-versus-post intervention contrast, no controlled comparison, no multi-author replication.
 - The framework is **time-bound by its substrate**. LLM capability shifts on the order of twelve to twenty-four months may obsolete specific Layer 4 tactics; the framework explicitly anticipates retirement.
 - The framework does **not extend AAP's notion of attribution**. The two meanings ("credit for source" here, "accountability for action" in AAP) are intentionally disjoint.

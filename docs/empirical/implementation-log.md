@@ -129,6 +129,19 @@ successes only.
   non-primary audience and as inconsistent with the metric-rejection
   decision (ADR-0007).
 
+## How this log is maintained
+
+This log is a maintained projection, not a one-time snapshot. As a new
+diffusion intervention is deployed it is appended here with its date; the
+entries are curated to *dated interventions* and deliberately exclude the
+program's operational working detail (ranked next-step proposals,
+pending-request state, the host-level reasoning ADR-0012 abstracts away).
+That working detail lives in a separate private ledger; this file is the
+public, effect-claim-free face of it. The separation keeps this record in
+its empirical-layer role — an intervention timeline, not a planning
+scratchpad — while still growing as the program acts. The decision to
+maintain the two layers this way is recorded in ADR-0014.
+
 ## A note on recursion
 
 Publishing a log of one's own diffusion interventions, under a framework

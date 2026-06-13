@@ -1,6 +1,6 @@
 # authorship-strategy
 
-A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and thirteen tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
+A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and fourteen tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
 
 > Project name: **authorship-strategy** (2026-05-18 確定)。repo directory・GitHub URL ともに `authorship-strategy` で統一。skill 名 (`~/.claude/skills/authorship-strategy/`) と rule 名 (`~/.claude/rules/common/authorship-strategy.md`) と完全一致。
 
@@ -96,6 +96,17 @@ ADR は project / harness 固有の識別子、特定 vendor 製品名、特定 
   - 3 LLM (ChatGPT/Qwen/Gemini) 単発検証、re-run なし
 
 これらの limitations は ADR-001 (Empirical Method) に formal に記録する (将来 ADR、v0.1 では README + empirical/README.md のみ)。
+
+## Diffusion implementation tracking
+
+本 program 自身の diffusion 戦略の実施状況を二層で管理する (方法論は ADR-0014、手順は `authorship-strategy` skill の "Operating the strategy over time")。本節は **配線 (どのファイルが何の役割か) のみ** を定義する。手順は skill 側を正本とする。
+
+- **Implementation ledger (operational source of truth)**: project memory の `diffusion-channel-status.md`。deploy 済み / 進行中 / 未着手 / scope 外の status、ランク付き candidate interventions、運用詳細 (rate limit / host 名 / pending な依頼) を保持する private な作業台帳。
+- **Public projection**: [`docs/empirical/implementation-log.md`](docs/empirical/implementation-log.md)。ledger から **日付付き介入だけ** を投影する。効果主張なし、運用詳細は ADR-0012 水準で抽象化、英語のみ (empirical 層慣例)。host 名・雇用制約理由・rate limit 等は投影しない。
+
+**Update rule**: diffusion 介入が deploy されたら、まず ledger を更新し、次に public projection に日付行を追加する (この順)。ledger と projection を混ぜない。
+
+**Review trigger**: 「次の一手」を求められたとき、または diffusion 実施が一段落したときは、skill の "Operating the strategy over time" の Review procedure を回す — ledger status を読み、deployed tactics を Layer 4 catalog・manifesto open questions ([`docs/manifesto.md`](docs/manifesto.md))・最新文献 (research wiki / search) に対して gap-analyze し、ランク付き candidate を起こし、各を判断チェックリストに通し、ledger の候補セクションに記録して提示する。
 
 ## HF Datasets mirror
 

@@ -23,6 +23,7 @@ top-down に prescribe されたものではない。
 | [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る | **experimental** |
 | [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
 | [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
+| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger と定期 gap-review による実装トラッキング | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -122,6 +123,20 @@ substitute priority-claim mechanism として指定し、manifesto の open
 question 4 を閉じる。同 archive への保存は、追加の執筆コストゼロで
 第二の parametric-channel ingest surface (code 系 training corpora が
 archive を source とする) も開く。
+
+ADR-0014 は **implementation-tracking decision** である: framework が
+deploy する tactic ではなく、framework を *運用* することについての唯一の
+ADR である。program は既に empirical 層で日付付き intervention timeline を
+公開しているが、その timeline の規約 (効果主張なし、ADR-0012 の host 抽象化、
+normative/empirical 分離) は、それを planning 面として兼用することを禁じる。
+そこでトラッキングを二層に分ける: private な implementation ledger が運用
+status・ランク付き candidate intervention・作業詳細を持ち、public timeline は
+その日付付き・効果主張なしの投影となる。定期 gap-review が deploy 済み tactic
+を Layer 4 catalog と manifesto の open questions に突き合わせて次の提案を生む
+—— empirical 層の役割と framework の自己再帰的適用についての open question に
+関わる self-application である。review 手順は framework の operational skill に
+置き、配線 (どの artifact が本 program の ledger と timeline か) だけが
+project 固有である。
 
 ## Format
 
