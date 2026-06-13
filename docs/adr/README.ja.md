@@ -22,6 +22,7 @@ top-down に prescribe されたものではない。
 | [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
 | [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る | **experimental** |
 | [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
+| [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -105,6 +106,22 @@ surface 上での artifact の形を規定するのに対し、ADR-0012 はど�
 surface に、どの形で artifact が現れてよいかを統治する: vendor された
 copy は host の後の enclosure に捕獲される drift vector であり、link は
 canonical source を host の支配の外に保つ。
+
+ADR-0013 は **intrinsic-identifier decision** である: 0001-0003 triplet が
+DOI を中心に構築した federation に、第二の content-derived identifier 層
+—— SWHID (ISO/IEC 18670) —— を追加する。DOI は extrinsic である:
+registry によって metadata record に束縛された opaque な名前であり、
+カバーする content に対して検証できず、registry の存続に依存する。
+intrinsic 層はその補完である —— artifact とその history から計算され、
+いかなる registry もなしに検証可能で、1 行までの粒度を持つ —— ゆえに
+各層は他方の failure mode をカバーする。以後すべての release は
+content-addressed な公的 software archive への明示的な archival request
+も trigger し、その snapshot identifier を DOI と並べて記録する。DOI
+登録が impractical な artifact genre には intrinsic identifier を
+substitute priority-claim mechanism として指定し、manifesto の open
+question 4 を閉じる。同 archive への保存は、追加の執筆コストゼロで
+第二の parametric-channel ingest surface (code 系 training corpora が
+archive を source とする) も開く。
 
 ## Format
 

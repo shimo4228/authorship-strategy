@@ -10,7 +10,7 @@ If your readers include LLMs — as training data, as in-context consultants,
 as the discovery layer other researchers consult — then the strategies that
 protect authorship have inverted. Closing your work off *reduces*, not
 increases, the chance that a future trace lands on you. This repository
-records the inverted strategy: what it is, why it holds, and twelve tactical
+records the inverted strategy: what it is, why it holds, and thirteen tactical
 decisions extracted from operating a four-repository DOI-registered research
 ecosystem.
 
@@ -57,7 +57,7 @@ operational implications form the four-layer framework, also in the
 thesis document. The framework's open questions are catalogued in
 [`docs/manifesto.md`](docs/manifesto.md).
 
-## The twelve tactical ADRs
+## The thirteen tactical ADRs
 
 | ADR | Decision |
 |-----|----------|
@@ -73,8 +73,9 @@ thesis document. The framework's open questions are catalogued in
 | [0010](docs/adr/0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely — a coined term's power comes from its edge density, not from the count of coinages. A term is coined only when three conditions all hold (join-novelty, definitional anchoring, uncontested namespace); every retained coinage is anchored densely to existing vocabulary and prior literature; everything else is said in existing vocabulary with the upstream source cited |
 | [0011](docs/adr/0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (**experimental**) — probes frontier models with search suppressed (does the trained model name the concept and its author?) and search enabled (are owned identifiers cited, and does the author's name survive in prose?), making ghost citation a measured rate; detection is deterministic string matching over retained raw responses, with a negative control quantifying the confabulation floor |
 | [0012](docs/adr/0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections — diffusion via external curated collections uses link-index entries only (the canonical artifact stays in the author's repository); every prospective host passes a four-condition audit (corporate ownership / absence of an open license / content-vendoring structure / paid-product funnel), and a host that later encloses triggers withdrawal |
+| [0013](docs/adr/0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer — adds SWHID (ISO/IEC 18670), computed from the artifact and its history and verifiable without any registry, alongside the extrinsic DOI; each layer covers the other's failure mode. Every release triggers explicit archival in a content-addressed public software archive; for DOI-impractical genres the intrinsic identifier is the designated substitute priority-claim mechanism, closing manifesto open question 4 |
 
-The twelve ADRs are not deduced from a framework; they were extracted from
+The thirteen ADRs are not deduced from a framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form
 so that another author can adopt the same decisions without inheriting
 the original implementation details. See [`docs/adr/README.md`](docs/adr/README.md)
@@ -119,7 +120,7 @@ The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4
 ## How to read this repository
 
 Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then
-the twelve ADRs in order. Two paths need a non-obvious entry point:
+the thirteen ADRs in order. Two paths need a non-obvious entry point:
 
 - **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
 - **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.

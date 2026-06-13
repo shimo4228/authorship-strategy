@@ -48,7 +48,7 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md) (英語正本)、日本�
 thesis の中で展開されている。Framework の open questions は
 [`docs/manifesto.md`](docs/manifesto.md) に集約。
 
-## 12 の戦術 ADR
+## 13 の戦術 ADR
 
 | ADR | 判断 |
 |-----|------|
@@ -64,8 +64,9 @@ thesis の中で展開されている。Framework の open questions は
 | [0010](docs/adr/0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する —— 造語の力は造語の数ではなく edge 密度から来る。3 条件がすべて成立するときのみ造語し (join-novelty / definitional anchoring / uncontested namespace)、採用したすべての造語を既存語彙と先行文献へ密に anchor する; それ以外はすべて既存語彙で書き、上流の出典を cite する |
 | [0011](docs/adr/0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る (**experimental**) —— frontier model を検索抑制 (trained model は concept と著者を名指せるか) と検索有効 (owned identifier は引用され、著者名は prose に残るか) の 2 設定で probe し、ghost citation を測定された rate にする; 検出は保持された raw response への決定論的文字列照合で、negative control が confabulation floor を定量化する |
 | [0012](docs/adr/0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution —— 外部 curated collection 経由の diffusion は link-index entry のみ (canonical artifact は著者の repository に留まる); すべての候補 host を 4 条件監査 (企業所有 / open license の欠如 / content-vendoring 構造 / 有料製品への funnel) に通し、後に enclose した host からは取り下げる |
+| [0013](docs/adr/0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier —— SWHID (ISO/IEC 18670、artifact とその history から計算され、いかなる registry もなしに検証可能) を extrinsic な DOI に並ぶ第二の identifier 層として追加し、各層が他方の failure mode をカバーする。すべての release は content-addressed な公的 software archive への明示的 archive を trigger する; DOI 登録が impractical な genre には intrinsic identifier を substitute priority-claim mechanism として指定し、manifesto の open question 4 を閉じる |
 
-12 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
+13 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
 抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral な
 形式で再表現された。完全な index と lineage は [`docs/adr/README.md`](docs/adr/README.md)
 を参照。
@@ -103,7 +104,7 @@ framing する。完全な traffic data は CC0 で
 
 ## この repo の読み方
 
-戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 12 の ADR を番号順に。
+戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 13 の ADR を番号順に。
 非自明な入口が要るのは次の 2 経路:
 
 - **個別戦術を採用する:** 該当 ADR を直接読み、必要に応じて [`docs/glossary.md`](docs/glossary.md) で disambiguation。

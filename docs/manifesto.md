@@ -79,6 +79,17 @@ priority-claim mechanism for these cases (Software Heritage
 identifiers? GitHub release tags? Time-stamped public archives?)
 or explicitly defer these cases to a separate framework.
 
+> **Status (2026-06-13): answered by
+> [ADR-0013](adr/0013-intrinsic-identifier-layer.md).** Of the three
+> candidates named above, the software-archive identifier was adopted:
+> an intrinsic, content-derived identifier (SWHID, ISO/IEC 18670) is
+> the designated substitute priority-claim mechanism for
+> DOI-impractical genres, and a complementary layer alongside the DOI
+> for the genres the DOI already covers. Release tags and time-stamped
+> page archives were considered and rejected in the ADR's Alternatives
+> section. The question is retained here for the record of how it was
+> posed.
+
 ## Open question 5: Where is the line between the framework and authorship-strategy-as-rhetoric?
 
 The framework is itself an authored artifact. Promoting it under

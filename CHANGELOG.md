@@ -5,6 +5,25 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-06-13
+
+Records ADR-0013 (the intrinsic content-derived identifier layer that
+complements the extrinsic DOI and closes manifesto open question 4) and
+the empirical layer's implementation log — an intervention timeline
+timestamping which diffusion tactics were deployed on the ecosystem and
+when, the methods companion the *no pre-versus-post intervention
+comparison* limitation calls for.
+
+### Added
+
+- ADR-0013: Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer. Adds an intrinsic identifier layer — SWHID (ISO/IEC 18670), computed from the artifact and its version history, verifiable without consulting any registry, granular down to a single line — complementing the extrinsic DOI layer; each layer covers the other's failure mode. Every release now triggers an explicit archival request to a content-addressed public software archive, with the snapshot identifier recorded alongside the DOI in citation metadata; for DOI-impractical artifact genres the intrinsic identifier is the designated substitute priority-claim mechanism. Closes manifesto open question 4 (a status note in the manifesto records the resolution). Lineage: the 2026-06-13 diffusion-channel review and the same-day bulk archival of all 36 public repositories of the program. graph.jsonld gains the ADR-0013 node (`extends` ADR-0003) and its Tactics-layer instantiation.
+- `docs/empirical/implementation-log.md`: an intervention timeline recording which of the framework's tactics were deployed on the author's own ecosystem and when, grouped by the layer each operationalizes. It is the methods companion the *no pre-versus-post intervention comparison* limitation requires — supplying the intervention dates a future contrast would need — makes no effect claim, and states the recursive-self-application concern (manifesto open question 5) rather than hiding it. English-only, per the empirical layer convention.
+
+### Changed
+
+- ADR-count surfaces updated from twelve to thirteen across all carriers (root README en/ja, llms.txt, llms-full.txt, CLAUDE.md, CODEMAPS; `docs/adr/README` en/ja extended with the intrinsic-identifier-decision paragraph). llms-full.txt gains the full ADR-0013 entry, the cluster-narrative sentence, the implementation-log mention in the empirical answer, and the "answered by ADR-0013" note on manifesto open question 4.
+- `docs/empirical/README.md` "What the layer contains" gains the implementation-log entry; CODEMAPS document-role index gains the implementation-log row and notes the empirical layer's English-only convention.
+
 ## [0.5.0] - 2026-06-13
 
 Records two ADRs since v0.4.0 — ADR-0011 (the two-channel probe

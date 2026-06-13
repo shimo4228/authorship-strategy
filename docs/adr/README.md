@@ -22,6 +22,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
 | [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument | **experimental** |
 | [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
+| [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -117,6 +118,23 @@ surface, ADR-0012 governs which *external* surfaces the artifact may
 appear on, and in what form: vendored copies are drift vectors that a
 host's later enclosure captures; a link leaves the canonical source
 outside the host's control.
+
+ADR-0013 is the **intrinsic-identifier decision**: it adds a second,
+content-derived identifier layer — SWHID (ISO/IEC 18670) — to the
+federation the 0001-0003 triplet built around the DOI. A DOI is
+extrinsic: an opaque name bound to a metadata record by a registry,
+unverifiable against the content it covers and dependent on the
+registry's survival. The intrinsic layer is its complement — computed
+from the artifact and its history, verifiable without any registry,
+granular down to a single line — so each layer covers the other's
+failure mode. Every release now also triggers an explicit archival
+request to a content-addressed public software archive, whose snapshot
+identifier is recorded alongside the DOI; for artifact genres where DOI
+registration is impractical, the intrinsic identifier is the designated
+substitute priority-claim mechanism, closing the manifesto's open
+question 4. Archival there also opens a second parametric-channel
+ingest surface (code-focused training corpora source from the archive)
+at zero marginal authoring cost.
 
 ## Format
 

@@ -255,7 +255,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0009",
         "https://github.com/shimo4228/authorship-strategy#adr/0010",
         "https://github.com/shimo4228/authorship-strategy#adr/0011",
-        "https://github.com/shimo4228/authorship-strategy#adr/0012"
+        "https://github.com/shimo4228/authorship-strategy#adr/0012",
+        "https://github.com/shimo4228/authorship-strategy#adr/0013"
       ]
     },
 
@@ -510,6 +511,15 @@
       "name": "ADR-0012: Link-Index Contributions to External Collections",
       "description": "Applies the thesis's enclosure axis to channel selection for external curated collections (community-curated link directories, skill marketplaces, dataset registries). Contributions are link-index entries only: the canonical artifact stays in the author's repository while the host carries a hyperlink and a short factual description; vendor-type contributions, where the host would carry the artifact body in its own distribution, are declined by default. Every prospective host passes a four-condition pre-submission audit — corporate ownership, absence of an open license, content-vendoring structure, operation as a paid-product funnel — with risk rising as conditions combine and a host meeting all four excluded even for link-only entries; a listed host that later introduces paid tiers or content vendoring triggers withdrawal. Grounded in two 2026 withdrawal episodes whose shared pattern is that vendored content is captured by any subsequent enclosure the host introduces, while a link entry bounds the worst case to a one-line description inside the enclosing host.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0012-link-index-channel-selection.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0013",
+      "@type": "ADR",
+      "name": "ADR-0013: Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer",
+      "description": "Adds an intrinsic, content-derived identifier layer — SWHID (ISO/IEC 18670) — to the identifier federation, complementing the DOI layer rather than replacing it. A DOI is extrinsic: an opaque name bound to a metadata record by a registry, unverifiable against the artifact's content and dependent on the registry's survival; SWHID is computed from the artifact and its version-history graph, verifiable by anyone holding the content without consulting any registry, at granularities from a repository snapshot down to a single line. Division of labor: the DOI carries citability, rich metadata, and registry-mediated scholarly discovery; the intrinsic identifier carries content-verifiable, registry-independent existence proof — each covers the other's failure mode. Every release triggers an explicit archival request to a content-addressed public software archive, whose snapshot identifier is recorded alongside the DOI in citation metadata; for artifact genres where DOI registration is impractical, the intrinsic identifier is the designated substitute priority-claim mechanism, closing the manifesto's open question 4. Archival also opens a second parametric-channel ingest surface (code-focused LLM training corpora source directly from the archive) at zero marginal authoring cost. The identifier proves what content existed when — it carries no authorship semantics, which remain with the DOI / ORCID layer.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0013-intrinsic-identifier-layer.md",
+      "extends": "https://github.com/shimo4228/authorship-strategy#adr/0003"
     },
 
     {
