@@ -26,29 +26,33 @@ when.
 ## Intervention timeline
 
 Interventions are grouped by the layer of the framework they
-operationalize. "Pre-baseline" means the intervention was already in
-place before the v0.1.0 traffic window opened (2026-04-21); precise
-deployment dates for those predate systematic logging and are recorded
-only as *pre-baseline*.
+operationalize. Dates are exact author-dates recovered from each
+repository's version control by scanning its git history for the first
+commit that added the relevant artifact; where a tactic rolled out
+across several repositories, the cell gives the first deployment and the
+rollout span. An intervention dated before **2026-04-21** predates the
+v0.1.0 traffic window, so the traffic baseline observes it only in
+steady state; an intervention dated on or after that day is a candidate
+for a future pre-versus-post contrast.
 
 ### Identifier federation (ADRs 0001–0004, 0013)
 
 | Intervention | Date | Recorded in |
 |---|---|---|
-| Concept-DOI registration across the ecosystem's research lines, papers, and datasets | pre-baseline → ongoing per release | ADR-0001, CITATION.cff |
-| `.zenodo.json` `relatedIdentifiers` federation between sibling deposits | pre-baseline → ongoing | ADR-0002 |
-| Cross-platform dataset mirroring (Git host + DOI archive + dataset platform) | pre-baseline | ADR-0003 |
-| ORCID record, auto-update disabled, concept-DOI enrichment only | pre-baseline | ADR-0004 |
+| Concept-DOI registration across the ecosystem's research lines, papers, and datasets | first release tag 2026-03-21 (contemplative-agent v0.2.0); rolled out per repository through 2026-06-05, ongoing per release; the hub carries no release tag by design | ADR-0001, CITATION.cff |
+| `.zenodo.json` `relatedIdentifiers` federation between sibling deposits | first deployed 2026-05-17 (agent-knowledge-cycle, contemplative-agent, agent-attribution-practice together); rolled out through 2026-06-05; the hub carries no `.zenodo.json` by design | ADR-0002 |
+| Cross-platform dataset mirroring (Git host + DOI archive + dataset platform) | first dataset-platform reference 2026-03-21 (contemplative-agent); rolled out through 2026-06-05 | ADR-0003 |
+| ORCID record, auto-update disabled, concept-DOI enrichment only | first deployed 2026-03-24 (agent-knowledge-cycle and contemplative-agent, with CITATION.cff); rolled out through 2026-06-10 (hub) | ADR-0004 |
 | Software Heritage archival of all public repositories; SWHID recorded as the intrinsic identifier layer | 2026-06-13 | ADR-0013 |
 
 ### AI-facing ingest (ADRs 0006, 0009)
 
 | Intervention | Date | Recorded in |
 |---|---|---|
-| `llms.txt` / `llms-full.txt` navigator pair on every governed repository | pre-baseline | ADR-0006 |
-| `graph.jsonld` concept-level knowledge graph alongside the navigator | pre-baseline | ADR-0006, ADR-0009 |
-| Dual-entry rebalance (graph as the citation lever; navigator rescoped) | pre-baseline | ADR-0009 |
-| Cross-platform dataset-mirror of the graph for training-pipeline ingest | pre-baseline | ADR-0003 |
+| `llms.txt` / `llms-full.txt` navigator pair on every governed repository | first deployed 2026-04-09 (agent-knowledge-cycle and contemplative-agent, `llms.txt`; `llms-full.txt` followed 2026-04-19); rolled out through 2026-06-05 | ADR-0006 |
+| `graph.jsonld` concept-level knowledge graph alongside the navigator | first deployed 2026-05-15 (agent-knowledge-cycle, contemplative-agent, agent-attribution-practice, and the hub together); rolled out through 2026-06-05 | ADR-0006, ADR-0009 |
+| Dual-entry rebalance (graph as the citation lever; navigator rescoped) | 2026-05-30 (ADR-0009 authored, amending the ADR-0006 pairing on 2026 measurement) | ADR-0009 |
+| Cross-platform dataset-mirror of the graph for training-pipeline ingest | follows the graph deployment, 2026-05-15 onward (see the dataset-mirroring row above) | ADR-0003 |
 
 ### Citation graph and scholarly surface (ADRs 0002, 0008)
 
@@ -56,7 +60,7 @@ only as *pre-baseline*.
 |---|---|---|
 | Wikidata items for the author, repositories, and papers | 2026-06-07 | — |
 | Wikidata `cites work` (P2860) edges from papers and repositories to their cited sources | 2026-06-12 | citation-graph federation tactic |
-| Wikidata `Software Heritage ID` (P6138) on archived repository items | 2026-06-13 (partial — repositories still archiving are pending) | ADR-0013 |
+| Wikidata `Software Heritage ID` (P6138) on software-typed repository items | 2026-06-13 (dataset and scholarly-article items carry the SWHID in their own `CITATION.cff` instead, the property being software-typed) | ADR-0013 |
 | Preprint cross-posting of the papers to a scholarly preprint server | 2026 (not individually dated) | — |
 | Author-profile disambiguation request on a bibliographic-graph service | 2026-06 (pending) | — |
 | Inclusion of all ecosystem records in an author-curated archive community | 2026-06-13 | — |
@@ -76,6 +80,32 @@ the abstraction level ADR-0012 sets; this log does not re-expose them.
 | Intervention | Date | Recorded in |
 |---|---|---|
 | First run of the two-channel probe protocol (parametric zero baseline, negative-control floor, first retrieval observations) | 2026-06-12 | ADR-0011, probe-baseline-2026-06.md |
+
+## What the deployment order shows
+
+The version-control dates carry a pattern worth recording, because the
+framework claims its tactics were *extracted from operating the
+ecosystem* rather than designed top-down. The two oldest agent-design
+lines carry the earliest deployment of nearly every tactic:
+contemplative-agent (initialized 2026-03-08) holds the first release tag
+and the first dataset-platform mirror (both 2026-03-21) and — tied with
+agent-knowledge-cycle (initialized 2026-03-24) — the first
+`CITATION.cff` / ORCID record (2026-03-24) and the first navigator pair
+(2026-04-09). The later repositories inherit a fully-formed artifact set
+deployed in a single initial commit: authorship-strategy, doctrine-corpus,
+and existence-proof each ship `llms.txt`, `graph.jsonld`, `.zenodo.json`,
+and `CITATION.cff` together on day one. The compression — from a rollout
+staggered over weeks in the pioneer line to a same-day rollout in the
+later ones — is the discipline hardening into a template.
+
+Two caveats keep this from reading as a clean design narrative. README
+localization is dated earliest of all (2026-02-14), but that instance is
+the federation hub, where a Japanese README existed from day one as a
+default rather than as a deliberate diffusion tactic. And the hub is the
+one repository with no `.zenodo.json` and the last `CITATION.cff`
+(2026-06-10) — a structural outlier rather than a pioneer despite being
+the oldest repository. As with every entry here, this is an observation
+about deployment order, not a claim about effect.
 
 ## Not yet done
 
