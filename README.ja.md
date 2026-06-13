@@ -10,7 +10,7 @@ Language: [English](README.md) | 日本語
 他の研究者が参照する discovery layer として —— 著者性を守る戦略は反転している。
 作品を閉じ込めることは、未来の trace が自分に辿り着く確率を増やすのではなく *減らす*。
 この repo は反転した戦略を記録する: それが何で、なぜ成り立ち、それを運用する中で
-抽出された 10 の戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
+抽出された 12 の戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
 
 フレームワークは 20 世紀的 authorship strategy の 3 軸反転
 （scarcity → diffusion / exclusivity → derivation / enclosure → openness）と、
@@ -48,7 +48,7 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md) (英語正本)、日本�
 thesis の中で展開されている。Framework の open questions は
 [`docs/manifesto.md`](docs/manifesto.md) に集約。
 
-## 10 の戦術 ADR
+## 12 の戦術 ADR
 
 | ADR | 判断 |
 |-----|------|
@@ -62,8 +62,10 @@ thesis の中で展開されている。Framework の open questions は
 | [0008](docs/adr/0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion —— 2 チャネル・2 時定数 —— 「モデルが artifact を ingest する」は時定数もレバーも正反対の 2 機構に分かれる: parametric channel（訓練時に重みへ吸収、遅い、クロスプラットフォームの語彙共起が駆動）と retrieval channel（クエリ時に fetch、速い、新鮮さと構造が駆動）。別々に最適化・測定し、retrieval だけを追う failure mode が ghost citation |
 | [0009](docs/adr/0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric —— ADR-0006 を amend: 2026 年の測定は 2 つの entry point が co-equal でないことを示す。structured graph が検索時 citation を担い、prose navigator の citation 効果は noise。pair は retain しつつ非対称にし、navigator を AI-search citation lever でなく Business-to-Agent (B2A) context surface に rescope |
 | [0010](docs/adr/0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する —— 造語の力は造語の数ではなく edge 密度から来る。3 条件がすべて成立するときのみ造語し (join-novelty / definitional anchoring / uncontested namespace)、採用したすべての造語を既存語彙と先行文献へ密に anchor する; それ以外はすべて既存語彙で書き、上流の出典を cite する |
+| [0011](docs/adr/0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る (**experimental**) —— frontier model を検索抑制 (trained model は concept と著者を名指せるか) と検索有効 (owned identifier は引用され、著者名は prose に残るか) の 2 設定で probe し、ghost citation を測定された rate にする; 検出は保持された raw response への決定論的文字列照合で、negative control が confabulation floor を定量化する |
+| [0012](docs/adr/0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution —— 外部 curated collection 経由の diffusion は link-index entry のみ (canonical artifact は著者の repository に留まる); すべての候補 host を 4 条件監査 (企業所有 / open license の欠如 / content-vendoring 構造 / 有料製品への funnel) に通し、後に enclose した host からは取り下げる |
 
-10 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
+12 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
 抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral な
 形式で再表現された。完全な index と lineage は [`docs/adr/README.md`](docs/adr/README.md)
 を参照。
@@ -101,7 +103,7 @@ framing する。完全な traffic data は CC0 で
 
 ## この repo の読み方
 
-戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 10 の ADR を番号順に。
+戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 12 の ADR を番号順に。
 非自明な入口が要るのは次の 2 経路:
 
 - **個別戦術を採用する:** 該当 ADR を直接読み、必要に応じて [`docs/glossary.md`](docs/glossary.md) で disambiguation。

@@ -5,19 +5,26 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.5.0] - 2026-06-13
+
+Records two ADRs since v0.4.0 — ADR-0011 (the two-channel probe
+protocol, the measurement instrument ADR-0008 demanded) and ADR-0012
+(link-index channel selection, the enclosure axis applied to external
+listings) — plus the first ADR-0011 protocol run as the empirical
+layer's probe baseline.
 
 ### Added
 
+- ADR-0012: Link-Index Contributions to External Collections. Applies the thesis's enclosure axis to channel selection for external curated collections (community-curated link directories, skill marketplaces, dataset registries). Contributions are link-index entries only — the canonical artifact stays in the author's repository while the host carries a hyperlink plus a short factual description; vendor-type contributions are declined by default. Every prospective host passes a four-condition pre-submission audit (corporate ownership / absence of an open license / content-vendoring structure / paid-product funnel); a host meeting all four is excluded even for link-only entries, and a listed host that later introduces paid tiers or content vendoring triggers withdrawal. Grounded in two 2026 withdrawal episodes whose shared pattern — vendored content is captured by any subsequent enclosure the host introduces — instantiates the enclosure axis at the channel-selection level. graph.jsonld gains the ADR-0012 node and its Tactics-layer instantiation.
 - ADR-0011: Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (**experimental**). Builds the measurement instrument ADR-0008's Consequences demanded: a scheduled two-channel probe protocol interrogating frontier models with search suppressed (retrieval-suppressed naming probe, parametric channel) and search enabled (citation probe, retrieval channel — making ghost citation observable within a single answer as an owned identifier cited while the author goes unnamed in prose). Detection is deterministic string matching against a versioned lexicon over retained raw responses, never model judging; prompts are fixed single-variable templates with a negative control quantifying the confabulation noise floor; every change to prompts, models, or lexicon is a visible series break; the retrieval channel runs on a fast calendar cadence while the parametric channel is event-driven on model-generation changes (a monthly currency check — silent-swap detection, provider-catalog diff, staleness guard — replaces calendar re-probing of frozen weights); channels are never blended. The public probe log feeds the parametric channel it measures — recorded as a stated confound and an on-thesis act of diffusion. The instrument itself lives in the federation hub beside the traffic log (see Lineage).
 - `docs/glossary` (en/ja): added a Retrieval-Suppressed Naming Probe entry; extended the Ghost Citation entry (now a measured rate under ADR-0011) and the Two-Channel Attribution Diffusion measurability note (ADR-0011 closes the black-box side of the gap the white-box methods leave open).
 - `graph.jsonld`: ADR-0011 node (`extends` ADR-0008), `retrieval-suppressed-naming-probe` concept (downstream of two-channel-attribution-diffusion, grounded in arXiv:2602.06718 / 2604.25707 / 2603.09296), Tactics-layer instantiation.
 
-- `docs/empirical/probe-baseline-2026-06.md`: first run of the ADR-0011 protocol (2026-06-12, four providers, probe set v1, detector v2). Records the parametric channel's over-determined zero as the pre-intervention baseline the traffic layer lacks, a clean negative-control floor, one full retrieval attribution via owned artifacts (including the AI-facing entry point), citation-selection losses on topical queries elsewhere, and the instrument shakedown notes (echo guard, reasoning-token starvation, endpoint-dependent citation metadata).
+- `docs/empirical/probe-baseline-2026-06.md`: first run of the ADR-0011 protocol (2026-06-12, four providers, probe set v1, detector v2). Records the parametric channel's over-determined zero as the pre-intervention baseline the traffic layer lacks, a clean negative-control floor, one full retrieval attribution via owned artifacts (including the AI-facing entry point), citation-selection losses on topical queries elsewhere, and the instrument shakedown notes (echo guard, reasoning-token starvation, endpoint-dependent citation metadata). Includes a pre-registered expectation (recorded 2026-06-12) for the earliest panel generation that could show a parametric transition and its expected partial-first shape, so a future transition reads as the outcome of a falsifiable prediction rather than a post-hoc reading.
 
 ### Changed
 
-- ADR-count surfaces updated from ten to eleven; `docs/adr/README` (en/ja) extended with the measurement-instrument cluster paragraph; the diffusion-mechanism cluster becomes 0008-0011.
+- ADR-count surfaces updated from ten to twelve across all carriers (root README en/ja, llms.txt, llms-full.txt, CLAUDE.md, CODEMAPS); `docs/adr/README` (en/ja) extended with the measurement-instrument and channel-selection paragraphs; the diffusion-mechanism cluster becomes 0008-0011. The llms.txt / llms-full.txt ADR catalogs gain the ADR-0011 and ADR-0012 entries in the same pass.
 - `docs/empirical/README.md`: the single-window regurgitation-test limitation now points to ADR-0011's protocol as its structured successor; the paragraph is retained as the record of the only pre-protocol observations. "What the layer contains" gains the probe baseline.
 
 ## [0.4.0] - 2026-06-11
