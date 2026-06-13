@@ -44,6 +44,23 @@ question. Subsequent releases should test whether some
 combination of the three disambiguators reliably distinguishes
 adoption-type traffic from ingestion-type traffic.
 
+A fourth candidate disambiguator comes from the generative-engine
+literature, which separates the *fact* of a fetch from its
+*contribution* to the answer. A citation-absorption measurement
+framework distinguishes citation selection (which sources a
+platform fetches) from citation absorption (how much a fetched
+page actually contributes to the generated answer), so that a raw
+citation count is not read as a measure of influence (arXiv:2604.25707).
+The same selection-versus-absorption split is what separates
+ingestion-type traffic (a page is fetched and indexed) from
+adoption-type traffic (the fetched page shapes downstream output):
+an influence score that measures absorption rather than mere
+selection is a candidate disambiguator the framework does not
+currently operationalize, and it carries the same costs the three
+above do — it requires per-platform probing and is observed only
+through whatever the platform exposes about its own answer
+construction.
+
 ## Open question 3: What is the time-to-obsolescence of Layer 4 tactics?
 
 Layer 4 explicitly anticipates that tactics retire when their
@@ -153,7 +170,7 @@ inverted on all three axes — has not been tested against the
 case where it is wrong. Possible failure modes the framework
 does not currently handle:
 
-- **The framework increases the author's reach but not the author's recognition** — the author's ideas become widely diffused but the diffusion does not carry the author's name. (Diagnostic: regurgitation tests succeed at concept level but fail at author level.)
+- **The framework increases the author's reach but not the author's recognition** — the author's ideas become widely diffused but the diffusion does not carry the author's name. (Diagnostic: regurgitation tests succeed at concept level but fail at author level.) The external literature describes the underlying behavior: a large-scale study of LLM-mediated citation finds that a source's name is surfaced far more often when it is already named than when it is not — a brand-citation rate of 53.1% named against 10.6% unnamed (Seer Interactive's 541,213-response study), consistent with a parametric channel that gates the retrieval channel, so a source's URL can be cited while its author goes unnamed. The scholarly literature frames the same breakdown from the credit side: the *provenance problem*, a systematic rupture in the chain of scholarly credit when LLM-mediated text reproduces an idea without attribution, holding even where the author acts in good faith and discloses the use of AI (arXiv:2509.13365). The framework names this attribution-loss failure mode the *ghost citation* of authorship; the term is also used in the literature (arXiv:2602.06718) for a disjoint phenomenon — fabricated or invalid citations — which this open tension does not concern. This is an *open tension*, not a solved problem: the framework's strongest commitment is full inversion on all three axes, and the same openness that maximizes reach is what strips the author's name from the carried-forward content — the mechanism that produces diffusion is the mechanism that produces ghost citation. The framework records the tension without resolving it; whether a fully-inverted strategy can keep recognition coupled to reach, or whether reach-without-recognition is its structural price, is left open here.
 - **The framework induces over-publication** — the author publishes ideas earlier than they would have under enclosure-style strategy, capturing priority but at lower quality. (Diagnostic: the author's DOI-registered artifacts include multiple superseded versions of the same idea.)
 - **The framework induces under-investment in worked implementation** — the abstract-doctrine-plus-worked-implementation pair (Layer 3) requires investment in implementation, but the framework's tactical layer emphasizes doctrine artifacts (specs, ADRs, glossaries). (Diagnostic: the author's DOI portfolio is doctrine-heavy and implementation-light.)
 

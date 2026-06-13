@@ -338,10 +338,15 @@ the retrieval-suppressed naming probe of
 
 The failure mode in which a retrieval-augmented system cites an artifact's
 URL but does not name or recommend its author, because the author's name
-was never burned into parametric memory. The term originates in the 2026
-generative-engine-optimization literature (GhostCite, arXiv:2602.06718;
-Seer Interactive's 541,213-response study), which this framework adopts
-rather than coins. [ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
+was never burned into parametric memory. This attribution-loss sense is the
+framework's own term; the behavior it names is anchored to the 2026
+generative-engine-optimization literature, in particular Seer Interactive's
+541,213-response study, which reports a brand-citation rate of 53.1% when
+the brand is named against 10.6% when it is not — a parametric channel that
+gates the retrieval channel rather than the reverse. (The term *ghost
+citation* is also used in arXiv:2602.06718 for a disjoint phenomenon —
+fabricated or invalid citations to non-existent sources — so the two senses
+should not be conflated.) [ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
 places it inside the two-channel mechanism as the diagnostic that the
 parametric and retrieval channels are distinct and must be pursued in
 parallel: a working retrieval channel atop absent parametric burn-in
@@ -447,3 +452,20 @@ implementation, vendor, or framework. Adopted from the sibling
 line [Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice).
 See [`CLAUDE.md`](../CLAUDE.md) for the local application of
 this convention.
+
+## Chinese term mapping (machine-readable anchor only)
+
+The repository's distinctive coined terms, with their Simplified
+Chinese renderings. This mapping exists to anchor the multilingual
+tactic in the machine-readable layer (see the language-tagged
+`alternateName` labels in [`graph.jsonld`](../graph.jsonld)); it is
+not a prose translation of the glossary. Concept DOI:
+[10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316).
+
+| English (coined term) | 中文 (zh) |
+|---|---|
+| Three-axis inversion | 三轴反转 |
+| Attribution Diffusion | 署名扩散 |
+| Idea versus Scaffold (separation) | 理念与脚手架的分离 |
+| Two-Channel Attribution Diffusion | 双通道署名扩散 |
+| Authenticity | 本真性 |

@@ -132,7 +132,8 @@
         "https://arxiv.org/abs/2402.12261",
         "https://arxiv.org/abs/2510.08506"
       ],
-      "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013"
+      "vocabularyDisjoint": "https://doi.org/10.5281/zenodo.19652013",
+      "hasPart": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/implementations.md"
     },
 
     {
@@ -141,7 +142,8 @@
       "name": "Three-Axis Inversion",
       "alternateName": [
         {"@value": "Three-Axis Inversion", "@language": "en"},
-        {"@value": "3 軸反転", "@language": "ja"}
+        {"@value": "3 軸反転", "@language": "ja"},
+        {"@value": "三轴反转", "@language": "zh"}
       ],
       "description": "The structural claim that twentieth-century authorship strategy and AI-era authorship strategy invert on three co-varying axes: value source (scarcity to diffusion), validation mechanism (exclusivity to derivation), network effect (enclosure to openness). The three axes co-vary; a strategy mixing axes is internally inconsistent.",
       "composedOf": [
@@ -167,7 +169,8 @@
         "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
         "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md",
+      "subjectOf": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adoption.md"
     },
 
     {
@@ -179,6 +182,9 @@
       "covaresWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+      ],
+      "groundedIn": [
+        "https://arxiv.org/abs/2509.08919"
       ]
     },
 
@@ -210,6 +216,11 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
       "@type": ["Concept", "Layer"],
       "name": "Authenticity (Layer 1)",
+      "alternateName": [
+        {"@value": "Authenticity", "@language": "en"},
+        {"@value": "オーセンティシティ", "@language": "ja"},
+        {"@value": "本真性", "@language": "zh"}
+      ],
       "description": "The protected value at the framework's foundation: the author's genuine thinking remains the author's, unaltered by market pressure to reshape it for sale. Monetization is not a goal. Narrower than the philosophical usage of authenticity; specifically about preservation of authored content against dilutive market pressure.",
       "layerOrdinal": 1
     },
@@ -218,15 +229,30 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
       "@type": ["Concept", "Layer"],
       "name": "Attribution Diffusion (Layer 2)",
+      "alternateName": [
+        {"@value": "Attribution Diffusion", "@language": "en"},
+        {"@value": "Attribution Diffusion (帰属の拡散)", "@language": "ja"},
+        {"@value": "署名扩散", "@language": "zh"}
+      ],
       "description": "The defensive strategy at the framework's second layer: maximizing the breadth of LLM-mediated channels carrying recognizable signatures of the author's ideas, anchored to a permanent timestamp. Here attribution means credit for source (who originated an idea), not accountability for action (who is responsible for a failure).",
       "layerOrdinal": 2,
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/authenticity"
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
+      "citation": [
+        "https://arxiv.org/abs/2604.25707",
+        "https://arxiv.org/abs/2602.06718",
+        "https://arxiv.org/abs/2509.13365"
+      ]
     },
 
     {
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
       "@type": ["Concept", "Layer"],
       "name": "Idea versus Scaffold (Layer 3)",
+      "alternateName": [
+        {"@value": "Idea versus Scaffold", "@language": "en"},
+        {"@value": "理念とスキャフォールドの分離", "@language": "ja"},
+        {"@value": "理念与脚手架的分离", "@language": "zh"}
+      ],
       "description": "The framework's third layer: sorting each artifact into idea-character (which survives and is DOI-registered under the author's name) or scaffold-character (which dissolves into larger harnesses whose own diffusion absorbs the implementation). Mixed-character artifacts get idea-level DOI registration first.",
       "layerOrdinal": 3,
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
@@ -378,7 +404,8 @@
       "name": "Two-Channel Attribution Diffusion",
       "alternateName": [
         {"@value": "Two-Channel Attribution Diffusion", "@language": "en"},
-        {"@value": "2 チャネル Attribution Diffusion", "@language": "ja"}
+        {"@value": "2 チャネル Attribution Diffusion", "@language": "ja"},
+        {"@value": "双通道署名扩散", "@language": "zh"}
       ],
       "description": "The refinement of Attribution Diffusion (Layer 2) into two mechanisms with opposite time constants and opposite levers: a parametric channel (the idea absorbed into model weights at training time — slow, driven by broad cross-platform co-occurrence of distinctive vocabulary with its source; cross-platform mention spread correlates ~0.664 with being named, far above enclosed inbound links ~0.218) and a retrieval channel (the artifact fetched at query time — fast, 3–5 day citation-pool entry and ~13-week decay, driven by freshness and structured data). Ghost citation — the source is cited but the author is not named — is the failure mode of a working retrieval channel atop absent parametric burn-in, so the two channels are optimized and measured separately and run in parallel.",
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
@@ -388,7 +415,8 @@
         "https://arxiv.org/abs/2604.25707",
         "https://arxiv.org/abs/2603.09296",
         "https://arxiv.org/abs/2602.14869",
-        "https://arxiv.org/abs/2601.21996"
+        "https://arxiv.org/abs/2601.21996",
+        "https://arxiv.org/abs/2509.08919"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
     },
@@ -631,7 +659,7 @@
       "datePublished": "2026-02-06",
       "identifier": "arXiv:2602.06718",
       "url": "https://arxiv.org/abs/2602.06718",
-      "description": "Large-scale audit of citation validity across thirteen LLMs and 56,381 published papers (2.2 million citations checked; 1.07% of papers carry invalid citations). Source of the term 'ghost citation' and large-scale external evidence that author attribution is routinely lost under LLM-mediated citation. Grounds the ghost-citation failure mode of Two-Channel Attribution Diffusion (ADR-0008); this research line adopts the term rather than coining it."
+      "description": "Large-scale audit of citation validity across thirteen LLMs and 56,381 published papers (2.2 million citations checked; 1.07% of papers carry invalid citations). Uses the term 'ghost citation' for a disjoint phenomenon — fabricated or invalid citations to non-existent sources — not the attribution-loss sense the framework names the ghost citation of authorship; the two senses should not be conflated. Cited as external context for citation failure under LLM mediation (ADR-0008), not as the source of the framework's term."
     },
 
     {
@@ -715,6 +743,28 @@
       "identifier": "arXiv:2605.06426",
       "url": "https://arxiv.org/abs/2605.06426",
       "description": "A large-scale automatic neologism-detection pipeline reporting substantial cross-model disagreement about which candidate words are neologisms (599 of 1,021 candidates, 58.7%, confirmed by manual validation). Cited in the empirical layer's 2026-06 external-literature note as a methodological warning for Vocabulary Discipline (ADR-0010): any future regurgitation-test protocol asking whether a model recognizes a coined term will get model-dependent answers, so single-model probes cannot be cured by simply picking a better model."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2509.13365",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "The Provenance Problem: LLMs and the Breakdown of Citation Norms",
+      "author": ["Brian D. Earp", "Haotian Yuan", "Julian Koplin", "Sebastian Porsdam Mann"],
+      "datePublished": "2025-09",
+      "identifier": "arXiv:2509.13365",
+      "url": "https://arxiv.org/abs/2509.13365",
+      "description": "Names the 'provenance problem': a systematic breakdown in the chain of scholarly credit when LLM-mediated drafting reproduces ideas without attribution — distinct from plagiarism because the author may act in good faith and disclose AI use yet still benefit from uncredited intellectual contributions. External scholarly grounding for the reach-without-recognition failure mode (manifesto Open Question 8), the adversarial case in which diffusion does not carry the originating author's name; recorded as an open tension, not resolved."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2509.08919",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Generative Engine Optimization: How to Dominate AI Search",
+      "author": ["Mahe Chen", "Xiaoxuan Wang", "Kaiwen Chen", "Nick Koudas"],
+      "datePublished": "2025-09",
+      "identifier": "arXiv:2509.08919",
+      "url": "https://arxiv.org/abs/2509.08919",
+      "description": "Reports that generative AI search strongly favors earned media (distributed third-party sources) over brand-owned content, unlike balanced traditional search, and identifies engine-specific differences in domain diversity, freshness, and language stability. Preliminary external observation consistent with the Scarcity-to-Diffusion axis and with the cross-platform driver of the parametric channel in Two-Channel Attribution Diffusion (ADR-0008): distributed presence, not enclosed owned content, is what AI answer engines surface."
     }
   ]
 }

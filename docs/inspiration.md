@@ -103,12 +103,16 @@ prior art rather than originates.
 
 - *GhostCite* (Xu et al., arXiv:2602.06718) audits 2.2 million
   citations across 56,381 published papers and benchmarks thirteen
-  LLMs, establishing both the term *ghost citation* and the
-  large-scale evidence (1.07% of papers carry invalid citations)
-  that author attribution is routinely lost under LLM-mediated
-  citation. ADR-0008's use of ghost citation as the diagnostic that
-  the parametric and retrieval channels are distinct rests on this
-  prior art; the framework adopts the term, it does not coin it.
+  LLMs, establishing large-scale evidence of citation *fabrication
+  and invalidity* under LLM-mediated citation: 1.07% of papers carry
+  invalid citations, and per-model citation-hallucination rates range
+  from 14.23% to 94.93%. This documents that LLM-mediated citation is
+  unreliable at scale, but it measures citations to sources that do
+  not exist or do not support the claim — not loss of author
+  attribution on a valid, carried-forward source. The framework's
+  attribution-loss sense (a source's URL cited while its author is
+  never named) is a distinct phenomenon, supported below by the Seer
+  Interactive study rather than by this fabrication statistic.
 - Seer Interactive's study of 541,213 LLM responses across twenty
   brands and six AI platforms supplies the closest external
   statement of the two-channel mechanism the framework has found.
