@@ -8,6 +8,10 @@ license: MIT
 doi: 10.5281/zenodo.20263316
 repository-code: "https://github.com/shimo4228/authorship-strategy"
 url: "https://doi.org/10.5281/zenodo.20263316"
+identifiers:
+  - type: swh
+    value: "swh:1:snp:537898a6117d635bd2bafead3546a7eafea0ba36"
+    description: "Software Heritage snapshot of v0.6.0 (intrinsic content-derived identifier, ADR-0013)"
 authors:
   - family-names: Shimomoto
     given-names: Tatsuya
