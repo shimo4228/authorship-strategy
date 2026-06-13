@@ -254,7 +254,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0008",
         "https://github.com/shimo4228/authorship-strategy#adr/0009",
         "https://github.com/shimo4228/authorship-strategy#adr/0010",
-        "https://github.com/shimo4228/authorship-strategy#adr/0011"
+        "https://github.com/shimo4228/authorship-strategy#adr/0011",
+        "https://github.com/shimo4228/authorship-strategy#adr/0012"
       ]
     },
 
@@ -501,6 +502,14 @@
       "description": "Builds the measurement instrument ADR-0008 demanded: a scheduled two-channel probe protocol interrogating frontier models with search suppressed (does the trained model name the concept and its author?) and search enabled (are owned identifiers cited, and does the author's name survive in prose alongside the citation?). Detection is deterministic string matching against a versioned lexicon over retained raw responses, never model judging; prompts are fixed single-variable templates with a negative control; every change to prompts, models, or lexicon is a visible series break. The retrieval channel is measured on a fast calendar cadence; the parametric channel is event-driven on model-generation changes (a frozen model's weights cannot change between runs), with a monthly currency check — silent-swap detection, provider-catalog diff, staleness guard — standing in for the calendar; the channels are never blended. The public probe log feeds the parametric channel it measures — a stated confound and an on-thesis act of diffusion.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0008"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0012",
+      "@type": "ADR",
+      "name": "ADR-0012: Link-Index Contributions to External Collections",
+      "description": "Applies the thesis's enclosure axis to channel selection for external curated collections (community-curated link directories, skill marketplaces, dataset registries). Contributions are link-index entries only: the canonical artifact stays in the author's repository while the host carries a hyperlink and a short factual description; vendor-type contributions, where the host would carry the artifact body in its own distribution, are declined by default. Every prospective host passes a four-condition pre-submission audit — corporate ownership, absence of an open license, content-vendoring structure, operation as a paid-product funnel — with risk rising as conditions combine and a host meeting all four excluded even for link-only entries; a listed host that later introduces paid tiers or content vendoring triggers withdrawal. Grounded in two 2026 withdrawal episodes whose shared pattern is that vendored content is captured by any subsequent enclosure the host introduces, while a link entry bounds the worst case to a one-line description inside the enclosing host.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0012-link-index-channel-selection.md"
     },
 
     {

@@ -21,6 +21,7 @@ top-down に prescribe されたものではない。
 | [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 | [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
 | [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る | **experimental** |
+| [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -91,6 +92,19 @@ rate は negative-control probe の confabulation floor と対照して読む。
 これにより cluster は loop を閉じる: ADR-0007 が成功の定義を fix し、
 ADR-0008 が機構を分割し、ADR-0010 が parametric channel のレバーを定義し、
 ADR-0011 がその 3 つを測定可能にする。
+
+ADR-0012 は **channel-selection decision** である: thesis の enclosure 軸を、
+外部の curated collection (community-curated link directory、skill
+marketplace、dataset registry) へ artifact を掲載するという行為に適用する。
+contribution は link-index 型のみ —— canonical artifact は著者の repository
+に留まり、host はハイパーリンクと短い事実記述だけを持つ —— とし、掲載前に
+すべての候補 host を 4 条件監査 (企業所有 / open license の欠如 /
+content-vendoring 構造 / 有料製品への funnel) に通す。掲載後に host が
+enclosure に転じた場合の取り下げルールも常設する。ADR-0006 が自分の ingest
+surface 上での artifact の形を規定するのに対し、ADR-0012 はどの*外部*
+surface に、どの形で artifact が現れてよいかを統治する: vendor された
+copy は host の後の enclosure に捕獲される drift vector であり、link は
+canonical source を host の支配の外に保つ。
 
 ## Format
 

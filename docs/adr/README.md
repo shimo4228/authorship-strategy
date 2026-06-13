@@ -21,6 +21,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 | [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
 | [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument | **experimental** |
+| [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -101,6 +102,21 @@ true-positive rates against a negative-control probe's confabulation
 floor. With it the cluster closes a loop: ADR-0007 fixed what success
 is, ADR-0008 divided the mechanism, ADR-0010 defined the
 parametric-channel lever, and ADR-0011 makes all three measurable.
+
+ADR-0012 is the **channel-selection decision**: it applies the thesis's
+enclosure axis to the act of listing artifacts in external curated
+collections (community-curated link directories, skill marketplaces,
+dataset registries). Contributions are link-index entries only — the
+canonical artifact stays in the author's repository and the host carries
+a hyperlink plus a short factual description — and every prospective
+host passes a four-condition audit (corporate ownership / absence of an
+open license / content-vendoring structure / paid-product funnel) before
+submission, with a standing withdrawal rule if a host later encloses.
+Where ADR-0006 specifies the form the artifact takes on its own ingest
+surface, ADR-0012 governs which *external* surfaces the artifact may
+appear on, and in what form: vendored copies are drift vectors that a
+host's later enclosure captures; a link leaves the canonical source
+outside the host's control.
 
 ## Format
 

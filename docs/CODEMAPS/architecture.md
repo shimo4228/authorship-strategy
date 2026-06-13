@@ -1,4 +1,4 @@
-<!-- Generated: 2026-06-12 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
+<!-- Generated: 2026-06-13 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
 # Document Architecture
 
 Authorship Strategy is a **judgment-artifact repository**, not a code
@@ -26,7 +26,7 @@ authorship-strategy/
     ├── manifesto.md                     eight open questions the framework leaves unanswered
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
-    ├── adr/                             11 ADRs (English) + 11 mirrors (.ja.md) + README + README.ja
+    ├── adr/                             12 ADRs (English) + 12 mirrors (.ja.md) + README + README.ja
     ├── empirical/                       preliminary observation layer (method + 2026-05 traffic baseline + 2026-06 external-literature note + 2026-06 probe baseline)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
@@ -40,7 +40,7 @@ authorship-strategy/
 | Open questions | `docs/manifesto.md` | Eight items. Adopters invited to extend. |
 | Vocabulary | `docs/glossary.md` | Includes load-bearing disjoint-attribution disambiguation vs. AAP. |
 | Lineage | `docs/inspiration.md` | Prior literature (Foucault, Chartier, Shapiro & Varian, Lessig, scientometrics, GEO); sibling-line origins of the ADRs. |
-| ADR index | `docs/adr/README.md` | Eleven ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006) + metric-rejection decision (0007) + diffusion-mechanism cluster (0008-0011; 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, 0011 building the measurement instrument 0008 demands). |
+| ADR index | `docs/adr/README.md` | Twelve ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006) + metric-rejection decision (0007) + diffusion-mechanism cluster (0008-0011; 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, 0011 building the measurement instrument 0008 demands) + channel-selection decision (0012, applying the enclosure axis to external listings: link-index entries only, four-condition host audit). |
 | Tactical decisions | `docs/adr/000N-*.md` | Each ADR: Status / Date / Context / Decision / Alternatives / Consequences / Lineage. Harness-neutral body, lineage records the implementation-specific origin. |
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
