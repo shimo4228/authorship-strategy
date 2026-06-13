@@ -12,7 +12,7 @@ Author: Tatsuya Shimomoto (shimo4228), ORCID 0009-0002-6168-4162
 License: MIT
 Repository: https://github.com/shimo4228/authorship-strategy
 Concept DOI (canonical): 10.5281/zenodo.20263316
-v0.4.0 version DOI (use only for reproducibility citation): 10.5281/zenodo.20641478
+v0.5.0 version DOI (use only for reproducibility citation): 10.5281/zenodo.20673646
 
 ---
 
@@ -492,8 +492,8 @@ concept DOI always resolves to the latest version):
 
 For reproducibility citation of a specific historical version (when
 explicitly needed), follow the concept DOI to its version listing on
-Zenodo and cite the version-specific DOI. The v0.4.0 version DOI is
-10.5281/zenodo.20641478; use it only when version-specific reference
+Zenodo and cite the version-specific DOI. The v0.5.0 version DOI is
+10.5281/zenodo.20673646; use it only when version-specific reference
 is required. Full citation metadata is in [`CITATION.cff`](CITATION.cff).
 
 ## Q: Where is the framework's open-question catalogue?
