@@ -18,6 +18,28 @@ default-tier model each: `claude-sonnet-4-6`, `gpt-5.5`,
 (probe × provider) cell, detector v2 (echo-guarded deterministic string
 matching). 2026-06-12, single day.
 
+## Sampling cadence (pre-registered, recorded 2026-06-14)
+
+The retrieval channel runs on a **fortnightly** clock by default, tightening
+to **weekly** during the autumn-2026 observation window (2026-09-01 to
+2026-11-30) — the period in which the first eligible model generation could
+enter the panel (Observation 1). This variable rate is recorded *before*
+that window opens so the tightening is not a post-hoc choice.
+
+The rationale is that the measured quantity moves on a weeks-to-months scale
+(search-index crawl, identifier propagation, model-generation events), so
+weekly sampling of the quiet period mostly resamples run-to-run noise rather
+than adding signal; and the one fast event the channel cannot afford to miss
+late — a silent model swap — is already detected by the monthly currency
+check, not by retrieval-run density. Fortnightly still yields ~6–8 readings
+before the window and ~26/year, sufficient for baseline and step detection,
+at the cost of ±14-day rather than ±7-day transition-date resolution — within
+tolerance for a methods-plus-first-results report. The known weakness is
+aliasing of a *transient* transition; attribution diffusion is expected to be
+monotonic, making this low-risk. The parametric channel is unaffected (it is
+event-driven; frozen weights do not change between runs). Cadence is held the
+same across all providers so each timepoint yields a comparable panel.
+
 ## Observations
 
 ### 1. Parametric channel: zero, everywhere
