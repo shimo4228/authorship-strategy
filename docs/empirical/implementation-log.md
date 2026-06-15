@@ -64,6 +64,7 @@ for a future pre-versus-post contrast.
 | Preprint cross-posting of the papers to a scholarly preprint server | 2026 (not individually dated) | — |
 | Author-profile disambiguation request on a bibliographic-graph service | 2026-06 (pending) | — |
 | Inclusion of all ecosystem records in an author-curated archive community | 2026-06-13 | — |
+| Author-entity `sameAs` federation deepened to self-controllable external profile surfaces (academic citation graph, model hub, professional network, developer-publishing, newsletter) | 2026-06-15 | citation-graph federation tactic; manifesto open question 9 |
 
 ### External collections (ADR-0012)
 

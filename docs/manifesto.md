@@ -177,6 +177,62 @@ does not currently handle:
 A subsequent release should articulate diagnostic signals for
 each failure mode and the recovery strategy for each.
 
+## Open question 9: Does entity grounding gate the diffusion strategy by prior authority?
+
+The framework's Layer 4 structured-artifact tactic — the JSON-LD
+knowledge graph and the `sameAs` edges that federate its entities to
+external authority records (ORCID for the author, Wikidata for
+concepts and artifacts, the wider linked-data substrate) — assumes the
+author can ground the artifact's entities in resolvable external
+identifiers. The 2026 structured-data-efficacy literature suggests
+this grounding, not structured-data presence alone, is what earns
+AI-retrieval citation: attribute-rich, entity-anchored markup is cited
+materially more than generic markup, and generic markup no more than
+none (arXiv:2603.10700; SSRN 6284518). But the entity-grounding chain
+that supplies those anchors — a Wikidata item, the third-party
+mentions that justify it, the notability those mentions establish — is
+itself gated by prior authority. An established entity has external
+records to point `sameAs` at; a newly coined concept, or an author
+entering the citation graph for the first time, has none.
+
+This surfaces a tension internal to the framework. The framework's
+foundational claim is the scarcity-to-diffusion inversion: openness,
+not gatekept scarcity, grounds authorial value under AI mediation. Yet
+the structured-artifact tactic that operationalizes diffusion appears
+to re-introduce a gate — not the old scarcity of publication, but a
+scarcity of *prior entity authority*. The framework's own knowledge
+graph shows the tension concretely: its doctrine-concept nodes carry
+no `sameAs` edges, because they are new coinages with no external
+entity to resolve to, while its DOI-registered artifacts and its
+author entity do. The grounding the literature rewards is exactly the
+grounding a first-mover idea cannot yet supply.
+
+Open questions:
+
+- Does the diffusion strategy's reliance on entity grounding
+  reintroduce, at the substrate level, the authority-gating the
+  three-axis inversion claims to escape — so that the inversion holds
+  for already-recognized authors but weakens for the idea-rescue
+  individual the framework is written for?
+- Is the self-controllable subset of entity grounding — the profiles
+  an author owns and can populate (repository host, author-identifier
+  record, self-published surfaces) — sufficient to clear the citation
+  threshold, or does the lift require third-party-conferred authority
+  (encyclopedic notability, earned-media mention) the author cannot
+  manufacture?
+- This is the reach-without-recognition tension of Open Question 8
+  viewed from the supply side: ghost citation asks why diffusion fails
+  to carry the author's name; this asks whether the instruments that
+  would carry it are available to the author at all. It is also the
+  asymmetric-authorship-claim-scope problem of Open Question 1 at
+  single-author scale — claim scope gated by pre-existing authority
+  rather than by contribution.
+
+The framework records the tension without resolving it. Whether entity
+grounding is a democratizing instrument (any author can federate the
+identifiers they own) or a re-enclosure (citation rewards authority the
+author must already possess) is left open here.
+
 ---
 
 The list of open questions is itself an open question. Adopters

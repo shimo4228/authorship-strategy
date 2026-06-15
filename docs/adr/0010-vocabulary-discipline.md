@@ -193,6 +193,27 @@ training-data-attribution literature (Concept Influence, Mechanistic
 Data Attribution), narrowing the program's origin claim to the
 framework-placement layer in each case.
 
+A 2026 strand of schema-efficacy measurement bears on the discipline
+from an unexpected direction. Studies of whether structured-data
+markup predicts AI-search citation — a controlled cross-platform study
+(Fischman, SSRN 6284518) and an industry audit of roughly 1,885
+schema-added pages (Ahrefs) — find that schema *presence* alone does
+not move citation once organic ranking is controlled (generic markup
+performs no better than none) and that the citation lift attaches
+specifically to attribute-rich, entity-anchored markup (cited at 61.7%
+versus 41.6% for generic). This is the structured-data analogue of the
+edge-density asymmetry this ADR records for coinage: richness and
+anchoring, not mere presence, are what carry signal. The finding is
+read as external resonance rather than as the source of the principle
+— the discipline was articulated from the parametric and retrieval
+mechanics of ADR-0008, not from the schema literature — and it
+qualifies the structured-graph citation claim of
+[ADR-0009](0009-dual-entry-asymmetric-rebalance.md) in the same move:
+the knowledge graph carries retrieval-time citation only insofar as it
+is densely anchored, not by virtue of existing. The same literature
+opens the supply-side question of who can supply that anchoring,
+recorded as Open Question 9 in [`manifesto.md`](../manifesto.md).
+
 The specific instances abstracted out of the body: the knowledge
 graph is the schema.org JSON-LD graph with `isBasedOn` / `citation`
 edges (per ADR-0006's lineage); the glossary locale mirror is the

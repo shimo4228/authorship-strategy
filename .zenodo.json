@@ -119,6 +119,18 @@
       "scheme": "doi"
     },
     {
+      "identifier": "10.48550/arXiv.2603.10700",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.2139/ssrn.6284518",
+      "relation": "references",
+      "resource_type": "publication-workingpaper",
+      "scheme": "doi"
+    },
+    {
       "identifier": "https://github.com/shimo4228/shimo4228",
       "relation": "isPartOf",
       "resource_type": "other",

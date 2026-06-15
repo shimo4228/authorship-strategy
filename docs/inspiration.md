@@ -152,6 +152,56 @@ present author's measurements, and are kept in this lineage
 document rather than in the ADR bodies, which remain
 vendor-and-framework-neutral by convention.
 
+### Structured-data efficacy literature (2026)
+
+A second 2026 strand measures whether structured data — the JSON-LD
+knowledge graph this framework's Layer 4 structured-artifact tactic
+ships — actually earns AI-retrieval citation, and it cuts both ways.
+The framework records both directions rather than only the supporting
+one, because the qualifying evidence sharpens *which property* of the
+graph carries citation.
+
+- *Structured Linked Data as a Memory Layer for Agent-Orchestrated
+  Retrieval* (Volpini et al., arXiv:2603.10700) reports that serving
+  schema.org markup as agent-readable entity pages raises retrieval
+  accuracy by 29.6% in a standard retrieval-augmented pipeline and
+  29.8% in a full agentic pipeline, positioning structured linked data
+  as a retrieval *memory layer* rather than a mere discovery aid. The
+  paper qualifies the lift — JSON-LD markup alone yields only modest
+  gains, which come from the enhanced entity-page format (markup plus
+  agent instructions and structured retrieval), not markup in isolation
+  — external grounding for the concept-form half of the dual entry point
+  ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)) and the
+  structured-graph citation claim of
+  [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md), carrying the
+  same presence-is-not-the-lever caveat the Fischman result makes.
+- *Does Schema Markup Predict AI Citation?* (Fischman, SSRN 6284518)
+  supplies the qualifying counter-evidence. Across 730 AI citations
+  from ChatGPT and Gemini against a 1,006-page organic-ranking control,
+  schema *presence* does not independently predict citation once ranking
+  is controlled: an initial negative pooled association (OR 0.546) was
+  identified as a ranking-confound artifact, and the citation difference
+  instead attaches to attribute-rich, populated markup (Product, Review)
+  over generic types (Article, Organization, BreadcrumbList) — cited at
+  61.7% versus 41.6%. An industry before/after audit of 1,885
+  schema-added pages against 4,000 controls (Ahrefs, 2026) reaches the
+  same muted single-factor result: no major citation uplift on any
+  platform from adding schema alone.
+
+The two findings are not in tension once read through the
+anchor-densely discipline
+([ADR-0010](adr/0010-vocabulary-discipline.md)): structured-data
+*presence* is not the lever; attribute-rich, entity-anchored structure
+is — the same edge-density asymmetry the vocabulary discipline records
+for coinage. This *refines* rather than refutes the structured-artifact
+tactic: the graph must be densely populated and externally anchored to
+carry retrieval-time citation. The supply-side question — who can
+furnish the external entity anchoring the lift rewards, when a newly
+coined concept or a first-time author entity has no external record to
+point at — is recorded as Open Question 9 in
+[`manifesto.md`](manifesto.md). These remain external published
+findings, kept here rather than in the vendor-neutral ADR bodies.
+
 ## Sibling research lines (the recurring decisions)
 
 The framework was extracted from four sibling research lines

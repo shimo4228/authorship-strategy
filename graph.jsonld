@@ -80,7 +80,17 @@
       "@type": "Person",
       "name": "Tatsuya Shimomoto",
       "alternateName": ["shimo4228", {"@value": "下本竜也", "@language": "ja"}],
-      "sameAs": ["https://github.com/shimo4228", "https://orcid.org/0009-0002-6168-4162", "https://www.wikidata.org/wiki/Q140090100"]
+      "sameAs": [
+        "https://github.com/shimo4228",
+        "https://orcid.org/0009-0002-6168-4162",
+        "https://www.wikidata.org/wiki/Q140090100",
+        "https://scholar.google.com/citations?user=56_p8vEAAAAJ",
+        "https://huggingface.co/Shimo4228",
+        "https://www.linkedin.com/in/%E7%AB%9C%E4%B9%9F-%E4%B8%8B%E6%9C%AC-bb9b793a4",
+        "https://zenn.dev/shimo4228",
+        "https://dev.to/shimo4228",
+        "https://shimo4228.substack.com"
+      ]
     },
 
     {
@@ -381,6 +391,10 @@
       "description": "A linked-data file that encodes an artifact's concept-level entities and inter-entity relationships as machine-parseable triples in a structured-data vocabulary (typically schema.org plus a local namespace). Targets structured-data-ingesting LLM-mediated channels: training pipelines, knowledge-graph crawlers, programmatic readers using dataset SDKs. The concept-form half of the dual entry point; complements file-level documentation by encoding concept-level structure that prose leaves implicit.",
       "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
       "instantiatedBy": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
+      "groundedIn": [
+        "https://arxiv.org/abs/2603.10700",
+        "https://doi.org/10.2139/ssrn.6284518"
+      ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
 
@@ -765,6 +779,28 @@
       "identifier": "arXiv:2509.08919",
       "url": "https://arxiv.org/abs/2509.08919",
       "description": "Reports that generative AI search strongly favors earned media (distributed third-party sources) over brand-owned content, unlike balanced traditional search, and identifies engine-specific differences in domain diversity, freshness, and language stability. Preliminary external observation consistent with the Scarcity-to-Diffusion axis and with the cross-platform driver of the parametric channel in Two-Channel Attribution Diffusion (ADR-0008): distributed presence, not enclosed owned content, is what AI answer engines surface."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2603.10700",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Structured Linked Data as a Memory Layer for Agent-Orchestrated Retrieval",
+      "author": ["Andrea Volpini", "Elie Raad", "Beatrice Gamba", "David Riccitelli"],
+      "datePublished": "2026-03-11",
+      "identifier": "arXiv:2603.10700",
+      "url": "https://arxiv.org/abs/2603.10700",
+      "description": "Tests whether structured linked data — schema.org markup served as agent-readable entity pages — improves retrieval accuracy, reporting +29.6% for a standard retrieval-augmented pipeline and +29.8% for a full agentic pipeline when the entity pages are added; the paper notes that JSON-LD markup alone provides only modest improvements, the gains coming from the enhanced entity-page format (markup plus agent instructions and structured retrieval), not markup in isolation. External grounding for the JSON-LD knowledge graph as the concept-form half of the dual entry point (ADR-0006) and for the structured-graph-carries-retrieval claim of ADR-0009: structured linked data functions as a retrieval memory layer, not merely a discovery aid. Read together with the qualifying counter-evidence of SSRN 6284518, the two point the same way — richness and enhancement, not bare markup presence, carry the lift."
+    },
+
+    {
+      "@id": "https://doi.org/10.2139/ssrn.6284518",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Does Schema Markup Predict AI Citation? A Cross-Platform Empirical Study of Structured Data and Generative Engine Optimization",
+      "author": "Kurt Fischman",
+      "datePublished": "2026-02-22",
+      "identifier": "10.2139/ssrn.6284518",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6284518",
+      "description": "A cross-platform study — 730 AI citations from ChatGPT and Gemini over 75 commercial queries, 1,006 total pages analyzed against organic ranking — finding that schema presence does not independently predict AI citation once organic ranking is controlled: an initial negative pooled association (OR 0.546, p < .001) was identified as a ranking-confound artifact, and the citation difference instead attaches to attribute-rich markup with populated fields (Product, Review) over generic types (Article, Organization, BreadcrumbList) at 61.7% versus 41.6% (p = .012). Qualifying counter-evidence for the structured-graph citation claim of ADR-0009 and the JSON-LD knowledge graph tactic: structured-data presence is not the lever; attribute-rich, entity-anchored markup is. Externally echoes the anchor-densely discipline of ADR-0010 and grounds the entity-grounding access question of manifesto Open Question 9. A non-arXiv primary source (SSRN working paper) admitted to the citation graph on the strength of its controlled design and resolvable DOI."
     }
   ]
 }

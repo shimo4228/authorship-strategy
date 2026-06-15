@@ -178,6 +178,26 @@ Influence、Mechanistic Data Attribution) へ遡及的に anchor され、
 いずれの場合もプログラムの origin claim は framework-placement layer
 へと narrow 化された。
 
+2026 年の schema-efficacy 測定の一群が、思いがけない方向からこの
+規律に関わる。structured-data markup が AI 検索の citation を予測する
+かを調べた研究 —— 統制された cross-platform 研究 (Fischman, SSRN
+6284518) と約 1,885 ページの schema 追加を監査した industry audit
+(Ahrefs) —— は、organic ranking を統制すると schema の *存在* 単体は
+citation を動かさず (generic markup は no markup と変わらない)、
+citation の lift は attribute-rich で entity-anchored な markup に
+specifically 付くこと (generic の 41.6% に対し 61.7%) を見出した。
+これは本 ADR が造語について記録する edge-密度の非対称性の、
+structured-data における analogue である: 単なる存在ではなく、
+richness と anchoring が signal を運ぶ。この知見は原理の出典として
+ではなく external resonance として読む —— 規律は ADR-0008 の
+parametric / retrieval 機構から articulate されたのであって schema
+文献からではない —— と同時に、[ADR-0009](0009-dual-entry-asymmetric-rebalance.ja.md)
+の structured-graph citation の主張を qualify する: knowledge graph が
+retrieval 時の citation を運ぶのは、それが密に anchor されている限り
+においてであって、存在することによってではない。同じ文献は、その
+anchoring を誰が供給できるかという supply-side の問いを開き、
+[`manifesto.md`](../manifesto.md) の Open Question 9 に記録される。
+
 本文から抽象化して除いた具体的 instance: knowledge graph は
 `isBasedOn` / `citation` edge を持つ schema.org JSON-LD graph
 (ADR-0006 の lineage に従う); glossary の locale mirror は英語/日本語
