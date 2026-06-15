@@ -783,6 +783,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2603.10700",
+      "sameAs": "https://www.wikidata.org/wiki/Q140237850",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Structured Linked Data as a Memory Layer for Agent-Orchestrated Retrieval",
       "author": ["Andrea Volpini", "Elie Raad", "Beatrice Gamba", "David Riccitelli"],
@@ -794,6 +795,7 @@
 
     {
       "@id": "https://doi.org/10.2139/ssrn.6284518",
+      "sameAs": "https://www.wikidata.org/wiki/Q140237867",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Does Schema Markup Predict AI Citation? A Cross-Platform Empirical Study of Structured Data and Generative Engine Optimization",
       "author": "Kurt Fischman",
