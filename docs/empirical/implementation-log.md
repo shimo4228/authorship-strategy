@@ -53,6 +53,7 @@ for a future pre-versus-post contrast.
 | `graph.jsonld` concept-level knowledge graph alongside the navigator | first deployed 2026-05-15 (agent-knowledge-cycle, contemplative-agent, agent-attribution-practice, and the hub together); rolled out through 2026-06-05 | ADR-0006, ADR-0009 |
 | Dual-entry rebalance (graph as the citation lever; navigator rescoped) | 2026-05-30 (ADR-0009 authored, amending the ADR-0006 pairing on 2026 measurement) | ADR-0009 |
 | Cross-platform dataset-mirror of the graph for training-pipeline ingest | follows the graph deployment, 2026-05-15 onward (see the dataset-mirroring row above) | ADR-0003 |
+| Simplified-Chinese machine-readable anchor on the concept graph (language-tagged concept labels plus a glossary term mapping; prose surfaces remain English/Japanese only) | 2026-06-13 | multilingual tactic, machine-readable layer |
 
 ### Citation graph and scholarly surface (ADRs 0002, 0008)
 
@@ -113,10 +114,13 @@ about deployment order, not a claim about effect.
 Recorded here so the log is a complete picture rather than a list of
 successes only.
 
-- **Additional-language ingest surfaces beyond English and Japanese.** A
-  measurement asymmetry is open: one of the probe protocol's frontier
-  models is from a language region whose ingest surface is not yet
-  served. Deferred, not rejected.
+- **Prose ingest surfaces beyond English and Japanese.** A measurement
+  asymmetry is open: one of the probe protocol's frontier models is from a
+  language region whose prose ingest surface is not yet served. A
+  machine-readable-layer Simplified-Chinese anchor was deployed
+  2026-06-13 (see *AI-facing ingest* above) as the low-cost, measurable
+  slice; full prose localization (README, ADRs) remains deferred, not
+  rejected.
 - **Endorsed-preprint-server deposit.** Deferred until citation traces
   appear through the scholarly surfaces already in place; the endorsement
   path is approached conventionally rather than through paid or bulk
