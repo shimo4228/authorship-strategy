@@ -24,6 +24,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
 | [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
 | [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review | accepted |
+| [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -152,6 +153,30 @@ framework that bears on the open questions about the empirical layer's
 role and the framework's recursive application to itself. The review
 procedure lives in the framework's operational skill; only the wiring
 (which artifacts are this program's ledger and timeline) is project-specific.
+
+ADR-0015 is the **license-selection decision**: it fixes which
+permissive instrument an artifact takes, on an axis the framework had
+named but never recorded. Permissive licensing spans a public-domain
+dedication, an attribution-requiring content license, and a permissive
+software license; a cross-repository audit found all but the last in
+simultaneous use plus a non-commercial clause contradicting the
+framework outright. The rule selects by the artifact's *dominant
+audience*, not its form: because attribution is carried by the
+federated-identifier layer (the 0001-0003 triplet and 0013) rather than
+by the license, the license is chosen to minimize reuse friction. Under
+an LLM-first program (ADR-0007) almost every artifact — prose essays as
+much as datasets — is mined rather than read, so machine-mined artifacts
+take a public-domain dedication while only executable code takes a
+software license (carried whole-repo on a code-bearing repository for
+legibility) and only a genuinely human-first artifact takes a content
+license; non-commercial and no-derivatives terms are prohibited as the
+enclosure the thesis predicts weakens the origin claim. It is the
+license-layer counterpart of the vocabulary discipline (ADR-0010): both
+choose the artifact's form to maximize absorption while leaving the
+origin claim recoverable through the identifier layer rather than
+through enforcement, and it is disjoint from ADR-0012 — that ADR governs
+the license a prospective external host must extend, this one the
+license the author applies.
 
 ## Format
 

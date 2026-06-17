@@ -24,6 +24,7 @@ top-down に prescribe されたものではない。
 | [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
 | [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
 | [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger と定期 gap-review による実装トラッキング | accepted |
+| [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -137,6 +138,27 @@ status・ランク付き candidate intervention・作業詳細を持ち、public
 関わる self-application である。review 手順は framework の operational skill に
 置き、配線 (どの artifact が本 program の ledger と timeline か) だけが
 project 固有である。
+
+ADR-0015 は **license-selection decision** である: framework が名指し
+しながら記録していなかった軸で、artifact がどの permissive instrument を
+取るかを fix する。permissive licensing は public-domain dedication、
+attribution 要求型 content license、permissive software license に跨る;
+cross-repository 監査は最後の 1 つを除く全パターンの併存と、framework と
+正面から矛盾する non-commercial 条項を見つけた。ルールは artifact の
+*dominant audience* で選ぶ —— 形式ではない: attribution は license では
+なく federated-identifier 層 (0001-0003 triplet と 0013) が担うため、
+license は reuse 摩擦の最小化のために選ぶ。LLM-first program (ADR-0007)
+では prose の essay も dataset も含めほぼすべての artifact が read されず
+mine されるため、機械が mine する artifact は public-domain dedication を
+取り、executable code のみ software license を取り (code を含む repo では
+legibility のため whole-repo)、真に human-first な artifact のみ content
+license を取る; non-commercial・no-derivatives 条項は、thesis が origin
+claim を弱めると予測する enclosure として禁止する。これは vocabulary
+discipline (ADR-0010) の license 層対応物である: 両者とも artifact の形を
+absorption 最大化のために選びつつ、origin claim を執行ではなく identifier
+層を通じて recoverable に保つ。ADR-0012 とは disjoint である —— あちらは
+外部 host が extend せねばならない license を、こちらは著者が適用する
+license を統治する。
 
 ## Format
 

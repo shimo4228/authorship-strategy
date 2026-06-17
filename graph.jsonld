@@ -42,7 +42,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the ten tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0010 with 0009 amending 0006 and 0010 defining the vocabulary discipline 0008 names), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the fifteen tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, and license-selection decision 0015), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -293,7 +293,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0011",
         "https://github.com/shimo4228/authorship-strategy#adr/0012",
         "https://github.com/shimo4228/authorship-strategy#adr/0013",
-        "https://github.com/shimo4228/authorship-strategy#adr/0014"
+        "https://github.com/shimo4228/authorship-strategy#adr/0014",
+        "https://github.com/shimo4228/authorship-strategy#adr/0015"
       ]
     },
 
@@ -571,6 +572,14 @@
       "name": "ADR-0014: Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review",
       "description": "The one ADR about operating the framework over time rather than a tactic the framework deploys. The program already publishes a dated intervention timeline in the empirical layer, but that timeline is a DOI-versioned artifact bound by empirical-layer conventions (no effect claims, the ADR-0012 host abstraction, normative/empirical separation), which bar it from doubling as a progress-management surface. Implementation tracking therefore splits into two tiers: a private implementation ledger is the operational source of truth (per-tactic deployment status, ranked candidate interventions, working detail), and the public intervention timeline is its dated, effect-claim-free projection — never merged, the update rule being ledger first then projection. A periodic gap-review generates new proposals by comparing deployed tactics against the Layer 4 tactic catalog, the framework's open questions, and recent literature, ranking candidates and running each through the judgment checklist; it is a self-application of the framework that bears on the open questions about the empirical layer's role and the framework's recursive application to itself. The generic review procedure lives in the framework's operational skill; only the project-specific wiring — which artifacts are this program's ledger and timeline — lives in the project's context file.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0014-implementation-tracking-two-tier-ledger.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0015",
+      "@type": "ADR",
+      "name": "ADR-0015: License Selection by Audience, Not Artifact Form",
+      "description": "Fixes license selection on the artifact's dominant audience rather than its surface form, on the standing principle that attribution is carried by the federated-identifier layer (the identifier-federation triplet 0001-0003 and the intrinsic-identifier layer 0013) rather than by the license, so the license is chosen to minimize reuse friction. Machine-mined artifacts — datasets, corpora, traffic and probe logs, runtime data, knowledge graphs, and prose published for LLM-mediated reach, which under this LLM-first program (ADR-0007) is mined not read regardless of being prose — take a public-domain dedication (CC0-1.0); executable code takes a permissive software license (MIT/Apache-2.0), carried whole-repo on a code-bearing repository for legibility since it is already absorbed freely and unfiltered; genuinely human-first artifacts may take an attribution-requiring content license (CC-BY-4.0); a split is reserved for repositories whose non-code material is the entire deliverable; non-commercial and no-derivatives terms are prohibited as enclosure that forbids the parametric channel's training-time absorption and the preference hierarchy's creative reuse. The license-layer counterpart of vocabulary discipline (0010); disjoint from ADR-0012, which governs the license a prospective external host must extend rather than the license the author applies. Triggered by a 2026-06-17 cross-repository audit that found four license patterns in simultaneous use and one non-commercial restriction contradicting the framework, and sharpened from a form axis to an audience axis when an essay collection's LLM-first designation made form classification untenable.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0015-license-selection-by-audience.md"
     },
 
     {
