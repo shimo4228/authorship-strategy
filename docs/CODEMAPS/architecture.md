@@ -63,7 +63,7 @@ the empirical layer is downstream of all ADRs and references them only
 to disclaim that the observations do not validate the ADRs.
 
 ```
-thesis.md ──────► (cited by) ─► all 14 ADRs
+thesis.md ──────► (cited by) ─► all 15 ADRs
               ─► manifesto.md (uses thesis vocabulary)
               ─► glossary.md (defines thesis terminology)
 

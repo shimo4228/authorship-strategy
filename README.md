@@ -10,7 +10,7 @@ If your readers include LLMs — as training data, as in-context consultants,
 as the discovery layer other researchers consult — then the strategies that
 protect authorship have inverted. Closing your work off *reduces*, not
 increases, the chance that a future trace lands on you. This repository
-records the inverted strategy: what it is, why it holds, and fourteen tactical
+records the inverted strategy: what it is, why it holds, and fifteen tactical
 decisions extracted from operating a four-repository DOI-registered research
 ecosystem.
 
@@ -57,7 +57,7 @@ operational implications form the four-layer framework, also in the
 thesis document. The framework's open questions are catalogued in
 [`docs/manifesto.md`](docs/manifesto.md).
 
-## The fourteen tactical ADRs
+## The fifteen tactical ADRs
 
 | ADR | Decision |
 |-----|----------|
@@ -75,8 +75,9 @@ thesis document. The framework's open questions are catalogued in
 | [0012](docs/adr/0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections — diffusion via external curated collections uses link-index entries only (the canonical artifact stays in the author's repository); every prospective host passes a four-condition audit (corporate ownership / absence of an open license / content-vendoring structure / paid-product funnel), and a host that later encloses triggers withdrawal |
 | [0013](docs/adr/0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer — adds SWHID (ISO/IEC 18670), computed from the artifact and its history and verifiable without any registry, alongside the extrinsic DOI; each layer covers the other's failure mode. Every release triggers explicit archival in a content-addressed public software archive; for DOI-impractical genres the intrinsic identifier is the designated substitute priority-claim mechanism, closing manifesto open question 4 |
 | [0014](docs/adr/0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review — the one ADR about *operating* the framework rather than a tactic it deploys. A private implementation ledger holds operational status, ranked candidate interventions, and working detail; the public intervention timeline is its dated, effect-claim-free projection (the two are never merged). A periodic gap-review compares deployed tactics against the Layer 4 catalog and the open questions to generate the next proposals. The review procedure lives in the framework's operational skill; only the wiring is project-specific |
+| [0015](docs/adr/0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form — because attribution is carried by the federated-identifier layer (the 0001-0003 triplet and 0013) rather than by the license, each artifact's license is chosen to minimize reuse friction for its *dominant* audience. Under an LLM-first program almost every artifact is mined rather than read, so machine-mined artifacts take a public-domain dedication (CC0-1.0), executable code takes a permissive software license (MIT/Apache-2.0) carried whole-repo for legibility, and only a genuinely human-first artifact takes an attribution-requiring content license (CC-BY-4.0); non-commercial and no-derivatives terms are prohibited. The license-layer counterpart of vocabulary discipline (ADR-0010), disjoint from ADR-0012 |
 
-The fourteen ADRs are not deduced from a framework; they were extracted from
+The fifteen ADRs are not deduced from a framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form
 so that another author can adopt the same decisions without inheriting
 the original implementation details. See [`docs/adr/README.md`](docs/adr/README.md)
@@ -121,7 +122,7 @@ The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4
 ## How to read this repository
 
 Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then
-the fourteen ADRs in order. Two paths need a non-obvious entry point:
+the fifteen ADRs in order. Two paths need a non-obvious entry point:
 
 - **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
 - **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.
