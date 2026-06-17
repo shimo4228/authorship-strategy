@@ -770,6 +770,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2509.13365",
+      "sameAs": "https://www.wikidata.org/wiki/Q140265035",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "The Provenance Problem: LLMs and the Breakdown of Citation Norms",
       "author": ["Brian D. Earp", "Haotian Yuan", "Julian Koplin", "Sebastian Porsdam Mann"],
@@ -781,6 +782,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2509.08919",
+      "sameAs": "https://www.wikidata.org/wiki/Q140265061",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Generative Engine Optimization: How to Dominate AI Search",
       "author": ["Mahe Chen", "Xiaoxuan Wang", "Kaiwen Chen", "Nick Koudas"],
