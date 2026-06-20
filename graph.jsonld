@@ -99,7 +99,8 @@
       "name": "Authorship Strategy",
       "alternateName": [
         {"@value": "Authorship Strategy", "@language": "en"},
-        {"@value": "著者戦略", "@language": "ja"}
+        {"@value": "著者戦略", "@language": "ja"},
+        "AS"
       ],
       "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records ten decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
@@ -232,7 +233,10 @@
         {"@value": "本真性", "@language": "zh"}
       ],
       "description": "The protected value at the framework's foundation: the author's genuine thinking remains the author's, unaltered by market pressure to reshape it for sale. Monetization is not a goal. Narrower than the philosophical usage of authenticity; specifically about preservation of authored content against dilutive market pressure.",
-      "layerOrdinal": 1
+      "layerOrdinal": 1,
+      "groundedIn": [
+        "https://arxiv.org/abs/2603.23219"
+      ]
     },
 
     {
@@ -268,7 +272,8 @@
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
       "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
       "groundedIn": [
-        "https://arxiv.org/abs/2602.14869"
+        "https://arxiv.org/abs/2602.14869",
+        "https://arxiv.org/abs/2602.18733"
       ]
     },
 
@@ -394,7 +399,9 @@
       "instantiatedBy": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
       "groundedIn": [
         "https://arxiv.org/abs/2603.10700",
-        "https://doi.org/10.2139/ssrn.6284518"
+        "https://doi.org/10.2139/ssrn.6284518",
+        "https://arxiv.org/abs/2604.19113",
+        "https://arxiv.org/abs/2603.29979"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
@@ -431,7 +438,8 @@
         "https://arxiv.org/abs/2603.09296",
         "https://arxiv.org/abs/2602.14869",
         "https://arxiv.org/abs/2601.21996",
-        "https://arxiv.org/abs/2509.08919"
+        "https://arxiv.org/abs/2509.08919",
+        "https://arxiv.org/abs/2602.22787"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
     },
@@ -450,7 +458,8 @@
       "groundedIn": [
         "https://arxiv.org/abs/2602.06718",
         "https://arxiv.org/abs/2604.25707",
-        "https://arxiv.org/abs/2603.09296"
+        "https://arxiv.org/abs/2603.09296",
+        "https://arxiv.org/abs/2605.18732"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md"
     },
@@ -586,7 +595,7 @@
       "@id": "https://doi.org/10.5281/zenodo.19200726",
       "sameAs": "https://www.wikidata.org/wiki/Q140090186",
       "@type": ["ResearchLine", "EcosystemRepo"],
-      "name": "Agent Knowledge Cycle (AKC)",
+      "name": "Agent Knowledge Cycle",
       "alternateName": "AKC",
       "description": "Six-phase bidirectional growth loop for sustaining intent alignment between an AI agent and its operator over time. Mechanism sibling: defines how knowledge cycles inside the operator-agent pair; this research line addresses how the cycle's outputs diffuse outside it.",
       "url": "https://github.com/shimo4228/agent-knowledge-cycle",
@@ -596,6 +605,7 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19212118",
+      "alternateName": "CA",
       "sameAs": "https://www.wikidata.org/wiki/Q140090187",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Contemplative Agent",
@@ -607,9 +617,10 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19652013",
+      "alternateName": "AAP",
       "sameAs": "https://www.wikidata.org/wiki/Q140090188",
       "@type": ["ResearchLine", "EcosystemRepo"],
-      "name": "Agent Attribution Practice (AAP)",
+      "name": "Agent Attribution Practice",
       "description": "Harness-neutral ADRs on accountability distribution in autonomous AI agents. Vocabulary sibling: shares the word 'attribution' but with disjoint meaning (accountability for action vs. credit for source). The two meanings are intentionally kept separate; do not conflate.",
       "url": "https://github.com/shimo4228/agent-attribution-practice",
       "identifier": "10.5281/zenodo.19652013",
@@ -619,6 +630,7 @@
 
     {
       "@id": "https://doi.org/10.5281/zenodo.20262112",
+      "alternateName": "ANS",
       "sameAs": "https://www.wikidata.org/wiki/Q140090189",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Attention, Not Self",
@@ -814,6 +826,66 @@
       "identifier": "10.2139/ssrn.6284518",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6284518",
       "description": "A cross-platform study — 730 AI citations from ChatGPT and Gemini over 75 commercial queries, 1,006 total pages analyzed against organic ranking — finding that schema presence does not independently predict AI citation once organic ranking is controlled: an initial negative pooled association (OR 0.546, p < .001) was identified as a ranking-confound artifact, and the citation difference instead attaches to attribute-rich markup with populated fields (Product, Review) over generic types (Article, Organization, BreadcrumbList) at 61.7% versus 41.6% (p = .012). Qualifying counter-evidence for the structured-graph citation claim of ADR-0009 and the JSON-LD knowledge graph tactic: structured-data presence is not the lever; attribute-rich, entity-anchored markup is. Externally echoes the anchor-densely discipline of ADR-0010 and grounds the entity-grounding access question of manifesto Open Question 9. A non-arXiv primary source (SSRN working paper) admitted to the citation graph on the strength of its controlled design and resolvable DOI."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2602.22787",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Probing for Knowledge Attribution in Large Language Models",
+      "author": ["Ivo Brink", "Alexander Boer", "Dennis Ulmer"],
+      "datePublished": "2026-02-26",
+      "identifier": "arXiv:2602.22787",
+      "url": "https://arxiv.org/abs/2602.22787",
+      "description": "A white-box study showing that a simple linear probe on a model's hidden representations reliably classifies the dominant knowledge source behind each output — separating context-driven answers from internal-parametric ones (the AttriWiki self-supervised pipeline supplies the labels). Independent white-box corroboration that the parametric and retrieval channels of Two-Channel Attribution Diffusion (ADR-0008) and the behavioral retrieval-suppressed naming probe (ADR-0011) are separately measurable entities rather than two names for one mechanism."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2602.18733",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Prior Aware Memorization: An Efficient Metric for Distinguishing Memorization from Generalization in Large Language Models",
+      "author": ["Trishita Tiwari", "Ari Trachtenberg", "G. Edward Suh"],
+      "datePublished": "2026-02-21",
+      "identifier": "arXiv:2602.18733",
+      "url": "https://arxiv.org/abs/2602.18733",
+      "description": "Argues that existing memorization measures conflate genuine verbatim memorization with generalization over statistically common patterns, and supplies an efficient metric (Prior Aware Memorization) that separates the two without the model-retraining counterfactual-memorization methods require. Mechanistic grounding for the idea-versus-scaffold prediction (Layer 3 of the four-layer framework): what survives in the weights is the generalized pattern rather than the verbatim scaffold."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2605.18732",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency",
+      "author": ["Matthew L. Smith", "Jonathan P. Shock", "Samuel T. Segun", "Iyiola E. Olatunji", "Tegawendé F. Bissyandé"],
+      "datePublished": "2026-05-18",
+      "identifier": "arXiv:2605.18732",
+      "url": "https://arxiv.org/abs/2605.18732",
+      "description": "Evaluates 38 models on over 8,900 scholarly references and finds factual-recall quality follows a sigmoid in the log-linear combination of model size and a topic's training-data representation — those two variables alone explaining 60% of the variance across sixteen dense models (74–94% within a single family), under a superposition-inspired signal-to-noise account. Makes the parametric channel of the two-channel probe (ADR-0011) predictable at design time and sharpens the neologism caution of the vocabulary discipline (ADR-0010): a coined term has the lowest topic frequency and so sits at the harshest end of the noise floor."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2604.19113",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Think Before Writing: Feature-Level Multi-Objective Optimization for Generative Citation Visibility",
+      "author": ["Zikang Liu", "Peilan Xu"],
+      "datePublished": "2026-04-21",
+      "identifier": "arXiv:2604.19113",
+      "url": "https://arxiv.org/abs/2604.19113",
+      "description": "Observes that generative answer engines expose content through selective citation rather than ranked retrieval, and that prior generative-engine-optimization work relied on token-level rewriting with weak control over the visibility-quality trade-off; proposes FeatGEO, a feature-level multi-objective framework optimizing over interpretable structural, content, and linguistic properties instead of editing text directly. Causal grounding for the structure side of the JSON-LD knowledge graph tactic (ADR-0009): document structure, not surface text, carries citation visibility."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2603.29979",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Structural Feature Engineering for Generative Engine Optimization: How Content Structure Shapes Citation Behavior",
+      "author": ["Junwei Yu", "Mufeng Yang", "Yepeng Ding", "Hiroyuki Sato"],
+      "datePublished": "2026-03-31",
+      "identifier": "arXiv:2603.29979",
+      "url": "https://arxiv.org/abs/2603.29979",
+      "description": "Decomposes document structure into macro- (document architecture), meso- (information hierarchy), and micro- (formatting) levels and measures how each shapes selective citation by generative engines (GEO-SFE). Companion structural-GEO grounding for the JSON-LD knowledge graph tactic (ADR-0009): the citation lift attaches to structural investment, the structure-side counterpart of the presence-is-not-the-lever caveat the Fischman result makes."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2603.23219",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Decoding AI Authorship: Can LLMs Truly Mimic Human Style Across Literature and Politics?",
+      "author": ["Nasser A Alsadhan"],
+      "datePublished": "2026-03-24",
+      "identifier": "arXiv:2603.23219",
+      "url": "https://arxiv.org/abs/2603.23219",
+      "description": "Tests whether frontier models (GPT-4o, Gemini 1.5 Pro, Claude Sonnet 3.5) can mimic named literary and political authors, and finds via transformer classification, interpretable features, and perplexity that human-authored and model-generated text occupy distinguishable stylometric regions even under deliberate imitation. Cited as a tension for Authenticity (Layer 1): an authorial signature may persist through AI-mediated rephrasing, but the framework records this as a currently-discriminable difference rather than a permanent fingerprint and builds no stylometric self-measure (metric-rejection, ADR-0007)."
     }
   ]
 }

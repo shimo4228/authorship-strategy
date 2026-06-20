@@ -152,6 +152,59 @@ present author's measurements, and are kept in this lineage
 document rather than in the ADR bodies, which remain
 vendor-and-framework-neutral by convention.
 
+### Mechanistic grounding for the two channels and the idea-vs-scaffold bet (2026)
+
+A third 2026 strand reaches the same structure from the white-box,
+interpretability side rather than the behavioral citation-counting
+side. Where the citation-mechanics literature infers two channels from
+how answers are produced, this strand probes the model's internal
+representations directly — and its independent arrival at the same
+parametric/contextual split is what raises the two-channel mechanism
+([ADR-0008](adr/0008-rag-era-attribution-diffusion.md)) above a
+measurement artifact of any single method.
+
+- *Probing for Knowledge Attribution in Large Language Models* (Brink
+  et al., arXiv:2602.22787) shows that a simple linear probe trained
+  on a model's hidden representations reliably identifies the dominant
+  knowledge source behind each output — separating answers driven by
+  provided context from answers driven by internal (parametric)
+  knowledge. That a behavioral probe (the retrieval-suppressed naming
+  probe of [ADR-0011](adr/0011-two-channel-probe-protocol.md)) and a
+  white-box linear probe independently resolve the same two sources is
+  external support for the framework's premise that the parametric and
+  retrieval channels are separately measurable entities, not two names
+  for one mechanism.
+- *Prior Aware Memorization* (Tiwari et al., arXiv:2602.18733) gives
+  the idea-versus-scaffold prediction (Layer 3) a mechanistic footing.
+  It argues that existing memorization measures conflate genuine
+  verbatim memorization with generalization over statistically common
+  patterns, and supplies an efficient metric that separates the two
+  without the retraining that counterfactual-memorization methods
+  require. Read against Layer 3, it is evidence for the bet that what
+  survives in the weights is the generalized pattern rather than the
+  verbatim scaffold — the same asymmetry the framework stakes its
+  idea-preservation claim on, now stated as a property of how models
+  store sequences.
+- *Predictable Confabulations* (Smith et al., arXiv:2605.18732)
+  evaluates 38 models on over 8,900 scholarly references and finds
+  that factual-recall quality follows a sigmoid in the log-linear
+  combination of model size and a topic's representation in training
+  data — those two variables alone explaining 60% of the variance
+  across sixteen dense models from four families (74–94% within a
+  single family), under a superposition-inspired account in which
+  recall is gated by a signal-to-noise ratio. For the probe protocol
+  ([ADR-0011](adr/0011-two-channel-probe-protocol.md)) this makes the
+  parametric channel's success *predictable at design time*, and it
+  sharpens the framework's own neologism caution
+  ([ADR-0010](adr/0010-vocabulary-discipline.md)): a coined term, by
+  construction, appears in the fewest documents — the lowest topic
+  frequency — and so sits at the harshest end of the noise floor,
+  which is exactly why coinage must be anchored densely rather than
+  multiplied.
+
+These too are external published findings, kept in this lineage
+document rather than in the vendor-neutral ADR bodies.
+
 ### Structured-data efficacy literature (2026)
 
 A second 2026 strand measures whether structured data — the JSON-LD
@@ -187,6 +240,22 @@ graph carries citation.
   schema-added pages against 4,000 controls (Ahrefs, 2026) reaches the
   same muted single-factor result: no major citation uplift on any
   platform from adding schema alone.
+- *Structural Feature Engineering for Generative Engine Optimization*
+  (Yu et al., arXiv:2603.29979) and *Think Before Writing:
+  Feature-Level Multi-Objective Optimization for Generative Citation
+  Visibility* (Liu and Xu, arXiv:2604.19113) move the lever from
+  surface text to document structure. Both observe that generative
+  answer engines expose content through selective citation rather than
+  ranked retrieval, and that prior generative-engine-optimization work
+  relied on token-level rewriting; both instead optimize over
+  interpretable structural features (document architecture,
+  information hierarchy, formatting), the former decomposing structure
+  into macro-, meso-, and micro-levels. Read against the framework,
+  they ground the structured-artifact tactic on the *structure*
+  rather than the *presence* side of the Fischman caveat: it is the
+  document's structural investment, not the mere fact of markup, that
+  the citation lift attaches to — the same conclusion the
+  anchor-densely discipline reaches from the vocabulary side.
 
 The two findings are not in tension once read through the
 anchor-densely discipline
@@ -201,6 +270,52 @@ coined concept or a first-time author entity has no external record to
 point at — is recorded as Open Question 9 in
 [`manifesto.md`](manifesto.md). These remain external published
 findings, kept here rather than in the vendor-neutral ADR bodies.
+
+### Authorial-fingerprint literature (2026)
+
+The framework's top layer — Authenticity (Layer 1) — has been the
+least operationalized, defined by genuineness of thought rather than
+by any measurable property. One 2026 result bears on whether that
+layer has an external measurable correlate. *Decoding AI Authorship*
+(Alsadhan, arXiv:2603.23219) tests whether current frontier models
+(GPT-4o, Gemini 1.5 Pro, Claude Sonnet 3.5) can mimic the styles of
+named literary and political authors, and finds — through a
+combination of transformer classification, interpretable features,
+and perplexity — that human-authored and model-generated text occupy
+distinguishable regions of stylometric space even under deliberate
+imitation. The framework records this only as a *cited tension*, not
+as a tactic: it suggests an authorial signature can persist through
+AI-mediated rephrasing (relevant to whether a diffused idea still
+carries its author's hand), but the framework deliberately does not
+build a stylometric self-measure, both because Layer 1's
+metric-rejection commitment ([ADR-0007](adr/0007-human-attention-signals-not-a-metric.md))
+treats authenticity as a value rather than a score, and because the
+distinguishability is a *present* property that a later model trained
+to match human perplexity could erase — so authenticity is held as a
+currently-discriminable difference, not a permanent fingerprint.
+
+### Openness as policy and industry convergence (2026)
+
+The thesis's third axis — enclosure to openness — was independently
+arrived at, in 2026, by two external processes that did not start from
+authorship at all. The G7 Digital and Technology Ministers' *Vision on
+AI openness opportunities and shared language* (29 May 2026, Paris,
+developed with the Open Source Initiative) defines AI openness not as a
+binary but as a spectrum — Weights Available, Open Weights, Open Source
+AI, and Open Source AI with Open Data — and the Linux Foundation's
+OpenMDW-1.1 license (28 May 2026, adopted by NVIDIA across several
+model families) supplies a permissive single-bundle instrument for the
+fully-open end of that spectrum. Their convergence on a graded openness
+axis is external resonance for the framework's enclosure-to-openness
+inversion, reached from the policy and the licensing side rather than
+the authorship side. The framework claims no priority over these — it
+is convergence, not derivation — and notes the one place the axes do
+*not* coincide: the G7 spectrum grades *access* openness, whereas the
+framework's concern is *attribution* — whether origin survives the
+diffusion that openness enables. Openness opens access; it does not by
+itself resolve attribution. That gap is the framework's subject, and
+is left here as a cited convergence rather than promoted into the
+thesis, whose three-axis structure is held stable across releases.
 
 ## Sibling research lines (the recurring decisions)
 
