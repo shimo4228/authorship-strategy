@@ -15,10 +15,10 @@ accepted
 
 ## Context
 
-より大きな research program の一部である DOI 登録 artifact は、他の artifact との
+より大きな research ecosystem の一部である DOI 登録 artifact は、他の artifact との
 関係を持つ: sibling research line、自身が derive する source artifact、predecessor の
 archived version、自身の cross-platform mirror。Reader と citation-graph ingestion
-pipeline は、research program を coherently に navigate するためにこれらの関係を
+pipeline は、research ecosystem を coherently に navigate するためにこれらの関係を
 discovery する必要がある。3 つの discovery channel が利用可能:
 
 1. **Artifact の README と documentation での prose 開示** —— 関係は人間可読形式で
@@ -48,7 +48,7 @@ version-controlled で、artifact 自身を produce する workflow と同じ wo
 
 ## Decision
 
-本 research program の各 DOI 登録 artifact について、artifact 間関係は repository root の
+本 research ecosystem の各 DOI 登録 artifact について、artifact 間関係は repository root の
 `.zenodo.json` ファイルに `related_identifiers` array の entry として宣言する。以下の
 relation を使う:
 
@@ -71,7 +71,7 @@ back に宣言すべきである。Symmetry は release ごとに宣言される
 
 著者が federation を維持する規律:
 
-1. Research program に新 sibling artifact を追加するとき、新 artifact の `.zenodo.json` は references または referenced されている全ての既存 sibling への relation を宣言する
+1. Research ecosystem に新 sibling artifact を追加するとき、新 artifact の `.zenodo.json` は references または referenced されている全ての既存 sibling への relation を宣言する
 2. 各既存 sibling の `.zenodo.json` は新 artifact への reciprocal relation を宣言するように update される。可能なら同じ change set で
 3. Cross-platform mirror は mirror の canonical URL を identifier として `isVariantFormOf` で宣言される
 4. Hub repository (federation-membership-only artifact) は `isPartOf` で宣言される
@@ -129,7 +129,7 @@ archive-deposit metadata が primary surface。
 
 原観察: 2026-05 月、著者は 3 つの sibling repository (Agent Knowledge Cycle、
 Contemplative Agent、Agent Attribution Practice) に `.zenodo.json` ファイルを deploy し、
-research program の artifact 間関係を encode する cross-reference を含めた。Federation
+research ecosystem の artifact 間関係を encode する cross-reference を含めた。Federation
 pattern は、既存の prose-disclosure approach (関係は README のみで mention) が citation
 graph を artifact 間 edge のないままにしていた (関係は prose で substantial で
 well-articulated だったにもかかわらず) という観察から extract された。Retrofit operation

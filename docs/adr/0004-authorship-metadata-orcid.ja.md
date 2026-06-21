@@ -6,7 +6,7 @@ Language: [English](0004-authorship-metadata-orcid.md) | 日本語
 > version DOI では決して enrich しない。Archive service の *Auto-Update* 機能
 > (新公開された version DOI すべてを著者 record に別 work として自動 push する) は
 > 明示的に disable する。著者 record は accumulating な version-DOI 台帳ではなく、
-> research program の構造を mirror する clean な 3 行 (または小 N 行) の提示を retain する。
+> research ecosystem の構造を mirror する clean な 3 行 (または小 N 行) の提示を retain する。
 
 ## Status
 accepted
@@ -16,7 +16,7 @@ accepted
 
 ## Context
 
-DOI 登録 research program で作業する著者は典型的に persistent author identifier (ORCID iD、
+DOI 登録 research ecosystem で作業する著者は典型的に persistent author identifier (ORCID iD、
 または類似 service の同等 identifier) を持つ。Identifier は著者の公開作品が aggregate される
 anchor として機能する: identifier に対する query が *Works* listing を返し、downstream
 service (citation graph、search engine、institutional registry) がそれを canonical author
@@ -35,10 +35,10 @@ Auto-Update 下では、publish された全ての version DOI が ORCID Works l
 push される —— listing は同じ概念的 artifact の version 間で dedupe しない。なぜなら
 concept DOI と version DOI は listing にとって distinct な DOI だから。
 
-中程度の release cadence を持つ research program (例: 4 artifact × year 4 version = year 16
+中程度の release cadence を持つ research ecosystem (例: 4 artifact × year 4 version = year 16
 entry) では、Auto-Update 機構は 1 年以内に概念的 artifact あたり複数 entry を持つ ORCID
 record を produce し、entry は visibly に aggregate されない。2-3 年後には record は
-概念的に少数の research line である何かについて数十 entry を含み、*research program の
+概念的に少数の research line である何かについて数十 entry を含み、*research ecosystem の
 構造* —— 3 または 4 line、各自の concept を持つ —— は record で見えなくなる。Record は
 version DOI の長い undifferentiated な台帳として present する。
 
@@ -54,8 +54,8 @@ articulation を、より administrative な release-event-level identifier に 
 1. *Works* listing は **concept DOI のみ** を含み、概念的 research line ごとに 1 つ
 2. Archive-to-ORCID *Auto-Update* 機能は **disable**。新 version DOI は自動追加されない
 3. Archive-to-ORCID *Link Works to ORCID* 機能は **enable**。これは著者が specific work を必要に応じて手動で ORCID に push する能力を retain する (例: 新概念的 research line が作成され、その concept DOI を追加する必要がある場合)
-4. 新概念的 research line が追加されるとき、著者は新 line の concept DOI を手動で ORCID に push する。手動 push は per-line operation (per-version ではない) なので、頻度は research program の structural cadence (ほとんどの著者にとって year に 0 から数回) に matches し、release cadence (year に数回になりうる) には matches しない
-5. Persistent-identifier profile の著者の biographical text は research program を concept level で describe する (例: "3 つの research line on ...")、count は Works listing の concept DOI 数を反映する。Biographical text は DOI を直接 list しない; Works listing がその役割を果たす
+4. 新概念的 research line が追加されるとき、著者は新 line の concept DOI を手動で ORCID に push する。手動 push は per-line operation (per-version ではない) なので、頻度は research ecosystem の structural cadence (ほとんどの著者にとって year に 0 から数回) に matches し、release cadence (year に数回になりうる) には matches しない
+5. Persistent-identifier profile の著者の biographical text は research ecosystem を concept level で describe する (例: "3 つの research line on ...")、count は Works listing の concept DOI 数を反映する。Biographical text は DOI を直接 list しない; Works listing がその役割を果たす
 
 ### 適用規律
 
@@ -85,8 +85,8 @@ Auto-Update churn rate でスケールする recurring maintenance burden; sourc
 
 **Positive.**
 
-- 著者の persistent-identifier record は research program の構造に適切な概念 level で present し、個別 release event の administrative level ではない
-- Persistent identifier を query する downstream citation graph と search engine が research program の構造 (小数の clearly-distinguished line) を surface し、長い undifferentiated 台帳ではない
+- 著者の persistent-identifier record は research ecosystem の構造に適切な概念 level で present し、個別 release event の administrative level ではない
+- Persistent identifier を query する downstream citation graph と search engine が research ecosystem の構造 (小数の clearly-distinguished line) を surface し、長い undifferentiated 台帳ではない
 - 手動 push step は 概念的 research line cadence (rare) でのみ起き、release cadence (frequent) では起きない
 
 **Negative.**
@@ -100,7 +100,7 @@ Auto-Update churn rate でスケールする recurring maintenance burden; sourc
 原観察: 2026-05 月、著者は personal ORCID record (iD `0009-0002-6168-4162`) を 3 つの
 sibling research line の 3 つの concept DOI で enrich し、対応する citation-graph service の
 profile (DataCite Profiles) で Auto-Update を OFF に意図的に設定し、Link Works to ORCID は
-enable のまま retain した。Choice はその時点で documented され、research program の release
+enable のまま retain した。Choice はその時点で documented され、research ecosystem の release
 cadence を考慮すると Auto-Update を enable すると ORCID record を 1 年以内に数十 entry に
 膨張させ、framework の authenticity layer が present することにコミットする 3 line 構造を
 obscure するという rationale で justify された。
@@ -114,5 +114,5 @@ citation-graph service の author search は両方を surface する。*concept 
 次の著者は同じ偽仮説に misled されるべきでない。
 
 Decision は corrective action を standing maintenance policy に汎化する: persistent author
-record は research program が operate する概念 level でキュレートされ、release-level
+record は research ecosystem が operate する概念 level でキュレートされ、release-level
 identifier の administrative churn は design でその record から exclude される。

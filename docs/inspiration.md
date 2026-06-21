@@ -323,7 +323,7 @@ The framework was extracted from four sibling research lines
 maintained by the same author. The four lines supplied the
 recurring tactical decisions that became the framework's seven
 ADRs. Each sibling line is independent in content; the framework
-is downstream of all four. (The research program has since added
+is downstream of all four. (The research ecosystem has since added
 a fifth line, Attention, Not Self, which postdates the extraction
 and so is not among the four that supplied the recurring decisions.)
 

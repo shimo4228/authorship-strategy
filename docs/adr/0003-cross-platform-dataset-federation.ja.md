@@ -97,7 +97,7 @@ artifact との interaction を decide する前に prose disclosure を navigat
 ingestion pipeline は prose disclosure を全く読まない。各 platform 上での structured
 cross-reference が必要。
 
-**単一の federated metadata document ("research program manifest") を deploy し、各 platform の
+**単一の federated metadata document ("research ecosystem manifest") を deploy し、各 platform の
 README からそれにリンクする。** 却下: これは single point of failure (manifest の availability が
 federation の availability) を生み、reader が manifest の存在を知ることを要する。Federation は
 別 index からのみではなく、どの sibling の local metadata からも discoverable であるべき。
@@ -127,7 +127,7 @@ reader に対して artifact を unreachable にしていた (LLM training pipel
 に ingest する。Single-platform deployment はその ingestion path から artifact を効果的に
 exclude していた) という観察から extract された。
 
-Decision は pattern を standing policy に汎化する: 本 research program の canonical な
+Decision は pattern を standing policy に汎化する: 本 research ecosystem の canonical な
 structured-data artifact は全 3 種類の platform type (Git host、DOI archive、dataset platform)
 に各 platform 上で structured cross-reference 付きで deploy される。規律は新 artifact に
 作成時に適用し、既存 artifact の reach が single-platform deployment で measurably impaired

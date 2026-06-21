@@ -16,12 +16,12 @@ accepted
 
 ## Context
 
-A DOI-registered artifact that is part of a larger research program has
+A DOI-registered artifact that is part of a larger research ecosystem has
 relationships with other artifacts: sibling research lines, source
 artifacts it derives from, archived versions of its predecessors,
 cross-platform mirrors of itself. Readers and citation-graph ingestion
 pipelines need to discover these relationships in order to navigate the
-research program coherently. Three discovery channels are available:
+research ecosystem coherently. Three discovery channels are available:
 
 1. **Prose disclosure in the artifact's README and documentation** —
    relationships are mentioned in human-readable form. This channel reaches
@@ -56,7 +56,7 @@ through the same workflow that produces the artifact itself.
 ## Decision
 
 Inter-artifact relationships for each DOI-registered artifact in this
-research program are declared in a `.zenodo.json` file at the repository
+research ecosystem are declared in a `.zenodo.json` file at the repository
 root, as entries in the `related_identifiers` array. The following
 relations are used:
 
@@ -80,7 +80,7 @@ citation graph on the next tagged release of each artifact.
 
 The author's discipline for maintaining federation:
 
-1. On adding a new sibling artifact to the research program, the new
+1. On adding a new sibling artifact to the research ecosystem, the new
    artifact's `.zenodo.json` declares relations to all existing siblings
    it references or is referenced by.
 2. Each existing sibling's `.zenodo.json` is updated to declare the
@@ -158,7 +158,7 @@ implementation) but archive-deposit metadata is the primary surface.
 Originating observation: in May 2026, the author deployed `.zenodo.json`
 files in three sibling repositories (Agent Knowledge Cycle, Contemplative
 Agent, Agent Attribution Practice), with cross-references encoding the
-research program's inter-artifact relationships. The federation pattern
+research ecosystem's inter-artifact relationships. The federation pattern
 was extracted from observing that the existing prose-disclosure approach
 (relationships mentioned only in READMEs) left the citation graph empty
 of any inter-artifact edges, even though the relationships were

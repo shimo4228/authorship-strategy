@@ -7,7 +7,7 @@ Language: English | [日本語](0004-authorship-metadata-orcid.ja.md)
 > *Auto-Update* feature (which would automatically push every newly
 > published version DOI into the author record as a separate work) is
 > explicitly disabled. The author record retains a clean three-line (or
-> small-N-line) presentation that mirrors the research program's
+> small-N-line) presentation that mirrors the research ecosystem's
 > structure, rather than an accumulating version-DOI ledger.
 
 ## Status
@@ -18,7 +18,7 @@ accepted
 
 ## Context
 
-An author working in a DOI-registered research program typically holds a
+An author working in a DOI-registered research ecosystem typically holds a
 persistent author identifier (an ORCID iD, or an equivalent identifier
 on a similar service). The identifier acts as the anchor under which the
 author's published works are aggregated: a query against the identifier
@@ -43,13 +43,13 @@ the ORCID Works listing as a *separate work* — the listing does not
 dedupe across versions of the same conceptual artifact, because the
 concept DOI and the version DOI are distinct DOIs to the listing.
 
-For a research program with a moderate release cadence (say, four
+For a research ecosystem with a moderate release cadence (say, four
 artifacts × four versions per year = sixteen entries per year), the
 Auto-Update mechanism produces an ORCID record that, within a year, has
 multiple entries per conceptual artifact and the entries are not
 visibly aggregated. After two or three years the record contains
 several dozen entries for what is conceptually a small number of
-research lines, and the *structure of the research program* — three or
+research lines, and the *structure of the research ecosystem* — three or
 four lines, each with its own concept — is no longer visible in the
 record. The record presents as a long, undifferentiated ledger of
 version DOIs.
@@ -77,11 +77,11 @@ is maintained as follows:
 4. When a new conceptual research line is added, the author manually
    pushes the new line's concept DOI to ORCID. The manual push is a
    per-line operation (not per-version), so its frequency matches the
-   research program's structural cadence (zero to a few per year for
+   research ecosystem's structural cadence (zero to a few per year for
    most authors), not its release cadence (potentially several per
    year).
 5. The author's biographical text on the persistent-identifier profile
-   describes the research program at the concept level (e.g., "three
+   describes the research ecosystem at the concept level (e.g., "three
    research lines on ..."), with the count reflecting the number of
    concept DOIs in the Works listing. The biographical text does not
    list DOIs directly; the Works listing serves that purpose.
@@ -126,10 +126,10 @@ with the Auto-Update churn rate; preventing the churn at the source
 **Positive.**
 
 - The author's persistent-identifier record presents at the conceptual
-  level appropriate to the research program's structure, rather than at
+  level appropriate to the research ecosystem's structure, rather than at
   the administrative level of individual release events.
 - Downstream citation graphs and search engines that query the
-  persistent identifier surface the research program's structure (a
+  persistent identifier surface the research ecosystem's structure (a
   small number of clearly-distinguished lines) rather than a long
   undifferentiated ledger.
 - The manual push step occurs only at conceptual-research-line
@@ -160,7 +160,7 @@ three sibling research lines, then deliberately set Auto-Update to OFF
 in the corresponding citation-graph service's profile (DataCite
 Profiles), retaining Link Works to ORCID in the enabled state. The
 choice was documented at the time with the rationale that enabling
-Auto-Update would, given the research program's release cadence,
+Auto-Update would, given the research ecosystem's release cadence,
 inflate the ORCID record to several dozen entries within a year,
 obscuring the three-line structure that the framework's authenticity
 layer commits to presenting.
@@ -178,6 +178,6 @@ should not be misled by the same false hypothesis.
 
 The decision generalizes the corrective action into a standing
 maintenance policy: the persistent author record is curated at the
-conceptual level the research program operates at, and the administrative
+conceptual level the research ecosystem operates at, and the administrative
 churn of release-level identifiers is excluded from that record by
 design.

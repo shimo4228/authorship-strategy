@@ -644,7 +644,7 @@
       "@id": "https://github.com/shimo4228/shimo4228",
       "@type": "EcosystemRepo",
       "name": "Research Program Hub",
-      "description": "Metadata-only federation hub at the center of the shimo4228 research program. Aggregates cross-references to sibling research lines without containing line-specific content itself. Not a research line; treating it as one collapses the distinction between content and metadata.",
+      "description": "Metadata-only federation hub at the center of the shimo4228 research ecosystem. Aggregates cross-references to sibling research lines without containing line-specific content itself. Not a research line; treating it as one collapses the distinction between content and metadata.",
       "url": "https://github.com/shimo4228/shimo4228",
       "hasPart": "https://github.com/shimo4228/authorship-strategy"
     },

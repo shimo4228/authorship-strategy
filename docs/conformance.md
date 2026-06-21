@@ -95,7 +95,7 @@ identifier string and confirm the version-independent form is used uniformly
 
 **What to check.** A single author (or clearly named author set) is attributable
 across the artifact, tied to a persistent author identifier (such as a
-researcher identifier service record), and the author identifier record is
+contributor-identifier service record), and the author identifier record is
 enriched only with version-independent artifact identifiers — not auto-populated
 with every version.
 

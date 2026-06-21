@@ -280,14 +280,14 @@ externalization of judgment.
 ## Where this thesis came from
 
 The framework was extracted from operating four DOI-registered
-sibling research repositories in the same author's research
-program (Agent Knowledge Cycle, Contemplative Agent, Agent
+sibling research repositories the author maintains while exploring
+AI-era authorship strategy (Agent Knowledge Cycle, Contemplative Agent, Agent
 Attribution Practice, and the federation hub). It was not
 deduced from a prior literature; it was articulated by noticing
 recurring decisions across the four lines, formalized as a
 framework, and re-expressed in harness-neutral form so it can be
 adopted by another author without inheriting the original
-sibling-line content. The research program has since grown to
+sibling-line content. The research ecosystem has since grown to
 include a fifth research line, Attention, Not Self, which postdates
 the framework's extraction and so did not contribute to it.
 

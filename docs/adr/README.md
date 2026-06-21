@@ -37,8 +37,8 @@ platforms) so the network is discoverable independent of which platform a
 reader enters from. Each ADR is independently adoptable, but the strongest
 form of the discipline applies all three.
 
-ADRs 0004-0005 are **maintenance-discipline ADRs**: ADR-0004 about who the
-author *is* (ORCID enrichment policy), ADR-0005 about who the author *writes
+ADRs 0004-0005 are **maintenance-discipline ADRs**: ADR-0004 about how the
+author's public record is *presented* (ORCID enrichment policy), ADR-0005 about who the author *writes
 for* (locale-mirror retirement policy). Both make the same underlying move —
 maintenance cost is amortized against actual evidence, not against speculative
 prospective state.

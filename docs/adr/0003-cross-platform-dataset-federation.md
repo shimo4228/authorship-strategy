@@ -121,7 +121,7 @@ before deciding how to interact with the artifact, and ingestion pipelines
 do not read prose disclosure at all. Structured cross-references on each
 platform are necessary.
 
-**Deploy a single federated metadata document (a "research program
+**Deploy a single federated metadata document (a "research ecosystem
 manifest") and link to it from each platform's README.** Rejected: this
 creates a single point of failure (the manifest's availability is the
 federation's availability) and requires readers to know that the manifest
@@ -171,7 +171,7 @@ single-platform deployment effectively excluded the artifact from that
 ingestion path.
 
 The decision generalizes the pattern into a standing policy: any
-canonical structured-data artifact in this research program is deployed
+canonical structured-data artifact in this research ecosystem is deployed
 to all three platform types (Git host, DOI archive, dataset platform)
 with structured cross-references on each platform. The discipline
 applies to new artifacts at creation time, not retrofitted to existing

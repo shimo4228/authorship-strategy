@@ -1,8 +1,8 @@
-# Adoption: Applying the Framework to Your Own Research Program
+# Adoption: Applying the Framework to Your Own Idea-Rescue Work
 
 This is a reimplementation guide. It describes how an author other
 than the original one applies the [thesis](thesis.md)'s framework to
-their own research program — how to go from reading the doctrine to
+their own idea-rescue work — how to go from reading the doctrine to
 running it. It is the action path that turns the abstract framework
 into the steps a second author can follow.
 
@@ -32,10 +32,10 @@ read them first to confirm your work is in scope.
 
 ### The single-author-normative caveat
 
-The framework was extracted from a single author's research program
+The framework was extracted from a single author's research ecosystem
 and is, in the manifesto's term, **single-author normative**. Every
 tactic below was a decision one author could make without coordinating
-with co-authors. If your research program has multiple authors, the
+with co-authors. If your work has multiple authors, the
 framework's open questions about co-authored identifier registration,
 disagreement on tactical decisions, and authorship-claim scope across
 abstraction levels are unresolved — see
@@ -136,7 +136,7 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) | Keep a private planning ledger and a public, effect-claim-free intervention timeline, never merged; run a periodic gap-review. |
 
 The original author's worked implementation of this entire path is the
-research program the [empirical layer](empirical/README.md) observes —
+research ecosystem the [empirical layer](empirical/README.md) observes —
 the framework's own
 [abstract-doctrine-plus-worked-implementation pair](glossary.md#worked-implementation).
 The doctrine is this repository; the worked implementation is the
@@ -195,8 +195,8 @@ weaker under LLM-mediated diffusion.
 
 ## Where to go next
 
-- **[`conformance.md`](conformance.md)** — a self-check for whether a
-  research program is operating the framework consistently across all
+- **[`conformance.md`](conformance.md)** — a self-check for whether an
+  adopter is operating the framework consistently across all
   three axes (a strategy mixing axes is, by the thesis, internally
   inconsistent).
 - **[`implementations.md`](implementations.md)** — the registry of

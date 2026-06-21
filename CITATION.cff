@@ -77,7 +77,7 @@ references:
     title: "Agent Knowledge Cycle (AKC)"
     repository-code: "https://github.com/shimo4228/agent-knowledge-cycle"
     doi: "10.5281/zenodo.19200726"
-    notes: "Sibling research line in the shimo4228 research program. AKC defines the six-phase bidirectional growth loop; this repository is one tactical instantiation of how AKC outputs are made citable and discoverable."
+    notes: "Sibling research line in the shimo4228 research ecosystem. AKC defines the six-phase bidirectional growth loop; this repository is one tactical instantiation of how AKC outputs are made citable and discoverable."
     authors:
       - family-names: Shimomoto
         given-names: Tatsuya

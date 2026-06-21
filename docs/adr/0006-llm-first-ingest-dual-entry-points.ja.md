@@ -163,7 +163,7 @@ Conservative move は初回 release 時点で form を deploy することであ
 
 ## Lineage
 
-Originating observation: 著者の 5 line research program (federation hub と 4 つの
+Originating observation: 著者の 5 line research ecosystem (federation hub と 4 つの
 sibling research line) を通じて、各 artifact が operational maturity に達したのは
 prose-form navigator と concept-form graph の両者が存在し同期されたまさにその時点で
 あった。Navigator しかない artifact は会話型 LLM では retrievable だが
@@ -174,7 +174,7 @@ structured-data ingestion には現れるが、会話型 LLM の応答で author
 
 本著者が採用している convention は Answer.AI の `llms.txt` convention (prose-form
 navigator) と schema.org ベースの JSON-LD knowledge graph (concept-form graph) で
-ある。両者は著者の research program で独立した component skill
+ある。両者は著者の research ecosystem で独立した component skill
 (`claude-skill-llms-txt-writer` と `claude-skill-jsonld-knowledge-graph`) として
 externalized されており、本 repository の外で canonical-maintained され、各 sibling
 line に独立に採用される。Component-skill の externalization は本 ADR の tool-agnostic

@@ -12,10 +12,10 @@ to extend it or to operate within its current scope.
 ## Open question 1: How does the framework scale beyond a single author?
 
 The framework was extracted from a single author's research
-program (four research lines at the time of extraction; the
-program now comprises five, the fifth being Attention, Not Self). The extracted decisions
+ecosystem (four research lines at the time of extraction; it
+now comprises five, the fifth being Attention, Not Self). The extracted decisions
 are, by construction, decisions one author could plausibly make
-without coordination. Multi-author research programs introduce
+without coordination. Multi-author research ecosystems introduce
 considerations the framework does not currently address:
 
 - **Co-authored DOI registration**: when two or more authors share an idea, whose ORCID anchors the citation chain? Concept DOI registration assumes one minting account.
@@ -24,7 +24,7 @@ considerations the framework does not currently address:
 
 A subsequent release may incorporate explicit multi-author
 adaptations. For now, the framework is *single-author normative*
-and adopters with multi-author research programs should treat the
+and adopters with multi-author research ecosystems should treat the
 decisions as guidance rather than prescription.
 
 ## Open question 2: What signal disambiguates LLM-mediated adoption from incidental traffic?

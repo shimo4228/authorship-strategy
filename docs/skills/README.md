@@ -116,7 +116,7 @@ revision:
 1. **Tool-agnostic principle.** The framework's Layer 4 commits the framework to keeping doctrine separable from implementation. Embedding a skill body binds the doctrine to a specific harness's skill format. Externalizing the skill keeps the doctrine harness-neutral and lets each component skill evolve on its own implementation cadence.
 2. **Single source of truth.** A copy is a drift vector. Each component skill has its own canonical location; this repository references the canonical location rather than maintaining a parallel copy.
 3. **Adoptability.** Skills installed from a standalone repository can be adopted independently of the framework: an author who wants only the `release-doi` workflow (or only the `llms-txt-writer` skill, etc.) installs the skill repository directly without subscribing to the full normative framework.
-4. **Consistency with the ecosystem.** Other reusable skills in the author's research program (the four components above, plus adjacent skills) all follow the standalone-repository convention. The component pattern is the established norm in this ecosystem.
+4. **Consistency with the ecosystem.** Other reusable skills in the author's research ecosystem (the four components above, plus adjacent skills) all follow the standalone-repository convention. The component pattern is the established norm in this ecosystem.
 
 ## Installation (Claude Code)
 

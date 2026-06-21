@@ -7,7 +7,7 @@ Language: English | [日本語](README.ja.md)
 > **Authorship Strategy** — a normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion.
 
 If your readers include LLMs — as training data, as in-context consultants,
-as the discovery layer other researchers consult — then the strategies that
+as the discovery layer others consult — then the strategies that
 protect authorship have inverted. Closing your work off *reduces*, not
 increases, the chance that a future trace lands on you. This repository
 records the inverted strategy: what it is, why it holds, and fifteen tactical

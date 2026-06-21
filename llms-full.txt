@@ -532,7 +532,7 @@ between content and metadata.
 
 To make the limits of the framework explicit:
 
-- The framework is **single-author normative**. The fifteen ADRs were extracted from one author's operation; adapting them to multi-author research programs requires extensions the framework does not currently offer.
+- The framework is **single-author normative**. The fifteen ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
 - The empirical layer is **case study with explicit limitations**, not validation. There is no pre-versus-post intervention contrast, no controlled comparison, no multi-author replication.
 - The framework is **time-bound by its substrate**. LLM capability shifts on the order of twelve to twenty-four months may obsolete specific Layer 4 tactics; the framework explicitly anticipates retirement.
 - The framework does **not extend AAP's notion of attribution**. The two meanings ("credit for source" here, "accountability for action" in AAP) are intentionally disjoint.
@@ -572,7 +572,7 @@ independently.
 ## Q: How does this repository use the word "sibling"?
 
 To avoid term overloading, this repository reserves *sibling* for the
-research-program level only — it refers to the five DOI-registered
+research-ecosystem level only — it refers to the five DOI-registered
 research lines (AKC, Contemplative Agent, AAP, Attention Not Self, this
 one) as peers of one another. At the skill level, the terms used are *component*
 (operationalizes named doctrine content), *peer component* (a fellow

@@ -227,12 +227,12 @@ Framework は道具であって、判断の外部化ではない。
 
 ## この thesis の出自
 
-Framework は同じ著者の research program に属する 4 つの DOI 登録 sibling 研究
+Framework は、AI 時代の著者戦略を探求するために著者が運用する 4 つの DOI 登録 sibling 研究
 repo (Agent Knowledge Cycle、Contemplative Agent、Agent Attribution Practice、
 連合 hub) の運用から抽出された。先行文献から演繹されたのではなく、4 つの line に
 わたる recurring decision に気づくことで articulate され、framework として
 formalize され、harness-neutral な形式に再表現された。これにより、他の著者が
-原 sibling-line content を継承せずに採用できる。Research program は以降、
+原 sibling-line content を継承せずに採用できる。Research ecosystem は以降、
 framework 抽出後に加わった 5 つ目の research line、Attention, Not Self を
 含むまで成長した（抽出には寄与していない）。
 

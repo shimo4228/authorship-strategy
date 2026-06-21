@@ -35,7 +35,7 @@ federation を非 DOI platform (Git host、dataset platform) に拡張し、read
 どの platform から入っても network が discoverable になるようにする。各 ADR は
 独立に採用可能だが、規律の最強形は 3 つすべてを適用する。
 
-ADR 0004-0005 は **maintenance-discipline ADR** である: ADR-0004 は著者が誰 *である* か
+ADR 0004-0005 は **maintenance-discipline ADR** である: ADR-0004 は著者の公開 record をどう *提示* するか
 (ORCID enrichment policy)、ADR-0005 は著者が誰 *のために* 書くか (locale-mirror
 retirement policy) について。両方とも同じ基底の動きをする —— 維持コストは推測される
 将来状態ではなく実際の evidence で amortize される。
