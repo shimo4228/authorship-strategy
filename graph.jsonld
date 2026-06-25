@@ -907,6 +907,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2601.01576",
+      "sameAs": "https://www.wikidata.org/wiki/Q140356087",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "OpenNovelty: An LLM-powered Agentic System for Verifiable Scholarly Novelty Assessment",
       "author": ["Ming Zhang", "Kexin Tan", "Yueyuan Huang", "Yujiong Shen", "Chunchun Ma", "Li Ju", "Xinran Zhang", "Yuhui Wang", "Wenqing Jing", "Jingyi Deng", "Huayu Sha", "Binze Hu", "Jingqi Tong", "Changhao Jiang", "Yage Geng", "Yuankai Ying", "Yue Zhang", "Zhangyue Yin", "Zhiheng Xi", "Shihan Dou", "Tao Gui", "Qi Zhang", "Xuanjing Huang"],
@@ -918,6 +919,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2511.00476",
+      "sameAs": "https://www.wikidata.org/wiki/Q140356090",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Remembering Unequally: Global and Disciplinary Bias in LLM Reconstruction of Scholarly Coauthor Lists",
       "author": ["Ghazal Kalhor", "Afra Mashhadi"],
