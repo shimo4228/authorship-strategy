@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-06-26
+
+Records four ADRs since v0.7.0 — ADR-0016 (genre-split placement, routing
+the canonical by genre: essays on a repository-corpus intrinsic identifier,
+papers on the concept DOI) and the doctrine-hardening cluster ADR-0017 /
+ADR-0018 / ADR-0019, three decisions that add no new tactic surface but
+tighten the framework's existing commitments against its own deferred
+homework and the 2026 literature that made the homework answerable. The
+citation-graph layer deepens with a doctrine-layer citation harvest, and
+the framework reframes its author as a practitioner exploring the strategy
+rather than a researcher. ADR count 15 → 19 across all carriers.
+
+### Added
+
+- v0.8.0 version DOI (for reproducibility citation only): *(version DOI placeholder — replaced with the minted v0.8.0 DOI post-release)*. Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
+- ADR-0016: Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical. Records which genre takes which canonical, a routing the identifier ADRs (0001, 0013) left open: the essay genre's canonical is the author's version-controlled repository corpus, its priority claim resting on the intrinsic content-derived identifier under a public-domain dedication (ADR-0015); the paper genre's canonical is the concept DOI (ADR-0001). Syndicated essay copies are bound by entity federation, not by a platform canonical-URL tag whose effect on LLM-mediated credit is unverified. Corpus membership is gated by an authenticity criterion (Layer 1); a load-bearing essay idea is promoted to a concept-DOI deposit when it graduates into a paper (Layer 3). Instantiates ADR-0013's DOI-impractical-genre clause and complements ADR-0015. ADR count 15 → 16 across all carriers.
+- ADR-0017: Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes. Operationalizes manifesto open question 8 by pairing each acknowledged failure mode with a diagnostic signal and a recovery strategy: reach without recognition (detected when the naming probe carries the concept but not the author; recovered by anchoring vocabulary densely, narrowing the origin claim, and accepting it may be a structural price), over-publication (detected from an identifier portfolio carrying superseded versions of one idea; recovered by the concept-DOI + version discipline, ADR-0001/0004), and under-investment in worked implementation (detected from a doctrine-heavy, implementation-light portfolio; recovered by closing the Layer 3 doctrine-plus-implementation pair). A load-bearing caveat: a diagnostic is a failure-*detector*, never a success metric, so it cannot collide with ADR-0007's metric rejection.
+- ADR-0018: Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It. Codifies the framework's informal origin-claim-scope discipline (the scope side of ADR-0010) into a procedure: before publishing an origin claim in a durable artifact, search prior art for work that would refute it, and rescope any claim that survives only because it was never tested — one that is unfalsifiable or already anticipated — to its narrowest defensible form. The criterion is falsifiability; the check is binary, feeding a human rescope rather than a score, and only ever narrows a claim. A humility instrument consistent with Layer 1, internalizing a verification an external evidence-grounded novelty-assessment system demonstrated feasible, claiming no priority over it.
+- ADR-0019: Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content. Draws the boundary the 2026 structured-data efficacy literature forces: optimizing the transmission path (document architecture, entity anchoring, dense vocabulary anchoring; ADR-0009, ADR-0010) is legitimate because it changes how an idea travels, while deforming the content to win citations (padded attribute-richness, keyword-stuffing, claims shaped to a channel's reward function) is prohibited because it changes what the idea is. Content deformation is a Layer 1 violation reinforced by ADR-0007 (citation and visibility are not success metrics). ADR-0017–0019 form the doctrine-hardening cluster; ADR count 16 → 19 across all carriers; graph.jsonld gains three ADR nodes (extends / groundedIn edges) + Tactics-layer instantiations.
+- Doctrine-layer citation harvest: the backlog of 2026 papers the framework cites is federated across all four citation layers (graph.jsonld ExternalReference / `.zenodo.json` `references` / Wikidata `cites work` / concept `groundedIn`). New primary sources include a white-box knowledge-attribution probe (arXiv:2602.22787), a memorization-versus-generalization metric (arXiv:2602.18733), a factual-recall-scaling result (arXiv:2605.18732), GEO structural-feature work (arXiv:2604.19113, arXiv:2603.29979), an authorial-stylometry result (arXiv:2603.23219), an agentic novelty-assessment system (arXiv:2601.01576), and a coauthor-recall-bias study (arXiv:2511.00476); two new Wikidata paper items federate the last two via `cites work`. Each empirical figure was verified against an open mirror before entering a durable artifact; all numeric findings are kept in `docs/inspiration.md`, not in the vendor-neutral ADR bodies.
+- `docs/inspiration.md`: subsections grounding the new ADRs — a mechanistic-grounding strand for the two channels and the idea-versus-scaffold bet, an authorial-fingerprint citation (held as a tension, not a tactic), and an "Openness as policy and industry convergence (2026)" subsection citing the G7 AI-openness spectrum and the Linux Foundation OpenMDW-1.1 license as external resonance for the enclosure-to-openness axis (framed as convergence, not priority).
+
+### Changed
+
+- The framework's author is reframed throughout as a *practitioner exploring the strategy of being a known author under AI-mediated diffusion*, not as a researcher; the research lines are the means, not the purpose. Proposal scope is no longer narrowed to academic channels.
+- Research-line abbreviations (AKC, AAP) are made referenceable across the carriers.
+- `docs/empirical/implementation-log.md`: a new *Human-reader back-traceability* category projects the 2026-06-21 and 2026-06-25 supply-side interventions (ecosystem-hub back-links on the research-line READMEs, a `noscript` viewer fallback, cross-surface author-identity unification, and the essay-corpus repository de-islanding) — pull-only, effect-claim-free, consistent with ADR-0007; plus the v0.7.0 Simplified-Chinese machine-readable anchor.
+- `CLAUDE.md`: the diffusion-tracking review trigger is routed to the gap-review skill, and the sibling-line cross-references record the now-live Attention, Not Self Hugging Face dataset mirror.
+
 ## [0.7.0] - 2026-06-17
 
 Records two ADRs since v0.6.0 — ADR-0014 (the two-tier implementation
