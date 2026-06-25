@@ -83,6 +83,21 @@ the abstraction level ADR-0012 sets; this log does not re-expose them.
 |---|---|---|
 | First run of the two-channel probe protocol (parametric zero baseline, negative-control floor, first retrieval observations) | 2026-06-12 | ADR-0011, probe-baseline-2026-06.md |
 
+### Human-reader back-traceability (manifesto Open Questions 8–9; ADR-0007 pull-not-push)
+
+These interventions address the *supply side* of the gap between reach and
+recognition: they do not open a new channel but make an already-reachable
+surface route a human reader — or a non-rendering crawler — back to the
+ecosystem hub and the author's persistent identity. They are pull-only —
+no outreach, posting, or notification — consistent with the
+metric-rejection decision (ADR-0007).
+
+| Intervention | Date | Recorded in |
+|---|---|---|
+| Human-readable ecosystem-hub back-links added to the research-line repository READMEs (English and Japanese), surfacing the hub to readers where it had been reachable only as a machine file or omitted | 2026-06-21 | manifesto OQ8 |
+| `noscript` fallback exposing hub and sibling links on a JavaScript-only viewer (previously visible to non-rendering crawlers as a title only) | 2026-06-21 | manifesto OQ8 |
+| Author-profile surfaces on developer-publishing and newsletter platforms edited to route readers back to the hub and ORCID, and the cross-surface author handle and display name unified to a single canonical form (complementing the 2026-06-15 machine-layer `sameAs` federation) | 2026-06-25 | citation-graph federation / entity tactic; manifesto OQ8–9 |
+
 ## What the deployment order shows
 
 The version-control dates carry a pattern worth recording, because the
@@ -125,6 +140,10 @@ successes only.
   appear through the scholarly surfaces already in place; the endorsement
   path is approached conventionally rather than through paid or bulk
   channels.
+- **A national research-community profile registry.** Application
+  pending; once active it would add a human-reader registry surface in a
+  language region the ecosystem already writes in, routed back to the hub
+  and ORCID.
 
 ## Explicitly out of scope
 
