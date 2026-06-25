@@ -26,6 +26,9 @@ top-down に prescribe されたものではない。
 | [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger と定期 gap-review による実装トラッキング | accepted |
 | [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ | accepted |
 | [0016](0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical | accepted |
+| [0017](0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— 承認済み 3 failure mode それぞれの detector と recovery 戦略 | accepted |
+| [0018](0018-claim-falsifiability-criterion.ja.md) | Origin-Claim Falsifiability —— durable artifact に公開する前に priority claim を prior art に対して test する | accepted |
+| [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -179,6 +182,26 @@ piece) で gate し、essay 中の load-bearing な idea は paper へ昇格す�
 concept-DOI deposit へ promote する (Layer 3)。ADR-0013 の
 DOI-impractical-genre 条項を具体的に instantiate し、ADR-0015 の
 license-by-audience rule を補完して、両者の間の placement gap を close する。
+
+ADR 0017-0019 は **doctrine-hardening cluster** である: 新しい tactic surface を
+足さず、framework 自身が defer した宿題と、その宿題を答え可能にした 2026 年の
+literature に対して、既存の commitment を締める 3 つの decision。ADR-0017 は
+manifesto の 8 番目の open question を回収する —— 承認済み 3 failure mode
+(reach without recognition / over-publication / under-investment in worked
+implementation) それぞれに診断シグナルと recovery 戦略を記録し、診断は
+failure-*detector* であって success metric では決してない、という load-bearing な
+caveat の下に置くので ADR-0007 の metric-rejection と衝突しえない。ADR-0018 は
+非形式な origin-claim-scope discipline (ADR-0010 の scope 側) を手続きにする:
+origin claim は公開前に prior art に対して test され、最も narrow な defensible
+形に rescope される —— 基準は falsifiability で、claim を narrow にするのみの
+humility instrument だ。ADR-0019 は 2026 年の structured-data efficacy
+literature が強いる境界を引く: *transmission path* の optimize (structure、
+entity anchoring、distinctive vocabulary の dense anchoring、ADR-0009,
+ADR-0010) は legitimate で、citation を勝ち取るための *content* の変形は
+ADR-0007 が補強する Layer 1 violation である。3 つは ingest 面や identifier 面を
+extend するのではなく Layer 1 (authenticity) と metric-rejection decision の下に
+座る —— diffusion tactic が stack 全体の守る authenticity を corrode するのを
+防ぐ。
 
 ## Format
 

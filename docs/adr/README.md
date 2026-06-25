@@ -26,6 +26,9 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review | accepted |
 | [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form | accepted |
 | [0016](0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical | accepted |
+| [0017](0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes | accepted |
+| [0018](0018-claim-falsifiability-criterion.md) | Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It | accepted |
+| [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -198,6 +201,27 @@ and a load-bearing essay idea is promoted to a concept-DOI deposit when it
 graduates into a paper (Layer 3). It instantiates ADR-0013's
 DOI-impractical-genre clause concretely and complements ADR-0015's
 license-by-audience rule, closing the placement gap between the two.
+
+ADRs 0017-0019 are the **doctrine-hardening cluster**: three decisions that
+add no new tactic surface but tighten the framework's existing commitments
+against the framework's own deferred homework and the 2026 literature that
+made the homework answerable. ADR-0017 collects the manifesto's eighth open
+question — for each of the three acknowledged failure modes (reach without
+recognition, over-publication, under-investment in worked implementation) it
+records a diagnostic signal and a recovery strategy, under a load-bearing
+caveat that a diagnostic is a failure-*detector*, never a success metric, so
+it cannot collide with ADR-0007's metric rejection. ADR-0018 turns the
+informal origin-claim-scope discipline (the scope side of ADR-0010) into a
+procedure: an origin claim is tested against prior art before publication and
+rescoped to its narrowest defensible form, the criterion being falsifiability
+— a humility instrument that only ever narrows a claim. ADR-0019 draws the
+boundary the 2026 structured-data efficacy literature forces: optimizing the
+*transmission path* (structure, entity anchoring, dense vocabulary anchoring,
+ADR-0009, ADR-0010) is legitimate, while deforming the *content* to win
+citations is a Layer 1 violation reinforced by ADR-0007. The three sit
+beneath Layer 1 (authenticity) and the metric-rejection decision rather than
+extending the ingest or identifier surfaces — they keep the diffusion tactics
+from corroding the authenticity the whole stack protects.
 
 ## Format
 

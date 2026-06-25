@@ -10,7 +10,7 @@ If your readers include LLMs — as training data, as in-context consultants,
 as the discovery layer others consult — then the strategies that
 protect authorship have inverted. Closing your work off *reduces*, not
 increases, the chance that a future trace lands on you. This repository
-records the inverted strategy: what it is, why it holds, and sixteen tactical
+records the inverted strategy: what it is, why it holds, and nineteen tactical
 decisions extracted from operating a four-repository DOI-registered research
 ecosystem.
 
@@ -57,7 +57,7 @@ operational implications form the four-layer framework, also in the
 thesis document. The framework's open questions are catalogued in
 [`docs/manifesto.md`](docs/manifesto.md).
 
-## The sixteen tactical ADRs
+## The nineteen tactical ADRs
 
 | ADR | Decision |
 |-----|----------|
@@ -77,8 +77,11 @@ thesis document. The framework's open questions are catalogued in
 | [0014](docs/adr/0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review — the one ADR about *operating* the framework rather than a tactic it deploys. A private implementation ledger holds operational status, ranked candidate interventions, and working detail; the public intervention timeline is its dated, effect-claim-free projection (the two are never merged). A periodic gap-review compares deployed tactics against the Layer 4 catalog and the open questions to generate the next proposals. The review procedure lives in the framework's operational skill; only the wiring is project-specific |
 | [0015](docs/adr/0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form — because attribution is carried by the federated-identifier layer (the 0001-0003 triplet and 0013) rather than by the license, each artifact's license is chosen to minimize reuse friction for its *dominant* audience. Under an LLM-first program almost every artifact is mined rather than read, so machine-mined artifacts take a public-domain dedication (CC0-1.0), executable code takes a permissive software license (MIT/Apache-2.0) carried whole-repo for legibility, and only a genuinely human-first artifact takes an attribution-requiring content license (CC-BY-4.0); non-commercial and no-derivatives terms are prohibited. The license-layer counterpart of vocabulary discipline (ADR-0010), disjoint from ADR-0012 |
 | [0016](docs/adr/0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical — routes the canonical by genre: the essay genre's canonical is the author's version-controlled repository corpus, its priority claim resting on the intrinsic content-derived identifier (under a public-domain dedication, ADR-0015) rather than a registry DOI; the paper genre's canonical is the concept DOI (ADR-0001). Syndicated essay copies are bound to the canonical by entity federation (sameAs / ORCID / DOI / intrinsic identifier / distinctive vocabulary), not by a platform canonical-URL tag whose effect on LLM-mediated credit is unverified (the tag is kept only as human/SEO hygiene). Corpus membership is gated by an authenticity criterion (author-voiced, reader-intended pieces); a load-bearing essay idea is promoted to a concept-DOI deposit when it graduates into a paper. Instantiates ADR-0013's DOI-impractical-genre clause and complements ADR-0015 |
+| [0017](docs/adr/0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — operationalizes manifesto open question 8 by pairing each of the three acknowledged failure modes with a diagnostic signal and a recovery strategy: reach-without-recognition (detected when the naming probe carries the concept but not the author; recovered by anchoring distinctive vocabulary densely, keeping the origin claim narrow, and accepting it may be a structural price), over-publication (detected from an identifier portfolio carrying superseded versions of one idea; recovered by the concept-DOI + version discipline, ADR-0001/0004), and under-investment in worked implementation (detected from a doctrine-heavy, implementation-light portfolio; recovered by closing the Layer 3 doctrine-plus-implementation pair). A load-bearing caveat: a diagnostic is a failure-*detector*, never a success metric (ADR-0007) |
+| [0018](docs/adr/0018-claim-falsifiability-criterion.md) | Origin-Claim Falsifiability — codifies the informal origin-claim-scope discipline into a procedure: before publishing an origin claim in a durable artifact, run a prior-art search for work that would refute it, and rescope any claim that survives only because it was never tested — one that is unfalsifiable or already anticipated — to its narrowest defensible form (from "originator" to "first to record"). The criterion is falsifiability; the check is binary, feeding a human rescope rather than a score, and only ever narrows a claim (ADR-0010, Layer 1) |
+| [0019](docs/adr/0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — draws the boundary at the *object* of optimization: optimizing the transmission path (document architecture, entity anchoring, dense vocabulary anchoring) is legitimate because it changes *how* an idea travels; deforming the content to win citations (padded attribute-richness, keyword-stuffing, claims shaped to a channel's reward function) is prohibited because it changes *what* the idea is. The rule — optimize how the idea travels, never what the idea is — makes content deformation a Layer 1 violation reinforced by ADR-0007 (citation and visibility are not metrics). Grounds the structured-artifact tactic (ADR-0009) on the structure side |
 
-The sixteen ADRs are not deduced from a framework; they were extracted from
+The nineteen ADRs are not deduced from a framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form
 so that another author can adopt the same decisions without inheriting
 the original implementation details. See [`docs/adr/README.md`](docs/adr/README.md)
@@ -123,7 +126,7 @@ The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4
 ## How to read this repository
 
 Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then
-the sixteen ADRs in order. Two paths need a non-obvious entry point:
+the nineteen ADRs in order. Two paths need a non-obvious entry point:
 
 - **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
 - **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.

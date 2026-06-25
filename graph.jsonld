@@ -42,7 +42,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the sixteen tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, and genre-split-placement decision 0016), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the nineteen tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, and the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -102,7 +102,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records sixteen decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records nineteen decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
@@ -300,7 +300,10 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0013",
         "https://github.com/shimo4228/authorship-strategy#adr/0014",
         "https://github.com/shimo4228/authorship-strategy#adr/0015",
-        "https://github.com/shimo4228/authorship-strategy#adr/0016"
+        "https://github.com/shimo4228/authorship-strategy#adr/0016",
+        "https://github.com/shimo4228/authorship-strategy#adr/0017",
+        "https://github.com/shimo4228/authorship-strategy#adr/0018",
+        "https://github.com/shimo4228/authorship-strategy#adr/0019"
       ]
     },
 
@@ -605,6 +608,59 @@
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0013",
         "https://github.com/shimo4228/authorship-strategy#adr/0015"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0017",
+      "@type": "ADR",
+      "name": "ADR-0017: Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes",
+      "description": "Operationalizes the manifesto's eighth open question — the framework's acknowledged failure modes — by pairing each of the three named modes with a diagnostic signal and a recovery strategy. For reach without recognition (the ghost citation of authorship, where ideas diffuse but the diffusion does not carry the author's name), the detector is a naming probe that succeeds at the concept level yet fails at the author level, read against a mechanism the framework borrows from the citation and interpretability literature: the parametric channel gates the retrieval channel so a source's address can be cited while its author goes unnamed, factual recall is foreseeable at design time so a coinage's low representation places it at the harsh end of the recall floor by construction, and recall reads back prior authority unequally rather than presence neutrally — the supply-side connection to the ninth open question; the recovery anchors distinctive vocabulary densely, keeps the origin claim narrow, and accepts that under full three-axis inversion reach without recognition may be a structural price rather than a defect to chase. For over-publication, the detector is the author's own identifier portfolio carrying multiple superseded versions of one idea, and the recovery is the concept-DOI canonical with version discipline. For under-investment in worked implementation, the detector is a doctrine-heavy, implementation-light portfolio, and the recovery rebalances toward the abstract-doctrine-plus-worked-implementation pair the idea-versus-scaffold layer requires. A load-bearing caveat governs all three: a diagnostic is a failure-detector, not a success metric — it never becomes an optimization target, because promoting a detector to a target re-imports the purchasable, off-page metric posture the framework rejects and re-creates the reach-chasing it prohibits, while honestly articulating one's own failure modes is consistent with the authenticity commitment at the top of the stack.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0017-failure-mode-diagnostics.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0007",
+        "https://github.com/shimo4228/authorship-strategy#adr/0011",
+        "https://github.com/shimo4228/authorship-strategy#adr/0001",
+        "https://github.com/shimo4228/authorship-strategy#adr/0004"
+      ],
+      "groundedIn": [
+        "https://arxiv.org/abs/2509.13365",
+        "https://arxiv.org/abs/2605.18732",
+        "https://arxiv.org/abs/2511.00476",
+        "https://arxiv.org/abs/2602.22787"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0018",
+      "@type": "ADR",
+      "name": "ADR-0018: Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It in a Durable Artifact",
+      "description": "The decision to codify the framework's informally-practiced origin-claim scope discipline into a stated procedure: before an origin claim enters a durable, citable artifact, the author runs a retrieval search for prior work that would refute the claim, and any claim that survives only because it was never tested — one that is unfalsifiable in principle, or one the search shows already anticipated by located prior work — is rescoped to its narrowest defensible form rather than dropped. The governing criterion is falsifiability: a publishable origin claim is one a prior-art search could in principle refute and did not. The check is a binary defensibility judgment feeding a human rescope decision, deliberately not a novelty score, so it composes with the metric-rejection commitment rather than turning authenticity into a number to maximize. The procedure only ever narrows a claim, making it a humility instrument that extends the vocabulary discipline's origin-claim scope clause and rests on Layer 1 authenticity; it grounds the verification step on the demonstration, by an external evidence-grounded agentic novelty-assessment system, that an externally-computed novelty check built on retrieved real prior work is feasible — cited for feasibility, never for an accuracy figure, with the framework claiming no priority over that system. Writing the habit down as an adoptable check answers the framework's begging-the-question risk by requiring every origin claim, including the framework's own, to survive a prior-art refutation search before it becomes costly to retract.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0018-claim-falsifiability-criterion.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0010"
+      ],
+      "groundedIn": [
+        "https://arxiv.org/abs/2601.01576"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0019",
+      "@type": "ADR",
+      "name": "ADR-0019: Structural Optimization versus Content Authenticity — The Structured-Artifact Tactic Optimizes the Transmission Path, Never the Content",
+      "description": "Locates the boundary between legitimate structural optimization and prohibited content deformation for the framework's structured-artifact diffusion tactic. The structured-data efficacy literature establishes that AI-retrieval citation lift attaches to a document's structure and to attribute-rich, entity-anchored markup rather than to surface text or the mere presence of markup, which justifies the structured-artifact tactic while creating a standing pressure to optimize for citation under a borrowed marketing-optimization frame. The decision draws the line at the object of optimization, not its intensity: optimizing the transmission path — document architecture, information hierarchy, entity anchoring, and the dense anchoring of distinctive vocabulary — is legitimate because it changes how the idea travels and leaves the idea's content as authored, whereas deforming the content to win citations through padded attribute-richness, keyword-stuffing, or claims shaped to a channel's reward function is prohibited because it deforms what the idea is. The rule — optimize how the idea travels, never what the idea is — makes content deformation an authenticity violation, made goalless by the prior rejection of citation and visibility as success metrics. It extends the structured-graph citation lever and the anchor-densely vocabulary discipline as two surfaces of the same legitimate carrier investment, sits beneath the authenticity layer the boundary protects, and is read against the supply-side entity-grounding tension and the tactic-obsolescence question.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0019-structural-optimization-vs-content-authenticity.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0009",
+        "https://github.com/shimo4228/authorship-strategy#adr/0010",
+        "https://github.com/shimo4228/authorship-strategy#adr/0007"
+      ],
+      "groundedIn": [
+        "https://arxiv.org/abs/2604.19113",
+        "https://arxiv.org/abs/2603.29979",
+        "https://arxiv.org/abs/2603.10700",
+        "https://doi.org/10.2139/ssrn.6284518"
       ]
     },
 

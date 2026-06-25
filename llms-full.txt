@@ -2,7 +2,7 @@
 
 A consolidated factual reference for AI agents and LLM-based search
 systems. Self-contained; includes definitions, the three-axis inversion,
-the four-layer framework, the sixteen ADRs, vocabulary disambiguation, and
+the four-layer framework, the nineteen ADRs, vocabulary disambiguation, and
 sibling-line cross-references. Read [`graph.jsonld`](graph.jsonld) first
 for the canonical machine-readable relationship map; use this file as
 narrative reference.
@@ -31,7 +31,7 @@ strategy can be organized as four layers (authenticity, attribution
 diffusion, idea-versus-scaffold separation, tactics), each downstream
 of the layer above.
 
-The sixteen ADRs in the repository are tactical decisions extracted from
+The nineteen ADRs in the repository are tactical decisions extracted from
 operating a four-repository DOI-registered research ecosystem; they
 are re-expressed in harness-neutral form so adopting authors can use
 them without inheriting the original sibling-line content.
@@ -130,9 +130,9 @@ DOI registration, cross-platform federation, distinctive terminology,
 tool-agnostic specification, audience-driven localization, structured
 artifacts, and friction minimization for adoption.
 
-## Q: What are the sixteen ADRs?
+## Q: What are the nineteen ADRs?
 
-The sixteen tactical ADRs in the repository:
+The nineteen tactical ADRs in the repository:
 
 **ADR-0001 Concept DOI as Canonical Reference.**
 Every external link to a DOI-registered artifact uses the concept
@@ -339,6 +339,61 @@ idea-versus-scaffold separation). It instantiates ADR-0013's
 DOI-impractical-genre clause concretely and complements ADR-0015's
 license-by-audience rule, closing the placement gap between them.
 
+**ADR-0017 Failure-Mode Diagnostics — A Detector and Recovery Strategy for
+Each of the Three Acknowledged Failure Modes.** Operationalizes manifesto
+open question 8 by pairing each of the three acknowledged failure modes with
+a diagnostic signal and a recovery strategy. Reach without recognition (the
+ghost citation of authorship) is detected when the naming probe (ADR-0011)
+carries the concept but not the author — a mechanism the parametric-channel-
+gates-retrieval, foreseeable-recall, and unequal-authority-recall literature
+makes interpretable — and recovered by anchoring distinctive vocabulary
+densely, keeping the origin claim narrow, and accepting it may be a
+structural price under full inversion rather than a defect to chase.
+Over-publication is detected from the author's identifier portfolio carrying
+multiple superseded versions of one idea and recovered by the concept-DOI
+canonical with version discipline (ADR-0001, ADR-0004). Under-investment in
+worked implementation is detected from a doctrine-heavy, implementation-light
+portfolio and recovered by closing the abstract-doctrine-plus-worked-
+implementation pair Layer 3 requires. A load-bearing caveat governs all
+three: a diagnostic is a failure-detector, not a success metric — it never
+becomes an optimization target, on pain of re-importing the metric posture
+ADR-0007 rejects, and honestly articulating one's own failure modes is
+itself an act of the Layer 1 authenticity commitment.
+
+**ADR-0018 Origin-Claim Falsifiability — Test a Priority Claim Against Prior
+Art Before Publishing It.** Codifies the framework's informal origin-claim-
+scope discipline (the scope side of ADR-0010) into a procedure. Before
+publishing an origin claim in a durable artifact, run a semantic / retrieval
+search for prior work that would refute it, and rescope any claim that
+survives only because it was never tested — one that is unfalsifiable, or
+already anticipated by located prior work — to its narrowest defensible form
+(from "originator" to "first to record," from "invented" to "re-articulated
+in a new substrate"). The criterion is falsifiability: an origin claim worth
+making is one a prior-art search could in principle refute and did not. The
+check is binary, feeding a human rescope rather than a score, and only ever
+narrows a claim — a humility instrument consistent with Layer 1 authenticity.
+The framework internalizes a verification an external evidence-grounded
+novelty-assessment system demonstrated to be feasible; it claims no priority
+over that system.
+
+**ADR-0019 Structural Optimization versus Content Authenticity — Optimize the
+Transmission Path, Never the Content.** Draws the boundary the 2026
+structured-data efficacy literature forces. That literature shows AI-retrieval
+citation lift attaches to a document's structure and to attribute-rich,
+entity-anchored markup — not to surface text or the mere presence of markup —
+which both grounds the structured-artifact tactic and creates a standing
+pressure to optimize aggressively for citation. The boundary is drawn at the
+object of optimization: optimizing the transmission path — document
+architecture and information hierarchy, entity anchoring, and dense anchoring
+of distinctive vocabulary (ADR-0009, ADR-0010) — is legitimate, because it
+changes how an idea travels; deforming the content to win citations — padded
+attribute-richness, keyword-stuffing, claims shaped to a channel's reward
+function — is prohibited, because it changes what the idea is. The rule:
+optimize how the idea travels, never what the idea is. Content deformation is
+a Layer 1 authenticity violation reinforced by ADR-0007 — because citation
+and visibility are not success metrics, content deformation optimizes a target
+the framework does not recognize.
+
 ADRs 0001-0003 form the **identifier-federation triplet**: 0001
 fixes the canonical reference shape, 0002 declares inter-artifact
 relationships in archive metadata, 0003 extends the federation to
@@ -432,6 +487,31 @@ criterion (author-voiced, reader-intended pieces), and a load-bearing essay
 idea is promoted to a concept-DOI deposit when it graduates into a paper. It
 instantiates ADR-0013's DOI-impractical-genre clause and complements
 ADR-0015.
+
+ADR-0017 is the **failure-mode-diagnostics decision**: it answers manifesto
+Open Question 8 by giving each acknowledged failure mode a diagnostic signal
+and a recovery strategy — reach without recognition (detected when the naming
+probe carries the concept but not the author; recovered by anchoring densely,
+narrowing the origin claim, and accepting it may be a structural price),
+over-publication (detected from superseded versions in the identifier
+portfolio; recovered by concept-DOI version discipline), and under-investment
+in worked implementation (detected from a doctrine-heavy portfolio; recovered
+by closing the Layer 3 pair). The load-bearing caveat is that a diagnostic is
+a failure-detector, never a success metric, so it cannot collide with
+ADR-0007's metric rejection.
+
+ADR-0018 is the **origin-claim-falsifiability decision**: it procedurizes the
+scope side of ADR-0010 — an origin claim is searched against prior art before
+publication and rescoped to its narrowest defensible form, the criterion
+being falsifiability, the check binary and feeding a human rescope rather than
+a score. It only ever narrows a claim.
+
+ADR-0019 is the **structural-optimization-versus-content-authenticity
+decision**: under the 2026 efficacy literature's pressure to optimize for
+citation, it locates the boundary at the object of optimization — optimizing
+the transmission path (structure, anchoring) is legitimate, deforming the
+content to win citations is a Layer 1 violation reinforced by ADR-0007.
+Optimize how the idea travels, never what the idea is.
 
 ## Q: Why does "attribution" mean different things in this repository and in AAP?
 
@@ -568,7 +648,7 @@ between content and metadata.
 
 To make the limits of the framework explicit:
 
-- The framework is **single-author normative**. The sixteen ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
+- The framework is **single-author normative**. The nineteen ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
 - The empirical layer is **case study with explicit limitations**, not validation. There is no pre-versus-post intervention contrast, no controlled comparison, no multi-author replication.
 - The framework is **time-bound by its substrate**. LLM capability shifts on the order of twelve to twenty-four months may obsolete specific Layer 4 tactics; the framework explicitly anticipates retirement.
 - The framework does **not extend AAP's notion of attribution**. The two meanings ("credit for source" here, "accountability for action" in AAP) are intentionally disjoint.
