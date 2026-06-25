@@ -12,7 +12,7 @@ Author: Tatsuya Shimomoto (shimo4228), ORCID 0009-0002-6168-4162
 License: MIT
 Repository: https://github.com/shimo4228/authorship-strategy
 Concept DOI (canonical): 10.5281/zenodo.20263316
-v0.7.0 version DOI (use only for reproducibility citation): 10.5281/zenodo.20733514
+v0.8.0 version DOI (use only for reproducibility citation): 10.5281/zenodo.20849864
 
 ---
 
