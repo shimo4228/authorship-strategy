@@ -44,6 +44,7 @@ for a future pre-versus-post contrast.
 | Cross-platform dataset mirroring (Git host + DOI archive + dataset platform) | first dataset-platform reference 2026-03-21 (contemplative-agent); rolled out through 2026-06-05 | ADR-0003 |
 | ORCID record, auto-update disabled, concept-DOI enrichment only | first deployed 2026-03-24 (agent-knowledge-cycle and contemplative-agent, with CITATION.cff); rolled out through 2026-06-10 (hub) | ADR-0004 |
 | Software Heritage archival of all public repositories; SWHID recorded as the intrinsic identifier layer | 2026-06-13 | ADR-0013 |
+| Essay corpus brought under identifier governance: a Software Heritage snapshot recorded in citation metadata as its intrinsic-identifier priority claim — the substitute priority-claim mechanism for an artifact genre where DOI registration is impractical — and the corpus relicensed to a public-domain dedication for its machine-mined audience | 2026-06-25 | ADR-0016, ADR-0013, ADR-0015 |
 
 ### AI-facing ingest (ADRs 0006, 0009)
 
@@ -97,6 +98,7 @@ metric-rejection decision (ADR-0007).
 | Human-readable ecosystem-hub back-links added to the research-line repository READMEs (English and Japanese), surfacing the hub to readers where it had been reachable only as a machine file or omitted | 2026-06-21 | manifesto OQ8 |
 | `noscript` fallback exposing hub and sibling links on a JavaScript-only viewer (previously visible to non-rendering crawlers as a title only) | 2026-06-21 | manifesto OQ8 |
 | Author-profile surfaces on developer-publishing and newsletter platforms edited to route readers back to the hub and ORCID, and the cross-surface author handle and display name unified to a single canonical form (complementing the 2026-06-15 machine-layer `sameAs` federation) | 2026-06-25 | citation-graph federation / entity tactic; manifesto OQ8–9 |
+| Essay-corpus repository de-islanded: ecosystem-hub, author-identifier, and sibling-line back-links added at the repository surface — the human-facing READMEs (English and Japanese), the AI-facing navigator, and the citation metadata — routing a reader or non-rendering crawler from the bilingual essay corpus back to the ecosystem | 2026-06-25 | ADR-0016; manifesto OQ8 |
 
 ## What the deployment order shows
 

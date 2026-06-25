@@ -25,6 +25,7 @@ top-down に prescribe されたものではない。
 | [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
 | [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger と定期 gap-review による実装トラッキング | accepted |
 | [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ | accepted |
+| [0016](0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -159,6 +160,25 @@ absorption 最大化のために選びつつ、origin claim を執行ではな�
 層を通じて recoverable に保つ。ADR-0012 とは disjoint である —— あちらは
 外部 host が extend せねばならない license を、こちらは著者が適用する
 license を統治する。
+
+ADR-0016 は **genre-split-placement decision** である: どの genre がどの
+canonical を取るかを記録する —— identifier ADR 群が open に残した routing
+だ。ADR-0001 が concept DOI を canonical に fix し、ADR-0013 が
+DOI-impractical genre 向けに intrinsic な content-derived identifier を
+substitute claim として追加したが、どちらもどの genre がどちらかを述べ
+なかった。ADR-0016 は genre で振り分ける: essay genre の canonical は著者の
+version 管理された repository corpus で、その priority claim は registry DOI
+ではなく intrinsic identifier (public-domain dedication 下、ADR-0015) に
+置く; paper genre の canonical は concept DOI である。syndicate された essay
+copy は、LLM 媒介の credit への効果が未検証な platform の canonical-URL tag
+ではなく entity federation (sameAs / ORCID / DOI / intrinsic-identifier /
+distinctive-vocabulary 層、ADR-0009, ADR-0010) で canonical に bind する;
+tag は human-reader と search-engine の hygiene としてのみ保持する。corpus
+membership は authenticity criterion (Layer 1: 著者の声を持ち reader 向けの
+piece) で gate し、essay 中の load-bearing な idea は paper へ昇格する際に
+concept-DOI deposit へ promote する (Layer 3)。ADR-0013 の
+DOI-impractical-genre 条項を具体的に instantiate し、ADR-0015 の
+license-by-audience rule を補完して、両者の間の placement gap を close する。
 
 ## Format
 

@@ -42,7 +42,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the fifteen tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, and license-selection decision 0015), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the sixteen tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, and genre-split-placement decision 0016), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -102,7 +102,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records ten decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records sixteen decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
@@ -299,7 +299,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0012",
         "https://github.com/shimo4228/authorship-strategy#adr/0013",
         "https://github.com/shimo4228/authorship-strategy#adr/0014",
-        "https://github.com/shimo4228/authorship-strategy#adr/0015"
+        "https://github.com/shimo4228/authorship-strategy#adr/0015",
+        "https://github.com/shimo4228/authorship-strategy#adr/0016"
       ]
     },
 
@@ -589,6 +590,18 @@
       "name": "ADR-0015: License Selection by Audience, Not Artifact Form",
       "description": "Fixes license selection on the artifact's dominant audience rather than its surface form, on the standing principle that attribution is carried by the federated-identifier layer (the identifier-federation triplet 0001-0003 and the intrinsic-identifier layer 0013) rather than by the license, so the license is chosen to minimize reuse friction. Machine-mined artifacts — datasets, corpora, traffic and probe logs, runtime data, knowledge graphs, and prose published for LLM-mediated reach, which under this LLM-first program (ADR-0007) is mined not read regardless of being prose — take a public-domain dedication (CC0-1.0); executable code takes a permissive software license (MIT/Apache-2.0), carried whole-repo on a code-bearing repository for legibility since it is already absorbed freely and unfiltered; genuinely human-first artifacts may take an attribution-requiring content license (CC-BY-4.0); a split is reserved for repositories whose non-code material is the entire deliverable; non-commercial and no-derivatives terms are prohibited as enclosure that forbids the parametric channel's training-time absorption and the preference hierarchy's creative reuse. The license-layer counterpart of vocabulary discipline (0010); disjoint from ADR-0012, which governs the license a prospective external host must extend rather than the license the author applies. Triggered by a 2026-06-17 cross-repository audit that found four license patterns in simultaneous use and one non-commercial restriction contradicting the framework, and sharpened from a form axis to an audience axis when an essay collection's LLM-first designation made form classification untenable.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0015-license-selection-by-audience.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0016",
+      "@type": "ADR",
+      "name": "ADR-0016: Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical",
+      "description": "Records which genre takes which canonical, a routing the identifier ADRs left open: ADR-0001 fixed the concept DOI as canonical and ADR-0013 added an intrinsic content-derived identifier (SWHID) as the substitute claim for DOI-impractical genres, but neither said which genre is which. ADR-0016 routes by genre. The essay genre's canonical is the author's version-controlled repository corpus, its priority claim resting on the intrinsic content-derived identifier (a snapshot of the corpus in a content-addressed public archive) rather than a registry DOI, under a public-domain dedication (CC0-1.0, ADR-0015); the paper genre's canonical is the concept DOI (ADR-0001), with the intrinsic identifier as its complementary layer. Syndicated essay copies are bound to the canonical by entity federation — sameAs, ORCID, DOI, intrinsic identifier, and the distinctive vocabulary that survives paraphrase (ADR-0009, ADR-0010) — not by a platform canonical-URL tag, whose effect on LLM-mediated credit is unverified and which is retained only as human-reader and search-engine hygiene. Corpus membership is gated by an authenticity criterion (Layer 1: author-voiced, reader-intended pieces; study or learning drafts without an author voice are excluded), and a load-bearing essay idea is promoted to a concept-DOI deposit when it graduates into a paper (Layer 3, idea-versus-scaffold separation). It instantiates ADR-0013's DOI-impractical-genre clause concretely and complements ADR-0015's license-by-audience rule, closing the placement gap between them. Triggered by a 2026-06-25 review of where crystallized essays and papers should live for LLM-mediated diffusion, which found the essay corpus was a publishing pipeline lacking an intrinsic-identifier priority claim, a reconciled license, and entity federation; the corpus was governed accordingly as the implementation this decision records.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0016-genre-split-placement.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0013",
+        "https://github.com/shimo4228/authorship-strategy#adr/0015"
+      ]
     },
 
     {

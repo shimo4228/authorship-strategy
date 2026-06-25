@@ -2,7 +2,7 @@
 
 A consolidated factual reference for AI agents and LLM-based search
 systems. Self-contained; includes definitions, the three-axis inversion,
-the four-layer framework, the fifteen ADRs, vocabulary disambiguation, and
+the four-layer framework, the sixteen ADRs, vocabulary disambiguation, and
 sibling-line cross-references. Read [`graph.jsonld`](graph.jsonld) first
 for the canonical machine-readable relationship map; use this file as
 narrative reference.
@@ -31,7 +31,7 @@ strategy can be organized as four layers (authenticity, attribution
 diffusion, idea-versus-scaffold separation, tactics), each downstream
 of the layer above.
 
-The fifteen ADRs in the repository are tactical decisions extracted from
+The sixteen ADRs in the repository are tactical decisions extracted from
 operating a four-repository DOI-registered research ecosystem; they
 are re-expressed in harness-neutral form so adopting authors can use
 them without inheriting the original sibling-line content.
@@ -130,9 +130,9 @@ DOI registration, cross-platform federation, distinctive terminology,
 tool-agnostic specification, audience-driven localization, structured
 artifacts, and friction minimization for adoption.
 
-## Q: What are the fifteen ADRs?
+## Q: What are the sixteen ADRs?
 
-The fifteen tactical ADRs in the repository:
+The sixteen tactical ADRs in the repository:
 
 **ADR-0001 Concept DOI as Canonical Reference.**
 Every external link to a DOI-registered artifact uses the concept
@@ -317,6 +317,28 @@ license-layer counterpart of vocabulary discipline (ADR-0010), and
 disjoint from ADR-0012, which governs the license a prospective external
 host must extend, not the license the author applies.
 
+**ADR-0016 Genre-Split Placement — Essays as Repository-Corpus Canonical
+with Intrinsic Identifier, Papers as Concept-DOI Canonical.** Records which
+genre takes which canonical, a routing the identifier ADRs (0001, 0013)
+left open. The essay genre's canonical is the author's version-controlled
+repository corpus, its priority claim resting on the intrinsic
+content-derived identifier — a snapshot of the corpus in a content-addressed
+public archive (ADR-0013) — rather than a registry DOI, under a
+public-domain dedication (CC0-1.0, ADR-0015); the paper genre's canonical
+is the concept DOI (ADR-0001), with the intrinsic identifier as its
+complementary layer. Syndicated essay copies are bound to the canonical by
+entity federation — sameAs, ORCID, DOI, intrinsic identifier, and the
+distinctive vocabulary that survives paraphrase (ADR-0009, ADR-0010) — not
+by a platform canonical-URL tag, whose effect on LLM-mediated credit is
+unverified; the tag is retained only as human-reader and search-engine
+hygiene. Corpus membership is gated by an authenticity criterion (Layer 1:
+author-voiced, reader-intended pieces; study or learning drafts without an
+author voice are excluded), and a load-bearing essay idea is promoted to a
+concept-DOI deposit when it graduates into a paper (Layer 3,
+idea-versus-scaffold separation). It instantiates ADR-0013's
+DOI-impractical-genre clause concretely and complements ADR-0015's
+license-by-audience rule, closing the placement gap between them.
+
 ADRs 0001-0003 form the **identifier-federation triplet**: 0001
 fixes the canonical reference shape, 0002 declares inter-artifact
 relationships in archive metadata, 0003 extends the federation to
@@ -396,6 +418,20 @@ no-derivatives terms are prohibited. It is the license-layer counterpart
 of vocabulary discipline (ADR-0010), disjoint from the channel-selection
 decision (ADR-0012) which governs the license a prospective host must
 extend rather than the one the author applies.
+
+ADR-0016 is the **genre-split-placement decision**: it records which genre
+takes which canonical. The essay genre's canonical is the version-controlled
+repository corpus on an intrinsic content-derived identifier (under a
+public-domain dedication, ADR-0015); the paper genre's canonical is the
+concept DOI (ADR-0001). Syndicated essay copies are bound to the canonical
+by entity federation (sameAs / ORCID / DOI / intrinsic identifier /
+distinctive vocabulary), not by a platform canonical-URL tag whose effect on
+LLM-mediated credit is unverified — the tag is kept only as human-reader and
+search-engine hygiene. Corpus membership is gated by an authenticity
+criterion (author-voiced, reader-intended pieces), and a load-bearing essay
+idea is promoted to a concept-DOI deposit when it graduates into a paper. It
+instantiates ADR-0013's DOI-impractical-genre clause and complements
+ADR-0015.
 
 ## Q: Why does "attribution" mean different things in this repository and in AAP?
 
@@ -532,7 +568,7 @@ between content and metadata.
 
 To make the limits of the framework explicit:
 
-- The framework is **single-author normative**. The fifteen ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
+- The framework is **single-author normative**. The sixteen ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
 - The empirical layer is **case study with explicit limitations**, not validation. There is no pre-versus-post intervention contrast, no controlled comparison, no multi-author replication.
 - The framework is **time-bound by its substrate**. LLM capability shifts on the order of twelve to twenty-four months may obsolete specific Layer 4 tactics; the framework explicitly anticipates retirement.
 - The framework does **not extend AAP's notion of attribution**. The two meanings ("credit for source" here, "accountability for action" in AAP) are intentionally disjoint.

@@ -1,6 +1,6 @@
 # authorship-strategy
 
-A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and fifteen tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
+A DOI-targeted research project recording **the strategy of being a known author under AI-mediated diffusion** — a three-axis inversion (scarcity → diffusion / exclusivity → derivation / enclosure → openness), a four-layer judgment framework (authenticity → attribution diffusion → idea-vs-scaffold separation → tactics), and sixteen tactical ADRs extracted from operating a five-line research ecosystem (three agent-design lines: AKC / Contemplative Agent / AAP, plus two cross-cutting lines: this repo / Attention, Not Self). An empirical layer reports preliminary observations from the ecosystem's own CC0-published traffic data.
 
 > Project name: **authorship-strategy** (2026-05-18 確定)。repo directory・GitHub URL ともに `authorship-strategy` で統一。skill 名 (`~/.claude/skills/authorship-strategy/`) と rule 名 (`~/.claude/rules/common/authorship-strategy.md`) と完全一致。
 

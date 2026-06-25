@@ -10,7 +10,7 @@ If your readers include LLMs — as training data, as in-context consultants,
 as the discovery layer others consult — then the strategies that
 protect authorship have inverted. Closing your work off *reduces*, not
 increases, the chance that a future trace lands on you. This repository
-records the inverted strategy: what it is, why it holds, and fifteen tactical
+records the inverted strategy: what it is, why it holds, and sixteen tactical
 decisions extracted from operating a four-repository DOI-registered research
 ecosystem.
 
@@ -57,7 +57,7 @@ operational implications form the four-layer framework, also in the
 thesis document. The framework's open questions are catalogued in
 [`docs/manifesto.md`](docs/manifesto.md).
 
-## The fifteen tactical ADRs
+## The sixteen tactical ADRs
 
 | ADR | Decision |
 |-----|----------|
@@ -76,8 +76,9 @@ thesis document. The framework's open questions are catalogued in
 | [0013](docs/adr/0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer — adds SWHID (ISO/IEC 18670), computed from the artifact and its history and verifiable without any registry, alongside the extrinsic DOI; each layer covers the other's failure mode. Every release triggers explicit archival in a content-addressed public software archive; for DOI-impractical genres the intrinsic identifier is the designated substitute priority-claim mechanism, closing manifesto open question 4 |
 | [0014](docs/adr/0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review — the one ADR about *operating* the framework rather than a tactic it deploys. A private implementation ledger holds operational status, ranked candidate interventions, and working detail; the public intervention timeline is its dated, effect-claim-free projection (the two are never merged). A periodic gap-review compares deployed tactics against the Layer 4 catalog and the open questions to generate the next proposals. The review procedure lives in the framework's operational skill; only the wiring is project-specific |
 | [0015](docs/adr/0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form — because attribution is carried by the federated-identifier layer (the 0001-0003 triplet and 0013) rather than by the license, each artifact's license is chosen to minimize reuse friction for its *dominant* audience. Under an LLM-first program almost every artifact is mined rather than read, so machine-mined artifacts take a public-domain dedication (CC0-1.0), executable code takes a permissive software license (MIT/Apache-2.0) carried whole-repo for legibility, and only a genuinely human-first artifact takes an attribution-requiring content license (CC-BY-4.0); non-commercial and no-derivatives terms are prohibited. The license-layer counterpart of vocabulary discipline (ADR-0010), disjoint from ADR-0012 |
+| [0016](docs/adr/0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical — routes the canonical by genre: the essay genre's canonical is the author's version-controlled repository corpus, its priority claim resting on the intrinsic content-derived identifier (under a public-domain dedication, ADR-0015) rather than a registry DOI; the paper genre's canonical is the concept DOI (ADR-0001). Syndicated essay copies are bound to the canonical by entity federation (sameAs / ORCID / DOI / intrinsic identifier / distinctive vocabulary), not by a platform canonical-URL tag whose effect on LLM-mediated credit is unverified (the tag is kept only as human/SEO hygiene). Corpus membership is gated by an authenticity criterion (author-voiced, reader-intended pieces); a load-bearing essay idea is promoted to a concept-DOI deposit when it graduates into a paper. Instantiates ADR-0013's DOI-impractical-genre clause and complements ADR-0015 |
 
-The fifteen ADRs are not deduced from a framework; they were extracted from
+The sixteen ADRs are not deduced from a framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form
 so that another author can adopt the same decisions without inheriting
 the original implementation details. See [`docs/adr/README.md`](docs/adr/README.md)
@@ -122,7 +123,7 @@ The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4
 ## How to read this repository
 
 Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then
-the fifteen ADRs in order. Two paths need a non-obvious entry point:
+the sixteen ADRs in order. Two paths need a non-obvious entry point:
 
 - **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
 - **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.

@@ -10,7 +10,7 @@ Language: [English](README.md) | 日本語
 他者が参照する discovery layer として —— 著者性を守る戦略は反転している。
 作品を閉じ込めることは、未来の trace が自分に辿り着く確率を増やすのではなく *減らす*。
 この repo は反転した戦略を記録する: それが何で、なぜ成り立ち、それを運用する中で
-抽出された 12 の戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
+抽出された 16 の戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
 
 フレームワークは 20 世紀的 authorship strategy の 3 軸反転
 （scarcity → diffusion / exclusivity → derivation / enclosure → openness）と、
@@ -48,7 +48,7 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md) (英語正本)、日本�
 thesis の中で展開されている。Framework の open questions は
 [`docs/manifesto.md`](docs/manifesto.md) に集約。
 
-## 15 の戦術 ADR
+## 16 の戦術 ADR
 
 | ADR | 判断 |
 |-----|------|
@@ -67,8 +67,9 @@ thesis の中で展開されている。Framework の open questions は
 | [0013](docs/adr/0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier —— SWHID (ISO/IEC 18670、artifact とその history から計算され、いかなる registry もなしに検証可能) を extrinsic な DOI に並ぶ第二の identifier 層として追加し、各層が他方の failure mode をカバーする。すべての release は content-addressed な公的 software archive への明示的 archive を trigger する; DOI 登録が impractical な genre には intrinsic identifier を substitute priority-claim mechanism として指定し、manifesto の open question 4 を閉じる |
 | [0014](docs/adr/0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger と定期 gap-review による実装トラッキング —— framework が deploy する tactic ではなく framework を *運用* することについての唯一の ADR。private な implementation ledger が運用 status・ランク付き candidate intervention・作業詳細を持ち、public な intervention timeline はその日付付き・効果主張なしの投影 (両者を merge しない)。定期 gap-review が deploy 済み tactic を Layer 4 catalog と open questions に突き合わせ次の提案を生む。review 手順は framework の operational skill に置き、配線だけが project 固有 |
 | [0015](docs/adr/0015-license-selection-by-audience.ja.md) | 成果物の形式ではなく audience による license 選択 —— attribution は license ではなく連邦識別子層 (0001-0003 triplet と 0013) が運ぶため、各 artifact の license はその *支配的* audience の reuse friction を最小化するよう選ぶ。LLM-first program 下ではほぼすべての artifact が読まれるより mine されるので、機械が mine する artifact は public-domain dedication (CC0-1.0)、実行可能 code は permissive な software license (MIT/Apache-2.0) を legibility のため repo 全体で、真に人間 first の artifact のみ attribution を要求する content license (CC-BY-4.0) を取る; non-commercial と no-derivatives の条項は禁止。vocabulary discipline (ADR-0010) の license 層対応物であり、ADR-0012 とは disjoint |
+| [0016](docs/adr/0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical —— canonical を genre で振り分ける: essay genre の canonical は著者の version 管理された repository corpus で、その priority claim は registry DOI ではなく intrinsic content-derived identifier (public-domain dedication 下、ADR-0015) に置く; paper genre の canonical は concept DOI (ADR-0001)。syndicate された essay copy は、LLM 媒介の credit への効果が未検証な platform の canonical-URL tag ではなく entity federation (sameAs / ORCID / DOI / intrinsic identifier / distinctive vocabulary) で canonical に bind する (tag は human/SEO hygiene としてのみ保持)。corpus membership は authenticity criterion (著者の声を持ち reader 向けの piece) で gate し、load-bearing な essay idea は paper へ昇格する際に concept-DOI deposit へ promote する。ADR-0013 の DOI-impractical-genre 条項を instantiate し ADR-0015 を補完する |
 
-15 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
+16 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
 抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral な
 形式で再表現された。完全な index と lineage は [`docs/adr/README.md`](docs/adr/README.md)
 を参照。
@@ -106,7 +107,7 @@ framing する。完全な traffic data は CC0 で
 
 ## この repo の読み方
 
-戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 15 の ADR を番号順に。
+戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 16 の ADR を番号順に。
 非自明な入口が要るのは次の 2 経路:
 
 - **個別戦術を採用する:** 該当 ADR を直接読み、必要に応じて [`docs/glossary.md`](docs/glossary.md) で disambiguation。

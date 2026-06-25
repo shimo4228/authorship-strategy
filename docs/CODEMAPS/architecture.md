@@ -26,7 +26,7 @@ authorship-strategy/
     ├── manifesto.md                     eight open questions the framework leaves unanswered
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
-    ├── adr/                             15 ADRs (English) + 15 mirrors (.ja.md) + README + README.ja
+    ├── adr/                             16 ADRs (English) + 16 mirrors (.ja.md) + README + README.ja
     ├── empirical/                       preliminary observation layer (method + 2026-05 traffic baseline + 2026-06 external-literature note + 2026-06 probe baseline + implementation-log intervention timeline; English-only by convention)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
@@ -40,7 +40,7 @@ authorship-strategy/
 | Open questions | `docs/manifesto.md` | Eight items. Adopters invited to extend. |
 | Vocabulary | `docs/glossary.md` | Includes load-bearing disjoint-attribution disambiguation vs. AAP. |
 | Lineage | `docs/inspiration.md` | Prior literature (Foucault, Chartier, Shapiro & Varian, Lessig, scientometrics, GEO); sibling-line origins of the ADRs. |
-| ADR index | `docs/adr/README.md` | Fifteen ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006) + metric-rejection decision (0007) + diffusion-mechanism cluster (0008-0011; 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, 0011 building the measurement instrument 0008 demands) + channel-selection decision (0012, applying the enclosure axis to external listings: link-index entries only, four-condition host audit) + intrinsic-identifier decision (0013, adding a content-derived SWHID layer that complements the DOI layer and closes manifesto open question 4) + implementation-tracking decision (0014, the two-tier ledger + periodic gap-review for operating the framework over time) + license-selection decision (0015, selecting an artifact's license by its dominant audience: a public-domain dedication for machine-mined artifacts, a permissive software license for code, prohibiting non-commercial and no-derivatives terms). |
+| ADR index | `docs/adr/README.md` | Sixteen ADRs grouped: identifier-federation triplet (0001-0003) + maintenance-discipline pair (0004-0005) + LLM-first ingest decision (0006) + metric-rejection decision (0007) + diffusion-mechanism cluster (0008-0011; 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, 0011 building the measurement instrument 0008 demands) + channel-selection decision (0012, applying the enclosure axis to external listings: link-index entries only, four-condition host audit) + intrinsic-identifier decision (0013, adding a content-derived SWHID layer that complements the DOI layer and closes manifesto open question 4) + implementation-tracking decision (0014, the two-tier ledger + periodic gap-review for operating the framework over time) + license-selection decision (0015, selecting an artifact's license by its dominant audience: a public-domain dedication for machine-mined artifacts, a permissive software license for code, prohibiting non-commercial and no-derivatives terms) + genre-split-placement decision (0016, routing the canonical by genre: the essay genre's canonical is the version-controlled repository corpus on an intrinsic content-derived identifier, the paper genre's on the concept DOI, with syndicated copies bound by entity federation rather than canonical-URL tags; instantiates 0013's DOI-impractical-genre clause and complements 0015). |
 | Tactical decisions | `docs/adr/000N-*.md` | Each ADR: Status / Date / Context / Decision / Alternatives / Consequences / Lineage. Harness-neutral body, lineage records the implementation-specific origin. |
 | Empirical method | `docs/empirical/README.md` | Method, limitations, preliminary-observation framing. |
 | Empirical baseline | `docs/empirical/traffic-baseline-2026-05.md` | 24-day cumulative per-repository traffic for the four sibling lines + two supporting repositories. |
@@ -50,7 +50,7 @@ authorship-strategy/
 | Component skills index | `docs/skills/README.md` | Reference index pointing to four external component skill repositories (`claude-skill-authorship-strategy`, `claude-skill-release-doi`, `claude-skill-llms-txt-writer`, `claude-skill-jsonld-knowledge-graph`) plus an adjacent-ecosystem-skills section. Skill bodies are NOT copied into this repository; each component skill maintains its own canonical source. The component-status criterion (the skill operationalizes content the doctrine explicitly names) is documented in the file itself. |
 | AI landing | `llms.txt` | Answer.AI convention. Compact navigator + canonical reading order. |
 | AI reference | `llms-full.txt` | Self-contained Q&A. |
-| AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + fifteen ADRs + sibling lines + disjoint-vocabulary edge to AAP. |
+| AI relationship map | `graph.jsonld` | schema.org JSON-LD. Three axes + four layers + sixteen ADRs + sibling lines + disjoint-vocabulary edge to AAP. |
 | Citation metadata | `CITATION.cff` | Concept DOI populated post-Zenodo. |
 | Deposit metadata | `.zenodo.json` | `relatedIdentifiers` declare the DOI federation. |
 
@@ -63,7 +63,7 @@ the empirical layer is downstream of all ADRs and references them only
 to disclaim that the observations do not validate the ADRs.
 
 ```
-thesis.md ──────► (cited by) ─► all 15 ADRs
+thesis.md ──────► (cited by) ─► all 16 ADRs
               ─► manifesto.md (uses thesis vocabulary)
               ─► glossary.md (defines thesis terminology)
 

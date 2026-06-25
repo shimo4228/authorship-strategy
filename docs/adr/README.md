@@ -25,6 +25,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
 | [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review | accepted |
 | [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form | accepted |
+| [0016](0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -177,6 +178,26 @@ origin claim recoverable through the identifier layer rather than
 through enforcement, and it is disjoint from ADR-0012 — that ADR governs
 the license a prospective external host must extend, this one the
 license the author applies.
+
+ADR-0016 is the **genre-split-placement decision**: it records which
+genre takes which canonical, a routing the identifier ADRs left open.
+ADR-0001 fixed the concept DOI as canonical and ADR-0013 added an
+intrinsic content-derived identifier as the substitute claim for
+DOI-impractical genres — but neither said which genre is which. ADR-0016
+routes by genre: the essay genre's canonical is the author's
+version-controlled repository corpus, its priority claim resting on the
+intrinsic identifier (under a public-domain dedication, ADR-0015) rather
+than a registry DOI; the paper genre's canonical is the concept DOI.
+Syndicated essay copies are bound to the canonical by entity federation
+(the sameAs / ORCID / DOI / intrinsic-identifier / distinctive-vocabulary
+layer, ADR-0009, ADR-0010), not by a platform canonical-URL tag whose
+effect on LLM-mediated credit is unverified; the tag is kept only as
+human-reader and search-engine hygiene. Corpus membership is gated by an
+authenticity criterion (Layer 1: author-voiced, reader-intended pieces),
+and a load-bearing essay idea is promoted to a concept-DOI deposit when it
+graduates into a paper (Layer 3). It instantiates ADR-0013's
+DOI-impractical-genre clause concretely and complements ADR-0015's
+license-by-audience rule, closing the placement gap between the two.
 
 ## Format
 
