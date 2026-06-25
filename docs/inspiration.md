@@ -139,6 +139,19 @@ prior art rather than originates.
   optimizable surface (a 5% content change yielding over 40% more
   citations), while warning that generic optimization degrades
   long-tail content.
+- *OpenNovelty* (Zhang et al., arXiv:2601.01576) reads the same
+  retrieval mechanics constructively: it builds an agentic system that
+  judges a submission's novelty by grounding every assessment in
+  retrieved real papers — extracting contribution claims, retrieving
+  prior work, building a taxonomy, and comparing against it with cited
+  evidence — rather than letting a model pronounce novelty unaided. The
+  framework cites it as grounding for its
+  [origin-claim scope discipline](glossary.md): an externally-computed,
+  evidence-grounded novelty check is the mechanism by which an author
+  keeps a priority claim scoped to what is genuinely new against the
+  prior art. The paper concerns peer-review novelty assessment and does
+  not itself state the discipline; its reported deployment is scale, not
+  a measured accuracy result.
 
 The framing of this literature is marketing-optimization: how to
 make a brand win citations. The framework reads the same mechanics
@@ -201,6 +214,18 @@ measurement artifact of any single method.
   frequency — and so sits at the harshest end of the noise floor,
   which is exactly why coinage must be anchored densely rather than
   multiplied.
+- *Remembering Unequally* (Kalhor & Mashhadi, arXiv:2511.00476)
+  prompts three LLMs to reconstruct scholarly coauthor lists from
+  parametric memory and finds the reconstruction is gated by prior
+  citation prominence — already-prominent scholars are recalled more
+  reliably — though non-uniformly across fields and regions. For the
+  naming probe ([ADR-0011](adr/0011-two-channel-probe-protocol.md))
+  this is direct evidence that what the parametric channel recalls and
+  names reads back *authority* unequally rather than presence
+  neutrally, and it grounds [manifesto open question 9](manifesto.md)
+  on whether diffusion-era recall entrenches existing prominence. We
+  cite only its measured coauthor-list scope, not the
+  model-size / topic-frequency scaling of the paper above.
 
 These too are external published findings, kept in this lineage
 document rather than in the vendor-neutral ADR bodies.

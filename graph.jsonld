@@ -316,7 +316,10 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
       "@type": "Concept",
       "name": "Origin-Claim Scope Discipline",
-      "description": "A subordinate principle applying at all four layers: the origin claim must be narrower than the prior art. Claiming priority on a broad pattern with rich prior art collapses the claim's credibility; claiming priority on a narrow, specifically-named discipline is defensible. Coined terminology is the substrate of narrow origin claims."
+      "description": "A subordinate principle applying at all four layers: the origin claim must be narrower than the prior art. Claiming priority on a broad pattern with rich prior art collapses the claim's credibility; claiming priority on a narrow, specifically-named discipline is defensible. Coined terminology is the substrate of narrow origin claims.",
+      "groundedIn": [
+        "https://arxiv.org/abs/2601.01576"
+      ]
     },
 
     {
@@ -460,7 +463,8 @@
         "https://arxiv.org/abs/2602.06718",
         "https://arxiv.org/abs/2604.25707",
         "https://arxiv.org/abs/2603.09296",
-        "https://arxiv.org/abs/2605.18732"
+        "https://arxiv.org/abs/2605.18732",
+        "https://arxiv.org/abs/2511.00476"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md"
     },
@@ -899,6 +903,28 @@
       "identifier": "arXiv:2603.23219",
       "url": "https://arxiv.org/abs/2603.23219",
       "description": "Tests whether frontier models (GPT-4o, Gemini 1.5 Pro, Claude Sonnet 3.5) can mimic named literary and political authors, and finds via transformer classification, interpretable features, and perplexity that human-authored and model-generated text occupy distinguishable stylometric regions even under deliberate imitation. Cited as a tension for Authenticity (Layer 1): an authorial signature may persist through AI-mediated rephrasing, but the framework records this as a currently-discriminable difference rather than a permanent fingerprint and builds no stylometric self-measure (metric-rejection, ADR-0007)."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2601.01576",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "OpenNovelty: An LLM-powered Agentic System for Verifiable Scholarly Novelty Assessment",
+      "author": ["Ming Zhang", "Kexin Tan", "Yueyuan Huang", "Yujiong Shen", "Chunchun Ma", "Li Ju", "Xinran Zhang", "Yuhui Wang", "Wenqing Jing", "Jingyi Deng", "Huayu Sha", "Binze Hu", "Jingqi Tong", "Changhao Jiang", "Yage Geng", "Yuankai Ying", "Yue Zhang", "Zhangyue Yin", "Zhiheng Xi", "Shihan Dou", "Tao Gui", "Qi Zhang", "Xuanjing Huang"],
+      "datePublished": "2026-01-04",
+      "identifier": "arXiv:2601.01576",
+      "url": "https://arxiv.org/abs/2601.01576",
+      "description": "Presents an LLM-powered agentic system that assesses the novelty of a scholarly submission by grounding every judgment in retrieved real papers rather than unverified LLM generation: it extracts contribution claims and retrieval queries, retrieves prior work via semantic search, builds a hierarchical taxonomy and performs contribution-level full-text comparisons, then synthesizes a structured novelty report with explicit citations and evidence snippets; the authors report deploying it on 500+ ICLR 2026 submissions with reports made public, and offer the preliminary observation that it can surface relevant prior work authors may have overlooked. Cited as grounding for origin-claim scope discipline: it supplies an externally-computed, evidence-grounded novelty check that locates a contribution against retrieved prior art, the mechanism a scope-disciplined origin claim relies on. The paper itself concerns peer-review novelty assessment and does not articulate the normative discipline, and its deployment figure is scale and its surfacing-of-prior-work statement is explicitly preliminary, so it is not cited for any quantitative accuracy or effectiveness result."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2511.00476",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Remembering Unequally: Global and Disciplinary Bias in LLM Reconstruction of Scholarly Coauthor Lists",
+      "author": ["Ghazal Kalhor", "Afra Mashhadi"],
+      "datePublished": "2025-11-01",
+      "identifier": "arXiv:2511.00476",
+      "url": "https://arxiv.org/abs/2511.00476",
+      "description": "Prompts three LLMs (DeepSeek R1, Llama 4 Scout, Mixtral 8x7B) to reconstruct academic coauthor lists from parametric memory and compares the output against bibliographic reference data, finding a systematic advantage for highly cited researchers — coauthor information for already-prominent scholars is recalled more reliably — though the authors stress this is non-uniform across fields and regions (Clinical Medicine and certain African regions show narrower gaps). Cited as grounding for the parametric-channel naming probe (ADR-0011): what an LLM recalls and names is gated by prior citation authority, so the probe's success is predictably and unequally distributed rather than a neutral readout of presence. Also supports manifesto Open Question 9 on whether diffusion-era recall entrenches existing prominence; we cite only its measured coauthor-list scope and its own warning against using LLM-generated scholarly networks without auditing for memorization-driven inequality."
     }
   ]
 }
