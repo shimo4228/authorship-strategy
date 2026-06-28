@@ -29,6 +29,7 @@ DOI-registered research ecosystem, not prescribed top-down.
 | [0017](0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes | accepted |
 | [0018](0018-claim-falsifiability-criterion.md) | Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It | accepted |
 | [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content | accepted |
+| [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -222,6 +223,27 @@ citations is a Layer 1 violation reinforced by ADR-0007. The three sit
 beneath Layer 1 (authenticity) and the metric-rejection decision rather than
 extending the ingest or identifier surfaces — they keep the diffusion tactics
 from corroding the authenticity the whole stack protects.
+
+ADR-0020 is the **derivation-surface-onboarding decision**: it is the
+derivation-axis counterpart to ADR-0012's enclosure-axis channel rule.
+Where ADR-0012 governs author-initiated listings in external curated
+collections, ADR-0020 governs author-blessed *automated* surfaces that a
+third party derives from the repository and serves to LLM assistants — a
+synthetic wiki that paraphrases the repository behind a conversational
+query interface, and a documentation hub that serves the repository's own
+machine-readable documents verbatim through a model-callable interface.
+Both are onboarded and blessed rather than gated, under a per-type
+discipline: the paraphrasing wiki's drift is used as a regurgitation-test
+diagnostic and answered upstream by the dense-anchoring discipline
+(ADR-0010, ADR-0011), never corrected on the derived surface; the verbatim
+hub's access-count badge is read as a measurement signal of the
+LLM-mediated channel, never as a success metric (ADR-0007). An index-only
+catalog keyed to installable code libraries is declined as an
+artifact-type mismatch, and self-hosted query infrastructure is declined
+as friction the framework does not take on. It extends ADR-0006's
+LLM-first ingest surface and enacts the thesis's exclusivity → derivation
+inversion at the channel level: a derived view is validation to bless, not
+imitation to prevent.
 
 ## Format
 

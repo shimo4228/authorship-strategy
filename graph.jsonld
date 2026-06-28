@@ -42,7 +42,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the nineteen tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, and the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, and the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, and the derivation-surface-onboarding decision 0020), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -102,7 +102,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records nineteen decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty decisions extracted from operating a four-repository DOI-registered research ecosystem.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
@@ -303,7 +303,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0016",
         "https://github.com/shimo4228/authorship-strategy#adr/0017",
         "https://github.com/shimo4228/authorship-strategy#adr/0018",
-        "https://github.com/shimo4228/authorship-strategy#adr/0019"
+        "https://github.com/shimo4228/authorship-strategy#adr/0019",
+        "https://github.com/shimo4228/authorship-strategy#adr/0020"
       ]
     },
 
@@ -661,6 +662,20 @@
         "https://arxiv.org/abs/2603.29979",
         "https://arxiv.org/abs/2603.10700",
         "https://doi.org/10.2139/ssrn.6284518"
+      ]
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0020",
+      "@type": "ADR",
+      "name": "ADR-0020: Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs",
+      "description": "Onboards idea-bearing public repositories to two third-party derivation-type surfaces that build an LLM-consumable view from the repository: a synthetic wiki that paraphrases the codebase behind a conversational query interface, and a documentation hub that serves the repository's own machine-readable documents verbatim through a model-callable interface, each attaching an adoptable badge. The decision onboards to both and blesses the derived views rather than gating them, under a per-type discipline: the synthetic wiki's paraphrase is used as a regurgitation-test drift diagnostic and defended by upstream dense anchoring rather than corrected on the derived surface, while the documentation hub's access-count badge is read as a measurement signal of the LLM-mediated channel and never as a success metric. It declines an index-only catalog whose artifact model is the installable code library as an artifact-type mismatch, and declines self-hosted query infrastructure as friction the framework does not take on, keeping the origin claim fixed on the identifier-federation layer rather than on any derived surface. It is the derivation-axis counterpart to the enclosure-axis channel-selection decision, extends the LLM-first ingest surface, is bounded by the metric-rejection decision, and connects its regurgitation-test diagnostic to the vocabulary discipline and the measurement protocol.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0020-derivation-surface-onboarding.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0006",
+        "https://github.com/shimo4228/authorship-strategy#adr/0012",
+        "https://github.com/shimo4228/authorship-strategy#adr/0007",
+        "https://github.com/shimo4228/authorship-strategy#adr/0010"
       ]
     },
 

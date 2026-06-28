@@ -10,7 +10,7 @@ Language: [English](README.md) | 日本語
 他者が参照する discovery layer として —— 著者性を守る戦略は反転している。
 作品を閉じ込めることは、未来の trace が自分に辿り着く確率を増やすのではなく *減らす*。
 この repo は反転した戦略を記録する: それが何で、なぜ成り立ち、それを運用する中で
-抽出された 19 の戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
+抽出された 20 の戦術的判断は何か（4 つの DOI 登録 repo からなる研究エコシステムでの運用から）。
 
 フレームワークは 20 世紀的 authorship strategy の 3 軸反転
 （scarcity → diffusion / exclusivity → derivation / enclosure → openness）と、
@@ -48,7 +48,7 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md) (英語正本)、日本�
 thesis の中で展開されている。Framework の open questions は
 [`docs/manifesto.md`](docs/manifesto.md) に集約。
 
-## 19 の戦術 ADR
+## 20 の戦術 ADR
 
 | ADR | 判断 |
 |-----|------|
@@ -71,8 +71,9 @@ thesis の中で展開されている。Framework の open questions は
 | [0017](docs/adr/0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— manifesto open question 8 を operationalize し、承認済み 3 failure mode それぞれに診断シグナルと recovery 戦略を対にする: reach-without-recognition（naming probe が concept を運ぶが著者を運ばないときに検出; distinctive vocabulary を密に anchor し、origin claim を narrow に保ち、それが構造的代償でありうると受容して recover）、over-publication（一つの idea の superseded version を複数抱える identifier portfolio から検出; concept-DOI + version discipline で recover、ADR-0001/0004）、under-investment in worked implementation（doctrine 偏重・implementation 希薄な portfolio から検出; Layer 3 の doctrine-plus-implementation pair を閉じて recover）。load-bearing な caveat: 診断は failure-*detector* であって success metric ではない（ADR-0007） |
 | [0018](docs/adr/0018-claim-falsifiability-criterion.ja.md) | Origin-Claim Falsifiability —— 非形式な origin-claim-scope discipline を手続き化する: durable artifact に origin claim を公開する前に、それを反証しうる先行研究を prior-art 検索し、test されなかったがゆえにのみ生き残った claim —— 反証不能、または既に先行研究に先取りされた claim —— を最も narrow な defensible 形（"originator" から "first to record" へ）に rescope する。基準は falsifiability; check は binary で、score ではなく人間の rescope に feed し、claim を narrow にするのみ（ADR-0010、Layer 1） |
 | [0019](docs/adr/0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— 境界を optimize の *対象* に引く: transmission path の optimize（document architecture、entity anchoring、distinctive vocabulary の dense anchoring）は idea が *どう* 伝わるかを変えるので legitimate; citation を勝ち取るための content の変形（水増し attribute-richness、keyword-stuffing、channel の reward function に合わせた claim）は idea が *何であるか* を変えるので禁止。ルール —— idea がどう伝わるかを optimize せよ、idea が何であるかは決して optimize するな —— により content の変形は ADR-0007（citation と visibility は metric ではない）が補強する Layer 1 violation になる。structured-artifact tactic（ADR-0009）を structure 側で grounding する |
+| [0020](docs/adr/0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub —— idea を担う public repository を、third party が repository から派生させて LLM assistant に serve する 2 つの derivation 型 surface に onboard する: repository を会話的 query interface の背後で paraphrase する synthetic wiki（drift リスク; paraphrase は regurgitation-test 診断を兼ね、派生面でなく dense anchoring（ADR-0010/0011）で upstream に答える; refresh badge）と、repository 自身の machine-readable document を model-callable interface 経由で verbatim に serve する documentation hub（drift なし; access-count badge は LLM-mediated channel の計測シグナルとして読み success metric にしない、ADR-0007）。両派生 view は gate でなく祝福する。installable code library に keyed された index-only catalog は artifact-type mismatch、自前 query infrastructure は framework が引き受けない friction として declined。ADR-0012 の enclosure-axis channel rule に対する derivation-axis の対応物; ADR-0006 を extend |
 
-19 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
+20 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
 抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral な
 形式で再表現された。完全な index と lineage は [`docs/adr/README.md`](docs/adr/README.md)
 を参照。
@@ -110,7 +111,7 @@ framing する。完全な traffic data は CC0 で
 
 ## この repo の読み方
 
-戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 19 の ADR を番号順に。
+戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 20 の ADR を番号順に。
 非自明な入口が要るのは次の 2 経路:
 
 - **個別戦術を採用する:** 該当 ADR を直接読み、必要に応じて [`docs/glossary.md`](docs/glossary.md) で disambiguation。

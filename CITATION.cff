@@ -29,7 +29,7 @@ abstract: >-
   on a three-axis inversion (scarcity to diffusion, exclusivity to
   derivation, enclosure to openness) and a four-layer judgment stack
   (authenticity, attribution diffusion, idea-versus-scaffold
-  separation, tactics). The tactical catalog formalizes nineteen
+  separation, tactics). The tactical catalog formalizes twenty
   decisions extracted from operating a DOI-registered research
   ecosystem of four sibling repositories: concept DOI as canonical
   reference, DOI federation via .zenodo.json, cross-platform dataset
@@ -56,9 +56,13 @@ abstract: >-
   with a diagnostic held as a failure-detector rather than a success
   metric), origin-claim falsifiability (testing a priority claim against
   prior art before publishing it and rescoping it to its narrowest
-  defensible form), and the structural-optimization-versus-content-authenticity
+  defensible form), the structural-optimization-versus-content-authenticity
   boundary (optimizing the transmission path is legitimate, deforming the
-  content to win citations is not). An
+  content to win citations is not), and onboarding to third-party
+  AI-derived repository surfaces (a paraphrasing synthetic wiki used as a
+  regurgitation-test drift diagnostic, a verbatim documentation hub whose
+  access-count badge is a measurement signal not a metric, derived views
+  blessed rather than gated). An
   empirical section reports preliminary
   observations from twenty-five days of CC0-published traffic data
   across the four sibling repositories, plus a probe baseline from the

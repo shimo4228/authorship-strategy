@@ -29,6 +29,7 @@ top-down に prescribe されたものではない。
 | [0017](0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— 承認済み 3 failure mode それぞれの detector と recovery 戦略 | accepted |
 | [0018](0018-claim-falsifiability-criterion.ja.md) | Origin-Claim Falsifiability —— durable artifact に公開する前に priority claim を prior art に対して test する | accepted |
 | [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない | accepted |
+| [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -202,6 +203,23 @@ ADR-0007 が補強する Layer 1 violation である。3 つは ingest 面や id
 extend するのではなく Layer 1 (authenticity) と metric-rejection decision の下に
 座る —— diffusion tactic が stack 全体の守る authenticity を corrode するのを
 防ぐ。
+
+ADR-0020 は **derivation-surface-onboarding decision** である: ADR-0012 の
+enclosure-axis channel rule に対する derivation-axis の対応物だ。ADR-0012 が
+外部 curated collection への著者-initiated な掲載を統治するのに対し、ADR-0020 は
+third party が repository から派生させて LLM assistant に serve する、著者が
+祝福する *自動* surface を統治する —— repository を会話的 query interface の背後で
+paraphrase する synthetic wiki と、repository 自身の machine-readable document を
+model-callable interface 経由で verbatim に serve する documentation hub。両者は
+gate でなく onboard し祝福する。型ごとの discipline: paraphrase する wiki の drift は
+regurgitation-test 診断として使い、派生面で直すのでなく dense-anchoring discipline
+(ADR-0010, ADR-0011) で upstream に答える; verbatim hub の access-count badge は
+LLM-mediated channel の計測シグナルとして読み、success metric にはしない (ADR-0007)。
+installable code library に keyed された index-only catalog は artifact-type
+mismatch として、自前 query infrastructure は framework が引き受けない friction
+として、いずれも declined。ADR-0006 の LLM-first ingest surface を extend し、
+thesis の exclusivity → derivation 反転を channel レベルで enact する: 派生 view は
+防ぐべき imitation でなく祝福すべき validation である。
 
 ## Format
 
