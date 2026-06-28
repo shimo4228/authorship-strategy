@@ -367,7 +367,9 @@ training-data-attribution methods above. Defined and operated by
 search-enabled twin (the citation probe, which makes ghost citation
 observable within a single answer) and a negative-control probe — a
 plausible nonexistent concept whose confident attributions quantify the
-confabulation noise floor that leading questions create.
+confabulation noise floor that leading questions create. The framework's
+body prose refers to this instrument informally as the *regurgitation
+test*.
 
 ## Derivation (in derivative work)
 

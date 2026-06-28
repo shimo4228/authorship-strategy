@@ -297,7 +297,8 @@ parametric channel の測定器: search / grounding tool をすべて抑制し�
 が、検索有効の双子 (citation probe — ghost citation を単一回答内で観測可能に
 する) および negative-control probe (もっともらしい架空概念 — それへの自信
 ありげな帰属が、誘導質問の生む confabulation noise floor を定量化する) と
-ともに定義・運用する。
+ともに定義・運用する。Framework の本文では、この測定器を informal に
+*regurgitation test* と呼ぶ。
 
 ## Derivation (derivative work における)
 
