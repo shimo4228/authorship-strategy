@@ -1,4 +1,4 @@
-<!-- Generated: 2026-06-17 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
+<!-- Generated: 2026-06-30 | Files scanned: project root + docs/ tree | Token estimate: ~1500 -->
 # Document Architecture
 
 Authorship Strategy is a **judgment-artifact repository**, not a code
@@ -14,6 +14,7 @@ given question without scanning the whole tree.
 authorship-strategy/
 ├── README.md / README.ja.md             human + LLM landing (English primary, Japanese mirror)
 ├── CLAUDE.md                            agent / contributor instructions (cold-start context)
+├── AGENTS.md                            cross-tool mirror of CLAUDE.md (harness paths adapted)
 ├── CITATION.cff                         Zenodo DOI metadata
 ├── .zenodo.json                         deposit metadata + relatedIdentifiers (DOI federation)
 ├── LICENSE                              MIT
@@ -26,7 +27,7 @@ authorship-strategy/
     ├── manifesto.md                     eight open questions the framework leaves unanswered
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
-    ├── adr/                             16 ADRs (English) + 16 mirrors (.ja.md) + README + README.ja
+    ├── adr/                             20 ADRs (English) + 20 mirrors (.ja.md) + README + README.ja
     ├── empirical/                       preliminary observation layer (method + 2026-05 traffic baseline + 2026-06 external-literature note + 2026-06 probe baseline + implementation-log intervention timeline; English-only by convention)
     ├── skills/                          component-skill reference index (external skill repos, no body copy)
     └── CODEMAPS/                        this directory
@@ -63,7 +64,7 @@ the empirical layer is downstream of all ADRs and references them only
 to disclaim that the observations do not validate the ADRs.
 
 ```
-thesis.md ──────► (cited by) ─► all 16 ADRs
+thesis.md ──────► (cited by) ─► all 20 ADRs
               ─► manifesto.md (uses thesis vocabulary)
               ─► glossary.md (defines thesis terminology)
 

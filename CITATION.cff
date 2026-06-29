@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 type: software
 title: "Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem"
-version: 0.8.0
-date-released: 2026-06-26
+version: 0.9.0
+date-released: 2026-06-30
 license: MIT
 doi: 10.5281/zenodo.20263316
 repository-code: "https://github.com/shimo4228/authorship-strategy"
@@ -64,7 +64,7 @@ abstract: >-
   access-count badge is a measurement signal not a metric, derived views
   blessed rather than gated). An
   empirical section reports preliminary
-  observations from twenty-five days of CC0-published traffic data
+  observations from twenty-four days of CC0-published traffic data
   across the four sibling repositories, plus a probe baseline from the
   first run of the two-channel probe protocol, with explicit
   limitations on sample size and the absence of pre-versus-post

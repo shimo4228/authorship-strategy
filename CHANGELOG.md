@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-06-30
+
+Records ADR-0020 — onboarding idea-bearing repositories to two third-party
+AI-derived surfaces (a paraphrasing synthetic wiki used as a regurgitation-test
+diagnostic, and a verbatim documentation hub whose access-count badge is a
+measurement signal not a metric) as the derivation-axis counterpart to the
+enclosure-axis channel rule (ADR-0012). The release also adds the operational
+surfaces these tactics imply — AI-derived-wiki and documentation-hub badges, a
+cross-tool `AGENTS.md` — and overhauls the README for human scannability while
+preserving the LLM-read floor. ADR count 19 → 20 across all carriers.
+
+### Added
+
+- ADR-0020: Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs. Onboards idea-bearing public repositories to two derivation-type surfaces a third party builds from the repository and serves to LLM assistants: a synthetic wiki that paraphrases the repository behind a conversational query interface (drift risk; the paraphrase doubles as a regurgitation-test diagnostic answered upstream by dense anchoring, ADR-0010/0011, never on the derived surface) and a documentation hub that serves the repository's own machine-readable documents verbatim through a model-callable interface (no drift; an access-count badge read as a measurement signal, never a success metric, ADR-0007). Both derived views are blessed rather than gated; an index-only catalog keyed to installable code libraries is declined as an artifact-type mismatch, and self-hosted query infrastructure as friction the framework does not take on. The derivation-axis counterpart to ADR-0012's enclosure-axis channel rule; extends ADR-0006. ADR count 19 → 20 across all carriers.
+- AI-derived-wiki and documentation-hub badges across the repository README, the operational form of ADR-0020's two derivation surfaces (Layer 4 tactic).
+- `AGENTS.md`: a cross-tool mirror of `CLAUDE.md` (harness paths adapted) so non-Claude coding agents read the same project doctrine.
+- `regurgitation test` alias in the glossary (English and Japanese), naming the synthetic-wiki paraphrase-fidelity diagnostic of ADR-0020.
+
+### Changed
+
+- README.md / README.ja.md overhauled for human scannability: the per-ADR full-paragraph table is collapsed to a seven-cluster summary pointing to the canonical ADR index, the thrice-restated lead is merged into a single identity paragraph plus one thesis blockquote, and the three-axis inversion is surfaced as a table — while preserving the LLM-read floor (all seven core concepts, every tactic cluster, DOI, citation, sibling lines, empirical numbers). README body roughly halved.
+- The empirical section now represents both instruments the ecosystem hub runs for this project — daily traffic snapshots and the ADR-0011 two-channel naming probe — each pointed at its canonical CC0 raw data under the hub (`traffic/` and `probes/`), matching what `docs/empirical/README.md` already cites.
+- Empirical-baseline window aligned to its canonical 24-day count (2026-04-21 to 2026-05-14) across `CLAUDE.md`, `AGENTS.md`, `CITATION.cff`, and `.zenodo.json`, with `docs/empirical/README.md` as the single source of truth; the `.zenodo.json` deposit description, stale at "five decisions," is refreshed to the current twenty-decision catalog.
+
+### Notes
+
+- A Google Code Wiki badge was added and then reverted after a hands-on check found its synthetic-wiki generation and refresh are popularity-gated and not author-controllable (a worked instance of manifesto open question 9); the net change for this release is zero.
+
 ## [0.8.0] - 2026-06-26
 
 Records four ADRs since v0.7.0 — ADR-0016 (genre-split placement, routing
