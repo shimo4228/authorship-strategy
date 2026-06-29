@@ -52,63 +52,18 @@ below it:
 The twenty ADRs were not deduced from the framework; they were extracted from
 operating the sibling ecosystem and re-expressed in harness-neutral form, so
 another author can adopt the same decisions without inheriting the original
-implementation details. Each decision below is a one-line summary; see
-[`docs/adr/README.md`](docs/adr/README.md) for the full index, status, and
-lineage.
+implementation details. They group into seven clusters by concern:
 
-**Identifier & federation**
+- **Identifier & federation** (0001–0003, 0013) — concept-DOI canonical reference, metadata-level federation, cross-platform mirroring, and an intrinsic content-derived identifier (SWHID).
+- **Maintenance discipline** (0004–0005) — amortize maintenance against observed evidence, not speculation about prospective state.
+- **LLM-first ingest & diffusion** (0006, 0008, 0009) — the prose-navigator + concept-graph entry pair (asymmetric: the graph carries citation), and diffusion split into a parametric and a retrieval channel.
+- **Metrics & measurement** (0007, 0011) — reject human-attention vanity metrics; measure ghost citation with a two-channel probe.
+- **Vocabulary & claims** (0010, 0018, 0019) — coin sparingly and anchor densely, test origin claims against prior art, optimize transmission never content.
+- **Channels & placement** (0012, 0015, 0016, 0020) — link-index external contributions, audience-driven licensing, genre-split canonical placement, and blessing AI-derived surfaces.
+- **Operating the framework** (0014) — a two-tier ledger with periodic gap-review.
 
-| ADR | Decision |
-|-----|----------|
-| [0001](docs/adr/0001-concept-doi-canonical.md) | Use the concept DOI — never a version DOI — for every external reference. |
-| [0002](docs/adr/0002-doi-federation-via-zenodo-json.md) | Declare sibling/source links as `relatedIdentifiers` so the citation graph is recoverable from metadata alone. |
-| [0003](docs/adr/0003-cross-platform-dataset-federation.md) | Mirror the canonical artifact across Git host, DOI registry, and dataset platform with cross-references on each. |
-| [0013](docs/adr/0013-intrinsic-identifier-layer.md) | Add an intrinsic, content-derived identifier (SWHID) beside the DOI; for DOI-impractical genres it is the substitute priority claim. |
-
-**Maintenance discipline**
-
-| ADR | Decision |
-|-----|----------|
-| [0004](docs/adr/0004-authorship-metadata-orcid.md) | Enrich the author identifier with concept DOIs only; keep ORCID auto-update off to avoid version sprawl. |
-| [0005](docs/adr/0005-readme-localization-audience-driven.md) | Add or retire locale mirrors on observed traffic, not on speculation about prospective audiences. |
-
-**LLM-first ingest & diffusion**
-
-| ADR | Decision |
-|-----|----------|
-| [0006](docs/adr/0006-llm-first-ingest-dual-entry-points.md) | Ship every artifact as a prose navigator + concept-form graph pair, each reaching a reader the other cannot. |
-| [0009](docs/adr/0009-dual-entry-asymmetric-rebalance.md) | The pair is asymmetric: the graph carries citation, the navigator is an agent-context surface, not a citation lever. |
-| [0008](docs/adr/0008-rag-era-attribution-diffusion.md) | Treat diffusion as two channels — parametric (slow, vocabulary-driven) and retrieval (fast, structure-driven) — optimized separately. |
-
-**Metrics & measurement**
-
-| ADR | Decision |
-|-----|----------|
-| [0007](docs/adr/0007-human-attention-signals-not-a-metric.md) | Stars and page-views are not success metrics; success is the breadth of LLM-mediated channels carrying the author's signature. |
-| [0011](docs/adr/0011-two-channel-probe-protocol.md) | Probe frontier models with search off and on to make ghost citation a measured rate (**experimental**). |
-
-**Vocabulary & claims**
-
-| ADR | Decision |
-|-----|----------|
-| [0010](docs/adr/0010-vocabulary-discipline.md) | Coin a term only when three conditions hold; anchor every coinage densely, otherwise reuse existing vocabulary with citation. |
-| [0018](docs/adr/0018-claim-falsifiability-criterion.md) | Test an origin claim against prior art before publishing; narrow any claim that survives only because it was never tested. |
-| [0019](docs/adr/0019-structural-optimization-vs-content-authenticity.md) | Optimize how an idea travels, never what it is — deforming content to win citations is a Layer 1 violation. |
-
-**Channels & placement**
-
-| ADR | Decision |
-|-----|----------|
-| [0012](docs/adr/0012-link-index-channel-selection.md) | Contribute to external collections by link-index only; audit each host on four enclosure conditions; withdraw if it encloses. |
-| [0015](docs/adr/0015-license-selection-by-audience.md) | Choose each artifact's license by its dominant audience (CC0 machine-mined, permissive code, CC-BY human-first); no NC/ND terms. |
-| [0016](docs/adr/0016-genre-split-placement.md) | Route the canonical by genre: essays to the repository corpus + intrinsic identifier, papers to the concept DOI. |
-| [0020](docs/adr/0020-derivation-surface-onboarding.md) | Bless two third-party AI-derived surfaces — synthetic wiki and documentation hub — as diffusion channels, never as metrics. |
-
-**Operating the framework**
-
-| ADR | Decision |
-|-----|----------|
-| [0014](docs/adr/0014-implementation-tracking-two-tier-ledger.md) | Track implementation as a two-tier ledger — private operational ledger plus a dated, effect-claim-free public timeline — with periodic gap-review. |
+See [`docs/adr/README.md`](docs/adr/README.md) for the full index, each ADR's
+title and status, and the lineage of how it was extracted.
 
 ## Empirical baseline (preliminary)
 

@@ -47,62 +47,18 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md)（英語正本）、日�
 
 20 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
 抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral
-な形式で再表現された。以下は各判断の一行要約。完全な index・status・lineage は
+な形式で再表現された。関心ごとに 7 つのクラスタに分かれる:
+
+- **識別子と federation**（0001–0003, 0013）—— concept-DOI canonical reference、メタデータ層 federation、クロスプラットフォーム ミラー、intrinsic な content-derived identifier（SWHID）。
+- **メンテナンス規律**（0004–0005）—— 維持コストを想定状態でなく観測された証拠に対して amortize する。
+- **LLM-first ingest と diffusion**（0006, 0008, 0009）—— prose navigator + concept graph の entry ペア（非対称: citation を担うのは graph）、diffusion を parametric と retrieval の 2 チャネルに分割。
+- **Metric と測定**（0007, 0011）—— human-attention の vanity metric を拒否し、ghost citation を two-channel probe で測定する。
+- **語彙と claim**（0010, 0018, 0019）—— 控えめに造語して密に anchor、origin claim を先行研究で test、transmission は optimize し content は変えない。
+- **チャネルと配置**（0012, 0015, 0016, 0020）—— 外部寄与は link-index、license は audience 駆動、canonical は genre で振り分け、AI 派生 surface を祝福。
+- **フレームワークの運用**（0014）—— 二層 ledger + 定期 gap-review。
+
+各 ADR のタイトル・status、完全な index と lineage は
 [`docs/adr/README.md`](docs/adr/README.md) を参照。
-
-**識別子と federation**
-
-| ADR | 判断 |
-|-----|------|
-| [0001](docs/adr/0001-concept-doi-canonical.ja.md) | DOI 登録 artifact への外部リンクは常に concept DOI、version 固有 DOI は使わない。 |
-| [0002](docs/adr/0002-doi-federation-via-zenodo-json.ja.md) | sibling・source 関係を `relatedIdentifiers` で宣言し、引用ネットワークをメタデータだけで遡源可能にする。 |
-| [0003](docs/adr/0003-cross-platform-dataset-federation.ja.md) | canonical artifact を Git host・DOI registry・データセット platform にミラーし、各 platform で相互参照を明示する。 |
-| [0013](docs/adr/0013-intrinsic-identifier-layer.ja.md) | DOI に並ぶ intrinsic な content-derived identifier（SWHID）を追加; DOI 不適 genre では substitute priority claim になる。 |
-
-**メンテナンス規律**
-
-| ADR | 判断 |
-|-----|------|
-| [0004](docs/adr/0004-authorship-metadata-orcid.ja.md) | 著者識別子は concept DOI のみで enrich し、ORCID auto-update を OFF にして version sprawl を防ぐ。 |
-| [0005](docs/adr/0005-readme-localization-audience-driven.ja.md) | locale mirror は想定 audience の推測でなく、観測された traffic に基づいて追加/退役する。 |
-
-**LLM-first ingest と diffusion**
-
-| ADR | 判断 |
-|-----|------|
-| [0006](docs/adr/0006-llm-first-ingest-dual-entry-points.ja.md) | 各 artifact を prose navigator + concept 形 graph のペアとして deploy し、各々が他方の届かない読者に届く。 |
-| [0009](docs/adr/0009-dual-entry-asymmetric-rebalance.ja.md) | ペアは非対称: graph が citation を担い、navigator は citation lever でなく agent-context surface。 |
-| [0008](docs/adr/0008-rag-era-attribution-diffusion.ja.md) | diffusion を 2 チャネル —— parametric（遅い・語彙駆動）と retrieval（速い・構造駆動）—— として別々に最適化する。 |
-
-**Metric と測定**
-
-| ADR | 判断 |
-|-----|------|
-| [0007](docs/adr/0007-human-attention-signals-not-a-metric.ja.md) | star と page-view は success metric にしない; success は著者の署名を運ぶ LLM 経由チャネルの breadth で測る。 |
-| [0011](docs/adr/0011-two-channel-probe-protocol.ja.md) | frontier model を検索 OFF/ON で probe し、ghost citation を測定された rate にする（**experimental**）。 |
-
-**語彙と claim**
-
-| ADR | 判断 |
-|-----|------|
-| [0010](docs/adr/0010-vocabulary-discipline.ja.md) | 3 条件がすべて成立するときのみ造語し、密に anchor する; それ以外は既存語彙で書き出典を cite する。 |
-| [0018](docs/adr/0018-claim-falsifiability-criterion.ja.md) | origin claim を公開する前に反証しうる先行研究を検索し、test されなかったがゆえに生き残った claim を narrow にする。 |
-| [0019](docs/adr/0019-structural-optimization-vs-content-authenticity.ja.md) | idea が *どう* 伝わるかは optimize せよ、*何であるか* は変えるな —— citation 目的の content 変形は Layer 1 violation。 |
-
-**チャネルと配置**
-
-| ADR | 判断 |
-|-----|------|
-| [0012](docs/adr/0012-link-index-channel-selection.ja.md) | 外部 collection への寄与は link-index のみ; 各 host を 4 条件で監査し、後に enclose したら取り下げる。 |
-| [0015](docs/adr/0015-license-selection-by-audience.ja.md) | license は支配的 audience で選ぶ（機械 mine は CC0、code は permissive、人間 first のみ CC-BY）; NC/ND は禁止。 |
-| [0016](docs/adr/0016-genre-split-placement.ja.md) | canonical を genre で振り分ける: essay は repository corpus + intrinsic identifier、paper は concept DOI。 |
-| [0020](docs/adr/0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 surface 2 種（synthetic wiki・documentation hub）を diffusion チャネルとして祝福し、metric にしない。 |
-
-**フレームワークの運用**
-
-| ADR | 判断 |
-|-----|------|
-| [0014](docs/adr/0014-implementation-tracking-two-tier-ledger.ja.md) | 実装を二層 ledger（private 運用台帳 + 日付付き・効果主張なしの public timeline）でトラッキングし、定期 gap-review する。 |
 
 ## 経験的ベースライン（preliminary）
 
