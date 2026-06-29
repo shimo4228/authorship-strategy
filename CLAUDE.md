@@ -87,7 +87,7 @@ ADR は project / harness 固有の識別子、特定 vendor 製品名、特定 
 `docs/empirical/` は shimo4228 の sibling repo と hub repo の traffic data (CC0 publish) を baseline とする (現在 5 sibling: 本 repo + AKC + Contemplative Agent + AAP + Attention, Not Self)。Attention, Not Self は 2026-05-18 に traffic 観測開始のため、v0.1.0 baseline (4 sibling 構成) には含まれない。次回 baseline 更新で 5 sibling に拡張する。
 
 - Data source: hub repo の `traffic/data/*.jsonl` (GitHub Insights API daily snapshot)
-- Time range (v0.1.0 baseline): 2026-04-21 以降の蓄積 (約 25 日分)
+- Time range (v0.1.0 baseline): 2026-04-21〜05-14、24 daily snapshots (canonical: docs/empirical/README.md)
 - Metrics: clones / unique cloners / views / unique viewers / referrers / co-traffic correlation (Spearman)
 - Limitations (必ず明示):
   - N=1 author の case study、generalization 困難
