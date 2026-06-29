@@ -62,17 +62,18 @@ Thesis の展開は [`docs/thesis.md`](docs/thesis.md)（英語正本）、日�
 
 ## 経験的ベースライン（preliminary）
 
-[`docs/empirical/`](docs/empirical/) ディレクトリは、4 つの sibling repo にわたる
-25 日分の CC0 公開 traffic data からの preliminary observation を報告する。現時点で
-最も明確な観測: clone 数は自動ツール（training-pipeline ingest、AI アシスタントの
-context-fetch、crawler）に支配されており、view/clone 比は概ね 13 から 100 超に及ぶ ——
-これはアクセスの大半が非人間であるとき "diffusion" が何を意味するのかという問いを提起
-する。Limitations は明示的に述べ（N=1 著者、pre/post intervention 比較なし、crawler
-dominance）、すべての主張を evidence ではなく preliminary observation として framing
-する。完全な traffic data は CC0 で
-`https://shimo4228.github.io/shimo4228/traffic/dashboard/` に公開されている。経験的
-レイヤーは時間とともに成長し、時系列の蓄積と（可能な場合は）個別戦術の pre/post
-intervention 比較を報告していく。
+[`docs/empirical/`](docs/empirical/) 層は 2 つの instrument からの preliminary
+observation を報告する。どちらもエコシステム hub
+[`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228) で運用され、CC0
+で公開されている:
+
+- **Traffic** —— sibling repo 群にわたる日次の clone/view スナップショット（[raw data](https://github.com/shimo4228/shimo4228/tree/main/traffic)、[dashboard](https://shimo4228.github.io/shimo4228/traffic/dashboard/)）。現時点で最も明確な観測: clone 数は自動ツール（training-pipeline ingest、AI アシスタントの context-fetch、crawler）に支配されており、view/clone 比は概ね 13 から 100 超に及ぶ —— これはアクセスの大半が非人間であるとき "diffusion" が何を意味するのかという問いを提起する。
+- **Naming probe** —— [ADR-0011](docs/adr/0011-two-channel-probe-protocol.ja.md) の two-channel probe protocol。frontier model を検索抑制と検索有効の両設定で probe し、ghost citation を測定された rate にする（[raw probe logs](https://github.com/shimo4228/shimo4228/tree/main/probes)）。
+
+Limitations は load-bearing で明示的に述べる（N=1 著者、pre/post intervention 比較
+なし、crawler dominance、single-run probe）。すべての主張を evidence ではなく
+preliminary observation として framing する。経験的レイヤーは時間とともに成長し、
+時系列の蓄積と（可能な場合は）個別戦術の pre/post 比較を報告していく。
 
 ## Sibling research lines
 

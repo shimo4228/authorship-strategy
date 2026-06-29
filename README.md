@@ -67,18 +67,19 @@ title and status, and the lineage of how it was extracted.
 
 ## Empirical baseline (preliminary)
 
-The [`docs/empirical/`](docs/empirical/) directory reports preliminary
-observations from twenty-five days of CC0-published traffic data across four
-sibling repositories. The clearest observation so far: clone counts are dominated
-by automated tools (training-pipeline ingest, AI-assistant context-fetch,
-crawlers), with view-to-clone ratios ranging from roughly 13 to over 100 — which
-raises the question of what "diffusion" even means when most access is non-human.
-Limitations are stated explicitly (N=1 author, no pre-versus-post intervention
-comparison, crawler dominance), and every claim is framed as preliminary
-observation rather than evidence. The full traffic data is published under CC0 at
-`https://shimo4228.github.io/shimo4228/traffic/dashboard/`. The layer is intended
-to grow with time, accumulating longer series and — where possible —
-pre-versus-post intervention contrasts for individual tactics.
+The [`docs/empirical/`](docs/empirical/) layer reports preliminary observations
+from two instruments, both run from the ecosystem hub
+[`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228) and published
+under CC0:
+
+- **Traffic** — daily clone/view snapshots across the sibling repositories ([raw data](https://github.com/shimo4228/shimo4228/tree/main/traffic), [dashboard](https://shimo4228.github.io/shimo4228/traffic/dashboard/)). The clearest observation so far: clone counts are dominated by automated tools (training-pipeline ingest, AI-assistant context-fetch, crawlers), with view-to-clone ratios from roughly 13 to over 100 — which raises the question of what "diffusion" even means when most access is non-human.
+- **Naming probe** — the two-channel probe protocol of [ADR-0011](docs/adr/0011-two-channel-probe-protocol.md), querying frontier models with search suppressed and with search enabled to make ghost citation a measured rate ([raw probe logs](https://github.com/shimo4228/shimo4228/tree/main/probes)).
+
+Limitations are load-bearing and stated explicitly (N=1 author, no
+pre-versus-post intervention comparison, crawler dominance, single-run probes),
+and every claim is framed as preliminary observation rather than evidence. The
+layer is intended to grow with time, accumulating longer series and — where
+possible — pre-versus-post contrasts for individual tactics.
 
 ## Sibling research lines
 
