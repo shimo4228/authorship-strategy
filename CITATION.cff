@@ -18,6 +18,9 @@ identifiers:
   - type: swh
     value: "swh:1:snp:5692de5f6c7d8a9473f213ef77ff969b8029d069"
     description: "Software Heritage snapshot of v0.8.0 (intrinsic content-derived identifier, ADR-0013)"
+  - type: swh
+    value: "swh:1:snp:1a7b230332a4d7399c2469d690039eeaf4439eab"
+    description: "Software Heritage snapshot of v0.9.0 (intrinsic content-derived identifier, ADR-0013)"
 authors:
   - family-names: Shimomoto
     given-names: Tatsuya
