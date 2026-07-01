@@ -104,6 +104,24 @@ metric-rejection decision (ADR-0007).
 | Essay-corpus repository de-islanded: ecosystem-hub, author-identifier, and sibling-line back-links added at the repository surface — the human-facing READMEs (English and Japanese), the AI-facing navigator, and the citation metadata — routing a reader or non-rendering crawler from the bilingual essay corpus back to the ecosystem | 2026-06-25 | ADR-0016; manifesto OQ8 |
 | Essay-corpus repository's source-hosting metadata surface edited to route discovery back to the ecosystem: the repository description rewritten to the governed-corpus framing, the website link pointed at the ecosystem hub, and the discovery topics expanded so a reader arriving through host search or topic browse reaches the hub | 2026-06-25 | manifesto OQ8 |
 
+### Search-index surface (defensive query routing; ADR-0007 diagnostics-not-targets)
+
+These interventions address the classical search-index layer that
+AI-search grounding draws on. Their aim is defensive rather than
+acquisitive: when a coined term or the author's name is queried — by a
+human who heard the term through an LLM, or by a retrieval system
+grounding an answer — the canonical source should be what resolves.
+Search-console instrumentation is used as a diagnostic, never as a
+target, per the metric-rejection decision (ADR-0007).
+
+| Intervention | Date | Recorded in |
+|---|---|---|
+| Concept-term definition pages: one page per coined or distinctively used research term (twenty-one pages plus an index) published on the ecosystem hub's served-page surface, each carrying the bilingual definition, an origin statement, term and FAQ structured data, and links back to the canonical repository, glossary entry, and concept DOI. Origin statements follow the falsifiability discipline — adopted terms are marked adopted, and terms whose origin claim was waived say so | 2026-07-02 | ADR-0010; ADR-0018 |
+| The hub's served-page root converted from an unindexed redirect into an entity landing page carrying person-entity structured data, with the cross-platform `sameAs` federation extended to the author's video channel | 2026-07-02 | entity federation tactic; manifesto OQ9 |
+| Sitemap published for the hub's served pages; site ownership verified on a major search console and the sitemap submitted; a cross-engine URL-notification protocol key deployed and all served URLs submitted through it | 2026-07-02 | ADR-0007 (diagnostics, not targets) |
+| Cross-language canonical correction on the developer-publishing platform: twenty-seven English translations that had been canonicalized to their Japanese originals made self-canonical, so each language surface indexes independently | 2026-07-02 | — |
+| Source-hosting metadata aligned across eight ecosystem repositories: descriptions rewritten to carry the coined line names in full, discovery topics added where absent, and homepage links set — extending the 2026-06-25 essay-corpus de-islanding to the whole ecosystem | 2026-07-02 | upstream-anchoring follow-up to the synthetic-wiki drift observation (ADR-0020 Lineage) |
+
 ## What the deployment order shows
 
 The version-control dates carry a pattern worth recording, because the
