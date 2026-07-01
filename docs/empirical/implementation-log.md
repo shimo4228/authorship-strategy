@@ -45,6 +45,8 @@ for a future pre-versus-post contrast.
 | ORCID record, auto-update disabled, concept-DOI enrichment only | first deployed 2026-03-24 (agent-knowledge-cycle and contemplative-agent, with CITATION.cff); rolled out through 2026-06-10 (hub) | ADR-0004 |
 | Software Heritage archival of all public repositories; SWHID recorded as the intrinsic identifier layer | 2026-06-13 | ADR-0013 |
 | Essay corpus brought under identifier governance: a Software Heritage snapshot recorded in citation metadata as its intrinsic-identifier priority claim — the substitute priority-claim mechanism for an artifact genre where DOI registration is impractical — and the corpus relicensed to a public-domain dedication for its machine-mined audience | 2026-06-25 | ADR-0016, ADR-0013, ADR-0015 |
+| `codemeta.json` (schema.org-based software/dataset citation metadata) added alongside `CITATION.cff` across the ecosystem's DOI-registered repositories, read directly by the Software Heritage archival service's metadata indexer, which does not parse `CITATION.cff` | 2026-07-01 | ADR-0013 |
+| Rendered-HTML archival of the ecosystem's git-hosting pages via an on-demand public web archive, complementing the git-object-level Software Heritage archival with a snapshot of the page a browser or crawler actually renders | 2026-07-01 | ADR-0013 |
 
 ### AI-facing ingest (ADRs 0006, 0009)
 
@@ -55,6 +57,7 @@ for a future pre-versus-post contrast.
 | Dual-entry rebalance (graph as the citation lever; navigator rescoped) | 2026-05-30 (ADR-0009 authored, amending the ADR-0006 pairing on 2026 measurement) | ADR-0009 |
 | Cross-platform dataset-mirror of the graph for training-pipeline ingest | follows the graph deployment, 2026-05-15 onward (see the dataset-mirroring row above) | ADR-0003 |
 | Simplified-Chinese machine-readable anchor on the concept graph (language-tagged concept labels plus a glossary term mapping; prose surfaces remain English/Japanese only) | 2026-06-13 | multilingual tactic, machine-readable layer |
+| The ecosystem hub's full concept graph mirrored into a `<script type="application/ld+json">` block on the hub's traffic dashboard — an already-indexed served page — closing the gap between the graph existing as a repository file and the graph being embedded in markup a crawler actually renders | 2026-07-01 | ADR-0006, ADR-0009 |
 
 ### Citation graph and scholarly surface (ADRs 0002, 0008)
 
