@@ -125,9 +125,11 @@ latest version):
 
 > Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
 
-Full citation metadata is in [`CITATION.cff`](CITATION.cff). For reproducibility
-citation of a specific version, follow the concept DOI to its version listing on
-Zenodo and cite the version-specific DOI explicitly. See
+Full citation metadata is in [`CITATION.cff`](CITATION.cff), also available as
+[`codemeta.json`](codemeta.json) (schema.org-based software metadata, read by
+the Software Heritage indexer). For reproducibility citation of a specific
+version, follow the concept DOI to its version listing on Zenodo and cite the
+version-specific DOI explicitly. See
 [ADR-0001](docs/adr/0001-concept-doi-canonical.md) for the canonical-reference
 discipline.
 

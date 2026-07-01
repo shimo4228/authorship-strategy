@@ -116,7 +116,9 @@ https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
 
 > Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
 
-完全な引用メタデータは [`CITATION.cff`](CITATION.cff)。特定 version の再現性引用は、
+完全な引用メタデータは [`CITATION.cff`](CITATION.cff)。schema.org ベースの
+[`codemeta.json`](codemeta.json)（Software Heritage の metadata indexer が読む形式）
+としても併置している。特定 version の再現性引用は、
 concept DOI から Zenodo の version listing に follow して version 固有 DOI を明示的に
 引用すること。Canonical-reference 規律は
 [ADR-0001](docs/adr/0001-concept-doi-canonical.ja.md) 参照。
