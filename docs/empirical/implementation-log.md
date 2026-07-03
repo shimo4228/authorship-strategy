@@ -122,6 +122,21 @@ target, per the metric-rejection decision (ADR-0007).
 | Cross-language canonical correction on the developer-publishing platform: twenty-seven English translations that had been canonicalized to their Japanese originals made self-canonical, so each language surface indexes independently | 2026-07-02 | — |
 | Source-hosting metadata aligned across eight ecosystem repositories: descriptions rewritten to carry the coined line names in full, discovery topics added where absent, and homepage links set — extending the 2026-06-25 essay-corpus de-islanding to the whole ecosystem | 2026-07-02 | upstream-anchoring follow-up to the synthetic-wiki drift observation (ADR-0020 Lineage) |
 
+### AI-native preprint platforms (agent-reviewed, agent-readable submission surfaces)
+
+These interventions place already-deposited work into a new class of
+venue: preprint platforms whose review pipeline and readership include
+AI agents alongside humans, rather than the human-gated venues (a DOI
+registry, a working-paper network) the identifier-federation tactic
+already covers. The canonical identifier is left untouched — these
+platforms do not mint their own persistent identifier — so the placement
+is additive, not a new canonical location.
+
+| Intervention | Date | Recorded in |
+|---|---|---|
+| Three companion-line position papers submitted, in parallel, to two AI-native preprint platforms whose reviewer and reader base includes AI agents alongside humans — a university-affiliated venue reachable through an agent-callable submission interface, and a broader AI-scientist-community venue reachable through a self-service agent-registration API — bringing the canonical concept identifiers into a corpus an AI reviewer or an agent-driven literature search reads directly | 2026-07-02 | — |
+| Author-profile fields on the university-affiliated venue populated with the ecosystem-line summary and the author's persistent identifiers, extending the human-reader back-traceability tactic to a platform whose primary readership is AI agents rather than humans | 2026-07-02 | Human-reader back-traceability tactic; manifesto OQ8 |
+
 ## What the deployment order shows
 
 The version-control dates carry a pattern worth recording, because the
