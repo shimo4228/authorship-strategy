@@ -348,8 +348,8 @@ thesis, whose three-axis structure is held stable across releases.
 
 The framework was extracted from four sibling research lines
 maintained by the same author. The four lines supplied the
-recurring tactical decisions that became the framework's seven
-ADRs. Each sibling line is independent in content; the framework
+recurring tactical decisions that the framework's ADRs
+formalize. Each sibling line is independent in content; the framework
 is downstream of all four. (The research ecosystem has since added
 a fifth line, Attention, Not Self, which postdates the extraction
 and so is not among the four that supplied the recurring decisions.)
@@ -377,11 +377,14 @@ and so is not among the four that supplied the recurring decisions.)
 - Repository: https://github.com/shimo4228/shimo4228
 - Lineage to this repository: the hub supplies the *federation pattern* (a metadata-only repository at the center of a sibling network, cross-referenced from each sibling and CC0-licensed) that the present framework's Cross-Platform Dataset Federation ADR generalizes. The hub also publishes the traffic data the empirical layer draws on, under a CC0 license.
 
-## Operational origins of the seven ADRs
+## Operational origins of the founding ADRs (0001–0007)
 
-Each of the framework's seven ADRs traces to a recurring decision
-in the sibling-line operation. The lineage is recorded in each
-ADR's *Lineage* section; this document summarizes the chain.
+Each of these seven founding ADRs (0001–0007) traces to a recurring
+decision in the sibling-line operation. The lineage is recorded in each
+ADR's *Lineage* section; this document summarizes the chain for the
+founding set. The ADRs added in later releases (0008 onward) record
+their origins in their own *Lineage* sections; the [ADR index](adr/README.md)
+lists the full current catalog and its groupings.
 
 | ADR | Origin |
 |-----|--------|
@@ -420,7 +423,7 @@ debts and the sibling decisions that informed it could read in
 this order:
 
 1. [`thesis.md`](thesis.md) for the framework's core claim.
-2. The seven ADRs in [`adr/`](adr/), in numerical order, for the tactical decisions.
+2. The ADRs in [`adr/`](adr/), in numerical order, for the tactical decisions.
 3. The sibling repositories' READMEs (AKC, Contemplative Agent, AAP) for the operational context the framework was extracted from.
 4. The prior literature cited above for the framework's grounding in book history, platform economics, and scientometrics.
 5. [`manifesto.md`](manifesto.md) for the open questions the framework leaves unanswered.
