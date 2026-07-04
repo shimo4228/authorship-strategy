@@ -72,8 +72,8 @@ abstract: >-
   first run of the two-channel probe protocol, with explicit
   limitations on sample size and the absence of pre-versus-post
   intervention comparison. Sibling research lines (Agent Knowledge Cycle,
-  Contemplative Agent, Agent Attribution Practice) are referenced
-  but not extended. Written from a maker's and practitioner's stance:
+  Contemplative Agent, Agent Attribution Practice, Attention Not Self)
+  are referenced but not extended. Written from a maker's and practitioner's stance:
   the academic apparatus used throughout (DOI, SWHID, citation graphs)
   is tooling for citability, durability, and traceability rather than
   an identity or destination, and the intended audience spans developers,
@@ -125,6 +125,15 @@ references:
     repository-code: "https://github.com/shimo4228/agent-attribution-practice"
     doi: "10.5281/zenodo.19652013"
     notes: "Sibling research line on accountability distribution. AAP's harness-neutral writing convention and ADR format are templates this repository adopts; the two notions of attribution (accountability for failure vs. credit for source) are intentionally kept disjoint."
+    authors:
+      - family-names: Shimomoto
+        given-names: Tatsuya
+        orcid: "https://orcid.org/0009-0002-6168-4162"
+  - type: software
+    title: "Attention, Not Self"
+    repository-code: "https://github.com/shimo4228/attention-not-self"
+    doi: "10.5281/zenodo.20262112"
+    notes: "Sibling research line. A cross-disciplinary inquiry contrasting three Buddhist Abhidharma traditions with computational phenomenology; like this repository it specifies no agent mechanism and occupies the diffusion/framing layer."
     authors:
       - family-names: Shimomoto
         given-names: Tatsuya

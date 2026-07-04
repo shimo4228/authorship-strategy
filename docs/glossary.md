@@ -213,7 +213,7 @@ prose-form half of the [dual entry point](#dual-entry-point). The
 present author adopts the Answer.AI specification of this convention;
 the framework decision is to deploy a prose navigator, not to mandate
 this specific convention. Operational form lives in the external skill
-[`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer).
+[`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer).
 
 ## JSON-LD knowledge graph
 
@@ -229,7 +229,7 @@ documentation (which lives in `docs/CODEMAPS/`) by encoding
 concept-level structure that prose leaves implicit. The framework
 decision is to deploy a concept graph, not to mandate a specific
 linked-data vocabulary. Operational form lives in the external skill
-[`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph).
+[`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph).
 
 ## Distinctive terminology (or coined terminology)
 

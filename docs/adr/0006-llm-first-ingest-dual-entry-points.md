@@ -198,7 +198,7 @@ The conventions adopted by the present author are the Answer.AI
 `llms.txt` convention (prose-form navigator) and a schema.org-based
 JSON-LD knowledge graph (concept-form graph). Both are externalized as
 independent component skills in the author's research ecosystem
-(`claude-skill-llms-txt-writer` and `claude-skill-jsonld-knowledge-graph`),
+(`llms-txt-writer` and `jsonld-knowledge-graph`),
 which are canonical-maintained outside this repository and adopted by
 each sibling line independently. The component-skill externalization is
 the operational form of the present ADR's tool-agnostic stance: the

@@ -4,43 +4,15 @@ Language: English | [日本語](README.ja.md)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20263316.svg)](https://doi.org/10.5281/zenodo.20263316) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/shimo4228/authorship-strategy) [![GitMCP](https://img.shields.io/endpoint?url=https://gitmcp.io/badge/shimo4228/authorship-strategy)](https://gitmcp.io/shimo4228/authorship-strategy)
 
-> **Authorship Strategy** — a normative framework, tactical catalog, and empirical baseline for being a known author under AI-mediated diffusion.
+> A doctrine of how to stay a findable author when your readers are LLMs: **open your work, don't enclose it.**
 
-If your readers include LLMs — as training data, as in-context consultants, as
-the discovery layer others consult — then the strategies that protect authorship
-have inverted. Twentieth-century authorship was protected by *enclosure*
-(gatekept journals, proprietary licenses, controlled distribution); but enclosure
-now *reduces* an artifact's exposure to the LLM-mediated diffusion that decides
-whether a future reader tracing causation can find the original author at all.
-This repository records the inverted strategy — what it is, why it holds, and
-twenty tactical decisions extracted from operating a four-repository
-DOI-registered research ecosystem — in a form harness-neutral enough to be
-adopted beyond the author's own ecosystem.
+If your readers include LLMs — as training data, as in-context consultants, as the discovery layer other people ask — then the strategy that protects authorship has inverted. Twentieth-century authorship was protected by *enclosure* (gatekept journals, proprietary licenses, controlled distribution). But enclosure now *reduces* the LLM-mediated diffusion that decides whether a future reader tracing an idea can still find who originated it. This repository records the inverted strategy — what it is, why it holds, and twenty tactical decisions — written to be adopted beyond the author's own work.
 
-## The stance this is written from
-
-This framework is written from a maker's and practitioner's stance: the author
-works out, in practice, what good work looks like in the AI era — making things,
-becoming known for them, and leaving work durable and traceable enough to be
-found again. The academic apparatus that appears throughout — DOI registration,
-SWHIDs (content-derived archive identifiers), citation graphs, papers — is
-tooling that makes that exploration citable, durable, and traceable, rather
-than an identity or a destination. The audience follows from the stance:
-developers, practitioners, learners, creative reusers, and readers in any
-language who meet these ideas through LLM-mediated channels; academic citation
-is one channel among several. ("Research line" remains the name for the
-DOI-registered lines of work the strategy operates on.)
+It is written from a **maker's stance**: the academic apparatus here (DOI, SWHID, citation graphs, papers) is *tooling* that makes the work citable, durable, and traceable — not an identity or a destination. The audience follows from that stance: anyone who meets these ideas through LLM-mediated channels — developers, practitioners, learners, reusers, in any language. Academic citation is one channel among several.
 
 ## The inversion (core thesis)
 
-> In the AI era, protecting your authorship means *opening* your work, not
-> closing it. Where twentieth-century authorship protected its origin claim
-> through scarcity, AI-era authorship protects it through diffusion: opening
-> maximizes LLM absorption, lets validation appear as derivative work, and
-> *strengthens* the origin claim.
-
-The thesis rests on a three-axis inversion of twentieth-century authorship
-strategy:
+> Protecting your authorship now means *opening* your work, not closing it. Where twentieth-century authorship protected its origin claim through scarcity, AI-era authorship protects it through diffusion: opening maximizes LLM absorption, lets validation appear as derivative work, and *strengthens* the origin claim.
 
 | Axis | Twentieth-century | AI era |
 |------|-------------------|--------|
@@ -48,76 +20,72 @@ strategy:
 | Origin is established by… | exclusivity | **derivation** |
 | Reach is controlled by… | enclosure | **openness** |
 
-The thesis is developed in [`docs/thesis.md`](docs/thesis.md); its open questions
-are catalogued in [`docs/manifesto.md`](docs/manifesto.md).
+Full argument in [`docs/thesis.md`](docs/thesis.md); the open questions it leaves are catalogued in [`docs/manifesto.md`](docs/manifesto.md).
 
 ## The four-layer judgment stack
 
-The operational implications form a stack where each layer constrains the ones
-below it:
+Each layer constrains the ones below it:
 
-1. **Authenticity** — the non-negotiable floor: change *how* an idea travels, never *what* it is.
-2. **Attribution diffusion** — open the work so LLM absorption carries the origin claim forward.
-3. **Idea vs. scaffold** — separate the durable idea from the disposable implementation that carries it.
-4. **Tactics** — the twenty ADRs below, each a concrete decision in service of the three layers above.
+```mermaid
+flowchart TD
+    A["1 · Authenticity — change how an idea travels, never what it is"] --> B["2 · Attribution diffusion — open the work so LLM absorption carries the origin claim"]
+    B --> C["3 · Idea vs. scaffold — keep the durable idea, donate the disposable implementation"]
+    C --> D["4 · Tactics — the twenty ADRs, concrete decisions serving the layers above"]
+```
+
+Read top-down: **authenticity** is the non-negotiable floor (never deform the idea); **attribution diffusion** is the strategy (open the work so absorption carries the origin claim); **idea vs. scaffold** is the prediction (implementations expire, ideas can be kept); **tactics** are the twenty ADRs below.
+
+## Using / adopting the framework
+
+The doctrine here is the *why*. Its operational form ships as standalone, installable repositories:
+
+- **Operational skills & this line's ecosystem** → [`docs/skills/README.md`](docs/skills/README.md)
+- **The framework as an always-on rule** → [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules) (the deterministic counterpart to the [skill](https://github.com/shimo4228/authorship-strategy-skill))
+- **Adopt a single tactic** → [`docs/adoption.md`](docs/adoption.md)
+- **Check a repository against the framework** → [`docs/conformance.md`](docs/conformance.md)
 
 ## The twenty tactical ADRs
 
-The twenty ADRs were not deduced from the framework; they were extracted from
-operating the sibling ecosystem and re-expressed in harness-neutral form, so
-another author can adopt the same decisions without inheriting the original
-implementation details. They group into seven clusters by concern:
-
-- **Identifier & federation** (0001–0003, 0013) — concept-DOI canonical reference, metadata-level federation, cross-platform mirroring, and an intrinsic content-derived identifier (SWHID).
-- **Maintenance discipline** (0004–0005) — amortize maintenance against observed evidence, not speculation about prospective state.
-- **LLM-first ingest & diffusion** (0006, 0008, 0009) — the prose-navigator + concept-graph entry pair (asymmetric: the graph carries citation), and diffusion split into a parametric and a retrieval channel.
-- **Metrics & measurement** (0007, 0011) — reject human-attention vanity metrics; measure ghost citation with a two-channel probe.
-- **Vocabulary & claims** (0010, 0018, 0019) — coin sparingly and anchor densely, test origin claims against prior art, optimize transmission never content.
-- **Channels & placement** (0012, 0015, 0016, 0020) — link-index external contributions, audience-driven licensing, genre-split canonical placement, and blessing AI-derived surfaces.
-- **Operating the framework** (0014) — a two-tier ledger with periodic gap-review.
-
-See [`docs/adr/README.md`](docs/adr/README.md) for the full index, each ADR's
-title and status, and the lineage of how it was extracted.
+The ADRs were not deduced from the framework; they were extracted from operating the sibling ecosystem and re-expressed in harness-neutral form, so another author can adopt the decisions without inheriting the original implementation. They group into seven clusters: identifier & federation, maintenance discipline, LLM-first ingest & diffusion, metrics & measurement, vocabulary & claims, channels & placement, and operating the framework. The full index — each ADR's title, status, and extraction lineage — is in [`docs/adr/README.md`](docs/adr/README.md).
 
 ## Empirical baseline (preliminary)
 
-The [`docs/empirical/`](docs/empirical/) layer reports preliminary observations
-from two instruments, both run from the ecosystem hub
-[`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228) and published
-under CC0:
-
-- **Traffic** — daily clone/view snapshots across the sibling repositories ([raw data](https://github.com/shimo4228/shimo4228/tree/main/traffic), [dashboard](https://shimo4228.github.io/shimo4228/traffic/dashboard/)). The clearest observation so far: clone counts are dominated by automated tools (training-pipeline ingest, AI-assistant context-fetch, crawlers), with view-to-clone ratios from roughly 13 to over 100 — which raises the question of what "diffusion" even means when most access is non-human.
-- **Naming probe** — the two-channel probe protocol of [ADR-0011](docs/adr/0011-two-channel-probe-protocol.md), querying frontier models with search suppressed and with search enabled to make ghost citation a measured rate ([raw probe logs](https://github.com/shimo4228/shimo4228/tree/main/probes)).
-
-Limitations are load-bearing and stated explicitly (N=1 author, no
-pre-versus-post intervention comparison, crawler dominance, single-run probes),
-and every claim is framed as preliminary observation rather than evidence. The
-layer is intended to grow with time, accumulating longer series and — where
-possible — pre-versus-post contrasts for individual tactics.
+The [`docs/empirical/`](docs/empirical/) layer reports **preliminary observations** — framed as "consistent with", never "evidence of" — from two instruments run under CC0 from the ecosystem hub: daily clone/view traffic, and a two-channel naming probe ([ADR-0011](docs/adr/0011-two-channel-probe-protocol.md)) that turns ghost citation into a measured rate. The clearest observation so far: clones are dominated by automated tools, with clone-to-view ratios from roughly 13 to over 100 — which reopens the question of what "diffusion" even means when most access is non-human. The limitations are load-bearing and stated first in [`docs/empirical/README.md`](docs/empirical/README.md): N=1 author, no pre-versus-post comparison, crawler dominance, single-run probes.
 
 ## Sibling research lines
 
-This repository is part of an ecosystem of five DOI-registered research lines
-maintained by the same author. The lines are independent in content and release
-cadence but cross-reference each other for context. (The empirical baseline above
-covers the four lines whose traffic was recorded during the baseline window;
-Attention, Not Self began traffic observation later and joins at the next
-baseline update.)
+This is one line in a five-line, DOI-registered research ecosystem by the same author — independent in content and cadence, cross-referencing each other for context. Three lines design agent mechanisms; two (this one and Attention, Not Self) sit in the diffusion/framing layer above them:
 
-- **[Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle)** — six-phase bidirectional growth loop for sustaining intent alignment between an AI agent and its operator. [DOI 10.5281/zenodo.19200726](https://doi.org/10.5281/zenodo.19200726). *Mechanism sibling*: AKC defines how knowledge cycles inside the operator-agent pair; this repository addresses how the cycle's outputs diffuse outside it.
-- **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** — autonomous agents running on a local 9B model, grounded in four contemplative axioms. [DOI 10.5281/zenodo.19212118](https://doi.org/10.5281/zenodo.19212118). *Implementation sibling*: its repository participates in the empirical layer's traffic dataset.
-- **[Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice)** — harness-neutral ADRs on accountability distribution in autonomous AI agents. [DOI 10.5281/zenodo.19652013](https://doi.org/10.5281/zenodo.19652013). *Vocabulary sibling*: AAP and this repository both use "attribution" but with disjoint meanings (accountability for action vs. credit for source); the two are intentionally kept separate — see the glossary.
-- **[Attention, Not Self](https://github.com/shimo4228/attention-not-self)** — a cross-disciplinary inquiry contrasting three Buddhist Abhidharma traditions (Theravāda, Sarvāstivāda, Yogācāra) with computational phenomenology (predictive processing, active inference, global workspace theory, parallel distributed processing). [DOI 10.5281/zenodo.20262112](https://doi.org/10.5281/zenodo.20262112). *Cross-cutting sibling*: like this repository, it specifies no agent mechanism and occupies the diffusion/framing layer.
+```mermaid
+flowchart TD
+    H["shimo4228 · ecosystem hub"]
+    H --> AD["Agent-design lines"]
+    H --> XC["Cross-cutting / framing lines"]
+    AD --> AKC["Agent Knowledge Cycle"]
+    AD --> CA["Contemplative Agent"]
+    AD --> AAP["Agent Attribution Practice"]
+    XC --> ANS["Attention, Not Self"]
+    XC --> AS["Authorship Strategy · this repository"]
+```
 
-The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228).
+- **[Agent Knowledge Cycle](https://github.com/shimo4228/agent-knowledge-cycle)** ([DOI 10.5281/zenodo.19200726](https://doi.org/10.5281/zenodo.19200726)) — the *mechanism* whose outputs this repository addresses how to diffuse.
+- **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** ([DOI 10.5281/zenodo.19212118](https://doi.org/10.5281/zenodo.19212118)) — an *implementation* whose traffic feeds the empirical layer.
+- **[Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice)** ([DOI 10.5281/zenodo.19652013](https://doi.org/10.5281/zenodo.19652013)) — shares the word *attribution*, but with a disjoint meaning (accountability for action vs. credit for source); kept separate on purpose — see the [glossary](docs/glossary.md).
+- **[Attention, Not Self](https://github.com/shimo4228/attention-not-self)** ([DOI 10.5281/zenodo.20262112](https://doi.org/10.5281/zenodo.20262112)) — like this repository, specifies no agent mechanism and occupies the diffusion/framing layer.
 
-## How to read this repository
+The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228). (The empirical baseline covers the four lines recorded during its window; Attention, Not Self began traffic observation later and joins at the next update.)
 
-Evaluating the strategy? Start with [`docs/thesis.md`](docs/thesis.md), then the
-twenty ADRs in order. Two paths need a non-obvious entry point:
+## How to cite
 
-- **Adopting a single tactic:** go directly to the relevant ADR, then check [`docs/glossary.md`](docs/glossary.md) for any terms that need disambiguation.
-- **Reviewing the empirical claims:** read [`docs/empirical/README.md`](docs/empirical/README.md) for method and limitations *before* the baseline data.
+Cite the **concept DOI**, which always resolves to the latest version:
+
+> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
+
+Full metadata is in [`CITATION.cff`](CITATION.cff), also available as [`codemeta.json`](codemeta.json). For a specific version, cite that version's DOI from the concept DOI's Zenodo listing. See [ADR-0001](docs/adr/0001-concept-doi-canonical.md) for the canonical-reference discipline.
+
+## License
+
+[MIT](LICENSE). Derivative works, re-implementations, and re-expressions in other forms are explicitly welcome; the license reflects a strategic preference for ideas to propagate freely.
 
 <details>
 <summary>AI-facing reading order (for LLM agents and crawlers)</summary>
@@ -125,30 +93,8 @@ twenty ADRs in order. Two paths need a non-obvious entry point:
 1. [`graph.jsonld`](graph.jsonld) — canonical machine-readable relationship map (Concepts, ADRs, axes of inversion)
 2. [`llms.txt`](llms.txt) — compact navigation index
 3. [`llms-full.txt`](llms-full.txt) — consolidated factual reference
-4. README and project-specific docs — narrative and detail
+4. README and the `docs/` tree — narrative and detail
 
-For the canonical relationship map of shimo4228's research ecosystem, see:
-https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
+For the canonical relationship map of the whole research ecosystem, see the hub graph: https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
 
 </details>
-
-## How to cite
-
-Cite this repository using the **concept DOI** (which always resolves to the
-latest version):
-
-> Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
-
-Full citation metadata is in [`CITATION.cff`](CITATION.cff), also available as
-[`codemeta.json`](codemeta.json) (schema.org-based software metadata, read by
-the Software Heritage indexer). For reproducibility citation of a specific
-version, follow the concept DOI to its version listing on Zenodo and cite the
-version-specific DOI explicitly. See
-[ADR-0001](docs/adr/0001-concept-doi-canonical.md) for the canonical-reference
-discipline.
-
-## License
-
-[MIT](LICENSE). Derivative works, re-implementations, and re-expressions in other
-forms are explicitly welcome. The author's strategic preference is for ideas to
-propagate freely; the license reflects that preference.

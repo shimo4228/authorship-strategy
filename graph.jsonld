@@ -102,7 +102,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty decisions extracted from operating a four-repository DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
@@ -390,7 +390,7 @@
       ],
       "description": "A community-curated AI-facing reference convention that uses a single prose-form text file (llms.txt) at the root of an artifact to enumerate its primary documents with one-line descriptions and a recommended reading order. Targets prose-reading LLM-mediated channels: conversational LLMs, AI assistants consulting documentation in-context, citation-graph annotators fetching prose for summarization. The prose-form half of the dual entry point.",
       "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
-      "instantiatedBy": "https://github.com/shimo4228/claude-skill-llms-txt-writer",
+      "instantiatedBy": "https://github.com/shimo4228/llms-txt-writer",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
 
@@ -404,7 +404,7 @@
       ],
       "description": "A linked-data file that encodes an artifact's concept-level entities and inter-entity relationships as machine-parseable triples in a structured-data vocabulary (typically schema.org plus a local namespace). Targets structured-data-ingesting LLM-mediated channels: training pipelines, knowledge-graph crawlers, programmatic readers using dataset SDKs. The concept-form half of the dual entry point; complements file-level documentation by encoding concept-level structure that prose leaves implicit.",
       "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
-      "instantiatedBy": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
+      "instantiatedBy": "https://github.com/shimo4228/jsonld-knowledge-graph",
       "groundedIn": [
         "https://arxiv.org/abs/2603.10700",
         "https://doi.org/10.2139/ssrn.6284518",
@@ -738,38 +738,47 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
+      "@id": "https://github.com/shimo4228/authorship-strategy-skill",
       "@type": "EcosystemRepo",
-      "name": "claude-skill-authorship-strategy",
+      "name": "authorship-strategy-skill",
       "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty ADRs.",
-      "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
+      "url": "https://github.com/shimo4228/authorship-strategy-skill",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
 
     {
-      "@id": "https://github.com/shimo4228/claude-skill-release-doi",
+      "@id": "https://github.com/shimo4228/release-doi",
       "@type": "EcosystemRepo",
-      "name": "claude-skill-release-doi",
+      "name": "release-doi",
       "description": "Component skill of this research line. Release-time workflow operationalizing the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook for DOI-registered research repositories.",
-      "url": "https://github.com/shimo4228/claude-skill-release-doi",
+      "url": "https://github.com/shimo4228/release-doi",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
 
     {
-      "@id": "https://github.com/shimo4228/claude-skill-llms-txt-writer",
+      "@id": "https://github.com/shimo4228/llms-txt-writer",
       "@type": "EcosystemRepo",
-      "name": "claude-skill-llms-txt-writer",
+      "name": "llms-txt-writer",
       "description": "Component skill of this research line. Operationalizes Layer 4 tactic 7 — Answer.AI llms.txt convention. Writes the AI-facing reference files (llms.txt, llms-full.txt, FAQ, glossary) that every framework-applied repository requires.",
-      "url": "https://github.com/shimo4228/claude-skill-llms-txt-writer",
+      "url": "https://github.com/shimo4228/llms-txt-writer",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
 
     {
-      "@id": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
+      "@id": "https://github.com/shimo4228/jsonld-knowledge-graph",
       "@type": "EcosystemRepo",
-      "name": "claude-skill-jsonld-knowledge-graph",
+      "name": "jsonld-knowledge-graph",
       "description": "Component skill of this research line. Operationalizes Layer 4 tactic 7 — JSON-LD knowledge graph. Designs and ships graph.jsonld next to llms.txt for projects with stable concept-level structure.",
-      "url": "https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph",
+      "url": "https://github.com/shimo4228/jsonld-knowledge-graph",
+      "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy-rules",
+      "@type": "EcosystemRepo",
+      "name": "authorship-strategy-rules",
+      "description": "Component of this research line: the four-layer judgment framework packaged as a single always-loaded behavioral rule — the deterministic, always-on counterpart to authorship-strategy-skill. Applies the framework every session within its trigger scope (repositories the operator owns that are DOI-registered and idea-rescue in character). A distribution mirror with no own DOI; references the parent concept DOI.",
+      "url": "https://github.com/shimo4228/authorship-strategy-rules",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
 

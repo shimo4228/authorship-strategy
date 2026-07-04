@@ -131,10 +131,10 @@ HF 側の `README.md` (dataset card) は HF 用に customize されている。G
 
 | Component skill repo | Operationalizes |
 |---|---|
-| `claude-skill-authorship-strategy` | 判断 framework 全体 (3 軸 inversion + 4 層 stack + 禁止/奨励 actions + 12-item checklist) |
-| `claude-skill-release-doi` | 識別子 federation triplet (ADRs 0001-0003) の release-time workflow |
-| `claude-skill-llms-txt-writer` | Layer 4 tactic 7 ── Answer.AI `llms.txt` convention の operational form |
-| `claude-skill-jsonld-knowledge-graph` | Layer 4 tactic 7 ── JSON-LD knowledge graph の operational form |
+| `authorship-strategy-skill` | 判断 framework 全体 (3 軸 inversion + 4 層 stack + 禁止/奨励 actions + 12-item checklist) |
+| `release-doi` | 識別子 federation triplet (ADRs 0001-0003) の release-time workflow |
+| `llms-txt-writer` | Layer 4 tactic 7 ── Answer.AI `llms.txt` convention の operational form |
+| `jsonld-knowledge-graph` | Layer 4 tactic 7 ── JSON-LD knowledge graph の operational form |
 
 各 component skill は独自の repository で canonical maintain する。本 repo の `docs/skills/README.md` は reference index であって、skill body の copy は含めない。
 
@@ -144,7 +144,7 @@ HF 側の `README.md` (dataset card) は HF 用に customize されている。G
 
 - **Component** = doctrine が specifically 名指しする skill (4 つ)
 - **Peer component** = 同 framework 内の他 component
-- **Adjacent ecosystem skill** = ecosystem には存在するが、本 framework では required ではない skill (`context-sync` / `writing-ecosystem` / `readme-writer` / `update-codemaps` 等)。`readme-writer` は component `llms-txt-writer` の人間 surface 対応物 (AI surface = llms.txt は doctrine required、人間 surface = README は required でない) → 詳細は [docs/skills/README.md](docs/skills/README.md)
+- **Adjacent ecosystem skill** = ecosystem には存在するが、本 framework では required ではない skill (`context-sync` / `writing-ecosystem` / `readme-writer` 等)。`readme-writer` は component `llms-txt-writer` の人間 surface 対応物 (AI surface = llms.txt は doctrine required、人間 surface = README は required でない) → 詳細は [docs/skills/README.md](docs/skills/README.md)
 
 `sibling component skill` 表記は使わない (overloaded で意味不明瞭)。
 
@@ -194,4 +194,4 @@ ADR の起草・改訂、glossary / graph.jsonld 更新、release 前には、re
 
 ## Hub への back-propagation
 
-新規 ADR / Concept 追加 / 大規模 thesis 改訂時は、必要に応じて hub repo の `graph.jsonld` および README にも反映する。Hub 側の design rules は `/Users/shimomoto_tatsuya/MyAI_Lab/shimo4228/CLAUDE.md` 参照 (volatile state 禁止、concept DOI のみ、5 line cardinality の sync 必須)。
+新規 ADR / Concept 追加 / 大規模 thesis 改訂時は、必要に応じて hub repo の `graph.jsonld` および README にも反映する。Hub 側の design rules はハブ repo (`shimo4228/shimo4228`) の CLAUDE.md 参照 (volatile state 禁止、concept DOI のみ、5 line cardinality の sync 必須)。

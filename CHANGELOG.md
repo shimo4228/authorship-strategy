@@ -22,19 +22,31 @@ several. This is a framing change that touches every human and AI surface, so it
 takes the major version. No new tactic is added; the ADR count stays at twenty.
 The release also adds a `codemeta.json` software-metadata surface, projects three
 already-deployed diffusion-intervention batches into the public implementation
-log, and installs a machine guard against numeric-count drift.
+log, and installs a machine guard against numeric-count drift. It also
+rebuilds the framework's operational-surface discovery path after the ecosystem
+hub was slimmed: the README is rewritten for scannability with the ecosystem and
+the always-on rule surfaced up front, `docs/skills/README.md` is restored to a
+full ecosystem table, a new `authorship-strategy-rules` repository gives the
+framework an always-loaded rule install target beside the skill, and the
+operational forms are de-staled to their canonical repository names across every
+carrier.
 
 ### Added
 
 - `codemeta.json`: schema.org / CodeMeta software metadata alongside `CITATION.cff`, the format the Software Heritage metadata indexer reads directly (the indexer does not read `CITATION.cff`). A derived artifact — regenerated from `CITATION.cff`, never hand-edited.
 - `scripts/verify-counts.sh`: a release-time guard that derives the ADR total and the manifesto open-question total from the filesystem and fails if any prose carrier states a contradicting number. Installs the CLAUDE.md numeric-claim rule's second clause (machine-verifiable doc↔reality correspondence is fixed with a check, not prose) as the single enforcement point, recorded as a new CODEMAPS invariant. It exists because a stale "seven ADRs" claim survived to this release in `docs/inspiration.md` despite manual review.
 - Public implementation-log projections for three diffusion-intervention batches already deployed and tracked in the private ledger: the `codemeta.json` / Wayback-archival / hub-graph-mirror batch, the search-index surface interventions (concept pages, an entity page, sitemap/IndexNow, a canonical correction, repository metadata), and the AI-native preprint-platform placements. Dated intervention rows only, no effect claims (ADR-0014).
+- A companion [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules) repository: the four-layer framework as a single always-loaded behavioral rule — the deterministic counterpart to the `authorship-strategy-skill`, generalized so any adopter can install it. A distribution mirror with no own DOI, referencing the parent concept DOI.
+- A "Using / adopting the framework" section in `README.md` / `README.ja.md` routing to the operational surface (the ecosystem index, the always-on rule, `docs/adoption.md`, `docs/conformance.md`), plus a four-layer-stack diagram and a five-line ecosystem diagram.
 
 ### Changed
 
 - The maker's-and-practitioner's stance is foregrounded across every carrier: a new "The stance this is written from" section in `README.md` / `README.ja.md`, a stance paragraph in `docs/thesis.md`, the manifesto's framing of its open questions, the `graph.jsonld` project description, the `CITATION.cff` abstract, and the `CLAUDE.md` / `AGENTS.md` self-description (from "a DOI-targeted research project" to "a doctrine repository (DOI-registered)").
 - Layer 1 authenticity is restated as a positive success criterion — the idea surviving diffusion as thought, with revenue outside the success criteria — replacing the earlier "monetization is not a goal" phrasing across `docs/thesis.md`, `docs/glossary.md`, `docs/adoption.md`, and `docs/inspiration.md`. The commitment is unchanged; the framing is now what the framework protects rather than what it forbids.
 - "Future researcher" is corrected to "future reader" where the framework means anyone tracing causation through LLM-mediated channels, not only academics (`README.md`, `README.ja.md`, `docs/thesis.md`).
+- `README.md` / `README.ja.md` rewritten for human scannability (~155 → ~100 lines): the lead is consolidated, two Mermaid diagrams replace prose, and deep rationale is delegated to `docs/`, while the LLM-read floor is preserved. "Four-repository" in the lead is corrected to the five-line ecosystem (the empirical baseline's distinct four-line window is kept).
+- `docs/skills/README.md` is restored to reproduce this line's ecosystem as a table (four component skills + the always-loaded rule + adjacent skills and complements), recovered from the ecosystem hub's pre-simplification inventory; the phantom `update-codemaps` link is removed and `readme-writer` is corrected to a standalone repository.
+- The operational forms are de-staled from the old `claude-skill-*` names to their canonical bare names (`authorship-strategy-skill`, `release-doi`, `llms-txt-writer`, `jsonld-knowledge-graph`) across `llms.txt`, `llms-full.txt`, `graph.jsonld`, `CLAUDE.md`, and `docs/glossary.md`; `graph.jsonld` gains a node for the new `authorship-strategy-rules` repository.
 
 ### Fixed
 

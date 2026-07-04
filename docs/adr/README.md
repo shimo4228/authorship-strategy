@@ -3,8 +3,8 @@ Language: English | [日本語](README.ja.md)
 # Architecture Decision Records
 
 Each ADR records a tactical judgment about authorship strategy under
-AI-mediated diffusion — discovered through operating a four-repository
-DOI-registered research ecosystem, not prescribed top-down.
+AI-mediated diffusion — discovered through operating a DOI-registered
+research ecosystem, not prescribed top-down.
 
 ## Index
 

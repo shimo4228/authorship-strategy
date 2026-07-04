@@ -2,7 +2,7 @@ Language: [English](README.md) | 日本語
 
 # Architecture Decision Records
 
-各 ADR は AI 経由の拡散下における著者戦略についての戦術的判断を記録する。4 つの DOI
+各 ADR は AI 経由の拡散下における著者戦略についての戦術的判断を記録する。DOI
 登録された research repo からなるエコシステムの運用から発見されたものであり、
 top-down に prescribe されたものではない。
 

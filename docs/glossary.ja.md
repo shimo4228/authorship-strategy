@@ -171,7 +171,7 @@ summarization のために prose を fetch する citation-graph annotator。
 よる本 convention の specification を採用しているが、framework decision は prose
 navigator を deploy することであり、この specific convention を mandate するもの
 ではない。Operational form は外部 skill
-[`claude-skill-llms-txt-writer`](https://github.com/shimo4228/claude-skill-llms-txt-writer)
+[`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer)
 に存在する。
 
 ## JSON-LD knowledge graph
@@ -186,7 +186,7 @@ file-level documentation (`docs/CODEMAPS/` に存在) が prose で暗黙にし�
 concept-level structure を encode することで補完する。Framework decision は concept
 graph を deploy することであり、specific linked-data vocabulary を mandate するもの
 ではない。Operational form は外部 skill
-[`claude-skill-jsonld-knowledge-graph`](https://github.com/shimo4228/claude-skill-jsonld-knowledge-graph)
+[`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph)
 に存在する。
 
 ## Distinctive terminology (造語的用語)

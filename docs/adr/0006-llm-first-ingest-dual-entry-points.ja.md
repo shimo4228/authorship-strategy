@@ -175,7 +175,7 @@ structured-data ingestion には現れるが、会話型 LLM の応答で author
 本著者が採用している convention は Answer.AI の `llms.txt` convention (prose-form
 navigator) と schema.org ベースの JSON-LD knowledge graph (concept-form graph) で
 ある。両者は著者の research ecosystem で独立した component skill
-(`claude-skill-llms-txt-writer` と `claude-skill-jsonld-knowledge-graph`) として
+(`llms-txt-writer` と `jsonld-knowledge-graph`) として
 externalized されており、本 repository の外で canonical-maintained され、各 sibling
 line に独立に採用される。Component-skill の externalization は本 ADR の tool-agnostic
 stance の operational form である: framework decision は「両 format を deploy する」

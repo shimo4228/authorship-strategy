@@ -4,138 +4,97 @@ Language: [English](README.md) | 日本語
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20263316.svg)](https://doi.org/10.5281/zenodo.20263316) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/shimo4228/authorship-strategy) [![GitMCP](https://img.shields.io/endpoint?url=https://gitmcp.io/badge/shimo4228/authorship-strategy)](https://gitmcp.io/shimo4228/authorship-strategy)
 
-> **Authorship Strategy** — AI 経由の拡散下で著者として残るための、規範的フレームワーク・戦術カタログ・経験的ベースライン。
+> 読み手が LLM であるとき、見つけられる著者であり続ける方法の doctrine: **囲い込むな、開け。**
 
-あなたの読み手に LLM が含まれるなら —— training data として、in-context な相談相手と
-して、他者が参照する discovery layer として —— 著者性を守る戦略は反転している。20 世紀
-的著者性は *enclosure*（gatekeep されたジャーナル、proprietary license、コントロール
-された配布）で守られた。だがその enclosure は、未来の読み手が因果を遡るときオリジナル
-著者に辿り着けるかを決定づける LLM 経由の拡散への露出を、いまや *減らす*。この repo は
-反転した戦略 —— それが何で、なぜ成り立ち、それを運用する中で抽出された 20 の戦術的判断
-は何か（4 つの DOI 登録 repo からなる研究エコシステムの運用から）—— を、著者自身の
-エコシステムを超えて採用可能な harness-neutral な形式で記録する。
+あなたの読み手に LLM が含まれるなら——training data として、in-context な相談相手として、他者が参照する discovery layer として——著者性を守る戦略は反転している。20 世紀的著者性は *enclosure*（gatekeep されたジャーナル、proprietary license、コントロールされた配布）で守られた。だがその enclosure は、未来の読み手がアイデアを遡るときにオリジナル著者へ辿り着けるかを決定づける LLM 経由の拡散を、いまや *減らす*。この repo は反転した戦略——それが何で、なぜ成り立ち、20 の戦術的判断は何か——を、著者自身の仕事を超えて採用可能な形で記録する。
 
-## この framework が立つ stance
-
-この framework は maker / 実践者の stance から書かれている。著者は AI 時代の
-「良い仕事のやり方」—— 作り、知られ、あとから見つけ直せるだけ durable で追跡可能な
-仕事を残す方法 —— を実地で探っている。全体に現れる学術 apparatus（DOI 登録、
-SWHID = content 由来の archive 識別子、citation graph、論文）は、その探究を
-citable・durable・traceable にする道具であって、identity でも目的地でもない。
-audience はこの stance から導かれる: LLM 経由でこれらの idea に触れる
-開発者・実務者・学習者・creative reuser・あらゆる言語圏の読み手。学術引用はその中の
-一経路である。（"research line" は、この戦略が扱う DOI 登録された仕事の系列の
-呼び名として残る。）
+これは **maker の stance** から書かれている: ここに現れる学術 apparatus（DOI、SWHID、citation graph、論文）は、仕事を citable・durable・traceable にする *道具* であって、identity でも目的地でもない。audience はその stance から従う: LLM 経由でこれらの idea に触れる全員——開発者・実務者・学習者・reuser、あらゆる言語圏。学術引用はそのうちの一経路である。
 
 ## 反転（Core thesis）
 
-> AI 時代に自分の著者性を守るとは、作品を閉じることではなく *開く* ことを意味する。
-> 20 世紀的著者性が scarcity を通じて origin claim を守ったのに対し、AI 時代の著者性は
-> diffusion を通じて守る: 開くことは LLM 吸収を最大化し、validation を derivative work
-> として出現させ、origin claim を *強める*。
-
-Thesis は 20 世紀的 authorship strategy の 3 軸反転に立つ:
+> 自分の著者性を守るとは、作品を閉じることではなく *開く* ことを意味する。20 世紀的著者性が scarcity を通じて origin claim を守ったのに対し、AI 時代の著者性は diffusion を通じて守る: 開くことは LLM 吸収を最大化し、validation を derivative work として出現させ、origin claim を *強める*。
 
 | 軸 | 20 世紀 | AI 時代 |
 |----|---------|---------|
-| Authenticity を守るのは… | scarcity | **diffusion** |
-| Origin を確立するのは… | exclusivity | **derivation** |
-| Reach を制御するのは… | enclosure | **openness** |
+| authenticity の防御 | scarcity（希少性） | **diffusion（拡散）** |
+| origin の確立 | exclusivity（排他） | **derivation（派生）** |
+| reach の制御 | enclosure（囲い込み） | **openness（開放）** |
 
-Thesis の展開は [`docs/thesis.md`](docs/thesis.md)（英語正本）、日本語版は
-[`docs/thesis.ja.md`](docs/thesis.ja.md)。Open questions は
-[`docs/manifesto.md`](docs/manifesto.md) に集約。
+詳しい論証は [`docs/thesis.md`](docs/thesis.md)、残る open questions は [`docs/manifesto.md`](docs/manifesto.md)。
 
 ## 4 層の判断スタック
 
-運用上の含意は、各層が下の層を制約するスタックを成す:
+各層は下の層を制約する:
 
-1. **Authenticity** —— 非交渉のフロア: idea が *どう* 伝わるかは変えてよいが、*何であるか* は決して変えない。
-2. **Attribution diffusion** —— LLM 吸収が origin claim を運ぶよう、作品を開く。
-3. **Idea vs. scaffold** —— 残る idea を、それを運ぶ消える実装から分離する。
-4. **Tactics** —— 下記の 20 ADR。各々が上の 3 層に奉仕する具体的判断。
+```mermaid
+flowchart TD
+    A["1 · Authenticity — idea の伝わり方は変えても idea 自体は変えない"] --> B["2 · Attribution diffusion — 開いて LLM 吸収に origin claim を運ばせる"]
+    B --> C["3 · Idea vs. scaffold — 残る idea を保ち、消える実装は手放す"]
+    C --> D["4 · Tactics — 下記 20 の ADR、上の層に奉仕する具体判断"]
+```
 
-## 20 の戦術 ADR
+上から: **authenticity** は非交渉の floor（idea を変形しない）、**attribution diffusion** は戦略（開いて吸収に origin claim を運ばせる）、**idea vs. scaffold** は予測（実装は陳腐化、idea は残せる）、**tactics** は下記 20 の ADR。
 
-20 の ADR はフレームワークから演繹されたものではなく、sibling エコシステムの運用から
-抽出され、別の著者が元の実装詳細を継承せずに同じ判断を採用できるよう harness-neutral
-な形式で再表現された。関心ごとに 7 つのクラスタに分かれる:
+## framework を使う / 採用する
 
-- **識別子と federation**（0001–0003, 0013）—— concept-DOI canonical reference、メタデータ層 federation、クロスプラットフォーム ミラー、intrinsic な content-derived identifier（SWHID）。
-- **メンテナンス規律**（0004–0005）—— 維持コストを想定状態でなく観測された証拠に対して amortize する。
-- **LLM-first ingest と diffusion**（0006, 0008, 0009）—— prose navigator + concept graph の entry ペア（非対称: citation を担うのは graph）、diffusion を parametric と retrieval の 2 チャネルに分割。
-- **Metric と測定**（0007, 0011）—— human-attention の vanity metric を拒否し、ghost citation を two-channel probe で測定する。
-- **語彙と claim**（0010, 0018, 0019）—— 控えめに造語して密に anchor、origin claim を先行研究で test、transmission は optimize し content は変えない。
-- **チャネルと配置**（0012, 0015, 0016, 0020）—— 外部寄与は link-index、license は audience 駆動、canonical は genre で振り分け、AI 派生 surface を祝福。
-- **フレームワークの運用**（0014）—— 二層 ledger + 定期 gap-review。
+ここにある doctrine は *なぜ* を担う。その operational form は単独 install 可能な repo として出ている:
 
-各 ADR のタイトル・status、完全な index と lineage は
-[`docs/adr/README.md`](docs/adr/README.md) を参照。
+- **operational skills とこの line の ecosystem** → [`docs/skills/README.md`](docs/skills/README.md)
+- **framework を always-on な rule として** → [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules)（[skill](https://github.com/shimo4228/authorship-strategy-skill) の deterministic な対応物）
+- **単一 tactic を採用** → [`docs/adoption.md`](docs/adoption.md)
+- **repo を framework に照らして確認** → [`docs/conformance.md`](docs/conformance.md)
+
+## 20 の戦術的 ADR
+
+ADR は framework から演繹されたのではなく、sibling ecosystem の運用から抽出し、harness-neutral な形に書き直したもの——別の著者が元の実装を継がずに判断を採用できるように。7 つの cluster に分かれる: identifier & federation、maintenance discipline、LLM-first ingest & diffusion、metrics & measurement、vocabulary & claims、channels & placement、operating the framework。各 ADR のタイトル・status・抽出 lineage を含む全 index は [`docs/adr/README.md`](docs/adr/README.md)。
 
 ## 経験的ベースライン（preliminary）
 
-[`docs/empirical/`](docs/empirical/) 層は 2 つの instrument からの preliminary
-observation を報告する。どちらもエコシステム hub
-[`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228) で運用され、CC0
-で公開されている:
-
-- **Traffic** —— sibling repo 群にわたる日次の clone/view スナップショット（[raw data](https://github.com/shimo4228/shimo4228/tree/main/traffic)、[dashboard](https://shimo4228.github.io/shimo4228/traffic/dashboard/)）。現時点で最も明確な観測: clone 数は自動ツール（training-pipeline ingest、AI アシスタントの context-fetch、crawler）に支配されており、view/clone 比は概ね 13 から 100 超に及ぶ —— これはアクセスの大半が非人間であるとき "diffusion" が何を意味するのかという問いを提起する。
-- **Naming probe** —— [ADR-0011](docs/adr/0011-two-channel-probe-protocol.ja.md) の two-channel probe protocol。frontier model を検索抑制と検索有効の両設定で probe し、ghost citation を測定された rate にする（[raw probe logs](https://github.com/shimo4228/shimo4228/tree/main/probes)）。
-
-Limitations は load-bearing で明示的に述べる（N=1 著者、pre/post intervention 比較
-なし、crawler dominance、single-run probe）。すべての主張を evidence ではなく
-preliminary observation として framing する。経験的レイヤーは時間とともに成長し、
-時系列の蓄積と（可能な場合は）個別戦術の pre/post 比較を報告していく。
+[`docs/empirical/`](docs/empirical/) 層は、ecosystem hub から CC0 で運用される 2 つの instrument からの **preliminary observation**——「evidence of」ではなく「consistent with」と framing——を報告する: 日次 clone/view traffic と、ghost citation を測定レートに変える two-channel naming probe（[ADR-0011](docs/adr/0011-two-channel-probe-protocol.md)）。最も明快な観測: clone は自動ツールに支配され、clone-to-view 比はおよそ 13 から 100 超——アクセスの大半が非人間のとき「diffusion」が何を意味するかを問い直す。limitations は load-bearing で [`docs/empirical/README.md`](docs/empirical/README.md) に先に述べる: N=1 著者、pre/post 比較なし、crawler 支配、single-run probe。
 
 ## Sibling research lines
 
-この repo は、同じ著者によって維持される 5 つの DOI 登録された research line からなる
-エコシステムの一部。各 line は内容と release cadence が独立だが、文脈のために互いを参照
-する。（上記の経験的ベースラインは baseline 観測期間中に traffic を記録していた 4 line
-を対象とする。Attention, Not Self は観測開始が遅く、次回 baseline 更新で加わる。）
+これは同一著者による 5 line の DOI 登録 research ecosystem の 1 line——内容も cadence も独立だが、文脈のため相互参照する。3 line は agent の mechanism を設計し、2 line（本 repo と Attention, Not Self）はその上の diffusion/framing 層に位置する:
 
-- **[Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle)** —— AI agent とその operator の間で意図の整合を維持する 6 phase 双方向成長ループ。[DOI 10.5281/zenodo.19200726](https://doi.org/10.5281/zenodo.19200726)。*Mechanism sibling*: AKC は operator-agent ペアの内側で知識がどう循環するかを定義する。本 repo はその出力がペアの外側にどう diffuse するかを扱う。
-- **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** —— 4 つの contemplative 公理に基づきローカル 9B モデル上で動作する自律 agent。[DOI 10.5281/zenodo.19212118](https://doi.org/10.5281/zenodo.19212118)。*Implementation sibling*: その repo は経験的レイヤーの traffic dataset に参加する。
-- **[Agent Attribution Practice (AAP)](https://github.com/shimo4228/agent-attribution-practice)** —— 自律 AI agent における accountability 分配についての harness-neutral な ADR。[DOI 10.5281/zenodo.19652013](https://doi.org/10.5281/zenodo.19652013)。*Vocabulary sibling*: AAP と本 repo はともに "attribution" を使うが意味は disjoint（failure への accountability vs. source への credit）。両者は意図的に separate に保つ —— glossary 参照。
-- **[Attention, Not Self](https://github.com/shimo4228/attention-not-self)** —— 3 つの仏教 Abhidharma 伝統（Theravāda / Sarvāstivāda / Yogācāra）を computational phenomenology（predictive processing / active inference / global workspace theory / parallel distributed processing）に対照させる cross-disciplinary inquiry。[DOI 10.5281/zenodo.20262112](https://doi.org/10.5281/zenodo.20262112)。*Cross-cutting sibling*: 本 repo と同様、特定の agent mechanism を規定せず diffusion / framing layer に位置する。
+```mermaid
+flowchart TD
+    H["shimo4228 · ecosystem hub"]
+    H --> AD["Agent-design lines"]
+    H --> XC["Cross-cutting / framing lines"]
+    AD --> AKC["Agent Knowledge Cycle"]
+    AD --> CA["Contemplative Agent"]
+    AD --> AAP["Agent Attribution Practice"]
+    XC --> ANS["Attention, Not Self"]
+    XC --> AS["Authorship Strategy · 本 repo"]
+```
 
-エコシステムの hub は [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228)。
+- **[Agent Knowledge Cycle](https://github.com/shimo4228/agent-knowledge-cycle)** ([DOI 10.5281/zenodo.19200726](https://doi.org/10.5281/zenodo.19200726)) — 本 repo がどう diffuse するかを扱う *mechanism*。
+- **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** ([DOI 10.5281/zenodo.19212118](https://doi.org/10.5281/zenodo.19212118)) — traffic が empirical 層に供給される *implementation*。
+- **[Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice)** ([DOI 10.5281/zenodo.19652013](https://doi.org/10.5281/zenodo.19652013)) — *attribution* の語を共有するが意味は disjoint（accountability for action vs. credit for source）。意図的に分離——[glossary](docs/glossary.ja.md) 参照。
+- **[Attention, Not Self](https://github.com/shimo4228/attention-not-self)** ([DOI 10.5281/zenodo.20262112](https://doi.org/10.5281/zenodo.20262112)) — 本 repo 同様、agent mechanism を規定せず diffusion/framing 層に位置する。
 
-## この repo の読み方
-
-戦略を評価したい場合: まず [`docs/thesis.md`](docs/thesis.md)、次に 20 の ADR を番号順
-に。非自明な入口が要るのは次の 2 経路:
-
-- **個別戦術を採用する:** 該当 ADR を直接読み、必要に応じて [`docs/glossary.md`](docs/glossary.md) で disambiguation。
-- **経験的主張をレビューする:** ベースライン data を読む *前に* [`docs/empirical/README.md`](docs/empirical/README.md) で method と limitations を確認。
-
-<details>
-<summary>AI 向け推奨読み順（LLM agent / crawler 用）</summary>
-
-1. [`graph.jsonld`](graph.jsonld) — canonical な機械可読関係マップ（Concept / ADR / inversion 軸）
-2. [`llms.txt`](llms.txt) — コンパクトなナビゲーション index
-3. [`llms-full.txt`](llms-full.txt) — 統合された事実参照
-4. README およびプロジェクト固有 docs — 物語と詳細
-
-shimo4228 の研究エコシステム全体の canonical な関係マップは:
-https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
-
-</details>
+ecosystem hub は [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228)。（empirical baseline はその window で記録された 4 line を対象とする。Attention, Not Self は traffic 観測開始が遅く、次回更新で加わる。）
 
 ## 引用方法
 
-**Concept DOI** で本 repo を引用する（最新 version に常に resolve する）:
+最新版に常に解決する **concept DOI** を引用する:
 
 > Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
 
-完全な引用メタデータは [`CITATION.cff`](CITATION.cff)。schema.org ベースの
-[`codemeta.json`](codemeta.json)（Software Heritage の metadata indexer が読む形式）
-としても併置している。特定 version の再現性引用は、
-concept DOI から Zenodo の version listing に follow して version 固有 DOI を明示的に
-引用すること。Canonical-reference 規律は
-[ADR-0001](docs/adr/0001-concept-doi-canonical.ja.md) 参照。
+完全な metadata は [`CITATION.cff`](CITATION.cff)、[`codemeta.json`](codemeta.json) としても利用可能。特定版は concept DOI の Zenodo listing からその版の DOI を引く。canonical-reference の規律は [ADR-0001](docs/adr/0001-concept-doi-canonical.md)。
 
 ## License
 
-[MIT](LICENSE)。Derivative work、再実装、別形式での再表現を明示的に歓迎する。著者の
-戦略的選好はアイデアが自由に伝播することにあり、license はその選好を反映している。
+[MIT](LICENSE)。derivative works・再実装・別形式での再表現を明示的に歓迎する。license は idea が自由に伝播することへの戦略的選好を反映する。
+
+<details>
+<summary>AI 向け読解順序（LLM agent / crawler 用）</summary>
+
+1. [`graph.jsonld`](graph.jsonld) — canonical な機械可読 relationship map（Concepts, ADRs, 反転の軸）
+2. [`llms.txt`](llms.txt) — compact な navigation index
+3. [`llms-full.txt`](llms-full.txt) — 統合された事実 reference
+4. README と `docs/` tree — narrative と詳細
+
+research ecosystem 全体の canonical relationship map は hub graph: https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld
+
+</details>
