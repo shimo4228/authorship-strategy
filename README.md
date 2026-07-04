@@ -50,7 +50,7 @@ The ADRs were not deduced from the framework; they were extracted from operating
 
 ## Empirical baseline (preliminary)
 
-The [`docs/empirical/`](docs/empirical/) layer reports **preliminary observations** — framed as "consistent with", never "evidence of" — from two instruments run under CC0 from the ecosystem hub: daily clone/view traffic, and a two-channel naming probe ([ADR-0011](docs/adr/0011-two-channel-probe-protocol.md)) that turns ghost citation into a measured rate. The clearest observation so far: clones are dominated by automated tools, with clone-to-view ratios from roughly 13 to over 100 — which reopens the question of what "diffusion" even means when most access is non-human. The limitations are load-bearing and stated first in [`docs/empirical/README.md`](docs/empirical/README.md): N=1 author, no pre-versus-post comparison, crawler dominance, single-run probes.
+The [`docs/empirical/`](docs/empirical/) layer reports **preliminary observations** — framed as "consistent with", never "evidence of" — from two instruments run under CC0 from the ecosystem hub: 24 daily snapshots of clone/view traffic across four sibling repositories, and a two-channel naming probe ([ADR-0011](docs/adr/0011-two-channel-probe-protocol.md)) that turns ghost citation into a measured rate. The clearest observation so far: clones are dominated by automated tools, with clone-to-view ratios from roughly 13 to over 100 — which reopens the question of what "diffusion" even means when most access is non-human. The limitations are load-bearing and stated first in [`docs/empirical/README.md`](docs/empirical/README.md): N=1 author, no pre-versus-post comparison, crawler dominance, single-run probes.
 
 ## Sibling research lines
 
@@ -76,6 +76,8 @@ flowchart TD
 The ecosystem hub is [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228). (The empirical baseline covers the four lines recorded during its window; Attention, Not Self began traffic observation later and joins at the next update.)
 
 ## How to cite
+
+Written by Tatsuya Shimomoto ([ORCID 0009-0002-6168-4162](https://orcid.org/0009-0002-6168-4162), [@shimo4228](https://github.com/shimo4228)).
 
 Cite the **concept DOI**, which always resolves to the latest version:
 

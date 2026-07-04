@@ -20,7 +20,7 @@ Language: [English](README.md) | 日本語
 | origin の確立 | exclusivity（排他） | **derivation（派生）** |
 | reach の制御 | enclosure（囲い込み） | **openness（開放）** |
 
-詳しい論証は [`docs/thesis.md`](docs/thesis.md)、残る open questions は [`docs/manifesto.md`](docs/manifesto.md)。
+詳しい論証は [`docs/thesis.ja.md`](docs/thesis.ja.md)、残る open questions は [`docs/manifesto.md`](docs/manifesto.md)。
 
 ## 4 層の判断スタック
 
@@ -46,11 +46,11 @@ flowchart TD
 
 ## 20 の戦術的 ADR
 
-ADR は framework から演繹されたのではなく、sibling ecosystem の運用から抽出し、harness-neutral な形に書き直したもの——別の著者が元の実装を継がずに判断を採用できるように。7 つの cluster に分かれる: identifier & federation、maintenance discipline、LLM-first ingest & diffusion、metrics & measurement、vocabulary & claims、channels & placement、operating the framework。各 ADR のタイトル・status・抽出 lineage を含む全 index は [`docs/adr/README.md`](docs/adr/README.md)。
+ADR は framework から演繹されたのではなく、sibling ecosystem の運用から抽出し、harness-neutral な形に書き直したもの——別の著者が元の実装を継がずに判断を採用できるように。7 つの cluster に分かれる: identifier & federation、maintenance discipline、LLM-first ingest & diffusion、metrics & measurement、vocabulary & claims、channels & placement、operating the framework。各 ADR のタイトル・status・抽出 lineage を含む全 index は [`docs/adr/README.ja.md`](docs/adr/README.ja.md)。
 
 ## 経験的ベースライン（preliminary）
 
-[`docs/empirical/`](docs/empirical/) 層は、ecosystem hub から CC0 で運用される 2 つの instrument からの **preliminary observation**——「evidence of」ではなく「consistent with」と framing——を報告する: 日次 clone/view traffic と、ghost citation を測定レートに変える two-channel naming probe（[ADR-0011](docs/adr/0011-two-channel-probe-protocol.md)）。最も明快な観測: clone は自動ツールに支配され、clone-to-view 比はおよそ 13 から 100 超——アクセスの大半が非人間のとき「diffusion」が何を意味するかを問い直す。limitations は load-bearing で [`docs/empirical/README.md`](docs/empirical/README.md) に先に述べる: N=1 著者、pre/post 比較なし、crawler 支配、single-run probe。
+[`docs/empirical/`](docs/empirical/) 層は、ecosystem hub から CC0 で運用される 2 つの instrument からの **preliminary observation**——「evidence of」ではなく「consistent with」と framing——を報告する: 4 sibling repo にわたる clone/view traffic の daily snapshot 24 本と、ghost citation を測定レートに変える two-channel naming probe（[ADR-0011](docs/adr/0011-two-channel-probe-protocol.ja.md)）。最も明快な観測: clone は自動ツールに支配され、clone-to-view 比はおよそ 13 から 100 超——アクセスの大半が非人間のとき「diffusion」が何を意味するかを問い直す。limitations は load-bearing で [`docs/empirical/README.md`](docs/empirical/README.md) に先に述べる: N=1 著者、pre/post 比較なし、crawler 支配、single-run probe。
 
 ## Sibling research lines
 
@@ -77,11 +77,13 @@ ecosystem hub は [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228
 
 ## 引用方法
 
+著者: Tatsuya Shimomoto（[ORCID 0009-0002-6168-4162](https://orcid.org/0009-0002-6168-4162), [@shimo4228](https://github.com/shimo4228)）。
+
 最新版に常に解決する **concept DOI** を引用する:
 
 > Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
 
-完全な metadata は [`CITATION.cff`](CITATION.cff)、[`codemeta.json`](codemeta.json) としても利用可能。特定版は concept DOI の Zenodo listing からその版の DOI を引く。canonical-reference の規律は [ADR-0001](docs/adr/0001-concept-doi-canonical.md)。
+完全な metadata は [`CITATION.cff`](CITATION.cff)、[`codemeta.json`](codemeta.json) としても利用可能。特定版は concept DOI の Zenodo listing からその版の DOI を引く。canonical-reference の規律は [ADR-0001](docs/adr/0001-concept-doi-canonical.ja.md)。
 
 ## License
 
