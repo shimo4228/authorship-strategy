@@ -33,6 +33,7 @@ carrier.
 
 ### Added
 
+- v1.0.0 version DOI (for reproducibility citation only): [10.5281/zenodo.21186682](https://doi.org/10.5281/zenodo.21186682). Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
 - `codemeta.json`: schema.org / CodeMeta software metadata alongside `CITATION.cff`, the format the Software Heritage metadata indexer reads directly (the indexer does not read `CITATION.cff`). A derived artifact — regenerated from `CITATION.cff`, never hand-edited.
 - `scripts/verify-counts.sh`: a release-time guard that derives the ADR total and the manifesto open-question total from the filesystem and fails if any prose carrier states a contradicting number. Installs the CLAUDE.md numeric-claim rule's second clause (machine-verifiable doc↔reality correspondence is fixed with a check, not prose) as the single enforcement point, recorded as a new CODEMAPS invariant. It exists because a stale "seven ADRs" claim survived to this release in `docs/inspiration.md` despite manual review.
 - Public implementation-log projections for three diffusion-intervention batches already deployed and tracked in the private ledger: the `codemeta.json` / Wayback-archival / hub-graph-mirror batch, the search-index surface interventions (concept pages, an entity page, sitemap/IndexNow, a canonical correction, repository metadata), and the AI-native preprint-platform placements. Dated intervention rows only, no effect claims (ADR-0014).
