@@ -102,7 +102,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty decisions extracted from operating a four-repository DOI-registered research ecosystem.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty decisions extracted from operating a four-repository DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
@@ -232,7 +232,7 @@
         {"@value": "オーセンティシティ", "@language": "ja"},
         {"@value": "本真性", "@language": "zh"}
       ],
-      "description": "The protected value at the framework's foundation: the author's genuine thinking remains the author's, unaltered by market pressure to reshape it for sale. Monetization is not a goal. Narrower than the philosophical usage of authenticity; specifically about preservation of authored content against dilutive market pressure.",
+      "description": "The protected value at the framework's foundation: the author's genuine thinking remains the author's, unaltered by market pressure to reshape it for sale. The success criterion is the idea surviving diffusion as thought; revenue plays no part in it. Narrower than the philosophical usage of authenticity; specifically about preservation of authored content against dilutive market pressure.",
       "layerOrdinal": 1,
       "groundedIn": [
         "https://arxiv.org/abs/2603.23219"
@@ -741,7 +741,7 @@
       "@id": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "@type": "EcosystemRepo",
       "name": "claude-skill-authorship-strategy",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the ten ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty ADRs.",
       "url": "https://github.com/shimo4228/claude-skill-authorship-strategy",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

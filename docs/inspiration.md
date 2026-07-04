@@ -57,7 +57,8 @@ framework treats this infrastructure as given; it does not
 attempt to extend it. Adopters working in fields where this
 infrastructure is absent or incomplete (the social sciences,
 humanities outside the digital humanities, applied technical
-fields) will need to supplement the framework with
+fields, and independent makers publishing outside institutional
+venues) will need to supplement the framework with
 substrate-specific tactics.
 
 The prior literature on scientometrics (Eugene Garfield's
@@ -157,7 +158,8 @@ The framing of this literature is marketing-optimization: how to
 make a brand win citations. The framework reads the same mechanics
 the other way, through the human-attention-signal rejection
 ([ADR-0007](adr/0007-human-attention-signals-not-a-metric.md)) and
-the Layer 1 anti-monetization commitment: it asks not how to
+the Layer 1 authenticity commitment (genuine articulation, with
+revenue playing no part): it asks not how to
 capture citations but whether an author's *signature* survives
 diffusion. The mechanism is borrowed; the normative orientation is
 not. These figures are external published findings, not the

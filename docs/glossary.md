@@ -41,8 +41,9 @@ above. See [`thesis.md`](thesis.md).
 
 The protected value at the framework's foundation: that the
 author's *genuine* thinking remains the author's, unaltered by
-market pressure to reshape it for sale. Monetization is not a
-goal of the framework. *Local note*: this is narrower than the
+market pressure to reshape it for sale. The framework's success
+criterion is the idea surviving diffusion as thought; revenue
+sits outside its success criteria. *Local note*: this is narrower than the
 philosophical usage of "authenticity" (e.g., Heideggerian
 *Eigentlichkeit*); it is specifically about the preservation of
 authored content against dilutive market pressure.

@@ -11,11 +11,25 @@ the discovery layer others consult — then the strategies that protect authorsh
 have inverted. Twentieth-century authorship was protected by *enclosure*
 (gatekept journals, proprietary licenses, controlled distribution); but enclosure
 now *reduces* an artifact's exposure to the LLM-mediated diffusion that decides
-whether a future researcher tracing causation can find the original author at all.
+whether a future reader tracing causation can find the original author at all.
 This repository records the inverted strategy — what it is, why it holds, and
 twenty tactical decisions extracted from operating a four-repository
 DOI-registered research ecosystem — in a form harness-neutral enough to be
 adopted beyond the author's own ecosystem.
+
+## The stance this is written from
+
+This framework is written from a maker's and practitioner's stance: the author
+works out, in practice, what good work looks like in the AI era — making things,
+becoming known for them, and leaving work durable and traceable enough to be
+found again. The academic apparatus that appears throughout — DOI registration,
+SWHIDs (content-derived archive identifiers), citation graphs, papers — is
+tooling that makes that exploration citable, durable, and traceable, rather
+than an identity or a destination. The audience follows from the stance:
+developers, practitioners, learners, creative reusers, and readers in any
+language who meet these ideas through LLM-mediated channels; academic citation
+is one channel among several. ("Research line" remains the name for the
+DOI-registered lines of work the strategy operates on.)
 
 ## The inversion (core thesis)
 

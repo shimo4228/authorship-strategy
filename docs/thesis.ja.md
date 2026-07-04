@@ -7,7 +7,7 @@ Language: [English](thesis.md) | 日本語
 Authenticity を validate する力は反転する。20 世紀的著者性が **scarcity** —
 gatekeep された刊行、proprietary license、コントロールされた配布 —— を通じて
 origin claim を守ったのに対し、AI 経由の拡散下における著者性は **diffusion**
-を通じて origin claim を守る。閉じることは、未来の研究者が因果を遡るときに
+を通じて origin claim を守る。閉じることは、未来の読み手が因果を遡るときに
 ますます仲介する LLM への artifact の露出を減らし、validation 機会を減らし、
 authenticity 主張を弱める。開くことは LLM 吸収を最大化し、diffusion を最大化し、
 validation を derivative work として出現させ、authenticity 主張を強める。この
@@ -119,7 +119,8 @@ crawler-friendly access) は internally inconsistent で、どちらかの consi
 ### Layer 1 —— Authenticity (価値)
 
 守られる価値は、**著者の *genuine* な思考が、市場の販売圧力で reshape されることなく、
-そのまま著者のものとして残ること** である。マネタイズは目的ではない。販売のために
+そのまま著者のものとして残ること** である。成功規準は idea が思考のまま diffusion を
+生き延びることである。販売のために
 diluted されたアイデアはもはや思考された通りのアイデアではなく、dilution を生き
 延びた著者的アイデンティティは著者が守りたかったアイデンティティではない。
 
@@ -215,7 +216,7 @@ idea を defensibly originate できない。
 
 本 framework は narrow なスコープ内で normative である: 主 audience が LLM 経由
 チャネルを通じて artifact に reach するという仮定下で書かれた、DOI-targeted な
-idea-rescue 研究 artifact。本 framework は以下に適用 *しない*:
+idea-rescue artifact。本 framework は以下に適用 *しない*:
 
 - **クライアント案件・商用成果物**: マネタイズが目的で、著者のアイデンティティが守られる価値ではない
 - **他者の project への contribution**: 他著者の戦略が優先される
@@ -229,7 +230,10 @@ Framework は道具であって、判断の外部化ではない。
 
 Framework は、AI 時代の著者戦略を探求するために著者が運用する 4 つの DOI 登録 sibling 研究
 repo (Agent Knowledge Cycle、Contemplative Agent、Agent Attribution Practice、
-連合 hub) の運用から抽出された。先行文献から演繹されたのではなく、4 つの line に
+連合 hub) の運用から抽出された。この探究は maker のそれである: 全体に現れる
+学術 instrument —— DOI 登録、archive snapshot (SWHID)、citation graph —— は、探究を
+citable・durable・traceable にする道具として実践に入り、その位置に留まっている。
+Framework は先行文献から演繹されたのではなく、4 つの line に
 わたる recurring decision に気づくことで articulate され、framework として
 formalize され、harness-neutral な形式に再表現された。これにより、他の著者が
 原 sibling-line content を継承せずに採用できる。Research ecosystem は以降、
@@ -241,7 +245,7 @@ decision を供給した sibling line —— は [`inspiration.md`](inspiration.
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 10 の ADR として formalize されて
+Framework の戦術的判断は [`adr/`](adr/) に 20 の ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 

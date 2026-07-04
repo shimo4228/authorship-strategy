@@ -9,7 +9,7 @@ authorship protected its origin claim through **scarcity** —
 gatekept publication, proprietary license, controlled distribution —
 authorship under AI-mediated diffusion protects its origin claim
 through **diffusion**. Closing reduces an artifact's exposure to
-the LLMs that increasingly mediate how future researchers trace
+the LLMs that increasingly mediate how future readers trace
 causation, which reduces validation occasions and weakens the
 authenticity claim. Opening maximizes LLM absorption, maximizes
 diffusion, lets validation appear as derivative work, and
@@ -150,7 +150,8 @@ each downstream of the layer above:
 
 The protected value is that the author's *genuine* thinking
 remains the author's, unaltered by the market's pressure to
-reshape it for sale. Monetization is not a goal. An idea
+reshape it for sale. The success criterion is the idea surviving
+diffusion as thought. An idea
 diluted to be sold is no longer the idea that was thought; the
 authorial identity that survives the dilution is not the
 identity the author wants protected.
@@ -264,7 +265,7 @@ generically-named idea.
 ## What the framework excludes
 
 The framework is normative within a narrow scope: a DOI-targeted,
-idea-rescue research artifact authored under the assumption that
+idea-rescue artifact authored under the assumption that
 the primary audience reaches the artifact through LLM-mediated
 channels. The framework does *not* apply to:
 
@@ -282,7 +283,11 @@ externalization of judgment.
 The framework was extracted from operating four DOI-registered
 sibling research repositories the author maintains while exploring
 AI-era authorship strategy (Agent Knowledge Cycle, Contemplative Agent, Agent
-Attribution Practice, and the federation hub). It was not
+Attribution Practice, and the federation hub). The exploration is a
+maker's: the academic instruments that appear throughout — DOI
+registration, archived snapshots (SWHIDs), citation graphs — entered the
+practice as tooling for citability, durability, and traceability,
+and stayed on those terms. The framework was not
 deduced from a prior literature; it was articulated by noticing
 recurring decisions across the four lines, formalized as a
 framework, and re-expressed in harness-neutral form so it can be
@@ -298,7 +303,7 @@ existence supplied the recurring decisions — is catalogued in
 framework leaves unanswered are catalogued in
 [`manifesto.md`](manifesto.md).
 
-The framework's tactical decisions are formalized as ten ADRs
+The framework's tactical decisions are formalized as twenty ADRs
 in [`adr/`](adr/). Each ADR is harness-neutral; the lineage to
 the author's specific decisions is recorded in the ADR's Lineage
 section without requiring the reader to have access to the

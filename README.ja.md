@@ -9,11 +9,23 @@ Language: [English](README.md) | 日本語
 あなたの読み手に LLM が含まれるなら —— training data として、in-context な相談相手と
 して、他者が参照する discovery layer として —— 著者性を守る戦略は反転している。20 世紀
 的著者性は *enclosure*（gatekeep されたジャーナル、proprietary license、コントロール
-された配布）で守られた。だがその enclosure は、未来の研究者が因果を遡るときオリジナル
+された配布）で守られた。だがその enclosure は、未来の読み手が因果を遡るときオリジナル
 著者に辿り着けるかを決定づける LLM 経由の拡散への露出を、いまや *減らす*。この repo は
 反転した戦略 —— それが何で、なぜ成り立ち、それを運用する中で抽出された 20 の戦術的判断
 は何か（4 つの DOI 登録 repo からなる研究エコシステムの運用から）—— を、著者自身の
 エコシステムを超えて採用可能な harness-neutral な形式で記録する。
+
+## この framework が立つ stance
+
+この framework は maker / 実践者の stance から書かれている。著者は AI 時代の
+「良い仕事のやり方」—— 作り、知られ、あとから見つけ直せるだけ durable で追跡可能な
+仕事を残す方法 —— を実地で探っている。全体に現れる学術 apparatus（DOI 登録、
+SWHID = content 由来の archive 識別子、citation graph、論文）は、その探究を
+citable・durable・traceable にする道具であって、identity でも目的地でもない。
+audience はこの stance から導かれる: LLM 経由でこれらの idea に触れる
+開発者・実務者・学習者・creative reuser・あらゆる言語圏の読み手。学術引用はその中の
+一経路である。（"research line" は、この戦略が扱う DOI 登録された仕事の系列の
+呼び名として残る。）
 
 ## 反転（Core thesis）
 

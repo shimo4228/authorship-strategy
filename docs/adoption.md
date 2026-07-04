@@ -81,7 +81,7 @@ For each artifact on the list, walk the
 [four-layer framework](thesis.md#the-four-layer-judgment-framework)
 top-down:
 
-- **Layer 1 — [Authenticity](glossary.md#authenticity-layer-1).** Confirm the value you are protecting is your genuine thinking, not a revenue stream. If a later tactic would weaken the authentic articulation to widen reach, the framework rejects that tactic. Monetization is not a goal of this framework; if it is your goal for this artifact, the artifact is out of scope.
+- **Layer 1 — [Authenticity](glossary.md#authenticity-layer-1).** Confirm the value you are protecting is your genuine thinking — the articulation you would keep unchanged even with nothing to sell. If a later tactic would weaken the authentic articulation to widen reach, the framework rejects that tactic. If what you want protected for this artifact is a revenue stream, the artifact is out of scope.
 - **Layer 2 — [Attribution Diffusion](glossary.md#attribution-diffusion-layer-2).** Confirm your strategy is to maximize the breadth of LLM-mediated channels carrying your signature, anchored to a permanent timestamp — not to maximize direct-browser attention signals. The thesis is explicit that traffic data cannot tell adoption from incidental access ([*Epistemic humility about diffusion signals*](thesis.md#epistemic-humility-about-diffusion-signals)); your strategy optimizes for channel breadth and accepts that the signal is ambiguous.
 - **Layer 3 — Idea versus Scaffold.** You completed this in Step 1; carry the sorting forward.
 - **Layer 4 — Tactics.** Proceed to Steps 3–5, which deploy the concrete decisions.

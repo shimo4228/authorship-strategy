@@ -73,7 +73,12 @@ abstract: >-
   limitations on sample size and the absence of pre-versus-post
   intervention comparison. Sibling research lines (Agent Knowledge Cycle,
   Contemplative Agent, Agent Attribution Practice) are referenced
-  but not extended.
+  but not extended. Written from a maker's and practitioner's stance:
+  the academic apparatus used throughout (DOI, SWHID, citation graphs)
+  is tooling for citability, durability, and traceability rather than
+  an identity or destination, and the intended audience spans developers,
+  practitioners, learners, and creative reusers across languages, with
+  academic citation as one channel among several.
 keywords:
   - authorship strategy
   - AI-era authenticity

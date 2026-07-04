@@ -7,7 +7,10 @@ open questions the framework leaves unanswered, the empirical
 contrasts it has not yet tested, and the failure modes it
 acknowledges but does not yet handle. The intent is to make the
 limits of the framework explicit so adopters can decide whether
-to extend it or to operate within its current scope.
+to extend it or to operate within its current scope. The questions
+are asked from the framework's own stance — a maker working out
+durable, traceable authorship in practice — and they are open
+because practice has not yet answered them.
 
 ## Open question 1: How does the framework scale beyond a single author?
 

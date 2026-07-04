@@ -30,8 +30,9 @@ derivation へ)、*ネットワーク効果* (enclosure から openness へ)。�
 ## Authenticity (Layer 1)
 
 Framework の基盤にある守られる価値: 著者の *genuine* な思考が、販売のために
-reshape する市場圧力に変えられず、そのまま著者のものとして残ること。マネタイズは
-framework の目的ではない。*Local note*: これは哲学的な「authenticity」(例:
+reshape する市場圧力に変えられず、そのまま著者のものとして残ること。framework の
+成功規準は idea が思考のまま diffusion を生き延びることであり、収益はその規準の
+外にある。*Local note*: これは哲学的な「authenticity」(例:
 Heidegger の *Eigentlichkeit*) より narrow である; 具体的には、dilutive な
 市場圧力に対する authored content の保存に関する話。
 
@@ -277,9 +278,14 @@ naming probe が閉じる。
 
 retrieval-augmented system が artifact の URL を cite するが、著者の名前が
 parametric 記憶に焼き込まれていないため著者を名指しも推薦もしない failure mode。
-この語は 2026 年の generative-engine-optimization 文献 (GhostCite,
-arXiv:2602.06718; Seer Interactive の 541,213 応答調査) に由来し、本 framework は
-造語ではなく adopt している。[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md)
+この attribution-loss の意味は framework 自身の用語である。この語が名指す挙動は
+2026 年の generative-engine-optimization 文献に anchor されている — 特に
+Seer Interactive の 541,213 応答調査は、brand が named の場合の brand-citation
+rate 53.1% に対し unnamed の場合 10.6% を報告し、parametric channel が
+retrieval channel を gate する（逆ではない）ことと整合する。（*ghost citation*
+という語は arXiv:2602.06718 では disjoint な現象 — 実在しない source への
+捏造・無効な引用 — にも使われるため、両義を混同しないこと。）
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md)
 はこれを 2 チャネル機構の中に、parametric と retrieval の 2 チャネルが distinct で
 並行で追うべきことの diagnostic として位置づける: parametric 焼き込み不在の上で
 動く retrieval channel は、帰属を再浮上させずに citation だけを生む。
