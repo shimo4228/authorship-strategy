@@ -203,11 +203,15 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
       "@type": ["Concept", "Axis"],
       "name": "Exclusivity-to-Derivation Axis",
-      "description": "Second axis of the three-axis inversion: validation mechanism. Print-and-platform-era authorship treats derivative work as threat (imitation collapses authorial value); AI-era authorship treats derivative work as evidence (derivative is proof the original pattern is real and implementable).",
+      "description": "Second axis of the three-axis inversion: validation mechanism. Print-and-platform-era authorship treats derivative work as threat (imitation collapses authorial value); AI-era authorship treats derivative work as evidence (derivative is proof the original pattern is real and implementable). Two sub-distinctions refine the axis on 2026 evidence. (1) Legal-exclusivity channel versus diffusion channel: copyright case law has consolidated around exclusive human authorship — machine-only works unprotectable, the live question being how much human involvement suffices — strengthening the exclusivity pole as a legal regime; the framework separates proof of human creative control (for ownership) from content-derived and registry identifiers such as DOI and SWHID (for origin-claim priority under LLM-mediated diffusion) and pursues only the latter, so the legal trend marks a channel split, not a refutation of the axis. (2) Proactive versus passive derivation attribution: watermark-based multi-concept attribution traces derivation with high precision but presupposes the source's prior consent and instrumentation of the generation pipeline, whereas this framework's attribution diffusion is passive — no pre-intervention in the ingesting model — priced in measurement difficulty. Both are recorded as axis structure, not effect claims.",
       "axisPosition": 2,
       "covaresWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+      ],
+      "groundedIn": [
+        "https://arxiv.org/abs/2604.04700",
+        "https://arxiv.org/abs/2602.19019"
       ]
     },
 
@@ -215,11 +219,14 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
       "@type": ["Concept", "Axis"],
       "name": "Enclosure-to-Openness Axis",
-      "description": "Third axis of the three-axis inversion: network effect. Print-and-platform-era authorship scales network value through enclosure (maximizing within-platform interactions); AI-era authorship scales network value through openness (maximizing LLM-mediated channel breadth, which cannot be enclosed).",
+      "description": "Third axis of the three-axis inversion: network effect. Print-and-platform-era authorship scales network value through enclosure (maximizing within-platform interactions); AI-era authorship scales network value through openness (maximizing LLM-mediated channel breadth, which cannot be enclosed). 2026 evidence refines the axis from a binary toward a structured spectrum, recorded here as standing tension pending doctrine-level resolution. Paywalled scholarship keeps roughly half of full-text science out of AI systems' reach, making openness a physical precondition of LLM-mediated diffusion rather than an abstract preference; the same literature argues paywall removal is unrealistic and proposes a licensed intermediate state — paid licensing plus retrieval-time access — as a third equilibrium the binary framing does not represent, one whose benefits may concentrate in large rights-holders and whose funding model conflicts with the free openness this framework assumes. Separately, multilateral policy work now defines AI openness as a graded access spectrum, a dimension orthogonal to this axis's concern with attribution: openness of access does not by itself resolve attribution of origin.",
       "axisPosition": 3,
       "covaresWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis"
+      ],
+      "groundedIn": [
+        "https://doi.org/10.1002/leap.2059"
       ]
     },
 
@@ -267,13 +274,14 @@
         {"@value": "理念とスキャフォールドの分離", "@language": "ja"},
         {"@value": "理念与脚手架的分离", "@language": "zh"}
       ],
-      "description": "The framework's third layer: sorting each artifact into idea-character (which survives and is DOI-registered under the author's name) or scaffold-character (which dissolves into larger harnesses whose own diffusion absorbs the implementation). Mixed-character artifacts get idea-level DOI registration first.",
+      "description": "The framework's third layer: sorting each artifact into idea-character (which survives and is DOI-registered under the author's name) or scaffold-character (which dissolves into larger harnesses whose own diffusion absorbs the implementation). Mixed-character artifacts get idea-level DOI registration first. An open tension qualifies the layer's mechanistic grounding: the memorization-versus-generalization evidence behind the wager comes from models under default training, consistent with a content-intrinsic reading (what a text is determines whether it dissolves), while controllable-memorization training shows that raised memorization pressure can verbatim-retain even rare scaffold-like sequences — a training-configuration-dependent reading under which the ingesting pipeline, not the content, decides. The two readings are compatible (default regime versus actively-controlled regime), but their reconciliation changes the wager's strength; recorded as unresolved.",
       "layerOrdinal": 3,
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
       "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
       "groundedIn": [
         "https://arxiv.org/abs/2602.14869",
-        "https://arxiv.org/abs/2602.18733"
+        "https://arxiv.org/abs/2602.18733",
+        "https://arxiv.org/abs/2604.05074"
       ]
     },
 
@@ -312,17 +320,21 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
       "@type": "Concept",
       "name": "Abstract Doctrine + Worked Implementation Pair",
-      "description": "The pairing required to induce creative re-implementation by other authors: an abstract-doctrine repository that articulates the idea cleanly enough for elsewhere-implementation, and a worked-implementation repository that demonstrates the doctrine is implementable. Doctrine alone produces unactionable interest; implementation alone produces unextractable principle.",
-      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation"
+      "description": "The pairing required to induce creative re-implementation by other authors: an abstract-doctrine repository that articulates the idea cleanly enough for elsewhere-implementation, and a worked-implementation repository that demonstrates the doctrine is implementable. Doctrine alone produces unactionable interest; implementation alone produces unextractable principle. Externally grounded by agent-driven reproduction benchmarking: models reconstruct an algorithm's reasoning structure from its paper description far more reliably than they produce working code from it (best execution accuracy 39%), and supplying missing implementation detail measurably closes the gap — doctrine alone is unactionable, and the benchmark's missing-information categories (hyperparameters, numerical stabilization, implementation logic, coding strategy) enumerate what a worked implementation must carry.",
+      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+      "groundedIn": [
+        "https://arxiv.org/abs/2504.00255"
+      ]
     },
 
     {
       "@id": "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
       "@type": "Concept",
       "name": "Origin-Claim Scope Discipline",
-      "description": "A subordinate principle applying at all four layers: the origin claim must be narrower than the prior art. Claiming priority on a broad pattern with rich prior art collapses the claim's credibility; claiming priority on a narrow, specifically-named discipline is defensible. Coined terminology is the substrate of narrow origin claims.",
+      "description": "A subordinate principle applying at all four layers: the origin claim must be narrower than the prior art. Claiming priority on a broad pattern with rich prior art collapses the claim's credibility; claiming priority on a narrow, specifically-named discipline is defensible. Coined terminology is the substrate of narrow origin claims. Feature-granular novelty verification from the patent-examination domain supplies a procedural template: decompose a claim into individual features and map each against prior-art passages, rather than judging the claim as one binary. The same work cautions that granularity is not accuracy — claim-level binary predictors can beat feature-level pipelines on raw correctness — so the discipline treats the feature-to-prior-art map itself as the artifact and does not reduce it to a novelty score.",
       "groundedIn": [
-        "https://arxiv.org/abs/2601.01576"
+        "https://arxiv.org/abs/2601.01576",
+        "https://arxiv.org/abs/2605.02392"
       ]
     },
 
@@ -334,7 +346,7 @@
         {"@value": "Distinctive Terminology", "@language": "en"},
         {"@value": "造語的用語", "@language": "ja"}
       ],
-      "description": "Domain-specific words coined by an author as semantic signatures of authorship. Generic vocabulary dissolves through paraphrase; coined terms survive as token-level signals carrying back-reference to the original author. A Layer 4 tactic and the substrate of origin-claim scope discipline. Coinage is governed by vocabulary discipline (ADR-0010): a coined term's power comes from its edge density, not from the count of coinages."
+      "description": "Domain-specific words coined by an author as semantic signatures of authorship. Generic vocabulary dissolves through paraphrase; coined terms survive as token-level signals carrying back-reference to the original author. A Layer 4 tactic and the substrate of origin-claim scope discipline. Coinage is governed by vocabulary discipline (ADR-0010): a coined term's power comes from its edge density, not from the count of coinages. Attribution research under generative style-mimicry reframes where the term's power lies: coined terminology functions less as personal style — which authorship-attribution models find harder to trace as terms grow semantically unpredictable, and which model imitation erodes — than as occupancy of an uncontested coordinate in concept space, an idea-level rather than style-level signature."
     },
 
     {
@@ -345,7 +357,7 @@
         {"@value": "Vocabulary Discipline", "@language": "en"},
         {"@value": "語彙規律", "@language": "ja"}
       ],
-      "description": "The discipline governing when to coin a distinctive term and when to use existing vocabulary instead: coin sparingly, anchor densely. A term is coined only when three conditions all hold — the concept is genuinely new at a join of existing concepts (join-novelty), a one-sentence definition in existing vocabulary is possible (definitional anchoring), and the namespace is uncontested — and every retained coinage carries a glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges to existing concepts and references, and repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. Rationale: the costs of coinage (isolation, reader trust, maintenance) grow linearly with the number of terms while the benefit depends on each term's edge density, so few densely-anchored terms dominate many isolated ones — an isolated coinage is paraphrased away by the parametric channel exactly as generic vocabulary is, and the retrieval channel is queried in existing vocabulary. Named as the parametric-channel lever in ADR-0008, defined in ADR-0010. The vocabulary-level enforcement of origin-claim scope discipline.",
+      "description": "The discipline governing when to coin a distinctive term and when to use existing vocabulary instead: coin sparingly, anchor densely. A term is coined only when three conditions all hold — the concept is genuinely new at a join of existing concepts (join-novelty), a one-sentence definition in existing vocabulary is possible (definitional anchoring), and the namespace is uncontested — and every retained coinage carries a glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges to existing concepts and references, and repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. Rationale: the costs of coinage (isolation, reader trust, maintenance) grow linearly with the number of terms while the benefit depends on each term's edge density, so few densely-anchored terms dominate many isolated ones — an isolated coinage is paraphrased away by the parametric channel exactly as generic vocabulary is, and the retrieval channel is queried in existing vocabulary. Named as the parametric-channel lever in ADR-0008, defined in ADR-0010. The vocabulary-level enforcement of origin-claim scope discipline. Two 2026 results refine the discipline's scope: disentangled authorship-attribution modeling exposes a trade-off in which a coinage's semantic unpredictability weakens style-based traceability (supporting the concept-space-occupancy reading of distinctive terminology), and neology-survival analysis finds the correlates of term survival are broadly shared across publication pathways while topic-popularity growth contributes less on social platforms than in published writing — so anchoring priorities are pathway-specific, and the anchor-densely rule was calibrated on the published/scholarly pathway this framework primarily operates in.",
       "appliesTo": "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
       "downstreamOf": [
         "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
@@ -354,7 +366,9 @@
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0010",
       "groundedIn": [
         "https://arxiv.org/abs/2402.12261",
-        "https://arxiv.org/abs/2510.08506"
+        "https://arxiv.org/abs/2510.08506",
+        "https://arxiv.org/abs/2604.21300",
+        "https://arxiv.org/abs/2602.13123"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md"
     },
@@ -367,7 +381,7 @@
         {"@value": "Dual Entry Point", "@language": "en"},
         {"@value": "Dual Entry Point", "@language": "ja"}
       ],
-      "description": "The structural decision that any framework-governed artifact deploys two complementary structured entry points — a prose-form navigator and a concept-form graph — released synchronously at every versioned release. Each entry point addresses a distinct LLM-mediated channel sub-population the other cannot reach. ADR-0009 amends this on 2026 evidence: the two are not co-equal on the citation axis — the concept-form graph carries retrieval-time citation while the prose navigator's citation effect is noise — so the pair is retained but made asymmetric, the navigator rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever.",
+      "description": "The structural decision that any framework-governed artifact deploys two complementary structured entry points — a prose-form navigator and a concept-form graph — released synchronously at every versioned release. Each entry point addresses a distinct LLM-mediated channel sub-population the other cannot reach. ADR-0009 amends this on 2026 evidence: the two are not co-equal on the citation axis — the concept-form graph carries retrieval-time citation while the prose navigator's citation effect is noise — so the pair is retained but made asymmetric, the navigator rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever. Endpoint-level measurement adds a mechanical basis for the asymmetry: AI coding agents fetch documentation with heterogeneous HTTP clients, many executing no page scripts, so content reachable only through client-side rendering is invisible to part of the agent population — statically-served structured entry points are an access floor, not merely a citation lever.",
       "composedOf": [
         "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
         "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph"
@@ -376,6 +390,9 @@
       "instantiatedBy": [
         "https://github.com/shimo4228/authorship-strategy#adr/0006",
         "https://github.com/shimo4228/authorship-strategy#adr/0009"
+      ],
+      "groundedIn": [
+        "https://arxiv.org/abs/2604.02544"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
@@ -388,9 +405,12 @@
         {"@value": "llms.txt convention", "@language": "en"},
         {"@value": "llms.txt convention", "@language": "ja"}
       ],
-      "description": "A community-curated AI-facing reference convention that uses a single prose-form text file (llms.txt) at the root of an artifact to enumerate its primary documents with one-line descriptions and a recommended reading order. Targets prose-reading LLM-mediated channels: conversational LLMs, AI assistants consulting documentation in-context, citation-graph annotators fetching prose for summarization. The prose-form half of the dual entry point.",
+      "description": "A community-curated AI-facing reference convention that uses a single prose-form text file (llms.txt) at the root of an artifact to enumerate its primary documents with one-line descriptions and a recommended reading order. Targets prose-reading LLM-mediated channels: conversational LLMs, AI assistants consulting documentation in-context, citation-graph annotators fetching prose for summarization. The prose-form half of the dual entry point. Scope refinement on 2026 evidence: the convention's discovery-tool framing has collapsed — adoption grew, but measured effect on AI-search citation is null, AI crawlers request the file rarely, and primary-source statements from a major search operator confirm it is not consulted for search or citation, serving instead agents that already know the site; the agent-guidance role it once aspired to is migrating to executable-tool, transaction, usage-declaration, and access-enforcement protocol layers. Its validated remaining niche — the one this framework uses — is the agent-facing documentation surface (B2A): coding agents consulting a known repository's reading order. This narrows, and does not reverse, ADR-0009's asymmetric rebalance.",
       "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
       "instantiatedBy": "https://github.com/shimo4228/llms-txt-writer",
+      "groundedIn": [
+        "https://arxiv.org/abs/2604.02544"
+      ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
     },
 
@@ -422,9 +442,12 @@
         {"@value": "Human-Attention Signal Rejection", "@language": "en"},
         {"@value": "人間アテンション signal の却下", "@language": "ja"}
       ],
-      "description": "The decision to exclude platform-level human-attention metrics — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach, since a human reading the work through an LLM answer generates no view) — from the framework's success definition, and to decline off-page human-distribution labor as a red-ocean activity operating on a near-empty human-arrival funnel (empirically clone:view approximately 16:1). Success is measured by the breadth of LLM-mediated channels instead. The metric-side embodiment of the scarcity-to-diffusion axis: the framework does not compete for scarce human attention on platform terms but diffuses through LLM-mediated channels.",
+      "description": "The decision to exclude platform-level human-attention metrics — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach, since a human reading the work through an LLM answer generates no view) — from the framework's success definition, and to decline off-page human-distribution labor as a red-ocean activity operating on a near-empty human-arrival funnel (empirically clone:view approximately 16:1). Success is measured by the breadth of LLM-mediated channels instead. The metric-side embodiment of the scarcity-to-diffusion axis: the framework does not compete for scarce human attention on platform terms but diffuses through LLM-mediated channels. Endpoint measurement extends the structural blindness beyond page views: AI agents compress multi-page consumption into one or two HTTP requests and fire no client-side engagement events, so bounce-rate and session-depth metrics misrecord full consumption as non-engagement, and referrer stripping folds LLM-mediated arrivals into direct traffic — engagement analytics cannot capture LLM-mediated reach even in principle. Boundary: the compression evidence comes from single-fetch documentation tasks, so it is read as grounding for document-retrieval contexts rather than for every agent workload.",
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0007",
+      "groundedIn": [
+        "https://arxiv.org/abs/2604.02544"
+      ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
     },
 
@@ -437,7 +460,7 @@
         {"@value": "2 チャネル Attribution Diffusion", "@language": "ja"},
         {"@value": "双通道署名扩散", "@language": "zh"}
       ],
-      "description": "The refinement of Attribution Diffusion (Layer 2) into two mechanisms with opposite time constants and opposite levers: a parametric channel (the idea absorbed into model weights at training time — slow, driven by broad cross-platform co-occurrence of distinctive vocabulary with its source; cross-platform mention spread correlates ~0.664 with being named, far above enclosed inbound links ~0.218) and a retrieval channel (the artifact fetched at query time — fast, 3–5 day citation-pool entry and ~13-week decay, driven by freshness and structured data). Ghost citation — the source is cited but the author is not named — is the failure mode of a working retrieval channel atop absent parametric burn-in, so the two channels are optimized and measured separately and run in parallel.",
+      "description": "The refinement of Attribution Diffusion (Layer 2) into two mechanisms with opposite time constants and opposite levers: a parametric channel (the idea absorbed into model weights at training time — slow, driven by broad cross-platform co-occurrence of distinctive vocabulary with its source; cross-platform mention spread correlates ~0.664 with being named, far above enclosed inbound links ~0.218) and a retrieval channel (the artifact fetched at query time — fast, 3–5 day citation-pool entry and ~13-week decay, driven by freshness and structured data). Ghost citation — the source is cited but the author is not named — is the failure mode of a working retrieval channel atop absent parametric burn-in, so the two channels are optimized and measured separately and run in parallel. Two 2026 refinements are recorded. (1) The retrieval channel's verifiability splits into surface and substantive layers: deep-research audits find link validity and topical relevance high (above 94% and 80% in the strongest systems) while factual accuracy of what a citation is claimed to support runs far lower (39–77%), and deepening retrieval degrades it further — a working retrieval channel guarantees the source is reachable, not that the claim it carries is faithful, so diffusion breadth does not imply fidelity of transmission. (2) White-box probing quantifies an interaction-cost asymmetry between the channels: errors are markedly more frequent when external context must override parametric knowledge than in the reverse direction.",
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0008",
       "groundedIn": [
@@ -447,7 +470,9 @@
         "https://arxiv.org/abs/2602.14869",
         "https://arxiv.org/abs/2601.21996",
         "https://arxiv.org/abs/2509.08919",
-        "https://arxiv.org/abs/2602.22787"
+        "https://arxiv.org/abs/2602.22787",
+        "https://arxiv.org/abs/2605.06635",
+        "https://arxiv.org/abs/2509.04499"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
     },
@@ -460,7 +485,7 @@
         {"@value": "Retrieval-Suppressed Naming Probe", "@language": "en"},
         {"@value": "検索抑制 naming probe", "@language": "ja"}
       ],
-      "description": "The measurement instrument for the parametric channel of Two-Channel Attribution Diffusion: a controlled prompt sent to a model with all search and grounding tools suppressed, asking what a concept is and who coined or maintains it. Success is the model producing the concept and the author's name from trained weights alone. Paired with a search-enabled citation probe that measures the retrieval channel and makes ghost citation observable within a single answer (owned identifier cited, author unnamed in prose). Detection is deterministic string matching against a versioned lexicon over retained raw responses — never model judging — with fixed single-variable templates and a negative-control probe (a plausible nonexistent concept) that quantifies the confabulation noise floor. The public probe log feeds the parametric channel it measures; the protocol records this self-contamination as a stated confound rather than hiding it.",
+      "description": "The measurement instrument for the parametric channel of Two-Channel Attribution Diffusion: a controlled prompt sent to a model with all search and grounding tools suppressed, asking what a concept is and who coined or maintains it. Success is the model producing the concept and the author's name from trained weights alone. Paired with a search-enabled citation probe that measures the retrieval channel and makes ghost citation observable within a single answer (owned identifier cited, author unnamed in prose). Detection is deterministic string matching against a versioned lexicon over retained raw responses — never model judging — with fixed single-variable templates and a negative-control probe (a plausible nonexistent concept) that quantifies the confabulation noise floor. The public probe log feeds the parametric channel it measures; the protocol records this self-contamination as a stated confound rather than hiding it. Two calibration constraints and one positioning refinement are recorded on 2026 evidence. Cross-family memorization analysis finds statistical regularities shared across model families (memorization scaling log-linearly with size) while the internal circuitry carrying memorization is family-specific — so probe results are calibrated per model family, reported with family-internal consistency rather than a single cross-model threshold, and re-baselined when a model series changes generation; for closed frontier models the internal check is impossible in principle, leaving family calibration a stated approximation. Retrieval-free citation training (active indexing: diverse restatement of each fact plus bidirectional source-fact binding at continual-pretraining time) shows parametric citation ability is a designable supply-side property — repetition volume alone does not create burn-in, structural diversity of restatement does — which positions this probe as the demand-side observer of a supply-side design space the author does not control, and grounds the framework's preference for structural diversity over sheer exposure volume in what it publishes.",
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0011",
       "groundedIn": [
@@ -468,7 +493,9 @@
         "https://arxiv.org/abs/2604.25707",
         "https://arxiv.org/abs/2603.09296",
         "https://arxiv.org/abs/2605.18732",
-        "https://arxiv.org/abs/2511.00476"
+        "https://arxiv.org/abs/2511.00476",
+        "https://arxiv.org/abs/2603.21658",
+        "https://arxiv.org/abs/2506.17585"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md"
     },
@@ -1007,6 +1034,149 @@
       "identifier": "arXiv:2511.00476",
       "url": "https://arxiv.org/abs/2511.00476",
       "description": "Prompts three LLMs (DeepSeek R1, Llama 4 Scout, Mixtral 8x7B) to reconstruct academic coauthor lists from parametric memory and compares the output against bibliographic reference data, finding a systematic advantage for highly cited researchers — coauthor information for already-prominent scholars is recalled more reliably — though the authors stress this is non-uniform across fields and regions (Clinical Medicine and certain African regions show narrower gaps). Cited as grounding for the parametric-channel naming probe (ADR-0011): what an LLM recalls and names is gated by prior citation authority, so the probe's success is predictably and unequally distributed rather than a neutral readout of presence. Also supports manifesto Open Question 9 on whether diffusion-era recall entrenches existing prominence; we cite only its measured coauthor-list scope and its own warning against using LLM-generated scholarly networks without auditing for memorization-driven inequality."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2604.02544",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Developer Experience with AI Coding Agents: HTTP Behavioral Signatures in Documentation Portals",
+      "author": "Oleksii Borysenko",
+      "datePublished": "2026-04-02",
+      "identifier": "arXiv:2604.02544",
+      "url": "https://arxiv.org/abs/2604.02544",
+      "description": "Server-side measurement of how AI coding agents and assistant services access developer documentation, from recorded HTTP headers: agents use heterogeneous HTTP clients — only some executing page scripts — carry identifiable signatures, and compress multi-page browsing into one or two requests, defeating client-side engagement analytics (session depth, bounce rate) while consuming the content in full. External endpoint-level grounding for three positions at once: the B2A/coding-agent niche as the llms.txt convention's validated remaining channel (ADR-0009's rescope), statically-served structured entry points as an access floor for the dual entry point (ADR-0006), and the structural blindness of human-attention engagement metrics (ADR-0007). Boundary: the request-compression evidence comes from documentation-retrieval tasks and is not generalized here to all agent workloads."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2603.21658",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "A Comparative Analysis of LLM Memorization at Statistical and Internal Levels: Cross-Model Commonalities and Model-Specific Signatures",
+      "author": ["Bowen Chen", "Namgi Han", "Yusuke Miyao"],
+      "datePublished": "2026-03-23",
+      "identifier": "arXiv:2603.21658",
+      "url": "https://arxiv.org/abs/2603.21658",
+      "description": "Compares memorization across open model families (Pythia, OpenLLaMA, StarCoder, OLMo generations) at both statistical and internal levels, finding memorization rate scales log-linearly with model size across families while the attention heads important for memorization are distributed family-specifically — cross-model commonalities coexisting with family-specific signatures determined by the training recipe. Calibration grounding for the retrieval-suppressed naming probe (ADR-0011): the shared statistical regularities are what make cross-model probing meaningful at all, and the family-specific internals are why probe results are calibrated per family, reported with family-internal consistency rather than one cross-model threshold, and re-baselined on generation changes. Boundary: the internal analysis requires open weights, so for closed frontier models the family-calibration requirement can only be approximated externally."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2604.05074",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Memory Dial: A Training Framework for Controllable Memorization in Language Models",
+      "author": ["Xiangbo Zhang", "Ali Emami"],
+      "datePublished": "2026-04-06",
+      "identifier": "arXiv:2604.05074",
+      "url": "https://arxiv.org/abs/2604.05074",
+      "description": "Introduces a training objective with a single hyperparameter interpolating between standard training and a temperature-sharpened memorization objective, showing memorization pressure can be raised continuously — retaining more seen sequences without degrading unseen performance, with larger models responding more sharply. Cited as the training-configuration-dependent counter-reading to the content-intrinsic reading of the Layer 3 wager (idea-versus-scaffold separation, grounded in default-training memorization evidence): under raised memorization pressure even rare scaffold-like sequences can be verbatim-retained, so whether scaffold dissolves may be decided by the ingesting pipeline's training regime rather than by the content's character. Recorded as an open tension, not a refutation — the two readings describe different training regimes and their reconciliation is unresolved."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2604.04700",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Who is the author? A legal and normative view of authorship in Generative AI-aided academic works",
+      "author": "David M. Pereira",
+      "datePublished": "2026-04-06",
+      "identifier": "arXiv:2604.04700",
+      "url": "https://arxiv.org/abs/2604.04700",
+      "description": "Argues authorship under generative-AI assistance functions as a qualitative threshold rather than a binary attribute, grounded in European copyright law's human-intellectual-creation requirement: authorship holds where AI serves as cognitive support under the person's intellectual direction and becomes legally contestable where AI output supplants creative autonomy. Legal grounding for the channel split recorded on the exclusivity-to-derivation axis — proof of human creative control (legal-exclusivity channel) is a different certification system from content-derived and registry identifiers for origin-claim priority (diffusion channel) — and adjacent grounding for origin-claim falsifiability (ADR-0018): disclosure of the degree and nature of AI assistance is itself a scoped origin claim. Boundary: a legal-normative analysis, not an empirical measurement; case-law thresholds it discusses remain unsettled."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2506.17585",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Cite Pretrain: Retrieval-Free Knowledge Attribution for Large Language Models",
+      "author": ["Yukun Huang", "Sanxing Chen", "Jian Pei", "Manzil Zaheer", "Bhuwan Dhingra"],
+      "datePublished": "2025-06-21",
+      "identifier": "arXiv:2506.17585",
+      "url": "https://arxiv.org/abs/2506.17585",
+      "description": "Shows a model can be trained to cite its pretraining documents without inference-time retrieval: active indexing — synthetic data restating each fact in diverse compositional forms and enforcing bidirectional source-to-fact and fact-to-source binding during continual pretraining — yields citation-precision gains up to 30.2% over passive exposure, improving as synthetic augmentation scales. Supply-side grounding for the parametric channel (ADR-0008) and for the demand-side-observer positioning of the retrieval-suppressed naming probe (ADR-0011): parametric attribution is a designable property of the ingesting pipeline, and passive exposure volume alone does not create it — structural diversity of restatement does, which externally supports this framework's preference for structurally diverse publication over sheer repetition. Boundary: the mechanism operates at the model provider's training stage; an author controls only the structure of what is published, not whether any provider applies such indexing."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2605.02392",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Is It Novel and Why? Fine-Grained Patent Novelty Prediction Based on Passage Retrieval",
+      "author": ["Valentin Knappich", "Anna Hätty", "Simon Razniewski", "Annemarie Friedrich"],
+      "datePublished": "2026-05-04",
+      "identifier": "arXiv:2605.02392",
+      "url": "https://arxiv.org/abs/2605.02392",
+      "description": "Argues patent novelty assessment should shift from binary claim-level classification to feature-level analysis, releasing FiNE-Patents — 3,658 claims annotated from institutional examiner search opinions — where models decompose a claim into features and identify which prior-art passages disclose each. Procedural grounding for origin-claim scope discipline and origin-claim falsifiability (ADR-0018) at a finer granularity than whole-claim checking: the feature-to-prior-art map is the verification artifact. Cited with the paper's own caution that granularity is not accuracy — claim-level binary predictors can outscore feature-level pipelines on raw correctness while learning spurious surface correlations — so the discipline keeps the map and declines to reduce it to a binary novelty verdict. Boundary: patent claims have explicit feature boundaries; transfer of the procedure to non-formulaic prose such as essays and design records is untested."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2605.06635",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents",
+      "author": ["Hailey Onweller", "Elias Lumer", "Austin Huber", "Pia Ramchandani", "Vamse Kumar Subbiah", "Corey Feld"],
+      "datePublished": "2026-05-07",
+      "identifier": "arXiv:2605.06635",
+      "url": "https://arxiv.org/abs/2605.06635",
+      "description": "Evaluates citations in LLM deep-research reports on three dimensions — link validity, topical relevance, factual support — finding frontier systems keep link validity above 94% and relevance above 80% while factual accuracy of what each citation is claimed to support runs only 39–77%, and that scaling tool calls from 2 to 150 drops fact-check accuracy by roughly 42% on average. Grounding for the surface-versus-substantive verifiability split recorded on Two-Channel Attribution Diffusion (ADR-0008): a working retrieval channel proves reachability of the source, not fidelity of the claim it carries, and deeper retrieval does not converge on fidelity — so diffusion breadth is not transmission fidelity, a caution the scarcity-to-diffusion axis inherits."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2509.04499",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence",
+      "author": ["Pranav Narayanan Venkit", "Philippe Laban", "Yilun Zhou", "Kung-Hsiang Huang", "Yixin Mao", "Chien-Sheng Wu"],
+      "datePublished": "2025-09-02",
+      "identifier": "arXiv:2509.04499",
+      "url": "https://arxiv.org/abs/2509.04499",
+      "description": "Audit framework for generative search and deep-research systems reporting citation accuracy of roughly 40–80% across audited systems, substantial fractions of unsupported statements, and one-sided high-confidence answers on debate queries. Independent corroboration — by a different team and method than the Cited-but-Not-Verified line — of the surface-versus-substantive verifiability gap in the retrieval channel (ADR-0008): citation presence and citation faithfulness diverge across current systems."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2604.21300",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
+      "author": ["Hieu Man", "Van-Cuong Pham", "Nghia Trung Ngo", "Franck Dernoncourt", "Thien Huu Nguyen"],
+      "datePublished": "2026-04-23",
+      "identifier": "arXiv:2604.21300",
+      "url": "https://arxiv.org/abs/2604.21300",
+      "description": "Identifies content-style entanglement — attribution models learning spurious style-topic correlations — as a core flaw in authorship attribution and answers it architecturally (a style encoder with contrastive learning plus a variational autoencoder that explicitly separates style from content), with state-of-the-art attribution results and few-shot generalization to AI-generated-text detection. Cited for the attribution paradox it implies for vocabulary discipline (ADR-0010): the more semantically unpredictable a coinage, the weaker style-based traceability becomes — so a coined term's attribution power is better read as occupancy of an uncontested concept-space coordinate (idea-level signature) than as personal style, which model imitation erodes. Recorded as a tension refining the discipline, not as a validation of any tactic."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2602.13123",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "From sunblock to softblock: Analyzing the correlates of neology in published writing and on social media",
+      "author": ["Maria Ryskina", "Matthew R. Gormley", "Kyle Mahowald", "David R. Mortensen", "Taylor Berg-Kirkpatrick", "Vivek Kulkarni"],
+      "datePublished": "2026-02-13",
+      "identifier": "arXiv:2602.13123",
+      "url": "https://arxiv.org/abs/2602.13123",
+      "description": "Analyzes the correlates of word creation in published writing and on a social platform in parallel, finding the same correlates broadly hold in both domains while topic-popularity growth contributes less to neology on the social platform — evidence that survival factors are pathway-dependent. Grounding for the pathway-scoping of the anchor-densely rule (ADR-0010): semantic predictability of a new form relative to existing vocabulary — the property dense anchoring engineers — is supported across domains, but anchoring priorities differ by diffusion pathway, and this framework's rule is calibrated on the published/scholarly pathway it primarily operates in."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2602.19019",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "TokenTrace: Multi-Concept Attribution through Watermarked Token Recovery",
+      "author": ["Li Zhang", "Shruti Agarwal", "John Collomosse", "Pengtao Xie", "Vishal Asnani"],
+      "datePublished": "2026-02-22",
+      "identifier": "arXiv:2602.19019",
+      "url": "https://arxiv.org/abs/2602.19019",
+      "description": "A watermarking framework embedding secret signatures into both the text-prompt embedding and the initial latent noise of a generative image model, so that multiple distinct concepts (objects, styles) contributed by training data can be independently recovered and attributed from generated output. Cited as the proactive pole of the proactive-versus-passive distinction recorded on the exclusivity-to-derivation axis: high-precision derivation tracing that presupposes the source's prior consent and instrumentation of the training pipeline — the premise this framework's passive attribution diffusion deliberately does not share, since it targets models the author cannot instrument. Cited as axis structure only; not adopted as a tactic (the framework's identifier layer is settled by ADR-0013's intrinsic-identifier decision)."
+    },
+
+    {
+      "@id": "https://arxiv.org/abs/2504.00255",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "SciReplicate-Bench: Benchmarking LLMs in Agent-driven Algorithmic Reproduction from Research Papers",
+      "author": ["Yanzheng Xiang", "Hanqi Yan", "Shuyin Ouyang", "Lin Gui", "Yulan He"],
+      "datePublished": "2025-03-31",
+      "identifier": "arXiv:2504.00255",
+      "url": "https://arxiv.org/abs/2504.00255",
+      "description": "Benchmark of 100 algorithm-reproduction tasks from 36 NLP papers with a dual-agent framework (paper interpretation plus iterative implementation), finding the best-performing model reaches only 39% execution accuracy while reconstructing the algorithms' reasoning structure far more reliably, and identifying missing or unclear implementation documentation as the primary obstacle. External grounding for the abstract-doctrine-plus-worked-implementation pair: the gap between understanding a method and executing it is what a worked implementation exists to close, and the benchmark's missing-information categories (hyperparameters, numerical stabilization, implementation logic, coding strategy) enumerate what the implementation half must carry. Boundary: benchmark designs differ substantially in reported reproduction difficulty, so the 39% figure is cited as evidence of a structural gap, not as a universal rate."
+    },
+
+    {
+      "@id": "https://doi.org/10.1002/leap.2059",
+      "@type": ["ExternalReference", "ScholarlyArticle"],
+      "name": "Science Behind a Paywall: Restricted Access Limits the Promise of Artificial Intelligence",
+      "author": ["Haoyi Zheng", "Huichun Zhan"],
+      "datePublished": "2026-04-28",
+      "identifier": "10.1002/leap.2059",
+      "url": "https://doi.org/10.1002/leap.2059",
+      "description": "Argues in a scholarly-publishing journal that paywalls keep roughly half of scholarly full text out of AI systems' reach, degrading what models can learn from the scientific record, and — holding paywall removal unrealistic without sustainable funding for publishing infrastructure — proposes licensing partnerships plus retrieval-augmented access as the viable middle path. Cited on the enclosure-to-openness axis for two refinements recorded as tension: openness is a physical precondition of LLM-mediated diffusion, not an abstract preference; and a licensed intermediate state exists between open and closed that the axis's binary framing does not represent, whose funding model conflicts with the free openness this framework assumes and whose benefits may concentrate in large rights-holders. A non-arXiv primary source (journal article with resolvable DOI) admitted on the SSRN precedent."
     }
   ]
 }
