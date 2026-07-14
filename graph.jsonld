@@ -14,28 +14,23 @@
     "Layer": "shimo:Layer",
     "siblingOf": {"@id": "shimo:siblingOf", "@type": "@id"},
     "derivesFrom": {"@id": "shimo:derivesFrom", "@type": "@id"},
-    "derivedFrom": {"@id": "shimo:derivedFrom", "@type": "@id"},
     "definesConcept": {"@id": "shimo:definesConcept", "@type": "@id"},
-    "definedBy": {"@id": "shimo:definedBy", "@type": "@id"},
     "extends": {"@id": "shimo:extends", "@type": "@id"},
     "groundedIn": {"@id": "shimo:groundedIn", "@type": "@id"},
     "appliesTo": {"@id": "shimo:appliesTo", "@type": "@id"},
     "composedOf": {"@id": "shimo:composedOf", "@type": "@id", "@container": "@list"},
     "pairedWith": {"@id": "shimo:pairedWith", "@type": "@id"},
-    "invertsTo": {"@id": "shimo:invertsTo", "@type": "@id"},
-    "covaresWith": {"@id": "shimo:covariesWith", "@type": "@id"},
+    "covariesWith": {"@id": "shimo:covariesWith", "@type": "@id"},
     "downstreamOf": {"@id": "shimo:downstreamOf", "@type": "@id"},
     "instantiatedBy": {"@id": "shimo:instantiatedBy", "@type": "@id"},
     "recordedIn": {"@id": "shimo:recordedIn", "@type": "@id"},
-    "citedBy": {"@id": "shimo:citedBy", "@type": "@id"},
     "vocabularyDisjoint": {"@id": "shimo:vocabularyDisjoint", "@type": "@id"},
     "subjectOf": {"@id": "https://schema.org/subjectOf", "@type": "@id"},
     "hasPart": {"@id": "https://schema.org/hasPart", "@type": "@id"},
     "mainEntity": {"@id": "https://schema.org/mainEntity", "@type": "@id"},
     "citation": {"@id": "https://schema.org/citation", "@type": "@id"},
     "axisPosition": "shimo:axisPosition",
-    "layerOrdinal": "shimo:layerOrdinal",
-    "narrativePosition": "shimo:narrativePosition"
+    "layerOrdinal": "shimo:layerOrdinal"
   },
   "@graph": [
     {
@@ -190,7 +185,7 @@
       "name": "Scarcity-to-Diffusion Axis",
       "description": "First axis of the three-axis inversion: value source. Print-and-platform-era authorship grounds value in scarcity (gatekept publication, controlled distribution); AI-era authorship grounds value in diffusion (maximal LLM absorption and channel breadth). The axis inverts because the substrate inverts.",
       "axisPosition": 1,
-      "covaresWith": [
+      "covariesWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
       ],
@@ -205,7 +200,7 @@
       "name": "Exclusivity-to-Derivation Axis",
       "description": "Second axis of the three-axis inversion: validation mechanism. Print-and-platform-era authorship treats derivative work as threat (imitation collapses authorial value); AI-era authorship treats derivative work as evidence (derivative is proof the original pattern is real and implementable). Two sub-distinctions refine the axis on 2026 evidence. (1) Legal-exclusivity channel versus diffusion channel: copyright case law has consolidated around exclusive human authorship — machine-only works unprotectable, the live question being how much human involvement suffices — strengthening the exclusivity pole as a legal regime; the framework separates proof of human creative control (for ownership) from content-derived and registry identifiers such as DOI and SWHID (for origin-claim priority under LLM-mediated diffusion) and pursues only the latter, so the legal trend marks a channel split, not a refutation of the axis. (2) Proactive versus passive derivation attribution: watermark-based multi-concept attribution traces derivation with high precision but presupposes the source's prior consent and instrumentation of the generation pipeline, whereas this framework's attribution diffusion is passive — no pre-intervention in the ingesting model — priced in measurement difficulty. Both are recorded as axis structure, not effect claims.",
       "axisPosition": 2,
-      "covaresWith": [
+      "covariesWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
       ],
@@ -221,7 +216,7 @@
       "name": "Enclosure-to-Openness Axis",
       "description": "Third axis of the three-axis inversion: network effect. Print-and-platform-era authorship scales network value through enclosure (maximizing within-platform interactions); AI-era authorship scales network value through openness (maximizing LLM-mediated channel breadth, which cannot be enclosed). 2026 evidence refines the axis from a binary toward a structured spectrum, recorded here as standing tension pending doctrine-level resolution. Paywalled scholarship keeps roughly half of full-text science out of AI systems' reach, making openness a physical precondition of LLM-mediated diffusion rather than an abstract preference; the same literature argues paywall removal is unrealistic and proposes a licensed intermediate state — paid licensing plus retrieval-time access — as a third equilibrium the binary framing does not represent, one whose benefits may concentrate in large rights-holders and whose funding model conflicts with the free openness this framework assumes. Separately, multilateral policy work now defines AI openness as a graded access spectrum, a dimension orthogonal to this axis's concern with attribution: openness of access does not by itself resolve attribution of origin.",
       "axisPosition": 3,
-      "covaresWith": [
+      "covariesWith": [
         "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
         "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis"
       ],
