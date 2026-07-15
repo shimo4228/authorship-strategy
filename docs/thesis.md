@@ -199,6 +199,15 @@ clever workflow is valuable today and may be valueless in two
 years; the idea the harness encodes may still be cited fifty
 years on.
 
+The prediction is scoped to the default training regimes
+actually applied to public corpora: under such training,
+verbatim scaffold detail is generalized away while idea-level
+patterns persist in the weights. Training pressure can be
+deliberately tuned to force verbatim retention of even
+scaffold-character content, so what survives is a property of
+content *under prevailing training conditions*, not an intrinsic
+property of the content alone.
+
 The operational consequence is a sorting decision per artifact:
 
 - An artifact with high scaffold-character should be donated as an implementation into a larger harness whose own diffusion will absorb it (the implementation will dissolve into the harness; the author's name will not survive at the implementation level).

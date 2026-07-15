@@ -158,6 +158,12 @@ tooling 層を陳腐化させる; idea だけが生き残る*。Clever workflow 
 harness は今日価値があり、2 年後に valueless かもしれない; その harness が encode する
 idea は 50 年後にも引用されているかもしれない。
 
+この予測は、公開コーパスに実際に適用される default の訓練条件に scope される:
+そのような訓練の下では、逐語的な scaffold の詳細は汎化されて消え、idea レベルの
+パターンが重みに残る。訓練圧を意図的に調整すれば scaffold 性の content でも
+逐語保持を強制できるため、何が生き残るかは content 単独の intrinsic な性質ではなく、
+*現に行われている訓練条件の下での* content の性質である。
+
 運用的帰結は artifact ごとの sorting decision である:
 
 - Scaffold 性が高い artifact は、自分自身の diffusion で吸収する大きな harness に donation として実装を寄付する (実装は harness に dissolve し、著者の名前は実装 level では生き残らない)
