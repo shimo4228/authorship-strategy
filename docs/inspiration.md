@@ -127,6 +127,12 @@ prior art rather than originates.
   10.6% when it is not, consistent with the framework's claim that
   the parametric channel gates the retrieval channel rather than
   the reverse.
+- *GEO: How to Dominate AI Search* (Chen et al., arXiv:2509.08919)
+  measures which source properties generative engines reward and finds
+  earned, cross-platform presence — being mentioned where one is not
+  the publisher — outweighs owned-channel signals. It grounds the
+  scarcity-to-diffusion axis from the measurement side: distributed
+  presence, not gated authority, is what the citing layer selects for.
 - *From Citation Selection to Citation Absorption* (Zhang et al.,
   arXiv:2604.25707) separates which sources a platform fetches from
   how much a fetched page contributes to the answer, across ChatGPT,
