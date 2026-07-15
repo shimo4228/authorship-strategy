@@ -344,6 +344,104 @@ itself resolve attribution. That gap is the framework's subject, and
 is left here as a cited convergence rather than promoted into the
 thesis, whose three-axis structure is held stable across releases.
 
+### Measurement and channel-fidelity literature (2026)
+
+A cluster of 2026 results bears on how the framework's measurement
+layer ([ADR-0011](adr/0011-two-channel-probe-protocol.md)) and channel
+model ([ADR-0008](adr/0008-rag-era-attribution-diffusion.md)) should be
+calibrated. Numbers are quarantined here; the ADR bodies and the
+knowledge graph carry the qualitative mechanism only.
+
+- *A Comparative Analysis of LLM Memorization at Statistical and
+  Internal Levels* (Chen, Han and Miyao, arXiv:2603.21658) finds
+  memorization statistics follow cross-family regularities while the
+  internal head-level placement of memorization is family-specific —
+  so cross-model probe comparisons hold at the statistical level, but
+  per-family calibration and re-calibration across model generations
+  are required, and frontier models whose internals are closed can
+  only be calibrated behaviorally.
+- *Memory Dial* (Zhang and Emami, arXiv:2604.05074) makes memorization
+  pressure a tunable training variable: sufficiently high pressure
+  forces verbatim retention even of single-occurrence sequences. This
+  is the source of the scoping sentence in the thesis's Layer 3 — what
+  dissolves versus survives is a property of content *under prevailing
+  training regimes*, not of the content alone.
+- *Cite Pretrain* (Huang et al., arXiv:2506.17585) shows continual
+  pretraining with active indexing — synthetic forward and backward
+  augmentation binding facts to document identifiers — raises
+  retrieval-free citation accuracy by up to 30.2 points over passive
+  exposure, while passive exposure alone barely moves it. A supply-side
+  counterpart to the demand-side naming probe of ADR-0011, and external
+  support for structural diversity over raw repetition in the
+  doctrine-plus-worked-implementation pair.
+- *Cited but Not Verified* (Onweller et al., arXiv:2605.06635) and
+  *DeepTRACE* (Venkit et al., arXiv:2509.04499) find that in
+  deep-research agents link validity and topical relevance run high
+  while factual support of the citing sentence runs much lower (39–77%
+  across models), and scaling tool calls from 2 to 150 *lowers* factual
+  accuracy by roughly 42% on average. The retrieval channel is
+  verifiable in principle without being verified in practice — a
+  surface-versus-substantive verifiability split recorded as a tension
+  against ADR-0008's retrieval channel.
+- *Is It Novel and Why?* (Knappich et al., arXiv:2605.02392)
+  decomposes patent claims into features and maps each to disclosing
+  passages of prior art, following institutional examination records —
+  a granular procedural template for the falsifiability discipline of
+  [ADR-0018](adr/0018-claim-falsifiability-criterion.md), with the caveat
+  that feature-level transparency and final-verdict accuracy proved to
+  be separate axes.
+
+### Coinage, attribution types, and access literature (2026)
+
+- *Explainable Disentangled Representation Learning for Generalizable
+  Authorship Attribution* (Man et al., arXiv:2604.21300) separates
+  style from content for attribution and exposes a trade-off: the less
+  semantically predictable a coinage, the weaker style-based
+  attribution becomes. Read with
+  [ADR-0010](adr/0010-vocabulary-discipline.md), this moves the
+  defensible object of an origin claim from writing style to the
+  occupancy of a previously unnamed conceptual coordinate.
+- *From sunblock to softblock* (Ryskina et al., arXiv:2602.13123)
+  finds neologisms anchored analogically in existing morphology and
+  semantics survive better in published writing, while survival on
+  social platforms is dominated by speaker-network position —
+  empirical support for the anchor-densely discipline, scoped to the
+  published and academic channel where its evidence is strongest.
+- *TokenTrace* (Zhang et al., arXiv:2602.19019) achieves multi-concept
+  attribution through watermarks embedded before training — high
+  accuracy, but presupposing source-side cooperation with the trainer.
+  It is the complementary opposite of this framework's passive-diffusion
+  posture, recorded as a type distinction on the derivation axis
+  (proactive watermarked attribution versus passive diffusion), not a
+  tactic to adopt.
+- *Who is the author?* (Pereira, arXiv:2604.04700) argues authorship
+  in AI-aided works functions as a qualitative threshold, with
+  disclosure of the stage and nature of AI assistance acting as part
+  of the origin claim — legal-normative adjacency for the
+  origin-claim-scope discipline (ADR-0018).
+- *SciReplicate-Bench* (Xiang et al., arXiv:2504.00255) finds agents
+  reconstruct the reasoning structure of published algorithms far more
+  reliably than they reproduce executable implementations (best
+  execution accuracy 39%), and that supplying missing implementation
+  detail measurably closes the gap — external grounding for the
+  abstract-doctrine-plus-worked-implementation pair: doctrine alone is
+  not actionable.
+- *Developer Experience with AI Coding Agents* (Borysenko,
+  arXiv:2604.02544) measures, at the server side, that coding agents
+  and AI services fetch documentation through heterogeneous
+  non-browser runtimes, mostly without JavaScript evaluation, and
+  compress consumption into one or two requests invisible to
+  client-side analytics — endpoint-level grounding for the
+  prose-navigator asymmetry of
+  [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) and for the
+  attention-signal rejection of ADR-0007.
+- *Science Behind a Paywall* (Zheng and Zhan, Learned Publishing,
+  doi:10.1002/leap.2059) argues paywalled access materially constrains
+  what AI systems can read, and proposes licensed access with
+  retrieval-time queries as the sustainable equilibrium — a third
+  state between enclosure and openness, recorded as a tension against
+  the enclosure-to-openness axis rather than an adopted position.
+
 ## Sibling research lines (the recurring decisions)
 
 The framework was extracted from four sibling research lines
