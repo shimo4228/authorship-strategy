@@ -948,6 +948,7 @@
     },
     {
       "@id": "https://arxiv.org/abs/2602.22787",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563712",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Probing for Knowledge Attribution in Large Language Models",
       "author": ["Ivo Brink", "Alexander Boer", "Dennis Ulmer"],
@@ -958,6 +959,7 @@
     },
     {
       "@id": "https://arxiv.org/abs/2602.18733",
+      "sameAs": "https://www.wikidata.org/wiki/Q140562880",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Prior Aware Memorization: An Efficient Metric for Distinguishing Memorization from Generalization in Large Language Models",
       "author": ["Trishita Tiwari", "Ari Trachtenberg", "G. Edward Suh"],
@@ -968,6 +970,7 @@
     },
     {
       "@id": "https://arxiv.org/abs/2605.18732",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563728",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency",
       "author": ["Matthew L. Smith", "Jonathan P. Shock", "Samuel T. Segun", "Iyiola E. Olatunji", "Tegawendé F. Bissyandé"],
@@ -978,6 +981,7 @@
     },
     {
       "@id": "https://arxiv.org/abs/2604.19113",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563723",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Think Before Writing: Feature-Level Multi-Objective Optimization for Generative Citation Visibility",
       "author": ["Zikang Liu", "Peilan Xu"],
@@ -988,6 +992,7 @@
     },
     {
       "@id": "https://arxiv.org/abs/2603.29979",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563716",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Structural Feature Engineering for Generative Engine Optimization: How Content Structure Shapes Citation Behavior",
       "author": ["Junwei Yu", "Mufeng Yang", "Yepeng Ding", "Hiroyuki Sato"],
@@ -998,6 +1003,7 @@
     },
     {
       "@id": "https://arxiv.org/abs/2603.23219",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563715",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Decoding AI Authorship: Can LLMs Truly Mimic Human Style Across Literature and Politics?",
       "author": ["Nasser A Alsadhan"],
@@ -1033,6 +1039,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.02544",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563718",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Developer Experience with AI Coding Agents: HTTP Behavioral Signatures in Documentation Portals",
       "author": "Oleksii Borysenko",
@@ -1044,6 +1051,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2603.21658",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563714",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "A Comparative Analysis of LLM Memorization at Statistical and Internal Levels: Cross-Model Commonalities and Model-Specific Signatures",
       "author": ["Bowen Chen", "Namgi Han", "Yusuke Miyao"],
@@ -1055,6 +1063,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.05074",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563720",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Memory Dial: A Training Framework for Controllable Memorization in Language Models",
       "author": ["Xiangbo Zhang", "Ali Emami"],
@@ -1066,6 +1075,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.04700",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563719",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Who is the author? A legal and normative view of authorship in Generative AI-aided academic works",
       "author": "David M. Pereira",
@@ -1077,6 +1087,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2506.17585",
+      "sameAs": "https://www.wikidata.org/wiki/Q140562877",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Cite Pretrain: Retrieval-Free Knowledge Attribution for Large Language Models",
       "author": ["Yukun Huang", "Sanxing Chen", "Jian Pei", "Manzil Zaheer", "Bhuwan Dhingra"],
@@ -1088,6 +1099,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2605.02392",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563726",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Is It Novel and Why? Fine-Grained Patent Novelty Prediction Based on Passage Retrieval",
       "author": ["Valentin Knappich", "Anna Hätty", "Simon Razniewski", "Annemarie Friedrich"],
@@ -1099,6 +1111,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2605.06635",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563727",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents",
       "author": ["Hailey Onweller", "Elias Lumer", "Austin Huber", "Pia Ramchandani", "Vamse Kumar Subbiah", "Corey Feld"],
@@ -1110,6 +1123,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2509.04499",
+      "sameAs": "https://www.wikidata.org/wiki/Q140562878",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence",
       "author": ["Pranav Narayanan Venkit", "Philippe Laban", "Yilun Zhou", "Kung-Hsiang Huang", "Yixin Mao", "Chien-Sheng Wu"],
@@ -1121,6 +1135,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.21300",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563724",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
       "author": ["Hieu Man", "Van-Cuong Pham", "Nghia Trung Ngo", "Franck Dernoncourt", "Thien Huu Nguyen"],
@@ -1132,6 +1147,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.13123",
+      "sameAs": "https://www.wikidata.org/wiki/Q140562879",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "From sunblock to softblock: Analyzing the correlates of neology in published writing and on social media",
       "author": ["Maria Ryskina", "Matthew R. Gormley", "Kyle Mahowald", "David R. Mortensen", "Taylor Berg-Kirkpatrick", "Vivek Kulkarni"],
@@ -1143,6 +1159,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.19019",
+      "sameAs": "https://www.wikidata.org/wiki/Q140562881",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "TokenTrace: Multi-Concept Attribution through Watermarked Token Recovery",
       "author": ["Li Zhang", "Shruti Agarwal", "John Collomosse", "Pengtao Xie", "Vishal Asnani"],
@@ -1154,6 +1171,7 @@
 
     {
       "@id": "https://arxiv.org/abs/2504.00255",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563711",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "SciReplicate-Bench: Benchmarking LLMs in Agent-driven Algorithmic Reproduction from Research Papers",
       "author": ["Yanzheng Xiang", "Hanqi Yan", "Shuyin Ouyang", "Lin Gui", "Yulan He"],
@@ -1165,6 +1183,7 @@
 
     {
       "@id": "https://doi.org/10.1002/leap.2059",
+      "sameAs": "https://www.wikidata.org/wiki/Q140563729",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Science Behind a Paywall: Restricted Access Limits the Promise of Artificial Intelligence",
       "author": ["Haoyi Zheng", "Huichun Zhan"],
