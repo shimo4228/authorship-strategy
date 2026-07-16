@@ -7,6 +7,81 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-07-16
+
+Retires an entire tactical layer after an external governance event and
+records the retirement as the framework's first ADR extracted from an
+operational failure. On 2026-07-16 the Wikidata account operating the
+entity-grounding tactic was blocked indefinitely as a promotion-only
+account and all 109 self-created entries — the author entity, repository
+and paper items, bibliographic records of cited works, and the citation
+edges among them — were mass-deleted by the platform in a single action.
+ADR-0021 classifies grounding surfaces by *revocation control*: only
+self-sovereign layers (this repository and its knowledge graph, registry
+deposits under the author's account, the author-identifier record,
+intrinsic content-derived identifiers) may be load-bearing for the origin
+claim; third-party-governed grounding is admitted only when *earned* —
+created unprompted by uninvolved parties — never self-manufactured.
+Circumvention of the revocation (a new account, anonymous editing,
+proxy creation) is prohibited outright. The release also carries the
+citation-layer synchronization work that immediately preceded the
+revocation, a scope correction to the thesis's Layer 3 prediction, and
+a wiki-harvest hardening pass over the knowledge graph.
+
+### Sunset
+
+- Self-created authority-record federation is permanently retired as a
+  Layer 4 tactic ([ADR-0021](docs/adr/0021-self-sovereign-entity-grounding.md)).
+  All revoked Wikidata `sameAs` edges are purged from `graph.jsonld`
+  (including the nineteen `ExternalReference` QIDs injected earlier the
+  same week), and the retired `wikidata-federation` component is marked
+  as such in `docs/skills/README.md`. Dated historical records (this
+  CHANGELOG, the implementation log, prior commit history) are preserved
+  unmodified per the ADR's purge discipline.
+
+### Added
+
+- ADR-0021 "Self-Sovereign Entity Grounding — Community-Governed
+  Authority Records Are a Revocable Layer, Not a Foundation" (EN + JA),
+  bringing the tactical catalog to twenty-one decisions. The first ADR
+  in the catalog extracted from an operational failure rather than a
+  design choice.
+- A worked-instance note on manifesto open question 9: authority a
+  first-mover cannot yet supply also cannot be self-manufactured — the
+  attempt is not merely ineffective but sanctioned. The question stays
+  open and is now a live experiment: whether the self-controllable
+  identifier subset alone can cross the citation threshold.
+- Three dated implementation-log entries projecting the revocation, the
+  retirement-and-purge, and the talk-page apology (effect-claim-free,
+  per ADR-0014).
+- Thirteen primary-verified external references synchronized down from
+  the knowledge graph into the documentation citation layer and
+  `.zenodo.json` `related_identifiers`, plus a docs-layer citation gap
+  closed for the earned-media GEO preprint (arXiv:2509.08919).
+
+### Changed
+
+- The thesis's Layer 3 prediction is scoped to prevailing training
+  regimes rather than stated unconditionally (`docs/thesis.md` /
+  `docs/thesis.ja.md`).
+- Twelve `graph.jsonld` concept nodes hardened in a wiki-harvest
+  reinforcement pass (definitions tightened, primary sources attached).
+- Post-v1.0.0 README review fixes: Japanese link localization, entity
+  anchoring, and empirical-section detail (`README.md` / `README.ja.md`).
+
+### Fixed
+
+- `graph.jsonld`: the misspelled `covaresWith` relation key is renamed
+  to `covariesWith`, and unused context declarations are dropped.
+- `llms.txt`: the ADR-0020 entry missing since v1.0.0 (pre-existing
+  drift discovered during the ADR-0021 back-propagation) is restored.
+
+### Notes
+
+- `scripts/verify-counts.sh` confirms every carrier agrees with the
+  filesystem (ADR total 21, open questions 9). `graph.jsonld` holds 86
+  top-level nodes with zero remaining Wikidata references.
+
 ## [1.0.0] - 2026-07-04
 
 Reframes the doctrine from a maker's and practitioner's stance. The author is
