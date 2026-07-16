@@ -41,6 +41,7 @@ a wiki-harvest hardening pass over the knowledge graph.
 
 ### Added
 
+- v1.1.0 version DOI (for reproducibility citation only): [10.5281/zenodo.21399530](https://doi.org/10.5281/zenodo.21399530). Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
 - ADR-0021 "Self-Sovereign Entity Grounding — Community-Governed
   Authority Records Are a Revocable Layer, Not a Foundation" (EN + JA),
   bringing the tactical catalog to twenty-one decisions. The first ADR
