@@ -30,6 +30,7 @@ top-down に prescribe されたものではない。
 | [0018](0018-claim-falsifiability-criterion.ja.md) | Origin-Claim Falsifiability —— durable artifact に公開する前に priority claim を prior art に対して test する | accepted |
 | [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない | accepted |
 | [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub | accepted |
+| [0021](0021-self-sovereign-entity-grounding.ja.md) | self-sovereign な entity grounding —— community 統治の authority record は foundation でなく revocable な layer である | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -220,6 +221,27 @@ mismatch として、自前 query infrastructure は framework が引き受け�
 として、いずれも declined。ADR-0006 の LLM-first ingest surface を extend し、
 thesis の exclusivity → derivation 反転を channel レベルで enact する: 派生 view は
 防ぐべき imitation でなく祝福すべき validation である。
+
+ADR-0021 は **self-sovereign-grounding decision** である: tactic の deploy では
+なく **revocation** から抽出された最初の ADR だ。entity-grounding tactic ——
+著者・artifact・引用文献・それらを結ぶ citation 辺の entry を community 統治の
+authority record に self-create する —— は、host の governance によりアカウント
+水準で promotional と判定されて revoke され、全 entry が一括削除された。個別の
+編集は名指しされていない。decision は self-created な authority-record federation
+を恒久に retire し、grounding surface を **revocation control** で分類する:
+origin claim の load-bearing を許すのは self-sovereign な層 (repository とその
+knowledge graph、著者 account 下の registry deposit、author-identifier record、
+そして構造上唯一 revoke 不可能な ADR-0013 の intrinsic identifier 層) のみで、
+third-party 統治の grounding は頼まれずに earned された場合に限り認める ——
+self-manufacture も solicited な作成も不可。revoke された machine-readable 辺は
+速やかに purge し、日付付き歴史は書き換えず、回避は全面禁止、将来のすべての
+third-party deploy には aggregate-pattern test を課す —— アカウントの累積
+footprint が host の governance にどう読まれるかは、行為単位の準拠では答えられ
+ない。ADR-0012 が著者の**掲載する**場所を監査し ADR-0020 が third party の
+**派生する**ものを祝福するのに対し、ADR-0021 は著者が**書き込む**場所を bound
+する: manifesto の 9 番目の open question の観測された中で最も鋭い instance ——
+first-mover がまだ持てない authority は自作もできない —— を記録し、その問いを
+開いたまま残す。
 
 ## Format
 

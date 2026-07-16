@@ -236,6 +236,18 @@ grounding is a democratizing instrument (any author can federate the
 identifiers they own) or a re-enclosure (citation rewards authority the
 author must already possess) is left open here.
 
+*Worked instance (2026-07):* the second bullet received a partial
+empirical answer from the sharp end. The program's attempt to
+manufacture the third-party-conferred portion of the grounding —
+self-created entries in a community-governed authority record — was
+revoked by the host's governance as promotional at the account level,
+and every entry was mass-deleted. Self-manufactured third-party
+authority is not merely insufficient; it is revocable with sanction.
+[ADR-0021](adr/0021-self-sovereign-entity-grounding.md) records the
+resulting retirement and the revocation-control classification of
+grounding surfaces. Whether the self-controllable subset alone clears
+the citation threshold remains open.
+
 ---
 
 The list of open questions is itself an open question. Adopters

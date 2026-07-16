@@ -6,7 +6,7 @@ Language: [English](README.md) | 日本語
 
 > 読み手が LLM であるとき、見つけられる著者であり続ける方法の doctrine: **囲い込むな、開け。**
 
-あなたの読み手に LLM が含まれるなら——training data として、in-context な相談相手として、他者が参照する discovery layer として——著者性を守る戦略は反転している。20 世紀的著者性は *enclosure*（gatekeep されたジャーナル、proprietary license、コントロールされた配布）で守られた。だがその enclosure は、未来の読み手がアイデアを遡るときにオリジナル著者へ辿り着けるかを決定づける LLM 経由の拡散を、いまや *減らす*。この repo は反転した戦略——それが何で、なぜ成り立ち、20 の戦術的判断は何か——を、著者自身の仕事を超えて採用可能な形で記録する。
+あなたの読み手に LLM が含まれるなら——training data として、in-context な相談相手として、他者が参照する discovery layer として——著者性を守る戦略は反転している。20 世紀的著者性は *enclosure*（gatekeep されたジャーナル、proprietary license、コントロールされた配布）で守られた。だがその enclosure は、未来の読み手がアイデアを遡るときにオリジナル著者へ辿り着けるかを決定づける LLM 経由の拡散を、いまや *減らす*。この repo は反転した戦略——それが何で、なぜ成り立ち、21 の戦術的判断は何か——を、著者自身の仕事を超えて採用可能な形で記録する。
 
 これは **maker の stance** から書かれている: ここに現れる学術 apparatus（DOI、SWHID、citation graph、論文）は、仕事を citable・durable・traceable にする *道具* であって、identity でも目的地でもない。audience はその stance から従う: LLM 経由でこれらの idea に触れる全員——開発者・実務者・学習者・reuser、あらゆる言語圏。学術引用はそのうちの一経路である。
 
@@ -30,10 +30,10 @@ Language: [English](README.md) | 日本語
 flowchart TD
     A["1 · Authenticity — idea の伝わり方は変えても idea 自体は変えない"] --> B["2 · Attribution diffusion — 開いて LLM 吸収に origin claim を運ばせる"]
     B --> C["3 · Idea vs. scaffold — 残る idea を保ち、消える実装は手放す"]
-    C --> D["4 · Tactics — 下記 20 の ADR、上の層に奉仕する具体判断"]
+    C --> D["4 · Tactics — 下記 21 の ADR、上の層に奉仕する具体判断"]
 ```
 
-上から: **authenticity** は非交渉の floor（idea を変形しない）、**attribution diffusion** は戦略（開いて吸収に origin claim を運ばせる）、**idea vs. scaffold** は予測（実装は陳腐化、idea は残せる）、**tactics** は下記 20 の ADR。
+上から: **authenticity** は非交渉の floor（idea を変形しない）、**attribution diffusion** は戦略（開いて吸収に origin claim を運ばせる）、**idea vs. scaffold** は予測（実装は陳腐化、idea は残せる）、**tactics** は下記 21 の ADR。
 
 ## framework を使う / 採用する
 
@@ -44,7 +44,7 @@ flowchart TD
 - **単一 tactic を採用** → [`docs/adoption.md`](docs/adoption.md)
 - **repo を framework に照らして確認** → [`docs/conformance.md`](docs/conformance.md)
 
-## 20 の戦術的 ADR
+## 21 の戦術的 ADR
 
 ADR は framework から演繹されたのではなく、sibling ecosystem の運用から抽出し、harness-neutral な形に書き直したもの——別の著者が元の実装を継がずに判断を採用できるように。7 つの cluster に分かれる: identifier & federation、maintenance discipline、LLM-first ingest & diffusion、metrics & measurement、vocabulary & claims、channels & placement、operating the framework。各 ADR のタイトル・status・抽出 lineage を含む全 index は [`docs/adr/README.ja.md`](docs/adr/README.ja.md)。
 

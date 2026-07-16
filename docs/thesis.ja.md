@@ -251,7 +251,7 @@ decision を供給した sibling line —— は [`inspiration.md`](inspiration.
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 20 の ADR として formalize されて
+Framework の戦術的判断は [`adr/`](adr/) に 21 の ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 

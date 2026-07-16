@@ -30,6 +30,7 @@ research ecosystem, not prescribed top-down.
 | [0018](0018-claim-falsifiability-criterion.md) | Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It | accepted |
 | [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content | accepted |
 | [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs | accepted |
+| [0021](0021-self-sovereign-entity-grounding.md) | Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -244,6 +245,31 @@ as friction the framework does not take on. It extends ADR-0006's
 LLM-first ingest surface and enacts the thesis's exclusivity → derivation
 inversion at the channel level: a derived view is validation to bless, not
 imitation to prevent.
+
+ADR-0021 is the **self-sovereign-grounding decision**: it is the first
+ADR extracted from a tactic's *revocation* rather than its deployment.
+The entity-grounding tactic — self-created entries in a
+community-governed authority record for the author, the artifacts, the
+cited works, and the citation edges among them — was revoked by the
+host's governance as promotional at the account level, every entry
+mass-deleted, no individual edit cited. The decision retires
+self-created authority-record federation permanently and classifies
+grounding surfaces by *revocation control*: only self-sovereign layers
+(the repository and its knowledge graph, registry deposits under the
+author's account, the author-identifier record, the intrinsic identifier
+layer of ADR-0013 — the only layer non-revocable by construction) may be
+load-bearing for the origin claim, while third-party-governed grounding
+is admitted only when earned unprompted, never self-manufactured or
+solicited. Revoked machine-readable edges are purged promptly, dated
+history is preserved unmodified, circumvention is prohibited outright,
+and every future third-party deployment faces an aggregate-pattern test
+— how the account's cumulative footprint reads to the host's governance,
+which per-action compliance cannot answer. Where ADR-0012 audits where
+the author *lists* and ADR-0020 blesses what third parties *derive*,
+ADR-0021 bounds where the author may *write*: it records the sharpest
+observed instance of the manifesto's ninth open question — the authority
+a first-mover cannot yet supply also cannot be self-manufactured — and
+leaves that question open.
 
 ## Format
 

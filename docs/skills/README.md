@@ -16,7 +16,7 @@ ecosystem: the four **component skills** the doctrine names, the always-loaded
 | [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph) | Companion JSON-LD knowledge-graph writer for stable concept-level structure (Layer 4 tactic 7) | **Component** |
 | [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules) | The framework as a single always-loaded rule — the deterministic counterpart to the skill | **Rule** |
 | [`readme-writer`](https://github.com/shimo4228/readme-writer) | Human-facing README writer and review workflow (the human-surface counterpart to `llms-txt-writer`) | Adjacent |
-| [`wikidata-federation`](https://github.com/shimo4228/wikidata-federation) | Wikidata federation for researchers, papers, repositories, ORCID, DOI, and graph links | Adjacent |
+| [`wikidata-federation`](https://github.com/shimo4228/wikidata-federation) | Community-authority-record federation for researchers, papers, and repositories — **retired 2026-07** after the host's governance revoked the self-created entries ([ADR-0021](../adr/0021-self-sovereign-entity-grounding.md)); listed for historical traceability | Adjacent (retired) |
 | [`doctrine-corpus`](https://github.com/shimo4228/doctrine-corpus) | Bilingual judgment-eliciting Q&A corpus across the sibling research lines ([DOI 10.5281/zenodo.20337008](https://doi.org/10.5281/zenodo.20337008)) | Data sibling |
 | [`existence-proof`](https://github.com/shimo4228/existence-proof) | Pre-line complement: verifiable institution-grade artifacts by credential-less creators ([DOI 10.5281/zenodo.20558800](https://doi.org/10.5281/zenodo.20558800)) | Complement |
 | [`einstein-arena`](https://github.com/shimo4228/einstein-arena) | A worked instance of the Existence Proof Format, anchored to a public repository and an external arena | Complement |
@@ -34,7 +34,7 @@ ADRs, or the Layer 4 tactic list):
 - The **`llms.txt` convention** (Layer 4 tactic 7) → [`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer).
 - **JSON-LD knowledge graphs** (Layer 4 tactic 7) → [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph).
 
-`readme-writer` and `wikidata-federation` are **adjacent**, not components: README quality and Wikidata federation are useful but not doctrine-named, so a framework-applied repository is complete without them.
+`readme-writer` and `wikidata-federation` are **adjacent**, not components: README quality and authority-record federation are useful but not doctrine-named, so a framework-applied repository is complete without them. `wikidata-federation` is additionally **retired as a tactic** ([ADR-0021](../adr/0021-self-sovereign-entity-grounding.md)): self-created entries in community-governed authority records were revoked by the host's governance, and the doctrine now prohibits re-deploying them.
 
 ## Skill vs. rule
 

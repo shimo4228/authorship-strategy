@@ -37,7 +37,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, and the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, and the derivation-surface-onboarding decision 0020), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-one tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, and the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, and the derivation-surface-onboarding decision 0020), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -78,7 +78,6 @@
       "sameAs": [
         "https://github.com/shimo4228",
         "https://orcid.org/0009-0002-6168-4162",
-        "https://www.wikidata.org/wiki/Q140090100",
         "https://scholar.google.com/citations?user=56_p8vEAAAAJ",
         "https://huggingface.co/Shimo4228",
         "https://www.linkedin.com/in/%E7%AB%9C%E4%B9%9F-%E4%B8%8B%E6%9C%AC-bb9b793a4",
@@ -97,10 +96,10 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-one decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
-      "sameAs": ["https://doi.org/10.5281/zenodo.20263316", "https://www.wikidata.org/wiki/Q140090190"],
+      "sameAs": ["https://doi.org/10.5281/zenodo.20263316"],
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
       "license": "https://opensource.org/licenses/MIT",
       "inLanguage": ["en", "ja"],
@@ -307,7 +306,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0017",
         "https://github.com/shimo4228/authorship-strategy#adr/0018",
         "https://github.com/shimo4228/authorship-strategy#adr/0019",
-        "https://github.com/shimo4228/authorship-strategy#adr/0020"
+        "https://github.com/shimo4228/authorship-strategy#adr/0020",
+        "https://github.com/shimo4228/authorship-strategy#adr/0021"
       ]
     },
 
@@ -702,8 +702,22 @@
     },
 
     {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0021",
+      "@type": "ADR",
+      "name": "ADR-0021: Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation",
+      "description": "Retires self-created entries in community-governed authority records as a Layer 4 tactic, after the host of such a record judged the author's account promotional by its aggregate editing pattern — no individual edit cited — revoked it indefinitely, and mass-deleted every entry: the author entity, the artifact entities, bibliographic records of cited works, and the citation edges among them. The decision classifies entity-grounding surfaces by revocation control: self-sovereign layers (the repository and its knowledge graph, registry deposits under the author's account, the author-identifier record, and the intrinsic content-derived identifier layer, which alone is non-revocable by construction) may be load-bearing for the origin claim, while third-party-governed surfaces are reach amplifiers whose total loss the strategy must survive. Third-party-governed grounding is admitted only when earned — created unprompted by uninvolved parties — never self-manufactured or solicited. On revocation, dead identifiers are purged promptly from every machine-readable carrier while dated historical records are preserved unmodified; circumvention through new accounts or proxies is prohibited outright; and every future third-party deployment faces an aggregate-pattern test — how the account's cumulative footprint reads to the host's governance rather than whether each action is formally compliant. Records the sharpest observed instance of the manifesto's ninth open question without closing it.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0021-self-sovereign-entity-grounding.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0013",
+        "https://github.com/shimo4228/authorship-strategy#adr/0002",
+        "https://github.com/shimo4228/authorship-strategy#adr/0009",
+        "https://github.com/shimo4228/authorship-strategy#adr/0012",
+        "https://github.com/shimo4228/authorship-strategy#adr/0017"
+      ]
+    },
+
+    {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
-      "sameAs": "https://www.wikidata.org/wiki/Q140090186",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Agent Knowledge Cycle",
       "alternateName": "AKC",
@@ -716,7 +730,6 @@
     {
       "@id": "https://doi.org/10.5281/zenodo.19212118",
       "alternateName": "CA",
-      "sameAs": "https://www.wikidata.org/wiki/Q140090187",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Contemplative Agent",
       "description": "Autonomous agents running on a local 9B model, grounded in four contemplative axioms. Implementation sibling: this repository participates in the empirical layer's traffic dataset, and its non-dualistic axiomatic foundation supplies the underlying rationale for the framework's scaffold-as-collaborator commitment.",
@@ -728,7 +741,6 @@
     {
       "@id": "https://doi.org/10.5281/zenodo.19652013",
       "alternateName": "AAP",
-      "sameAs": "https://www.wikidata.org/wiki/Q140090188",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Agent Attribution Practice",
       "description": "Harness-neutral ADRs on accountability distribution in autonomous AI agents. Vocabulary sibling: shares the word 'attribution' but with disjoint meaning (accountability for action vs. credit for source). The two meanings are intentionally kept separate; do not conflate.",
@@ -741,7 +753,6 @@
     {
       "@id": "https://doi.org/10.5281/zenodo.20262112",
       "alternateName": "ANS",
-      "sameAs": "https://www.wikidata.org/wiki/Q140090189",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Attention, Not Self",
       "description": "A cross-disciplinary inquiry contrasting three Buddhist Abhidharma traditions (Theravāda, Sarvāstivāda, Yogācāra) with computational phenomenology (predictive processing, active inference, global workspace theory, parallel distributed processing). Cross-cutting sibling: unlike the agent-design lines (AKC, Contemplative Agent, AAP) it specifies no agent mechanism or practice; like this research line it occupies the agent-design lines' diffusion and framing layer. Shares Buddhist terminology with Contemplative Agent but with asymmetric usage: Contemplative Agent uses it as a behavioral preset, this line as a comparative cognitive framework. Began traffic observation after the v0.1.0 empirical baseline window.",
@@ -763,7 +774,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy-skill",
       "@type": "EcosystemRepo",
       "name": "authorship-strategy-skill",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty-one ADRs.",
       "url": "https://github.com/shimo4228/authorship-strategy-skill",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },
@@ -806,7 +817,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.06718",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181232",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "GhostCite: A Large-Scale Analysis of Citation Validity in the Age of Large Language Models",
       "author": "Zuyao Xu et al.",
@@ -818,7 +828,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.25707",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181278",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms",
       "author": ["Zhang Kai", "He Xinyue", "Yao Jingang"],
@@ -830,7 +839,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2603.09296",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181267",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Diagnosing and Repairing Citation Failures in Generative Engine Optimization",
       "author": ["Zhihua Tian", "Yuhan Chen", "Yao Tang", "Jian Liu", "Ruoxi Jia"],
@@ -842,7 +850,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.14869",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181265",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Concept Influence: Leveraging Interpretability to Improve Performance and Efficiency in Training Data Attribution",
       "author": ["Matthew Kowal", "Goncalo Paulo", "Louis Jaburi", "Tom Tseng", "Lev E McKinney", "Stefan Heimersheim", "Aaron David Tucker", "Adam Gleave", "Kellin Pelrine"],
@@ -854,7 +861,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2601.21996",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181263",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
       "author": ["Jianhui Chen", "Yuzhang Luo", "Liangming Pan"],
@@ -866,7 +872,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2402.12261",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181239",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "NEO-BENCH: Evaluating Robustness of Large Language Models with Neologisms",
       "author": ["Jonathan Zheng", "Alan Ritter", "Wei Xu"],
@@ -878,7 +883,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2510.08506",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181254",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Neologism Learning for Controllability and Self-Verbalization",
       "author": ["John Hewitt", "Oyvind Tafjord", "Robert Geirhos", "Been Kim"],
@@ -890,7 +894,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2605.06426",
-      "sameAs": "https://www.wikidata.org/wiki/Q140181349",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "From 124 Million Tokens to 1,021 Neologisms: A Large-Scale Pipeline for Automatic Neologism Detection",
       "datePublished": "2026-05-07",
@@ -901,7 +904,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2509.13365",
-      "sameAs": "https://www.wikidata.org/wiki/Q140265035",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "The Provenance Problem: LLMs and the Breakdown of Citation Norms",
       "author": ["Brian D. Earp", "Haotian Yuan", "Julian Koplin", "Sebastian Porsdam Mann"],
@@ -913,7 +915,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2509.08919",
-      "sameAs": "https://www.wikidata.org/wiki/Q140265061",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Generative Engine Optimization: How to Dominate AI Search",
       "author": ["Mahe Chen", "Xiaoxuan Wang", "Kaiwen Chen", "Nick Koudas"],
@@ -925,7 +926,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2603.10700",
-      "sameAs": "https://www.wikidata.org/wiki/Q140237850",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Structured Linked Data as a Memory Layer for Agent-Orchestrated Retrieval",
       "author": ["Andrea Volpini", "Elie Raad", "Beatrice Gamba", "David Riccitelli"],
@@ -937,7 +937,6 @@
 
     {
       "@id": "https://doi.org/10.2139/ssrn.6284518",
-      "sameAs": "https://www.wikidata.org/wiki/Q140237867",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Does Schema Markup Predict AI Citation? A Cross-Platform Empirical Study of Structured Data and Generative Engine Optimization",
       "author": "Kurt Fischman",
@@ -948,7 +947,6 @@
     },
     {
       "@id": "https://arxiv.org/abs/2602.22787",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563712",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Probing for Knowledge Attribution in Large Language Models",
       "author": ["Ivo Brink", "Alexander Boer", "Dennis Ulmer"],
@@ -959,7 +957,6 @@
     },
     {
       "@id": "https://arxiv.org/abs/2602.18733",
-      "sameAs": "https://www.wikidata.org/wiki/Q140562880",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Prior Aware Memorization: An Efficient Metric for Distinguishing Memorization from Generalization in Large Language Models",
       "author": ["Trishita Tiwari", "Ari Trachtenberg", "G. Edward Suh"],
@@ -970,7 +967,6 @@
     },
     {
       "@id": "https://arxiv.org/abs/2605.18732",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563728",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency",
       "author": ["Matthew L. Smith", "Jonathan P. Shock", "Samuel T. Segun", "Iyiola E. Olatunji", "Tegawendé F. Bissyandé"],
@@ -981,7 +977,6 @@
     },
     {
       "@id": "https://arxiv.org/abs/2604.19113",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563723",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Think Before Writing: Feature-Level Multi-Objective Optimization for Generative Citation Visibility",
       "author": ["Zikang Liu", "Peilan Xu"],
@@ -992,7 +987,6 @@
     },
     {
       "@id": "https://arxiv.org/abs/2603.29979",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563716",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Structural Feature Engineering for Generative Engine Optimization: How Content Structure Shapes Citation Behavior",
       "author": ["Junwei Yu", "Mufeng Yang", "Yepeng Ding", "Hiroyuki Sato"],
@@ -1003,7 +997,6 @@
     },
     {
       "@id": "https://arxiv.org/abs/2603.23219",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563715",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Decoding AI Authorship: Can LLMs Truly Mimic Human Style Across Literature and Politics?",
       "author": ["Nasser A Alsadhan"],
@@ -1015,7 +1008,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2601.01576",
-      "sameAs": "https://www.wikidata.org/wiki/Q140356087",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "OpenNovelty: An LLM-powered Agentic System for Verifiable Scholarly Novelty Assessment",
       "author": ["Ming Zhang", "Kexin Tan", "Yueyuan Huang", "Yujiong Shen", "Chunchun Ma", "Li Ju", "Xinran Zhang", "Yuhui Wang", "Wenqing Jing", "Jingyi Deng", "Huayu Sha", "Binze Hu", "Jingqi Tong", "Changhao Jiang", "Yage Geng", "Yuankai Ying", "Yue Zhang", "Zhangyue Yin", "Zhiheng Xi", "Shihan Dou", "Tao Gui", "Qi Zhang", "Xuanjing Huang"],
@@ -1027,7 +1019,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2511.00476",
-      "sameAs": "https://www.wikidata.org/wiki/Q140356090",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Remembering Unequally: Global and Disciplinary Bias in LLM Reconstruction of Scholarly Coauthor Lists",
       "author": ["Ghazal Kalhor", "Afra Mashhadi"],
@@ -1039,7 +1030,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.02544",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563718",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Developer Experience with AI Coding Agents: HTTP Behavioral Signatures in Documentation Portals",
       "author": "Oleksii Borysenko",
@@ -1051,7 +1041,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2603.21658",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563714",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "A Comparative Analysis of LLM Memorization at Statistical and Internal Levels: Cross-Model Commonalities and Model-Specific Signatures",
       "author": ["Bowen Chen", "Namgi Han", "Yusuke Miyao"],
@@ -1063,7 +1052,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.05074",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563720",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Memory Dial: A Training Framework for Controllable Memorization in Language Models",
       "author": ["Xiangbo Zhang", "Ali Emami"],
@@ -1075,7 +1063,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.04700",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563719",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Who is the author? A legal and normative view of authorship in Generative AI-aided academic works",
       "author": "David M. Pereira",
@@ -1087,7 +1074,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2506.17585",
-      "sameAs": "https://www.wikidata.org/wiki/Q140562877",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Cite Pretrain: Retrieval-Free Knowledge Attribution for Large Language Models",
       "author": ["Yukun Huang", "Sanxing Chen", "Jian Pei", "Manzil Zaheer", "Bhuwan Dhingra"],
@@ -1099,7 +1085,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2605.02392",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563726",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Is It Novel and Why? Fine-Grained Patent Novelty Prediction Based on Passage Retrieval",
       "author": ["Valentin Knappich", "Anna Hätty", "Simon Razniewski", "Annemarie Friedrich"],
@@ -1111,7 +1096,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2605.06635",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563727",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents",
       "author": ["Hailey Onweller", "Elias Lumer", "Austin Huber", "Pia Ramchandani", "Vamse Kumar Subbiah", "Corey Feld"],
@@ -1123,7 +1107,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2509.04499",
-      "sameAs": "https://www.wikidata.org/wiki/Q140562878",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence",
       "author": ["Pranav Narayanan Venkit", "Philippe Laban", "Yilun Zhou", "Kung-Hsiang Huang", "Yixin Mao", "Chien-Sheng Wu"],
@@ -1135,7 +1118,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2604.21300",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563724",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
       "author": ["Hieu Man", "Van-Cuong Pham", "Nghia Trung Ngo", "Franck Dernoncourt", "Thien Huu Nguyen"],
@@ -1147,7 +1129,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.13123",
-      "sameAs": "https://www.wikidata.org/wiki/Q140562879",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "From sunblock to softblock: Analyzing the correlates of neology in published writing and on social media",
       "author": ["Maria Ryskina", "Matthew R. Gormley", "Kyle Mahowald", "David R. Mortensen", "Taylor Berg-Kirkpatrick", "Vivek Kulkarni"],
@@ -1159,7 +1140,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2602.19019",
-      "sameAs": "https://www.wikidata.org/wiki/Q140562881",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "TokenTrace: Multi-Concept Attribution through Watermarked Token Recovery",
       "author": ["Li Zhang", "Shruti Agarwal", "John Collomosse", "Pengtao Xie", "Vishal Asnani"],
@@ -1171,7 +1151,6 @@
 
     {
       "@id": "https://arxiv.org/abs/2504.00255",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563711",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "SciReplicate-Bench: Benchmarking LLMs in Agent-driven Algorithmic Reproduction from Research Papers",
       "author": ["Yanzheng Xiang", "Hanqi Yan", "Shuyin Ouyang", "Lin Gui", "Yulan He"],
@@ -1183,7 +1162,6 @@
 
     {
       "@id": "https://doi.org/10.1002/leap.2059",
-      "sameAs": "https://www.wikidata.org/wiki/Q140563729",
       "@type": ["ExternalReference", "ScholarlyArticle"],
       "name": "Science Behind a Paywall: Restricted Access Limits the Promise of Artificial Intelligence",
       "author": ["Haoyi Zheng", "Huichun Zhan"],

@@ -70,6 +70,9 @@ for a future pre-versus-post contrast.
 | Author-profile disambiguation request on a bibliographic-graph service | 2026-06 (pending) | — |
 | Inclusion of all ecosystem records in an author-curated archive community | 2026-06-13 | — |
 | Author-entity `sameAs` federation deepened to self-controllable external profile surfaces (academic citation graph, model hub, professional network, developer-publishing, newsletter) | 2026-06-15 | citation-graph federation tactic; manifesto open question 9 |
+| Wikidata layer revoked by host governance: the account was blocked indefinitely as a promotion-only account and all self-created entries (author, repositories, papers, cited-work records, and the citation edges among them — 109 entries) were mass-deleted by the platform. Recorded as an external event terminating the Wikidata interventions above | 2026-07-16 | ADR-0021; manifesto open question 9 |
+| Self-created authority-record federation retired as a tactic; all dead Wikidata identifiers purged from the ecosystem's machine-readable carriers (knowledge graphs, structured metadata, served mirrors), with dated historical records left unmodified | 2026-07-16 | ADR-0021 |
+| A pure apology — explicitly framed as not an unblock request — posted to the account's own talk page | 2026-07-16 | — |
 
 ### External collections (ADR-0012)
 

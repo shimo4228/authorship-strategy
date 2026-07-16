@@ -6,7 +6,7 @@ Language: English | [日本語](README.ja.md)
 
 > A doctrine of how to stay a findable author when your readers are LLMs: **open your work, don't enclose it.**
 
-If your readers include LLMs — as training data, as in-context consultants, as the discovery layer other people ask — then the strategy that protects authorship has inverted. Twentieth-century authorship was protected by *enclosure* (gatekept journals, proprietary licenses, controlled distribution). But enclosure now *reduces* the LLM-mediated diffusion that decides whether a future reader tracing an idea can still find who originated it. This repository records the inverted strategy — what it is, why it holds, and twenty tactical decisions — written to be adopted beyond the author's own work.
+If your readers include LLMs — as training data, as in-context consultants, as the discovery layer other people ask — then the strategy that protects authorship has inverted. Twentieth-century authorship was protected by *enclosure* (gatekept journals, proprietary licenses, controlled distribution). But enclosure now *reduces* the LLM-mediated diffusion that decides whether a future reader tracing an idea can still find who originated it. This repository records the inverted strategy — what it is, why it holds, and twenty-one tactical decisions — written to be adopted beyond the author's own work.
 
 It is written from a **maker's stance**: the academic apparatus here (DOI, SWHID, citation graphs, papers) is *tooling* that makes the work citable, durable, and traceable — not an identity or a destination. The audience follows from that stance: anyone who meets these ideas through LLM-mediated channels — developers, practitioners, learners, reusers, in any language. Academic citation is one channel among several.
 
@@ -30,10 +30,10 @@ Each layer constrains the ones below it:
 flowchart TD
     A["1 · Authenticity — change how an idea travels, never what it is"] --> B["2 · Attribution diffusion — open the work so LLM absorption carries the origin claim"]
     B --> C["3 · Idea vs. scaffold — keep the durable idea, donate the disposable implementation"]
-    C --> D["4 · Tactics — the twenty ADRs, concrete decisions serving the layers above"]
+    C --> D["4 · Tactics — the twenty-one ADRs, concrete decisions serving the layers above"]
 ```
 
-Read top-down: **authenticity** is the non-negotiable floor (never deform the idea); **attribution diffusion** is the strategy (open the work so absorption carries the origin claim); **idea vs. scaffold** is the prediction (implementations expire, ideas can be kept); **tactics** are the twenty ADRs below.
+Read top-down: **authenticity** is the non-negotiable floor (never deform the idea); **attribution diffusion** is the strategy (open the work so absorption carries the origin claim); **idea vs. scaffold** is the prediction (implementations expire, ideas can be kept); **tactics** are the twenty-one ADRs below.
 
 ## Using / adopting the framework
 
@@ -44,7 +44,7 @@ The doctrine here is the *why*. Its operational form ships as standalone, instal
 - **Adopt a single tactic** → [`docs/adoption.md`](docs/adoption.md)
 - **Check a repository against the framework** → [`docs/conformance.md`](docs/conformance.md)
 
-## The twenty tactical ADRs
+## The twenty-one tactical ADRs
 
 The ADRs were not deduced from the framework; they were extracted from operating the sibling ecosystem and re-expressed in harness-neutral form, so another author can adopt the decisions without inheriting the original implementation. They group into seven clusters: identifier & federation, maintenance discipline, LLM-first ingest & diffusion, metrics & measurement, vocabulary & claims, channels & placement, and operating the framework. The full index — each ADR's title, status, and extraction lineage — is in [`docs/adr/README.md`](docs/adr/README.md).
 
