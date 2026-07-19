@@ -99,14 +99,14 @@ ADR は project / harness 固有の識別子、特定 vendor 製品名、特定 
 
 ## Diffusion implementation tracking
 
-本 program 自身の diffusion 戦略の実施状況を二層で管理する (方法論は ADR-0014、手順の正本は `gap-review` skill、authorship-strategy 固有の入力対応は `authorship-strategy` skill の "Operating the strategy over time")。本節は **配線 (どのファイルが何の役割か) のみ** を定義する。これは `gap-review` の wiring-resolution が読む先になる。手順は skill 側を正本とする。
+本 program 自身の diffusion 戦略の実施状況を二層で管理する (方法論は ADR-0014、手順の正本は `authorship-strategy` skill の "Operating the strategy over time")。本節は **配線 (どのファイルが何の役割か) のみ** を定義する。これは手順が wiring として読む先になる。手順は skill 側を正本とする。
 
 - **Implementation ledger (operational source of truth)**: project memory の `diffusion-channel-status.md`。deploy 済み / 進行中 / 未着手 / scope 外の status、ランク付き candidate interventions、運用詳細 (rate limit / host 名 / pending な依頼) を保持する private な作業台帳。
 - **Public projection**: [`docs/empirical/implementation-log.md`](docs/empirical/implementation-log.md)。ledger から **日付付き介入だけ** を投影する。効果主張なし、運用詳細は ADR-0012 水準で抽象化、英語のみ (empirical 層慣例)。host 名・雇用制約理由・rate limit 等は投影しない。
 
 **Update rule**: diffusion 介入が deploy されたら、まず ledger を更新し、次に public projection に日付行を追加する (この順)。ledger と projection を混ぜない。
 
-**Review trigger**: 「次の一手」を求められたとき、または diffusion 実施が一段落したときは、`gap-review` skill の 5-step procedure を回す — ledger status を読み、deployed tactics を Layer 4 catalog・manifesto open questions ([`docs/manifesto.md`](docs/manifesto.md))・最新文献 (research wiki / search) に対して gap-analyze し、ランク付き candidate を起こし、各を判断チェックリスト (gate) に通し、ledger の候補セクションに記録して提示する。authorship-strategy が gap-review に渡す 3 入力 (catalog / open-q / gate) の対応は `authorship-strategy` skill 参照。
+**Review trigger**: 「次の一手」を求められたとき、または diffusion 実施が一段落したときは、`authorship-strategy` skill の "Operating the strategy over time" 手続きを回す — ledger status を読み、deployed tactics を Layer 4 catalog・manifesto open questions ([`docs/manifesto.md`](docs/manifesto.md))・最新文献 (research wiki / search) に対して gap-analyze し、ランク付き candidate を起こし、各を判断チェックリスト (gate) に通し、ledger の候補セクションに記録して提示する。この review に渡す 3 入力 (catalog / open-q / gate) の対応も同 skill 参照。
 
 ## HF Datasets mirror
 
