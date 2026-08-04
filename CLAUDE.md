@@ -106,7 +106,7 @@ ADR は project / harness 固有の識別子、特定 vendor 製品名、特定 
 
 **Update rule**: diffusion 介入が deploy されたら、まず ledger を更新し、次に public projection に日付行を追加する (この順)。ledger と projection を混ぜない。
 
-**Review trigger**: 「次の一手」を求められたとき、または diffusion 実施が一段落したときは、`authorship-strategy` skill の "Operating the strategy over time" 手続きを回す — ledger status を読み、deployed tactics を Layer 4 catalog・manifesto open questions ([`docs/manifesto.md`](docs/manifesto.md))・最新文献 (research wiki / search) に対して gap-analyze し、ランク付き candidate を起こし、各を判断チェックリスト (gate) に通し、ledger の候補セクションに記録して提示する。この review に渡す 3 入力 (catalog / open-q / gate) の対応も同 skill 参照。
+**Review trigger**: 「次の一手」を求められたとき、または diffusion 実施が一段落したときは、`authorship-strategy` skill の "Operating the strategy over time" (**inquiry-first、2026-08-04 改訂**) に従う — thesis・manifesto open questions ([`docs/manifesto.md`](docs/manifesto.md))・世界の変化 (新文献・観測の中の anomaly) から「まだ答えられない問い」を先に立て、問いを開く / 前進させる形で手を発想する。**ledger / catalog を先に読んで gap 分析するかつての収束ループは退役済み — 再導入しない** (退役理由は skill 同節)。判断チェックリスト (gate) は deploy を決めた候補にのみ適用し、ledger / TASKS.md は最後に dedup のためだけに読む。開いた問いは manifesto の open-question set に登録する — **候補ゼロ・新しい問い一つで終わる review も正規の成果**。
 
 ## HF Datasets mirror
 
