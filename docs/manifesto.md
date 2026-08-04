@@ -248,6 +248,80 @@ resulting retirement and the revocation-control classification of
 grounding surfaces. Whether the self-controllable subset alone clears
 the citation threshold remains open.
 
+## Open question 10: Is a deposit under the author's own account a self-sovereign layer?
+
+[ADR-0021](adr/0021-self-sovereign-entity-grounding.md) answered the
+revocation half of open question 9 by classifying grounding surfaces
+by revocation control, and placed *registry deposits under the
+author's account* on the self-sovereign side — alongside the
+repository, the author-identifier record, and the intrinsic
+content-derived identifier layer. That classification is what lets
+[ADR-0001](adr/0001-concept-doi-canonical.md) keep the concept DOI as
+the canonical priority-claim mechanism after the third-party authority
+layer was retired. The framework's entire origin claim now rests on
+identifiers minted by a registry, held in an account, under that
+registry's governance.
+
+The assumption inside the classification is that an account the author
+holds is an account the author keeps. In 2026 that assumption acquired
+a visible failure mode. Registries began publishing depositor policies
+on generative-AI provenance, requiring that a deposit have a
+verifiable connection to research conducted by humans and treating
+work where the model is the *source* rather than a *tool* as
+unsuitable content. Enforcement of such a policy has been observed to
+run through account-level action: an account suspended, several
+hundred DOI-bearing records withdrawn without prior notice, the
+depositor disputing the classification, and the host acknowledging
+that moderation at volume — automated and manual alike — can err,
+with the dispute unresolved at the time of writing. This records a
+structural similarity in how the risk is shaped; it is not a
+prediction that any particular deposit will be actioned, and a
+contested case is not an established error.
+
+The tension is that the retirement decided in ADR-0021 moved the
+origin claim *toward* the layer this failure mode reaches. Withdrawing
+from a third-party-governed authority record to registry deposits
+looks like a move from revocable to self-sovereign ground, but if both
+layers are ultimately account-scoped and host-adjudicated, the move
+did not distribute governance risk — it concentrated it on the
+canonical layer, where the blast radius is larger. A supplementary
+citation graph can be lost and rebuilt; the priority claim cannot.
+
+Open questions:
+
+- Is a registry deposit under the author's own account *self-sovereign*
+  in the sense ADR-0021 requires, or only self-*administered* — the
+  author controls what the deposit says while the host controls
+  whether it continues to resolve? If the latter, the classification
+  needs a third category between self-sovereign and third-party-
+  governed, and the decisions that rest on it need re-reading.
+- Does the intrinsic identifier layer ([ADR-0013](adr/0013-intrinsic-identifier-layer.md))
+  *substitute* for a revoked canonical layer or merely *complement*
+  it? By its own terms it proves what content existed when and carries
+  no authorship semantics. A program that survived total loss of its
+  extrinsic identifiers would retain provenance and lose credit —
+  which is the reach-without-recognition failure mode of open question
+  8 arriving through the identifier layer rather than through
+  diffusion.
+- Where a provenance policy asks the author to *evidence* human
+  direction, the framework already holds the evidence: the decision
+  records carry a Lineage section naming the observation each decision
+  came from. But the author controls only whether the deposit's
+  metadata makes that trail reachable; whether it reads as sufficient
+  belongs to the host. Accurate self-description is necessary and may
+  not be sufficient — and the framework has no answer for the gap
+  between the two.
+- Open question 9 asks whether the grounding can be *acquired*. This
+  asks whether it can be *kept*. Both are the same authority-gating
+  seen at opposite ends of an artifact's life, which raises whether
+  the three-axis inversion — openness grounds authorial value — holds
+  when the surfaces that carry the openness are themselves granted
+  rather than owned.
+
+The framework records the tension without resolving it. Unlike open
+question 9, this one has not yet been tested against the program's own
+practice; it is recorded here before the fact rather than after it.
+
 ---
 
 The list of open questions is itself an open question. Adopters

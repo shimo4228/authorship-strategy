@@ -20,7 +20,7 @@
 - [README (English)](README.md): human-facing narrative
 - [README (日本語)](README.ja.md): Japanese-language narrative
 - [Thesis — Authorship Strategy under AI-Mediated Diffusion](docs/thesis.md): one-page core argument with the three-axis inversion and four-layer framework
-- [Manifesto — Open Questions](docs/manifesto.md): nine open questions the framework leaves unanswered
+- [Manifesto — Open Questions](docs/manifesto.md): ten open questions the framework leaves unanswered
 - [Glossary](docs/glossary.md): key terms with English/Japanese mapping, including the disjoint-attribution warning
 - [Inspiration and Lineage](docs/inspiration.md): prior literature, sibling research lines, operational origins of the ADRs
 - [Empirical Layer](docs/empirical/README.md): method, limitations, and preliminary observations from twenty-four days of CC0-published traffic data, an external-literature note reading the 2024–2026 neology-and-LLM literature against ADR-0010, a probe baseline from the first ADR-0011 protocol run (parametric zero pre-baseline, negative-control floor, per-provider retrieval observations), and an implementation log timestamping which diffusion tactics were deployed and when (the methods companion to the no-pre/post-comparison limitation)
@@ -140,4 +140,4 @@ The layer also carries an external-literature note ([`docs/empirical/neologism-s
 
 ## Open questions
 
-The framework is articulated but not closed. Nine open questions are catalogued in [`docs/manifesto.md`](docs/manifesto.md), covering: scaling beyond a single author, disambiguating LLM-mediated adoption from incidental traffic, time-to-obsolescence of tactical-layer decisions, interaction with non-DOI-registrable artifacts, the recursive application of the framework to itself, robustness to LLM substrate change, the role of the empirical layer, the framework's failure modes, and whether entity grounding gates the diffusion strategy by prior authority.
+The framework is articulated but not closed. Ten open questions are catalogued in [`docs/manifesto.md`](docs/manifesto.md), covering: scaling beyond a single author, disambiguating LLM-mediated adoption from incidental traffic, time-to-obsolescence of tactical-layer decisions, interaction with non-DOI-registrable artifacts, the recursive application of the framework to itself, robustness to LLM substrate change, the role of the empirical layer, the framework's failure modes, whether entity grounding gates the diffusion strategy by prior authority, and whether a registry deposit under the author's own account is self-sovereign or merely self-administered — the retention counterpart to the preceding question, asking whether the canonical priority-claim layer can be revoked by the host that mints it.
