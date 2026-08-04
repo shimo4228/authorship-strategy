@@ -805,7 +805,7 @@ is required. Full citation metadata is in [`CITATION.cff`](CITATION.cff).
 
 ## Q: Where is the framework's open-question catalogue?
 
-[`docs/manifesto.md`](docs/manifesto.md) catalogues nine open
+[`docs/manifesto.md`](docs/manifesto.md) catalogues ten open
 questions:
 
 1. How does the framework scale beyond a single author?
@@ -817,6 +817,7 @@ questions:
 7. What is the role of the framework's empirical layer?
 8. What is the framework's failure mode?
 9. Does entity grounding gate the diffusion strategy by prior authority?
+10. Is a deposit under the author's own account a self-sovereign layer? (the retention counterpart to question 9: whether the grounding can be kept, not whether it can be acquired)
 
 Adopters are invited to extend the list. The framework is improved
 by articulating the questions it cannot yet answer, not by
