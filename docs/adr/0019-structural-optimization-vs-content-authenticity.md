@@ -25,7 +25,11 @@ Language: English | [日本語](0019-structural-optimization-vs-content-authenti
 > citation and visibility are not success metrics to be maximized.
 
 ## Status
-accepted
+accepted — see [ADR-0022](0022-audience-layer-split.md): within the
+essay layer the reinforcing support from ADR-0007 ("no legitimate
+target that deforming the content could serve") no longer holds; the
+rule there stands on its Layer 1 authenticity ground alone, and
+continues to bind in both layers.
 
 ## Date
 2026-06-26

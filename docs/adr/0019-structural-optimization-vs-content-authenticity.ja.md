@@ -24,7 +24,10 @@ Language: [English](0019-structural-optimization-vs-content-authenticity.md) | �
 > ADR-0007 の commitment がこれを補強する。
 
 ## Status
-accepted
+accepted — [ADR-0022](0022-audience-layer-split.ja.md) 参照: essay
+layer の内側では ADR-0007 由来の補強支柱 (「内容の変形が仕えうる正当な
+target は存在しない」) がもはや成立しない; そこでは rule は Layer 1 の
+authenticity 根拠のみに立ち、両層で引き続き拘束する。
 
 ## Date
 2026-06-26

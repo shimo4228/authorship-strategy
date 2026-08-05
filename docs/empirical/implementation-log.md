@@ -97,7 +97,9 @@ recognition: they do not open a new channel but make an already-reachable
 surface route a human reader — or a non-rendering crawler — back to the
 ecosystem hub and the author's persistent identity. They are pull-only —
 no outreach, posting, or notification — consistent with the
-metric-rejection decision (ADR-0007).
+metric-rejection decision (ADR-0007). As of 2026-08 that decision's
+scope is bounded to the doctrine layer (ADR-0022); the interventions
+above remain pull-only as recorded.
 
 | Intervention | Date | Recorded in |
 |---|---|---|
@@ -191,9 +193,13 @@ successes only.
 
 - **Self-citation in open encyclopedias** — declined as a
   conflict-of-interest norm violation.
-- **Attention-driven social-platform posting** — declined as targeting a
-  non-primary audience and as inconsistent with the metric-rejection
-  decision (ADR-0007).
+- **Attention-driven social-platform posting** — declined, for the
+  doctrine layer, as targeting a non-primary audience and as
+  inconsistent with the metric-rejection decision (ADR-0007). Scope
+  note (2026-08): under the audience-layer split (ADR-0022), publishing
+  original essays to the essay layer's own contemporary human readers
+  is content production accounted in its own layer, not the
+  doctrine-promotion posting this exclusion declines.
 
 ## How this log is maintained
 

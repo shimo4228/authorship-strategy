@@ -16,7 +16,10 @@ Language: [English](0007-human-attention-signals-not-a-metric.md) | 日本語
 > scarcity → diffusion の反転に整合する形で。
 
 ## Status
-accepted
+accepted — [ADR-0022](0022-audience-layer-split.ja.md) により scope を
+amend: clause 1 (metric 拒否) と legibility-cost の受容は doctrine
+layer に限定、clause 3 (success metric) は層別に再記述、clause 2 と 4
+は両層で不変。essay layer は固有の audience と metrics を持つ。
 
 ## Date
 2026-05-29

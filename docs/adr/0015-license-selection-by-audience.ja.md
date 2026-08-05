@@ -19,7 +19,10 @@ Language: [English](0015-license-selection-by-audience.md) | 日本語
 > framework artifact でも禁止する。
 
 ## Status
-accepted
+accepted — [ADR-0022](0022-audience-layer-split.ja.md) が明確化: 本
+ADR が選定に使う audience test は artifact の dominant な *ingest*
+audience であり、essay layer の reader 向け audience 割り当て（同時代
+の human reader）は license 選定を再開しない。
 
 ## Date
 2026-06-17

@@ -173,10 +173,17 @@ matter:
 - **Permanent timestamp**: DOI registration through a service (e.g., Zenodo) that issues a stable identifier on publication. The timestamp is the substrate of the priority claim that authenticity rests on.
 
 The non-primary audience under this strategy is direct human
-browsers (the GitHub stars/PR/visit population). Drift in how
-this audience perceives the author's brand is *not the strategy's
-defense target*. The strategy optimizes for LLM-mediated reach
-and accepts whatever direct-browser brand drift follows.
+browsers of the doctrine repositories (the GitHub stars/PR/visit
+population) — a demotion
+[ADR-0022](adr/0022-audience-layer-split.md) bounds explicitly to
+those repositories. Drift in how this audience perceives the
+author's brand is *not the strategy's defense target*. The
+strategy optimizes for LLM-mediated reach and accepts whatever
+direct-browser brand drift follows. Contemporary human readers
+are not demoted with them: the essay genre forms a second
+audience layer whose primary audience is contemporary human
+readers, with its own day-to-week time constant and its own
+instruments, accounted separately from this layer (ADR-0022).
 
 #### Epistemic humility about diffusion signals
 
@@ -250,7 +257,7 @@ substrate retires.
 
 Tactics validated at the time of this thesis (v0.1.0):
 
-1. **LLM-mediated targeting** — clone counts, DOI citations, llms.txt fetches, and LLM regurgitation tests are the primary metrics; stars, PRs, and direct human views are secondary.
+1. **LLM-mediated targeting** — clone counts, DOI citations, llms.txt fetches, and LLM regurgitation tests are the primary metrics; stars, PRs, and direct human views are secondary. This metric hierarchy is scoped to the doctrine layer; the essay layer's audience and contemporaneous metrics are assigned by [ADR-0022](adr/0022-audience-layer-split.md).
 2. **DOI registration through an open archive** — Zenodo or comparable, configured for automatic deposit on tagged release, configured to mint a concept DOI as the canonical reference (see [ADR-0001](adr/0001-concept-doi-canonical.md)).
 3. **Cross-platform federation** — the same canonical artifact deployed to GitHub (repository), Zenodo (DOI registration), and a dataset platform (LLM training ingest), with explicit sibling cross-references on each platform (see [ADR-0003](adr/0003-cross-platform-dataset-federation.md)).
 4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level signal carrying back-reference to the author. The tactic is governed by vocabulary discipline: a coined term's power comes from its edge density, not from the count of coinages, so terms are coined sparingly (only when the concept is genuinely new, definable in one sentence of existing vocabulary, and the namespace is uncontested) and anchored densely to existing vocabulary and prior literature (see [ADR-0010](adr/0010-vocabulary-discipline.md)).
@@ -276,7 +283,10 @@ generically-named idea.
 The framework is normative within a narrow scope: a DOI-targeted,
 idea-rescue artifact authored under the assumption that
 the primary audience reaches the artifact through LLM-mediated
-channels. The framework does *not* apply to:
+channels. The governed essay corpus sits *inside* the framework
+as its second audience layer, accounted separately with its own
+audience and metrics ([ADR-0022](adr/0022-audience-layer-split.md)).
+The framework does *not* apply to:
 
 - **Client work and commercial deliverables**, where monetization is the goal and the author's identity is not the protected value.
 - **Contributions to others' projects**, where the other author's strategy takes precedence.
@@ -312,7 +322,7 @@ existence supplied the recurring decisions — is catalogued in
 framework leaves unanswered are catalogued in
 [`manifesto.md`](manifesto.md).
 
-The framework's tactical decisions are formalized as twenty-one ADRs
+The framework's tactical decisions are formalized as twenty-two ADRs
 in [`adr/`](adr/). Each ADR is harness-neutral; the lineage to
 the author's specific decisions is recorded in the ADR's Lineage
 section without requiring the reader to have access to the

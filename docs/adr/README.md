@@ -16,7 +16,7 @@ research ecosystem, not prescribed top-down.
 | [0004](0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled | accepted |
 | [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
-| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
+| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (scope amended by 0022) |
 | [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 | [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
@@ -31,6 +31,7 @@ research ecosystem, not prescribed top-down.
 | [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content | accepted |
 | [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs | accepted |
 | [0021](0021-self-sovereign-entity-grounding.md) | Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation | accepted |
+| [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -270,6 +271,30 @@ ADR-0021 bounds where the author may *write*: it records the sharpest
 observed instance of the manifesto's ninth open question — the authority
 a first-mover cannot yet supply also cannot be self-manufactured — and
 leaves that question open.
+
+ADR-0022 is the **audience-layer-split decision**: with ADR-0014, one of
+the two operating-the-framework decisions, and the first extracted
+from the program's motivational accounting rather than from a diffusion
+tactic. A 2026-08 review diagnosed that the audience demotion — written
+about direct browsers of the doctrine repositories but read at its
+widest — had turned ADR-0007's legibility-cost acceptance into an
+unfalsifiable consolation (every stagnant human signal re-readable as
+purity), while the program's essay corpus, shipping to contemporary
+human readers with its own per-article metrics instrument, was never on
+the strategy's books. The decision splits the accounting into two
+audience layers routed by genre (extending ADR-0016): the doctrine
+layer keeps LLM-mediated channels as primary audience with ADR-0007's
+metric rejection intact, while the essay layer takes contemporary human
+readers as primary audience on a day-to-week time constant, where
+reception signals are legitimate to observe and to steer by. Boundary
+clauses keep the layers apart — essay signals never steer doctrine
+decisions (ADR-0017), content deformation stays prohibited in both
+layers (ADR-0019), essay platforms remain non-load-bearing
+third-party-governed surfaces under the safety guards and
+aggregate-pattern test (ADR-0021), and license and canonical routing
+are untouched (ADR-0015/0016). It amends ADR-0007's scope clause by
+clause and opens the manifesto's eleventh open question: whether a
+two-layer motivation portfolio resists cross-layer contamination.
 
 ## Format
 

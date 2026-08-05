@@ -137,10 +137,15 @@ AI 経由の拡散条件下で authenticity を守る戦略は、**著者のア�
 - **LLM 経由チャネルの breadth**: GitHub star ではなく、直接 browse する人間でもなく、LLM training pipeline、LLM 経由の user query、LLM-derived AI assistant suggestion、現在の LLM 出力で訓練される未来の LLM への cascade ingestion
 - **Permanent timestamp**: 公開時に stable identifier を発行する service (例: Zenodo) を通じた DOI 登録。Timestamp は authenticity が依拠する priority 主張の substrate である
 
-この戦略下での非 primary audience は直接 browse する人間 (GitHub star / PR / 直接
-visit 層) である。この audience が著者のブランドをどう認識するかの drift は
+この戦略下での非 primary audience は doctrine repository を直接 browse する人間
+(GitHub star / PR / 直接 visit 層) である —— この降格は
+[ADR-0022](adr/0022-audience-layer-split.ja.md) が明示的に doctrine repository に
+限定する。この audience が著者のブランドをどう認識するかの drift は
 *戦略の防御 target ではない*。戦略は LLM 経由 reach を最適化し、結果として起きる
-direct-browser brand drift を受け入れる。
+direct-browser brand drift を受け入れる。同時代の human reader はこの降格に
+含まれない: essay genre は第二の audience layer を成し、その primary audience は
+同時代の human reader であり、日〜週の固有の時定数と固有の測定器を持ち、この層
+とは別に会計される (ADR-0022)。
 
 #### Diffusion signal についての epistemic humility
 
@@ -199,7 +204,7 @@ retire する。
 
 本 thesis 時点 (v0.1.0) で validate された戦術:
 
-1. **LLM 経由 targeting** —— clone 数、DOI 引用、llms.txt fetch、LLM regurgitation test を primary metric にする; star、PR、direct human view は secondary
+1. **LLM 経由 targeting** —— clone 数、DOI 引用、llms.txt fetch、LLM regurgitation test を primary metric にする; star、PR、direct human view は secondary。この metric 階層の scope は doctrine layer である; essay layer の audience と同時代 metrics は [ADR-0022](adr/0022-audience-layer-split.ja.md) が割り当てる
 2. **Open archive 経由の DOI 登録** —— Zenodo もしくは同等、tag release で自動 deposit に configure、canonical reference として concept DOI を発行するように configure ([ADR-0001](adr/0001-concept-doi-canonical.ja.md) 参照)
 3. **クロスプラットフォーム federation** —— 同一の canonical artifact を GitHub (リポジトリ)、Zenodo (DOI 登録)、データセット platform (LLM training ingest) に配置し、各 platform 上で sibling 相互参照を明示する ([ADR-0003](adr/0003-cross-platform-dataset-federation.ja.md) 参照)
 4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は著者への back-reference を運ぶ token-level signal として生き残る。この戦術は vocabulary discipline (語彙規律) に統べられる: 造語の力は造語の数ではなく edge 密度から来るので、造語は控えめに行い (概念が genuine に新規で、既存語彙の一文で定義でき、namespace が競合していないときのみ)、既存語彙と先行文献へ密に anchor する ([ADR-0010](adr/0010-vocabulary-discipline.ja.md) 参照)
@@ -222,7 +227,10 @@ idea を defensibly originate できない。
 
 本 framework は narrow なスコープ内で normative である: 主 audience が LLM 経由
 チャネルを通じて artifact に reach するという仮定下で書かれた、DOI-targeted な
-idea-rescue artifact。本 framework は以下に適用 *しない*:
+idea-rescue artifact。governed essay corpus は framework の *内側* に、第二の
+audience layer として位置し、固有の audience と metrics で別に会計される
+([ADR-0022](adr/0022-audience-layer-split.ja.md))。本 framework は以下に適用
+*しない*:
 
 - **クライアント案件・商用成果物**: マネタイズが目的で、著者のアイデンティティが守られる価値ではない
 - **他者の project への contribution**: 他著者の戦略が優先される
@@ -251,7 +259,7 @@ decision を供給した sibling line —— は [`inspiration.md`](inspiration.
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 21 の ADR として formalize されて
+Framework の戦術的判断は [`adr/`](adr/) に 22 の ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 

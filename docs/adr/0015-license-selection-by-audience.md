@@ -21,7 +21,11 @@ Language: English | [日本語](0015-license-selection-by-audience.ja.md)
 > are prohibited on any framework artifact.
 
 ## Status
-accepted
+accepted — clarified by
+[ADR-0022](0022-audience-layer-split.md): the audience test this ADR
+selects by is the artifact's dominant *ingest* audience, so the
+essay layer's reader-facing audience assignment (contemporary human
+readers) does not reopen its license selection.
 
 ## Date
 2026-06-17

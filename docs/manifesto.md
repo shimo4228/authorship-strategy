@@ -180,6 +180,19 @@ does not currently handle:
 A subsequent release should articulate diagnostic signals for
 each failure mode and the recovery strategy for each.
 
+*Worked instance (2026-08):* the recognition half of the first
+failure mode acquired an accounting response, not a resolution.
+[ADR-0022](adr/0022-audience-layer-split.md) routes contemporary
+human readers to the essay layer as that layer's primary audience,
+so the program now carries one layer in which recognition is
+contemporaneously observable — while ghost citation in the doctrine
+layer stands exactly as recorded here. The same decision surfaced a
+second-order failure mode of this list itself: an unqualified
+demotion of human audiences had let every stagnant human-attention
+signal be re-read as purity, an unfalsifiable consolation the
+accounting split is designed to remove. Whether the split is stable
+is open question 11.
+
 ## Open question 9: Does entity grounding gate the diffusion strategy by prior authority?
 
 The framework's Layer 4 structured-artifact tactic — the JSON-LD
@@ -321,6 +334,43 @@ Open questions:
 The framework records the tension without resolving it. Unlike open
 question 9, this one has not yet been tested against the program's own
 practice; it is recorded here before the fact rather than after it.
+
+## Open question 11: Can a two-layer motivation portfolio resist cross-layer contamination?
+
+[ADR-0022](adr/0022-audience-layer-split.md) split the strategy's
+accounting into two audience layers with different time constants:
+the doctrine layer (LLM-mediated primary audience, months to years)
+and the essay layer (contemporary human readers, days to weeks,
+where reception signals are legitimate to observe and steer by).
+The split answers an accounting defect — the author's
+recognition-seeking motive had no layer in which its rewards were
+observable — but it installs a boundary that must now be held by a
+single practitioner, and the boundary can fail in either direction:
+
+- **Fast contaminates slow** — essay-layer numbers seep into
+  doctrine-layer judgment: a release timed to reception, a deposit
+  shaped by what scored, the failure-mode diagnostics of
+  [ADR-0017](adr/0017-failure-mode-diagnostics.md) quietly promoted
+  to targets. The boundary clauses of ADR-0022 prohibit this flow,
+  but a prohibition held by the same person who watches the numbers
+  is a discipline, not a mechanism.
+- **Slow re-annexes fast** — the contemplative reading that
+  ADR-0022 bounded to the doctrine layer generalizes again, the
+  essay layer's signals are re-classified as vanity, and the
+  accounting defect returns under a new description. The pattern
+  has one precedent already: an unqualified audience demotion was
+  read at its widest for months before the split named it.
+- **The layers compete for the same hours** — a portfolio assigns
+  motives, but production time is one pool. Whether reception-fed
+  essay work crowds out the slow doctrine work (or the reverse) is
+  an allocation question the split does not answer.
+
+Whether one practitioner can hold both postures over years — a
+layer where numbers are allowed to matter and a layer where they
+are refused — is untested, and the nearest evidence (the months in
+which the unsplit accounting quietly failed) argues that
+self-reports will lag the failure. The framework records the
+tension without resolving it.
 
 ---
 

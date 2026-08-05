@@ -37,7 +37,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-one tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, and the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, and the derivation-surface-onboarding decision 0020), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-two tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, the derivation-surface-onboarding decision 0020, the self-sovereign-grounding decision 0021, and the audience-layer-split decision 0022), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -96,7 +96,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-one decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-two decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316"],
@@ -307,7 +307,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0018",
         "https://github.com/shimo4228/authorship-strategy#adr/0019",
         "https://github.com/shimo4228/authorship-strategy#adr/0020",
-        "https://github.com/shimo4228/authorship-strategy#adr/0021"
+        "https://github.com/shimo4228/authorship-strategy#adr/0021",
+        "https://github.com/shimo4228/authorship-strategy#adr/0022"
       ]
     },
 
@@ -437,13 +438,27 @@
         {"@value": "Human-Attention Signal Rejection", "@language": "en"},
         {"@value": "人間アテンション signal の却下", "@language": "ja"}
       ],
-      "description": "The decision to exclude platform-level human-attention metrics — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach, since a human reading the work through an LLM answer generates no view) — from the framework's success definition, and to decline off-page human-distribution labor as a red-ocean activity operating on a near-empty human-arrival funnel (empirically clone:view approximately 16:1). Success is measured by the breadth of LLM-mediated channels instead. The metric-side embodiment of the scarcity-to-diffusion axis: the framework does not compete for scarce human attention on platform terms but diffuses through LLM-mediated channels. Endpoint measurement extends the structural blindness beyond page views: AI agents compress multi-page consumption into one or two HTTP requests and fire no client-side engagement events, so bounce-rate and session-depth metrics misrecord full consumption as non-engagement, and referrer stripping folds LLM-mediated arrivals into direct traffic — engagement analytics cannot capture LLM-mediated reach even in principle. Boundary: the compression evidence comes from single-fetch documentation tasks, so it is read as grounding for document-retrieval contexts rather than for every agent workload.",
+      "description": "The decision to exclude platform-level human-attention metrics — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach, since a human reading the work through an LLM answer generates no view) — from the framework's success definition, and to decline off-page human-distribution labor as a red-ocean activity operating on a near-empty human-arrival funnel (empirically clone:view approximately 16:1). Success is measured by the breadth of LLM-mediated channels instead. The metric-side embodiment of the scarcity-to-diffusion axis: the framework does not compete for scarce human attention on platform terms but diffuses through LLM-mediated channels. Endpoint measurement extends the structural blindness beyond page views: AI agents compress multi-page consumption into one or two HTTP requests and fire no client-side engagement events, so bounce-rate and session-depth metrics misrecord full consumption as non-engagement, and referrer stripping folds LLM-mediated arrivals into direct traffic — engagement analytics cannot capture LLM-mediated reach even in principle. Boundary: the compression evidence comes from single-fetch documentation tasks, so it is read as grounding for document-retrieval contexts rather than for every agent workload. Scope: under the audience-layer split (ADR-0022) this rejection governs the doctrine layer only; the essay layer's contemporaneous reception signals are accounted separately.",
       "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0007",
       "groundedIn": [
         "https://arxiv.org/abs/2604.02544"
       ],
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
+    },
+
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#concept/audience-layer-split",
+      "@type": "Concept",
+      "name": "Audience-Layer Split",
+      "alternateName": [
+        {"@value": "Audience-Layer Split", "@language": "en"},
+        {"@value": "audience-layer split (二層の audience 会計)", "@language": "ja"}
+      ],
+      "description": "The division of the strategy's accounting into two audience layers with different time constants, routed by genre: a doctrine layer (doctrine repositories and papers, months-to-years, LLM-mediated channels as primary audience) and an essay layer (the governed essay corpus and its syndication surfaces, days-to-weeks, contemporary human readers as primary audience, where contemporaneous reception signals are legitimate to observe and to steer by). Each layer is measured by its own instruments — the instrument-per-channel discipline applied one level up. The split answers an accounting defect, not a strategy defect: without a layer in which human reception counts, the metric rejection's legibility-cost acceptance generalizes into an unfalsifiable consolation in which every stagnant signal reads as purity. The term names an accounting and audience stratum; it is distinct from the framework's judgment stack (Layers 1-4), from the two ingestion channels of Two-Channel Attribution Diffusion (parametric and retrieval, which run over artifacts in both audience layers), and from the two ledger tiers of the implementation-tracking decision (private ledger and public projection). The assignment governs accounting and metrics only; canonical, priority claim, and license selection are unchanged.",
+      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0022",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0022-audience-layer-split.md"
     },
 
     {
@@ -717,6 +732,23 @@
     },
 
     {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0022",
+      "@type": "ADR",
+      "name": "ADR-0022: Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics",
+      "description": "Splits the strategy's accounting into two audience layers with different time constants, routed by genre. The doctrine layer — the doctrine repositories and the paper genre, on a months-to-years time constant — keeps LLM-mediated channels as its primary audience, with the metric-rejection decision intact. The essay layer — the governed essay corpus and its syndication surfaces, on a days-to-weeks time constant — takes contemporary human readers as its primary audience; contemporaneous reception signals (reads, reactions, follower counts) are legitimate there both to observe and to steer writing decisions by. The amendment proceeds on accounting grounds: an unqualified audience demotion had let every stagnant human-attention signal be re-read as purity — an unfalsifiable consolation — while the essay corpus shipped to contemporary human readers entirely off the strategy's books, and the author's recognition-seeking motive was structurally starved while the contemplative motive was fully served. The metric-rejection decision is amended clause by clause (its own revisit trigger, a trustworthy non-gameable human-reception signal, has not fired). Boundary clauses keep the layers from contaminating each other: essay-layer signals never steer doctrine-layer release, deposit, or federation decisions; content deformation for numbers is prohibited in both layers; essay-layer platforms remain non-load-bearing third-party-governed surfaces under the safety guards and the aggregate-pattern test; and the assignment governs accounting and metrics only, leaving license selection and canonical routing untouched. Opens the manifesto's eleventh open question: whether a two-layer motivation portfolio resists cross-layer contamination when both layers are held by a single practitioner.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0022-audience-layer-split.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0007",
+        "https://github.com/shimo4228/authorship-strategy#adr/0011",
+        "https://github.com/shimo4228/authorship-strategy#adr/0014",
+        "https://github.com/shimo4228/authorship-strategy#adr/0016",
+        "https://github.com/shimo4228/authorship-strategy#adr/0017",
+        "https://github.com/shimo4228/authorship-strategy#adr/0019",
+        "https://github.com/shimo4228/authorship-strategy#adr/0021"
+      ]
+    },
+
+    {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
       "@type": ["ResearchLine", "EcosystemRepo"],
       "name": "Agent Knowledge Cycle",
@@ -774,7 +806,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy-skill",
       "@type": "EcosystemRepo",
       "name": "authorship-strategy-skill",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty-one ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty-two ADRs.",
       "url": "https://github.com/shimo4228/authorship-strategy-skill",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

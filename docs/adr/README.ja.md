@@ -16,7 +16,7 @@ top-down に prescribe されたものではない。
 | [0004](0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ | accepted |
 | [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points | accepted |
-| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted |
+| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (0022 が scope を amend) |
 | [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
 | [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
@@ -31,6 +31,7 @@ top-down に prescribe されたものではない。
 | [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない | accepted |
 | [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub | accepted |
 | [0021](0021-self-sovereign-entity-grounding.ja.md) | self-sovereign な entity grounding —— community 統治の authority record は foundation でなく revocable な layer である | accepted |
+| [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -242,6 +243,28 @@ footprint が host の governance にどう読まれるかは、行為単位の�
 する: manifesto の 9 番目の open question の観測された中で最も鋭い instance ——
 first-mover がまだ持てない authority は自作もできない —— を記録し、その問いを
 開いたまま残す。
+
+ADR-0022 は **audience-layer-split decision** である: ADR-0014 と並ぶ、
+framework を**運用する**ことについての 2 本の ADR の一方であり、diffusion
+tactic からではなく program の動機の会計から抽出された最初の ADR だ。
+2026-08 の review は、audience の降格 —— doctrine repository の直接
+browse 層について書かれたが最大の広さで読まれてきた —— が ADR-0007 の
+legibility-cost 受容を反証不能な慰めに変えていたこと (停滞するあらゆる
+human signal が純化の証として読み替え可能)、その間、同時代の human
+reader に向けて出荷され per-article の metrics instrument を持つ essay
+corpus が strategy の帳簿に一度も載っていなかったことを診断した。
+decision は会計を、genre で routing される 2 つの audience layer に分割
+する (ADR-0016 の拡張): doctrine layer は LLM-mediated channel を
+primary audience に保ち ADR-0007 の metric 拒否は無傷のまま、essay
+layer は同時代の human reader を primary audience とし、日〜週の時定数
+の下で reception signal を観測することも操舵に使うことも正当とする。
+boundary 条項が層を隔てる —— essay の signal は doctrine の判断を操舵
+しない (ADR-0017)、内容の変形は両層で禁止のまま (ADR-0019)、essay
+platform は安全ガードと aggregate-pattern test の下で non-load-bearing
+な third-party-governed surface のまま (ADR-0021)、license と canonical
+の routing は不変 (ADR-0015/0016)。ADR-0007 の scope を clause 単位で
+amend し、manifesto の 11 番目の open question —— 二層の動機 portfolio
+は層間汚染に耐えるか —— を開く。
 
 ## Format
 

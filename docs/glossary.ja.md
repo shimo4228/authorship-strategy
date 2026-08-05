@@ -239,6 +239,28 @@ structurally blind* なので、主 audience が LLM 経由である著者にと
 success を著者の署名を運ぶ LLM-mediated channel の breadth で測る;
 on-page な human quality は growth lever ではなく hygiene として保たれ、
 off-page な人間向け distribution labor は red-ocean な活動として declines される。
+[ADR-0022](adr/0022-audience-layer-split.ja.md) 下では、この rejection の scope は
+*doctrine layer* である; essay layer の同時代 reception signal は別に会計される
+(*Audience layer* 参照)。
+
+## Audience layer (doctrine layer / essay layer)
+
+固有の primary audience・時定数・測定器を持つ、program 産出物の会計上の
+stratum。[ADR-0022](adr/0022-audience-layer-split.ja.md) が導入し、genre で
+routing する ([ADR-0016](adr/0016-genre-split-placement.ja.md))。**doctrine
+layer** —— doctrine repository と paper genre —— は LLM-mediated channel を
+primary audience とし、月〜年の時定数を持つ。**essay layer** —— governed
+essay corpus とその syndication surface —— は同時代の human reader を
+primary audience とし、日〜週の時定数を持ち、そこでは同時代の reception
+signal (reads・反応・follower 数) を観測することも操舵に使うことも正当で
+ある。この用語は 3 つの隣接概念と区別される: framework の判断スタック
+(Layer 1–4)、[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) の
+2 つの ingestion channel (parametric / retrieval —— 両 audience layer の
+artifact の上を走る)、
+[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.ja.md) の 2 つの
+ledger tier (private ledger / public projection)。この割り当てが規定するのは
+会計と metrics のみで、canonical・priority claim・license 選定は不変である
+(ADR-0015/0016)。
 
 ## Diffusion
 

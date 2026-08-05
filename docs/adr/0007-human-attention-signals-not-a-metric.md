@@ -17,7 +17,11 @@ Language: English | [日本語](0007-human-attention-signals-not-a-metric.ja.md)
 > its scarcity → diffusion inversion.
 
 ## Status
-accepted
+accepted — scope amended by [ADR-0022](0022-audience-layer-split.md):
+clause 1 (metric rejection) and the legibility-cost acceptance are
+scoped to the doctrine layer; clause 3 (success metric) is restated
+per layer; clauses 2 and 4 stand unchanged in both layers. The essay
+layer carries its own audience and metrics.
 
 ## Date
 2026-05-29

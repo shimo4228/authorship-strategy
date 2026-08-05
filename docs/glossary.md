@@ -292,7 +292,33 @@ or success metric for an author whose primary audience is LLM-mediated.
 The framework measures success by the breadth of LLM-mediated channels
 carrying the author's signature; on-page human quality is kept as
 hygiene, not a growth lever, and off-page human-distribution labor is
-declined as a red-ocean activity.
+declined as a red-ocean activity. Under
+[ADR-0022](adr/0022-audience-layer-split.md) this rejection is scoped
+to the *doctrine layer*; the essay layer's contemporaneous reception
+signals are accounted separately (see *Audience layer*).
+
+## Audience layer (doctrine layer / essay layer)
+
+An accounting stratum of the program's output with its own primary
+audience, time constant, and instruments, introduced by
+[ADR-0022](adr/0022-audience-layer-split.md) and routed by genre
+([ADR-0016](adr/0016-genre-split-placement.md)). The **doctrine
+layer** — the doctrine repositories and the paper genre — keeps
+LLM-mediated channels as its primary audience on a months-to-years
+time constant. The **essay layer** — the governed essay corpus and
+its syndication surfaces — takes contemporary human readers as its
+primary audience on a day-to-week time constant, where
+contemporaneous reception signals (reads, reactions, follower
+counts) are legitimate to observe and to steer by. The term is
+distinct from three neighbors: the framework's judgment stack
+(Layers 1–4), the two ingestion channels of
+[ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
+(parametric / retrieval, which run over artifacts in both audience
+layers), and the two ledger tiers of
+[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md)
+(private ledger / public projection). The assignment governs
+accounting and metrics only; canonical, priority claim, and license
+selection are unchanged (ADR-0015/0016).
 
 ## Diffusion
 

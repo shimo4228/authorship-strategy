@@ -126,7 +126,7 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0004](adr/0004-authorship-metadata-orcid.md) | Enrich your identity record with concept identifiers only; disable auto-update. |
 | [ADR-0005](adr/0005-readme-localization-audience-driven.md) | Add or retire locale mirrors on observed traffic, not on speculation about audiences. |
 | [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md) | Ship the prose navigator and the JSON-LD graph as a synchronously-released pair. |
-| [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md) | Do not optimize star counts or page views; measure LLM-mediated channel breadth instead. |
+| [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md) | Do not optimize star counts or page views on your doctrine repositories; measure LLM-mediated channel breadth there instead. (If you also keep an essay layer for contemporary human readers, its audience and metrics are assigned separately — [ADR-0022](adr/0022-audience-layer-split.md).) |
 | [ADR-0008](adr/0008-rag-era-attribution-diffusion.md) | Optimize and measure the parametric and retrieval channels separately. |
 | [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) | Weight effort toward the graph; keep the navigator as an agent context surface. |
 | [ADR-0010](adr/0010-vocabulary-discipline.md) | Coin sparingly; anchor densely; cite upstream for everything else. |
