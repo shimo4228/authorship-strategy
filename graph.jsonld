@@ -37,7 +37,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-two tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, the derivation-surface-onboarding decision 0020, the self-sovereign-grounding decision 0021, and the audience-layer-split decision 0022), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-three tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, the derivation-surface-onboarding decision 0020, the self-sovereign-grounding decision 0021, the audience-layer-split decision 0022, and the empirical-layer-role decision 0023), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -96,7 +96,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-two decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-three decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316"],
@@ -308,7 +308,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0019",
         "https://github.com/shimo4228/authorship-strategy#adr/0020",
         "https://github.com/shimo4228/authorship-strategy#adr/0021",
-        "https://github.com/shimo4228/authorship-strategy#adr/0022"
+        "https://github.com/shimo4228/authorship-strategy#adr/0022",
+        "https://github.com/shimo4228/authorship-strategy#adr/0023"
       ]
     },
 
@@ -747,6 +748,19 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0021"
       ]
     },
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0023",
+      "@type": "ADR",
+      "name": "ADR-0023: Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design",
+      "description": "Closes the manifesto's seventh open question — whether the empirical layer functions as validation evidence, reference baseline, or case study — by structuring the layer's intentional hybrid rather than collapsing it to one role. The three candidate roles differ less in content than in the strength of the claim the layer would assert, and the cost of the recorded ambiguity was that no artifact declared how strong a claim it was making. Reference baseline is the layer's primary role and the minimum every artifact must satisfy: reproducible data or a dated record, a documented method, stated limitations. Case-study narrative is a bounded secondary role: interpretive notes attached to specific artifacts and marked as interpretation, never elevated into effect claims. Validation evidence is a role the layer declines to claim — no artifact is read as validating the framework's normative claims unless it was designed as an experiment before the fact (a pre-specified contrast or a pre-registered protocol testing a stated claim) and is explicitly designated as validation evidence at publication, a role upgrade that is never silent, modeled on the visible-series-break rule of the two-channel probe protocol. Each artifact's role is declared in the layer's index; the intervention timeline is placed as the baseline's methods companion and the external-literature note as reporting others' evidence at the strength the cited literature itself claims. Declining the validation role does not weaken the standing rule that empirical observation may revise normative decisions: prompting a revision requires only a preliminary observation — the strength the failure-mode diagnostics already run on — while validating the framework would require evidence from an artifact designed as an experiment, which the layer does not claim to hold. The preliminary-observation tone remains the floor under everything the layer asserts.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0023-empirical-layer-role.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0011",
+        "https://github.com/shimo4228/authorship-strategy#adr/0014",
+        "https://github.com/shimo4228/authorship-strategy#adr/0017",
+        "https://github.com/shimo4228/authorship-strategy#adr/0022"
+      ]
+    },
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
@@ -806,7 +820,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy-skill",
       "@type": "EcosystemRepo",
       "name": "authorship-strategy-skill",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty-two ADRs.",
+      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty-three ADRs.",
       "url": "https://github.com/shimo4228/authorship-strategy-skill",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

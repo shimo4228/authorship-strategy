@@ -32,6 +32,7 @@ top-down に prescribe されたものではない。
 | [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub | accepted |
 | [0021](0021-self-sovereign-entity-grounding.ja.md) | self-sovereign な entity grounding —— community 統治の authority record は foundation でなく revocable な layer である | accepted |
 | [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める | accepted |
+| [0023](0023-empirical-layer-role.ja.md) | empirical layer の role —— reference baseline を primary role とし、case-study narrative を限定し、validation evidence は明示的設計によってのみ | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -141,8 +142,8 @@ normative/empirical 分離) は、それを planning 面として兼用するこ
 status・ランク付き candidate intervention・作業詳細を持ち、public timeline は
 その日付付き・効果主張なしの投影となる。定期 gap-review が deploy 済み tactic
 を Layer 4 catalog と manifesto の open questions に突き合わせて次の提案を生む
-—— empirical 層の役割と framework の自己再帰的適用についての open question に
-関わる self-application である。review 手順は framework の operational skill に
+—— empirical 層の役割 (ADR-0023 で決着) と framework の自己再帰的適用に
+ついての open question に関わる self-application である。review 手順は framework の operational skill に
 置き、配線 (どの artifact が本 program の ledger と timeline か) だけが
 project 固有である。
 
@@ -265,6 +266,30 @@ platform は安全ガードと aggregate-pattern test の下で non-load-bearing
 の routing は不変 (ADR-0015/0016)。ADR-0007 の scope を clause 単位で
 amend し、manifesto の 11 番目の open question —— 二層の動機 portfolio
 は層間汚染に耐えるか —— を開く。
+
+ADR-0023 は **empirical-layer-role decision** である: manifesto の
+7 番目の open question —— empirical layer は validation evidence /
+reference baseline / case study のどれとして機能するか —— を、意図的
+hybrid をどれか 1 つに潰すのではなく構造化することで閉じる。3 つの
+候補 role の違いは内容よりも layer が主張することになる claim の強さ
+にあり、記録されていた曖昧さの実害は、どの artifact も自分がどれほど
+強い claim を立てているかを宣言していなかったことにある。reference
+baseline が primary role かつ全 artifact の最低要件になる (再現可能な
+data または日付付き record、文書化された method、明示された
+limitations)。case-study narrative は限定された secondary role ——
+特定 artifact に付随し、解釈と明示され、効果主張には決して昇格しない。
+validation evidence は、事前に実験として設計され公開時に validation
+evidence と明示的に指定された artifact が現れない限り layer が主張
+しない role である —— 無言では起きない role 昇格であり、ADR-0011 の
+visible series break を model とする。各 artifact の role は empirical
+layer の index で宣言され、intervention timeline は baseline の
+methods companion として、external-literature note は引用文献自身が
+主張する強さのままの他者の evidence として位置づけられる。validation
+role の辞退は「証拠が原則を改訂しうる」flow に触れない: preliminary
+observation —— ADR-0017 の diagnostics が走る強さ —— は normative な
+改訂を trigger するのに引き続き十分であり、framework を validate する
+には実験として設計された artifact による evidence を要するが、layer は
+それを持つと主張しない。
 
 ## Format
 

@@ -165,6 +165,20 @@ of reference baseline and case study. Whether to formalize it as
 one or the other is an open question; the current ambiguity is
 acknowledged and intentional, given the limited time series.
 
+> **Status (2026-08-12): answered by
+> [ADR-0023](adr/0023-empirical-layer-role.md).** The hybrid was
+> formalized by structure rather than collapsed to one role:
+> reference baseline is the layer's primary role and the minimum
+> every artifact must satisfy; case-study narrative is a bounded
+> secondary role attached to specific artifacts and marked as
+> interpretation; validation evidence is a role the layer declines
+> to claim unless an artifact is designed as an experiment before
+> the fact and explicitly designated as such at publication. The
+> deferral rationale ("given the limited time series") was found
+> not to bind — the three roles differ in the strength of the
+> claim the layer asserts, not in the amount of data it holds. The question
+> is retained here for the record of how it was posed.
+
 ## Open question 8: What is the framework's failure mode?
 
 The framework's strongest commitment — that the strongest

@@ -32,6 +32,7 @@ research ecosystem, not prescribed top-down.
 | [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs | accepted |
 | [0021](0021-self-sovereign-entity-grounding.md) | Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation | accepted |
 | [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics | accepted |
+| [0023](0023-empirical-layer-role.md) | Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -157,7 +158,8 @@ dated, effect-claim-free projection. A periodic gap-review compares
 deployed tactics against the Layer 4 catalog and the manifesto's open
 questions to generate the next proposals — a self-application of the
 framework that bears on the open questions about the empirical layer's
-role and the framework's recursive application to itself. The review
+role (settled by ADR-0023) and the framework's recursive application to
+itself. The review
 procedure lives in the framework's operational skill; only the wiring
 (which artifacts are this program's ledger and timeline) is project-specific.
 
@@ -295,6 +297,32 @@ aggregate-pattern test (ADR-0021), and license and canonical routing
 are untouched (ADR-0015/0016). It amends ADR-0007's scope clause by
 clause and opens the manifesto's eleventh open question: whether a
 two-layer motivation portfolio resists cross-layer contamination.
+
+ADR-0023 is the **empirical-layer-role decision**: it closes the
+manifesto's seventh open question — whether the empirical layer
+functions as validation evidence, reference baseline, or case study —
+by structuring the layer's intentional hybrid rather than collapsing
+it. The three candidate roles differ less in content than in the
+strength of the claim the layer would assert, and the recorded
+ambiguity meant no artifact declared how strong a claim it was making.
+Reference baseline becomes the primary role and the minimum every
+artifact must satisfy (reproducible data or a dated record, a
+documented method, stated limitations); case-study narrative is a
+bounded secondary role, attached to specific artifacts and marked as
+interpretation, never elevated into effect claims; validation evidence
+is declined unless an artifact was designed as an experiment before
+the fact and is explicitly designated as validation evidence at
+publication — a role upgrade that is never silent, modeled on
+ADR-0011's visible series break. Each artifact's role is declared in
+the empirical layer's index, the intervention timeline is placed as
+the baseline's methods companion, and the external-literature note
+reports others' evidence at the strength the cited literature itself
+claims. Declining the validation role leaves the
+evidence-revises-principles flow untouched: a preliminary observation
+— the strength ADR-0017's diagnostics run on — remains sufficient to
+trigger normative revision, while validating the framework would
+require evidence from an artifact designed as an experiment, which
+the layer does not claim to hold.
 
 ## Format
 

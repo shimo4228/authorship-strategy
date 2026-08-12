@@ -18,10 +18,20 @@ what limitations make the patterns difficult to elevate from
 *observation* to *evidence*.
 
 A reader looking for evidence that the framework's tactics work as
-described should read the empirical layer as a *case study with
-explicit limitations*, not as a quantitative validation. Subsequent
-releases may add experiment-style sections as longer time series
-accumulate and as adopting authors contribute replication data.
+described will not find it here: no artifact in this layer claims to
+validate the framework. Where an artifact carries interpretive notes,
+they are case-study narrative bounded to that artifact and marked as
+interpretation — never a quantitative validation. The layer's roles
+are formalized in
+[ADR-0023](../adr/0023-empirical-layer-role.md): reference baseline
+is the primary role and the minimum every artifact must satisfy
+(reproducible data or a dated record, a documented method, stated
+limitations); case-study narrative is a bounded secondary role; and
+validation evidence is claimed only by an artifact designed as an
+experiment before the fact and explicitly designated as such at
+publication. Subsequent releases may add such experiment-designed
+sections as longer time series accumulate and as adopting authors
+contribute replication data.
 
 ## Method
 
@@ -109,10 +119,15 @@ remain the only pre-protocol observations.
 
 ## What the layer contains
 
-- **[`traffic-baseline-2026-05.md`](traffic-baseline-2026-05.md)** — the per-repository baseline summary for the twenty-four-day data window. Cumulative clones, unique cloners, views, unique viewers, and clone/view ratio per repository, with brief interpretive notes flagging the cross-repository patterns the author finds noteworthy.
-- **[`neologism-survival-2026-06.md`](neologism-survival-2026-06.md)** — an external-literature note (a different genre from the traffic baseline: external publications, not ecosystem data) on when coined words survive LLM processing. Reads the 2024–2026 neology-and-LLM literature (NEO-BENCH, neologism learning and machine-only synonyms, the NeoLLM2026 workshop) against ADR-0010's premises, records the human-model anchor-correspondence open question, and changes nothing normative.
-- **[`probe-baseline-2026-06.md`](probe-baseline-2026-06.md)** — first run of the ADR-0011 two-channel probe protocol. Establishes the parametric channel's pre-intervention zero baseline (over-determined by training cutoffs), a clean negative-control floor, and the first per-provider retrieval observations (one full attribution via owned artifacts including the AI-facing entry point; citation-selection losses elsewhere). Raw data lives in the federation hub's `probes/` directory (CC0).
-- **[`implementation-log.md`](implementation-log.md)** — an intervention timeline (a different genre again: neither traffic data nor external literature, but a record of the author's own actions). Records *which* of the framework's tactics were deployed and *when*, grouped by the layer they operationalize. It is the methods companion the *no pre-versus-post intervention comparison* limitation calls for: it supplies the intervention dates a future contrast would need to align an observed change against. It makes no effect claim, and closes with the manifesto's Open Question 5 (recursive self-application) stated rather than hidden.
+Per [ADR-0023](../adr/0023-empirical-layer-role.md), each artifact
+declares the role it serves — baseline data, interpretive note,
+intervention record, or external-literature note — so a reader meets
+the strength of the claim before the content.
+
+- **[`traffic-baseline-2026-05.md`](traffic-baseline-2026-05.md)** — *role: baseline data, with bounded interpretive notes.* The per-repository baseline summary for the twenty-four-day data window. Cumulative clones, unique cloners, views, unique viewers, and clone/view ratio per repository, with brief interpretive notes flagging the cross-repository patterns the author finds noteworthy.
+- **[`neologism-survival-2026-06.md`](neologism-survival-2026-06.md)** — *role: external-literature note.* A different genre from the traffic baseline (external publications, not ecosystem data), reporting others' evidence at the strength the cited literature itself claims: when coined words survive LLM processing. Reads the 2024–2026 neology-and-LLM literature (NEO-BENCH, neologism learning and machine-only synonyms, the NeoLLM2026 workshop) against ADR-0010's premises, records the human-model anchor-correspondence open question, and changes nothing normative.
+- **[`probe-baseline-2026-06.md`](probe-baseline-2026-06.md)** — *role: baseline data (instrument output).* First run of the ADR-0011 two-channel probe protocol. Establishes the parametric channel's pre-intervention zero baseline (over-determined by training cutoffs), a clean negative-control floor, and the first per-provider retrieval observations (one full attribution via owned artifacts including the AI-facing entry point; citation-selection losses elsewhere). The protocol's rules were fixed in advance, but no test of a normative claim was specified before the data, so the output enters as baseline data, not validation evidence (ADR-0023, Decision 3). Raw data lives in the federation hub's `probes/` directory (CC0).
+- **[`implementation-log.md`](implementation-log.md)** — *role: intervention record.* An intervention timeline (a different genre again: neither traffic data nor external literature, but a record of the author's own actions). Records *which* of the framework's tactics were deployed and *when*, grouped by the layer they operationalize. It is the methods companion the *no pre-versus-post intervention comparison* limitation calls for: it supplies the intervention dates a future contrast would need to align an observed change against. It makes no effect claim, and closes with the manifesto's Open Question 5 (recursive self-application) stated rather than hidden.
 
 The layer is intentionally small at v0.1.0. Subsequent releases will
 add: pre-versus-post intervention contrasts where the data permits;
