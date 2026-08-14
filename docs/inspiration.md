@@ -448,6 +448,37 @@ knowledge graph carry the qualitative mechanism only.
   state between enclosure and openness, recorded as a tension against
   the enclosure-to-openness axis rather than an adopted position.
 
+### AI-involvement disclosure vocabularies (2026)
+
+- *A Faceted Proposal for Transparent Attribution of AI-Assisted Text
+  Production* (Xexéo, arXiv:2604.25346) proposes segment-level faceted
+  description of AI involvement and, more usefully for this framework,
+  surveys the field it enters: it names AID, DAISY, GAIDeT, AIAS,
+  C2PA, CRediT, COPE, Model Cards, and Datasheets as coexisting
+  disclosure vocabularies, and diagnoses current publisher practice as
+  resting on narrative declarations rather than structured
+  description. Read against open question 10's sufficiency gap, this
+  relocates the problem: what a depositing author lacks in 2026 is not
+  a vocabulary for evidencing human direction but an authoritative
+  one.
+- *AICID: Unique Identifiers for AI Scientists* (Vidal & Monperrus,
+  arXiv:2606.28756) approaches the same blank from the identifier
+  side, proposing persistent identifiers for non-human contributors
+  modeled on the author-identifier layer this framework already uses.
+  Recorded as a type distinction, not a tactic: the framework's
+  position — matching the depositor policies open question 10
+  records — is that the model is an instrument, not a contributor to
+  be identified.
+- A standardization process convened by research-integrity bodies (the
+  consultation toward a shared reporting standard for AI disclosure in
+  research, 2026) is attempting to converge the proliferation into a
+  CRediT-like common vocabulary, with its taxonomy-setting
+  consultation round open to individual submissions through late 2026.
+  Whether registry and preprint hosts outside formal scholarly
+  publishing would adopt such a standard — and thus whether it would
+  close open question 10's sufficiency gap for depositors like this
+  program's author — is unresolved.
+
 ## Sibling research lines (the recurring decisions)
 
 The framework was extracted from four sibling research lines

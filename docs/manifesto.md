@@ -337,7 +337,18 @@ Open questions:
   metadata makes that trail reachable; whether it reads as sufficient
   belongs to the host. Accurate self-description is necessary and may
   not be sufficient — and the framework has no answer for the gap
-  between the two.
+  between the two. As of mid-2026 the shape of that gap has shifted:
+  the missing piece is no longer a vocabulary for stating human
+  direction but an authoritative one. Structured disclosure
+  taxonomies for AI involvement have proliferated — at least eight
+  proposed within months of one another, largely without citing each
+  other — while publisher practice continues to rest on narrative
+  declarations, and a consultation convened by research-integrity
+  bodies has opened its taxonomy-setting round to individual
+  submissions. Until one vocabulary carries authority, a
+  role-differentiated narrative declaration remains the defensible
+  form; committing early to any single taxonomy is itself a Layer 4
+  bet subject to the time-to-obsolescence question of open question 3.
 - Open question 9 asks whether the grounding can be *acquired*. This
   asks whether it can be *kept*. Both are the same authority-gating
   seen at opposite ends of an artifact's life, which raises whether
