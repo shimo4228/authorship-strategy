@@ -19,6 +19,11 @@ Language: [English](0006-llm-first-ingest-dual-entry-points.md) | 日本語
 >示す。ADR-0009 は両 surface を retain しつつ役割を非対称にする —— 現在の
 > weighting はそちらを参照。
 
+> **2026-08-19:** ADR-0009 が改訂された —— structured graph の success
+> criterion は検討対象集合への到達 / エンティティ解決となり、検索時の
+> citation lift は主張されない; 非対称と現在の weighting の方向は不変。
+> 上の banner は日付つき履歴として残す。
+
 ## Status
 accepted
 

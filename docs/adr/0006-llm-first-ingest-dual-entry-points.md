@@ -20,6 +20,12 @@ Language: English | [日本語](0006-llm-first-ingest-dual-entry-points.ja.md)
 > effect is noise. ADR-0009 retains both surfaces but makes their roles
 > asymmetric — see it for the current weighting.
 
+> **2026-08-19:** ADR-0009 was revised — the structured graph's success
+> criterion is now consideration-set entry / entity resolution, and no
+> retrieval-time citation lift is claimed for it; the asymmetry and the
+> current weighting are unchanged in direction. The banner above is kept
+> as dated history.
+
 ## Status
 accepted
 
