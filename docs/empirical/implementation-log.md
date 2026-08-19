@@ -58,6 +58,7 @@ for a future pre-versus-post contrast.
 | Cross-platform dataset-mirror of the graph for training-pipeline ingest | follows the graph deployment, 2026-05-15 onward (see the dataset-mirroring row above) | ADR-0003 |
 | Simplified-Chinese machine-readable anchor on the concept graph (language-tagged concept labels plus a glossary term mapping; prose surfaces remain English/Japanese only) | 2026-06-13 | multilingual tactic, machine-readable layer |
 | The ecosystem hub's full concept graph mirrored into a `<script type="application/ld+json">` block on the hub's traffic dashboard — an already-indexed served page — closing the gap between the graph existing as a repository file and the graph being embedded in markup a crawler actually renders | 2026-07-01 | ADR-0006, ADR-0009 |
+| A sibling research line's served viewer page — a client-rendered concept-graph viewer whose delivered markup carries no content — extended to inject that line's canonical concept graph into the served page's head as structured data at build time; a second instance of closing the same repository-file-versus-rendered-markup gap | 2026-07-01 | ADR-0006, ADR-0009; manifesto OQ8 |
 
 ### Citation graph and scholarly surface (ADRs 0002, 0008)
 
@@ -108,6 +109,7 @@ above remain pull-only as recorded.
 | Author-profile surfaces on developer-publishing and newsletter platforms edited to route readers back to the hub and ORCID, and the cross-surface author handle and display name unified to a single canonical form (complementing the 2026-06-15 machine-layer `sameAs` federation) | 2026-06-25 | citation-graph federation / entity tactic; manifesto OQ8–9 |
 | Essay-corpus repository de-islanded: ecosystem-hub, author-identifier, and sibling-line back-links added at the repository surface — the human-facing READMEs (English and Japanese), the AI-facing navigator, and the citation metadata — routing a reader or non-rendering crawler from the bilingual essay corpus back to the ecosystem | 2026-06-25 | ADR-0016; manifesto OQ8 |
 | Essay-corpus repository's source-hosting metadata surface edited to route discovery back to the ecosystem: the repository description rewritten to the governed-corpus framing, the website link pointed at the ecosystem hub, and the discovery topics expanded so a reader arriving through host search or topic browse reaches the hub | 2026-06-25 | manifesto OQ8 |
+| A single coined term naming the vertical axis that runs through the whole ecosystem, together with a one-sentence author statement, raised in step across the ecosystem hub and the author's identity surfaces — the hub READMEs in both languages, the hub's AI-facing navigator, a hub-defined concept node in the hub's knowledge graph, and the author's source-host profile and persistent-researcher-identifier profile. This is a naming and identity unification, not the opening of a new channel | 2026-07-03–04 | entity federation tactic; manifesto OQ9 |
 
 ### Search-index surface (defensive query routing; ADR-0007 diagnostics-not-targets)
 
@@ -126,6 +128,24 @@ target, per the metric-rejection decision (ADR-0007).
 | Sitemap published for the hub's served pages; site ownership verified on a major search console and the sitemap submitted; a cross-engine URL-notification protocol key deployed and all served URLs submitted through it | 2026-07-02 | ADR-0007 (diagnostics, not targets) |
 | Cross-language canonical correction on the developer-publishing platform: twenty-seven English translations that had been canonicalized to their Japanese originals made self-canonical, so each language surface indexes independently | 2026-07-02 | — |
 | Source-hosting metadata aligned across eight ecosystem repositories: descriptions rewritten to carry the coined line names in full, discovery topics added where absent, and homepage links set — extending the 2026-06-25 essay-corpus de-islanding to the whole ecosystem | 2026-07-02 | upstream-anchoring follow-up to the synthetic-wiki drift observation (ADR-0020 Lineage) |
+
+### Third-party AI-derived repository surfaces (ADR-0020)
+
+A further class of surface is *derived* from a repository by a third
+party rather than published by the author: a **synthetic wiki** that
+paraphrases the repository behind a conversational query interface, and
+a **documentation hub** that serves the repository's own
+machine-readable files verbatim through a model-callable interface.
+Onboarding to both types, and the per-type discipline that governs them,
+is recorded in ADR-0020. The second row records that one of the two
+types was later withdrawn from this ecosystem; as everywhere in this
+log, it is a record of an action and its date, not a claim about what
+the surface is worth to anyone else.
+
+| Intervention | Date | Recorded in |
+|---|---|---|
+| Badges for both derived-surface types adopted together on the front page of every idea-bearing repository in the ecosystem, blessing the derived views rather than gating them: the synthetic wiki's index build started by a manual per-repository submission, the documentation hub requiring no configuration | 2026-06-28 | ADR-0020 |
+| Documentation-hub badge withdrawn from every repository. The access counter adopted alongside it as a measurement signal returned zero on every repository and on the controls checked (the service's own repository, and large open-source projects), no inbound referral from the surface appeared in the host's referrer data, and repeated probes a month apart found the surface's semantic-search layer not operating. The synthetic-wiki badge stands | 2026-08-19 | ADR-0020 (documentation-hub type retired by measurement; see its Status note) |
 
 ### AI-native preprint platforms (agent-reviewed, agent-readable submission surfaces)
 

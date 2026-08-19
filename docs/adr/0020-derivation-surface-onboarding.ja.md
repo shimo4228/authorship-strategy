@@ -21,7 +21,11 @@ Language: [English](0020-derivation-surface-onboarding.md) | 日本語
 > origin claim は派生面でなく identifier-federation 層に固定したままにする。
 
 ## Status
-accepted
+accepted —— 2026-08-19: 測定の結果、documentation hub 型 (型 b) は本
+ecosystem では retire した —— access counter が全 repository と確認した
+対照群で機能せず、当該 surface からの流入も観測されず、30 日離れた 2 回の
+probe で semantic search 層の不在が確定した。synthetic wiki 型 (型 a) は
+不変。以下の本文は日付つきの履歴として保存する。
 
 ## Date
 2026-06-28

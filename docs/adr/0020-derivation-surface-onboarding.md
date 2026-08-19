@@ -24,7 +24,13 @@ Language: English | [日本語](0020-derivation-surface-onboarding.ja.md)
 > any derived surface.
 
 ## Status
-accepted
+accepted — 2026-08-19: the documentation-hub surface type (type b) was
+retired for this ecosystem after measurement — its access counter was
+non-functional across all repositories and across the controls checked,
+no inbound referral from the surface appeared, and two probes thirty
+days apart confirmed the semantic-search layer absent. The
+synthetic-wiki type (type a) stands unchanged. The body below is
+preserved as dated history.
 
 ## Date
 2026-06-28
