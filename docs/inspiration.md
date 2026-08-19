@@ -361,11 +361,56 @@ knowledge graph carry the qualitative mechanism only.
 - *A Comparative Analysis of LLM Memorization at Statistical and
   Internal Levels* (Chen, Han and Miyao, arXiv:2603.21658) finds
   memorization statistics follow cross-family regularities while the
-  internal head-level placement of memorization is family-specific —
-  so cross-model probe comparisons hold at the statistical level, but
-  per-family calibration and re-calibration across model generations
-  are required, and frontier models whose internals are closed can
-  only be calibrated behaviorally.
+  internal head-level placement of memorization is family-specific
+  and shaped by each family's training recipe — so cross-model probe
+  comparisons hold at the statistical level, but readings are
+  stratified per family (ADR-0011 Annex A.1). The layer-importance
+  similarity figures are family-bound: the average within-family
+  similarity "close to 0.9" is reported for the Pythia series only,
+  other families are lower, and the OLMo 1/2/3 series shows similarity
+  *across* its generations ("inherited training DNA") — a counterexample
+  to any blanket rule that a generation change resets memorization
+  structure, which is why the annex re-baselines on generation change
+  as a check rather than a presumed break. The paper's stated
+  limitation is data access — its internal analysis needs open weights
+  and disclosed pre-training data, which most prominent open models do
+  not release; that closed frontier models can therefore be calibrated
+  only behaviorally is this framework's own boundary statement, not a
+  finding of the paper.
+- *LLM-Metrics: Measuring Research Impact Through Large Language Model
+  Memory* (Shen, Zhao and Zhu, arXiv:2605.22176) probes seventeen
+  models from six providers with 10,180 multiple-choice recognition
+  probes over 549 computer-science papers and correlates each model's
+  memory score with citation counts: overall Spearman ρ = 0.1495
+  (p = 0.0004), but per model the ρ ranges from −0.048 to 0.183 (§4.1,
+  Fig. 3; 15 of 17 positive, 9 significant) — the model chosen moves
+  the headline, which is the external-validity reason Annex A.1
+  stratifies across families. The same study's pairwise model agreement
+  has mean r = 0.44 (range 0.12–0.78), higher within a provider's
+  series (r = 0.62 for the four-model LLaMA-3 series, 0.50 for the
+  seven-model Qwen2.5 series) than across providers (r = 0.40) — an
+  internal-to-external echo of the family-specific signature above,
+  reached by a different method. Probe
+  types differ in discriminative power, author recognition strongest and
+  method–paper association weakest (Table 6); all probes are
+  multiple-choice, open-ended recall is listed as future work (§5.5,
+  §5.6) — the basis for Annex A.4's declare-don't-convert rule. The
+  authors state a fairness caveat rather than a correction: author
+  prestige, institutional visibility, and topic popularity are part of
+  the exposure process the metric is designed to capture (§4.4, §5.5).
+- *Probing for Knowledge Attribution in Large Language Models* (Brink,
+  Boer and Ulmer, arXiv:2602.22787; cited above for the two-source
+  split) also supplies the unequal error risk of the two override
+  directions read in Annex A.3. In a
+  two-by-two analysis of attribution mismatch against error (Fisher's
+  exact test, relative risk as effect size; §4, prose only), relying on
+  misleading context when parametric knowledge is required raises error
+  risk by up to ≈70%, whereas defaulting to parametric memory when
+  context should govern raises it by only ≈30%; when both channels can
+  answer, the models default to context 87.1% of the time. The figures
+  are relative risks, not error rates, measured on three 7–8B
+  open-weight models with reading-comprehension contexts — the
+  framework imports the direction, not the magnitude.
 - *Memory Dial* (Zhang and Emami, arXiv:2604.05074) makes memorization
   pressure a tunable training variable: sufficiently high pressure
   forces verbatim retention even of single-occurrence sequences. This

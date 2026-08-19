@@ -17,7 +17,8 @@ Language: [English](0011-two-channel-probe-protocol.md) | 日本語
 
 ## Status
 **experimental** — 運用開始済み。core rule の改訂なしに定期 run を 3 回
-生き延びた時点で `accepted` に確定する。
+生き延びた時点で `accepted` に確定する。Annex A (2026-08-19) は校正の
+*読みルール* を core rule の上に追加するもので、core rule 自体は改訂しない。
 
 ## Date
 2026-06-12
@@ -219,3 +220,137 @@ cost ceiling つき手動 run) は harness の prototype-before-scale rule に
 citation を rich な author card として描画するようになったとき、
 prose-only naming は基準として厳しすぎないか——は、ここでは解決せず
 probe データの documentation に記録する。
+
+## Annex A — probe 読みの校正 (2026-08-19 追加)
+
+本 annex は protocol の出力を *どう読むか* を定める。足すのは読み方の
+ルールであって成功基準ではない: **以下の各ルールは診断の目盛りであり、
+決して success metric ではない —— 本 ADR 本文を拘束する ADR-0007 bound は
+例外なく本 annex も拘束する。** いずれのルールも、prompt テンプレートと
+その単一変数規則・決定論的検出・raw 保持・series break をどう刻むか・run
+がいつ発火するか —— Decision の core rule —— を変えない。既存の出力を
+どう群化し、どの順で、どう読むかを足すだけである。読みルールの出力 (宣言
+された probe 形式、run ごとの floor、反転記録) の記録が record schema を
+拡張する場合、その拡張は versioned prompt set と共に可視の series break
+として移動する —— Decision 自身の機構の適用であって、その改訂ではない。
+本日以前に公開された読みは公開されたまま残す; それらを本ルールで読み
+直すことは保持 raw response に対する再採点であって、記録の改訂ではない。
+根拠文献の数値は
+[`docs/inspiration.md`](../inspiration.md) に隔離し、本 annex は
+メカニズムと読みへの帰結だけを持つ。
+
+### A.1 読みを model family で層化する; 単一の cross-model 閾値を報告しない
+
+- panel は既に複数の model family にまたがる; その読みを family 単位で
+  層化する。family 内一貫性を cross-family 比較と *並記* し、全モデルを
+  それに対して読む単一の閾値へ 2 つを潰さない。
+- 根拠。cross-family の記憶比較は、記憶の *統計* が family 横断の規則性に
+  従う一方で、記憶の内部配置は family 固有で各 family の訓練レシピに
+  形作られることを見出す —— 共有される統計こそが cross-model probing を
+  そもそも意味あるものにし、family 固有の内部こそが読みを family 単位に
+  する理由である。独立に、多数のモデルにわたる memory-score 研究は、
+  モデル間の pairwise 一致が同一 provider の系列内で provider 間より高いこと、
+  そしてモデルの選択が、同研究が memory score と被引用数の間に報告する
+  相関を大きく動かすことを見出す —— モデル間の散らばりであって
+  信頼性の数値ではない。したがって本 protocol は単一モデルの読みを panel
+  に対して外的妥当性を持たないものとして扱う。
+- 世代交代。世代交代は常に series break として記録する (Decision: 可視の
+  series break); この規則は不変である。本 annex が足すのは break を
+  *越えて* 読みをどう引き継ぐかである: family の記憶構造がリセットされた
+  と前提しない —— 公開資料のある一つの系列では世代を越えて継承されて
+  いることが観測された —— し、持続したとも前提しない。新世代でその
+  family の読みを再校正し、旧世代と比較する; 連続も不連続も検証する
+  のであって、仮定しない。
+- 本 protocol の境界。根拠文献の内部 (white-box) family 分析は open
+  weights と公開された pre-training data を前提とする。本 program の panel
+  は大半が closed-weight であるため、ここでの family 校正は構造上
+  behavioral である —— protocol が自らのものとして述べる近似であって、
+  文献に帰属する発見ではない。
+
+### A.2 negative control を先に測り、working noise floor として対照して読む
+
+- 毎 run、固有語の rate を読む前に、その run が発火させる arm について
+  虚偽語 negative control の confabulation 率を測り、その run の working
+  noise floor として記録する —— model ごと・arm ごとに。floor は検索抑制と
+  検索有効の設定で異なる (Decision 第 3 項の grounded-confabulation
+  control)。scheduling は不変である: parametric arm の floor は parametric
+  set が発火したときに測られ、その model snapshot と共に、ペアになる
+  すべての retrieval run へ引き継がれる (チャネル整合 scheduling)。
+- program 固有の語はその floor からの距離として読み、決して絶対値として
+  読まない。floor と区別できない固有語 rate は *弱い信号* ではなく
+  *信号なし* と読む —— ここでの「区別できない」は各読みと共に記録される
+  判断であって、計算されるテストではない。
+- Decision は negative control を prompt 設計のルールとして既に設置して
+  いる。本 annex はその読み順での位置と scope (run ごと・model ごと・arm
+  ごと) を固定する。floor は読みの補助線であって合格線ではない。
+
+### A.3 2 つの上書き方向が不等なエラーリスクを持つことを踏まえて A/B 差分を読む
+
+- 知識帰属の white-box 証拠は 2 つのエラー方向が等しくないことを見出す:
+  課題が parametric 知識を要するのにモデルが誤導的 context に寄りかかる
+  とき、エラーリスクの増分は逆方向 —— context が支配すべき設定でモデルが
+  記憶に既定する場合 —— よりはるかに大きい。
+- 読みへの帰結。retrieval arm が parametric arm に対して得るものと失う
+  ものは対称でない。parametric arm が名指しできなかった著者を retrieval
+  arm が名指しするのは期待される方向 (weights に欠けたものを context が
+  供給した); parametric arm が産出した名前を retrieval arm が *失う* 方が
+  より診断的な event である —— 取得された context が、weights が産出して
+  いた何か (negative control が思い出させるとおり、それ自体 confabulation
+  でありえたもの) を押しのけた。こうした反転は集約差分とは別に記録し、
+  正しい記憶が上書きされた証拠としてではなく、押しのけの方向として読む。
+- 境界。根拠となる測度は relative risk —— 帰属と課題がずれたときのエラー
+  リスクの増分 —— であってエラー率ではなく、短い供給 context を与えた
+  小規模 open-weight モデルで測られたもので、取得 context が誤導的とは
+  限らない検索有効の frontier assistant で測られたものではない。本 annex
+  が輸入するのは *方向* であって大きさではない。
+
+### A.4 各 probe を recognition か recall かで宣言する; 両者の rate を合算しない
+
+- すべての probe はその形式を宣言する: *recognition* —— モデルが提示
+  された候補から選ぶ —— か、*recall* —— 候補を与えられず、モデルが cue
+  から概念または著者名を産出する —— か。2 形式の rate は別々に記録し、
+  決して合算しない。(概念の実在を前提する cue は negative control が測る
+  誘導質問 bias であって、probe を recognition にはしない。)
+- protocol の現行 probe はすべて cued recall である (概念が名指しされ、
+  著者を産出しなければならない); 多肢選択のものはない。根拠となる
+  memory-score 研究は recognition のみを実装し、自由生成の recall を
+  future work として記録する。つまり 2 形式は文献上まだ比較可能ではない
+  —— 宣言する理由であって、変換する理由ではない。同研究は自身の probe
+  種別で弁別力が異なり author recognition が最強であることも見出す ——
+  同研究自身の probe 種別間の順序であり、Decision が既に *author named*
+  と *project named* を分けていることと整合する (その理由ではない)。
+  両者はここでも別々に読まれる。
+
+### すべての読みに乗る交絡、および bound
+
+- **威信と可視性.** モデルがある source について保持するものは露出 ——
+  著者の知名度、機関の可視性、topic の人気 —— を反映し、source の内容
+  だけを反映するのではない。根拠となる memory-score 研究はこれらを測定
+  対象である露出過程の一部として扱い、補正ではなく fairness-aware な解釈
+  を求める; 本 protocol も同じくし、補正項を導入しない。したがって機関的
+  後ろ盾のない著者にとって低い読みは *拡散していない* と *拡散したが
+  目立っていない* の間で曖昧であり、曖昧なものとして読む。
+- **自己汚染** (Consequences) は本文に適用されるとおり本 annex にも適用
+  される: 公開されたルール自体が将来のモデルが取り込むものの一部になる。
+- **追加の負荷と薄くなるセル.** Decision 第 3 項が既に許す negative-
+  control call は発火した arm ごとの常設になり、反転記録が集約差分の隣に
+  保持され、rate は決して合算しない recognition / recall セルに分かれる
+  —— per-run cost ceiling (Consequences: 新たな常設コスト) の下での call
+  増と、既に N=1 の program におけるセルあたり観測数の減少である。
+- **ADR-0017 との関係.** ADR-0017 の reach-without-recognition 検出器は
+  本 protocol の naming probe を読む; 検出器は不変だが、その読みは今や
+  floor 相対・family 単位・上の威信交絡の下で曖昧になる —— 信号は failure
+  mode 以外の理由でも発火しうるのであり、それを踏まえて読む。
+- **Bound.** これらは experimental な測定器のための診断の読みルールで
+  あって、success metric ではなく、いかなる主張の閾値でもない
+  (ADR-0007)。empirical layer の常設 limitations の下で、ADR-0023 が同層に
+  与える役割において preliminary observation を産出する。根拠 preprint が
+  改訂・撤回されたとき、または panel が open-weight family を得て A.1 の
+  behavioral 境界が全面的でなく部分的になったときに、これらのルールを
+  見直す。
+
+根拠 (Lineage の慣例に従いここで名指しする): cross-family 記憶比較
+(arXiv:2603.21658)、多モデル memory-score 研究 (arXiv:2605.22176)、
+white-box 知識帰属 probe (arXiv:2602.22787)。3 本とも読んだ時点
+(2026-08) では未査読の preprint である; 数値はすべて `docs/inspiration.md`
+に隔離する。
