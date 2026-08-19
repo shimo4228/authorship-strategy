@@ -268,7 +268,15 @@ string matching against a versioned lexicon over retained raw responses,
 never model judging; prompts are fixed single-variable templates; a
 negative-control probe quantifies the confabulation noise floor. The
 retrieval channel runs on a fast calendar cadence; the parametric
-channel is event-driven on model-generation changes.
+channel is event-driven on model-generation changes. Annex A
+(2026-08-19) adds calibration reading rules on top of the core rules:
+readings are stratified by model family with within-family consistency
+reported beside cross-family comparison and no single cross-model
+threshold; the negative control is measured first per fired arm as the
+run's working noise floor; the A/B delta is read knowing the two
+override directions carry unequal error risk; and every probe declares
+itself recognition or recall, with no pooling across the two. The rules
+are diagnostics bound by ADR-0007, never success metrics.
 
 **ADR-0012 Link-Index Contributions to External Collections.**
 Applies the enclosure axis to channel selection for external curated
