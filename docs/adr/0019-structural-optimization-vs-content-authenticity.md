@@ -37,8 +37,9 @@ continues to bind in both layers.
 ## Context
 
 The framework's tactical layer ships a structured, machine-readable
-companion artifact whose entities and relationships are encoded for
-retrieval-time citation (ADR-0009). The 2026 structured-data efficacy
+companion artifact whose entities and relationships are encoded for the
+retrieval channel — consideration-set entry and entity resolution, per
+ADR-0009 as revised 2026-08-19. The 2026 structured-data efficacy
 literature — the strand recorded in
 [inspiration.md](../inspiration.md) — measures whether that kind of
 artifact actually earns AI-retrieval citation, and its answer is
@@ -225,7 +226,9 @@ in that lineage document, not in this body. The object-of-optimization
 boundary and the optimize-the-path-not-the-content rule are the normative
 content; the specific literature and the specific structured artifact are
 current instances. This decision extends ADR-0009 (the structured graph as
-the citation lever this tactic optimizes), ADR-0010 (anchor-densely as the
+the entry point this tactic optimizes — for consideration-set entry and
+entity resolution, per its 2026-08-19 revision, not for citation lift),
+ADR-0010 (anchor-densely as the
 vocabulary-side form of the same legitimate move), and ADR-0007 (citation
 and visibility are not success metrics, which is what makes deforming
 content to score goalless), and sits beneath Layer 1 (authenticity, the value the boundary

@@ -216,8 +216,9 @@ content; the specific platforms are current instances. This decision
 complements ADR-0015 (license by audience) and instantiates ADR-0013's
 DOI-impractical-genre clause, anchored to ADR-0001 (concept-DOI canonical),
 ADR-0005 (audience-driven localization of the bilingual corpus), ADR-0009
-(the structured graph as the citation lever the federation binding relies
-on), ADR-0010 (distinctive vocabulary as a binding edge that survives
+(the structured graph as the registration surface the federation binding
+relies on — consideration-set entry and entity resolution, per its
+2026-08-19 revision), ADR-0010 (distinctive vocabulary as a binding edge that survives
 paraphrase), Layer 3 (idea-versus-scaffold separation, governing
 promotion), and the manifesto's open questions 4 (the substitute
 priority-claim mechanism) and 8 (the reach-without-recognition failure

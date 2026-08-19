@@ -244,8 +244,10 @@ A second 2026 strand measures whether structured data — the JSON-LD
 knowledge graph this framework's Layer 4 structured-artifact tactic
 ships — actually earns AI-retrieval citation, and it cuts both ways.
 The framework records both directions rather than only the supporting
-one, because the qualifying evidence sharpens *which property* of the
-graph carries citation.
+one: the qualifying evidence sharpens *which property* of the graph
+carries whatever citation effect there is, and the 2026 controlled
+evidence moves the graph's success criterion off citation lift
+altogether (ADR-0009, revised 2026-08-19).
 
 - *Structured Linked Data as a Memory Layer for Agent-Orchestrated
   Retrieval* (Volpini et al., arXiv:2603.10700) reports that serving
@@ -257,10 +259,15 @@ graph carries citation.
   gains, which come from the enhanced entity-page format (markup plus
   agent instructions and structured retrieval), not markup in isolation
   — external grounding for the concept-form half of the dual entry point
-  ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)) and the
-  structured-graph citation claim of
-  [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md), carrying the
+  ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)) and for
+  the structured-graph entry point of
+  [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) (whose
+  success criterion, since the 2026-08-19 revision, is consideration-set
+  entry / entity resolution rather than a citation lift), carrying the
   same presence-is-not-the-lever caveat the Fischman result makes.
+  *Epistemic status: finding (retrieval-accuracy lift) + limitation
+  (lift attaches to the enhanced entity-page format, which includes
+  prose agent instructions, not to markup alone).*
 - *Does Schema Markup Predict AI Citation?* (Fischman, SSRN 6284518)
   supplies the qualifying counter-evidence. Across 730 AI citations
   from ChatGPT and Gemini against a 1,006-page organic-ranking control,
@@ -269,10 +276,76 @@ graph carries citation.
   identified as a ranking-confound artifact, and the citation difference
   instead attaches to attribute-rich, populated markup (Product, Review)
   over generic types (Article, Organization, BreadcrumbList) — cited at
-  61.7% versus 41.6%. An industry before/after audit of 1,885
-  schema-added pages against 4,000 controls (Ahrefs, 2026) reaches the
-  same muted single-factor result: no major citation uplift on any
-  platform from adding schema alone.
+  61.7% versus 41.6%. *Epistemic status: null (presence, after ranking
+  control) + finding (attribute-rich over generic, cross-sectional) +
+  scope (75 commercial queries; the SSRN full text was not retrievable
+  on re-verification, so the reading rests on the author's public
+  summary).*
+- *We Tracked 1,885 Pages Adding Schema. AI Citations Barely Moved.*
+  (Ahrefs, Louise Linehan, 2026-05-11) is the strongest controlled test
+  of *adding* structured markup. Design: 1,885 pages that added JSON-LD
+  between August 2025 and March 2026, each matched to control pages that
+  never did (4,000 controls), with a matched difference-in-differences
+  as the test the authors trust most. Effect sizes (treated versus
+  matched controls, 30-day window): Google AI Overviews −4.6% (small,
+  described as statistically significant, and "unexplained"), Google AI
+  Mode +2.4% and ChatGPT +2.2% (both statistically indistinguishable
+  from zero). Population: every page in the dataset already had 100+ AI
+  Overview citations before any schema was added — pages "already
+  inside the consideration set, being crawled and surfaced by LLMs" —
+  and the authors state the study "can't speak to" whether markup helps
+  pages AI systems are not seeing at all get crawled, parsed or indexed
+  in the first place. Cross-sectional companion result over 6 million
+  URLs: 53% of AI-cited pages carry JSON-LD, "almost three times" the
+  rate of uncited pages, under a heading that says what that does not
+  prove. Stated limitations: co-varying page changes not isolated;
+  schema types pooled; 30-day window (a slow-burn effect might need 60
+  or 90 days); JSON-LD only; HTML-embedded schema only; the AI Overview
+  decline unexplained. *Epistemic status: null (near-term citation
+  lift from adding markup, inside the consideration set) + correlation
+  (cross-sectional, explicitly not read as cause) + scope (already-cited
+  pages; cannot reach first-time crawl/index/entity resolution). No
+  p-values or confidence intervals are reported in the article; figures
+  circulating elsewhere with a p-value or an uncited-page rate are not
+  in the primary.*
+- The search operator's own guidance, *Optimizing your website for
+  generative AI features on Google Search* (Google Search Central,
+  published 2026-05-15, last updated 2026-07-10), lists "overfocusing
+  on structured data" among things not to do: "Structured data isn't
+  required for generative AI search, and there's no special schema.org
+  markup you need to add," while recommending it continue as part of
+  overall SEO for rich-result eligibility. *Epistemic status: primary
+  operator statement (policy, not measurement).*
+- *The Ahrefs Schema study is right. And it's testing the wrong thing*
+  (Gianluca Fiorelli, iloveseo.net, 2026-05-11) scopes the null: the
+  study successfully tests that adding JSON-LD to pages already heavily
+  cited by AI does not produce a short-term increase in citation
+  frequency, and nothing wider. A 30-day citation window on already-cited
+  pages measures query time; structured data's role in entity
+  understanding happens at index time, and whether it helps an entity
+  become machine-resolvable in a knowledge graph for the first time, or
+  disambiguates one previously confused with others, "is a different
+  study" — "how the bottle got on the shelf in the first place."
+  Structured data is framed as an infrastructure decision (registering a
+  company), not a citation-frequency optimization. *Epistemic status:
+  scope argument (commentary, not new measurement); it supplies the
+  reading under which ADR-0009's revised criterion is stated.*
+- *Optimizing Visibility in Generative Engines: A Critical Survey of
+  Generative Engine Optimization (2023-2026)* (Martinez,
+  arXiv:2607.14035, 2026-07-15) reviews 45 studies and models GEO as "a
+  stochastic, partially observable pipeline spanning search activation,
+  crawling and indexing, retrieval, reranking and context allocation,
+  citation, prominence, factual absorption, fidelity, and user
+  behavior." Its closing assessment: "already-retrieved content can
+  causally alter its citation or use, but no reviewed technique shows a
+  stable, longitudinal, cross-platform causal effect on organic
+  discoverability or downstream behavior." The foundational GEO gains
+  are "conditional on a source already being present in a fixed
+  context." *Epistemic status: survey-level limitation; read against the
+  framework, it separates the discoverability stage (where ADR-0009's
+  structured graph is placed) from the citation stage (where the
+  measured effects live), and is the reason no citation lift is stated
+  as the graph's expected value.*
 - *Structural Feature Engineering for Generative Engine Optimization*
   (Yu et al., arXiv:2603.29979) and *Think Before Writing:
   Feature-Level Multi-Objective Optimization for Generative Citation
@@ -289,15 +362,25 @@ graph carries citation.
   document's structural investment, not the mere fact of markup, that
   the citation lift attaches to — the same conclusion the
   anchor-densely discipline reaches from the vocabulary side.
+  *Epistemic status: finding (feature-level optimization within
+  already-retrieved contexts); these two papers ground ADR-0019's
+  structure-side reading and are a separate lineage from the
+  entry-point question ADR-0009 answers.*
 
-The two findings are not in tension once read through the
+The findings are not in tension once read through the
 anchor-densely discipline
 ([ADR-0010](adr/0010-vocabulary-discipline.md)): structured-data
 *presence* is not the lever; attribute-rich, entity-anchored structure
 is — the same edge-density asymmetry the vocabulary discipline records
 for coinage. This *refines* rather than refutes the structured-artifact
 tactic: the graph must be densely populated and externally anchored to
-carry retrieval-time citation. The supply-side question — who can
+carry whatever citation effect structured data carries at all, and on
+the 2026 controlled evidence no near-term citation lift is expected
+from it — which is why ADR-0009, revised 2026-08-19, sets the graph's
+success criterion at consideration-set entry / entity resolution (the
+index-time layer the controlled studies leave open) rather than at
+citation lift, and removed two figures that did not resolve to a
+primary source. The supply-side question — who can
 furnish the external entity anchoring the lift rewards, when a newly
 coined concept or a first-time author entity has no external record to
 point at — is recorded as Open Question 9 in

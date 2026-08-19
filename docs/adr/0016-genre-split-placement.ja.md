@@ -195,8 +195,8 @@ routing と federation-over-tag の binding が normative な内容であり、s
 platform は current な instance である。本決定は ADR-0015 (license by audience) を
 補完し ADR-0013 の DOI-impractical-genre 条項を instantiate し、ADR-0001
 (concept-DOI canonical)、ADR-0005 (bilingual corpus の audience-driven
-localization)、ADR-0009 (federation binding が依拠する citation lever としての
-structured graph)、ADR-0010 (paraphrase を生き残る binding edge としての
+localization)、ADR-0009 (federation binding が依拠する登録 surface としての
+structured graph —— 2026-08-19 改訂後は検討対象集合への到達とエンティティ解決)、ADR-0010 (paraphrase を生き残る binding edge としての
 distinctive vocabulary)、Layer 3 (promotion を司る idea-versus-scaffold
 separation)、manifesto の open question 4 (substitute priority-claim 機構) と
 8 (federation binding が抑えようとする reach-without-recognition failure mode)

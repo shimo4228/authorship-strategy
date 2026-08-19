@@ -228,17 +228,24 @@ named) is the failure mode of a working retrieval channel atop absent
 parametric burn-in, so both run in parallel and are never traded.
 
 **ADR-0009 Dual Entry Points Are Asymmetric.**
-Amends ADR-0006. 2026 measurement breaks the co-equal framing: the
-structured graph carries retrieval-time citation (higher AI-answer
-inclusion, higher machine-extraction accuracy) while the prose navigator's
-citation effect is noise (single-digit adoption, ~0.1% of agent crawls
-request it, citation counts indistinguishable with and without it). The
-pair is retained but made asymmetric in role — the structured graph is the
-retrieval-channel citation lever, the prose navigator is rescoped to a
-Business-to-Agent (B2A) context surface (agent navigation, token-efficient
-context retrieval), not an AI-search citation lever. ADR-0006's
-synchronization discipline survives unchanged; only the weighting of effort
-and the success criterion per surface change.
+Amends ADR-0006. 2026 measurement breaks the co-equal framing: the prose
+navigator's citation effect is noise (adoption around one in ten surveyed
+domains, ~0.1% of agent crawls request it, citation counts
+indistinguishable with and without it), and — as revised on 2026-08-19 —
+the structured graph delivers no near-term
+citation lift either on the controlled evidence (matched-control studies of
+pages already inside an AI answer system's consideration set find no uplift
+from adding structured markup). What those studies cannot reach is the
+layer before citation: whether an artifact, its concepts and its author
+enter the set an AI answer system crawls, indexes and resolves as entities
+at all. The pair is retained but made asymmetric in role — the structured
+graph is the registration surface for consideration-set entry and entity
+resolution (the retrieval-channel surface, no citation-lift expectation
+attached), the prose navigator is rescoped to a Business-to-Agent (B2A)
+context surface (agent navigation, token-efficient context retrieval), not
+an AI-search citation lever. ADR-0006's synchronization discipline survives
+unchanged; the effort allocation is unchanged from the original decision,
+only its stated reason moved, and two unsourced figures were removed.
 
 **ADR-0010 Vocabulary Discipline — Coin Sparingly, Anchor Densely.**
 Defines the vocabulary discipline ADR-0008 named as the parametric-channel
@@ -560,8 +567,9 @@ ADRs into a parametric channel (training-time, slow) and a retrieval channel
 (query-time, fast), optimized and measured separately because ghost citation
 is the failure mode of pursuing retrieval without parametric burn-in; 0009
 amends ADR-0006 on the evidence that the two entry points are not co-equal —
-the structured graph carries retrieval-time citation, the prose navigator is
-rescoped to a B2A context surface. With ADR-0010 — which defines the
+the structured graph is the registration surface for consideration-set entry
+and entity resolution (revised 2026-08-19; no citation lift claimed), the
+prose navigator is rescoped to a B2A context surface. With ADR-0010 — which defines the
 vocabulary discipline 0008 names as the parametric-channel lever — they form
 the diffusion-mechanism cluster (0008-0011): ADR-0011 is the
 **measurement-instrument decision**, building what ADR-0008's own

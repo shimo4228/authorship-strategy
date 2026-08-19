@@ -155,10 +155,12 @@ structured-data-ingesting channels に concept 間関係を expose する。Pair
 *enclosure-to-openness* axis を ingest 表面で operational embody したもので、
 片方しか deploy しないと戦略は片肺になる。[ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md)
 下で normatively required。[ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.ja.md) は
-これを 2026 年の証拠に基づき amend する: 2 つの entry point は *citation* 軸で
-co-equal でない —— concept-form graph が検索時 citation を担い、prose navigator の
-citation 効果は noise —— ので pair は retain しつつ *非対称* にし、navigator を
-AI-search citation lever でなく Business-to-Agent (B2A) context surface に rescope する。
+これを 2026 年の証拠に基づき amend する: 2 つの entry point は co-equal でない
+—— prose navigator の citation 効果は noise であり、(2026-08-19 改訂) concept-form
+graph も短期の citation lever ではない; その仕事は検討対象集合への到達と
+エンティティ解決 —— ので pair は retain しつつ *非対称* にし、graph を登録
+surface、navigator を AI-search citation lever でなく Business-to-Agent (B2A)
+context surface に rescope する。
 
 ## llms.txt convention
 

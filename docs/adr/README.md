@@ -18,7 +18,7 @@ research ecosystem, not prescribed top-down.
 | [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
 | [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (scope amended by 0022) |
 | [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
-| [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Citation, Prose Navigator for Agent Context | accepted |
+| [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (revised 2026-08-19) | accepted |
 | [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
 | [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (Annex A, 2026-08: calibration reading rules) | **experimental** |
 | [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
@@ -60,10 +60,13 @@ ADR-0006 specifies what *form* the artifact must take at each platform so the
 LLM-mediated channels operating there can absorb it. It is the only ADR that
 directly operationalizes the thesis's Axis 1 inversion (enclosure → openness)
 on the ingest surface. ADR-0009 amends it: 2026 measurement shows the two
-entry points are not co-equal — the structured graph carries retrieval-time
-citation while the prose navigator's citation effect is noise, so the pair is
-retained but made *asymmetric*, the navigator rescoped to a Business-to-Agent
-(B2A) context surface rather than an AI-search citation lever.
+entry points are not co-equal — the prose navigator's citation effect is
+noise, and (revised 2026-08-19) the structured graph is not a near-term
+citation lever either; its job is consideration-set entry and entity
+resolution, the layer before citation — so the pair is retained but made
+*asymmetric*, the graph as registration surface, the navigator rescoped to a
+Business-to-Agent (B2A) context surface rather than an AI-search citation
+lever.
 
 ADR-0007 is the **metric-rejection decision**: it fixes what the framework
 does *not* optimize for. Platform human-attention signals — Git-host stars

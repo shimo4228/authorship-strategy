@@ -34,9 +34,10 @@ authenticity 根拠のみに立ち、両層で引き続き拘束する。
 
 ## Context
 
-framework の tactical 層は、entity と relationship を retrieval-time citation 向け
-に encode した structured で machine-readable な companion artifact を ship する
-(ADR-0009)。2026 年の structured-data efficacy literature ——
+framework の tactical 層は、entity と relationship を retrieval channel 向け ——
+2026-08-19 改訂後の ADR-0009 に従えば、検討対象集合への到達とエンティティ解決
+向け —— に encode した structured で machine-readable な companion artifact を
+ship する。2026 年の structured-data efficacy literature ——
 [inspiration.md](../inspiration.md) に記録された strand —— は、その種の artifact
 が実際に AI-retrieval citation を earn するかを測定し、その答えはここで重要に
 なる仕方で二面的である。citation lift は artifact の surface text にも、structured
@@ -200,7 +201,8 @@ null result) は、本文ではなくその lineage document に保たれる ext
 finding である。optimize の対象という境界と
 optimize-the-path-not-the-content ルールが normative な内容であり、specific な
 literature と specific な structured artifact は current な instance である。本決定は
-ADR-0009 (この tactic が optimize する citation lever としての structured graph)、
+ADR-0009 (この tactic が optimize する entry point としての structured graph ——
+2026-08-19 改訂後は citation lift ではなく検討対象集合への到達とエンティティ解決のため)、
 ADR-0010 (同じ legitimate な move の vocabulary 側の形としての anchor-densely)、
 ADR-0007 (citation と visibility は success metric ではない —— これが
 content の変形を goalless にする) を extend し、Layer 1 (authenticity、境界が

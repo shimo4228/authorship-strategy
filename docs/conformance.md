@@ -127,10 +127,12 @@ relationships), released together as a synchronously maintained pair.
 **Why it matters.** This is the LLM-first ingest decision (ADR-0006), the form
 in which the openness committed on the network-effect axis becomes machine-readable
 structure rather than merely a permissive license. The two surfaces reach reader
-sub-populations the other cannot: the graph carries retrieval-time citation while
-the navigator serves as an agent-context surface. Measurement shows the pair is
-**asymmetric**, not co-equal (ADR-0009) — so an adopter optimizing for citation
-should treat the graph as the primary lever and the navigator as a context surface
+sub-populations the other cannot: the graph is the registration surface for
+consideration-set entry and entity resolution while the navigator serves as an
+agent-context surface. Measurement shows the pair is **asymmetric**, not co-equal
+(ADR-0009, revised 2026-08-19: no near-term citation lift is claimed for either
+surface) — so an adopter should treat the graph as the primary entry point for being
+found and resolved, and the navigator as a context surface
 rather than expecting equal effect from each.
 
 **How to verify.** Confirm both files exist at discoverable top-level paths.

@@ -195,11 +195,13 @@ operational embodiment of the *enclosure-to-openness* axis on the
 ingest surface; deploying only one half leaves the strategy one-lunged.
 Normatively required under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md).
 [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) amends this on
-2026 evidence: the two entry points are not co-equal on the *citation*
-axis — the concept-form graph carries retrieval-time citation while the
-prose navigator's citation effect is noise — so the pair is retained but
-made *asymmetric*, the navigator rescoped to a Business-to-Agent (B2A)
-context surface rather than an AI-search citation lever.
+2026 evidence: the two entry points are not co-equal — the prose
+navigator's citation effect is noise, and (revised 2026-08-19) the
+concept-form graph is not a near-term citation lever either; its job is
+consideration-set entry and entity resolution — so the pair is retained but
+made *asymmetric*, the graph as registration surface, the navigator rescoped
+to a Business-to-Agent (B2A) context surface rather than an AI-search
+citation lever.
 
 ## llms.txt convention
 

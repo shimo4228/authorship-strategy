@@ -206,11 +206,12 @@ edge-density asymmetry this ADR records for coinage: richness and
 anchoring, not mere presence, are what carry signal. The finding is
 read as external resonance rather than as the source of the principle
 — the discipline was articulated from the parametric and retrieval
-mechanics of ADR-0008, not from the schema literature — and it
-qualifies the structured-graph citation claim of
-[ADR-0009](0009-dual-entry-asymmetric-rebalance.md) in the same move:
-the knowledge graph carries retrieval-time citation only insofar as it
-is densely anchored, not by virtue of existing. The same literature
+mechanics of ADR-0008, not from the schema literature — and it bears
+on [ADR-0009](0009-dual-entry-asymmetric-rebalance.md) in the same
+move: as revised on 2026-08-19, ADR-0009 claims no citation lift from
+the knowledge graph's presence (its criterion is consideration-set
+entry and entity resolution), and whatever citation effect structured
+data carries attaches to dense anchoring, not to mere presence. The same literature
 opens the supply-side question of who can supply that anchoring,
 recorded as Open Question 9 in [`manifesto.md`](../manifesto.md).
 
