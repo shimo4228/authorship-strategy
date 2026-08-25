@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- All twenty `Concept` nodes in `graph.jsonld` migrated from
+  repo-fragment `@id`s to the program's served vocabulary namespace
+  (`…/vocab#concept/<slug>` for hub-shared concepts,
+  `…/vocab#as/concept/<slug>` for line-local ones), closing the
+  conformance gap with the four sibling research lines — this graph
+  was the last line still minting repo-fragment concept URIs. Each
+  node is additionally typed `DefinedTerm`, keeps its former
+  repo-fragment `@id` as `sameAs` so previously crawled identifiers
+  stay resolvable, deep-links its glossary definition via
+  `recordedIn`, and links its hub concept page via `subjectOf` where
+  one exists. The `definesConcept` registry now covers all twenty
+  concepts (two omissions fixed), the `idea-vs-scaffold-separation`
+  slug is normalized to the hub-canonical
+  `idea-versus-scaffold-separation`, and the informal alias
+  *regurgitation test* is recorded as an `alternateName` of the
+  Retrieval-Suppressed Naming Probe. Glossary and ADR files are
+  unchanged; the glossary remains the definitional source of truth.
+
 ## [1.1.0] - 2026-07-16
 
 Retires an entire tactical layer after an external governance event and

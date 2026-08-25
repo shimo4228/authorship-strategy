@@ -111,24 +111,26 @@
       ],
       "isPartOf": "https://github.com/shimo4228/shimo4228",
       "definesConcept": [
-        "https://github.com/shimo4228/authorship-strategy#concept/three-axis-inversion",
-        "https://github.com/shimo4228/authorship-strategy#concept/four-layer-framework",
-        "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
-        "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
-        "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
-        "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer",
-        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
-        "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
-        "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
-        "https://github.com/shimo4228/authorship-strategy#concept/vocabulary-discipline",
-        "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
-        "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
-        "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
-        "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection",
-        "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion"
+        "https://shimo4228.github.io/shimo4228/vocab#concept/three-axis-inversion",
+        "https://shimo4228.github.io/shimo4228/vocab#concept/four-layer-framework",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/authenticity",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/idea-versus-scaffold-separation",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/tactical-layer",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/scarcity-to-diffusion-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/exclusivity-to-derivation-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/enclosure-to-openness-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/abstract-doctrine-worked-implementation-pair",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/origin-claim-scope-discipline",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/distinctive-terminology",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/vocabulary-discipline",
+        "https://shimo4228.github.io/shimo4228/vocab#concept/dual-entry-point",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/llms-txt-convention",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/jsonld-knowledge-graph",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/human-attention-signal-rejection",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/two-channel-attribution-diffusion",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/retrieval-suppressed-naming-probe",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/audience-layer-split"
       ],
       "citation": [
         "https://arxiv.org/abs/2602.06718",
@@ -142,51 +144,61 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/three-axis-inversion",
-      "@type": "Concept",
-      "name": "Three-Axis Inversion",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#concept/three-axis-inversion",
+      "@type": ["Concept", "DefinedTerm"],
+      "name": "three-axis inversion",
       "alternateName": [
         {"@value": "Three-Axis Inversion", "@language": "en"},
         {"@value": "3 軸反転", "@language": "ja"},
         {"@value": "三轴反转", "@language": "zh"}
       ],
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/three-axis-inversion",
+      "subjectOf": "https://shimo4228.github.io/shimo4228/concepts/three-axis-inversion.html",
       "description": "The structural claim that twentieth-century authorship strategy and AI-era authorship strategy invert on three co-varying axes: value source (scarcity to diffusion), validation mechanism (exclusivity to derivation), network effect (enclosure to openness). The three axes co-vary; a strategy mixing axes is internally inconsistent.",
       "composedOf": [
-        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/scarcity-to-diffusion-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/exclusivity-to-derivation-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/enclosure-to-openness-axis"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#three-axis-inversion"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/four-layer-framework",
-      "@type": "Concept",
-      "name": "Four-Layer Framework",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#concept/four-layer-framework",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/four-layer-framework",
+      "@type": ["Concept", "DefinedTerm"],
+      "name": "four-layer framework",
       "alternateName": [
         {"@value": "Four-Layer Framework", "@language": "en"},
         {"@value": "4 層 framework", "@language": "ja"}
       ],
       "description": "The operational structure of judgment that follows from the three-axis inversion: Authenticity (Layer 1, the value being protected), Attribution Diffusion (Layer 2, the strategy), Idea versus Scaffold (Layer 3, what survives), Tactics (Layer 4, the concrete decisions). Each layer is downstream of the layer above.",
       "composedOf": [
-        "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
-        "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
-        "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
-        "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/authenticity",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/idea-versus-scaffold-separation",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/tactical-layer"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md",
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/thesis.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#four-layer-framework"
+      ],
       "subjectOf": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adoption.md"
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
-      "@type": ["Concept", "Axis"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/scarcity-to-diffusion-axis",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+      "@type": ["Concept", "Axis", "DefinedTerm"],
       "name": "Scarcity-to-Diffusion Axis",
       "description": "First axis of the three-axis inversion: value source. Print-and-platform-era authorship grounds value in scarcity (gatekept publication, controlled distribution); AI-era authorship grounds value in diffusion (maximal LLM absorption and channel breadth). The axis inverts because the substrate inverts.",
       "axisPosition": 1,
       "covariesWith": [
-        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/exclusivity-to-derivation-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/enclosure-to-openness-axis"
       ],
       "groundedIn": [
         "https://arxiv.org/abs/2509.08919"
@@ -194,14 +206,15 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
-      "@type": ["Concept", "Axis"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/exclusivity-to-derivation-axis",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis",
+      "@type": ["Concept", "Axis", "DefinedTerm"],
       "name": "Exclusivity-to-Derivation Axis",
       "description": "Second axis of the three-axis inversion: validation mechanism. Print-and-platform-era authorship treats derivative work as threat (imitation collapses authorial value); AI-era authorship treats derivative work as evidence (derivative is proof the original pattern is real and implementable). Two sub-distinctions refine the axis on 2026 evidence. (1) Legal-exclusivity channel versus diffusion channel: copyright case law has consolidated around exclusive human authorship — machine-only works unprotectable, the live question being how much human involvement suffices — strengthening the exclusivity pole as a legal regime; the framework separates proof of human creative control (for ownership) from content-derived and registry identifiers such as DOI and SWHID (for origin-claim priority under LLM-mediated diffusion) and pursues only the latter, so the legal trend marks a channel split, not a refutation of the axis. (2) Proactive versus passive derivation attribution: watermark-based multi-concept attribution traces derivation with high precision but presupposes the source's prior consent and instrumentation of the generation pipeline, whereas this framework's attribution diffusion is passive — no pre-intervention in the ingesting model — priced in measurement difficulty. Both are recorded as axis structure, not effect claims.",
       "axisPosition": 2,
       "covariesWith": [
-        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/scarcity-to-diffusion-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/enclosure-to-openness-axis"
       ],
       "groundedIn": [
         "https://arxiv.org/abs/2604.04700",
@@ -210,14 +223,15 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
-      "@type": ["Concept", "Axis"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/enclosure-to-openness-axis",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
+      "@type": ["Concept", "Axis", "DefinedTerm"],
       "name": "Enclosure-to-Openness Axis",
       "description": "Third axis of the three-axis inversion: network effect. Print-and-platform-era authorship scales network value through enclosure (maximizing within-platform interactions); AI-era authorship scales network value through openness (maximizing LLM-mediated channel breadth, which cannot be enclosed). 2026 evidence refines the axis from a binary toward a structured spectrum, recorded here as standing tension pending doctrine-level resolution. Paywalled scholarship keeps roughly half of full-text science out of AI systems' reach, making openness a physical precondition of LLM-mediated diffusion rather than an abstract preference; the same literature argues paywall removal is unrealistic and proposes a licensed intermediate state — paid licensing plus retrieval-time access — as a third equilibrium the binary framing does not represent, one whose benefits may concentrate in large rights-holders and whose funding model conflicts with the free openness this framework assumes. Separately, multilateral policy work now defines AI openness as a graded access spectrum, a dimension orthogonal to this axis's concern with attribution: openness of access does not by itself resolve attribution of origin.",
       "axisPosition": 3,
       "covariesWith": [
-        "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
-        "https://github.com/shimo4228/authorship-strategy#concept/exclusivity-to-derivation-axis"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/scarcity-to-diffusion-axis",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/exclusivity-to-derivation-axis"
       ],
       "groundedIn": [
         "https://doi.org/10.1002/leap.2059"
@@ -225,8 +239,10 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
-      "@type": ["Concept", "Layer"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/authenticity",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#authenticity-layer-1",
+      "@type": ["Concept", "Layer", "DefinedTerm"],
       "name": "Authenticity (Layer 1)",
       "alternateName": [
         {"@value": "Authenticity", "@language": "en"},
@@ -241,8 +257,11 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
-      "@type": ["Concept", "Layer"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "subjectOf": "https://shimo4228.github.io/shimo4228/concepts/attribution-diffusion.html",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#attribution-diffusion-layer-2",
+      "@type": ["Concept", "Layer", "DefinedTerm"],
       "name": "Attribution Diffusion (Layer 2)",
       "alternateName": [
         {"@value": "Attribution Diffusion", "@language": "en"},
@@ -251,7 +270,7 @@
       ],
       "description": "The defensive strategy at the framework's second layer: maximizing the breadth of LLM-mediated channels carrying recognizable signatures of the author's ideas, anchored to a permanent timestamp. Here attribution means credit for source (who originated an idea), not accountability for action (who is responsible for a failure).",
       "layerOrdinal": 2,
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/authenticity",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/authenticity",
       "citation": [
         "https://arxiv.org/abs/2604.25707",
         "https://arxiv.org/abs/2602.06718",
@@ -260,8 +279,11 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
-      "@type": ["Concept", "Layer"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/idea-versus-scaffold-separation",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+      "subjectOf": "https://shimo4228.github.io/shimo4228/concepts/idea-versus-scaffold-separation.html",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#idea-versus-scaffold-separation",
+      "@type": ["Concept", "Layer", "DefinedTerm"],
       "name": "Idea versus Scaffold (Layer 3)",
       "alternateName": [
         {"@value": "Idea versus Scaffold", "@language": "en"},
@@ -270,8 +292,8 @@
       ],
       "description": "The framework's third layer: sorting each artifact into idea-character (which survives and is DOI-registered under the author's name) or scaffold-character (which dissolves into larger harnesses whose own diffusion absorbs the implementation). Mixed-character artifacts get idea-level DOI registration first. An open tension qualifies the layer's mechanistic grounding: the memorization-versus-generalization evidence behind the wager comes from models under default training, consistent with a content-intrinsic reading (what a text is determines whether it dissolves), while controllable-memorization training shows that raised memorization pressure can verbatim-retain even rare scaffold-like sequences — a training-configuration-dependent reading under which the ingesting pipeline, not the content, decides. The two readings are compatible (default regime versus actively-controlled regime), but their reconciliation changes the wager's strength; recorded as unresolved.",
       "layerOrdinal": 3,
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
-      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
+      "pairedWith": "https://shimo4228.github.io/shimo4228/vocab#as/concept/abstract-doctrine-worked-implementation-pair",
       "groundedIn": [
         "https://arxiv.org/abs/2602.14869",
         "https://arxiv.org/abs/2602.18733",
@@ -280,12 +302,13 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer",
-      "@type": ["Concept", "Layer"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/tactical-layer",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/tactical-layer",
+      "@type": ["Concept", "Layer", "DefinedTerm"],
       "name": "Tactics (Layer 4)",
       "description": "The framework's fourth layer: concrete operational decisions justified by the upstream three layers. Tactics enter and retire as substrates evolve. Currently validated tactics include LLM-mediated targeting, DOI registration, cross-platform federation, distinctive terminology, tool-agnostic specification, audience-driven localization, structured artifacts, and friction minimization for adoption.",
       "layerOrdinal": 4,
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/idea-versus-scaffold-separation",
       "instantiatedBy": [
         "https://github.com/shimo4228/authorship-strategy#adr/0001",
         "https://github.com/shimo4228/authorship-strategy#adr/0002",
@@ -314,19 +337,26 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/abstract-doctrine-worked-implementation-pair",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/abstract-doctrine-worked-implementation-pair",
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#abstract-doctrine",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#worked-implementation"
+      ],
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Abstract Doctrine + Worked Implementation Pair",
       "description": "The pairing required to induce creative re-implementation by other authors: an abstract-doctrine repository that articulates the idea cleanly enough for elsewhere-implementation, and a worked-implementation repository that demonstrates the doctrine is implementable. Doctrine alone produces unactionable interest; implementation alone produces unextractable principle. Externally grounded by agent-driven reproduction benchmarking: models reconstruct an algorithm's reasoning structure from its paper description far more reliably than they produce working code from it (best execution accuracy 39%), and supplying missing implementation detail measurably closes the gap — doctrine alone is unactionable, and the benchmark's missing-information categories (hyperparameters, numerical stabilization, implementation logic, coding strategy) enumerate what a worked implementation must carry.",
-      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/idea-vs-scaffold-separation",
+      "pairedWith": "https://shimo4228.github.io/shimo4228/vocab#as/concept/idea-versus-scaffold-separation",
       "groundedIn": [
         "https://arxiv.org/abs/2504.00255"
       ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/origin-claim-scope-discipline",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#origin-claim-scope",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Origin-Claim Scope Discipline",
       "description": "A subordinate principle applying at all four layers: the origin claim must be narrower than the prior art. Claiming priority on a broad pattern with rich prior art collapses the claim's credibility; claiming priority on a narrow, specifically-named discipline is defensible. Coined terminology is the substrate of narrow origin claims. Feature-granular novelty verification from the patent-examination domain supplies a procedural template: decompose a claim into individual features and map each against prior-art passages, rather than judging the claim as one binary. The same work cautions that granularity is not accuracy — claim-level binary predictors can beat feature-level pipelines on raw correctness — so the discipline treats the feature-to-prior-art map itself as the artifact and does not reduce it to a novelty score.",
       "groundedIn": [
@@ -336,8 +366,10 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/distinctive-terminology",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#distinctive-terminology-or-coined-terminology",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Distinctive Terminology",
       "alternateName": [
         {"@value": "Distinctive Terminology", "@language": "en"},
@@ -347,18 +379,20 @@
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/vocabulary-discipline",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/vocabulary-discipline",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Vocabulary Discipline",
       "alternateName": [
         {"@value": "Vocabulary Discipline", "@language": "en"},
         {"@value": "語彙規律", "@language": "ja"}
       ],
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/vocabulary-discipline",
+      "subjectOf": "https://shimo4228.github.io/shimo4228/concepts/vocabulary-discipline.html",
       "description": "The discipline governing when to coin a distinctive term and when to use existing vocabulary instead: coin sparingly, anchor densely. A term is coined only when three conditions all hold — the concept is genuinely new at a join of existing concepts (join-novelty), a one-sentence definition in existing vocabulary is possible (definitional anchoring), and the namespace is uncontested — and every retained coinage carries a glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges to existing concepts and references, and repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. Rationale: the costs of coinage (isolation, reader trust, maintenance) grow linearly with the number of terms while the benefit depends on each term's edge density, so few densely-anchored terms dominate many isolated ones — an isolated coinage is paraphrased away by the parametric channel exactly as generic vocabulary is, and the retrieval channel is queried in existing vocabulary. Named as the parametric-channel lever in ADR-0008, defined in ADR-0010. The vocabulary-level enforcement of origin-claim scope discipline. Two 2026 results refine the discipline's scope: disentangled authorship-attribution modeling exposes a trade-off in which a coinage's semantic unpredictability weakens style-based traceability (supporting the concept-space-occupancy reading of distinctive terminology), and neology-survival analysis finds the correlates of term survival are broadly shared across publication pathways while topic-popularity growth contributes less on social platforms than in published writing — so anchoring priorities are pathway-specific, and the anchor-densely rule was calibrated on the published/scholarly pathway this framework primarily operates in.",
-      "appliesTo": "https://github.com/shimo4228/authorship-strategy#concept/distinctive-terminology",
+      "appliesTo": "https://shimo4228.github.io/shimo4228/vocab#as/concept/distinctive-terminology",
       "downstreamOf": [
-        "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
-        "https://github.com/shimo4228/authorship-strategy#concept/origin-claim-scope-discipline"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/two-channel-attribution-diffusion",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/origin-claim-scope-discipline"
       ],
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0010",
       "groundedIn": [
@@ -367,23 +401,27 @@
         "https://arxiv.org/abs/2604.21300",
         "https://arxiv.org/abs/2602.13123"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#vocabulary-discipline"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
-      "@type": "Concept",
-      "name": "Dual Entry Point",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#concept/dual-entry-point",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/dual-entry-point",
+      "@type": ["Concept", "DefinedTerm"],
+      "name": "dual entry point",
       "alternateName": [
         {"@value": "Dual Entry Point", "@language": "en"},
         {"@value": "Dual Entry Point", "@language": "ja"}
       ],
       "description": "The structural decision that any framework-governed artifact deploys two complementary structured entry points — a prose-form navigator and a concept-form graph — released synchronously at every versioned release. Each entry point addresses a distinct LLM-mediated channel sub-population the other cannot reach. ADR-0009 amends this on 2026 evidence: the two are not co-equal — the prose navigator's citation effect is noise, and (per the 2026-08-19 revision) the concept-form graph is not a near-term citation lever either on the controlled evidence; its job is consideration-set entry and entity resolution, the index-time layer the controlled studies leave open — so the pair is retained but made asymmetric, the graph as registration surface, the navigator rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever. Endpoint-level measurement adds a mechanical basis for the asymmetry: AI coding agents fetch documentation with heterogeneous HTTP clients, many executing no page scripts, so content reachable only through client-side rendering is invisible to part of the agent population — statically-served structured entry points are an access floor, not a citation lever.",
       "composedOf": [
-        "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
-        "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph"
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/llms-txt-convention",
+        "https://shimo4228.github.io/shimo4228/vocab#as/concept/jsonld-knowledge-graph"
       ],
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/enclosure-to-openness-axis",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/enclosure-to-openness-axis",
       "instantiatedBy": [
         "https://github.com/shimo4228/authorship-strategy#adr/0006",
         "https://github.com/shimo4228/authorship-strategy#adr/0009"
@@ -391,36 +429,44 @@
       "groundedIn": [
         "https://arxiv.org/abs/2604.02544"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#dual-entry-point"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/llms-txt-convention",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "llms.txt Convention",
       "alternateName": [
         {"@value": "llms.txt convention", "@language": "en"},
         {"@value": "llms.txt convention", "@language": "ja"}
       ],
       "description": "A community-curated AI-facing reference convention that uses a single prose-form text file (llms.txt) at the root of an artifact to enumerate its primary documents with one-line descriptions and a recommended reading order. Targets prose-reading LLM-mediated channels: conversational LLMs, AI assistants consulting documentation in-context, citation-graph annotators fetching prose for summarization. The prose-form half of the dual entry point. Scope refinement on 2026 evidence: the convention's discovery-tool framing has collapsed — adoption grew, but measured effect on AI-search citation is null, AI crawlers request the file rarely, and primary-source statements from a major search operator confirm it is not consulted for search or citation, serving instead agents that already know the site; the agent-guidance role it once aspired to is migrating to executable-tool, transaction, usage-declaration, and access-enforcement protocol layers. Its validated remaining niche — the one this framework uses — is the agent-facing documentation surface (B2A): coding agents consulting a known repository's reading order. This narrows, and does not reverse, ADR-0009's asymmetric rebalance.",
-      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
+      "pairedWith": "https://shimo4228.github.io/shimo4228/vocab#as/concept/jsonld-knowledge-graph",
       "instantiatedBy": "https://github.com/shimo4228/llms-txt-writer",
       "groundedIn": [
         "https://arxiv.org/abs/2604.02544"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#llmstxt-convention"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/jsonld-knowledge-graph",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/jsonld-knowledge-graph",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "JSON-LD Knowledge Graph",
       "alternateName": [
         {"@value": "JSON-LD knowledge graph", "@language": "en"},
         {"@value": "JSON-LD knowledge graph", "@language": "ja"}
       ],
       "description": "A linked-data file that encodes an artifact's concept-level entities and inter-entity relationships as machine-parseable triples in a structured-data vocabulary (typically schema.org plus a local namespace). Targets structured-data-ingesting LLM-mediated channels: training pipelines, knowledge-graph crawlers, programmatic readers using dataset SDKs. The concept-form half of the dual entry point; complements file-level documentation by encoding concept-level structure that prose leaves implicit.",
-      "pairedWith": "https://github.com/shimo4228/authorship-strategy#concept/llms-txt-convention",
+      "pairedWith": "https://shimo4228.github.io/shimo4228/vocab#as/concept/llms-txt-convention",
       "instantiatedBy": "https://github.com/shimo4228/jsonld-knowledge-graph",
       "groundedIn": [
         "https://arxiv.org/abs/2603.10700",
@@ -429,43 +475,56 @@
         "https://arxiv.org/abs/2604.19113",
         "https://arxiv.org/abs/2603.29979"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#json-ld-knowledge-graph"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/human-attention-signal-rejection",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/human-attention-signal-rejection",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Human-Attention Signal Rejection",
       "alternateName": [
         {"@value": "Human-Attention Signal Rejection", "@language": "en"},
         {"@value": "人間アテンション signal の却下", "@language": "ja"}
       ],
       "description": "The decision to exclude platform-level human-attention metrics — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach, since a human reading the work through an LLM answer generates no view) — from the framework's success definition, and to decline off-page human-distribution labor as a red-ocean activity operating on a near-empty human-arrival funnel (empirically clone:view approximately 16:1). Success is measured by the breadth of LLM-mediated channels instead. The metric-side embodiment of the scarcity-to-diffusion axis: the framework does not compete for scarce human attention on platform terms but diffuses through LLM-mediated channels. Endpoint measurement extends the structural blindness beyond page views: AI agents compress multi-page consumption into one or two HTTP requests and fire no client-side engagement events, so bounce-rate and session-depth metrics misrecord full consumption as non-engagement, and referrer stripping folds LLM-mediated arrivals into direct traffic — engagement analytics cannot capture LLM-mediated reach even in principle. Boundary: the compression evidence comes from single-fetch documentation tasks, so it is read as grounding for document-retrieval contexts rather than for every agent workload. Scope: under the audience-layer split (ADR-0022) this rejection governs the doctrine layer only; the essay layer's contemporaneous reception signals are accounted separately.",
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/scarcity-to-diffusion-axis",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/scarcity-to-diffusion-axis",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0007",
       "groundedIn": [
         "https://arxiv.org/abs/2604.02544"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#human-attention-signal"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/audience-layer-split",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/audience-layer-split",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/audience-layer-split",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Audience-Layer Split",
       "alternateName": [
         {"@value": "Audience-Layer Split", "@language": "en"},
         {"@value": "audience-layer split (二層の audience 会計)", "@language": "ja"}
       ],
       "description": "The division of the strategy's accounting into two audience layers with different time constants, routed by genre: a doctrine layer (doctrine repositories and papers, months-to-years, LLM-mediated channels as primary audience) and an essay layer (the governed essay corpus and its syndication surfaces, days-to-weeks, contemporary human readers as primary audience, where contemporaneous reception signals are legitimate to observe and to steer by). Each layer is measured by its own instruments — the instrument-per-channel discipline applied one level up. The split answers an accounting defect, not a strategy defect: without a layer in which human reception counts, the metric rejection's legibility-cost acceptance generalizes into an unfalsifiable consolation in which every stagnant signal reads as purity. The term names an accounting and audience stratum; it is distinct from the framework's judgment stack (Layers 1-4), from the two ingestion channels of Two-Channel Attribution Diffusion (parametric and retrieval, which run over artifacts in both audience layers), and from the two ledger tiers of the implementation-tracking decision (private ledger and public projection). The assignment governs accounting and metrics only; canonical, priority claim, and license selection are unchanged.",
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0022",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0022-audience-layer-split.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0022-audience-layer-split.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#audience-layer-doctrine-layer--essay-layer"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
-      "@type": ["Concept", "Layer"],
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/two-channel-attribution-diffusion",
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
+      "subjectOf": "https://shimo4228.github.io/shimo4228/concepts/two-channel-attribution-diffusion.html",
+      "@type": ["Concept", "Layer", "DefinedTerm"],
       "name": "Two-Channel Attribution Diffusion",
       "alternateName": [
         {"@value": "Two-Channel Attribution Diffusion", "@language": "en"},
@@ -473,7 +532,7 @@
         {"@value": "双通道署名扩散", "@language": "zh"}
       ],
       "description": "The refinement of Attribution Diffusion (Layer 2) into two mechanisms with opposite time constants and opposite levers: a parametric channel (the idea absorbed into model weights at training time — slow, driven by broad cross-platform co-occurrence of distinctive vocabulary with its source; cross-platform mention spread correlates ~0.664 with being named, far above enclosed inbound links ~0.218) and a retrieval channel (the artifact fetched at query time — fast, 3–5 day citation-pool entry and ~13-week decay, driven by freshness and structured data). Ghost citation — the source is cited but the author is not named — is the failure mode of a working retrieval channel atop absent parametric burn-in, so the two channels are optimized and measured separately and run in parallel. Two 2026 refinements are recorded. (1) The retrieval channel's verifiability splits into surface and substantive layers: deep-research audits find link validity and topical relevance high (above 94% and 80% in the strongest systems) while factual accuracy of what a citation is claimed to support runs far lower (39–77%), and deepening retrieval degrades it further — a working retrieval channel guarantees the source is reachable, not that the claim it carries is faithful, so diffusion breadth does not imply fidelity of transmission. (2) White-box probing quantifies an interaction-cost asymmetry between the channels: errors are markedly more frequent when external context must override parametric knowledge than in the reverse direction.",
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/attribution-diffusion",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0008",
       "groundedIn": [
         "https://arxiv.org/abs/2602.06718",
@@ -486,19 +545,25 @@
         "https://arxiv.org/abs/2605.06635",
         "https://arxiv.org/abs/2509.04499"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#two-channel-attribution-diffusion"
+      ]
     },
 
     {
-      "@id": "https://github.com/shimo4228/authorship-strategy#concept/retrieval-suppressed-naming-probe",
-      "@type": "Concept",
+      "@id": "https://shimo4228.github.io/shimo4228/vocab#as/concept/retrieval-suppressed-naming-probe",
+      "@type": ["Concept", "DefinedTerm"],
       "name": "Retrieval-Suppressed Naming Probe",
       "alternateName": [
         {"@value": "Retrieval-Suppressed Naming Probe", "@language": "en"},
-        {"@value": "検索抑制 naming probe", "@language": "ja"}
+        {"@value": "検索抑制 naming probe", "@language": "ja"},
+        {"@value": "regurgitation test", "@language": "en"}
       ],
+      "sameAs": "https://github.com/shimo4228/authorship-strategy#concept/retrieval-suppressed-naming-probe",
+      "subjectOf": "https://shimo4228.github.io/shimo4228/concepts/retrieval-suppressed-naming-probe.html",
       "description": "The measurement instrument for the parametric channel of Two-Channel Attribution Diffusion: a controlled prompt sent to a model with all search and grounding tools suppressed, asking what a concept is and who coined or maintains it. Success is the model producing the concept and the author's name from trained weights alone. Paired with a search-enabled citation probe that measures the retrieval channel and makes ghost citation observable within a single answer (owned identifier cited, author unnamed in prose). Detection is deterministic string matching against a versioned lexicon over retained raw responses — never model judging — with fixed single-variable templates and a negative-control probe (a plausible nonexistent concept) that quantifies the confabulation noise floor. The public probe log feeds the parametric channel it measures; the protocol records this self-contamination as a stated confound rather than hiding it. Two calibration constraints and one positioning refinement are recorded on 2026 evidence. Cross-family memorization analysis finds statistical regularities shared across model families (memorization scaling log-linearly with size) while the internal circuitry carrying memorization is family-specific — so probe results are calibrated per model family, reported with family-internal consistency rather than a single cross-model threshold, and re-baselined when a model series changes generation — as a check rather than a presumed break, since one open series showed its memorization structure inherited across generations; the internal analysis presupposes open weights and disclosed pre-training data, so for closed frontier models family calibration is behavioral by construction — a boundary this framework states as its own, not a finding of the paper. Retrieval-free citation training (active indexing: diverse restatement of each fact plus bidirectional source-fact binding at continual-pretraining time) shows parametric citation ability is a designable supply-side property — repetition volume alone does not create burn-in, structural diversity of restatement does — which positions this probe as the demand-side observer of a supply-side design space the author does not control, and grounds the framework's preference for structural diversity over sheer exposure volume in what it publishes.",
-      "downstreamOf": "https://github.com/shimo4228/authorship-strategy#concept/two-channel-attribution-diffusion",
+      "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/two-channel-attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0011",
       "groundedIn": [
         "https://arxiv.org/abs/2602.06718",
@@ -510,7 +575,10 @@
         "https://arxiv.org/abs/2605.22176",
         "https://arxiv.org/abs/2506.17585"
       ],
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md"
+      "recordedIn": [
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#retrieval-suppressed-naming-probe"
+      ]
     },
 
     {
