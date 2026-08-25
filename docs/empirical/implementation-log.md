@@ -47,6 +47,7 @@ for a future pre-versus-post contrast.
 | Essay corpus brought under identifier governance: a Software Heritage snapshot recorded in citation metadata as its intrinsic-identifier priority claim — the substitute priority-claim mechanism for an artifact genre where DOI registration is impractical — and the corpus relicensed to a public-domain dedication for its machine-mined audience | 2026-06-25 | ADR-0016, ADR-0013, ADR-0015 |
 | `codemeta.json` (schema.org-based software/dataset citation metadata) added alongside `CITATION.cff` across the ecosystem's DOI-registered repositories, read directly by the Software Heritage archival service's metadata indexer, which does not parse `CITATION.cff` | 2026-07-01 | ADR-0013 |
 | Rendered-HTML archival of the ecosystem's git-hosting pages via an on-demand public web archive, complementing the git-object-level Software Heritage archival with a snapshot of the page a browser or crawler actually renders | 2026-07-01 | ADR-0013 |
+| Reciprocal-declaration completion of the deposit-metadata relation graph, following a standards review that chose completing the existing relation layer over adopting any new standard: inverse relations declared where only one side of a pair had been present, and a deposit-to-repository binding relation pointing at each artifact's own source repository added ecosystem-wide; applied to the published deposit records by metadata-only edit, without minting new versions | 2026-08-25 | ADR-0002 (dated note) |
 
 ### AI-facing ingest (ADRs 0006, 0009)
 
