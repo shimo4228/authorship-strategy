@@ -8,6 +8,23 @@ Language: English | [日本語](0002-doi-federation-via-zenodo-json.ja.md)
 > recoverable from the metadata alone, without requiring readers to follow
 > prose disclosures.
 
+> **2026-08-25:** A standards review (registry relation graph, permanent-URI
+> redirection layer, a provenance export ontology, and a project-identifier
+> registry) reconfirmed this ADR's channel choice and completed its
+> application rather than extending it. Two additions to the applied
+> relation set: inverse relations (`isReferencedBy`, `hasPart`,
+> `isSupplementedBy`) were declared where only one side of a pair had been
+> present, and `isSupplementTo` pointing at the artifact's own source
+> repository was adopted ecosystem-wide as the deposit-to-repository
+> binding. Two environment facts recorded as of this date: the open-web
+> citation-event service that formerly crawled for identifier mentions was
+> decommissioned in April 2026, so registrant-declared deposit metadata is
+> now the only channel into the citation substrate — strengthening this
+> ADR's rationale; and the registry metadata schema now defines a
+> first-class identifier type for content-derived intrinsic identifiers
+> (the ADR-0013 layer), to be declared here once the archive service's
+> deposit vocabulary supports it.
+
 ## Status
 accepted
 

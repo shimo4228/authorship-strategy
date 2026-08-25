@@ -155,6 +155,30 @@
       "scheme": "url"
     },
     {
+      "identifier": "https://github.com/shimo4228/authorship-strategy",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.20262112",
+      "relation": "isReferencedBy",
+      "resource_type": "publication-workingpaper",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.20337008",
+      "relation": "hasPart",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.20558800",
+      "relation": "isSupplementedBy",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
       "identifier": "10.48550/arXiv.2602.22787",
       "relation": "references",
       "resource_type": "publication-preprint",

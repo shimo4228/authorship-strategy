@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `.zenodo.json` completes the ADR-0002 reciprocal-declaration
+  discipline after a four-standard review (DataCite relation graph,
+  w3id.org permanent URIs, PROV-O provenance export, RAiD project
+  identifiers) concluded that completing the existing relation layer
+  beats adopting any new one: inverse relations added where only one
+  side of a pair was declared (`isReferencedBy` → Attention, Not Self;
+  `hasPart` → doctrine-corpus; `isSupplementedBy` → existence-proof),
+  and `isSupplementTo` → this repository's source URL added as the
+  deposit-to-repository binding (rolled out ecosystem-wide in the same
+  change set). ADR-0002 (EN/JA) gains a dated note recording the review
+  and the April 2026 decommissioning of open-web citation-event
+  crawling, which strengthens the deposit-metadata channel this ADR
+  chose. Relations propagate to the registry at the next tagged
+  release.
 - All twenty `Concept` nodes in `graph.jsonld` migrated from
   repo-fragment `@id`s to the program's served vocabulary namespace
   (`…/vocab#concept/<slug>` for hub-shared concepts,

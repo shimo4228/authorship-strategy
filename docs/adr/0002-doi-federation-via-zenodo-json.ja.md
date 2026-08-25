@@ -7,6 +7,19 @@ Language: [English](0002-doi-federation-via-zenodo-json.md) | 日本語
 > artifact 間の citation network は metadata だけから recoverable になり、reader が
 > prose disclosure を follow する必要がない。
 
+> **2026-08-25:** 標準規格の横断 review (registry relation graph / permanent-URI
+> redirection 層 / provenance export ontology / project-identifier registry) は、
+> 本 ADR の channel 選択を再確認し、拡張ではなく適用の完成を選んだ。適用 relation set
+> への追加は 2 点: pair の片側だけが宣言されていた箇所への逆 relation
+> (`isReferencedBy`, `hasPart`, `isSupplementedBy`) の宣言と、artifact 自身の source
+> repository を指す `isSupplementTo` の ecosystem 全体への採用 (deposit と repository
+> の binding)。同日時点の環境事実を 2 点記録する: identifier への言及を open web から
+> crawl していた citation-event service は 2026 年 4 月に廃止され、registrant 自身が
+> 宣言する deposit metadata が citation 基盤への唯一の channel になった — 本 ADR の
+> 根拠を強める方向の変化である。また registry の metadata schema は content 由来の
+> intrinsic identifier (ADR-0013 の層) を first-class の identifier type として定義
+> した。archive service の deposit 語彙が対応した時点で、この層もここで宣言する。
+
 ## Status
 accepted
 
