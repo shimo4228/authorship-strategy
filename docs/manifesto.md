@@ -145,6 +145,22 @@ adoptable in their own ecosystems? If they do, the recursion
 is demonstrating applicability; if they do not, the framework
 may have over-fit its single-author origin.
 
+> **Status (2026-09-07): partially tested, not answered.** Two
+> observations now bear on the question. A search for independent
+> adoption (2026-07-01) found none. A held-out dry run
+> ([`empirical/adoption-dry-run-2026-09.md`](empirical/adoption-dry-run-2026-09.md))
+> walked the adoption guide against a stranger's manuscript and found
+> that the tactics which held did so because they are plain actions,
+> while the ones that broke did so on operational prerequisites the
+> guide presupposes — an author statement, a license, a definition of
+> "artifact", the Layer 2 stance — before any rhetorical effect could
+> operate. The same search surfaced one unrelated author publishing an
+> agent-readable navigator and graph pair as a convergent practice:
+> the tactic is adoptable without the doctrine. Whether the doctrine's
+> own voice pre-validates it remains untested; the dry run was walked
+> by the author, and the test the question asks for requires a
+> stranger walking.
+
 ## Open question 6: How robust is the three-axis inversion to LLM substrate change?
 
 The three-axis inversion is articulated against the substrate of

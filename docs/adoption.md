@@ -134,6 +134,15 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0012](adr/0012-link-index-channel-selection.md) | Contribute link-index entries only; audit hosts; withdraw on enclosure. |
 | [ADR-0013](adr/0013-intrinsic-identifier-layer.md) | Archive to a content-addressed software archive each release; record the intrinsic identifier. |
 | [ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) | Keep a private planning ledger and a public, effect-claim-free intervention timeline, never merged; consult records for implementation decisions while keeping idea generation open. |
+| [ADR-0015](adr/0015-license-selection-by-audience.md) | Choose each artifact's license by its dominant audience, before the first deposit: public-domain dedication for machine-mined prose and data, a permissive software license for code, an attribution-requiring license only for genuinely human-first work. Attribution rides on the identifier layer, not the license. |
+| [ADR-0016](adr/0016-genre-split-placement.md) | Route the canonical by genre — papers to the registered concept identifier, essays to the repository with its intrinsic identifier — and bind syndicated copies back to it by entity federation. |
+| [ADR-0017](adr/0017-failure-mode-diagnostics.md) | Run the three failure-mode diagnostics (reach without recognition, over-publication, under-investment in worked implementation) as detectors with a recovery step each; never promote them to targets. |
+| [ADR-0018](adr/0018-claim-falsifiability-criterion.md) | State every origin claim narrower than the prior art you can find, in a form a third party could falsify; record the search that bounded it. |
+| [ADR-0019](adr/0019-structural-optimization-vs-content-authenticity.md) | Optimize transmission-path structure (markup, entity anchoring) as far as you like; never deform the content itself for citation. |
+| [ADR-0020](adr/0020-derivation-surface-onboarding.md) | Bless third-party derived surfaces (synthetic wikis, documentation hubs) by badge; diagnose paraphrase drift on the wiki type; withdraw a surface your own measurement shows dead. |
+| [ADR-0021](adr/0021-self-sovereign-entity-grounding.md) | Ground entities only on surfaces you can hold under your own account (repository, author-identifier record, registry deposit, intrinsic identifier); create no entries about yourself on community-governed authority records. |
+| [ADR-0022](adr/0022-audience-layer-split.md) | If you also write for contemporary human readers, account for that work as its own layer with its own audience and metrics; keep its numbers out of doctrine-layer decisions. |
+| [ADR-0023](adr/0023-empirical-layer-role.md) | Declare the role of every observation you publish — baseline data, interpretive note, intervention record, or external-literature note — and claim validation only for a contrast designed before the data. |
 
 The original author's worked implementation of this entire path is the
 research ecosystem the [empirical layer](empirical/README.md) observes —
