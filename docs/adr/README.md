@@ -23,7 +23,7 @@ research ecosystem, not prescribed top-down.
 | [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (Annex A, 2026-08: calibration reading rules) | **experimental** |
 | [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
 | [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
-| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review | accepted |
+| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger | accepted |
 | [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form | accepted |
 | [0016](0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical | accepted |
 | [0017](0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes | accepted |
@@ -149,22 +149,7 @@ question 4. Archival there also opens a second parametric-channel
 ingest surface (code-focused training corpora source from the archive)
 at zero marginal authoring cost.
 
-ADR-0014 is the **implementation-tracking decision**: it is the only
-ADR about *operating* the framework rather than a tactic the framework
-deploys. The program already publishes a dated intervention timeline in
-the empirical layer, but that timeline's conventions (no effect claims,
-the ADR-0012 host abstraction, normative/empirical separation) bar it
-from doubling as a planning surface. So tracking splits into two tiers:
-a private implementation ledger carries operational status, ranked
-candidate interventions, and working detail; the public timeline is its
-dated, effect-claim-free projection. A periodic gap-review compares
-deployed tactics against the Layer 4 catalog and the manifesto's open
-questions to generate the next proposals — a self-application of the
-framework that bears on the open questions about the empirical layer's
-role (settled by ADR-0023) and the framework's recursive application to
-itself. The review
-procedure lives in the framework's operational skill; only the wiring
-(which artifacts are this program's ledger and timeline) is project-specific.
+ADR-0014 is the **implementation-tracking decision**. Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support.
 
 ADR-0015 is the **license-selection decision**: it fixes which
 permissive instrument an artifact takes, on an axis the framework had

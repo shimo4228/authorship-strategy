@@ -201,14 +201,11 @@ ADR-0016 に従って genre で routing する。
      アカウントの累積パターンが host の governance にどう読まれるかを
      問うこと。
 6. **会計への編入。** essay layer の生産記録と metrics snapshot は、
-   strategy の定期 next-move review —— ADR-0014 の review instrument
-   を 2026-08 に inquiry-first へ再配線したもの —— の正式な入力に
-   なる。program の生産側 diffusion 発生源 2 つ —— 新しい content、
-   および他者から earn された言及 (ADR-0021 の意味での earned:
-   unprompted な第三者による) —— の常設の勘定として。ADR-0014 の
-   two-tier ledger の内側では、private tier が layer レベルの status
-   を保持し、per-article の正本としては corpus 自身の記録を指す;
-   複製はしない。
+   依頼された評価に関係するときに、その生産と reception を調べるための正本となる。
+   ADR-0014 の two-tier ledger では、private tier が layer レベルの status を持ち、
+   per-article の正本として corpus 自身の記録を指す。複製はしない。
+   この会計の統合は、アイデア出しの読み順を指定しない。
+   この境界には ADR-0014 の 2026-09-07 の改訂が適用される。
 
 ## Alternatives Considered
 
@@ -270,9 +267,8 @@ scoping の誤りに過ぎないものを直すために健全な決定を捨て
   ことができ、doctrine layer の停滞は program 全体を代表して純化の
   読みを借用できなくなる —— 慰めの条項は、その根拠が実際に成立する
   層に束縛される。
-- 定期 review の入力に essay ラインが両方の状態 —— 出荷中と停滞中 ——
-  で含まれ、生産が計上されないまま「deploy 面は飽和」と宣言されて
-  いた盲点が閉じる。
+- 生産と reception の評価で essay ラインの出荷中と停滞中を区別でき、
+  生産が計上されないまま「deploy 面は飽和」と宣言されていた盲点を扱える。
 - audience doctrine は寛容になるのではなく精密になる: 直接 browse 層
   の降格は doctrine repository に明示的に限定され、ADR-0015 が既に
   認識していた human-primary カテゴリが自らの genre を得る ——
@@ -335,9 +331,8 @@ community-governed authority record の喪失である。本決定は
 ADR-0016 (genre routing を canonical と license から audience と
 metrics へ) と ADR-0011 (instrument-per-channel の一段上への適用) を
 拡張し、ADR-0015 の ingest 側 license 選定と ADR-0016 の canonical
-routing には触れず、ADR-0014 の two-tier ledger とその定期 review
-(2026-08 の inquiry-first 再配線で gap-review から next-move review に
-改名) に統合し、ADR-0017 (detector であって metric でない)・ADR-0019
+routing には触れず、ADR-0014 の two-tier ledger
+（評価の入力範囲は同 ADR の 2026-09-07 の改訂に従う）に統合し、ADR-0017 (detector であって metric でない)・ADR-0019
 (structural optimization 下の content authenticity —— Decision 5 に
 述べた caveat 付き)・ADR-0021 (revocation-control 分類・安全ガード・
 aggregate-pattern test) から boundary を継承し、ADR-0018 の

@@ -223,16 +223,13 @@ different time constants, routed by genre per ADR-0016.
      platforms, now openly reception-steered. Before any change in
      posting behavior, ask how the account's cumulative pattern reads
      to the host's governance.
-6. **Accounting integration.** The essay layer's production record
-   and metrics snapshots become formal inputs to the strategy's
-   periodic next-move review — the review instrument of ADR-0014, as
-   re-wired to inquiry-first operation in 2026-08 — as the standing
-   account of the program's two production-side diffusion sources:
-   new content, and mention earned from others (earned in ADR-0021's
-   sense: unprompted, third-party). Within ADR-0014's two-tier
-   ledger, the private tier holds the layer-level status and points
-   to the corpus's own records as the per-article source of truth; it
-   does not duplicate them.
+6. **Accounting integration.** The essay layer's production record and metrics
+   snapshots are the source for assessing its production and reception when
+   relevant to the requested evaluation. Within ADR-0014's two-tier ledger,
+   the private tier holds layer-level status and points to the corpus's own
+   records as the per-article source of truth; it does not duplicate them.
+   This accounting integration does not impose a reading sequence on ideation.
+   The 2026-09-07 amendment to ADR-0014 governs that boundary.
 
 ## Alternatives Considered
 
@@ -305,10 +302,9 @@ protection exactly where it protects.
   borrow the purification reading on behalf of the whole program —
   the consolation clause is bounded to the layer where its grounds
   actually hold.
-- The periodic review's inputs now include the essay line in both of
-  its states — shipping and stalled — closing the blind spot in which
-  the deployment surface was declared saturated while production went
-  uncounted.
+- Production and reception assessments can distinguish the essay line's
+  shipping and stalled states, addressing the blind spot in which the
+  deployment surface was declared saturated while production went uncounted.
 - The audience doctrine becomes more precise, not more permissive:
   the demotion of direct browsers is explicitly bounded to the
   doctrine repositories, and the human-primary category that ADR-0015
@@ -381,8 +377,7 @@ extends ADR-0016 (genre routing, from canonical and license to
 audience and metrics) and ADR-0011 (instrument-per-channel, applied
 one level up), leaves ADR-0015's ingest-side license selection and
 ADR-0016's canonical routing untouched, integrates with ADR-0014's
-two-tier ledger and its periodic review (renamed from gap-review to
-next-move review in the 2026-08 inquiry-first re-wiring), inherits
+two-tier ledger (with evaluation inputs scoped by its 2026-09-07 amendment), inherits
 its boundaries from ADR-0017 (detectors, not metrics), ADR-0019
 (content authenticity under structural optimization, with the caveat
 stated in Decision 5), and ADR-0021 (revocation-control

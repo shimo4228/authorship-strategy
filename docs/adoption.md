@@ -133,7 +133,7 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0011](adr/0011-two-channel-probe-protocol.md) | Run the scheduled two-channel probe; detect deterministically; keep a public CC0 log. |
 | [ADR-0012](adr/0012-link-index-channel-selection.md) | Contribute link-index entries only; audit hosts; withdraw on enclosure. |
 | [ADR-0013](adr/0013-intrinsic-identifier-layer.md) | Archive to a content-addressed software archive each release; record the intrinsic identifier. |
-| [ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) | Keep a private planning ledger and a public, effect-claim-free intervention timeline, never merged; run a periodic gap-review. |
+| [ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) | Keep a private planning ledger and a public, effect-claim-free intervention timeline, never merged; consult records for implementation decisions while keeping idea generation open. |
 
 The original author's worked implementation of this entire path is the
 research ecosystem the [empirical layer](empirical/README.md) observes —

@@ -56,7 +56,7 @@ abstract: >-
   (SWHID) as a priority-claim layer complementing the extrinsic DOI,
   implementation tracking as a two-tier ledger (a private operational
   ledger and its dated, effect-claim-free public projection) with
-  periodic gap-review, license selection by an artifact's dominant
+  open exploration independent of tracking, license selection by an artifact's dominant
   audience rather than its surface form, and genre-split placement
   (essays as a repository-corpus canonical on an intrinsic identifier,
   papers as a concept-DOI canonical, with syndicated copies bound by

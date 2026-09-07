@@ -701,8 +701,8 @@
     {
       "@id": "https://github.com/shimo4228/authorship-strategy#adr/0014",
       "@type": "ADR",
-      "name": "ADR-0014: Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review",
-      "description": "The one ADR about operating the framework over time rather than a tactic the framework deploys. The program already publishes a dated intervention timeline in the empirical layer, but that timeline is a DOI-versioned artifact bound by empirical-layer conventions (no effect claims, the ADR-0012 host abstraction, normative/empirical separation), which bar it from doubling as a progress-management surface. Implementation tracking therefore splits into two tiers: a private implementation ledger is the operational source of truth (per-tactic deployment status, ranked candidate interventions, working detail), and the public intervention timeline is its dated, effect-claim-free projection — never merged, the update rule being ledger first then projection. A periodic gap-review generates new proposals by comparing deployed tactics against the Layer 4 tactic catalog, the framework's open questions, and recent literature, ranking candidates and running each through the judgment checklist; it is a self-application of the framework that bears on the open questions about the empirical layer's role and the framework's recursive application to itself. The generic review procedure lives in the framework's operational skill; only the project-specific wiring — which artifacts are this program's ledger and timeline — lives in the project's context file.",
+      "name": "ADR-0014: Implementation Tracking as a Two-Tier Ledger",
+      "description": "Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0014-implementation-tracking-two-tier-ledger.md"
     },
 
@@ -896,7 +896,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy-skill",
       "@type": "EcosystemRepo",
       "name": "authorship-strategy-skill",
-      "description": "Component skill of this research line. Operational form of the four-layer judgment checklist, packaged as a standalone Claude Code skill repository. Loadable into LLM-based coding agents as a rule set. Operationalizes the thesis and the twenty-three ADRs.",
+      "description": "Component skill of this research line. Decision support for concrete authorship-strategy choices, packaged as a standalone skill repository. Background and action-specific references support requested evaluations without prescribing ideation. Operationalizes the thesis and the twenty-three ADRs.",
       "url": "https://github.com/shimo4228/authorship-strategy-skill",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

@@ -321,27 +321,8 @@ marginal authoring cost. The identifier proves what content existed
 when; it carries no authorship semantics, which remain with the DOI and
 ORCID layer.
 
-**ADR-0014 Implementation Tracking as a Two-Tier Ledger with Periodic Gap-Review.**
-The only ADR about *operating* the framework over time rather than a
-tactic the framework deploys. The program already publishes a dated
-intervention timeline in the empirical layer, but that timeline is a
-DOI-versioned artifact bound by the empirical layer's conventions
-(preliminary-observation tone, no effect claims, the ADR-0012 host
-abstraction, normative/empirical separation), which bar it from doubling
-as a progress-management surface. Implementation tracking therefore
-splits into two tiers: a private implementation ledger is the
-operational source of truth (per-tactic deployment status, ranked
-candidate interventions, working detail), and the public timeline is its
-dated, effect-claim-free projection — the two are never merged, and the
-update rule is ledger first, then projection. A periodic gap-review
-generates new proposals by comparing deployed tactics against the Layer 4
-tactic catalog, the framework's open questions, and recent literature,
-ranking candidates and running each through the judgment checklist; it is
-a self-application of the framework that bears on the open questions about
-the empirical layer's role (settled by ADR-0023) and the framework's
-recursive application to itself. The generic review procedure lives in the framework's operational
-skill; only the project-specific wiring — which artifacts are this
-program's ledger and timeline — lives in the project's context file.
+**ADR-0014 Implementation Tracking as a Two-Tier Ledger.**
+Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support.
 
 **ADR-0015 License Selection by Audience, Not Artifact Form.** Fixes
 which permissive instrument an artifact takes, on an axis the framework
@@ -586,18 +567,7 @@ form — link-index entries only, under a four-condition host audit
 structure / paid-product funnel), with withdrawal if a host later
 encloses.
 
-ADR-0014 is the **implementation-tracking decision**: with ADR-0022, one
-of the two operating-the-framework decisions rather than a tactic the
-framework deploys. The public
-intervention timeline cannot double as a planning surface (its
-empirical-layer conventions forbid effect claims and operational detail),
-so tracking splits into a private ledger (operational status, ranked
-candidate interventions, working detail) and the public timeline as its
-dated, effect-claim-free projection. A periodic gap-review compares
-deployed tactics against the Layer 4 catalog and the open questions to
-generate the next proposals — a self-application of the framework. The
-review procedure lives in the framework's operational skill; only the
-wiring is project-specific.
+ADR-0014 is the **implementation-tracking decision**. Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support.
 
 ADR-0013 is the **intrinsic-identifier decision**: it adds a second,
 content-derived identifier layer (SWHID) to the federation the 0001-0003
@@ -875,7 +845,7 @@ the AI-facing `llms.txt` artifact (Layer 4 tactic 7) but does not name
 human-facing README content quality, so the human-surface writer is
 adjacent rather than a component.
 
-- **[`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill)** — the operational form of the four-layer judgment checklist, prohibited and encouraged actions, and trigger conditions, packaged for loading into an LLM-based coding agent's rule set. Adopt this component to apply the framework's day-to-day judgment without re-deriving it from the thesis.
+- **[`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill)** — the decision support for evaluating concrete authorship-strategy choices, with background and action-specific references, packaged for loading into an LLM-based coding agent's rule set. Adopt this component to apply the framework's day-to-day judgment without re-deriving it from the thesis.
 - **[`release-doi`](https://github.com/shimo4228/release-doi)** — the release-time workflow that operationalizes the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook. Adopt this component to operate a DOI-registered research repository following the framework's identifier-federation discipline.
 - **[`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer)** — writes the AI-facing reference files (`llms.txt`, `llms-full.txt`, FAQ, glossary) that Layer 4 tactic 7 names as required structured artifacts. Combines the Answer.AI `llms.txt` standard with generative-engine-optimization static analysis. Every framework-applied repository requires the `llms.txt` artifact this component produces.
 - **[`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph)** — designs and ships the JSON-LD knowledge graph (`graph.jsonld`) that Layer 4 tactic 7 names as a structured-artifact form. Provides nine reusable design moves (dual `@type`, language-tagged literals, schema absence enforces invariants, cross-graph `@id` reuse, volatile-state exclusion, matrix-as-paired-edges, root `Dataset` node, reading-order block, hub-and-spoke reverse-link). Every framework-applied repository with stable concept-level structure requires the `graph.jsonld` artifact this component produces.

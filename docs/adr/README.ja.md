@@ -23,7 +23,7 @@ top-down に prescribe されたものではない。
 | [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る (Annex A、2026-08: 校正の読みルール) | **experimental** |
 | [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
 | [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
-| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger と定期 gap-review による実装トラッキング | accepted |
+| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger による実装トラッキング | accepted |
 | [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ | accepted |
 | [0016](0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical | accepted |
 | [0017](0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— 承認済み 3 failure mode それぞれの detector と recovery 戦略 | accepted |
@@ -135,19 +135,7 @@ question 4 を閉じる。同 archive への保存は、追加の執筆コスト
 第二の parametric-channel ingest surface (code 系 training corpora が
 archive を source とする) も開く。
 
-ADR-0014 は **implementation-tracking decision** である: framework が
-deploy する tactic ではなく、framework を *運用* することについての唯一の
-ADR である。program は既に empirical 層で日付付き intervention timeline を
-公開しているが、その timeline の規約 (効果主張なし、ADR-0012 の host 抽象化、
-normative/empirical 分離) は、それを planning 面として兼用することを禁じる。
-そこでトラッキングを二層に分ける: private な implementation ledger が運用
-status・ランク付き candidate intervention・作業詳細を持ち、public timeline は
-その日付付き・効果主張なしの投影となる。定期 gap-review が deploy 済み tactic
-を Layer 4 catalog と manifesto の open questions に突き合わせて次の提案を生む
-—— empirical 層の役割 (ADR-0023 で決着) と framework の自己再帰的適用に
-ついての open question に関わる self-application である。review 手順は framework の operational skill に
-置き、配線 (どの artifact が本 program の ledger と timeline か) だけが
-project 固有である。
+ADR-0014 は **implementation-tracking decision**。実装トラッキングは、private な運用 ledger と、その日付付き・効果主張なしの public projection を分ける。ledger を先に更新してから timeline に投影する。記録は状況確認と実施判断を支え、発想の方法を指定しない。2026-09-07 の改訂で、必須 review の起動条件と発想の順序を解除した。具体的な選択は文脈に応じて評価し、既存の戦略の前提も問い直せる。artifact の場所は保守資料、必要に応じた判断補助は operational skill が持つ。
 
 ADR-0015 は **license-selection decision** である: framework が名指し
 しながら記録していなかった軸で、artifact がどの permissive instrument を

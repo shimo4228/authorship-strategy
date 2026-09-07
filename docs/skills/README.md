@@ -10,7 +10,7 @@ ecosystem: the four **component skills** the doctrine names, the always-loaded
 
 | Repository | Role | Type |
 |---|---|---|
-| [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill) | The four-layer judgment stack as a loadable, on-demand skill for LLM-based coding agents | **Component** |
+| [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill) | On-demand decision support for concrete authorship-strategy choices, with background and action-specific references | **Component** |
 | [`release-doi`](https://github.com/shimo4228/release-doi) | Identifier-federation release workflow for DOI-registered research repositories (ADRs 0001–0003) | **Component** |
 | [`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer) | AI-facing document writer for `llms.txt` / `llms-full.txt` / FAQ / glossary surfaces (Layer 4 tactic 7) | **Component** |
 | [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph) | Companion JSON-LD knowledge-graph writer for stable concept-level structure (Layer 4 tactic 7) | **Component** |

@@ -1,154 +1,92 @@
 Language: [English](0014-implementation-tracking-two-tier-ledger.md) | 日本語
 
-# ADR-0014: 二層 ledger と定期 gap-review による実装トラッキング
+# ADR-0014: 二層 ledger による実装トラッキング
 
-> **要約.** Layer 4 tactic は一度撃って終わりではなく、時間軸で運用
-> される deployment decision である。program は既に、どの tactic を
-> いつ deploy したかを記録する public な intervention timeline を公開
-> している。その empirical 層の規約 —— 効果主張なし、host 抽象化規律
-> (ADR-0012)、運用詳細なし —— は、それを progress-management 機構と
-> して兼用することを妨げる。本 ADR は二層 ledger を確立する: private な
-> implementation ledger が tactic ごとの deploy status・ランク付き
-> candidate intervention・運用詳細を持ち、public timeline はその投影
-> として日付付きで効果主張なしに保たれる。定期 gap-review が、deploy
-> 済み tactic を Layer 4 catalog と framework の open questions に
-> 突き合わせて新規提案を生む。review 手順は framework の operational
-> skill に置き、project 固有の配線は project の context file に置く。
+> **要約.** private な implementation ledger は運用状況と作業詳細を持つ。
+> public な intervention timeline は、その日付付き・効果主張なしの投影を記録する。
+> トラッキングは実施を支える。発想の方法や、問い直してよい戦略の前提は指定しない。
 
 ## Status
 
-accepted
+accepted — amended 2026-09-07
 
 ## Date
 
-2026-06-13
+2026-06-13; amended 2026-09-07
+
+## Amendment — 2026-09-07
+
+二層 ledger と ledger を先に更新する規則は維持する。本改訂は、当初の必須
+gap-review 手順と「次の一手」による起動条件、およびそれらに依存する説明を置き換える。
+また operational procedure から、inquiry-first の指定された順序、候補分類の枠数、
+問いの自動登録を取り除く。以下の Decision がトラッキングと評価の現在の範囲を定める。
 
 ## Context
 
-Layer 4 tactic は時間軸で持続する deployment decision であって、一度
-限りの行為ではない。戦略を一貫して運用するには、どの tactic が deploy
-済みで、何が pending で、次の一手が何かという running な運用像が要る
-—— session ごとに自分の位置を再導出するのではなく、それに基づいて
-一貫して動くために。
+public intervention timeline と private な作業 ledger は異なる目的を持つ。
+timeline は、どの介入がいつ行われたかを記録する。empirical 層の規約により、
+効果主張と私的な運用詳細を含めず、外部 collection に関する決定が抽象化の水準を定める。
+ledger は deploy 状況、選択された候補、作業詳細を持つ。
 
-program は既に、empirical 層の一部として public な intervention
-timeline を公開している: どの tactic をいつ deploy したかを記録する
-DOI-versioned な成果物である。この timeline は empirical 層の常設規約
-—— preliminary-observation tone、効果主張なし、external-collection
-ADR (ADR-0012) が確立する host 抽象化規律 (各介入の背後にある具体的
-host や運用上の identity は一般的記述に抽象化される) —— に支配される。
-empirical 層が執行のために存在する normative/empirical 分離も適用される:
-timeline は観測記録への methods companion であって、戦略文書ではない。
+両者を合わせると、公開観測記録が planning scratchpad になり、公開記録では抽象化すべき
+情報が露出する。行動を検討・実施するときに運用状況を参照できることには引き続き意味がある。
 
-progress-management 機構は、これらの規約の逆を要求する。tactic ごとの
-deploy status (deployed / in-progress / not-started / out-of-scope)、
-根拠付きのランク付き candidate intervention、そして timeline の抽象化
-規律が明示的に除去する運用詳細 —— host identity、rate limit、pending な
-外部依頼 —— を持たねばならない。これらを public timeline に書き込むと、
-その役割が壊れる: preliminary-observation な methods companion である
-ことをやめて planning scratchpad になり、ADR-0012 の抽象化規律を破り、
-運用詳細を public に晒す。timeline は DOI-versioned な記録であり、
-planning note で enrich することは、empirical な機能を持たない内容で
-versioned artifact を churn させることにもなる。
-
-必要なのは、一貫した次手提案を駆動する運用 status の durable な置き場で
-あり、public timeline を汚さず、かつ作業状態を session ごとにゼロから
-再導出せずに済むものである。
+著者は、指定された提案生成手順が探索を制約していると報告した。一般論として探究を
+認めても、最初の問い、固定の読み順、候補分類、記録された成果を要求すれば、探究の形を
+指定していることになる。その手順を再利用可能な skill に移しても、この制約はなくならない。
 
 ## Decision
 
-実装トラッキングを、役割の厳格な分離のもとで **二層** で維持する。
-第一層、private な implementation ledger は operational source of
-truth である: tactic ごとの deploy status (deployed / in-progress /
-not-started / out-of-scope)、根拠付きランク付き candidate
-intervention、そして public timeline が持ってはならない運用作業詳細。
-第二層、public な intervention timeline は ledger の日付付き投影で
-ある: 効果主張なし、運用詳細は ADR-0012 が定める水準に抽象化、canonical
-な公開言語で。両者は決して merge しない。
+実装トラッキングを **二層** で維持する。private ledger は deploy 状況、選択された
+候補、作業詳細の operational source of truth。public timeline は、その日付付き・
+効果主張なしの投影であり、運用詳細は [ADR-0012](0012-link-index-channel-selection.ja.md)
+が定める水準に抽象化する。両者の役割を分離する。
 
-四つの運用ルールが両層を統べる:
+1. **実施後に更新する。** deploy された介入を ledger に先に記録し、次に public
+   timeline に日付付きの投影を追加する。
+2. **依頼された作業に応じて記録を参照する。** 状況、実現性、重複の確認に関係するときに
+   ledger を使う。アイデアを求める依頼だけで、トラッキングや review の定型手順を起動しない。
+3. **探索を開いておく。** thesis、戦術 catalog、過去の判断は、それらの前提への異論も含む
+   思考の材料である。探索には必須の読み順、候補枠数、採点チェックリスト、記録義務を置かない。
+4. **具体的な選択を文脈に応じて評価する。** 採用や実施を検討するときは、関係する根拠、
+   tradeoff、行動の境界を確認する。既存の戦略判断との衝突は、その前提と改訂の可能性を
+   議論する理由であり、自動的な却下理由ではない。案や問いは、記録を依頼されたときに保存する。
 
-1. **Update rule.** 介入が deploy されたら、まず ledger を更新し、次に
-   public timeline に日付行を投影する。ledger が常に source、timeline
-   が常に projection。
-
-2. **Gap-review procedure.** 定期 gap-review が新規提案を生む: ledger
-   の現 status を読み、deploy 済み tactic を Layer 4 tactic catalog・
-   framework の open questions・最新の関連文献に突き合わせて gap-analyze
-   し、candidate intervention をランク付けし、各を framework の判断
-   チェックリストに通し、残った candidate を ledger に記録して提示する。
-
-3. **Division of homes.** review 手順は汎用であり framework の
-   operational skill に置く —— どの adopter も回せるように。project 固有
-   の配線 —— どの artifact が本 program の ledger と timeline か —— は
-   project の context file に置く。portable な skill が個人の artifact
-   位置を hardcode してはならないからである。
-
-4. **Trigger.** gap-review は default で on-demand に回す —— 次の一手が
-   問われたとき、または介入の一巡が閉じたとき。定期スケジュールは
-   optional な wrapper であって、primary な起動機構ではない。
+project 固有の artifact の場所は、該当作業で参照する保守規約に置く。
+operational skill は必要に応じた判断補助を提供し、必須の発想手順を定めない。
 
 ## Alternatives Considered
 
-**Single-document トラッキング。** public intervention timeline 自身に
-status とランク付き提案セクションを足す。却下: DOI-versioned な public
-empirical artifact を運用作業内容で overload し、preliminary-observation
-かつ methods-companion な役割を壊し、運用詳細を surface して ADR-0012
-の抽象化規律を破り、empirical な機能を持たない planning note で
-versioned record を churn させる。timeline は citable かつ public だが、
-planning scratchpad はそのどちらでもない。
+**公開文書一つで追跡する。** 却下: 運用詳細と計画内容が timeline の empirical な役割と
+privacy を損なう。
 
-**Procedure を project context file に置く。** gap-review 手順全体を
-reusable な skill ではなく project の context 文書に置く。却下: multi-step
-の review-and-propose workflow は手順的内容であり reusable な skill 層に
-属する; context 文書は project 固有の配線のためのものである。手順を
-そこに置くと context file を肥大させ、その役割と不整合になり、project の
-context を共有しない adopter に対して review を non-portable にする。
+**再利用可能な skill に発想手順を指定する。** 却下: 手順を移しても、起点、候補の形、
+出力への制御は残る。著者には現行 framework の適用と、その外側の探索の両方が必要である。
 
-**形式的機構なし。** ledger-and-projection の規律も review loop も無しに、
-会話と memory で ad hoc に追跡する。却下: 維持された記録なしでは deploy
-status が drift し、public timeline と作業状態が silently に乖離し、
-次の一手が、維持された gap-analysis からではなく毎回不整合に再導出される。
-informal な手法は、利益を蓄積せずに、形式的手法の coordination cost を
-session ごとに再生産する。
+**実施記録を持たない。** 却下: deploy 状況と public intervention timeline の整合は
+引き続き必要。強制的な思考手順を除くことは、実施済みの行動を記録する必要をなくさない。
 
 ## Consequences
 
 **Positive.**
 
-- public timeline がその役割を保つ: planning scratchpad ではなく効果
-  主張なしの介入記録。DOI-versioned な内容が運用 note で churn されない。
-- 運用 status とランク付き提案が durable な置き場を得る; 次の一手が
-  ad hoc な再導出ではなく反復可能な gap-analysis から生まれる。
-- gap-review は framework の self-application である: program が自身の
-  diffusion 実装を観測し、自らが公開するのと同じ tactic catalog と open
-  questions から次手を生む。これは empirical 層の役割についての open
-  question、および framework の自己再帰的適用についての open question に
-  関わる。
-- 汎用の review 手順は、同じ framework を運用する任意の著者が採用可能;
-  project 固有なのは配線だけ。
+- public timeline は効果主張なしの介入記録であり続ける。
+- 運用状況を参照できるまま、毎回の会話の起点にする必要がなくなる。
+- 採用を判断する前に、現行の戦略の前提に異論を出せる。
+- 保守と評価の指示を、それが支える具体的な作業に応じて参照できる。
 
 **Negative.**
 
-- 二つの artifact を同期し続けねばならない; update rule (ledger 先、
-  次に projection) は時間的圧力下で skip されうる常設規律であり、作業
-  状態と public 記録の間に drift を生む。
-- private ledger は citable でない; public 記録は必然的に lossy な投影で
-  あり、外部読者は介入と日付を見るが、その理由や却下された candidate は
-  見えない。
-- gap-review の提案品質は tactic catalog と open-question set が最新で
-  あることに依存する; stale な catalog は stale な提案を生む。
+- deploy 後には引き続き二つの artifact を整合させる必要がある。
+- 外部読者が見るのは私的な作業状態の lossy な投影である。
+- 指定手順を除くだけでは発想の改善は確立されない。実際の会話での有用性を著者が判断する必要がある。
 
 ## Lineage
 
-起点となった need: 2026-06-13 の、公開 intervention timeline を、新規
-戦略提案も生む living な progress-management 機構にしたいという要望。
-この要望が、運用上の need と public artifact の empirical 層規約 ——
-planning 内容も無修正の運用詳細も認めない —— の衝突を表面化させた。
+当初の 2026-06-13 の要望は、intervention timeline を継続的な運用記録にすることだった。
+そこから二層の分離と必須の提案生成ループが生まれた。2026-09-07、著者は新しい案を縛る指示の
+削減を求め、共通 operational skill と既存の戦略の前提を問い直すことを明示的に対象に含めた。
 
-本文から抽象化した specific instance: private ledger は project の他の
-運用記録と並んで維持される project-memory note; public intervention
-timeline は empirical 層の implementation-log 文書; framework の
-operational skill はその authorship-strategy component skill; project の
-context file は repository の agent-instruction 文書。review 手順の汎用形
-はその component skill に記録され、本 ADR は決定とその理由のみを記録する。
+この program では、private ledger は project-memory note、public timeline は empirical 層の
+implementation log である。場所は repo の保守資料に記す。以前の手順は version history に残り、
+現行の運用は上記の改訂後の決定に従う。
