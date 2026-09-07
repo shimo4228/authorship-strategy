@@ -81,6 +81,22 @@ Open questions:
 - Should retired tactics be archived in a separate document rather than removed, so adopters can see what was tried and why it stopped working?
 - Are some Layer 4 tactics actually Layer 3-stable (the idea behind them survives substrate shifts) and should be promoted? The DOI registration tactic, for instance, has survived two substrate shifts (Zenodo's deposit-on-tag mechanism changed, but the underlying *register a stable identifier on publication* tactic did not).
 
+> **Status (2026-09-07): observed, not answered.** The question was
+> posed on one substrate-shift observation. The empirical layer now
+> carries [`tactic-lifecycle.md`](empirical/tactic-lifecycle.md), a
+> per-tactic table of onboarding and retirement dates with the
+> retirement cause classified. As preliminary observation: of the
+> six retirement or amendment events recorded so far, none was the
+> substrate retiring — the cause the thesis anticipates. Five were the
+> ecosystem's own measurement or audit finding the tactic wanting and
+> one was host governance acting on the account; every tactic that met
+> a substrate shift survived it. Every dated retirement fell within
+> about two months of onboarding, and the identifier-layer tactics — the ones the third
+> bullet proposes promoting — are the oldest rows with no retirement
+> event. The table is right-censored and too small for a lifetime
+> estimate, so the three sub-questions stay open; what changed is that
+> they now have dated rows to be answered against.
+
 ## Open question 4: How does the framework interact with non-DOI-registrable artifacts?
 
 The framework presupposes DOI registration as the canonical
