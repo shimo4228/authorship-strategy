@@ -177,7 +177,12 @@ ADR-0016 に従って genre で routing する。
    - essay layer の signal は doctrine layer の判断に流入しない:
      release・deposit・federation の選択を reads や反応で操舵せず、
      ADR-0017 の failure-mode diagnostics は doctrine layer において
-     detector のままであり metric にならない。
+     detector のままであり metric にならない。*2026-09-07:* この条項に
+     機械検査 `scripts/verify-layer-boundary.sh` が付いた。doctrine layer の
+     carrier が essay layer の勘定源を名指しするか reception count を
+     記すと fail する。検査が見るのは操舵された判断の文面上の痕跡で
+     あって操舵そのものではない —— open question 11 が条項に欠けると
+     述べた mechanism であり、その問いの解決ではない。
    - ADR-0019 の content-authenticity 境界は**両層**に適用される:
      操舵は何を書きどこに置くかを選ぶ; 数字のために内容を変形する
      ことは決してしない。正直な caveat を一つ: essay layer の内側では

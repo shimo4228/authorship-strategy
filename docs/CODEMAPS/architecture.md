@@ -33,7 +33,8 @@ authorship-strategy/
     ├── skills/                          ecosystem index: component skills + rule + complements (external repos, no body copy)
     └── CODEMAPS/                        this directory
 scripts/
-└── verify-counts.sh                     release-time guard: aggregate counts in prose == filesystem reality
+├── verify-counts.sh                     release-time guard: aggregate counts in prose == filesystem reality
+└── verify-layer-boundary.sh             doctrine-edit guard: no essay-layer accounting source or reception count in doctrine carriers (ADR-0022 boundary clause)
 ```
 
 ## Document Role Index
@@ -99,6 +100,7 @@ violated by routine maintenance:
 - **Preliminary-observation tone in empirical layer.** Empirical claims use phrasing like "consistent with" or "preliminary observation"; not "evidence" or "validation". The empirical layer is a case study with explicit limitations, not an experiment.
 - **CODEMAPS file-level / graph.jsonld concept-level.** This file describes the repository at the *file* level (where does X live as a file); `graph.jsonld` describes the repository at the *concept* level (what is X, how does it relate to Y). The two never duplicate each other; new ADRs, new Concepts, new EcosystemRepo entries must update both.
 - **Aggregate-count single source of truth.** Counts restated across many carriers — the ADR total and the manifesto open-question total — are canonical in the *filesystem* (`docs/adr/[0-9]*.md`, the `## Open question` headings), never in any one prose sentence. Prose carriers may state the number for readability, but `scripts/verify-counts.sh` is the single enforcement point that they still agree with reality; it runs in the release-doi Phase 4 verify step. When a count changes, update every carrier and let the script confirm convergence — do not rely on manual grep (a stale seven-era ADR-count claim survived to v1.0.0 in `inspiration.md` despite manual review, which is why this guard exists). The distinct sibling-line counts ("four" for the empirical-baseline lines, "five" for the current ecosystem) are time-bound and semantic, not filesystem-derived, and are intentionally out of the guard's scope.
+- **Audience-layer boundary is machine-checked.** ADR-0022's boundary clause ("essay-layer signals do not flow into doctrine-layer decisions") has one enforcement point, `scripts/verify-layer-boundary.sh`: it fails when a doctrine carrier (thesis, manifesto, glossary, ADRs, READMEs, llms.txt, CITATION.cff) names the essay layer's accounting sources (`schedule.json`, `metrics/snapshots`) or states a reception count next to likes / reads / views / reactions / followers. Definitional mentions of those nouns (ADR-0007, ADR-0022, glossary) pass because the check anchors on number+noun. Run it after any doctrine-layer edit; the finding is moved to `docs/empirical/` or the essay layer, or the clause is superseded by ADR — never silenced in the script.
 - **Hub back-propagation.** New ADRs, new Concepts, or large thesis revisions trigger updates to the federation hub (the `shimo4228/shimo4228` repository): its `graph.jsonld` adds the new entities; its README cross-references the new content. Routine in-repository ADR refinements do not require hub updates.
 - **Sibling `.zenodo.json` cross-reference.** When this repository receives its concept DOI, the four sibling research lines' `.zenodo.json` files are updated to add `references` or `isReferencedBy` entries pointing to it, so the citation network is recoverable from any sibling's deposit metadata.
 

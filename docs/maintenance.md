@@ -55,6 +55,10 @@
   参照には concept DOI を使い、hub に volatile な運用状態を持ち込まない。
 - 構造や説明の変更は関連する AI 向け説明にも反映し、`bash scripts/verify-counts.sh` で
   ADR・open question の件数を確認する。
+- doctrine 層（thesis / manifesto / glossary / ADR / README / llms.txt）を編集したら
+  `bash scripts/verify-layer-boundary.sh` を通す。essay 層の勘定源（schedule、metrics
+  snapshot）の名指しと reception count の記載を検出する（ADR-0022 boundary 条項の執行器）。
+  検出は code、移設か supersede かは人間が決める。
 
 ## 共通スキルと公開
 

@@ -199,7 +199,13 @@ different time constants, routed by genre per ADR-0016.
    - Essay-layer signals do not flow into doctrine-layer decisions:
      no release, deposit, or federation choice is steered by reads or
      reactions, and the failure-mode diagnostics of ADR-0017 remain
-     detectors, not metrics, in the doctrine layer.
+     detectors, not metrics, in the doctrine layer. *2026-09-07:* this
+     clause acquired a machine check, `scripts/verify-layer-boundary.sh`,
+     which fails when a doctrine-layer carrier names the essay layer's
+     accounting sources or states a reception count. The check sees the
+     textual trace of a steered decision, not the steering itself; it is
+     the mechanism open question 11 said the clause lacked, not a
+     resolution of that question.
    - The content-authenticity bound of ADR-0019 applies in **both**
      layers: steering selects what to write and where to place it; it
      never deforms content for numbers. One honest caveat: inside the
