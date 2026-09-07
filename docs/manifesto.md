@@ -180,6 +180,27 @@ The framework should be re-evaluated as these substrate
 features shift. The framework's robustness to substrate change
 is itself an open empirical question.
 
+> **Status (2026-09-07): expiry check, not an answer.** The three
+> features were checked against primary vendor and policy sources on
+> this date (detail and re-open triggers in
+> [`inspiration.md`](inspiration.md#substrate-shift-check-for-open-question-6-as-of-2026-09-07)).
+> *Author-attribution infrastructure:* partially shifted — every
+> frontier API now returns retrieval citations, but as URL-plus-title
+> tuples with no author field, and no vendor ships parametric
+> attribution. *Closed-corpus training:* partially shifted —
+> licensing, a large settlement, and regulatory opt-out obligations
+> have grown, but no lab reports licensed data replacing crawl, the
+> rulings so far bind on pirated copies rather than public
+> permissively licensed repositories, and the open corpora remain
+> live and ingested. *Direct-author-to-LLM publishing:* not shifted —
+> no vendor offers individuals a submission channel with author
+> metadata, and the marketplaces that exist key on the domain and
+> attribute a URL, so cross-platform federation is not redundant. None
+> of the three has fired at the author level; the retrieval channel's
+> universal URL citation favors the tactics that make a canonical
+> location resolvable. The knowledge behind this note ages in weeks;
+> the re-open triggers are recorded with the sources.
+
 ## Open question 7: What is the role of the framework's empirical layer?
 
 The empirical layer in [`empirical/`](empirical/) reports

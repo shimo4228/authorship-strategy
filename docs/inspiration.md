@@ -607,6 +607,103 @@ knowledge graph carry the qualitative mechanism only.
   close open question 10's sufficiency gap for depositors like this
   program's author — is unresolved.
 
+### Substrate-shift check for open question 6 (as of 2026-09-07)
+
+Open question 6 names three substrate features whose change would
+weaken the three-axis inversion. Per the program's staleness rule,
+this is a dated check against primary sources, not an answer; each
+feature carries what would re-open it. Vendor documentation pages were
+fetched on the check date; where only secondary coverage was reachable
+it is marked.
+
+- **Native author attribution in model outputs — partially shifted,
+  URL-level only.** Every frontier API now returns retrieval citations
+  (OpenAI Responses API `url_citation`, 2025-03; Anthropic web-search
+  `web_search_result_location`, 2025-05, and a passage-level Citations
+  API over caller-supplied documents, 2025-01; Gemini grounding
+  `groundingChunks`, 2024-10; xAI, Perplexity Sonar, Mistral
+  Conversations likewise). Every schema is a URL-plus-title tuple with
+  span offsets; none carries an author, byline, structured author
+  markup, or author identifier (Perplexity and Mistral add a date). No
+  frontier vendor has shipped or announced parametric attribution —
+  answers from weights traced to training sources; the one shipped
+  instance is Ai2's OLMoTrace (2025-04), exact-span matching against
+  open training data, document-level, for open-data models only.
+  Cross-vendor attribution standards: the SPUR Coalition's Content
+  Telemetry v1.0 (site-asserted 2026-09-02) is publisher-side with no
+  named model-vendor commitment; IETF AIPREF drafts signal usage
+  preference, not output credit; C2PA covers generated media, not text
+  source credit. *Re-open if* any frontier vendor's citation schema
+  gains an author or author-identifier field, or ships parametric
+  attribution. Sources: developers.openai.com/api/docs/guides/tools-web-search;
+  platform.claude.com/docs/en/docs/build-with-claude/citations;
+  ai.google.dev/gemini-api/docs/google-search; docs.x.ai/developers/tools/citations;
+  docs.perplexity.ai/api-reference/chat-completions-post;
+  docs.mistral.ai/studio-api/conversations/citations;
+  allenai.org/blog/olmotrace; contenttelemetry.org.
+- **Closed-corpus training — partially shifted; open permissive
+  content still ingested.** Licensing has grown (secondary trackers
+  count on the order of dozens of publisher deals, weighted toward
+  live-access rather than training corpora), one lab settled a
+  training-data class action for USD 1.5 billion (final approval
+  2026-07-20), the EU general-purpose-model code of practice commits
+  signatories to honor robots.txt and machine-readable reservations
+  (obligations in force 2025-08-02, grace ended 2026-08-02), and a
+  major CDN moves to blocking training crawlers by default on
+  ad-bearing pages from 2026-09-15. Against that: no lab statement
+  says licensed data now dominates or replaces crawl; US rulings so
+  far (Bartz v. Anthropic 2025-06, Kadrey v. Meta 2025-06) hold
+  training on lawfully acquired content to be fair use and bind on
+  pirated copies, not on public permissively licensed repositories;
+  Common Crawl still publishes monthly and publishers' 2026-04 letter
+  to it states developers still use it; FineWeb-2 and Common Corpus
+  remain live; AI crawler volume is rising. Publicly hosted CC0 /
+  CC-BY content is the least-contested training input and remains
+  crawled. *Re-open if* a lab states licensed data has replaced web
+  crawl, or a ruling or regulation requires honoring opt-out signals
+  in a way that reaches permissively licensed repositories. Sources:
+  digital-strategy.ec.europa.eu/en/policies/contents-code-gpai;
+  blog.cloudflare.com/content-independence-day-ai-options (2026-07-01);
+  newsmediaalliance.org letter to Common Crawl (2026-04-29);
+  authorsalliance.org (settlement approval, 2026-07-21);
+  huggingface.co/datasets/HuggingFaceFW/fineweb-2; arXiv:2506.01732
+  (Common Corpus). Deal counts rest on secondary trackers only.
+- **Direct author-to-model publishing — not shifted.** No frontier
+  vendor runs a training-corpus submission channel open to
+  individuals (data-partnership programs address organizations; open
+  corpora such as Common Pile and Common Corpus take institutional
+  sources with no individual route; the encyclopedia's enterprise feed
+  is B2B and attributes to the encyclopedia, not its editors). The
+  individual-accessible mechanisms that exist — RSL 1.0 declarations,
+  pay-per-crawl and pay-per-use marketplaces, an answer-engine
+  publisher program, search-console include/exclude toggles — are
+  access, licensing, or opt-out controls keyed on the domain, and
+  where they attribute, they attribute a URL. No AI product is
+  verified to read the navigator-file convention, structured author
+  markup, citation-metadata files, author identifiers, or text content
+  credentials for attribution at ingest; RSL's attribution term is the
+  only machine-readable author-credit convention and lists no
+  committed model licensee. Federation is therefore not redundant:
+  every channel keys on a URL, so a self-owned canonical location with
+  mirrors remains the carrier. *Re-open if* a frontier vendor opens
+  individual content submission with author metadata, or any model
+  product documents reading an author-identity convention at ingest.
+  Sources: developers.google.com/search/docs/appearance/ai-features
+  (updated 2025-12-10); rslstandard.org/rsl; tollbit.com/docs;
+  developers.cloudflare.com/ai-crawl-control/features/pay-per-crawl;
+  blog.eleuther.ai/common-pile; several vendor program pages were
+  unreachable (HTTP 403) and rest on trade-press coverage.
+
+Net: the retrieval channel now carries a URL-level source link by
+default across vendors, which strengthens the structural-artifact
+tactics that make the canonical URL resolvable and weakens nothing in
+the inversion; the parametric channel remains unattributed; the open
+web remains a training input for permissively licensed work. None of
+the three conditions has fired at the author level. The check is
+dated; the staleness horizon for this field is weeks, and the re-open
+triggers above are the conditions under which the manifesto note
+should be revisited.
+
 ## Sibling research lines (the recurring decisions)
 
 The framework was extracted from four sibling research lines
