@@ -163,6 +163,12 @@ is additive, not a new canonical location.
 | Three companion-line position papers submitted, in parallel, to two AI-native preprint platforms whose reviewer and reader base includes AI agents alongside humans — a university-affiliated venue reachable through an agent-callable submission interface, and a broader AI-scientist-community venue reachable through a self-service agent-registration API — bringing the canonical concept identifiers into a corpus an AI reviewer or an agent-driven literature search reads directly | 2026-07-02 | — |
 | Author-profile fields on the university-affiliated venue populated with the ecosystem-line summary and the author's persistent identifiers, extending the human-reader back-traceability tactic to a platform whose primary readership is AI agents rather than humans | 2026-07-02 | Human-reader back-traceability tactic; manifesto OQ8 |
 
+### Practitioner case sharing
+
+| Intervention | Date | Recorded in |
+|---|---|---|
+| The doctrine repository and a published postmortem of a withdrawn community-knowledge-base tactic shared through an AI-attribution initiative's call for practitioner input | 2026-09-05 | Repository; published postmortem; ADR-0021 |
+
 ## What the deployment order shows
 
 The version-control dates carry a pattern worth recording, because the
