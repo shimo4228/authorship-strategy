@@ -29,7 +29,7 @@ authorship-strategy/
     ├── glossary.md / glossary.ja.md     key terms, with disjoint-attribution warning vs. AAP
     ├── inspiration.md                   prior literature + sibling-line lineage + ADR origin
     ├── adr/                             23 ADRs (English) + 23 mirrors (.ja.md) + README + README.ja
-    ├── empirical/                       preliminary observation layer (method + 2026-05 traffic baseline + 2026-06 external-literature note + 2026-06 probe baseline + implementation-log intervention timeline + tactic-lifecycle onboard/retire table; English-only by convention)
+    ├── empirical/                       preliminary observation layer (method + 2026-05 traffic baseline + 2026-06 external-literature note + 2026-06 probe baseline + implementation-log intervention timeline + tactic-lifecycle onboard/retire table + 2026-09 probe pre-registration + 2026-09 adoption dry run; English-only by convention)
     ├── skills/                          ecosystem index: component skills + rule + complements (external repos, no body copy)
     └── CODEMAPS/                        this directory
 scripts/
