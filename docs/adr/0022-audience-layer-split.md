@@ -140,6 +140,17 @@ different time constants, routed by genre per ADR-0016.
    - Artifact classes the genre split does not name — component skill
      repositories, datasets, served pages, measurement artifacts —
      default to the **doctrine layer**.
+
+     > **Note (2026-09-08, owner decision recorded in personal-branding
+     > ADR-0004, a local-only repo):** for the 90-day follower campaign
+     > window 2026-09-08 → 2026-12-07, `claude-harness` and the
+     > component skill repositories exported from it are accounted as
+     > a **practitioner layer** in personal-branding — the author's
+     > day-to-day tooling, not doctrine — so ADR-0007 clauses 1–2 do
+     > not bind campaign actions on those repositories during the
+     > window. The doctrine repositories and the paper genre are
+     > untouched; this default resumes for the skill repositories when
+     > the window closes.
    - The assignment governs **accounting and metrics only**. It does
      not reopen canonical or priority-claim routing (ADR-0016), and
      it does not reopen license selection: ADR-0015 selects license
