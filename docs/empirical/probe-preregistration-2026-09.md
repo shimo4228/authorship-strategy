@@ -190,4 +190,33 @@ below for the next window.
 
 ## Amendments
 
-None as of 2026-09-07.
+### 2026-10-01 — retrieval schedule ended; qwen family withdrawn
+
+Recorded before any eligible model's event run, so none of these
+changes was made after seeing contrast data. The only parametric event
+run since this document was recorded is the 2026-09-20 qwen
+substitution, and that model was not eligible (see below). Every cell
+in that run was negative on both booleans. Panel config: hub
+`probes/config/probes-v10.yaml`.
+
+- **Retrieval cadence block no longer holds.** The weekly retrieval
+  runs pre-registered for 2026-09-01 to 2026-11-30 stopped after
+  2026-09-27, by author decision. Weekly samples were adding little
+  information: panel swaps (v7 to v9) broke the series faster than it
+  accumulated. The retrieval series 2026-06-12 to 2026-09-27 stays
+  public as an archived record. As the block itself states, the
+  parametric channel is unaffected, and this contrast never read
+  retrieval data.
+- **Panel is four families.** The qwen family is withdrawn from the
+  panel. Its API was too opaque to keep the column on the panel
+  selection criterion: a per-model free-quota expiry surfaced only as
+  call failures and forced an off-criterion substitution on 2026-09-20.
+  The qwen column therefore could not supply an eligible model, which
+  needs the default-tier condition (Eligibility 2). Its parametric
+  records (2026-06-12, 2026-09-20) stay in the data and in the baseline
+  description above, but it can no longer contribute an eligible model.
+  Condition (b) of *Counts against* is unchanged in wording. It now
+  draws on four families instead of five, which makes (b) slightly
+  harder to reach by 2027-03-31; this is stated, not compensated.
+- Decision rules, eligibility, cell reading and reporting deadlines are
+  unchanged.
