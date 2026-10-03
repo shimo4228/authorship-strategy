@@ -124,6 +124,24 @@ ADR-0016 に従って genre で routing する。
    - genre split が名指ししない artifact class —— component skill
      repository・dataset・served page・測定 artifact —— は
      **doctrine layer** を default とする。
+
+     > **注記（2026-09-08、owner の判断。local-only repo の
+     > personal-branding ADR-0004 に記録）:** 90 日の follower campaign
+     > window 2026-09-08 → 2026-12-07 の間、`claude-harness` とそこから
+     > export した component skill repository は personal-branding の
+     > **practitioner layer** —— doctrine でなく著者の日常の道具 —— として
+     > 会計する。したがって window 中、それらの repository に対する
+     > campaign の行為を ADR-0007 第 1–2 項は拘束しない。doctrine
+     > repository と paper genre には触れない。window が閉じたら skill
+     > repository はこの default に戻る。
+
+     > **注記（2026-10-03、owner の判断。personal-branding ADR-0005 に
+     > 記録）:** practitioner layer を恒久化する。`claude-harness` と
+     > export した component skill repository は window 終了後も
+     > personal-branding で会計し、この default に戻らない。この層で数値が
+     > 操舵してよいのは README の第一画面・相互リンク・release・listing
+     > site への投稿だけで、何を作るか・どの repository を推すかは操舵
+     > しない。doctrine repository と paper genre には引き続き触れない。
    - この割り当てが規定するのは**会計と metrics のみ**である。
      canonical と priority claim の routing (ADR-0016) を再開せず、
      license 選定も再開しない: ADR-0015 は license を artifact の

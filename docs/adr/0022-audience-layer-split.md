@@ -151,6 +151,15 @@ different time constants, routed by genre per ADR-0016.
      > window. The doctrine repositories and the paper genre are
      > untouched; this default resumes for the skill repositories when
      > the window closes.
+
+     > **Note (2026-10-03, owner decision recorded in personal-branding
+     > ADR-0005):** the practitioner layer is made permanent. `claude-harness`
+     > and its exported component skill repositories stay accounted in
+     > personal-branding after the window closes and do not return to
+     > this default. Within that layer, numbers may steer only the
+     > first screen of a README, cross-links, releases, and submissions to
+     > listing sites — never what to build or which repository to promote.
+     > The doctrine repositories and the paper genre remain untouched.
    - The assignment governs **accounting and metrics only**. It does
      not reopen canonical or priority-claim routing (ADR-0016), and
      it does not reopen license selection: ADR-0015 selects license

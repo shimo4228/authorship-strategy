@@ -95,6 +95,14 @@ off-page human distribution:
    self-promotion as a means of growth, on the grounds that it is a
    red-ocean activity operating on a funnel whose top (human arrival) is
    ≈ 0 and whose pursuit conflicts with Layer 4 authenticity.
+
+   > **Note (2026-10-03, owner decision recorded in personal-branding
+   > ADR-0005, a local-only repo):** one manual post on the author's own
+   > social surface per new publication is not "self-promotion" under this
+   > clause — it tells the author's existing audience that a piece exists
+   > and does not change the piece. Repeated announcements of the same
+   > publication, promotional posts in other people's spaces, and backlink
+   > campaigns remain excluded in both layers.
 3. **The success metric remains LLM-mediated reach.** Breadth of
    LLM-mediated channels carrying the author's signature — machine
    ingestion, programmatic retrieval, knowledge-graph presence, and

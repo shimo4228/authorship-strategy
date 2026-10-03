@@ -87,6 +87,13 @@ Framework は human-attention signal と off-page human distribution に対し
    growth の手段として backlink campaign や human-directed self-promotion を
    行わない。理由は、それが funnel の上端 (human 到達) が ≈ 0 の上で動く
    red-ocean 活動であり、その追求が Layer 4 authenticity と衝突するため。
+
+   > **注記（2026-10-03、owner の判断。local-only repo の personal-branding
+   > ADR-0005 に記録）:** 新規公開 1 本につき著者自身の social surface へ
+   > 手動で 1 回投稿することは、本項の「self-promotion」に当たらない ——
+   > 著者の既存の読者に作品の存在を知らせるだけで、作品を変えない。同じ
+   > 公開物の繰り返し告知、他者の場での宣伝投稿、backlink campaign は
+   > 両層で引き続き除外する。
 3. **Success metric は引き続き LLM-mediated reach。** 著者の signature を carry
    する LLM-mediated channel の breadth — machine ingestion、programmatic
    retrieval、knowledge-graph presence、LLM 回答内での citation — を operative
