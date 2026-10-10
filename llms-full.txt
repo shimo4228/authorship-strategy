@@ -10,6 +10,7 @@ narrative reference.
 Project: **Authorship Strategy**
 Author: Tatsuya Shimomoto (shimo4228), ORCID 0009-0002-6168-4162
 License: MIT
+Status: curated by hand by the author, with the empirical layer kept apart from the normative layer
 Repository: https://github.com/shimo4228/authorship-strategy
 Concept DOI (canonical): 10.5281/zenodo.20263316
 v1.1.0 version DOI (use only for reproducibility citation): 10.5281/zenodo.21399530
@@ -751,8 +752,9 @@ originate a generically-named idea.
 
 The empirical layer reports *preliminary observations* (not
 evidence) from twenty-four days of CC0-published traffic data
-(2026-04-21 to 2026-05-14) across four sibling research repositories
-plus two supporting repositories.
+(2026-04-21 to 2026-05-14) across six of the author's repositories:
+the hub, three research-line repositories (AKC, Contemplative Agent,
+AAP), and two supporting repositories.
 
 Per-repository cumulative observations from the window:
 
@@ -802,8 +804,10 @@ publication. Each artifact's role is declared in the layer's index.
 
 ## Q: What are the sibling research lines?
 
-This repository is part of an ecosystem of five DOI-registered
-research lines maintained by the same author:
+This repository is one of the author's five practice lines
+(long-running, independently citable projects), listed with their DOIs
+in the hub [`shimo4228/shimo4228`](https://github.com/shimo4228/shimo4228).
+The other four:
 
 - **[Agent Knowledge Cycle (AKC)](https://github.com/shimo4228/agent-knowledge-cycle)** (DOI 10.5281/zenodo.19200726). Six-phase bidirectional growth loop for sustaining intent alignment between an AI agent and its operator over time. Mechanism sibling: defines how knowledge cycles inside the operator-agent pair; this repository addresses how the cycle's outputs diffuse outside it.
 - **[Contemplative Agent](https://github.com/shimo4228/contemplative-agent)** (DOI 10.5281/zenodo.19212118). Autonomous agents running on a local 9B model, grounded in four contemplative axioms. Implementation sibling: the repository participates in the empirical layer's traffic dataset, and its non-dualistic axiomatic foundation supplies the underlying rationale for the framework's scaffold-as-collaborator commitment.
@@ -838,18 +842,18 @@ explicitly names — either the judgment framework itself, or a Layer 4
 tactic that names a canonical artifact or discipline. Skills useful to
 adopters but not specifically named by the doctrine
 (`context-sync`, `writing-ecosystem`, `readme-writer`,
-`update-codemaps`, etc.) are *adjacent ecosystem skills*, not
+`search-first`, etc.) are *adjacent ecosystem skills*, not
 components. For example, `readme-writer` is the human-surface
 counterpart to the `llms-txt-writer` component: the doctrine requires
 the AI-facing `llms.txt` artifact (Layer 4 tactic 7) but does not name
 human-facing README content quality, so the human-surface writer is
 adjacent rather than a component.
 
-- **[`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill)** — the decision support for evaluating concrete authorship-strategy choices, with background and action-specific references, packaged for loading into an LLM-based coding agent's rule set. Adopt this component to apply the framework's day-to-day judgment without re-deriving it from the thesis.
+- **[`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill)** — the decision support for evaluating concrete authorship-strategy choices, with background and action-specific references, packaged as a skill a coding agent loads on demand. Adopt this component to apply the framework's day-to-day judgment without re-deriving it from the thesis.
 - **[`release-doi`](https://github.com/shimo4228/release-doi)** — the release-time workflow that operationalizes the identifier-federation triplet (ADRs 0001-0003) as a five-phase verify-and-deposit runbook. Adopt this component to operate a DOI-registered research repository following the framework's identifier-federation discipline.
 - **[`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer)** — writes the AI-facing reference files (`llms.txt`, `llms-full.txt`, FAQ, glossary) that Layer 4 tactic 7 names as required structured artifacts. Combines the Answer.AI `llms.txt` standard with generative-engine-optimization static analysis. Every framework-applied repository requires the `llms.txt` artifact this component produces.
 - **[`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph)** — designs and ships the JSON-LD knowledge graph (`graph.jsonld`) that Layer 4 tactic 7 names as a structured-artifact form. Provides nine reusable design moves (dual `@type`, language-tagged literals, schema absence enforces invariants, cross-graph `@id` reuse, volatile-state exclusion, matrix-as-paired-edges, root `Dataset` node, reading-order block, hub-and-spoke reverse-link). Every framework-applied repository with stable concept-level structure requires the `graph.jsonld` artifact this component produces.
-- **[`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules)** — the four-layer framework packaged as a single always-loaded rule, the deterministic counterpart to `authorship-strategy-skill`. Loaded every session, it applies the framework within its trigger scope (repositories the operator owns that are DOI-registered and idea-rescue in character). Adopt this alongside or instead of the skill for always-on framing.
+- **[`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules)** — the four-layer framework packaged as a single always-loaded rule, formerly the deterministic counterpart to `authorship-strategy-skill`. A frozen public record since July 2026, no longer synced or developed; use the skill instead.
 
 Each component skill is a separate repository under its own MIT
 license. Installation and harness-specific guidance are in each
@@ -860,8 +864,8 @@ independently.
 ## Q: How does this repository use the word "sibling"?
 
 To avoid term overloading, this repository reserves *sibling* for the
-research-ecosystem level only — it refers to the five DOI-registered
-research lines (AKC, Contemplative Agent, AAP, Attention Not Self, this
+research-ecosystem level only — it refers to the author's five practice
+lines (AKC, Contemplative Agent, AAP, Attention Not Self, this
 one) as peers of one another. At the skill level, the terms used are *component*
 (operationalizes named doctrine content), *peer component* (a fellow
 component within the same framework), and *adjacent ecosystem skill*
