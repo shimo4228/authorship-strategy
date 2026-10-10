@@ -4,7 +4,7 @@ The framework's operational form ships as standalone, independently installable
 repositories — never copied into this doctrine repository, so each has a single
 source of truth and can be adopted on its own. The table below is this line's
 ecosystem: the four **component skills** the doctrine names, the always-loaded
-**rule**, and the **complements** that accompany the framework.
+**rule** (frozen since July 2026), and the **complements** that accompany the framework.
 
 ## The ecosystem
 
@@ -14,7 +14,7 @@ ecosystem: the four **component skills** the doctrine names, the always-loaded
 | [`release-doi`](https://github.com/shimo4228/release-doi) | Identifier-federation release workflow for DOI-registered research repositories (ADRs 0001–0003) | **Component** |
 | [`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer) | AI-facing document writer for `llms.txt` / `llms-full.txt` / FAQ / glossary surfaces (Layer 4 tactic 7) | **Component** |
 | [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph) | Companion JSON-LD knowledge-graph writer for stable concept-level structure (Layer 4 tactic 7) | **Component** |
-| [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules) | The framework as a single always-loaded rule — the deterministic counterpart to the skill | **Rule** |
+| [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules) | The framework as a single always-loaded rule, formerly the deterministic counterpart to the skill; **frozen 2026-07**, no longer synced or developed, superseded by [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill); listed for historical traceability | Rule (frozen) |
 | [`readme-writer`](https://github.com/shimo4228/readme-writer) | Human-facing README writer and review workflow (the human-surface counterpart to `llms-txt-writer`) | Adjacent |
 | [`wikidata-federation`](https://github.com/shimo4228/wikidata-federation) | Community-authority-record federation for researchers, papers, and repositories — **retired 2026-07** after the host's governance revoked the self-created entries ([ADR-0021](../adr/0021-self-sovereign-entity-grounding.md)); listed for historical traceability | Adjacent (retired) |
 | [`doctrine-corpus`](https://github.com/shimo4228/doctrine-corpus) | Bilingual judgment-eliciting Q&A corpus across the sibling research lines ([DOI 10.5281/zenodo.20337008](https://doi.org/10.5281/zenodo.20337008)) | Data sibling |
@@ -29,7 +29,7 @@ A skill (or rule) is a **component** when the artifact it produces — or the
 discipline it executes — is explicitly named in the doctrine (`thesis.md`, the
 ADRs, or the Layer 4 tactic list):
 
-- The **judgment framework itself** (three-axis inversion, four-layer stack, prohibited/encouraged actions) → [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill), with its always-loaded counterpart [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules).
+- The **judgment framework itself** (three-axis inversion, four-layer stack, prohibited/encouraged actions) → [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill). Its former always-loaded counterpart, [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules), has been frozen since July 2026.
 - The **identifier-federation triplet** (ADRs [0001](../adr/0001-concept-doi-canonical.md)–[0003](../adr/0003-cross-platform-dataset-federation.md)) → [`release-doi`](https://github.com/shimo4228/release-doi).
 - The **`llms.txt` convention** (Layer 4 tactic 7) → [`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer).
 - **JSON-LD knowledge graphs** (Layer 4 tactic 7) → [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph).
@@ -38,18 +38,19 @@ ADRs, or the Layer 4 tactic list):
 
 ## Skill vs. rule
 
-The judgment framework ships in two loading modes. The **skill**
+The judgment framework shipped in two loading modes. The **skill**
 ([`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill))
 is triggered probabilistically and read on demand — the deeper judgment
 reference. The **rule**
 ([`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules))
-is loaded every session and applies the framework deterministically within its
-trigger scope — the always-on trigger plus a compact summary. They are a pair;
-install the rule for always-on framing, add the skill for full reasoning.
+was loaded every session and applied the framework deterministically within its
+trigger scope — the always-on trigger plus a compact summary. The two were released
+as a pair. Since July 2026 the rule is a frozen public record, no longer synced or
+developed; install the skill.
 
 ## Installation (Claude Code)
 
-Each skill installs like any other Claude Code skill; the rule installs into your rules directory:
+Each skill installs like any other Claude Code skill:
 
 ```bash
 # Component skills
@@ -57,9 +58,6 @@ git clone https://github.com/shimo4228/authorship-strategy-skill && cp -r author
 git clone https://github.com/shimo4228/release-doi && cp -r release-doi/skills/release-doi ~/.claude/skills/release-doi
 git clone https://github.com/shimo4228/llms-txt-writer && cp -r llms-txt-writer/skills/llms-txt-writer ~/.claude/skills/llms-txt-writer
 git clone https://github.com/shimo4228/jsonld-knowledge-graph && cp -r jsonld-knowledge-graph/skills/jsonld-knowledge-graph ~/.claude/skills/jsonld-knowledge-graph
-
-# Always-loaded rule (deterministic counterpart to the skill)
-git clone https://github.com/shimo4228/authorship-strategy-rules && cp authorship-strategy-rules/rules/common/authorship-strategy.md ~/.claude/rules/common/authorship-strategy.md
 ```
 
 For other harnesses, consult each repository's README for the appropriate install path.
