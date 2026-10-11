@@ -283,8 +283,8 @@ Grounding: admission が allocation に先立つ順序について CITECHOICE
 (arXiv:2609.15164); クリック可能な引用なしに与えられる回答について Strauss
 et al. (arXiv:2508.00838); implementation log の 2026-07-02 search-console の
 entry と 2026-10-01 の audit; clone 対 view の比について hub repository の日次
-traffic snapshot。2 本の paper はまだ [`inspiration.md`](../inspiration.md) に
-なく、そこへの entry は保留中である。この決定が触れるあらゆる carrier の内部
+traffic snapshot。2 本の paper は [`inspiration.md`](../inspiration.md) に
+収録してある。この決定が触れるあらゆる carrier の内部
 survey は plan の research report
 [docs/plans/research/2026-10-11-arrival-success-and-branding-boundary.md](../plans/research/2026-10-11-arrival-success-and-branding-boundary.md)
 である。

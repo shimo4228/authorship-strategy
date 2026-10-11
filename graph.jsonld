@@ -846,6 +846,10 @@
       "name": "ADR-0024: Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns",
       "description": "Fixes the framework's success criterion on the dated judgment the author must protect — that this was thought at this time: a use of the author's idea that reaches the concept-DOI deposit or the repository whose history and archive identifier timestamp it. The author's name is not required: a retrieved record already carries it, and in a model's weights a recalled name, coined term, project name or DOI is a pointer back to the record. Absorption with no route back is recorded as diffusion, not counted as success. Arrival is judged in two tiers: a use with arrival (an answer citing an owned identifier for the idea, a derivative linking the record, an install that runs the component, a pointer recalled without retrieval) is evidence; clones, page views, referrers, DOI resolutions and crawler fetches are proxies. Each strategy states the question it owns — this framework arrival at the record, the author's personal-branding strategy the author as a person — and the two are written to feed each other under one principle: content is decided by the author's thought, distribution may be optimized without changing content. Supersedes ADR-0022 in full, retires its textual boundary guard, and adds dated notes to ADR-0007, 0008, 0009, 0011, 0015, 0017, 0019 and 0023.",
       "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0024-success-as-arrival-at-the-dated-record.md",
+      "groundedIn": [
+        "https://arxiv.org/abs/2609.15164",
+        "https://arxiv.org/abs/2508.00838"
+      ],
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0001",
         "https://github.com/shimo4228/authorship-strategy#adr/0007",
@@ -1096,6 +1100,32 @@
       "identifier": "arXiv:2607.14035",
       "url": "https://arxiv.org/abs/2607.14035",
       "description": "A critical survey of 45 generative-engine-optimization studies (November 2023 – July 2026) that models GEO as a stochastic, partially observable pipeline spanning search activation, crawling and indexing, retrieval, reranking and context allocation, citation, prominence, factual absorption, fidelity, and user behavior, and separates discoverability, citation, absorption, and economic outcomes into distinct visibility components. Its assessment of the evidence: already-retrieved content can causally alter its citation or use, but no reviewed technique shows a stable, longitudinal, cross-platform causal effect on organic discoverability or downstream behavior; the foundational GEO gains are conditional on a source already being present in a fixed context. External grounding for the 2026-08-19 revision of ADR-0009: the structured graph's success criterion is placed at the discoverability stage (consideration-set entry, entity resolution), where the surveyed evidence is silent, rather than at citation lift, where the measured effects are conditional on prior retrieval. Read with the controlled presence-null of SSRN 6284518 and the modest-markup-alone result of arXiv:2603.10700."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2609.15164",
+      "@type": [
+        "ExternalReference",
+        "ScholarlyArticle"
+      ],
+      "name": "CITECHOICE: A Causal Audit of How Document Presentation Redistributes Citation Credit in Agentic Search",
+      "author": ["Sriram Selvam", "Anneswa Ghosh"],
+      "datePublished": "2026-09-14",
+      "identifier": "arXiv:2609.15164",
+      "url": "https://arxiv.org/abs/2609.15164",
+      "description": "A causal replay of agentic-search traces over 113 matched document pairs supporting the same claim: structured presentation raised the target's citations per answer (about +0.50, 95% CI [+0.20, +0.84]) without raising total citations, while whether the target was cited at all moved by +4.5 points with an interval spanning zero; the controlled rank effect was smaller than the observational rank gap. The authors state the results do not establish reliable source admission. Grounding for ADR-0024: presentation redistributes credit among documents already retrieved, and admission into retrieval comes first. One agent configuration, small n."
+    },
+    {
+      "@id": "https://arxiv.org/abs/2508.00838",
+      "@type": [
+        "ExternalReference",
+        "ScholarlyArticle"
+      ],
+      "name": "The Attribution Crisis in LLM Search Results",
+      "author": ["Ilan Strauss", "Jangho Yang", "Tim O'Reilly", "Sruly Rosenblat", "Isobel Moure"],
+      "datePublished": "2025-06-27",
+      "identifier": "arXiv:2508.00838",
+      "url": "https://arxiv.org/abs/2508.00838",
+      "description": "A study of roughly 14,000 conversation logs from search-enabled answer systems documenting an attribution gap: answers produced without fetching web content, a system that rarely gives clickable citations, and a system that reads many relevant pages per query but cites few; citation efficiency varies widely across systems on the same queries. Grounding for ADR-0024: a criterion that requires the answer to print the author's name scores much ordinary use as failure, so success is placed on arrival at the dated record."
     },
     {
       "@id": "https://arxiv.org/abs/2602.22787",

@@ -346,6 +346,37 @@ altogether (ADR-0009, revised 2026-08-19).
   structured graph is placed) from the citation stage (where the
   measured effects live), and is the reason no citation lift is stated
   as the graph's expected value.*
+- *CITECHOICE: A Causal Audit of How Document Presentation Redistributes
+  Citation Credit in Agentic Search* (Selvam and Ghosh, arXiv:2609.15164,
+  2026-09-14) replays agentic-search traces with 113 matched pairs of
+  documents that support the same claim (103 confirmed by blind
+  checking), changing only the order of the documents and whether the
+  target is presented in structured form. Structured presentation raised
+  the target's citations per answer by about +0.50 (95% CI [+0.20,
+  +0.84]) without raising total citations; whether the target was cited
+  at all moved by +4.5 points with a confidence interval spanning zero
+  ([−1.4, +10.4]); the controlled rank effect was smaller than the
+  observational rank gap. The authors state that the results do not
+  establish reliable source admission, a pure formatting mechanism, or a
+  general rank advantage. *Epistemic status: one agent configuration,
+  one engine family, small n; read against the framework, it is the
+  causal counterpart of the survey above — presentation redistributes
+  credit among documents already retrieved, and admission comes first.
+  Grounding for [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md).*
+- *The Attribution Crisis in LLM Search Results* (Strauss, Yang,
+  O'Reilly, Rosenblat and Moure, arXiv:2508.00838, v1 2025-06-27)
+  analyzes roughly 14,000 conversation logs from search-enabled answer
+  systems and documents an attribution gap: some answers are produced
+  without fetching any web content, one system rarely gives clickable
+  citations, and another reads many relevant pages per query but cites
+  only a few; citation efficiency varies widely across systems on the
+  same queries, and the authors attribute the gap to retrieval design.
+  *Epistemic status: log study of a public evaluation arena, not of
+  production traffic; read against the framework, it is why a
+  success criterion that requires the answer to print the author's
+  name scores much ordinary use as failure, and why
+  [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) places
+  success on arrival at the dated record rather than on the name.*
 - *Structural Feature Engineering for Generative Engine Optimization*
   (Yu et al., arXiv:2603.29979) and *Think Before Writing:
   Feature-Level Multi-Objective Optimization for Generative Citation

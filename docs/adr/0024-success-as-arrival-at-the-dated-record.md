@@ -321,9 +321,8 @@ Grounding: CITECHOICE (arXiv:2609.15164) for the admission-before-
 allocation order; Strauss et al. (arXiv:2508.00838) for answers given
 without clickable citations; the implementation log's 2026-07-02
 search-console entry and the 2026-10-01 audit; the hub repository's
-daily traffic snapshots for the clone-to-view ratios. The two papers are
-not yet in [`inspiration.md`](../inspiration.md); their entry there is
-pending. The internal survey of every carrier this decision touches is
+daily traffic snapshots for the clone-to-view ratios. Both papers are
+entered in [`inspiration.md`](../inspiration.md). The internal survey of every carrier this decision touches is
 the plan's research report,
 [docs/plans/research/2026-10-11-arrival-success-and-branding-boundary.md](../plans/research/2026-10-11-arrival-success-and-branding-boundary.md).
 
