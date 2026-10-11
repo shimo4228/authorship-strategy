@@ -193,12 +193,38 @@ author's strategies carried it out
   e-mail) records only that it happened. *Route to the record* is DOI,
   repo, or none.
 - No reasons, counterpart reactions or contacts are written here.
+- Rows dated 2026-10-05 to 2026-10-11 are listing acts of the
+  personal-branding strategy, moved here on 2026-10-12 from its work
+  queue, which now keeps their IDs.
 
 | ID | Date | By | Act | Where | Route to the record |
 |---|---|---|---|---|---|
-| A-0001 | 2026-10-12 | AS | Deposit of authorship-strategy v1.2.0 | [Zenodo](https://doi.org/10.5281/zenodo.23305315) | DOI |
-| A-0002 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
-| A-0003 | 2026-10-12 | AS | Save Code Now request for the repository | [Software Heritage](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/shimo4228/authorship-strategy) | repo |
+| A-0001 | 2026-10-05 | PB | Discovery topics added: claude-code-plugin and agent-skills on akc-cycle, claude-code-plugin on herdr-toolkit | [akc-cycle](https://github.com/shimo4228/akc-cycle), [herdr-toolkit](https://github.com/shimo4228/herdr-toolkit) on GitHub | repo |
+| A-0002 | 2026-10-05 | PB | Listing PR to walidboulanouar/awesome-jev-use-cases for jev-research-pipeline | [walidboulanouar/awesome-jev-use-cases#34](https://github.com/walidboulanouar/awesome-jev-use-cases/pull/34) | repo |
+| A-0003 | 2026-10-05 | PB | Listing issue to wh000wh000/awesome-jev-live for jev-skill-router and jev-research-pipeline | [wh000wh000/awesome-jev-live#9](https://github.com/wh000wh000/awesome-jev-live/issues/9) | repo |
+| A-0004 | 2026-10-05 | PB | Listing PR to OmniJev/awesome-jev-gallery for jev-skill-router | [OmniJev/awesome-jev-gallery#31](https://github.com/OmniJev/awesome-jev-gallery/pull/31) | repo |
+| A-0005 | 2026-10-06 | PB | Listing PR to karanb192/awesome-claude-skills for skill-stocktake | [karanb192/awesome-claude-skills#379](https://github.com/karanb192/awesome-claude-skills/pull/379) | repo |
+| A-0006 | 2026-10-06 | PB | Listing PR to fatwang2/awesome-jev for jev-skill-router and jev-research-pipeline | [fatwang2/awesome-jev#178](https://github.com/fatwang2/awesome-jev/pull/178) | repo |
+| A-0007 | 2026-10-07 | PB | Listing PR to tfatykhov/awesome-agent-memory for contemplative-agent | [tfatykhov/awesome-agent-memory#27](https://github.com/tfatykhov/awesome-agent-memory/pull/27) | repo |
+| A-0008 | 2026-10-07 | PB | Listing PR to Omni-Scientist/Awesome-AI-Scientist for claude-skill-paper-ecosystem | [Omni-Scientist/Awesome-AI-Scientist#6](https://github.com/Omni-Scientist/Awesome-AI-Scientist/pull/6) | repo |
+| A-0009 | 2026-10-07 | PB | Listing PR to valentynkit/awesome-jev-typesafe for jev-skill-router | [valentynkit/awesome-jev-typesafe#58](https://github.com/valentynkit/awesome-jev-typesafe/pull/58) | repo |
+| A-0010 | 2026-10-08 | PB | Listing PR to hashgraph-online/awesome-ai-plugins for akc-cycle | [hashgraph-online/awesome-ai-plugins#659](https://github.com/hashgraph-online/awesome-ai-plugins/pull/659) | repo |
+| A-0011 | 2026-10-08 | PB | Listing PR to walidboulanouar/awesome-jev-use-cases for jev-skill-router | [walidboulanouar/awesome-jev-use-cases#37](https://github.com/walidboulanouar/awesome-jev-use-cases/pull/37) | repo |
+| A-0012 | 2026-10-08 | PB | Listing PR to kraayenjon/awesome-jev for jev-skill-router | [kraayenjon/awesome-jev#43](https://github.com/kraayenjon/awesome-jev/pull/43) | repo |
+| A-0013 | 2026-10-08 | PB | Plugin directory submission for akc-cycle (private route) | — | repo |
+| A-0014 | 2026-10-08 | PB | Plugin directory submission for harness-scope (private route) | — | repo |
+| A-0015 | 2026-10-09 | PB | Listing PR to davepoon/buildwithclaude for herdr-toolkit | [davepoon/buildwithclaude#394](https://github.com/davepoon/buildwithclaude/pull/394) | repo |
+| A-0016 | 2026-10-09 | PB | Listing PR to joelparkerhenderson/architecture-decision-record for agent-attribution-practice | [joelparkerhenderson/architecture-decision-record#127](https://github.com/architecture-decision-record/architecture-decision-record/pull/127) | repo |
+| A-0017 | 2026-10-09 | PB | Listing issue to wuyoscar/jev-skill for jev-skill-router and jev-research-pipeline | [wuyoscar/jev-skill#37](https://github.com/wuyoscar/jev-skill/issues/37) | repo |
+| A-0018 | 2026-10-10 | PB | Listing PR to muellerberndt/awesome-ai-security for llm-agent-security-principles | [muellerberndt/awesome-ai-security#41](https://github.com/muellerberndt/awesome-ai-security/pull/41) | repo |
+| A-0019 | 2026-10-10 | PB | Listing PR to valentynkit/awesome-jev-typesafe for jev-research-pipeline | [valentynkit/awesome-jev-typesafe#59](https://github.com/valentynkit/awesome-jev-typesafe/pull/59) | repo |
+| A-0020 | 2026-10-10 | PB | Listing issue to heyjunpenn/awesome-jev for jev-research-pipeline | [heyjunpenn/awesome-jev#83](https://github.com/heyjunpenn/awesome-jev/issues/83) | repo |
+| A-0021 | 2026-10-11 | PB | Listing PR to yzfly/awesome-context-engineering for akc-cycle | [yzfly/awesome-context-engineering#83](https://github.com/yzfly/awesome-context-engineering/pull/83) | repo |
+| A-0022 | 2026-10-11 | PB | Listing PR to agentrust-io/awesome-ai-governance for agent-attribution-practice | [agentrust-io/awesome-ai-governance#140](https://github.com/agentrust-io/awesome-ai-governance/pull/140) | repo |
+| A-0023 | 2026-10-11 | PB | Listing PR to kraayenjon/awesome-jev for jev-research-pipeline | [kraayenjon/awesome-jev#46](https://github.com/kraayenjon/awesome-jev/pull/46) | repo |
+| A-0024 | 2026-10-12 | AS | Deposit of authorship-strategy v1.2.0 | [Zenodo](https://doi.org/10.5281/zenodo.23305315) | DOI |
+| A-0025 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
+| A-0026 | 2026-10-12 | AS | Save Code Now request for the repository | [Software Heritage](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/shimo4228/authorship-strategy) | repo |
 
 ## Annotations (2026-10-12)
 
