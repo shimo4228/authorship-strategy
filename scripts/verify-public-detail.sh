@@ -116,10 +116,13 @@ if [[ $LLM != none ]]; then
   fi
   printf 'llm    %s on %s file(s)\n' "$LLM_MODEL" "${#LLM_TARGETS[@]}"
   if (( ${#LLM_TARGETS[@]} )); then
+    # The model output goes to a temp file, not .notes/ (a repo without .notes/
+    # would fail the write, and `|| true` would turn that into a silent OK).
+    llm_out=$(mktemp) || { printf 'HIT    %-14s cannot create a temp file; LLM check not run\n' llm; exit 1; }
     printf '%s\0' "${LLM_TARGETS[@]}" |
-      LLM_SCOPE=$LLM xargs -0 -n1 -P4 bash "$0" --llm-one > .notes/.verify-llm.out || true
-    if grep -q '^HIT' .notes/.verify-llm.out; then cat .notes/.verify-llm.out; fail=1; fi
-    rm -f .notes/.verify-llm.out
+      LLM_SCOPE=$LLM xargs -0 -n1 -P4 bash "$0" --llm-one > "$llm_out" || true
+    if grep -q '^HIT' "$llm_out"; then cat "$llm_out"; fail=1; fi
+    rm -f "$llm_out"
   fi
 fi
 
