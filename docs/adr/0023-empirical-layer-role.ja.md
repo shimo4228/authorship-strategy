@@ -71,6 +71,11 @@ repository と paper を持つ会計上の layer —— に default で振り分
 他の決定が読みに来る layer は、自らがどれほど強い claim を立てるの
 かを言うべきである。
 
+> **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** ADR-0022 は supersede され、その
+> layer は退役した。measurement artifact は本 ADR が律するこの framework
+> の empirical layer に留まる; ADR-0024 の arrival proxy は同じ
+> reference-baseline の最低限のもとで記録する。
+
 **延期の根拠は実は拘束しない。** 問いはより長い時系列を待つとして
 開かれたが、3 つの role の違いは layer が主張する claim の強さにあり、
 保有する data の量にはない。より長い series は baseline を鋭くするが、

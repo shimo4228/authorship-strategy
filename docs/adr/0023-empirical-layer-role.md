@@ -78,6 +78,11 @@ the doctrine repositories and papers, as distinct from the essay
 layer. A layer other decisions read from should say what strength
 of claim it makes.
 
+> **Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):** ADR-0022 is superseded and its
+> layers are retired. Measurement artifacts stay in this framework's
+> empirical layer, which this ADR governs; ADR-0024's arrival proxies
+> are recorded under the same reference-baseline minimum.
+
 **The deferral rationale turns out not to bind.** The question was
 held open pending a longer time series, but the three roles differ
 in the strength of the claim the layer asserts, not in the amount of

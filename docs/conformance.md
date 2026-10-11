@@ -37,8 +37,8 @@ tier assumes every lower-tier item is already satisfied.
   the machine-readable structures that let LLM-mediated readers ingest it
   and let citation graphs recover its relationships from metadata alone.
 - **Tier 3 — Measured conformance.** On top of Tier 2, the author operates
-  a standing instrument that observes whether the diffusion strategy is in
-  fact carrying the author's signature, and disciplines vocabulary so the
+  a standing instrument that observes whether uses of the work in
+  fact reach the dated record (ADR-0024), and disciplines vocabulary so the
   parametric channel has anchored terms to carry.
 
 A partial pass within a tier is reported as such (for example, "Tier 2,

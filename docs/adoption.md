@@ -126,7 +126,7 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0004](adr/0004-authorship-metadata-orcid.md) | Enrich your identity record with concept identifiers only; disable auto-update. |
 | [ADR-0005](adr/0005-readme-localization-audience-driven.md) | Add or retire locale mirrors on observed traffic, not on speculation about audiences. |
 | [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md) | Ship the prose navigator and the JSON-LD graph as a synchronously-released pair. |
-| [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md) | Do not optimize star counts or page views on your doctrine repositories; measure LLM-mediated channel breadth there instead. (If you also keep an essay layer for contemporary human readers, its audience and metrics are assigned separately — [ADR-0022](adr/0022-audience-layer-split.md).) |
+| [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md) | Do not optimize star counts or page views; count uses that reach your dated record instead, with page views and referrers kept as arrival proxies ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)). |
 | [ADR-0008](adr/0008-rag-era-attribution-diffusion.md) | Optimize and measure the parametric and retrieval channels separately. |
 | [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) | Weight effort toward the graph; keep the navigator as an agent context surface. |
 | [ADR-0010](adr/0010-vocabulary-discipline.md) | Coin sparingly; anchor densely; cite upstream for everything else. |
@@ -141,8 +141,9 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0019](adr/0019-structural-optimization-vs-content-authenticity.md) | Optimize transmission-path structure (markup, entity anchoring) as far as you like; never deform the content itself for citation. |
 | [ADR-0020](adr/0020-derivation-surface-onboarding.md) | Bless third-party derived surfaces (synthetic wikis, documentation hubs) by badge; diagnose paraphrase drift on the wiki type; withdraw a surface your own measurement shows dead. |
 | [ADR-0021](adr/0021-self-sovereign-entity-grounding.md) | Ground entities only on surfaces you can hold under your own account (repository, author-identifier record, registry deposit, intrinsic identifier); create no entries about yourself on community-governed authority records. |
-| [ADR-0022](adr/0022-audience-layer-split.md) | If you also write for contemporary human readers, account for that work as its own layer with its own audience and metrics; keep its numbers out of doctrine-layer decisions. |
+| [ADR-0022](adr/0022-audience-layer-split.md) | *Superseded by ADR-0024.* If you also write for contemporary human readers, account for that work as its own layer with its own audience and metrics; keep its numbers out of doctrine-layer decisions. |
 | [ADR-0023](adr/0023-empirical-layer-role.md) | Declare the role of every observation you publish — baseline data, interpretive note, intervention record, or external-literature note — and claim validation only for a contrast designed before the data. |
+| [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) | Count a use as success when it reaches your dated record (concept-DOI deposit or timestamped repository); observe the name rather than require it; keep proxies (clones, views, referrers) apart from evidence; if you run a separate strategy for yourself as a person, state each strategy's question and let them feed each other. |
 
 The original author's worked implementation of this entire path is the
 research ecosystem the [empirical layer](empirical/README.md) observes —

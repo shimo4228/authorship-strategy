@@ -25,7 +25,10 @@ accepted — clarified by
 [ADR-0022](0022-audience-layer-split.md): the audience test this ADR
 selects by is the artifact's dominant *ingest* audience, so the
 essay layer's reader-facing audience assignment (contemporary human
-readers) does not reopen its license selection.
+readers) does not reopen its license selection. Note (2026-10-11,
+[ADR-0024](0024-success-as-arrival-at-the-dated-record.md)): ADR-0022 is superseded; the ingest-audience test this ADR
+selects by is unaffected, and an essay written for both readers keeps
+its license selection.
 
 ## Date
 2026-06-17

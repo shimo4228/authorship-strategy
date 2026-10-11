@@ -29,7 +29,10 @@ accepted —— 2026-08-19 改訂: structured graph に適用する success crit
 *検索時 citation lift* から *検討対象集合への到達 / エンティティ解決* へ
 移した; Decision の effort 配分は不変で、その理由の記述だけを正す; 元の
 Lineage が保持していた 2 つの数値は一次出典に到達しなかったため削除した
-(Lineage 参照)。下の Date は決定日のまま残す。
+(Lineage 参照)。注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）: *エンティティ解決* は今後、
+名前を持つ entity としての著者への解決ではなく、dated record (deposit または
+repository) への解決と読む; 検討対象集合への到達は、ADR-0024 があらゆる
+到達の前に置く admission の段階である。下の Date は決定日のまま残す。
 
 ## Date
 2026-05-30

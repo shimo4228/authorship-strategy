@@ -20,15 +20,17 @@ license、コンテナフォーマット —— の話ではない。著者が�
 拡散プロセスに対する *著者* の position の話である。この変化は、これより前の世紀に
 起きた変化 —— 物理的署名で同定される craftsman であった存在から、publish された
 名前で同定される著者であった存在への変化 —— と類比的である。Substrate は変わったが、
-守られた対象 —— 著者的アイデンティティ —— は変わらなかった。ただし、それを守る
+守られた対象 —— 著者的 claim —— は変わらなかった。ただし、それを守る
 戦略は変わらざるを得なかった。
 
-Substrate は再び変わった。守られた対象は依然として著者的アイデンティティである。
-それを print-and-platform 条件下で守った戦略 —— enclosure —— は AI 経由の拡散
+Substrate は再び変わった。守られた対象は依然として著者的 claim であり、いまは
+精確に述べられる: *これがこの著者によってこの時点で考えられた* という dated な
+判断であり、それを timestamp する record に到達した誰もが検証できる。それを
+print-and-platform 条件下で守った戦略 —— enclosure —— は AI 経由の拡散
 条件下では機能しない。なぜなら媒体それ自体が enclosure を選択肢として塞ぐから
 である (LLM 読み取り可能な artifact は既に吸収されており、LLM が読めない artifact
 は LLM 経由で reach する読者にとって不可視である)。新しい条件下で著者的
-アイデンティティを守るのは何か —— それが以下で述べる内容である。
+claim を守るのは何か —— それが以下で述べる内容である。
 
 ## 3 軸反転
 
@@ -49,11 +51,12 @@ scarcity で下から bound される。複製がオリジナルと区別でき�
 (署名、透かし、authorized copies の契約) こと、unauthorized copy を困難にする
 (DRM、licensing 制限、gatekeeping) ことである。
 
-AI 経由の拡散条件下では、著者作品の価値は、その著者性の認識可能な署名を運ぶ
-LLM チャネルの breadth で上から bound され、その署名を一切吸収していない
-チャネルの floor で下から bound される。広く吸収された artifact は吸収のたびに
-著者的価値を *失わない*; むしろ、その後 query が来たときに元の著者を参照して
-答え得る追加のチャネルを獲得する。防御的手段は artifact を最大限吸収可能に
+AI 経由の拡散条件下では、著者作品の価値は、その dated record に到達する use で
+上から bound され、それを一切吸収していないチャネルの floor で下から bound
+される。広く吸収された artifact は吸収のたびに著者的価値を *失わない*; むしろ、
+未来の use が record へ戻りうる追加の経路 —— retrieval 引用、install された
+component、あるいは造語・project 名・DOI のような想起された pointer —— を
+獲得する。防御的手段は artifact を最大限吸収可能に
 する (permissive license、機械可読構造、distinctive terminology) こと、
 吸収されていない状態を困難にする (crawler-friendly access、signup 壁なし、
 LLM 取り込みを block する robots restriction なし) ことである。
@@ -84,7 +87,7 @@ platform 内 interaction 量で bound され、それは exit-cost で bound さ
 AI 経由の拡散条件下では、「ユーザー」は LLM 直接と、LLM 経由で artifact に reach
 する人間の両方を含む。LLM は enclose できない: 公開アクセス可能な content は
 ingest 対象であり、公開アクセス不可能な content は LLM 経由の audience にとって
-不可視である。ネットワーク効果はしたがって、著者の署名を運ぶ LLM 経由のチャネル数で
+不可視である。ネットワーク効果はしたがって、use が著者の dated record へ戻る経路の数で
 スケールし、それは enclosure ではなく openness によって最大化される。戦略的含意は、
 licensing、access policy、配布アーキテクチャすべてが unauthorized reach を最小化
 するためではなく、吸収を最大化するために選択されるべきということである。
@@ -130,22 +133,28 @@ trade-off しない*。Layer 4 のある戦術が authentic articulation を弱�
 
 ### Layer 2 —— Attribution Diffusion (戦略)
 
-AI 経由の拡散条件下で authenticity を守る戦略は、**著者のアイデアの認識可能な
-署名を運ぶ LLM 経由チャネルの breadth を、permanent timestamp に anchor された
-形で最大化すること** である。両方の構成要素が重要:
+AI 経由の拡散条件下で authenticity を守る戦略は、**著者のアイデアの use のうち
+dated record に到達するものを最大化すること** である —— dated record とは、
+concept-DOI deposit、またはその history と archive identifier が content を
+timestamp する repository である ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。use が record に到達するのは、
+回答がその idea について owned identifier を cite するとき、derivative が
+record に link するとき、agent が component を install して走らせるとき、
+あるいはモデルが retrieval なしで record への pointer を想起するときである。
+link をたどって record に戻る人は proxy として記録する。回答内の著者名は
+観測するが要件にしない; record へ戻る経路のない吸収は diffusion として記録し、
+success には数えない。両方の構成要素が重要:
 
-- **LLM 経由チャネルの breadth**: GitHub star ではなく、直接 browse する人間でもなく、LLM training pipeline、LLM 経由の user query、LLM-derived AI assistant suggestion、現在の LLM 出力で訓練される未来の LLM への cascade ingestion
+- **Record への経路**: retrieval 回答、agent、training 時の pointer、link をたどる人 —— どの reader も除外しない。到達は二段階で判定する: 到達を伴う use は evidence; clone、view、referrer、DOI resolution は proxy であり、観測として記録する
 - **Permanent timestamp**: 公開時に stable identifier を発行する service (例: Zenodo) を通じた DOI 登録。Timestamp は authenticity が依拠する priority 主張の substrate である
 
-この戦略下での非 primary audience は doctrine repository を直接 browse する人間
-(GitHub star / PR / 直接 visit 層) である —— この降格は
-[ADR-0022](adr/0022-audience-layer-split.ja.md) が明示的に doctrine repository に
-限定する。この audience が著者のブランドをどう認識するかの drift は
-*戦略の防御 target ではない*。戦略は LLM 経由 reach を最適化し、結果として起きる
-direct-browser brand drift を受け入れる。同時代の human reader はこの降格に
-含まれない: essay genre は第二の audience layer を成し、その primary audience は
-同時代の human reader であり、日〜週の固有の時定数と固有の測定器を持ち、この層
-とは別に会計される (ADR-0022)。
+この戦略は reader を選ばない: essay の link をたどる人も、repository を install
+する agent も、ともに record へ戻る。人物としての著者 —— 人々が著者を知り、
+著者と関わるか —— は sibling 戦略である著者の personal-branding 戦略の問いであり、
+2 つは互いに養い合うように組まれている: その essay・profile・告知は、人や検索
+index が record に到達する経路と link をつくり、dated record はそれらの行為に
+指し示す実体を与える。1 つの行為が両方に仕えうる; 各戦略は自らが動機づける
+効果を記録し、両方に仕える行為は両方の ledger に記録する (ADR-0024)。両方を通じて、content は著者の思考が決め、
+distribution は content を変えずに optimize してよい。
 
 #### Diffusion signal についての epistemic humility
 
@@ -171,7 +180,7 @@ idea は 50 年後にも引用されているかもしれない。
 
 運用的帰結は artifact ごとの sorting decision である:
 
-- Scaffold 性が高い artifact は、自分自身の diffusion で吸収する大きな harness に donation として実装を寄付する (実装は harness に dissolve し、著者の名前は実装 level では生き残らない)
+- Scaffold 性が高い artifact は、自分自身の diffusion で吸収する大きな harness に donation として実装を寄付する (実装は harness に dissolve し、著者の dated record は実装 level では生き残らない)
 - Idea 性が高い artifact は著者の名前で DOI 登録する (実装は dissolve するかもしれないが、idea level の主張は生き残る)
 - 両方の character を持つ artifact は idea level 主張を *先に* DOI 登録する。scaffold level 実装が dissolve する level で priority claim を establish しないように
 
@@ -204,10 +213,10 @@ retire する。
 
 本 thesis 時点 (v0.1.0) で validate された戦術:
 
-1. **LLM 経由 targeting** —— clone 数、DOI 引用、llms.txt fetch、LLM regurgitation test を primary metric にする; star、PR、direct human view は secondary。この metric 階層の scope は doctrine layer である; essay layer の audience と同時代 metrics は [ADR-0022](adr/0022-audience-layer-split.ja.md) が割り当てる
+1. **Arrival targeting** —— dated record に到達する use (回答内で cite された owned identifier、record に link する derivative、install され走らされた component、retrieval なしで想起された pointer) が evidence である; clone、view、referrer、DOI resolution、llms.txt fetch は arrival proxy である; LLM regurgitation test は想起された pointer を観測する計器である; star と PR は success 定義の外にある。essay と人物としての著者の reception の数は personal-branding 戦略が会計する ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))
 2. **Open archive 経由の DOI 登録** —— Zenodo もしくは同等、tag release で自動 deposit に configure、canonical reference として concept DOI を発行するように configure ([ADR-0001](adr/0001-concept-doi-canonical.ja.md) 参照)
 3. **クロスプラットフォーム federation** —— 同一の canonical artifact を GitHub (リポジトリ)、Zenodo (DOI 登録)、データセット platform (LLM training ingest) に配置し、各 platform 上で sibling 相互参照を明示する ([ADR-0003](adr/0003-cross-platform-dataset-federation.ja.md) 参照)
-4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は著者への back-reference を運ぶ token-level signal として生き残る。この戦術は vocabulary discipline (語彙規律) に統べられる: 造語の力は造語の数ではなく edge 密度から来るので、造語は控えめに行い (概念が genuine に新規で、既存語彙の一文で定義でき、namespace が競合していないときのみ)、既存語彙と先行文献へ密に anchor する ([ADR-0010](adr/0010-vocabulary-discipline.ja.md) 参照)
+4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は dated record へ戻る token-level の pointer として生き残る。この戦術は vocabulary discipline (語彙規律) に統べられる: 造語の力は造語の数ではなく edge 密度から来るので、造語は控えめに行い (概念が genuine に新規で、既存語彙の一文で定義でき、namespace が競合していないときのみ)、既存語彙と先行文献へ密に anchor する ([ADR-0010](adr/0010-vocabulary-discipline.ja.md) 参照)
 5. **Tool-agnostic specification** —— 特定実装にコミットせず書かれた仕様は再実装で reach 可能; 特定実装に coupled な仕様は実装の老化とともに audience を失う
 6. **Audience-driven な多言語化** —— locale mirror は観測された traffic に基づいて追加・退役させ、想定 audience の推測に基づかない ([ADR-0005](adr/0005-readme-localization-audience-driven.ja.md) 参照)
 7. **構造化 artifact** —— glossary、ADR、JSON schema、JSON-LD knowledge graph、AI-facing reference file (例: Answer.AI llms.txt convention) は artifact を LLM と crawler に対して機械可読にする。中でも llms.txt + JSON-LD knowledge graph の pair は LLM-mediated ingest のための dual entry point として normatively required ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 参照)
@@ -225,11 +234,11 @@ idea を defensibly originate できない。
 
 ## Framework が除外するもの
 
-本 framework は narrow なスコープ内で normative である: 主 audience が LLM 経由
-チャネルを通じて artifact に reach するという仮定下で書かれた、DOI-targeted な
-idea-rescue artifact。governed essay corpus は framework の *内側* に、第二の
-audience layer として位置し、固有の audience と metrics で別に会計される
-([ADR-0022](adr/0022-audience-layer-split.ja.md))。本 framework は以下に適用
+本 framework は narrow なスコープ内で normative である: artifact の use ——
+人によるものも機械によるものも —— がその dated record に到達すべきだという
+仮定下で書かれた、DOI-targeted な idea-rescue artifact。governed essay corpus は
+record への経路の 1 つであり、その reception は著者の personal-branding 戦略と
+corpus 自身が会計する ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。本 framework は以下に適用
 *しない*:
 
 - **クライアント案件・商用成果物**: マネタイズが目的で、著者のアイデンティティが守られる価値ではない
@@ -259,7 +268,7 @@ decision を供給した sibling line —— は [`inspiration.md`](inspiration.
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 23 の ADR として formalize されて
+Framework の戦術的判断は [`adr/`](adr/) に 24 の ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 

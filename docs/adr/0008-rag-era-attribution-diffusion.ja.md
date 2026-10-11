@@ -90,6 +90,12 @@ channel と retrieval channel を、別々のレバーで、別々の時間軸�
    込みが不在のときの帰結なので、プログラムは両方を同時に維持し、速い
    retrieval 可視性を遅い名指しと、あるいはその逆を、交換しない。
 
+   > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** 著者を名指さずに owned identifier を
+   > cite する retrieval 回答は、今後は失敗ではなく dated record への到達と
+   > 読む。両 channel を並行で回すことは引き続き成り立つ; parametric channel
+   > の役割は、record へ戻る pointer (名前、造語、project 名、DOI) を残す
+   > ことである。
+
 この決定は **harness-neutral** である: 特定の retrieval assistant も、
 特定の linked-data vocabulary も、特定の persistent-identifier registry
 も名指ししない。それらは *Lineage* に現れる。
@@ -105,6 +111,11 @@ channel と retrieval channel を、別々のレバーで、別々の時間軸�
 測定できるため魅力的。却下: parametric 焼き込みなしの retrieval 引用は
 ghost citation を生む —— 出典は cite されるが著者は名指しも推薦もされず、
 帰属は下流で再浮上しない。テーゼの核心に反する。
+
+> **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** ここに述べた理由は失効した ——
+> ADR-0024 のもとでは、owned identifier の retrieval 引用は dated record に
+> 到達し、success に数える。代わりの理由は加えない; parametric channel への
+> 投資を続けるかは別の判断であり、上の Decision 3 が引き続きその判断を担う。
 
 **Parametric channel だけを最適化する。** 純粋主義の立場: 良いアイデアを
 公開し、訓練に吸収させ、検索の機構は無視する。却下: 引用の大きくかつ

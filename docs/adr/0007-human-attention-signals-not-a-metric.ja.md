@@ -19,7 +19,10 @@ Language: [English](0007-human-attention-signals-not-a-metric.md) | 日本語
 accepted — [ADR-0022](0022-audience-layer-split.ja.md) により scope を
 amend: clause 1 (metric 拒否) と legibility-cost の受容は doctrine
 layer に限定、clause 3 (success metric) は層別に再記述、clause 2 と 4
-は両層で不変。essay layer は固有の audience と metrics を持つ。
+は両層で不変。essay layer は固有の audience と metrics を持つ。[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md) (2026-10-11)
+が ADR-0022 を supersede したため、上の層別 scope は失効する: clause 1 は再び
+この framework のすべての artifact を律し、clause 3 は再記述され (success は
+dated record に到達する use)、clause 2 と 4 には下に dated note が付く。
 
 ## Date
 2026-05-29
@@ -83,6 +86,11 @@ Framework は human-attention signal と off-page human distribution に対し
    signal でもない。** Git-host の star 数と repository の page-view 数は、
    framework の success 定義から、また release / growth の決定から除外する。
    観測してよいが、それに向けて steer しない。
+
+   > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** page view と referrer は *arrival proxy*
+   > として再び入る — proxy の段で記録し報告する
+   > (ADR-0024 Decision 4)。star は引き続き success 定義の外にある。本項が
+   > 引き続き除外するのは、これらの数で release や content を steer することである。
 2. **Off-page の human-distribution 労働は戦略的活動ではない。** Framework は
    growth の手段として backlink campaign や human-directed self-promotion を
    行わない。理由は、それが funnel の上端 (human 到達) が ≈ 0 の上で動く
@@ -94,14 +102,34 @@ Framework は human-attention signal と off-page human distribution に対し
    > 著者の既存の読者に作品の存在を知らせるだけで、作品を変えない。同じ
    > 公開物の繰り返し告知、他者の場での宣伝投稿、backlink campaign は
    > 両層で引き続き除外する。
+
+   > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** 本項は今後、この framework 自身が行う
+   > ことを記述する。著者という人物に向けた行為は personal-branding 戦略に
+   > 属し、その戦略が独自の規則を持つ。それらの行為が生む arrival proxy は
+   > ここに記録し、両方の戦略に仕える行為は両方の ledger に記録する
+   > (ADR-0024 Decision 5)。2026-10-03 の注記にある
+   > 「両層で」の除外リストはその戦略の行為をもはや律さず、そこで使われる
+   > 二層の語彙は ADR-0022 とともに退役する。
 3. **Success metric は引き続き LLM-mediated reach。** 著者の signature を carry
    する LLM-mediated channel の breadth — machine ingestion、programmatic
    retrieval、knowledge-graph presence、LLM 回答内での citation — を operative
    な尺度とする。thesis の primary-audience 定義に従う。
+
+   > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** 再記述。operative な尺度は、著者の idea の
+   > use が dated record (DOI deposit または repository) に到達することであり、
+   > 二段階で判定する。回答内の著者名は観測するが要件にしない。record へ戻る
+   > 経路のない吸収は success ではなく diffusion として記録する。
 4. **On-page の human 品質は維持するが、growth lever としてではない。**
    human-facing README は引き続き correct・構造的に健全・machine surface と
    fact-consistent に保つ (実際に *到達した* human に資するため、また surface
    同士が矛盾しないため)。これは hygiene であって distribution 戦略ではない。
+
+   > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** distribution は content を変えずに optimize
+   > してよくなった (ADR-0024 Decision 6): use が record に到達するのを助ける
+   > placement・indexing・linking は、ここで正当な作業である —— 著者自身の
+   > record と配置からの linking であり、第 2 項が述べる、他所で link を求める
+   > campaign とは別のものである。引き続き成り立つのは、README の content を
+   > reach のために作り変えないことである。
 
 この決定は **human ではなく signal に scope される。** human の受容に価値がない
 とは主張しない。genuine な human reach は LLM-mediated channel を *通じて* 追求

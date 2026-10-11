@@ -38,7 +38,7 @@ abstract: >-
   on a three-axis inversion (scarcity to diffusion, exclusivity to
   derivation, enclosure to openness) and a four-layer judgment stack
   (authenticity, attribution diffusion, idea-versus-scaffold
-  separation, tactics). The tactical catalog formalizes twenty-three
+  separation, tactics). The tactical catalog formalizes twenty-four
   decisions extracted from operating a DOI-registered research
   ecosystem of four sibling repositories: concept DOI as canonical
   reference, DOI federation via .zenodo.json, cross-platform dataset
@@ -76,12 +76,13 @@ abstract: >-
   a foundation: self-created entries retired after a governance
   revocation, load-bearing grounding restricted to self-sovereign
   identifier layers, third-party grounding admitted only when earned
-  rather than self-manufactured), and an audience-layer split (the
-  strategy's accounting divided into a doctrine layer with an
-  LLM-mediated primary audience and an essay layer whose primary
-  audience is contemporary human readers, each measured by its own
-  instruments on its own time constant, with the metric rejection
-  scoped to the doctrine layer). An
+  rather than self-manufactured), and an arrival criterion (success
+  is a use of the author's idea that reaches the dated record — the
+  concept-DOI deposit or the timestamped repository — with the
+  author's name observed rather than required, arrival judged in two
+  tiers, and the boundary with the author's personal-branding
+  strategy stated as two owned questions that feed each other; it
+  supersedes an earlier audience-layer split). An
   empirical section reports preliminary
   observations from twenty-four days of CC0-published traffic data
   across the four sibling repositories, plus a probe baseline from the

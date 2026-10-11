@@ -7,7 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- ADR-0024 (EN/JA), *Success Is a Use That Reaches the Dated Record*:
+  the operating success criterion moves from whether a signature (the
+  author's name or a coined term) travels with the idea to whether a use
+  of the idea reaches the dated record (concept-DOI deposit or
+  timestamped repository). The name is observed, not required;
+  absorption with no route back is recorded as diffusion; arrival is
+  judged in two tiers (evidence vs proxies). The boundary with the
+  author's personal-branding strategy is restated as two owned
+  questions written to feed each other. The thesis (protected object,
+  axes 1 and 3, Layer 2, audience paragraph, tactics 1 and 4), glossary
+  (new *Arrival* entry), manifesto open questions 8–11, README, llms
+  surfaces, graph, adoption table and deposit metadata are aligned; the
+  ADR count becomes twenty-four.
+
 ### Changed
+
+- ADR-0022 is superseded by ADR-0024; ADR-0007, 0008, 0009, 0011, 0015,
+  0017, 0019 and 0023 gain dated notes (EN/JA).
+
+### Removed
+
+- `scripts/verify-layer-boundary.sh`, the textual guard for ADR-0022's
+  boundary clause (ADR-0024 Decision 8).
+- `docs/CODEMAPS/` (author decision; graph.jsonld remains the
+  concept-level map).
 
 - `.zenodo.json` completes the ADR-0002 reciprocal-declaration
   discipline after a four-standard review (DataCite relation graph,

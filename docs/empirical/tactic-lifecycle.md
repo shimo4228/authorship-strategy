@@ -59,7 +59,7 @@ readable per row.
 | Synthetic-wiki derived surface (type a of ADR-0020) | 2026-06-28 | — | [ADR-0020](../adr/0020-derivation-surface-onboarding.md) |
 | Human-reader back-traceability edits on owned profile surfaces | 2026-06-21 | — | log, back-traceability section |
 | Search-index surface (served concept-term pages, sitemap, engine notification) | 2026-07-02 | — | log, search-index section |
-| Essay layer under the audience split | 2026-08-05 | — | [ADR-0022](../adr/0022-audience-layer-split.md) |
+| Essay layer under the audience split | 2026-08-05 | 2026-10-11 (superseded; reception accounted by the personal-branding strategy) | [ADR-0022](../adr/0022-audience-layer-split.md), [ADR-0024](../adr/0024-success-as-arrival-at-the-dated-record.md) |
 
 ## What the rows are consistent with
 

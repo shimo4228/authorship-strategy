@@ -16,7 +16,7 @@ top-down に prescribe されたものではない。
 | [0004](0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ | accepted |
 | [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points | accepted |
-| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (0022 が scope を amend) |
+| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (0022 が scope を amend、0024 が成功の項を restate) |
 | [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (2026-08-19 改訂) | accepted |
 | [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
@@ -31,8 +31,9 @@ top-down に prescribe されたものではない。
 | [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない | accepted |
 | [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub | accepted (型 b は 2026-08-19 に retire) |
 | [0021](0021-self-sovereign-entity-grounding.ja.md) | self-sovereign な entity grounding —— community 統治の authority record は foundation でなく revocable な layer である | accepted |
-| [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める | accepted |
+| [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める | superseded by 0024 |
 | [0023](0023-empirical-layer-role.ja.md) | empirical layer の role —— reference baseline を primary role とし、case-study narrative を限定し、validation evidence は明示的設計によってのみ | accepted |
+| [0024](0024-success-as-arrival-at-the-dated-record.ja.md) | 成功は日付つき記録に到達する use —— 名前は観測し、各戦略は自らが持つ問いを書く | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -235,7 +236,8 @@ footprint が host の governance にどう読まれるかは、行為単位の�
 first-mover がまだ持てない authority は自作もできない —— を記録し、その問いを
 開いたまま残す。
 
-ADR-0022 は **audience-layer-split decision** である: ADR-0014 と並ぶ、
+ADR-0022 は **audience-layer-split decision** である（2026-10-11 に ADR-0024
+が supersede。要約はその下で書かれた記録を読むために残す）: ADR-0014 と並ぶ、
 framework を**運用する**ことについての 2 本の ADR の一方であり、diffusion
 tactic からではなく program の動機の会計から抽出された最初の ADR だ。
 2026-08 の review は、audience の降格 —— doctrine repository の直接
@@ -280,6 +282,19 @@ observation —— ADR-0017 の diagnostics が走る強さ —— は normative
 改訂を trigger するのに引き続き十分であり、framework を validate する
 には実験として設計された artifact による evidence を要するが、layer は
 それを持つと主張しない。
+
+ADR-0024 は **arrival decision** である。thesis は、署名 —— 著者名や造語
+—— が考えとともに運ばれるかに重みを置いていたが、名前が回答に出るかを
+決めるのは著者でなく回答エンジンである。この decision は、著者が守るもの、
+つまり「これをこの時点で考えた」という dated な判断に成功の基準を置く:
+著者の考えの use が concept-DOI の deposit か時刻印のある repository に
+到達すること。名前は観測になり、重みの中では記録へ戻る複数の手がかりの
+一つになる。戻る経路のない吸収は拡散として記録し、成功に数えない。到達は
+二段で判定し、crawler の traffic を use と読まない。personal-branding
+戦略との境界を、互いに養い合う 2 つの所有の問いとして書き直し、共通の
+原理 —— 内容は思考が決め、配信は内容を変えずに最適化してよい —— の下に
+置く。ADR-0022 を supersede し、その境界条項を執行していたテキスト検査を
+退役させ、ADR-0007、0008、0009、0011、0015、0017、0019、0023 に日付つき注記を加える。
 
 ## Format
 

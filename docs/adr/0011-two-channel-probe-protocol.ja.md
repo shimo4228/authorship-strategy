@@ -93,6 +93,11 @@ protocol の内部規則。いずれも load-bearing である:
   (`cited && !author-named`) であって常に再導出可能である。naming は
   prose 中でのみカウントする: 引用 URL の中にだけ見える著者 handle は
   ghost citation のシナリオであって、帰属ではない。
+
+  > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** 測定とその lexicon は不変なので series
+  > break はない; 変わるのはその読み方である。*owned identifier cited* の
+  > boolean は dated record への到達を示すので、ghost-citation の cell は
+  > 失敗ではなく、名前のない到達と読む。*author named* は引き続き観測である。
 - **raw 保持.** 全 response text を verdict と共に保存する。改訂された
   lexicon が全履歴を再採点できる。detector version は各レコードに付帯する。
 - **negative control つき controlled prompt.** テンプレートは固定で、

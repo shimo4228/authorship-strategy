@@ -21,7 +21,11 @@ accepted — scope amended by [ADR-0022](0022-audience-layer-split.md):
 clause 1 (metric rejection) and the legibility-cost acceptance are
 scoped to the doctrine layer; clause 3 (success metric) is restated
 per layer; clauses 2 and 4 stand unchanged in both layers. The essay
-layer carries its own audience and metrics.
+layer carries its own audience and metrics. [ADR-0024](0024-success-as-arrival-at-the-dated-record.md) (2026-10-11)
+supersedes ADR-0022, so the layer scoping above lapses: clause 1 governs
+every artifact of this framework again, clause 3 is restated (success is
+a use that reaches the dated record), and clauses 2 and 4 carry dated
+notes below.
 
 ## Date
 2026-05-29
@@ -90,6 +94,12 @@ off-page human distribution:
    are excluded from the framework's definition of success and from any
    release or growth decision. They may be observed; they are not steered
    toward.
+
+   > **Note (2026-10-11, ADR-0024):** page views and referrers now re-enter
+   > as *arrival proxies* — recorded and reported in the proxy tier
+   > (ADR-0024 Decision 4). Stars stay outside the
+   > success definition. What this clause still excludes is steering
+   > releases or content by these counts.
 2. **Off-page human-distribution labor is not a strategic activity.** The
    framework does not run backlink campaigns or human-directed
    self-promotion as a means of growth, on the grounds that it is a
@@ -103,16 +113,38 @@ off-page human distribution:
    > and does not change the piece. Repeated announcements of the same
    > publication, promotional posts in other people's spaces, and backlink
    > campaigns remain excluded in both layers.
+
+   > **Note (2026-10-11, ADR-0024):** this clause now describes what this
+   > framework itself runs. Acts aimed at the author as a person belong to
+   > the personal-branding strategy, which keeps its own rules for them;
+   > the arrival proxies they produce are recorded here, and an act that
+   > serves both strategies is recorded in both ledgers (ADR-0024
+   > Decision 5). The 2026-10-03 note's list of exclusions "in both layers"
+   > no longer governs that strategy's acts, and the two-layer vocabulary
+   > it uses is retired with ADR-0022.
 3. **The success metric remains LLM-mediated reach.** Breadth of
    LLM-mediated channels carrying the author's signature — machine
    ingestion, programmatic retrieval, knowledge-graph presence, and
    citation within LLM answers — is the operative measure, per the thesis's
    primary-audience definition.
+
+   > **Note (2026-10-11, ADR-0024):** restated. The operative measure is
+   > a use of the author's idea that reaches the dated record (DOI deposit
+   > or repository), judged in two tiers; the author's name in an answer is
+   > observed, not required, and absorption with no route back is recorded
+   > as diffusion, not success.
 4. **On-page human quality is maintained, but not as a growth lever.** The
    human-facing README is still kept correct, structurally sound, and
    fact-consistent with the machine surfaces (so the human who *does* arrive
    is served, and so the surfaces do not contradict one another). This is
    hygiene, not a distribution strategy.
+
+   > **Note (2026-10-11, ADR-0024):** distribution may now be optimized
+   > without changing content (ADR-0024 Decision 6): placement, indexing
+   > and linking that help uses reach the record are legitimate work here —
+   > linking from the author's own records and placements, as distinct from
+   > the campaigns soliciting links elsewhere that clause 2 describes. What
+   > still stands is that README content is not reshaped for reach.
 
 The decision is **scoped to signals, not to humans.** It does not assert that
 human reception is without value. Genuine human reach is pursued *through*

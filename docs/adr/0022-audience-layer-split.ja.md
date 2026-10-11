@@ -29,7 +29,23 @@ Language: [English](0022-audience-layer-split.md) | 日本語
 
 ## Status
 
-accepted —— 分割の長期安定性は experimental status ではなく manifesto
+superseded by [ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md) (2026-10-11)。genre を単一の audience に
+routing すること、および reception をこの framework の内部で会計すること
+は退役する; reception の数は personal-branding 戦略と essay corpus に
+属し、`scripts/verify-layer-boundary.sh` は削除する。それぞれの record の
+上で引き続き成り立つもの: Layer 1 の根拠に立つ ADR-0019 の content bound;
+third-party platform を origin claim にとって non-load-bearing とする
+ADR-0021 の分類、その安全ガード、その aggregate-pattern test —— これらは
+どの戦略が動くかにかかわらず、第三者の面での著者の行為に及ぶ
+(personal-branding 戦略に渡す依頼もこの点を含む)。reception の数で release・
+deposit・federation の選択を操舵しない、という線は、いまは ADR-0007 第 1 項と
+ADR-0024 Decision 6 の共通原理の上にある。open
+question 11 は、互いに養い合う 2 つの戦略に向けて再記述する。Decision 1
+の下にある 2 つの dated note は、それらが amend した default とともに錨を
+失う; その default に依拠する personal-branding 戦略の ADR (local
+repository) には、自らの境界を再記述する依頼を渡す。
+
+*Original status:* accepted —— 分割の長期安定性は experimental status ではなく manifesto
 open question 11 として意図的に追跡する: 本決定は会計の scope を引き
 直すものであり、確認可能な run を持つ protocol を定義するもの
 (ADR-0011 の `**experimental**` 慣例が覆う case) ではないため。

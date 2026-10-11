@@ -33,11 +33,29 @@ Language: English | [日本語](0022-audience-layer-split.ja.md)
 
 ## Status
 
-accepted — the split's long-run stability is deliberately tracked as
-manifesto open question 11 rather than by experimental status: the
-decision re-scopes accounting rather than defining a protocol with a
-confirmable run (the case ADR-0011's `**experimental**` convention
-covers).
+superseded by [ADR-0024](0024-success-as-arrival-at-the-dated-record.md) (2026-10-11). Routing genres to single
+audiences and accounting reception inside this framework are retired;
+reception counts belong to the personal-branding strategy and the essay
+corpus, and `scripts/verify-layer-boundary.sh` is removed. What stands
+on its own records: the content bound of ADR-0019 on its Layer 1 ground;
+ADR-0021's classification of third-party platforms as non-load-bearing
+for the origin claim, its safety guards and its aggregate-pattern test,
+which apply to the author's acts on any third-party surface whichever
+strategy acts (the request handed to the personal-branding strategy
+carries this). The line that reception counts do not steer release,
+deposit or federation choices now rests on ADR-0007 clause 1 and the
+shared principle of ADR-0024 Decision 6.
+Open question 11 is restated for two strategies that feed each other.
+The two dated notes under Decision 1 lose their anchor with the default
+they amended; the personal-branding strategy's ADR that relies on that
+default (a local repository) is handed a request to restate its own
+boundary.
+
+*Original status:* accepted — the split's long-run stability is
+deliberately tracked as manifesto open question 11 rather than by
+experimental status: the decision re-scopes accounting rather than
+defining a protocol with a confirmable run (the case ADR-0011's
+`**experimental**` convention covers).
 
 ## Date
 

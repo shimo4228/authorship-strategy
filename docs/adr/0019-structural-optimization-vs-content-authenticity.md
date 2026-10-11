@@ -29,7 +29,12 @@ accepted — see [ADR-0022](0022-audience-layer-split.md): within the
 essay layer the reinforcing support from ADR-0007 ("no legitimate
 target that deforming the content could serve") no longer holds; the
 rule there stands on its Layer 1 authenticity ground alone, and
-continues to bind in both layers.
+continues to bind in both layers. Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):
+ADR-0022 is superseded and its layers are retired. ADR-0024 makes
+distribution a legitimate target across the framework, so the support
+from ADR-0007 quoted above no longer holds anywhere; this rule binds
+every artifact on its Layer 1 ground alone, alongside the cross-strategy
+principle that distribution may be optimized without changing content.
 
 ## Date
 2026-06-26

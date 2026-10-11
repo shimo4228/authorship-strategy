@@ -114,6 +114,13 @@ success metric ではないという caveat で縛る。
      の carrier を強化する; author-naming を最大化すべき target として
      設定しない。
 
+     > **注記（2026-10-11、[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）:** この mode が名指す失敗は
+     > 今後 *reach without a route back* である —— dated record への
+     > identifier・link・回復可能な pointer を持たずに運ばれる concept。
+     > 著者名を持たずとも戻る経路を持って運ばれる concept は、失敗ではなく
+     > 到達である。recovery (密な anchoring、狭い origin claim) は引き続き
+     > 成り立ち、今後は record へ戻る pointer に仕える。
+
 2. **over-publication.**
    - *Signal.* 著者自身の concept-DOI / version-DOI portfolio が、同一
      idea の複数 superseded version を持つ。これは著者の identifier

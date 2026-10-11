@@ -38,11 +38,25 @@ Heidegger の *Eigentlichkeit*) より narrow である; 具体的には、dilut
 
 ## Attribution Diffusion (Layer 2)
 
-Framework の第 2 層の防御戦略: 著者のアイデアの認識可能な署名を運ぶ LLM 経由
-チャネルの breadth を、permanent timestamp に anchor された形で最大化すること。
-ここで「attribution」は *credit for source* (誰が最初にこれを articulate したか)
+Framework の第 2 層の防御戦略: 著者のアイデアの use のうち dated record ——
+concept-DOI deposit または timestamp された repository —— に到達するものを
+最大化すること ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。回答内の著者名は観測するが要件にしない;
+*Arrival* 参照。ここで「attribution」は *credit for source* (誰が最初にこれを articulate したか)
 を意味し、*accountability for action* (この失敗について誰が責任を負うか) を
 意味しない。下の disjoint entry 参照。
+
+## Arrival (dated record への到達)
+
+著者の idea の use のうち、それを timestamp する record —— concept-DOI deposit、
+または commit history と archive identifier を持つ repository —— へ戻るもの。
+[ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) のもとで arrival は framework の success criterion
+であり、二段階で判定する: *到達を伴う use* (その idea について record を cite する
+回答、record に link する derivative、install され走らされた component) は
+evidence である; *arrival proxy* (clone、page view、referrer、DOI resolution、
+crawler fetch) は観測として記録し、proxy の段で報告する。record へ
+戻る経路のない吸収は arrival ではなく *diffusion* である。モデルの weights の
+中では、想起された名前・造語・project 名・DOI が record へ戻る *pointer* として
+数えられる。
 
 ## Attribution (disjoint 使用の警告)
 
@@ -131,11 +145,13 @@ reader が他の platform 上のその存在を発見できるようにする実
 ## LLM-mediated channel
 
 著者のコンテンツが LLM 経由で間接的に audience に reach する pathway。例:
-training-pipeline ingest (LLM が content の認識可能な署名を記憶している)、
+training-pipeline ingest (LLM が content を吸収しており、それへの pointer を
+想起しうる)、
 in-context reader (LLM が query の一部として content を読むよう求められる)、
 AI-assistant suggestion (AI coding assistant を使う開発者が content から派生した
-text を見せられる)。Framework の戦略的 target は著者の署名を運ぶ LLM 経由チャネルの
-*breadth* であって、特定チャネルの depth ではない。
+text を見せられる)。各チャネルは record への経路の 1 つである; framework は
+record に到達する use を数えるのであって、特定チャネルの depth ではない
+([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。
 
 [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 下では、
 ingest design の目的で LLM-mediated channel は構造的に異なる 2 sub-population に
@@ -238,16 +254,17 @@ repository の page-view 数 —— であって、[ADR-0007](adr/0007-human-att
 *gameable* (購入可能) で、page-view は *LLM-mediated reach に対して
 structurally blind* なので、主 audience が LLM 経由である著者にとって
 どちらも valid な最適化対象でも success metric でもない。Framework は
-success を著者の署名を運ぶ LLM-mediated channel の breadth で測る;
-on-page な human quality は growth lever ではなく hygiene として保たれ、
-off-page な人間向け distribution labor は red-ocean な活動として declines される。
-[ADR-0022](adr/0022-audience-layer-split.ja.md) 下では、この rejection の scope は
-*doctrine layer* である; essay layer の同時代 reception signal は別に会計される
-(*Audience layer* 参照)。
+success を dated record に到達する use で測る
+([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md)); page view と referrer は *arrival proxy* と
+してのみ再び入り、観測として記録される。essay と人物としての著者の reception の
+数は、ここではなく著者の personal-branding 戦略が会計する。
 
-## Audience layer (doctrine layer / essay layer)
+## Audience layer (doctrine layer / essay layer) — 退役
 
-固有の primary audience・時定数・測定器を持つ、program 産出物の会計上の
+*2026-10-11 に ADR-0022 を supersede する [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) により
+退役: artifact は両方の reader に向けて書かれるので、genre はもはや単一の audience
+を選ばない; reception の数は personal-branding 戦略と essay corpus に属する。
+この entry は、その日付より前に書かれた record を読むために残す。* 固有の primary audience・時定数・測定器を持つ、program 産出物の会計上の
 stratum。[ADR-0022](adr/0022-audience-layer-split.ja.md) が導入し、genre で
 routing する ([ADR-0016](adr/0016-genre-split-placement.ja.md))。**doctrine
 layer** —— doctrine repository と paper genre —— は LLM-mediated channel を
@@ -300,9 +317,11 @@ naming probe が閉じる。
 
 ## Ghost Citation (幽霊引用)
 
-retrieval-augmented system が artifact の URL を cite するが、著者の名前が
-parametric 記憶に焼き込まれていないため著者を名指しも推薦もしない failure mode。
-この attribution-loss の意味は framework 自身の用語である。この語が名指す挙動は
+retrieval-augmented system が artifact の URL を cite するが、著者を名指しも
+推薦もしない回答。framework は 2026-10-11 までこれを failure mode と呼んでいた;
+[ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) のもとでは owned identifier の引用は dated
+record への *arrival* であり、名前の欠落は観測である。この pattern の元の説明:
+著者の名前が parametric 記憶に焼き込まれていない。この attribution-loss の意味は framework 自身の用語である。この語が名指す挙動は
 2026 年の generative-engine-optimization 文献に anchor されている — 特に
 Seer Interactive の 541,213 応答調査は、brand が named の場合の brand-citation
 rate 53.1% に対し unnamed の場合 10.6% を報告し、parametric channel が
@@ -322,7 +341,9 @@ retrieval channel を gate する（逆ではない）ことと整合する。�
 parametric channel の測定器: search / grounding tool をすべて抑制した状態で
 モデルに送る固定・単一変数の prompt。概念とは何か、誰が coined / maintain して
 いるかを問う。成功は、モデルが訓練済み weights のみから概念とその著者名を
-産出すること —— 上記の white-box な training-data-attribution 手法に対する、
+産出することと定義されていた; [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) のもとでは
+出力は観測として読む —— 想起された名前・project 名・DOI は record へ戻る pointer
+である。この probe は上記の white-box な training-data-attribution 手法に対する、
 行動的・black-box な対応物である。[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md)
 が、検索有効の双子 (citation probe — ghost citation を単一回答内で観測可能に
 する) および negative-control probe (もっともらしい架空概念 — それへの自信
@@ -346,8 +367,8 @@ enclosure は audience reach が今や経由する LLM 経由チャネルから 
 ## Openness (ネットワーク効果における)
 
 AI 時代の pattern: 吸収を最大化するために access barrier を取り除く。Openness は
-AI 経由条件下で operative なネットワーク効果機構である: ネットワークの価値は著者の
-署名を運ぶ LLM 経由チャネル数でスケールし、それは吸収への barrier を取り除くことで
+AI 経由条件下で operative なネットワーク効果機構である: ネットワークの価値は use が著者の
+dated record へ戻る経路の数 (ADR-0024) でスケールし、それは吸収への barrier を取り除くことで
 最大化される。
 
 ## Origin-claim scope (起源主張のスコープ)

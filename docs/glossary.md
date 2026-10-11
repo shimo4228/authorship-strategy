@@ -51,12 +51,28 @@ authored content against dilutive market pressure.
 ## Attribution Diffusion (Layer 2)
 
 The defensive strategy at the framework's second layer:
-maximizing the breadth of LLM-mediated channels carrying
-recognizable signatures of the author's ideas, anchored to a
-permanent timestamp. "Attribution" here means *credit for
+maximizing the uses of the author's ideas that reach the dated
+record — the concept-DOI deposit or the timestamped repository
+([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)). The author's name in an answer is observed, not
+required; see *Arrival*. "Attribution" here means *credit for
 source* (who first articulated this), not *accountability for
 action* (who is responsible for this failure). See the disjoint
 entry below.
+
+## Arrival (at the dated record)
+
+A use of the author's idea that leads back to the record which
+timestamps it — the concept-DOI deposit or the repository with its
+commit history and archive identifier. Under
+[ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) arrival is the framework's success criterion, judged
+in two tiers: a *use with arrival* (an answer that cites the record
+for the idea, a derivative that links it, a component installed and
+run) is evidence; an *arrival proxy* (clones, page views, referrers,
+DOI resolutions, crawler fetches) is recorded as observation and
+reported in the proxy tier. Absorption with no route back
+is *diffusion*, not arrival. In a model's weights, a recalled name,
+coined term, project name or DOI counts as a *pointer* back to the
+record.
 
 ## Attribution (disjoint usage warning)
 
@@ -166,13 +182,13 @@ presence on the others. See [ADR-0003](adr/0003-cross-platform-dataset-federatio
 
 A pathway through which the author's content reaches an
 audience indirectly, via an LLM. Examples: training-pipeline
-ingest (where the LLM has memorized recognizable signatures of
-the content), in-context reader (where the LLM is asked to read
+ingest (where the LLM has absorbed the content and may recall
+pointers to it), in-context reader (where the LLM is asked to read
 the content as part of a query), AI-assistant suggestion (where
 a developer using an AI coding assistant is shown text derived
-from the content). The framework's strategic target is the
-*breadth* of LLM-mediated channels carrying the author's
-signature, not the depth of any single channel.
+from the content). Each channel is one route to the record; the
+framework counts the uses that reach the record, not the depth of
+any single channel ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
 
 Under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md),
 LLM-mediated channels resolve into two structurally distinct
@@ -291,17 +307,19 @@ under [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md). Star
 counts are *gameable* (purchasable) and page-views are *structurally
 blind to LLM-mediated reach*, so neither is a valid optimization target
 or success metric for an author whose primary audience is LLM-mediated.
-The framework measures success by the breadth of LLM-mediated channels
-carrying the author's signature; on-page human quality is kept as
-hygiene, not a growth lever, and off-page human-distribution labor is
-declined as a red-ocean activity. Under
-[ADR-0022](adr/0022-audience-layer-split.md) this rejection is scoped
-to the *doctrine layer*; the essay layer's contemporaneous reception
-signals are accounted separately (see *Audience layer*).
+The framework measures success by uses that reach the dated record
+([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)); page views and referrers re-enter only as *arrival
+proxies*, recorded as observation. Reception counts of essays and of
+the author as a person are accounted by the author's personal-branding
+strategy, not here.
 
-## Audience layer (doctrine layer / essay layer)
+## Audience layer (doctrine layer / essay layer) — retired
 
-An accounting stratum of the program's output with its own primary
+*Retired 2026-10-11 by [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md), which supersedes ADR-0022:
+artifacts are written for both readers, so a genre no longer selects a
+single audience; reception counts belong to the personal-branding
+strategy and the essay corpus. The entry is kept for reading the
+records written before that date.* An accounting stratum of the program's output with its own primary
 audience, time constant, and instruments, introduced by
 [ADR-0022](adr/0022-audience-layer-split.md) and routed by genre
 ([ADR-0016](adr/0016-genre-split-placement.md)). The **doctrine
@@ -365,9 +383,12 @@ the retrieval-suppressed naming probe of
 
 ## Ghost Citation
 
-The failure mode in which a retrieval-augmented system cites an artifact's
-URL but does not name or recommend its author, because the author's name
-was never burned into parametric memory. This attribution-loss sense is the
+An answer in which a retrieval-augmented system cites an artifact's
+URL but does not name or recommend its author. The framework named it a
+failure mode until 2026-10-11; under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) a citation of an
+owned identifier is an *arrival* at the dated record, and the missing
+name is an observation. The original explanation of the pattern: the
+author's name was never burned into parametric memory. This attribution-loss sense is the
 framework's own term; the behavior it names is anchored to the 2026
 generative-engine-optimization literature, in particular Seer Interactive's
 541,213-response study, which reports a brand-citation rate of 53.1% when
@@ -389,8 +410,10 @@ prose, derived from independently recorded booleans.
 The measurement instrument for the parametric channel: a fixed,
 single-variable prompt sent to a model with all search and grounding tools
 suppressed, asking what a concept is and who coined or maintains it. Success
-is the model producing the concept and its author's name from trained
-weights alone — the behavioral, black-box counterpart to the white-box
+was defined as the model producing the concept and its author's name from
+trained weights alone; under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) the output is read as
+observation — a recalled name, project name or DOI is a pointer back to the
+record. The probe is the behavioral, black-box counterpart to the white-box
 training-data-attribution methods above. Defined and operated by
 [ADR-0011](adr/0011-two-channel-probe-protocol.md) together with its
 search-enabled twin (the citation probe, which makes ghost citation
@@ -422,8 +445,9 @@ which audience reach is now mediated.
 The AI-era pattern of maximizing absorption by removing access
 barriers. Openness is the operative network-effect mechanism
 under AI-mediated conditions: the network's value scales with
-the number of LLM-mediated channels carrying the author's
-signature, which is maximized by removing barriers to absorption.
+the number of routes by which uses lead back to the author's
+dated record (ADR-0024), which is maximized by removing barriers
+to absorption.
 
 ## Origin-claim scope
 

@@ -100,6 +100,13 @@ indicators.
    maintains both at once and does not trade fast retrieval visibility
    for slow naming, or vice versa.
 
+   > **Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):** a retrieval answer that
+   > cites an owned identifier without naming the author is now read as
+   > an arrival at the dated record, not as a failure. Running both
+   > channels still stands; the parametric channel's role is to leave
+   > pointers (name, coined term, project name, DOI) that lead back to the
+   > record.
+
 The decision is **harness-neutral**: it names neither the specific
 retrieval assistants, the specific linked-data vocabulary, nor the
 specific persistent-identifier registry. Those appear in *Lineage*.
@@ -117,6 +124,12 @@ feedback is fast and measurable today. Rejected: retrieval citation
 without parametric burn-in produces ghost citations — the source is
 cited but the author is not named or recommended, so the attribution
 never resurfaces downstream. That fails the thesis at its core.
+
+> **Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):** the stated reason has lapsed —
+> under ADR-0024 a retrieval citation of an owned identifier reaches the
+> dated record and counts as success. No replacement reason is added;
+> whether to keep investing in the parametric channel is a separate
+> judgment, which Decision 3 above continues to make.
 
 **Optimize for the parametric channel only.** The purist stance: publish
 good ideas, let training absorb them, ignore retrieval mechanics.

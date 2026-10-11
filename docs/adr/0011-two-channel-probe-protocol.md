@@ -104,6 +104,12 @@ The protocol's internal rules, each load-bearing:
   always re-derivable. Naming counts only in prose: an author handle
   visible solely inside a cited URL is the ghost-citation scenario, not
   attribution.
+
+  > **Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):** the measurement and its
+  > lexicon are unchanged, so no series break; its reading changes. The *owned identifier cited* boolean marks an
+  > arrival at the dated record, so a ghost-citation cell reads as an
+  > arrival without a name, not as a failure. *Author named* remains an
+  > observation.
 - **Raw retention.** The full response text is stored with every
   verdict, so a revised lexicon can re-score all history. The detector
   version travels with each record.

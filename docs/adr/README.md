@@ -16,7 +16,7 @@ research ecosystem, not prescribed top-down.
 | [0004](0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled | accepted |
 | [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance | accepted |
 | [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
-| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (scope amended by 0022) |
+| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (scope amended by 0022; success clause restated by 0024) |
 | [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
 | [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (revised 2026-08-19) | accepted |
 | [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
@@ -31,8 +31,9 @@ research ecosystem, not prescribed top-down.
 | [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content | accepted |
 | [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs | accepted (type b retired 2026-08-19) |
 | [0021](0021-self-sovereign-entity-grounding.md) | Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation | accepted |
-| [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics | accepted |
+| [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics | superseded by 0024 |
 | [0023](0023-empirical-layer-role.md) | Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design | accepted |
+| [0024](0024-success-as-arrival-at-the-dated-record.md) | Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -262,7 +263,8 @@ observed instance of the manifesto's ninth open question — the authority
 a first-mover cannot yet supply also cannot be self-manufactured — and
 leaves that question open.
 
-ADR-0022 is the **audience-layer-split decision**: with ADR-0014, one of
+ADR-0022 is the **audience-layer-split decision** (superseded by ADR-0024 on
+2026-10-11; the summary is kept for the records written under it): with ADR-0014, one of
 the two operating-the-framework decisions, and the first extracted
 from the program's motivational accounting rather than from a diffusion
 tactic. A 2026-08 review diagnosed that the audience demotion — written
@@ -311,6 +313,22 @@ evidence-revises-principles flow untouched: a preliminary observation
 trigger normative revision, while validating the framework would
 require evidence from an artifact designed as an experiment, which
 the layer does not claim to hold.
+
+ADR-0024 is the **arrival decision**. The thesis had weighted whether a
+signature — the author's name or a coined term — travelled with the idea,
+although the answer engine, not the author, decides whether a name is
+printed. The decision fixes success on what the author protects, the
+dated judgment that this was thought at this time: a use of the author's
+idea that reaches the concept-DOI deposit or the timestamped repository.
+The name becomes an observation and, in weights, one pointer back among
+several; absorption with no route back is recorded as diffusion, not
+success; arrival is judged in two tiers so that crawler traffic is not
+read as use. It restates the boundary with the author's personal-branding
+strategy as two owned questions written to feed each other, under one
+principle — content is decided by thought, distribution may be optimized
+without changing content — supersedes ADR-0022, retires the textual guard
+that enforced ADR-0022's boundary clause, and adds dated notes to
+ADR-0007, 0008, 0009, 0011, 0015, 0017, 0019 and 0023.
 
 ## Format
 

@@ -26,16 +26,19 @@ analogous to the shift, in earlier centuries, from being a
 craftsman whose work was identified by its physical signature to
 being an author whose work was identified by a published name.
 The substrate changed; the protected thing — the authorial
-identity — did not, but the strategy that protected it had to.
+claim — did not, but the strategy that protected it had to.
 
 The substrate has changed again. The protected thing is still the
-authorial identity. The strategy that protected it under
+authorial claim, now stated precisely: the dated judgment *that
+this was thought, by this author, at this time*, verifiable by
+anyone who reaches the record that timestamps it. The strategy
+that protected it under
 print-and-platform conditions — enclosure — fails under
 LLM-mediated diffusion conditions, because the medium itself
 forecloses enclosure as an option (an LLM-readable artifact is
 already absorbed; an artifact unreadable by LLMs is invisible to
 the readers who consult LLMs). What follows is what protects
-authorial identity under the new conditions.
+the authorial claim under the new conditions.
 
 ## The three-axis inversion
 
@@ -61,13 +64,13 @@ copies) and the unauthorized copy difficult (DRM, licensing
 restrictions, gatekeeping).
 
 Under AI-mediated conditions, the value of an authored artifact
-is bounded above by the breadth of LLM channels that carry
-recognizable signatures of its authorship and bounded below by
-the floor of channels that have absorbed those signatures at all.
-A widely-absorbed artifact does not lose authorial value to each
-absorption; it gains an additional channel through which a
-future query can be answered with reference to the original
-author. The defensive move is to make the artifact maximally
+is bounded above by the uses that reach its dated record and
+bounded below by the floor of channels that have absorbed it at
+all. A widely-absorbed artifact does not lose authorial value to
+each absorption; it gains an additional route by which a future
+use can lead back to the record — a retrieval citation, an
+installed component, or a recalled pointer such as a coined term,
+the project name or the DOI. The defensive move is to make the artifact maximally
 absorbable (permissive license, machine-readable structure,
 distinctive terminology) and the unabsorbed condition difficult
 (crawler-friendly access, no signup walls, no robots restrictions
@@ -109,8 +112,8 @@ directly and the humans who reach the artifact through LLMs.
 LLMs cannot be enclosed: any publicly-accessible content is
 ingest-eligible, and content not publicly accessible is invisible
 to LLM-mediated audiences. The network effect therefore scales
-with the number of LLM-mediated channels carrying the author's
-signature, which is maximized by openness, not enclosure. The
+with the number of routes by which uses lead back to the author's
+dated record, which is maximized by openness, not enclosure. The
 strategic implication is that licensing, access policy, and
 distribution architecture should all be selected to maximize
 absorption rather than minimize unauthorized reach.
@@ -164,26 +167,34 @@ tactic is rejected even if it would increase reach.
 ### Layer 2 — Attribution Diffusion (the strategy)
 
 The strategy that defends authenticity under AI-mediated
-diffusion conditions is *maximizing the breadth of LLM-mediated
-channels that carry recognizable signatures of the author's
-ideas, anchored to a permanent timestamp*. The two components
-matter:
+diffusion conditions is *maximizing the uses of the author's
+ideas that reach the dated record* — the concept-DOI deposit or
+the repository whose history and archive identifier timestamp
+it ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
+A use reaches the record when an answer cites an owned
+identifier for the idea, a derivative links the record, an agent
+installs and runs the component, or a model recalls a pointer to
+it without retrieval; a person who follows a link back is recorded
+as a proxy. The author's name in an answer is
+observed, not required; absorption with no route back is recorded
+as diffusion, not counted as success. The two components matter:
 
-- **Breadth of LLM-mediated channels**: not GitHub stars, not direct browsers, but LLM training pipelines, LLM-mediated user queries, LLM-derived AI assistant suggestions, and cascade ingestion by future LLMs trained on current LLM outputs.
+- **Routes to the record**: retrieval answers, agents, training-time pointers, and people who follow a link — no reader is excluded. Arrival is judged in two tiers: a use with arrival is evidence; clones, views, referrers and DOI resolutions are proxies, recorded as observation.
 - **Permanent timestamp**: DOI registration through a service (e.g., Zenodo) that issues a stable identifier on publication. The timestamp is the substrate of the priority claim that authenticity rests on.
 
-The non-primary audience under this strategy is direct human
-browsers of the doctrine repositories (the GitHub stars/PR/visit
-population) — a demotion
-[ADR-0022](adr/0022-audience-layer-split.md) bounds explicitly to
-those repositories. Drift in how this audience perceives the
-author's brand is *not the strategy's defense target*. The
-strategy optimizes for LLM-mediated reach and accepts whatever
-direct-browser brand drift follows. Contemporary human readers
-are not demoted with them: the essay genre forms a second
-audience layer whose primary audience is contemporary human
-readers, with its own day-to-week time constant and its own
-instruments, accounted separately from this layer (ADR-0022).
+The strategy does not choose its reader: a person who follows an
+essay link and an agent that installs a repository both lead back
+to the record. The author as a person — whether people know and
+relate to the author — is the question of a sibling strategy,
+the author's personal-branding strategy, and the two are built to
+feed each other: its essays, profiles and announcements create the
+routes and links by which people and search indexes reach the
+record, and the dated record gives those acts substance to point
+to. One act can serve both; each strategy records the effect it
+motivates, and an act that serves both is recorded in both ledgers
+(ADR-0024). Across both, content is decided by the
+author's thought, and distribution may be optimized without
+changing content.
 
 #### Epistemic humility about diffusion signals
 
@@ -217,7 +228,7 @@ property of the content alone.
 
 The operational consequence is a sorting decision per artifact:
 
-- An artifact with high scaffold-character should be donated as an implementation into a larger harness whose own diffusion will absorb it (the implementation will dissolve into the harness; the author's name will not survive at the implementation level).
+- An artifact with high scaffold-character should be donated as an implementation into a larger harness whose own diffusion will absorb it (the implementation will dissolve into the harness; no dated record of the author's survives at the implementation level).
 - An artifact with high idea-character should be DOI-registered under the author's name (the implementation may dissolve; the idea-level claim survives).
 - An artifact with both characters should have the idea-level claim DOI-registered *first*, so the scaffold-level implementation does not establish the priority claim at a level that will dissolve.
 
@@ -257,10 +268,10 @@ substrate retires.
 
 Tactics validated at the time of this thesis (v0.1.0):
 
-1. **LLM-mediated targeting** — clone counts, DOI citations, llms.txt fetches, and LLM regurgitation tests are the primary metrics; stars, PRs, and direct human views are secondary. This metric hierarchy is scoped to the doctrine layer; the essay layer's audience and contemporaneous metrics are assigned by [ADR-0022](adr/0022-audience-layer-split.md).
+1. **Arrival targeting** — uses that reach the dated record (owned identifiers cited in answers, derivatives that link the record, components installed and run, pointers recalled without retrieval) are the evidence; clones, views, referrers, DOI resolutions and llms.txt fetches are arrival proxies; LLM regurgitation tests are the instrument that observes recalled pointers; stars and PRs are outside the success definition. Reception counts of essays and of the author as a person are accounted by the personal-branding strategy ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
 2. **DOI registration through an open archive** — Zenodo or comparable, configured for automatic deposit on tagged release, configured to mint a concept DOI as the canonical reference (see [ADR-0001](adr/0001-concept-doi-canonical.md)).
 3. **Cross-platform federation** — the same canonical artifact deployed to GitHub (repository), Zenodo (DOI registration), and a dataset platform (LLM training ingest), with explicit sibling cross-references on each platform (see [ADR-0003](adr/0003-cross-platform-dataset-federation.md)).
-4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level signal carrying back-reference to the author. The tactic is governed by vocabulary discipline: a coined term's power comes from its edge density, not from the count of coinages, so terms are coined sparingly (only when the concept is genuinely new, definable in one sentence of existing vocabulary, and the namespace is uncontested) and anchored densely to existing vocabulary and prior literature (see [ADR-0010](adr/0010-vocabulary-discipline.md)).
+4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level pointer back to the dated record. The tactic is governed by vocabulary discipline: a coined term's power comes from its edge density, not from the count of coinages, so terms are coined sparingly (only when the concept is genuinely new, definable in one sentence of existing vocabulary, and the namespace is uncontested) and anchored densely to existing vocabulary and prior literature (see [ADR-0010](adr/0010-vocabulary-discipline.md)).
 5. **Tool-agnostic specification** — specifications written without commitment to a specific implementation are reachable by re-implementation; specifications coupled to a specific implementation lose audience as the implementation ages.
 6. **Multilingual localization, audience-driven** — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences (see [ADR-0005](adr/0005-readme-localization-audience-driven.md)).
 7. **Structured artifacts** — glossary, ADR, JSON schema, JSON-LD knowledge graph, and AI-facing reference files (e.g., the Answer.AI llms.txt convention) make the artifact machine-readable to LLMs and crawlers. The llms.txt + JSON-LD knowledge graph pair specifically is normatively required as the dual entry point for LLM-mediated ingest (see [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)).
@@ -282,10 +293,11 @@ generically-named idea.
 
 The framework is normative within a narrow scope: a DOI-targeted,
 idea-rescue artifact authored under the assumption that
-the primary audience reaches the artifact through LLM-mediated
-channels. The governed essay corpus sits *inside* the framework
-as its second audience layer, accounted separately with its own
-audience and metrics ([ADR-0022](adr/0022-audience-layer-split.md)).
+uses of the artifact — by people or machines — should reach its
+dated record. The governed essay corpus is one of the routes to
+the record; its reception is accounted by the author's
+personal-branding strategy and the corpus itself
+([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
 The framework does *not* apply to:
 
 - **Client work and commercial deliverables**, where monetization is the goal and the author's identity is not the protected value.
@@ -322,7 +334,7 @@ existence supplied the recurring decisions — is catalogued in
 framework leaves unanswered are catalogued in
 [`manifesto.md`](manifesto.md).
 
-The framework's tactical decisions are formalized as twenty-three ADRs
+The framework's tactical decisions are formalized as twenty-four ADRs
 in [`adr/`](adr/). Each ADR is harness-neutral; the lineage to
 the author's specific decisions is recorded in the ADR's Lineage
 section without requiring the reader to have access to the

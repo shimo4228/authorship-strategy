@@ -260,6 +260,16 @@ signal be re-read as purity, an unfalsifiable consolation the
 accounting split is designed to remove. Whether the split is stable
 is open question 11.
 
+*Re-read (2026-10-11):* [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) restates the first failure
+mode. The author's name in an answer is now an observation, and the
+failure is **reach without a route back** — a concept carried with no
+identifier, link or recoverable pointer to the dated record. A citation
+of an owned identifier without the name counts as an arrival, so the
+ghost citation recorded above is no longer a failure in itself. The open
+tension moves rather than closes: whether the openness that maximizes
+reach also leaves routes back to the record, or strips them, is still
+untested.
+
 ## Open question 9: Does entity grounding gate the diffusion strategy by prior authority?
 
 The framework's Layer 4 structured-artifact tactic — the JSON-LD
@@ -310,6 +320,10 @@ Open questions:
   asymmetric-authorship-claim-scope problem of Open Question 1 at
   single-author scale — claim scope gated by pre-existing authority
   rather than by contribution.
+- *Re-read (2026-10-11):* under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) the name is not required,
+  so the supply-side question narrows to the routes: whether a
+  single author's records can enter the retrieval set at all, or whether
+  admission itself is gated by authority the author cannot manufacture.
 
 The framework records the tension without resolving it. Whether entity
 grounding is a democratizing instrument (any author can federate the
@@ -382,7 +396,10 @@ Open questions:
   extrinsic identifiers would retain provenance and lose credit —
   which is the reach-without-recognition failure mode of open question
   8 arriving through the identifier layer rather than through
-  diffusion.
+  diffusion. *Re-read (2026-10-11):* under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) a surviving
+  dated record is what a use must reach, so retaining provenance is
+  retaining the success condition; what would be lost is the routes to
+  it, not credit as such.
 - Where a provenance policy asks the author to *evidence* human
   direction, the framework already holds the evidence: the decision
   records carry a Lineage section naming the observation each decision
@@ -413,42 +430,47 @@ The framework records the tension without resolving it. Unlike open
 question 9, this one has not yet been tested against the program's own
 practice; it is recorded here before the fact rather than after it.
 
-## Open question 11: Can a two-layer motivation portfolio resist cross-layer contamination?
+## Open question 11: Can two strategies that feed each other keep reception numbers from deciding content?
 
-[ADR-0022](adr/0022-audience-layer-split.md) split the strategy's
-accounting into two audience layers with different time constants:
-the doctrine layer (LLM-mediated primary audience, months to years)
-and the essay layer (contemporary human readers, days to weeks,
-where reception signals are legitimate to observe and steer by).
-The split answers an accounting defect — the author's
-recognition-seeking motive had no layer in which its rewards were
-observable — but it installs a boundary that must now be held by a
-single practitioner, and the boundary can fail in either direction:
+[ADR-0022](adr/0022-audience-layer-split.md) first answered an
+accounting defect — the author's recognition-seeking motive had no
+place in which its rewards were observable — by splitting this
+framework into a doctrine layer and an essay layer. [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) (2026-10-11)
+supersedes that split: artifacts are written for both readers, this
+framework's success is a use that reaches the dated record, and
+reception counts — of essays and of the author as a person — belong to
+the author's personal-branding strategy. The two strategies are written
+to feed each other: that strategy's essays, profiles and announcements
+create routes to the record, and the record gives those acts substance.
+The motive now has an owner, and the boundary is held across two
+strategies by one practitioner. It can fail in more than one direction:
 
-- **Fast contaminates slow** — essay-layer numbers seep into
-  doctrine-layer judgment: a release timed to reception, a deposit
-  shaped by what scored, the failure-mode diagnostics of
-  [ADR-0017](adr/0017-failure-mode-diagnostics.md) quietly promoted
-  to targets. The boundary clauses of ADR-0022 prohibit this flow,
-  but a prohibition held by the same person who watches the numbers
-  is a discipline, not a mechanism.
-- **Slow re-annexes fast** — the contemplative reading that
-  ADR-0022 bounded to the doctrine layer generalizes again, the
-  essay layer's signals are re-classified as vanity, and the
-  accounting defect returns under a new description. The pattern
-  has one precedent already: an unqualified audience demotion was
-  read at its widest for months before the split named it.
-- **The layers compete for the same hours** — a portfolio assigns
-  motives, but production time is one pool. Whether reception-fed
-  essay work crowds out the slow doctrine work (or the reverse) is
-  an allocation question the split does not answer.
+- **Reception steers this framework's content** — a release timed to
+  reception, a deposit shaped by what scored, the failure-mode
+  diagnostics of [ADR-0017](adr/0017-failure-mode-diagnostics.md)
+  quietly promoted to targets. The shared principle — content is
+  decided by the author's thought, distribution may be optimized
+  without changing content — forbids none of the numbers and names the
+  line instead. The machine check that once flagged the textual traces
+  of such steering was retired with the split, so the line now rests on
+  review: a discipline, not a mechanism.
+- **Synergy becomes the channel** — because the strategies are meant to
+  help each other, an essay rewritten to make a better route, or a
+  record reshaped to give an announcement more to point to, is the
+  contamination arriving through the designed connection rather than
+  against it.
+- **Arrival re-annexes recognition** — this framework's arrival-only
+  view generalizes, the other strategy's reception work is re-read as
+  vanity, and the accounting defect returns under a new description.
+  The pattern has a precedent: an unqualified audience demotion was
+  read at its widest for months before the 2026-08 split named it.
+- **The strategies compete for the same hours** — ownership assigns
+  motives, but production time is one pool.
 
-Whether one practitioner can hold both postures over years — a
-layer where numbers are allowed to matter and a layer where they
-are refused — is untested, and the nearest evidence (the months in
-which the unsplit accounting quietly failed) argues that
-self-reports will lag the failure. The framework records the
-tension without resolving it.
+Whether one practitioner can hold this over years is untested, and the
+nearest evidence (the months in which the unsplit accounting quietly
+failed) argues that self-reports will lag the failure. The framework
+records the tension without resolving it.
 
 ---
 

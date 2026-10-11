@@ -27,7 +27,12 @@ Language: [English](0019-structural-optimization-vs-content-authenticity.md) | �
 accepted — [ADR-0022](0022-audience-layer-split.ja.md) 参照: essay
 layer の内側では ADR-0007 由来の補強支柱 (「内容の変形が仕えうる正当な
 target は存在しない」) がもはや成立しない; そこでは rule は Layer 1 の
-authenticity 根拠のみに立ち、両層で引き続き拘束する。
+authenticity 根拠のみに立ち、両層で引き続き拘束する。注記（2026-10-11、
+[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）: ADR-0022 は supersede され、その層は退役した。
+ADR-0024 は distribution を framework 全体で正当な target にするため、上に
+引いた ADR-0007 由来の支柱はもはやどこでも成立しない; 本 rule は Layer 1 の
+根拠のみに立ってすべての artifact を拘束し、distribution は content を変えずに
+optimize してよいという戦略横断の原則と並び立つ。
 
 ## Date
 2026-06-26

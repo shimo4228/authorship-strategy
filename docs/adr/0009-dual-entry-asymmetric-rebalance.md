@@ -31,7 +31,11 @@ structured graph moved from *retrieval-time citation lift* to
 *consideration-set entry / entity resolution*; the effort allocation in
 the Decision is unchanged and only its stated reason is corrected; two
 figures the original Lineage carried that did not resolve to a primary
-source were removed (see Lineage). The Date below remains the decision
+source were removed (see Lineage). Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):
+*entity resolution* now reads as resolution to the dated record (the
+deposit or repository), not to the author as a named entity;
+consideration-set entry is the admission step ADR-0024 places before
+any arrival. The Date below remains the decision
 date.
 
 ## Date

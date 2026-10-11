@@ -22,7 +22,10 @@ Language: [English](0015-license-selection-by-audience.md) | 日本語
 accepted — [ADR-0022](0022-audience-layer-split.ja.md) が明確化: 本
 ADR が選定に使う audience test は artifact の dominant な *ingest*
 audience であり、essay layer の reader 向け audience 割り当て（同時代
-の human reader）は license 選定を再開しない。
+の human reader）は license 選定を再開しない。注記（2026-10-11、
+[ADR-0024](0024-success-as-arrival-at-the-dated-record.ja.md)）: ADR-0022 は supersede された; 本 ADR が選定に使う
+ingest-audience test は影響を受けず、両方の reader に向けて書かれた essay
+もその license 選定を保つ。
 
 ## Date
 2026-06-17

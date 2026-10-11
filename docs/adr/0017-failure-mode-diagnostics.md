@@ -127,6 +127,14 @@ caveat that a diagnostic is a failure-detector, never a success metric.
      recovery strengthens the carriers of attribution; it does not set
      author-naming as a target to be maximized.
 
+     > **Note (2026-10-11, [ADR-0024](0024-success-as-arrival-at-the-dated-record.md)):** the failure this mode
+     > names is now *reach without a route back* — a concept carried with
+     > no identifier, link or recoverable pointer to the dated record. A
+     > concept carried without the author's name but with a route back is
+     > an arrival, not a failure. The recovery (dense anchoring, narrow
+     > origin claim) still stands; it now serves the pointers back to the
+     > record.
+
 2. **Over-publication.**
    - *Signal.* The author's own concept-DOI and version-DOI portfolio
      carries multiple superseded versions of the same idea. This is
