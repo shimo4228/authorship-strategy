@@ -40,7 +40,7 @@
 - `rfcs/` か log を変えたら、push の前に `scripts/verify-public-detail.sh --llm` を回す
   （パターン検査と Claude Haiku 5.5 の読み）。語の一覧は `.notes/public-guard-terms.txt`。
 - 2026-10-12 までの履歴は `.notes/archive/diffusion-ledger-2026-06-to-10.md`（非公開）。
-  personal-branding 戦略の行為で記録へ至るものへの参照は `.notes/pb-routes.md` に 1 行為 1 行で置く。
+  personal-branding 戦略の行為で記録へ至るものは、その戦略自身の行為ログ（経路の列）が正本で、ここには写さない。
 - 会話で生まれた案や問いの保存先は、記録の依頼に合わせて決める。
 
 役割分担の根拠は [ADR-0025](adr/0025-planning-and-task-state-in-a-public-rfc-store.md)

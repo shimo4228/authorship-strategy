@@ -166,8 +166,8 @@ as success would be inflated by crawlers and trial reads.
    > of the instrument or channel concerned, with sensitive detail kept in
    > private notes. For an act that serves both strategies, an act this
    > program carries out is recorded in `rfcs/` and the implementation
-   > log; a reference to a personal-branding act that leads to the record
-   > is kept in private working notes.
+   > log; a personal-branding act that leads to the record is read from
+   > that strategy's own act log and is not copied.
 6. **Share one principle across strategies: content is decided by the
    author's thought; distribution may be optimized without changing
    content.** The principle is already the common line of the

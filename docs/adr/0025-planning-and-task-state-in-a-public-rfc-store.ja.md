@@ -147,7 +147,7 @@ ADR-0014（2026-06-13、2026-09-07 改訂）が二層 ledger を置いた。2026
 implementation log を 2 つめの公開面とし、機微な詳細は非公開に残してリンクすると
 決めた。2026-10-12 の plan が残りの問いを決めた: 注記でなく新しい ADR にする、
 ADR が持たない guard だけを終端エントリにする、閉じた履歴は非公開の archive に置く、
-personal-branding 戦略の行為への参照は非公開のファイルに置く。実装の途中で著者は
+personal-branding 戦略の行為はその戦略自身の行為ログから読み、写さない。実装の途中で著者は
 非公開の store をもう一度検討し、機微な詳細の機械検査を付けて公開の store を維持した。
 
 Relations:
@@ -162,6 +162,6 @@ Relations:
   記録するとした evidence 段の事象は、該当する計器か channel の `rfcs/` エントリに記録し、
   見直し条件もこの store を読む。両戦略に仕える行為（Decision 5）は、この program が
   行う行為なら `rfcs/` と log に記録する。personal-branding 戦略の行為で record へ
-  至るものへの参照は、その戦略が自身の記録を持つので、非公開の作業ノートに置く。
+  至るものは、その戦略自身の行為ログを読み、ここには写さない。その行為ログが唯一の記録だからである。
 - [ADR-0021](0021-self-sovereign-entity-grounding.ja.md) と ADR-0022 は、書かれた時点の
   private ledger を名指す。改訂しない。

@@ -190,8 +190,8 @@ place for planning and state, with the implementation log as the
 second public surface and sensitive detail kept private and linked.
 The plan of 2026-10-12 settled the open questions: a new ADR rather
 than a note; terminal entries only for guards no ADR holds; the closed
-history kept in a private archive; references to the personal-branding
-strategy's acts kept in a private file. During implementation the author
+history kept in a private archive; the personal-branding strategy's acts
+read from that strategy's own log rather than copied. During implementation the author
 weighed a private store again and kept the public one, with a machine
 check for sensitive detail.
 
@@ -211,9 +211,9 @@ Relations:
   ledger are recorded in the `rfcs/` entry of the instrument or channel
   concerned, and its revisit condition reads that store. For an act that
   serves both strategies (its Decision 5), an act this program carries
-  out is recorded in `rfcs/` and the log; a reference to an act of the
-  personal-branding strategy that leads to the record is kept in the
-  private working notes, because that strategy holds its own record.
+  out is recorded in `rfcs/` and the log; an act of the personal-branding
+  strategy that leads to the record is read from that strategy's own act
+  log and is not copied here, because that log is its single record.
 - [ADR-0021](0021-self-sovereign-entity-grounding.md) and ADR-0022 name
   the private ledger as it stood when they were written; they are not
   amended.

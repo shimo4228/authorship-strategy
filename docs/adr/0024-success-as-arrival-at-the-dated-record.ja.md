@@ -145,7 +145,7 @@ fetch を success として数える定義は、crawler と試し読みで膨ら
    > evidence 段の事象は該当する計器か channel のエントリに記録し、機微な詳細は
    > 非公開のノートに残す。両戦略に仕える行為は、この program が行う行為なら
    > `rfcs/` と implementation log に記録し、personal-branding の行為で record へ
-   > 至るものへの参照は非公開の作業ノートに置く。
+   > 至るものはその戦略自身の行為ログから読み、写さない。
 6. **戦略をまたいで 1 つの原則を共有する: content は著者の思考が決め、
    distribution は content を変えずに optimize してよい。** この原則はすでに
    personal-branding 戦略の層表と、essay corpus の content-integrity 決定に
