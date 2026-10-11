@@ -26,6 +26,7 @@ exploration from maintenance procedure.
 
 ### Added
 
+- v1.2.0 version DOI (for reproducibility citation only): [10.5281/zenodo.23305315](https://doi.org/10.5281/zenodo.23305315). Per ADR-0001 the concept DOI ([10.5281/zenodo.20263316](https://doi.org/10.5281/zenodo.20263316)) remains canonical for all display and citation.
 - ADR-0024 (EN/JA), *Success Is a Use That Reaches the Dated Record*:
   the operating success criterion moves from whether a signature (the
   author's name or a coined term) travels with the idea to whether a use
