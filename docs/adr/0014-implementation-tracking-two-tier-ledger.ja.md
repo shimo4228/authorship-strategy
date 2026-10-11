@@ -8,7 +8,7 @@ Language: [English](0014-implementation-tracking-two-tier-ledger.md) | 日本語
 
 ## Status
 
-accepted — amended 2026-09-07
+accepted — amended 2026-09-07; 計画とタスクの状態の source of truth としての private ledger と Decision 1 の更新順は [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md) が supersede (2026-10-12)
 
 ## Date
 
@@ -20,6 +20,9 @@ accepted — amended 2026-09-07
 gap-review 手順と「次の一手」による起動条件、およびそれらに依存する説明を置き換える。
 また operational procedure から、inquiry-first の指定された順序、候補分類の枠数、
 問いの自動登録を取り除く。以下の Decision がトラッキングと評価の現在の範囲を定める。
+
+> **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** private ledger と ledger を先に
+> 更新する規則は、もう効力を持たない。Decision の下の注記を参照。
 
 ## Context
 
@@ -42,8 +45,15 @@ ledger は deploy 状況、選択された候補、作業詳細を持つ。
 効果主張なしの投影であり、運用詳細は [ADR-0012](0012-link-index-channel-selection.ja.md)
 が定める水準に抽象化する。両者の役割を分離する。
 
+> **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** 計画とタスクの状態の source of
+> truth は、private ledger でなく公開 `rfcs/` store になった。機微な詳細はエントリから
+> リンクする非公開の作業ノートに残す。Decision 1 は「1 つの commit でエントリの state と
+> Status 節を更新し、implementation log に日付行を足す」と読む。Decision 2–4 の
+> 「ledger」は store を指す。timeline は別の文書のままである。
+
 1. **実施後に更新する。** deploy された介入を ledger に先に記録し、次に public
    timeline に日付付きの投影を追加する。
+
 2. **依頼された作業に応じて記録を参照する。** 状況、実現性、重複の確認に関係するときに
    ledger を使う。アイデアを求める依頼だけで、トラッキングや review の定型手順を起動しない。
 3. **探索を開いておく。** thesis、戦術 catalog、過去の判断は、それらの前提への異論も含む
@@ -59,6 +69,11 @@ operational skill は必要に応じた判断補助を提供し、必須の発�
 
 **公開文書一つで追跡する。** 却下: 運用詳細と計画内容が timeline の empirical な役割と
 privacy を損なう。
+
+> **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** この代替案は却下のまま:
+> timeline と計画は別の文書に留まる。ADR-0025 は計画を独自の store で公開する。
+> 上の 2 つの理由はそれを妨げない: 計画は timeline に入らず、詳細は非公開に残して
+> リンクする。
 
 **再利用可能な skill に発想手順を指定する。** 却下: 手順を移しても、起点、候補の形、
 出力への制御は残る。著者には現行 framework の適用と、その外側の探索の両方が必要である。
@@ -90,3 +105,7 @@ privacy を損なう。
 この program では、private ledger は project-memory note、public timeline は empirical 層の
 implementation log である。場所は repo の保守資料に記す。以前の手順は version history に残り、
 現行の運用は上記の改訂後の決定に従う。
+
+> **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** project-memory の ledger は
+> 非公開の archive へ移った。計画とタスクの状態は `rfcs/` に置き、timeline は
+> implementation log のままである。

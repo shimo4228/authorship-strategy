@@ -159,6 +159,15 @@ as success would be inflated by crawlers and trial reads.
    strategy whose aim motivates an act records its effect, and an act
    that serves both is recorded in both ledgers. The boundary is stated
    as ownership; no act is assigned to either strategy by prohibition.
+
+   > **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** The private
+   > implementation ledger named in Decisions 4 and 5 is replaced by the
+   > public `rfcs/` store. Evidence-tier events are recorded in the entry
+   > of the instrument or channel concerned, with sensitive detail kept in
+   > private notes. For an act that serves both strategies, an act this
+   > program carries out is recorded in `rfcs/` and the implementation
+   > log; a reference to a personal-branding act that leads to the record
+   > is kept in private working notes.
 6. **Share one principle across strategies: content is decided by the
    author's thought; distribution may be optimized without changing
    content.** The principle is already the common line of the
@@ -294,6 +303,10 @@ nothing to add back), or a reading of the ledger finds no evidence-tier
 arrival recorded over two quarters of probe runs and observed citations
 while the six-repository clone and view totals of the Context kept
 growing (the tiers would then need a reachable evidence form).
+
+> **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** "A reading of the
+> ledger" now means a reading of the `rfcs/` entries for the instruments
+> and channels concerned.
 
 ## Lineage
 

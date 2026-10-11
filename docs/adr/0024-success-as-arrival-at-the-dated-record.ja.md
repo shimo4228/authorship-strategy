@@ -139,6 +139,13 @@ fetch を success として数える定義は、crawler と試し読みで膨ら
    仕えうる; 行為を動機づける狙いを持つ戦略がその効果を記録し、両方に仕える
    行為は両方の ledger に記録する。境界は所有として述べる; どの行為も禁止に
    よってどちらかの戦略に割り当てない。
+
+   > **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** Decision 4 と 5 が
+   > 名指す private implementation ledger は公開 `rfcs/` store に置き換わった。
+   > evidence 段の事象は該当する計器か channel のエントリに記録し、機微な詳細は
+   > 非公開のノートに残す。両戦略に仕える行為は、この program が行う行為なら
+   > `rfcs/` と implementation log に記録し、personal-branding の行為で record へ
+   > 至るものへの参照は非公開の作業ノートに置く。
 6. **戦略をまたいで 1 つの原則を共有する: content は著者の思考が決め、
    distribution は content を変えずに optimize してよい。** この原則はすでに
    personal-branding 戦略の層表と、essay corpus の content-integrity 決定に
@@ -260,6 +267,9 @@ default で示し始める (そのとき名前の criterion は戻しても cost
 または ledger を読んだとき、2 四半期分の probe run と観測された引用に
 evidence 段の到達が 1 件も記録されていない一方で、Context の 6 repository の
 clone と view の合計が伸び続けていた (そのとき段には到達可能な evidence の形が必要になる)。
+
+> **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** 「ledger を読んだとき」は、
+> 該当する計器と channel の `rfcs/` エントリを読んだときと読む。
 
 ## Lineage
 

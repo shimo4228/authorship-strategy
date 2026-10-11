@@ -76,6 +76,10 @@ repository と paper を持つ会計上の layer —— に default で振り分
 > の empirical layer に留まる; ADR-0024 の arrival proxy は同じ
 > reference-baseline の最低限のもとで記録する。
 
+> **注記（2026-10-12、[ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md)）:** intervention timeline は、もう
+> private ledger の投影ではない。計画とタスクの状態は公開 `rfcs/` store に置き、
+> timeline は本 Decision が位置づける、日付つき・効果主張なしの介入の記録のままである。
+
 **延期の根拠は実は拘束しない。** 問いはより長い時系列を待つとして
 開かれたが、3 つの role の違いは layer が主張する claim の強さにあり、
 保有する data の量にはない。より長い series は baseline を鋭くするが、

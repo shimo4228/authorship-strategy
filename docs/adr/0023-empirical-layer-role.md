@@ -83,6 +83,11 @@ of claim it makes.
 > empirical layer, which this ADR governs; ADR-0024's arrival proxies
 > are recorded under the same reference-baseline minimum.
 
+> **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** The intervention timeline
+> is no longer the projection of a private ledger. Planning and task state
+> live in the public `rfcs/` store; the timeline stays the dated,
+> effect-claim-free record of interventions that this Decision places.
+
 **The deferral rationale turns out not to bind.** The question was
 held open pending a longer time series, but the three roles differ
 in the strength of the claim the layer asserts, not in the amount of

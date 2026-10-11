@@ -9,7 +9,7 @@ Language: English | [日本語](0014-implementation-tracking-two-tier-ledger.ja.
 
 ## Status
 
-accepted — amended 2026-09-07
+accepted — amended 2026-09-07; the private ledger as source of truth for planning and task state, and the update order of Decision 1, superseded by [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md) (2026-10-12)
 
 ## Date
 
@@ -20,6 +20,10 @@ accepted — amended 2026-09-07
 The two-tier ledger and ledger-first update rule remain in force. This
 amendment supersedes the original mandatory gap-review procedure and its
 “next move” trigger, including dependent descriptions of those requirements.
+
+> **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** The private ledger and
+> the ledger-first rule are no longer in force. See the note under the
+> Decision.
 It also removes the prescribed inquiry-first sequence, candidate-category
 quotas, and automatic question registration from the operational procedure.
 The decision below states the current scope of tracking and evaluation.
@@ -51,6 +55,14 @@ and working detail. The public timeline is its dated, effect-claim-free
 projection, with operational detail abstracted to the level established by
 [ADR-0012](0012-link-index-channel-selection.md). They remain separate.
 
+> **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** The source of truth for
+> planning and task state is now the public `rfcs/` store, not a private
+> ledger; sensitive detail stays in private working notes linked from an
+> entry. Decision 1 now reads: one commit updates the entry's state and
+> Status section and adds the dated line to the implementation log. In
+> Decisions 2–4, "the ledger" means the store. The timeline stays a
+> separate document.
+
 1. **Update after implementation.** Record a deployed intervention in the
    ledger first, then add its dated projection to the public timeline.
 2. **Consult records for the task at hand.** Use the ledger for status,
@@ -74,6 +86,12 @@ it does not define a mandatory ideation workflow.
 
 **A single public tracking document.** Rejected: operational detail and
 planning content would compromise the timeline's empirical role and privacy.
+
+> **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** This alternative stays
+> rejected: the timeline and the planning remain separate documents.
+> ADR-0025 makes the planning public in its own store, which both reasons
+> above allow: planning stays out of the timeline, and the detail stays
+> private and is linked.
 
 **A prescribed ideation workflow in a reusable skill.** Rejected: relocating
 the procedure preserves its control over the starting point, candidate shape,
@@ -112,3 +130,7 @@ In this program, the private ledger is a project-memory note and the public
 timeline is the empirical implementation log. Their locations are maintained
 in the repository's maintenance reference. The earlier procedure remains in
 version history; the amended decision above governs current operation.
+
+> **Note (2026-10-12, [ADR-0025](0025-planning-and-task-state-in-a-public-rfc-store.md)):** The project-memory
+> ledger moved to a private archive; planning and task state live in
+> `rfcs/`, and the timeline is still the implementation log.

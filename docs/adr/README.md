@@ -23,7 +23,7 @@ research ecosystem, not prescribed top-down.
 | [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (Annex A, 2026-08: calibration reading rules) | **experimental** |
 | [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
 | [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
-| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger | accepted |
+| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger | accepted; private ledger as source of truth superseded by 0025 |
 | [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form | accepted |
 | [0016](0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical | accepted |
 | [0017](0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes | accepted |
@@ -34,6 +34,7 @@ research ecosystem, not prescribed top-down.
 | [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics | superseded by 0024 |
 | [0023](0023-empirical-layer-role.md) | Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design | accepted |
 | [0024](0024-success-as-arrival-at-the-dated-record.md) | Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns | accepted |
+| [0025](0025-planning-and-task-state-in-a-public-rfc-store.md) | Planning and Task State in a Public RFC Store | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -150,7 +151,7 @@ question 4. Archival there also opens a second parametric-channel
 ingest surface (code-focused training corpora source from the archive)
 at zero marginal authoring cost.
 
-ADR-0014 is the **implementation-tracking decision**. Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support.
+ADR-0014 is the **implementation-tracking decision**. Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support. ADR-0025 (2026-10-12) supersedes the private ledger as source of truth and the update order: planning and task state now live in a public `rfcs/` store, and one commit updates the entry's state and adds the timeline line.
 
 ADR-0015 is the **license-selection decision**: it fixes which
 permissive instrument an artifact takes, on an axis the framework had
@@ -329,6 +330,8 @@ principle — content is decided by thought, distribution may be optimized
 without changing content — supersedes ADR-0022, retires the textual guard
 that enforced ADR-0022's boundary clause, and adds dated notes to
 ADR-0007, 0008, 0009, 0011, 0015, 0017, 0019 and 0023.
+
+ADR-0025 is the **public-task-store decision**: with ADR-0014, the second decision about operating the framework that is in force. The private ledger had spread working state across four private places; the source of truth for planning and task state is now a public `rfcs/` store, one entry per file, so that rejection reasons and the open plan join the public record. The implementation log stays a separate intervention timeline, and sensitive detail stays private and linked. It reverses ADR-0014's commitment that a private ledger is the source of truth, while ADR-0014's two reasons — planning kept out of the timeline, detail kept private — still hold.
 
 ## Format
 

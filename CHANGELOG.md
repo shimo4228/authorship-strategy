@@ -22,11 +22,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (new *Arrival* entry), manifesto open questions 8–11, README, llms
   surfaces, graph, adoption table and deposit metadata are aligned; the
   ADR count becomes twenty-four.
+- ADR-0025 (EN/JA), *Planning and Task State in a Public RFC Store*:
+  planning and task state move from the private ledger of ADR-0014 to a
+  public `rfcs/` store, one entry per file; the implementation log stays
+  the intervention timeline, and sensitive detail stays private and
+  linked. README, llms surfaces, graph, adoption table, ADR index and
+  deposit metadata are aligned; the ADR count becomes twenty-five.
+- `scripts/verify-public-detail.sh`: checks `rfcs/` and the
+  implementation log for contacts, home-directory paths, run IDs and a
+  private term list; `--llm` adds a Claude Haiku 5.5 reading of the
+  changed files (ADR-0025 Decision 3).
 
 ### Changed
 
 - ADR-0022 is superseded by ADR-0024; ADR-0007, 0008, 0009, 0011, 0015,
   0017, 0019 and 0023 gain dated notes (EN/JA).
+- ADR-0014's private ledger as source of truth, and its update order,
+  are superseded by ADR-0025; ADR-0014, ADR-0023 and ADR-0024 gain
+  dated notes (EN/JA).
+- `scripts/verify-counts.sh` excludes `rfcs/` (dated records, like
+  `docs/plans/`).
 
 ### Removed
 

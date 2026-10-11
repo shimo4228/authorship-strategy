@@ -23,7 +23,7 @@ top-down に prescribe されたものではない。
 | [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る (Annex A、2026-08: 校正の読みルール) | **experimental** |
 | [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
 | [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
-| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger による実装トラッキング | accepted |
+| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger による実装トラッキング | accepted; private ledger を正本とする点は 0025 が supersede |
 | [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ | accepted |
 | [0016](0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical | accepted |
 | [0017](0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— 承認済み 3 failure mode それぞれの detector と recovery 戦略 | accepted |
@@ -34,6 +34,7 @@ top-down に prescribe されたものではない。
 | [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める | superseded by 0024 |
 | [0023](0023-empirical-layer-role.ja.md) | empirical layer の role —— reference baseline を primary role とし、case-study narrative を限定し、validation evidence は明示的設計によってのみ | accepted |
 | [0024](0024-success-as-arrival-at-the-dated-record.ja.md) | 成功は日付つき記録に到達する use —— 名前は観測し、各戦略は自らが持つ問いを書く | accepted |
+| [0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md) | 計画とタスクの状態を公開の RFC store に置く | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -136,7 +137,7 @@ question 4 を閉じる。同 archive への保存は、追加の執筆コスト
 第二の parametric-channel ingest surface (code 系 training corpora が
 archive を source とする) も開く。
 
-ADR-0014 は **implementation-tracking decision**。実装トラッキングは、private な運用 ledger と、その日付付き・効果主張なしの public projection を分ける。ledger を先に更新してから timeline に投影する。記録は状況確認と実施判断を支え、発想の方法を指定しない。2026-09-07 の改訂で、必須 review の起動条件と発想の順序を解除した。具体的な選択は文脈に応じて評価し、既存の戦略の前提も問い直せる。artifact の場所は保守資料、必要に応じた判断補助は operational skill が持つ。
+ADR-0014 は **implementation-tracking decision**。実装トラッキングは、private な運用 ledger と、その日付付き・効果主張なしの public projection を分ける。ledger を先に更新してから timeline に投影する。記録は状況確認と実施判断を支え、発想の方法を指定しない。2026-09-07 の改訂で、必須 review の起動条件と発想の順序を解除した。具体的な選択は文脈に応じて評価し、既存の戦略の前提も問い直せる。artifact の場所は保守資料、必要に応じた判断補助は operational skill が持つ。 source of truth としての private ledger と更新順は ADR-0025 (2026-10-12) が supersede した: 計画とタスクの状態は公開 `rfcs/` store に置き、1 つの commit でエントリの state を更新し timeline に行を足す。
 
 ADR-0015 は **license-selection decision** である: framework が名指し
 しながら記録していなかった軸で、artifact がどの permissive instrument を
@@ -295,6 +296,14 @@ ADR-0024 は **arrival decision** である。thesis は、署名 —— 著者�
 原理 —— 内容は思考が決め、配信は内容を変えずに最適化してよい —— の下に
 置く。ADR-0022 を supersede し、その境界条項を執行していたテキスト検査を
 退役させ、ADR-0007、0008、0009、0011、0015、0017、0019、0023 に日付つき注記を加える。
+
+ADR-0025 は **public-task-store decision** である: ADR-0014 と並ぶ、効力を持つ
+framework の運用についての 2 本目の ADR だ。private ledger は作業状態を非公開の 4 か所に
+散らしていた; 計画とタスクの状態は公開 `rfcs/` store に 1 エントリ 1 ファイルで置き、
+implementation log は intervention timeline のまま、機微な詳細は非公開に残してリンクする。
+却下理由と開いた計画を公開記録に加えるためである。「private ledger が source of truth」
+という ADR-0014 の約束を覆すが、ADR-0014 の 2 つの理由 —— 計画を timeline に入れない、
+詳細を非公開に保つ —— はどちらも保たれる。
 
 ## Format
 
