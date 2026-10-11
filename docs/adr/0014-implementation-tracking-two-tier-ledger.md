@@ -63,6 +63,12 @@ projection, with operational detail abstracted to the level established by
 > Decisions 2–4, "the ledger" means the store. The timeline stays a
 > separate document.
 
+> **Note (2026-10-12, [ADR-0026](0026-one-public-act-log-across-strategies.md)):** The abstraction of
+> operational detail to the level of ADR-0012 no longer applies to the
+> place and URL of acts done in public places, which the log now names;
+> those acts are already public where they happened. The privacy reason
+> still governs counterpart reactions, contacts and personal matters.
+
 1. **Update after implementation.** Record a deployed intervention in the
    ledger first, then add its dated projection to the public timeline.
 2. **Consult records for the task at hand.** Use the ledger for status,

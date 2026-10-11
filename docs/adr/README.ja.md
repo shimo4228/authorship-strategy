@@ -35,6 +35,7 @@ top-down に prescribe されたものではない。
 | [0023](0023-empirical-layer-role.ja.md) | empirical layer の role —— reference baseline を primary role とし、case-study narrative を限定し、validation evidence は明示的設計によってのみ | accepted |
 | [0024](0024-success-as-arrival-at-the-dated-record.ja.md) | 成功は日付つき記録に到達する use —— 名前は観測し、各戦略は自らが持つ問いを書く | accepted |
 | [0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md) | 計画とタスクの状態を公開の RFC store に置く | accepted |
+| [0026](0026-one-public-act-log-across-strategies.ja.md) | 著者の戦略が共有する公開の行為ログ 1 本 | accepted |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -297,13 +298,19 @@ ADR-0024 は **arrival decision** である。thesis は、署名 —— 著者�
 置く。ADR-0022 を supersede し、その境界条項を執行していたテキスト検査を
 退役させ、ADR-0007、0008、0009、0011、0015、0017、0019、0023 に日付つき注記を加える。
 
-ADR-0025 は **public-task-store decision** である: ADR-0014 と並ぶ、効力を持つ
-framework の運用についての 2 本目の ADR だ。private ledger は作業状態を非公開の 4 か所に
+ADR-0025 は **public-task-store decision** である: ADR-0014・ADR-0026 と並ぶ、効力を持つ
+framework の運用についての ADR の 1 本だ。private ledger は作業状態を非公開の 4 か所に
 散らしていた; 計画とタスクの状態は公開 `rfcs/` store に 1 エントリ 1 ファイルで置き、
 implementation log は intervention timeline のまま、機微な詳細は非公開に残してリンクする。
 却下理由と開いた計画を公開記録に加えるためである。「private ledger が source of truth」
 という ADR-0014 の約束を覆すが、ADR-0014 の 2 つの理由 —— 計画を timeline に入れない、
 詳細を非公開に保つ —— はどちらも保たれる。
+
+ADR-0026 は **shared-act-log decision** である: 著者が動かすすべての戦略の行為を、公開の
+implementation log に、実施した戦略を添えて 1 度だけ記録する。人に向けた経路は機械にも
+届き、その逆も成り立つので、到達は 1 本の時系列から読む必要がある。公開の場の行為は場所と
+URL を名指し、非公開の経路の行為は事実だけを記録し、理由・反応・連絡先はログに入れない。
+ADR-0024 Decision 5 が定めた両方の台帳への記録を置き換え、過去の行は残して名指しを日付つきで補記する。
 
 ## Format
 

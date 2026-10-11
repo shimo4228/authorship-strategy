@@ -94,6 +94,11 @@ into the same form.
    dated, effect-claim-free intervention timeline of
    [ADR-0023](0023-empirical-layer-role.md). Planning content goes to
    `rfcs/`, never to the log, so ADR-0014's first reason holds.
+
+   > **Note (2026-10-12, [ADR-0026](0026-one-public-act-log-across-strategies.md)):** The log now records
+   > the acts of all the author's strategies, with a row ID and the
+   > strategy that acted, and names the place and URL of acts done in
+   > public places. Planning still stays out of the log.
 3. **Sensitive detail stays private and is linked.** Contacts, the state
    of third parties' replies, account detail and personal constraints
    stay in the private working notes. An entry states that the detail

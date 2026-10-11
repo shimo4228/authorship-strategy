@@ -146,6 +146,12 @@ fetch を success として数える定義は、crawler と試し読みで膨ら
    > 非公開のノートに残す。両戦略に仕える行為は、この program が行う行為なら
    > `rfcs/` と implementation log に記録し、personal-branding の行為で record へ
    > 至るものはその戦略自身の行為ログから読み、写さない。
+
+   > **注記（2026-10-12、[ADR-0026](0026-one-public-act-log-across-strategies.ja.md)）:** 上の注記と、本 Decision の
+   > 「行為を動機づけた狙いを持つ戦略がその効果を記録し、両方に仕える行為は両方の ledger に
+   > 記録する」という文を置き換える: すべての行為は、実施した戦略を添えて、共有の公開の
+   > 行為ログ（implementation log）に 1 度記録する。personal-branding 戦略は行為の記録を
+   > そこへ移す（RFC-0032）。上の各戦略が持つ問いは維持する。
 6. **戦略をまたいで 1 つの原則を共有する: content は著者の思考が決め、
    distribution は content を変えずに optimize してよい。** この原則はすでに
    personal-branding 戦略の層表と、essay corpus の content-integrity 決定に

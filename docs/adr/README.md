@@ -35,6 +35,7 @@ research ecosystem, not prescribed top-down.
 | [0023](0023-empirical-layer-role.md) | Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design | accepted |
 | [0024](0024-success-as-arrival-at-the-dated-record.md) | Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns | accepted |
 | [0025](0025-planning-and-task-state-in-a-public-rfc-store.md) | Planning and Task State in a Public RFC Store | accepted |
+| [0026](0026-one-public-act-log-across-strategies.md) | One Public Act Log Shared Across the Author's Strategies | accepted |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -331,7 +332,9 @@ without changing content — supersedes ADR-0022, retires the textual guard
 that enforced ADR-0022's boundary clause, and adds dated notes to
 ADR-0007, 0008, 0009, 0011, 0015, 0017, 0019 and 0023.
 
-ADR-0025 is the **public-task-store decision**: with ADR-0014, the second decision about operating the framework that is in force. The private ledger had spread working state across four private places; the source of truth for planning and task state is now a public `rfcs/` store, one entry per file, so that rejection reasons and the open plan join the public record. The implementation log stays a separate intervention timeline, and sensitive detail stays private and linked. It reverses ADR-0014's commitment that a private ledger is the source of truth, while ADR-0014's two reasons — planning kept out of the timeline, detail kept private — still hold.
+ADR-0025 is the **public-task-store decision**: with ADR-0014 and ADR-0026, one of the decisions about operating the framework that are in force. The private ledger had spread working state across four private places; the source of truth for planning and task state is now a public `rfcs/` store, one entry per file, so that rejection reasons and the open plan join the public record. The implementation log stays a separate intervention timeline, and sensitive detail stays private and linked. It reverses ADR-0014's commitment that a private ledger is the source of truth, while ADR-0014's two reasons — planning kept out of the timeline, detail kept private — still hold.
+
+ADR-0026 is the **shared-act-log decision**: the acts of every strategy the author runs are recorded once, in the public implementation log, with the strategy that acted, because a route written for people also reaches machines and the reverse, so arrival has to be read from one timeline. Acts in public places are named with place and URL, acts through private routes are recorded as facts only, and reasons, reactions and contacts stay out. It replaces the recording in both strategies' ledgers that ADR-0024 Decision 5 stated and keeps past rows, adding names as dated annotations.
 
 ## Format
 

@@ -145,6 +145,7 @@ deploy the framework, do the action; to understand why, read the ADR.*
 | [ADR-0023](adr/0023-empirical-layer-role.md) | Declare the role of every observation you publish — baseline data, interpretive note, intervention record, or external-literature note — and claim validation only for a contrast designed before the data. |
 | [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) | Count a use as success when it reaches your dated record (concept-DOI deposit or timestamped repository); observe the name rather than require it; keep proxies (clones, views, referrers) apart from evidence; if you run a separate strategy for yourself as a person, state each strategy's question and let them feed each other. |
 | [ADR-0025](adr/0025-planning-and-task-state-in-a-public-rfc-store.md) | Keep planning and task state in a public store, one entry per file with its state; keep the dated intervention timeline separate; keep contacts, third parties' reply state, account detail and personal constraints private, linked from the entry, and check entries before publishing. |
+| [ADR-0026](adr/0026-one-public-act-log-across-strategies.md) | Record every outreach and record-facing act once, in one public log with who acted; name public places and URLs, record private-route acts as facts only, and keep reasons and reactions out. |
 
 The original author's worked implementation of this entire path is the
 research ecosystem the [empirical layer](empirical/README.md) observes —

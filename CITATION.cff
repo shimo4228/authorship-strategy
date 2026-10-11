@@ -38,7 +38,7 @@ abstract: >-
   on a three-axis inversion (scarcity to diffusion, exclusivity to
   derivation, enclosure to openness) and a four-layer judgment stack
   (authenticity, attribution diffusion, idea-versus-scaffold
-  separation, tactics). The tactical catalog formalizes twenty-five
+  separation, tactics). The tactical catalog formalizes twenty-six
   decisions extracted from operating a DOI-registered research
   ecosystem of four sibling repositories: concept DOI as canonical
   reference, DOI federation via .zenodo.json, cross-platform dataset
@@ -55,7 +55,8 @@ abstract: >-
   four-condition host audit, intrinsic content-derived identifiers
   (SWHID) as a priority-claim layer complementing the extrinsic DOI,
   implementation tracking with planning and task state in a public
-  RFC store beside a dated, effect-claim-free intervention timeline
+  RFC store beside one dated, effect-claim-free act log shared across
+  the author's strategies
   (sensitive detail kept private and linked), with
   open exploration independent of tracking, license selection by an artifact's dominant
   audience rather than its surface form, and genre-split placement

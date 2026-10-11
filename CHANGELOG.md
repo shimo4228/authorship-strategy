@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- ADR-0026 (EN/JA), *One Public Act Log Shared Across the Author's
+  Strategies*: the implementation log records the acts of every strategy
+  once, with a row ID and the strategy that acted; acts in public places
+  name place and URL, acts through private routes are facts only, and
+  reasons, reactions and contacts stay out. ADR-0023, 0024 and 0025 gain
+  dated notes; the ADR count becomes twenty-six.
+
 ## [1.2.0] - 2026-10-12
 
 Changes what the framework counts as success and where the program keeps

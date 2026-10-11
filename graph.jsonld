@@ -37,7 +37,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy#knowledge-graph",
       "@type": ["Dataset", "CreativeWork"],
       "name": "Authorship Strategy Knowledge Graph",
-      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-five tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, the derivation-surface-onboarding decision 0020, the self-sovereign-grounding decision 0021, the audience-layer-split decision 0022 (superseded), the empirical-layer-role decision 0023, the arrival decision 0024, and the public-task-store decision 0025), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
+      "description": "Canonical machine-readable relationship map for the Authorship Strategy research line. Encodes the three-axis inversion (scarcity to diffusion, exclusivity to derivation, enclosure to openness), the four-layer framework (Authenticity, Attribution Diffusion, Idea vs Scaffold, Tactics), the twenty-six tactical ADRs (identifier-federation triplet 0001-0003, maintenance-discipline pair 0004-0005, LLM-first ingest decision 0006, metric-rejection decision 0007, diffusion-mechanism cluster 0008-0011 with 0009 amending 0006, 0010 defining the vocabulary discipline 0008 names, and 0011 building the measurement instrument it demands, channel-selection decision 0012, intrinsic-identifier decision 0013, implementation-tracking decision 0014, license-selection decision 0015, genre-split-placement decision 0016, the doctrine-hardening cluster 0017-0019: failure-mode diagnostics 0017, origin-claim falsifiability 0018, and the structural-optimization-versus-content-authenticity boundary 0019, the derivation-surface-onboarding decision 0020, the self-sovereign-grounding decision 0021, the audience-layer-split decision 0022 (superseded), the empirical-layer-role decision 0023, the arrival decision 0024, the public-task-store decision 0025, and the shared-act-log decision 0026), the four sibling research lines, and the disjoint-vocabulary relationship with Agent Attribution Practice. As the concept-form half of the dual entry point this graph specifies, AI agents and LLM-based search systems should read it before summarizing the line or following individual document links.",
       "isBasedOn": "https://github.com/shimo4228/authorship-strategy",
       "mainEntity": "https://doi.org/10.5281/zenodo.20263316",
       "creator": {"@id": "https://orcid.org/0009-0002-6168-4162"},
@@ -96,7 +96,7 @@
         {"@value": "著者戦略", "@language": "ja"},
         "AS"
       ],
-      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-five decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
+      "description": "A normative framework, tactical catalog, and empirical baseline for authorship strategy under AI-mediated diffusion. The framework rests on a three-axis inversion and a four-layer judgment stack; the tactical catalog records twenty-six decisions extracted from operating a DOI-registered research ecosystem. Written from a maker's and practitioner's stance: the academic apparatus used throughout (DOI, SWHID, citation graphs) is tooling for citability, durability, and traceability rather than an identity or destination, and the intended audience spans developers, practitioners, learners, and creative reusers across languages, with academic citation as one channel among several.",
       "url": "https://github.com/shimo4228/authorship-strategy",
       "identifier": "10.5281/zenodo.20263316",
       "sameAs": ["https://doi.org/10.5281/zenodo.20263316"],
@@ -334,7 +334,8 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0022",
         "https://github.com/shimo4228/authorship-strategy#adr/0023",
         "https://github.com/shimo4228/authorship-strategy#adr/0024",
-        "https://github.com/shimo4228/authorship-strategy#adr/0025"
+        "https://github.com/shimo4228/authorship-strategy#adr/0025",
+        "https://github.com/shimo4228/authorship-strategy#adr/0026"
       ]
     },
 
@@ -874,6 +875,21 @@
         "https://github.com/shimo4228/authorship-strategy#adr/0024"
       ]
     },
+    {
+      "@id": "https://github.com/shimo4228/authorship-strategy#adr/0026",
+      "@type": "ADR",
+      "name": "ADR-0026: One Public Act Log Shared Across the Author's Strategies",
+      "description": "The acts of the author's strategies (this framework and the author's personal-branding strategy) go into one public act log, the implementation log, with a row ID and the strategy that acted (By, responsibility only). Acts in public places name the place and URL; acts through private routes (forms, applications, e-mail) record only that they happened; the log holds no reasons, and reactions, contacts and personal matters stay private. Work queues keep plans and the log ID, not a second record; past rows are kept and named through dated annotations; unattended writers append on a dedicated branch first. Human-facing routes also reach machines and the reverse, so intent cannot separate effects; a log of publishable acts also keeps acts publishable.",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0026-one-public-act-log-across-strategies.md",
+      "extends": [
+        "https://github.com/shimo4228/authorship-strategy#adr/0012",
+        "https://github.com/shimo4228/authorship-strategy#adr/0014",
+        "https://github.com/shimo4228/authorship-strategy#adr/0021",
+        "https://github.com/shimo4228/authorship-strategy#adr/0023",
+        "https://github.com/shimo4228/authorship-strategy#adr/0024",
+        "https://github.com/shimo4228/authorship-strategy#adr/0025"
+      ]
+    },
 
     {
       "@id": "https://doi.org/10.5281/zenodo.19200726",
@@ -933,7 +949,7 @@
       "@id": "https://github.com/shimo4228/authorship-strategy-skill",
       "@type": "EcosystemRepo",
       "name": "authorship-strategy-skill",
-      "description": "Component skill of this research line. Decision support for concrete authorship-strategy choices, packaged as a standalone skill repository. Background and action-specific references support requested evaluations without prescribing ideation. Operationalizes the thesis and the twenty-five ADRs.",
+      "description": "Component skill of this research line. Decision support for concrete authorship-strategy choices, packaged as a standalone skill repository. Background and action-specific references support requested evaluations without prescribing ideation. Operationalizes the thesis and the twenty-six ADRs.",
       "url": "https://github.com/shimo4228/authorship-strategy-skill",
       "derivesFrom": "https://github.com/shimo4228/authorship-strategy"
     },

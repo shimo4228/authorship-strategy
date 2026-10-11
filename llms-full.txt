@@ -2,7 +2,7 @@
 
 A consolidated factual reference for AI agents and LLM-based search
 systems. Self-contained; includes definitions, the three-axis inversion,
-the four-layer framework, the twenty-five ADRs, vocabulary disambiguation, and
+the four-layer framework, the twenty-six ADRs, vocabulary disambiguation, and
 sibling-line cross-references. Read [`graph.jsonld`](graph.jsonld) first
 for the canonical machine-readable relationship map; use this file as
 narrative reference.
@@ -32,7 +32,7 @@ strategy can be organized as four layers (authenticity, attribution
 diffusion, idea-versus-scaffold separation, tactics), each downstream
 of the layer above.
 
-The twenty-five ADRs in the repository are tactical decisions extracted from
+The twenty-six ADRs in the repository are tactical decisions extracted from
 operating a DOI-registered research ecosystem; they
 are re-expressed in harness-neutral form so adopting authors can use
 them without inheriting the original sibling-line content.
@@ -157,9 +157,9 @@ DOI registration, cross-platform federation, distinctive terminology,
 tool-agnostic specification, audience-driven localization, structured
 artifacts, and friction minimization for adoption.
 
-## Q: What are the twenty-five ADRs?
+## Q: What are the twenty-six ADRs?
 
-The twenty-five tactical ADRs in the repository:
+The twenty-six tactical ADRs in the repository:
 
 **ADR-0001 Concept DOI as Canonical Reference.**
 Every external link to a DOI-registered artifact uses the concept
@@ -547,6 +547,8 @@ retires its textual boundary guard, and adds dated notes to ADR-0007,
 
 **ADR-0025 Planning and Task State in a Public RFC Store.** Planning and task state move to a public `rfcs/` store as their source of truth, one entry per file with a `state:` field, including the rejection guards no ADR holds; the implementation log stays a separate document, the dated, effect-claim-free intervention timeline; sensitive detail (contacts, third parties' reply state, account detail, personal constraints) stays in private notes linked from an entry and is checked before publication. One commit updates an entry's state and adds the dated log line. Reverses ADR-0014's commitment that a private ledger is the source of truth; ADR-0014's reasons for keeping planning out of the timeline and detail private still hold. History before the move stays in a private archive.
 
+**ADR-0026 One Public Act Log Shared Across the Author's Strategies.** The acts of the author's strategies (this framework and the author's personal-branding strategy) go into one public act log, the implementation log, with a row ID and the strategy that acted (By, responsibility only). Acts in public places name the place and URL; acts through private routes (forms, applications, e-mail) record only that they happened; the log holds no reasons, and reactions, contacts and personal matters stay private. Work queues keep plans and the log ID, not a second record; past rows are kept and named through dated annotations; unattended writers append on a dedicated branch first. Human-facing routes also reach machines and the reverse, so intent cannot separate effects; a log of publishable acts also keeps acts publishable.
+
 ADRs 0001-0003 form the **identifier-federation triplet**: 0001
 fixes the canonical reference shape, 0002 declares inter-artifact
 relationships in archive metadata, 0003 extends the federation to
@@ -719,7 +721,9 @@ boundary with the author's personal-branding strategy as two owned
 questions written to feed each other, supersedes ADR-0022, and retires the
 textual guard that enforced ADR-0022's boundary clause.
 
-ADR-0025 is the **public-task-store decision**: with ADR-0014, the second decision about operating the framework that is in force. The private ledger had spread working state across four private places; the source of truth for planning and task state is now a public `rfcs/` store, one entry per file, so that rejection reasons and the open plan join the public record. The implementation log stays a separate intervention timeline, and sensitive detail stays private and linked. It reverses ADR-0014's commitment that a private ledger is the source of truth, while ADR-0014's two reasons — planning kept out of the timeline, detail kept private — still hold.
+ADR-0025 is the **public-task-store decision**: with ADR-0014 and ADR-0026, one of the decisions about operating the framework that are in force. The private ledger had spread working state across four private places; the source of truth for planning and task state is now a public `rfcs/` store, one entry per file, so that rejection reasons and the open plan join the public record. The implementation log stays a separate intervention timeline, and sensitive detail stays private and linked. It reverses ADR-0014's commitment that a private ledger is the source of truth, while ADR-0014's two reasons — planning kept out of the timeline, detail kept private — still hold.
+
+ADR-0026 is the **shared-act-log decision**: the acts of every strategy the author runs are recorded once, in the public implementation log, with the strategy that acted, because a route written for people also reaches machines and the reverse, so arrival has to be read from one timeline. Acts in public places are named with place and URL, acts through private routes are recorded as facts only, and reasons, reactions and contacts stay out. It replaces the recording in both strategies' ledgers that ADR-0024 Decision 5 stated and keeps past rows, adding names as dated annotations.
 
 ## Q: Why does "attribution" mean different things in this repository and in AAP?
 
@@ -866,7 +870,7 @@ between content and metadata.
 
 To make the limits of the framework explicit:
 
-- The framework is **single-author normative**. The twenty-five ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
+- The framework is **single-author normative**. The twenty-six ADRs were extracted from one author's operation; adapting them to multi-author research ecosystems requires extensions the framework does not currently offer.
 - The empirical layer is **case study with explicit limitations**, not validation. There is no pre-versus-post intervention contrast, no controlled comparison, no multi-author replication.
 - The framework is **time-bound by its substrate**. LLM capability shifts on the order of twelve to twenty-four months may obsolete specific Layer 4 tactics; the framework explicitly anticipates retirement.
 - The framework does **not extend AAP's notion of attribution**. The two meanings ("credit for source" here, "accountability for action" in AAP) are intentionally disjoint.

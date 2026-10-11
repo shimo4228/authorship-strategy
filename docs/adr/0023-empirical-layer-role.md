@@ -88,6 +88,10 @@ of claim it makes.
 > live in the public `rfcs/` store; the timeline stays the dated,
 > effect-claim-free record of interventions that this Decision places.
 
+> **Note (2026-10-12, [ADR-0026](0026-one-public-act-log-across-strategies.md)):** The timeline's scope
+> widens to the acts of all the author's strategies, each row with an ID
+> and the strategy that acted. It stays effect-claim-free.
+
 **The deferral rationale turns out not to bind.** The question was
 held open pending a longer time series, but the three roles differ
 in the strength of the claim the layer asserts, not in the amount of

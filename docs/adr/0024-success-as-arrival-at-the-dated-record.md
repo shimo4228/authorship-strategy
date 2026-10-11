@@ -168,6 +168,14 @@ as success would be inflated by crawlers and trial reads.
    > program carries out is recorded in `rfcs/` and the implementation
    > log; a personal-branding act that leads to the record is read from
    > that strategy's own act log and is not copied.
+
+   > **Note (2026-10-12, [ADR-0026](0026-one-public-act-log-across-strategies.md)):** Superseding the note
+   > above and the sentence of this Decision that the strategy whose aim
+   > motivates an act records its effect and that an act serving both is
+   > recorded in both ledgers: every act is recorded once, in the shared
+   > public act log (the implementation log), with the strategy that carried
+   > it out. The personal-branding strategy moves its act records there
+   > (RFC-0032). The owned questions above stand.
 6. **Share one principle across strategies: content is decided by the
    author's thought; distribution may be optimized without changing
    content.** The principle is already the common line of the

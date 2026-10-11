@@ -51,6 +51,11 @@ ledger は deploy 状況、選択された候補、作業詳細を持つ。
 > Status 節を更新し、implementation log に日付行を足す」と読む。Decision 2–4 の
 > 「ledger」は store を指す。timeline は別の文書のままである。
 
+> **注記（2026-10-12、[ADR-0026](0026-one-public-act-log-across-strategies.ja.md)）:** 運用詳細を ADR-0012 の水準に
+> 抽象化する扱いは、公開の場で行った行為の場所と URL にはもう適用しない。ログはそれを
+> 名指す。それらの行為は行った場所で既に公開されている。相手の反応・連絡先・個人的な
+> 事情には、プライバシーの理由が引き続き適用される。
+
 1. **実施後に更新する。** deploy された介入を ledger に先に記録し、次に public
    timeline に日付付きの投影を追加する。
 

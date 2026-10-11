@@ -80,6 +80,9 @@ repository と paper を持つ会計上の layer —— に default で振り分
 > private ledger の投影ではない。計画とタスクの状態は公開 `rfcs/` store に置き、
 > timeline は本 Decision が位置づける、日付つき・効果主張なしの介入の記録のままである。
 
+> **注記（2026-10-12、[ADR-0026](0026-one-public-act-log-across-strategies.ja.md)）:** timeline の範囲は著者の
+> すべての戦略の行為に広がり、各行は ID と実施した戦略を持つ。効果主張なしは変わらない。
+
 **延期の根拠は実は拘束しない。** 問いはより長い時系列を待つとして
 開かれたが、3 つの role の違いは layer が主張する claim の強さにあり、
 保有する data の量にはない。より長い series は baseline を鋭くするが、
