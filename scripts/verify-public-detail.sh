@@ -41,12 +41,28 @@ Output one line per finding, exactly: HIT <line>: <category> — <quoted span, a
 If there is no finding, output exactly: OK
 Output nothing else.'
 
+numbered() { # FILE -> numbered lines: only the lines added since origin/main
+  # when the file exists there (published lines were checked when they were
+  # added), otherwise the whole file.
+  local f=$1
+  if [[ ${LLM_SCOPE:-changed} == changed ]] && git cat-file -e "origin/main:$f" 2>/dev/null; then
+    git diff -U0 origin/main -- "$f" | awk '
+      /^@@/ { split($3, a, ","); n = substr(a[1], 2) + 0; next }
+      /^\+\+\+/ { next }
+      /^\+/ { printf "%6d\t%s\n", n, substr($0, 2); n++ }'
+  else
+    nl -ba "$f"
+  fi
+}
+
 llm_one() { # FILE -> prints HIT lines; returns 1 on a hit or bad output
-  local f=$1 out
-  out=$( { printf '<document path="%s">\n' "$f"; nl -ba "$f"; printf '</document>\n'; } |
+  local f=$1 out err
+  err=$(mktemp)
+  out=$( { printf '<document path="%s">\n' "$f"; numbered "$f"; printf '</document>\n'; } |
     claude -p --model "$LLM_MODEL" --tools "" --strict-mcp-config \
-      --no-session-persistence --system-prompt "$LLM_PROMPT" 2>&1 ) || {
-    printf 'HIT    %-14s %s: claude -p failed: %s\n' llm "$f" "${out:0:120}"; return 1; }
+      --no-session-persistence --system-prompt "$LLM_PROMPT" 2>"$err" ) || {
+    printf 'HIT    %-14s %s: claude -p failed: %s\n' llm "$f" "$(head -c 120 "$err")"; rm -f "$err"; return 1; }
+  rm -f "$err"
   out=$(printf '%s\n' "$out" | sed '/^[[:space:]]*$/d')
   [[ $out == OK ]] && return 0
   local line bad=0
@@ -101,7 +117,7 @@ if [[ $LLM != none ]]; then
   printf 'llm    %s on %s file(s)\n' "$LLM_MODEL" "${#LLM_TARGETS[@]}"
   if (( ${#LLM_TARGETS[@]} )); then
     printf '%s\0' "${LLM_TARGETS[@]}" |
-      xargs -0 -n1 -P4 bash "$0" --llm-one > .notes/.verify-llm.out || true
+      LLM_SCOPE=$LLM xargs -0 -n1 -P4 bash "$0" --llm-one > .notes/.verify-llm.out || true
     if grep -q '^HIT' .notes/.verify-llm.out; then cat .notes/.verify-llm.out; fail=1; fi
     rm -f .notes/.verify-llm.out
   fi
