@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<title>rfcs への台帳統合</title>
+<link rel="stylesheet" href="htmlplan.css">
+<script src="htmlplan.js" defer></script>
+<body>
+
+<header>
+  <h1>authorship-strategy の台帳を rfcs/ へ統合</h1>
+  <doc-changes new="39" changed="26"></doc-changes>
+  <details class="thread"><summary>Why · 4 発言</summary>
+    <doc-quote via="prompt" from="著者">計画と状態の正本を repo の公開 `rfcs/` 1 か所にする</doc-quote>
+    <doc-quote via="prompt" from="著者">公開の面は 2 つにする: `rfcs/`（計画と状態）と `docs/empirical/implementation-log.md`（日付つき介入の時系列、ADR-0023 の empirical の役割のまま）。</doc-quote>
+    <doc-quote via="prompt" from="著者">機微（連絡先、相手の返信状況、アカウント詳細）は `.notes/` に残し、rfc からリンクする。</doc-quote>
+    <doc-quote via="prompt" from="著者">843 行の ledger のうち、開いている項目だけを rfc にし、閉じた履歴は repo に 1 ファイルの archive として移す、という方針でよいか。DROP（再提案しない）は `rejected` / `withdrawn` の rfc として理由ごと公開記録に残すか。</doc-quote>
+  </details>
+  <p>調査 report: <a href="research/2026-10-12-rfcs-store-consolidation.md">research/2026-10-12-rfcs-store-consolidation.md</a>（内部調査。分散 4 か所の件数、公開リスクの所在、追随が要る参照の file:line）</p>
+</header>
+
+<main>
+<doc-plan>
+
+<!-- ═════ 1 ═════ -->
+<doc-claim>
+  <p>開いているタスクは <code>claims.py ready</code> で rfcs/ から引ける。</p>
+  <doc-mock frame="terminal" title="authorship-strategy · 移行後" w="470" caption="番号は写像表の順に振る。下の行は例。"><template><span class="dim">$</span> python3 ~/.claude/scripts/claims.py ready
+RFC-0001   provenance-hardening pass。最初の step は著者の…
+RFC-0002   検索索引への入場: GSC の URL 検査、Bing への…
+<span class="dim">$</span> python3 ~/.claude/scripts/claims.py ready --state blocked
+RFC-0003   Code Wiki で生成済みの repo にだけ badge を戻す…
+RFC-0005   秋窓の parametric contrast を判定する（期限 2026…
+<span class="dim">$</span> python3 ~/.claude/scripts/claims.py ready --state draft
+RFC-0008   OpenAttribution の採否: (a) domain claim か…
+<span class="dim">…</span></template></doc-mock>
+
+  <doc-claim>
+    <p>移行する項目は写像表で 1 件ずつ決まる。</p>
+    <doc-draft id="mapping" label="写像表（行を書き換えると diff で戻る）">
+<script type="text/plain">
+# 行頭: rfc = 起票 / 終端 = 終端 rfc（claim 2）/ ADR = ADR が既に理由を持つ / 渡す = 他 repo
+#       便乗 = 触るファイルの側に注記 / 照合 = 既済を確かめて不起票 / archive = 起票せず履歴に残す
+# 番号は書かない。起票時にこの順で 0001 から振る。旧 ID は report の記号（T=TASKS, O=ledger, R=handoff）
+
+## 開いている rfc（accepted）
+rfc accepted  provenance-hardening pass                                ← T7
+rfc accepted  検索索引への入場（GSC URL 検査・Bing・Brave）            ← R2
+照合          2026-10-01 監査の残り: hub push と HF 再同期             ← O22（未了なら rfc accepted）
+## 開いている rfc（blocked: 再開条件・照合先・成立時の 3 行を持つ）
+rfc blocked   Code Wiki 生成済み repo にだけ badge を戻す              ← T1, O1
+rfc blocked   researchmap 掲載と OpenAlex 名寄せ                       ← T11, O3
+rfc blocked   秋窓 parametric contrast の判定（期限 2026-12-31）       ← T29
+rfc blocked   OQ5 recursion sweep と insource 検索の再測（2026-11）    ← O28
+rfc blocked   外部 initiative への事例提供の後続                       ← O21（詳細は .notes）
+## 開いている rfc（draft: 採否がまだ要る。WATCH もここ）
+rfc draft     OpenAttribution の採否                                    ← T3, R4, O2
+rfc draft     user-site repo を新設するか                               ← R3
+rfc draft     persona の sameAs と外部 profile 各欄の扱い               ← O22 の判断 2 件
+rfc draft     plugin directory の掲載記録と Usage 基準値                ← R5, O20
+rfc draft     Citation Monoculture の取り込み                           ← R7
+rfc draft     Ahrefs DiD の適用範囲を ADR-0009 か OQ9 に                ← R8
+rfc draft     admission 監査の事前登録                                  ← R9
+rfc draft     referrer 三分類の集計                                     ← R10
+rfc draft     翻訳層: 造語の隣に汎用語を 1 文                           ← R11
+rfc draft     vendor 著者の研究を COI つきで manifesto に               ← R13
+rfc draft     WATCH: ARD / ai-catalog.json                              ← O16
+rfc draft     WATCH: Perplexity Pages                                   ← O17
+rfc draft     WATCH: zero-config MCP doc-server                         ← O18
+rfc draft     WATCH: RAiD / w3id / SWHID→DataCite                       ← O19
+
+## 起票しないもの
+便乗          次回 release-doi で Zenodo description を補強            ← T28 → CHANGELOG [Unreleased] に 1 行
+照合          personal-branding へ境界検討を渡す                       ← R1（PB ADR-0007 に 2026-10-12 の注記あり）
+渡す          claude-harness 集約 sync                                 ← R6, O23 → harness の台帳
+渡す          JA エッセイの syndication 先に note                      ← R12 → zenn-content rfcs/
+渡す          jrp → repo の取り込み経路                                ← R14 → jev-research-pipeline
+渡す          contemplative axioms の anchoring                        ← O24 前半 → contemplative-agent rfcs/
+渡す          hub traffic/README の比率の記述を直す                    ← R15 → hub の小修正
+archive       2026-07 以前に gate して以後動いていない候補              ← O4–O15, O25–O27, O29
+archive       TASKS 棚卸し記録の未起票 6 件と D41 の副産物 3 件       ← T L87, D41
+archive       wiki-harvest の候補 25 件（候補台帳のまま .notes に残す） ← W
+</script>
+    </doc-draft>
+    <doc-note tone="info"><strong>既定の線</strong> seam を越えて意図か状態を運ぶものだけを起票する（rfc-writer §0）。ledger L34 は候補節を「歴史記録」と宣言している。archive の行は、あなたが行頭を rfc に書き換えたものだけ起票する。</doc-note>
+  </doc-claim>
+
+  <doc-claim>
+    <p>各 rfc は store の規約どおりの形で置かれる。</p>
+    <doc-code title="rfcs/0008-openattribution-adoption.md · sketch" lang="markdown">
+<script type="text/plain">
+---
+state: draft 2026-10-12
+review-when: 送る側の主要 AI 製品が OpenAttribution の採用を表明する
+---
+
+## Summary
+
+OpenAttribution v1.0（2026-09-02 final）に参加するかを決める。(a) user-site の
+.well-known で domain claim する（RFC-0009 の後）か、(b) 送る側の採用表明まで待つか。
+
+## Motivation
+
+旧 ID: T3 / R4（private ledger から 2026-10-xx 移送）。gate の経緯と第三者の応答状況は
+[.notes/…](../.notes/…) にある（非公開）。
+
+## Status
+
+draft — 再開条件は成立済み。採否は著者の判断待ち（2026-10-12）。
+
+## Next action
+
+著者が (a) か (b) を選ぶ。
+</script>
+      <doc-pin line="10" tone="info" title="1 行目が ready の要約">claims.py は本文の最初の非見出し行を 90 字で出す。</doc-pin>
+      <doc-pin line="15" tone="warn" title="機微はリンク先に置く">rfc には「応答状況は .notes にある」とだけ書く。</doc-pin>
+    </doc-code>
+    <doc-note tone="info"><strong>規約</strong> 見出しは英語、本文とタイトルは日本語（CA の先例どおり）。<code>rfcs/README.md</code> は what-this-is・skill へのリンク・state の正本の 1 行・index 表だけを持つ。採番は 0001 から。</doc-note>
+    <doc-note tone="warn"><strong>番号の重なり</strong> <code>.notes/claims.jsonl</code> の最終行は harness の RFC-0004 の spawn 記録で、この repo の cwd で書かれた。AS の RFC-0004 の系譜に見える。journal は追記専用なので、そのまま残し、この注記だけを移行の commit 本文に書く。</doc-note>
+  </doc-claim>
+
+  <doc-claim>
+    <p>件数の guard は rfcs/ の本文を検査しない。</p>
+    <doc-code diff file="scripts/verify-counts.sh" start="46">
+<script type="text/plain">
+   git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld' \
+     | grep -vE '^CHANGELOG\.md$' \
+     | grep -vE '^docs/adr/[0-9]' \
+-    | grep -vE '^docs/plans/')
++    | grep -vE '^docs/plans/' \
++    | grep -vE '^rfcs/')
+</script>
+      <doc-pin line="50" tone="info" title="rfc は当時の件数を持つ記録">docs/plans/ と同じ理由で外す。コメント L41–44 にも 1 語足す。</doc-pin>
+    </doc-code>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 2 ═════ -->
+<doc-claim>
+  <p>「再提案しない」判断は rfcs/ か ADR のどちらかで引ける。</p>
+  <doc-code title="DROP 19 群の行き先 · sketch" lang="text">
+<script type="text/plain">
+ADR が理由を既に持つ（rfc を作らない）
+  D-a  第三者管理の権威記録への自己登録     → ADR-0021
+  D-c  RSL                                  → ADR-0015
+  D-d  C2PA self-signed                     → ADR-0013
+  D-g  自前 MCP server / D-h Context7       → ADR-0020 Alternatives
+終端 rfc（判断 1 つに 1 ファイル、決着日と理由と失効条件）
+  D-b  ghost-citation disambiguation 記事          withdrawn
+  D-e/f  agent benchmark を seeding channel に     rejected
+  D-i  DeepWiki 代替サービス群                     rejected
+  D-j  Wikipedia 自己引用 / バズ狙い               rejected
+  D-k/n/s  2026-07-01 候補の不採用分（重複を統合）  rejected
+  D-l  HF Daily Papers / HF posts（実行不可）       withdrawn  review-when 付き
+  D-m/q  AI-native venue 4 件と新 venue line       withdrawn
+  D-o  PROV-O                                      rejected   review-when 付き
+  D-p  用語単独の DOI                              rejected
+  D-r  served page の無い repo への JSON-LD 展開   rejected
+</script>
+  </doc-code>
+  <doc-ask id="drop">
+    <p>DROP をどこに残すか。</p>
+    <label><input type="radio" name="drop" value="split" checked> ADR に無いものだけ終端 rfc にする <small>約 10 ファイル。guard も状態なので正本を 1 か所に保てる</small></label>
+    <label><input type="radio" name="drop" value="all"> 全 19 群を終端 rfc にする <small>ADR と理由が二重になる</small></label>
+    <label><input type="radio" name="drop" value="private"> rfc にせず private archive に残す <small>harness ADR-0049 の旧 store と同じ扱い。guard が .notes に分かれる</small></label>
+  </doc-ask>
+  <div data-if="drop=private"><doc-note tone="warn">claim 2 は消える。rfcs/README に「却下の記録は ADR を見る」と 1 行だけ書く。</doc-note></div>
+  <doc-note tone="info"><strong>後追い起票との関係</strong> rfc-writer §0 は完了後の後追い起票をしない。却下理由を残す価値がある起票は認めている。ここで起票するのは、まだ効いている guard だけ。</doc-note>
+</doc-claim>
+
+<!-- ═════ 3 ═════ -->
+<doc-claim>
+  <p>公開する rfc に機微は載らず、機微は .notes/ へのリンクで残る。</p>
+  <doc-flow caption="公開は撤回できない。push の前に 3 段で止める。">
+<script type="text/plain">
+w  = 写像表から起票 / このセッション
+g  = 機械検査 / scratchpad の grep
+r  = fresh-context の査読 / 別 agent
+a  = diff を読む / 著者
+p  = push / 著者の承認後
+| w | g |
+| r | a |
+| . | p |
+w -> g : 全 rfc
+g -> r : 0 件
+r -> a : 指摘 0
+a -> p : 承認
+</script>
+  </doc-flow>
+
+  <doc-claim>
+    <p>機械検査は種類ごとに 0 件で通る。</p>
+    <doc-code title="scratchpad/check-rfcs.sh · sketch（commit しない）" lang="bash">
+<script type="text/plain">
+rg -n '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}' rfcs/   # メールアドレス
+rg -n '/Users/' rfcs/                                       # ローカル絶対パス
+rg -n 'wf_[0-9a-z]{6,}' rfcs/                               # workflow run ID
+rg -n -f .notes/rfcs-sensitive-terms.txt rfcs/              # 人名・handle・個人的な制約の語
+# 語の一覧は report §6 の所在から作り、.notes に置く（一覧そのものが機微）
+</script>
+    </doc-code>
+    <doc-note tone="info"><strong>査読の観点</strong> report §6 の種類（第三者の名前と応答状況、アカウントの運用詳細、private repo 名、効果の主張）。rfc の Motivation の観測は “preliminary observation” の水準で書く（docs/maintenance.md:15–17）。</doc-note>
+  </doc-claim>
+
+  <doc-claim>
+    <p>移行は 6 つの commit で入り、push は承認の後に行う。</p>
+    <doc-code title="手順 · sketch" lang="text">
+<script type="text/plain">
+commit A  docs(plan): rfcs-store-consolidation（plan と調査 report）
+commit B  chore(verify): rfcs/ を件数検査から外す
+commit C  docs(adr): ADR-0025 英日、ADR-0014・0024 の注記、件数 carrier 24→25
+          → adr-reviewer が査読 → verify-counts が通ってから確定
+commit D  docs(rfcs): store を開設し、開いている項目を移送（README + rfc）
+commit E  docs(rfcs): まだ効いている却下の guard を終端 rfc で記録
+commit F  docs: 実施記録の経路を rfcs/ に向ける（maintenance・implementation-log・
+          glossary・llms*・graph の two-tier 記述・CLAUDE.md/AGENTS.md の入口 1 行）
+repo の外  memory と .notes の整理（claim 5）、~/.claude の skill と scheduled task（local commit）
+承認後    AS の push、HF mirror の再同期（graph が変わるため）、harness-sync
+</script>
+    </doc-code>
+    <doc-ask id="executor">
+      <p>実行者の決定: 誰が書くか。</p>
+      <label><input type="radio" name="executor" value="self" checked> このセッション <small>調査の文脈を持つ。移送と ADR は散文編集で、judge-tier の例外 (a)</small></label>
+      <label><input type="radio" name="executor" value="build"> build-tier の新しいセッション <small>写像表と report を packet にして渡す</small></label>
+      <label><input type="radio" name="executor" value="split"> ADR はこのセッション、rfc の移送は build-tier <small>写像表が確定していれば移送は機械的</small></label>
+    </doc-ask>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 4 ═════ -->
+<doc-claim>
+  <p>実施の記録順は「rfc の state → implementation-log」になる。</p>
+  <doc-code title="docs/adr/0025-planning-and-state-in-the-public-rfc-store.md · sketch" lang="markdown">
+<script type="text/plain">
+# ADR-0025: Planning and Task State in the Public RFC Store
+## Status     accepted
+## Context    The private ledger (ADR-0014) and a private task table split state
+              across four places; sessions could not find the current state in one read.
+              ADR-0014 kept planning private for two reasons: (1) planning content
+              would turn the timeline into a scratchpad; (2) privacy.
+## Decision
+1. Planning and task state live in rfcs/, one entry per file with `state:`.
+   This includes rejection guards that no ADR already holds.
+2. The implementation log stays the dated, effect-claim-free intervention
+   timeline (ADR-0023). Reason (1) holds: planning goes to rfcs/, not the log.
+3. Sensitive detail stays in the private working notes, linked from the entry.
+   Reason (2) holds at the level of the detail, not of the whole plan.
+4. On implementation, update the entry's state, then add the dated log line.
+5. History before the move stays in a private archive.
+## Supersedes  ADR-0014: the ledger location and Alternatives 1. Decisions 2–4 stand.
+## Review-when A privacy incident caused by an entry; no new entries for 3 months.
+</script>
+    <doc-pin line="9" tone="info" title="ADR-0014 の理由 2 つの扱い">前者は rfcs と log の分離で、後者はリンク先で保たれる。</doc-pin>
+  </doc-code>
+  <doc-ask id="adr">
+    <p>ADR-0014 の改め方。</p>
+    <label><input type="radio" name="adr" value="new" checked> 新しい ADR-0025 を書き、ADR-0014 に注記 <small>adr-writer の 3 条件を満たす。0014 が却下した案を採るため</small></label>
+    <label><input type="radio" name="adr" value="note"> ADR-0014 への注記と commit 本文だけ <small>件数 carrier は変わらない。却下済みの案が注記の中で復活する</small></label>
+  </doc-ask>
+  <div data-if="adr=note"><doc-note tone="warn">claim 4.2 の件数 carrier の更新と graph の新 node は消える。HF の再同期は two-tier 記述の修正分だけになる。</doc-note></div>
+
+  <doc-claim>
+    <p>ADR-0014 と ADR-0024 は日付つき注記で新 ADR を指す。</p>
+    <doc-code src="docs/adr/0014-implementation-tracking-two-tier-ledger.md" lines="73-76" hl="75-76">
+      <doc-pin line="75" tone="warn" title="ADR-0025 が採る案">この Alternatives に注記を置く。Status も「ledger location superseded by ADR-0025」にする。</doc-pin>
+    </doc-code>
+  </doc-claim>
+
+  <doc-claim>
+    <p>ledger の所在を書く文書は rfcs/ を指す。</p>
+    <doc-tree caption="repo の外の 3 つは ~/.claude の local commit。PB は通知だけ。">
+<script type="text/plain">
+~ docs/maintenance.md :29–38       # 「実施を記録するとき」節を書き換え（所在の正本）
+~ docs/empirical/implementation-log.md :238–242  # working detail は rfcs/ と .notes
+~ docs/glossary.md :338 / glossary.ja.md :279    # ledger tier の定義
+~ llms.txt / llms-full.txt / graph.jsonld / CITATION.cff / .zenodo.json / codemeta.json  # two-tier 記述
+~ README / adr/README / adoption.md / thesis      # ADR 件数 24→25（ADR を新設する場合）
+~ CLAUDE.md / AGENTS.md            # 「資料の入口」に rfcs/ を 1 行（2 つを同じ内容に保つ）
+~ ~/.claude/skills/authorship-strategy/references/action-review.md :37–40  # private ledger → 適用先の台帳
+~ ~/.claude/scheduled-tasks/akc-plugin-catalog-watch/SKILL.md :20,24     # ledger C24 → plugin directory の rfc
+→ personal-branding 戦略の境界の決定  # 見直し条件が発火する。PB セッションへ渡す文面を用意する
+</script>
+    </doc-tree>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 5 ═════ -->
+<doc-claim>
+  <p>memory は指針 1 行、.notes は機微と履歴だけを持つ。</p>
+  <doc-tree caption="移すのは commit D〜F が通った後。">
+<script type="text/plain">
+memory/
+  ~ MEMORY.md                         # L6–7 を 1 行に:「台帳は rfcs/、実施記録は implementation-log」
+  ~ task-ledger-wiring.md             # 2026-07-06 の二層分立を 2026-10-11 の決定で置き換える
+  - diffusion-channel-status.md       # 全文を .notes/archive/ へ移す
+  ~ daily-research-morning-brief-flow.md  # 手順 4: rfc の state → implementation-log
+  ~ inquiry-first-not-gap-review.md / probe-measurement-system.md / wikidata-qids.md  # リンク先だけ
+.notes/
+  ~ TASKS.md                          # rfcs/ へのポインタ 1 行だけを残す
+  + archive/diffusion-ledger-2026-06-to-10.md  # ledger 全文 + TASKS Done 表 + 旧 ID → RFC 表
+  → archive/handoff-2026-10-11-session-remainders.md
+    wiki-harvest/ledger.md            # 候補台帳のまま
+</script>
+  </doc-tree>
+  <doc-ask id="history">
+    <p>閉じた履歴（ledger の Done 節と D1–D45）をどこに置くか。</p>
+    <label><input type="radio" name="history" value="private" checked> .notes/archive/ に 1 ファイル <small>公開の面は 2 つのまま。公開の時系列は implementation-log が既に持つ</small></label>
+    <label><input type="radio" name="history" value="public"> 機微を除いた版を repo で公開 <small>843 行の書き換えが要る。3 つめの公開面になる</small></label>
+  </doc-ask>
+  <div data-if="history=public"><doc-note tone="risk">report §6 の機微は ledger 全体に散る（メール、第三者の handle、認証の手順、workflow ID）。公開版は 1 行ずつ書き換えて、claim 3 の 3 段検査を通す。</doc-note></div>
+
+  <doc-claim>
+    <p>personal-branding 由来の経路は書き先が変わる。</p>
+    <doc-code src="docs/maintenance.md" lines="29-38" hl="31">
+      <doc-pin line="31" tone="warn" title="listing-pr-daily がここ経由で ledger 末尾に書く">現在 0 行。移設すると書き先が消える。</doc-pin>
+    </doc-code>
+    <doc-ask id="pbroutes">
+      <p>PB 由来の経路の行をどこに書くか。</p>
+      <label><input type="radio" name="pbroutes" value="notes" checked> .notes/pb-routes.md <small>今と同じ private。scheduled task の書き先だけ変える</small></label>
+      <label><input type="radio" name="pbroutes" value="log"> implementation-log の新しい小節 <small>公開の時系列に入る。無人の task が公開ファイルを書く</small></label>
+    </doc-ask>
+    <div data-if="pbroutes=log"><doc-note tone="warn">listing-pr-daily は commit まで行うか、行を貯めて人が commit するかを先に決める。</doc-note></div>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ shared ═════ -->
+<doc-claim aux="shared">
+  <p>共通: 状態語は task-stocktake の 9 語だけを使う。</p>
+  <doc-code title="ledger の語 → state · sketch" lang="text">
+<script type="text/plain">
+DEPLOYED / Done            → 起票しない（implementation-log と commit が持つ）
+採用済み、今すぐ着手可     → accepted
+条件が成立すれば着手       → blocked（再開条件 / 照合先 / 成立時）
+WATCH・再 gate・採否待ち   → draft（失効条件は review-when へ）
+DROP（著者が否決）         → rejected
+DROP（自ら見送り）         → withdrawn
+対象が消えた               → obsoleted（消した ADR か commit を引用）
+</script>
+  </doc-code>
+</doc-claim>
+
+<!-- ═════ scope ═════ -->
+<doc-claim aux="scope">
+  <p>変えないもの。</p>
+  <ul>
+    <li>implementation-log の既存行と、効果を主張しない規約（ADR-0023）。</li>
+    <li>ADR-0014 の Decision 2–4（記録は作業に応じて読む、探索は開いたまま）。</li>
+    <li>wiki-harvest の候補台帳。採否前の候補は .notes に残し、採択したときに起票する。</li>
+    <li>docs/plans/ の過去の plan と report の記述。</li>
+    <li>他 repo の台帳への起票。このセッションは渡す文面までを書く（R6・R12・R14・O24・R15）。</li>
+    <li>memory の awesome-list-submissions は今回動かさない。中身の照合を別に要する。</li>
+  </ul>
+</doc-claim>
+
+</doc-plan>
+</main>
+</body></html>
