@@ -16,6 +16,7 @@ AI 時代に、作り手の考えがどう使われ、出典とともに伝わ�
 - [README](README.md) / [日本語](README.ja.md): プロジェクトの概要
 - [thesis](docs/thesis.md) / [日本語](docs/thesis.ja.md): 現在の中心的な主張
 - [manifesto](docs/manifesto.md): これまでに開いた問い
+- [rfcs](rfcs/README.md): 計画とタスクの状態（開いているものは `python3 ~/.claude/scripts/claims.py ready`）
 
 ## 編集するとき
 

@@ -10,7 +10,7 @@ Anthropic の plugin directory に掲載された akc-cycle と harness-scope �
 
 旧 ID: handoff R5 / ledger C24（2026-07-15 に掲載を申請）。
 
-- 2026-10-11 の時点で akc-cycle と harness-scope は掲載済み。旧 ledger の C24 は「LISTED」に更新されないまま残った
+- akc-cycle と harness-scope の directory ページは公開されている（2026-10-11 確認）。旧 ledger の C24 はこの状態に更新されないまま残った
 - directory の Usage は、この program が持つ唯一の一次の利用計測（2026-10-11 の調査）
 - 区別は ADR-0024 の議論で出た: skill の install は足場の使用で、考えの使用と同じではない
 - scheduled task `akc-plugin-catalog-watch` は掲載の検出時にこのエントリの更新を提案する

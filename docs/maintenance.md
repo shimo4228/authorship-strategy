@@ -28,14 +28,23 @@
 
 ## 実施を記録するとき
 
-- Private implementation ledger: project memory の `diffusion-channel-status.md`。
-  実施状況、採用候補、運用詳細を持つ作業台帳。
-- Public projection: [implementation log](empirical/implementation-log.md)。
+- 計画とタスクの状態: [rfcs/](../rfcs/README.md)。1 エントリ 1 ファイルで、frontmatter の `state:` が正本。
+  開いているものは `python3 ~/.claude/scripts/claims.py ready`（`--state blocked` / `--state draft`）で引く。
+  起票は skill `rfc-writer`、状態語は skill `task-stocktake` に従う。再提案しない判断は終端エントリか ADR にある。
+  実施状況の確認や重複確認にはこの store を使う。
+- 実施済みの介入: [implementation log](empirical/implementation-log.md)。
   日付付き介入だけを英語で記録し、効果を主張しない。host や私的な運用情報は ADR-0012 の水準に抽象化する。
-- 介入を実施したら ledger を先に更新し、その後 public projection に日付行を追加する。
-  実施状況の確認や重複確認には台帳を使う。会話で生まれた案や問いの保存先は、記録の依頼に合わせて決める。
+- 機微（連絡先、第三者の返信の状況、アカウントの詳細、個人的な制約）は `.notes/` に置き、エントリからリンクする。
+  リンク先のファイル名にも機微を書かない。
+- 介入を実施したら、1 つの commit でエントリの state と Status 節を更新し、log に日付行を足す。
+- `rfcs/` か log を変えたら、push の前に `scripts/verify-public-detail.sh --llm` を回す
+  （パターン検査と Claude Haiku 5.5 の読み）。語の一覧は `.notes/public-guard-terms.txt`。
+- 2026-10-12 までの履歴は `.notes/archive/diffusion-ledger-2026-06-to-10.md`（非公開）。
+  personal-branding 戦略の行為で記録へ至るものへの参照は `.notes/pb-routes.md` に 1 行為 1 行で置く。
+- 会話で生まれた案や問いの保存先は、記録の依頼に合わせて決める。
 
-役割分担の根拠は [ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md)。
+役割分担の根拠は [ADR-0025](adr/0025-planning-and-task-state-in-a-public-rfc-store.md)
+（[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) を部分的に supersede）。
 
 ## ADR・概念・graph を編集するとき
 

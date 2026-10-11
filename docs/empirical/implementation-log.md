@@ -235,11 +235,14 @@ diffusion intervention is deployed it is appended here with its date; the
 entries are curated to *dated interventions* and deliberately exclude the
 program's operational working detail (ranked next-step proposals,
 pending-request state, the host-level reasoning ADR-0012 abstracts away).
-That working detail lives in a separate private ledger; this file is the
-public, effect-claim-free face of it. The separation keeps this record in
-its empirical-layer role — an intervention timeline, not a planning
-scratchpad — while still growing as the program acts. The decision to
-maintain the two layers this way is recorded in ADR-0014.
+Planning and task state live in the repository's public
+[`rfcs/`](../../rfcs/README.md) store, and sensitive working detail stays in
+private notes; this file is the effect-claim-free record of what was done.
+The separation keeps this record in its empirical-layer role — an
+intervention timeline, not a planning scratchpad — while still growing as
+the program acts. An intervention updates its `rfcs/` entry and adds its line
+here in the same commit. The decision is recorded in ADR-0025, which
+supersedes in part the two-tier ledger of ADR-0014.
 
 ## A note on recursion
 
