@@ -4,7 +4,7 @@
 #
 # Why this exists: aggregate counts (the ADR total, the open-question total)
 # are restated in prose across many carriers — README, thesis, llms.txt,
-# graph.jsonld, CODEMAPS, the deposit metadata, and so on. Prose cannot be
+# graph.jsonld, the deposit metadata, and so on. Prose cannot be
 # rewritten as pointers without wrecking readability, so the CLAUDE.md
 # numeric-claim rule applies its second clause instead:
 #

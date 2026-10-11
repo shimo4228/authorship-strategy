@@ -184,7 +184,7 @@ Artifact の concept-level entity と inter-entity 関係を、structured-data v
 Structured-data-ingesting [LLM-mediated channels](#llm-mediated-channel) を target
 とする: training pipeline、knowledge-graph crawler、dataset SDK を用いる
 programmatic reader。[Dual entry point](#dual-entry-point) の concept-form 側を担い、
-file-level documentation (`docs/CODEMAPS/` に存在) が prose で暗黙にしておく
+file-level documentation が prose で暗黙にしておく
 concept-level structure を encode することで補完する。Framework decision は concept
 graph を deploy することであり、specific linked-data vocabulary を mandate するもの
 ではない。Operational form は外部 skill

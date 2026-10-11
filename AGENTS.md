@@ -16,7 +16,6 @@ AI 時代に、作り手の考えがどう使われ、出典とともに伝わ�
 - [README](README.md) / [日本語](README.ja.md): プロジェクトの概要
 - [thesis](docs/thesis.md) / [日本語](docs/thesis.ja.md): 現在の中心的な主張
 - [manifesto](docs/manifesto.md): これまでに開いた問い
-- [CODEMAP](docs/CODEMAPS/architecture.md): 各資料の所在
 
 ## 編集するとき
 

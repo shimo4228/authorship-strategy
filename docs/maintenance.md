@@ -2,8 +2,7 @@
 # Repository maintenance
 
 編集・記録・公開作業の該当箇所で参照する規約。探索の手順は定めない。
-構成と文書の正本は [CODEMAP](CODEMAPS/architecture.md)、背景と関連プロジェクトは
-[README](../README.md)、component skill の所在は [skill index](skills/README.md) を参照。
+背景と関連プロジェクトは [README](../README.md)、component skill の所在は [skill index](skills/README.md) を参照。
 
 ## 執筆と翻訳
 
@@ -46,8 +45,8 @@
   主担当は `authorship-strategy.md`、必要に応じて GEO / オーセンティシティ / AKC / LLM を参照する。
 - wiki は問い・矛盾・出典候補を探す補助資料。公開する主張は一次出典まで遡って確認し、
   wiki ページや vault のパスを出典として引用しない。
-- `graph.jsonld` は概念と関係、CODEMAP はファイルと役割を記述する。
-  新規 ADR / Concept の追加では両方を更新する。既存項目の改訂では対応する説明をそろえる。
+- `graph.jsonld` は概念と関係を記述する。新規 ADR / Concept の追加では graph を更新する。
+  既存項目の改訂では対応する説明をそろえる。
 - 本 repo の graph は doctrine concept と component skill が対象。
   `doctrine-corpus` は hub の data-sibling 登録、`existence-proof` は hub の pre-line complement
   登録が正本。本 repo に node がないことを不足と扱わない。

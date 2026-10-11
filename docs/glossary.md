@@ -227,7 +227,7 @@ Targets structured-data-ingesting [LLM-mediated channels](#llm-mediated-channel)
 training pipelines, knowledge-graph crawlers, programmatic readers
 using dataset SDKs. The concept-form half of the
 [dual entry point](#dual-entry-point); complements file-level
-documentation (which lives in `docs/CODEMAPS/`) by encoding
+documentation by encoding
 concept-level structure that prose leaves implicit. The framework
 decision is to deploy a concept graph, not to mandate a specific
 linked-data vocabulary. Operational form lives in the external skill
