@@ -38,16 +38,17 @@ WORDS=(zero one two three four five six seven eight nine ten eleven twelve \
 # "twenty-four" over "twenty" and "thirty-one" over "thirty".
 NUM='twenty-one|twenty-two|twenty-three|twenty-four|twenty-five|twenty-six|twenty-seven|twenty-eight|twenty-nine|thirty-one|thirty-two|thirty-three|thirty-four|thirty-five|thirty-six|thirty-seven|thirty-eight|thirty-nine|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|eleven|twelve|twenty|thirty|forty|three|seven|eight|four|five|nine|zero|one|two|six|ten|[0-9]+'
 
-# Carriers to guard. CHANGELOG.md, the individual ADR files and the plans
-# under docs/plans/ legitimately name historical / sub-cluster counts (e.g.
-# "four ADRs since v0.7.0", "three decisions", a plan's "six ADRs" as of its
-# date), so they are excluded.
+# Carriers to guard. CHANGELOG.md, the individual ADR files, the plans
+# under docs/plans/ and the entries under rfcs/ legitimately name historical /
+# sub-cluster counts (e.g. "four ADRs since v0.7.0", "three decisions", a plan's
+# "six ADRs" as of its date), so they are excluded.
 FILES=()
 while IFS= read -r _f; do FILES+=("$_f"); done < <(
   git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld' \
     | grep -vE '^CHANGELOG\.md$' \
     | grep -vE '^docs/adr/[0-9]' \
-    | grep -vE '^docs/plans/')
+    | grep -vE '^docs/plans/' \
+    | grep -vE '^rfcs/')
 
 fail=0
 
