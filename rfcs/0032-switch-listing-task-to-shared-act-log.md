@@ -1,5 +1,5 @@
 ---
-state: accepted 2026-10-12
+state: done 2026-10-12
 ---
 
 ## Summary
@@ -20,12 +20,10 @@ scheduled task `listing-pr-daily` の書き先を、PB の行為ログから共�
 
 ## Status
 
-accepted（2026-10-12）。PB の文書と queue は新しい形になった: PB の listing queue に「ログ ID」の列ができ、scorecard の行為ログ節は Acts 節へのリンクと切り替えまでの受け皿の表になった。queue の done 23 行（2026-10-05〜10-11 の掲載）の結果 URL と実行日は、今のところその行為の唯一の記録なので、切り替えのときに Acts 節へ移す。
+done（2026-10-12）。queue の done 23 行を Acts 節の A-0001〜A-0023 に移し（AS 4e3b7f9）、PB は queue にログ ID を入れて結果と実行日を空けた（PB 85753eb）。`listing-pr-daily` は AS の act-log branch の worktree（`.claude/worktrees/act-log`）にログの行を先に書いて commit し、その ID で queue を閉じ、最後に照合を報告する形になった（~/.claude の commit）。取り込みは AS の session が行う（`docs/maintenance.md`）。
 
 **2026-10-12 plan** — [docs/plans/shared-act-log-convention.html](../docs/plans/shared-act-log-convention.html)
 
 ## Next action
 
-1. queue の done 23 行と受け皿の表の行を Acts 節へ移し、ID を振る（By = PB）
-2. PB の session に ID の一覧を渡す。PB は queue の結果・実行日の列を空け、ID を入れ、受け皿の表を消す
-3. AS 側の act-log branch と worktree を用意し、`listing-pr-daily` を書き換える
+なし。

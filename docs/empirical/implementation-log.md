@@ -214,7 +214,7 @@ author's strategies carried it out
 | A-0013 | 2026-10-08 | PB | Plugin directory submission for akc-cycle (private route) | — | repo |
 | A-0014 | 2026-10-08 | PB | Plugin directory submission for harness-scope (private route) | — | repo |
 | A-0015 | 2026-10-09 | PB | Listing PR to davepoon/buildwithclaude for herdr-toolkit | [davepoon/buildwithclaude#394](https://github.com/davepoon/buildwithclaude/pull/394) | repo |
-| A-0016 | 2026-10-09 | PB | Listing PR to joelparkerhenderson/architecture-decision-record for agent-attribution-practice | [joelparkerhenderson/architecture-decision-record#127](https://github.com/architecture-decision-record/architecture-decision-record/pull/127) | repo |
+| A-0016 | 2026-10-09 | PB | Listing PR to architecture-decision-record/architecture-decision-record for agent-attribution-practice | [architecture-decision-record/architecture-decision-record#127](https://github.com/architecture-decision-record/architecture-decision-record/pull/127) | repo |
 | A-0017 | 2026-10-09 | PB | Listing issue to wuyoscar/jev-skill for jev-skill-router and jev-research-pipeline | [wuyoscar/jev-skill#37](https://github.com/wuyoscar/jev-skill/issues/37) | repo |
 | A-0018 | 2026-10-10 | PB | Listing PR to muellerberndt/awesome-ai-security for llm-agent-security-principles | [muellerberndt/awesome-ai-security#41](https://github.com/muellerberndt/awesome-ai-security/pull/41) | repo |
 | A-0019 | 2026-10-10 | PB | Listing PR to valentynkit/awesome-jev-typesafe for jev-research-pipeline | [valentynkit/awesome-jev-typesafe#59](https://github.com/valentynkit/awesome-jev-typesafe/pull/59) | repo |
@@ -225,6 +225,7 @@ author's strategies carried it out
 | A-0024 | 2026-10-12 | AS | Deposit of authorship-strategy v1.2.0 | [Zenodo](https://doi.org/10.5281/zenodo.23305315) | DOI |
 | A-0025 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
 | A-0026 | 2026-10-12 | AS | Save Code Now request for the repository | [Software Heritage](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/shimo4228/authorship-strategy) | repo |
+| A-0027 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized after ADR-0026 | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
 
 ## Annotations (2026-10-12)
 

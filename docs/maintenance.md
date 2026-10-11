@@ -41,7 +41,9 @@
 - 機微（連絡先、第三者の返信の状況、アカウントの詳細、個人的な制約）は `.notes/` に置き、エントリからリンクする。
   リンク先のファイル名にも機微を書かない。
 - 行為を実施したら、1 つの commit で、エントリがあれば state と Status 節を更新し、log に行を足す。
-  無人の task が書いた行は専用の branch に届くので、diff を読み、検査を通してから取り込む。
+  無人の task（`listing-pr-daily`）が書いた行は branch `act-log`（worktree `.claude/worktrees/act-log`）に届く。
+  `git -C <repo> diff main...act-log` を読み、検査を通してから `git -C <repo> merge --ff-only act-log` で取り込む
+  （task は毎回 origin/main に rebase するので fast-forward になる）。
   作業の queue（PB の listing queue など）は計画とログの ID だけを持ち、URL や日付を二重に持たない。
 - `rfcs/` か log を変えたら、push の前に `scripts/verify-public-detail.sh --llm` を回す
   （パターン検査と Claude Haiku 5.5 の読み）。語の一覧は `.notes/public-guard-terms.txt`。
