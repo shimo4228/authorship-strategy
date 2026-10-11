@@ -44,3 +44,4 @@ README には書かない（複製は drift する）。
 | [0029](0029-no-prov-o-export.md) | PROV-O の provenance export を採らない |
 | [0030](0030-no-term-only-doi.md) | 造語単独の DOI を取らない |
 | [0031](0031-no-bulk-jsonld-embed.md) | served page を持たない repo へ JSON-LD を一括で埋め込まない |
+| [0032](0032-switch-listing-task-to-shared-act-log.md) | listing-pr-daily の書き先を共有の行為ログへ切り替える |

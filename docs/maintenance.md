@@ -32,19 +32,26 @@
   開いているものは `python3 ~/.claude/scripts/claims.py ready`（`--state blocked` / `--state draft`）で引く。
   起票は skill `rfc-writer`、状態語は skill `task-stocktake` に従う。再提案しない判断は終端エントリか ADR にある。
   実施状況の確認や重複確認にはこの store を使う。
-- 実施済みの介入: [implementation log](empirical/implementation-log.md)。
-  日付付き介入だけを英語で記録し、効果を主張しない。host や私的な運用情報は ADR-0012 の水準に抽象化する。
+- 行為: [implementation log](empirical/implementation-log.md) の「Acts」節。著者のすべての戦略（AS / PB）の行為を
+  1 行為 1 行、英語で、ID・日付・By（実施した戦略。効果の帰属には使わない）・行為・場所・記録への経路で記録する。
+  効果は主張しない。公開の場で行った行為は場所と URL を名指す。非公開の経路（フォーム・申請・メール）の行為は
+  場所も URL も書かず、行為があったことだけを書く。理由はログに書かない（機微でない理由は rfc の本文へ）。
+  扱う範囲は第三者の面での行為と記録への介入で、repo 内の変更（git と CHANGELOG）と記事の公開（各 platform）は扱わない。
+  共通の公開の境界は harness の rule `public-records.md`。
 - 機微（連絡先、第三者の返信の状況、アカウントの詳細、個人的な制約）は `.notes/` に置き、エントリからリンクする。
   リンク先のファイル名にも機微を書かない。
-- 介入を実施したら、1 つの commit でエントリの state と Status 節を更新し、log に日付行を足す。
+- 行為を実施したら、1 つの commit で、エントリがあれば state と Status 節を更新し、log に行を足す。
+  無人の task が書いた行は専用の branch に届くので、diff を読み、検査を通してから取り込む。
+  作業の queue（PB の listing queue など）は計画とログの ID だけを持ち、URL や日付を二重に持たない。
 - `rfcs/` か log を変えたら、push の前に `scripts/verify-public-detail.sh --llm` を回す
   （パターン検査と Claude Haiku 5.5 の読み）。語の一覧は `.notes/public-guard-terms.txt`。
 - 2026-10-12 までの履歴は `.notes/archive/diffusion-ledger-2026-06-to-10.md`（非公開）。
-  personal-branding 戦略の行為で記録へ至るものは、その戦略自身の行為ログ（経路の列）が正本で、ここには写さない。
+  personal-branding 戦略の行為も、2026-10-12 から上の log に By = PB で書く（PB 側に別の行為ログは置かない）。
 - 会話で生まれた案や問いの保存先は、記録の依頼に合わせて決める。
 
 役割分担の根拠は [ADR-0025](adr/0025-planning-and-task-state-in-a-public-rfc-store.md)
-（[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) を部分的に supersede）。
+（[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) を部分的に supersede）と
+[ADR-0026](adr/0026-one-public-act-log-across-strategies.md)（行為ログの共有と書き方）。
 
 ## ADR・概念・graph を編集するとき
 

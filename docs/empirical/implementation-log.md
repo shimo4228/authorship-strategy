@@ -1,9 +1,11 @@
 # Implementation Log — Diffusion-Channel Interventions
 
-> This file is part of the empirical layer. It records *which* of the
-> framework's tactics were deployed on the author's own ecosystem and
-> *when* — not whether they worked. All dates are interventions, not
-> outcomes.
+> This file is part of the empirical layer. It records *which* acts the
+> author's strategies carried out — the framework's tactics on the
+> author's own ecosystem, and from 2026-10-12 the acts of every strategy
+> the author runs — and *when*, not whether they worked. All dates are
+> acts, not outcomes. From 2026-10-12 this is the one act log shared by
+> the author's strategies ([ADR-0026](../adr/0026-one-public-act-log-across-strategies.md)).
 
 ## Why this log exists
 
@@ -83,8 +85,9 @@ for a future pre-versus-post contrast.
 | Listings in community-curated directories, link-index entries only, four-condition host audit | 2026-06 | ADR-0012 |
 | One listing withdrawn the same day after the host audit | 2026-06 | ADR-0012 (Lineage) |
 
-The specific hosts, and the reasoning behind the withdrawal, are held at
-the abstraction level ADR-0012 sets; this log does not re-expose them.
+The specific hosts were held at the abstraction level ADR-0012 sets until
+2026-10-12; they are named in the *Annotations* below (ADR-0026). The
+reason for the withdrawal stays out of this log.
 
 ### Measurement (ADR-0011)
 
@@ -169,6 +172,66 @@ is additive, not a new canonical location.
 |---|---|---|
 | The doctrine repository and a published postmortem of a withdrawn community-knowledge-base tactic shared through an AI-attribution initiative's call for practitioner input | 2026-09-05 | Repository; published postmortem; ADR-0021 |
 
+## Acts (from 2026-10-12)
+
+From 2026-10-12 every act is one row, in date order, whichever of the
+author's strategies carried it out
+([ADR-0026](../adr/0026-one-public-act-log-across-strategies.md)).
+
+- **Covered:** acts on third-party surfaces (listing pull requests,
+  posts, comments, profile edits, submissions, applications) and
+  interventions on the dated record (deposits, identifiers, index
+  admission, machine-facing surfaces).
+- **Not covered:** changes inside a repository (its git history and
+  `CHANGELOG.md` hold them) and the publication of articles (the
+  publishing platform holds it).
+- **Columns:** *ID* is a stable key that work queues refer to. *By* names
+  the strategy that carried the act out — **AS**, this framework; **PB**,
+  the author's personal-branding strategy — and does not attribute
+  effects. *Where* names the place and its URL for an act in a public
+  place; an act through a private route (a form, an application,
+  e-mail) records only that it happened. *Route to the record* is DOI,
+  repo, or none.
+- No reasons, counterpart reactions or contacts are written here.
+
+| ID | Date | By | Act | Where | Route to the record |
+|---|---|---|---|---|---|
+| A-0001 | 2026-10-12 | AS | Deposit of authorship-strategy v1.2.0 | [Zenodo](https://doi.org/10.5281/zenodo.23305315) | DOI |
+| A-0002 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
+| A-0003 | 2026-10-12 | AS | Save Code Now request for the repository | [Software Heritage](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/shimo4228/authorship-strategy) | repo |
+
+## Annotations (2026-10-12)
+
+Rows written before 2026-10-12 abstracted the places where acts
+happened. They stay as written; this table adds the names
+([ADR-0026](../adr/0026-one-public-act-log-across-strategies.md),
+Decision 6). Every row above was carried out by **AS**. Acts that went
+through a private route stay unnamed.
+
+| Section | Row (as written) | Named |
+|---|---|---|
+| Identifier federation | Cross-platform dataset mirroring | GitHub, Zenodo, [Hugging Face Datasets](https://huggingface.co/Shimo4228) |
+| Identifier federation | Essay corpus brought under identifier governance | [zenn-content](https://github.com/shimo4228/zenn-content) |
+| Identifier federation | Rendered-HTML archival via an on-demand public web archive | [Wayback Machine](https://web.archive.org/) |
+| AI-facing ingest | A sibling research line's served viewer page | [Attention, Not Self](https://github.com/shimo4228/attention-not-self) viewer |
+| Citation graph and scholarly surface | Preprint cross-posting to a scholarly preprint server | [SSRN](https://www.ssrn.com/) |
+| Citation graph and scholarly surface | Author-profile disambiguation request | private route; not named |
+| Citation graph and scholarly surface | Inclusion in an author-curated archive community | [Zenodo community shimo4228-research-program](https://zenodo.org/communities/shimo4228-research-program) |
+| Citation graph and scholarly surface | `sameAs` federation to external profile surfaces | Google Scholar, Hugging Face, LinkedIn, DEV, Substack, Zenn |
+| External collections | Listings in community-curated directories | [awesome-japanese-nlp-resources](https://github.com/taishi-i/awesome-japanese-nlp-resources/pull/24), [apd-core](https://github.com/awesomedata/apd-core/pull/434), [awesome-generative-engine-optimization](https://github.com/amplifying-ai/awesome-generative-engine-optimization/pull/50), [Awesome-Agent-Memory](https://github.com/TeleAI-UAGI/Awesome-Agent-Memory/pull/41), [AwesomeResponsibleAI](https://github.com/AthenaCore/AwesomeResponsibleAI/pull/44), [awesome-claude-skills (travisvn)](https://github.com/travisvn/awesome-claude-skills/pull/849), [awesome-agent-skills (heilcheng)](https://github.com/heilcheng/awesome-agent-skills/pull/282) |
+| External collections | One listing withdrawn the same day | [awesome-claude-skills (ComposioHQ)](https://github.com/ComposioHQ/awesome-claude-skills/pull/1065) |
+| Human-reader back-traceability | Author-profile surfaces on developer-publishing and newsletter platforms | DEV, Substack, Zenn |
+| Human-reader back-traceability | Essay-corpus repository de-islanded; its source-hosting metadata | [zenn-content](https://github.com/shimo4228/zenn-content) on GitHub |
+| Search-index surface | `sameAs` extended to the author's video channel | YouTube |
+| Search-index surface | Site ownership verified and sitemap submitted on a major search console | private route; not named |
+| Search-index surface | Cross-engine URL-notification protocol | IndexNow |
+| Search-index surface | Cross-language canonical correction on the developer-publishing platform | DEV |
+| Search-index surface | Source-hosting metadata aligned across eight repositories | GitHub |
+| Third-party AI-derived repository surfaces | Synthetic wiki and documentation hub | [DeepWiki](https://deepwiki.com/shimo4228/authorship-strategy) (index build requested through a private route), GitMCP |
+| AI-native preprint platforms | The broader AI-scientist-community venue | [aiXiv](https://aixiv.science/abs/aixiv.260702.000005) |
+| AI-native preprint platforms | The university-affiliated venue | submission and profile through a private route; not named |
+| Practitioner case sharing | An AI-attribution initiative's call for practitioner input | private route; not named |
+
 ## What the deployment order shows
 
 The version-control dates carry a pattern worth recording, because the
@@ -195,54 +258,35 @@ one repository with no `.zenodo.json` and the last `CITATION.cff`
 the oldest repository. As with every entry here, this is an observation
 about deployment order, not a claim about effect.
 
-## Not yet done
+## Plans and declined tactics
 
-Recorded here so the log is a complete picture rather than a list of
-successes only.
-
-- **Prose ingest surfaces beyond English and Japanese.** A measurement
-  asymmetry is open: one of the probe protocol's frontier models is from a
-  language region whose prose ingest surface is not yet served. A
-  machine-readable-layer Simplified-Chinese anchor was deployed
-  2026-06-13 (see *AI-facing ingest* above) as the low-cost, measurable
-  slice; full prose localization (README, ADRs) remains deferred, not
-  rejected.
-- **Endorsed-preprint-server deposit.** Deferred until citation traces
-  appear through the scholarly surfaces already in place; the endorsement
-  path is approached conventionally rather than through paid or bulk
-  channels.
-- **A national research-community profile registry.** Application
-  pending; once active it would add a human-reader registry surface in a
-  language region the ecosystem already writes in, routed back to the hub
-  and ORCID.
-
-## Explicitly out of scope
-
-- **Self-citation in open encyclopedias** — declined as a
-  conflict-of-interest norm violation.
-- **Attention-driven social-platform posting** — declined, for the
-  doctrine layer, as targeting a non-primary audience and as
-  inconsistent with the metric-rejection decision (ADR-0007). Scope
-  note (2026-08): under the audience-layer split (ADR-0022), publishing
-  original essays to the essay layer's own contemporary human readers
-  is content production accounted in its own layer, not the
-  doctrine-promotion posting this exclusion declines.
+From 2026-10-12, plans, deferrals and declined tactics are kept in the
+public [`rfcs/`](../../rfcs/README.md) store, not in this log
+([ADR-0025](../adr/0025-planning-and-task-state-in-a-public-rfc-store.md),
+[ADR-0026](../adr/0026-one-public-act-log-across-strategies.md)). Of the
+two sections that stood here until then, the research-community profile
+registry continues as RFC-0004 and the declined self-citation in open
+encyclopedias as RFC-0025. The deferrals of full prose localization and of
+an endorsed-preprint deposit were not carried forward. The decline of
+attention-driven posting stays with ADR-0007 clause 2, which ADR-0024
+scopes to what this framework itself runs (acts aimed at the author as a
+person follow the personal-branding strategy). The earlier wording is in
+this file's history.
 
 ## How this log is maintained
 
-This log is a maintained projection, not a one-time snapshot. As a new
-diffusion intervention is deployed it is appended here with its date; the
-entries are curated to *dated interventions* and deliberately exclude the
-program's operational working detail (ranked next-step proposals,
-pending-request state, the host-level reasoning ADR-0012 abstracts away).
-Planning and task state live in the repository's public
-[`rfcs/`](../../rfcs/README.md) store, and sensitive working detail stays in
-private notes; this file is the effect-claim-free record of what was done.
-The separation keeps this record in its empirical-layer role — an
-intervention timeline, not a planning scratchpad — while still growing as
-the program acts. An intervention updates its `rfcs/` entry and adds its line
-here in the same commit. The decision is recorded in ADR-0025, which
-supersedes in part the two-tier ledger of ADR-0014.
+The rules for this log — scope, columns, naming, and what stays out —
+are in the repository's [maintenance reference](../maintenance.md)
+("実施を記録するとき") and in
+[ADR-0026](../adr/0026-one-public-act-log-across-strategies.md). An act
+updates its `rfcs/` entry, if it has one, and adds its row here in the
+same commit. Rows written by an unattended task arrive on a separate
+branch and are merged by a session after the public-detail check.
+Planning stays in `rfcs/`
+([ADR-0025](../adr/0025-planning-and-task-state-in-a-public-rfc-store.md));
+counterpart reactions, contacts and personal matters stay in private
+notes. The log keeps its empirical-layer role: a record of acts and their
+dates, not of their effects.
 
 ## A note on recursion
 
