@@ -3,3 +3,5 @@
 *.swp
 *.bak
 __pycache__/
+*.packed.html
+*.artifact.html

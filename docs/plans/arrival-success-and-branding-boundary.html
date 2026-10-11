@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<title>到達基準と棲み分け</title>
+<link rel="stylesheet" href="htmlplan.css">
+<script src="htmlplan.js" defer></script>
+<body>
+
+<header>
+  <h1>成功定義と personal-branding 境界の再編</h1>
+  <doc-changes new="2" changed="37"></doc-changes>
+  <details class="thread"><summary>Why · 5 発言</summary>
+    <doc-quote via="prompt" from="著者">Authorship-strategy-skillはさ、LLMに引用されたときに著者性が残るかとLLM時代の機械参照戦略の2種類が混在していて、前者をやたらと重視するから、戦略として変なものになってない？実はこれ分けないといけない？</doc-quote>
+    <doc-quote via="prompt" from="著者">Q1は数えないかな、DOIなどの出典がないと結局著者性が守れない。人の名前は帰属していなくてもいいけど、DOIやGithubに到達してくれないと意味がない。この時点でこのようなことを考えていたということを判断を守る必要があるからだ</doc-quote>
+    <doc-quote via="prompt" from="著者">LLMにとって著者名を知っているかということがそもそも問いとして成立していない気もするな。私のリポやZenn記事論文でもなんでも引っ張ってきたら、名前はついてるだろ？モデルの重みに消えたときに名前が残っているかを気にするならわかるが</doc-quote>
+    <doc-quote via="prompt" from="著者">Personal-brandingが機械向けへの施策を持たないはあらなた制約を生むから行き過ぎだ。実際にはグレーゾーンが存在するのだから。…何かをしてはいけない系の規約はLLMにとって過剰に働きすぎるので軽々しく設定しない方がいい</doc-quote>
+    <doc-quote via="prompt" from="著者">最近はLLMと人間を両立できるようにREADMEやZenn記事の書き方もDetailsに畳んだり工夫し始めているから状況が変わっている</doc-quote>
+  </details>
+  <p>調査 report: <a href="research/2026-10-11-arrival-success-and-branding-boundary.md">research/2026-10-11-arrival-success-and-branding-boundary.md</a>（内部調査、変更箇所の file:line 一覧）</p>
+</header>
+
+<main>
+<doc-plan>
+
+<!-- ═════ 1 ═════ -->
+<doc-claim>
+  <p>成功は「日付つき記録への到達」と読める。</p>
+  <doc-code diff file="docs/thesis.md" start="164" title="thesis.md Layer 2 · 書き換え案" wrap>
+<script type="text/plain">
+ ### Layer 2 — Attribution Diffusion (the strategy)
+
+ The strategy that defends authenticity under AI-mediated
+-diffusion conditions is *maximizing the breadth of LLM-mediated
+-channels that carry recognizable signatures of the author's
+-ideas, anchored to a permanent timestamp*. The two components
+-matter:
++diffusion conditions is *maximizing the uses of the author's
++ideas that reach the dated record* — the concept-DOI deposit or
++the repository whose history and archive timestamp it. A use
++reaches the record when an answer cites an owned identifier, an
++agent installs or reads the repository, or a recalled pointer
++(a coined term, the project name, the DOI) leads back to it.
++The author's name in an answer is observed, not required.
+ 
+-- **Breadth of LLM-mediated channels**: not GitHub stars, not direct browsers, but LLM training pipelines, LLM-mediated user queries, LLM-derived AI assistant suggestions, and cascade ingestion by future LLMs trained on current LLM outputs.
++- **Routes to the record**: retrieval answers, agents, training-time pointers, and people who follow a link — no reader is excluded.
+ - **Permanent timestamp**: DOI registration through a service (e.g., Zenodo) that issues a stable identifier on publication. The timestamp is the substrate of the priority claim that authenticity rests on.
+</script>
+    <doc-pin line="166" tone="info" title="名前を外し、到達を置く">「誰がいつこう考えたか」は記録の側が運ぶ。</doc-pin>
+  </doc-code>
+
+  <doc-claim>
+    <p>新しい ADR-0024 が決定を一本で記録する。</p>
+    <doc-code title="docs/adr/0024-success-as-arrival-at-the-dated-record.md · sketch" lang="markdown">
+<script type="text/plain">
+# ADR-0024: Success Is Arrival at the Dated Record
+
+## Status        accepted
+## Date          2026-10-xx
+## Context       名前中心の成功定義が測れない対象を追い、入場（1/27）を見落とした。
+                 成果物は人と LLM の両方へ書かれ、ジャンルで読者を振り分けられない。
+## Decision
+1. A use counts when it reaches the dated record (DOI / repository).
+2. Unattributed absorption with no route back is recorded as diffusion, not success.
+3. The author's name in an answer is observed; in weights it matters only as a pointer.
+4. Each repo states the question it owns: here, arrival at the record;
+   personal-branding, the author as a person known by people. The two feed
+   each other: its human acts create routes to the record; the record gives
+   those acts substance. One act can serve both; gray zones stay open.
+5. ADR-0022's genre routing is retired; its boundary clause moves to the
+   cross-repo principle "content is decided by thought; distribution may be optimized".
+## Alternatives  名前を成功に残す / 出典なし吸収も成功に数える / 注記だけで済ます
+## Consequences  ghost citation の扱い、ADR-0007 第 3 項、ADR-0017、OQ8・OQ11
+## Lineage       2026-10-11 の壁打ちと 4 体の議論、CITECHOICE、hub の索引 1/27
+</script>
+    </doc-code>
+    <doc-ask id="adr22">
+      <p>ADR-0022 をどう扱うか。</p>
+      <label><input type="radio" name="adr22" value="superseded" checked> Status を「superseded by ADR-0024」にする <small>層分割の全体が退役する。先例はないが曖昧さが残らない</small></label>
+      <label><input type="radio" name="adr22" value="partial"> accepted のまま節ごとに注記する <small>repo の先例どおり。読み手は注記を全部たどる必要がある</small></label>
+    </doc-ask>
+    <div data-if="adr22=partial"><doc-note tone="warn">Decision 1・2・6 に注記、Decision 5 は共通原理へ移った旨を注記する。carrier の語り（llms*、adr/README）は「一部退役」と書く。</doc-note></div>
+  </doc-claim>
+
+  <doc-claim>
+    <p>旧い成功定義に立つ ADR には日付つき注記が付く。</p>
+    <doc-code src="docs/adr/0007-human-attention-signals-not-a-metric.md" lines="106-110" hl="106">
+      <doc-pin line="106" tone="warn" title="第 3 項を注記で上書き">成功の operative measure を「記録への到達」に差し替える。</doc-pin>
+    </doc-code>
+    <doc-claim at="docs/adr/0008-rag-era-attribution-diffusion.md:115">
+      <p><b>0008:115</b> · retrieval-only 却下理由の失効を注記</p>
+      <doc-code src="docs/adr/0008-rag-era-attribution-diffusion.md" lines="115-119" hl="117-119">
+        <doc-pin line="118" tone="info" title="理由の失効だけを注記">retrieval 経由の到達は成功になる。新しい必須条件は足さない。parametric への投資は別の判断として残す。</doc-pin>
+      </doc-code>
+    </doc-claim>
+  </doc-claim>
+
+  <doc-claim>
+    <p>名前なしで記録へ届いた引用は失敗に数えない。</p>
+    <doc-code src="docs/glossary.md" lines="366-372" hl="368-370">
+      <doc-pin line="368" tone="warn" title="定義語が「failure mode」">ADR-0008・0011・0017・OQ8・README が同じ前提に立つ。</doc-pin>
+    </doc-code>
+    <doc-ask id="ghost">
+      <p>名前なしで DOI や repo を引いた回答をどう扱うか。</p>
+      <label><input type="radio" name="ghost" value="success" checked> 到達として成功側に入れる <small>ADR-0017 の失敗モードは「記録への経路なし」に置き換える</small></label>
+      <label><input type="radio" name="ghost" value="observe"> 失敗にも成功にも数えず観測だけにする <small>ADR-0017 Decision 1 は注記で保留にする</small></label>
+      <label><input type="radio" name="ghost" value="keep"> 失敗モードのまま残す <small>D1 と食い違う。claim 1.3 と 2.1 は消える</small></label>
+    </doc-ask>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 2 ═════ -->
+<doc-claim>
+  <p>名前は観測と「記録への手がかり」に下がる。</p>
+  <doc-code diff file="docs/thesis.md" start="260" title="thesis.md 戦術 1 と 4 · 書き換え案" wrap>
+<script type="text/plain">
+-1. **LLM-mediated targeting** — clone counts, DOI citations, llms.txt fetches, and LLM regurgitation tests are the primary metrics; stars, PRs, and direct human views are secondary.
++1. **Arrival targeting** — arrivals at the dated record (owned identifiers cited in answers, repository installs and reads, referrers, DOI resolutions) are the primary observations; regurgitation tests are observed as pointers; stars and PRs are secondary.
+-4. **Distinctive terminology** — … coined terminology survives as a token-level signal carrying back-reference to the author.
++4. **Distinctive terminology** — … coined terminology survives as a token-level pointer back to the dated record.
+</script>
+  </doc-code>
+
+  <doc-claim>
+    <p>ADR-0017 の失敗モードは「記録への経路なし」になる。</p>
+    <doc-code src="docs/adr/0017-failure-mode-diagnostics.md" lines="106-112" hl="106-108">
+      <doc-pin line="106" tone="warn" title="Reach without recognition">名前の不在でなく、記録へ戻れないことを失敗とする。</doc-pin>
+    </doc-code>
+    <div data-if="ghost=observe"><doc-note tone="info">決定 2 で「観測」を選んだ場合、ここは注記で保留にし、失敗モードの置き換えはしない。</doc-note></div>
+  </doc-claim>
+
+  <doc-claim>
+    <p>事前登録と ADR-0011 の計器は変えない。</p>
+    <doc-code src="docs/empirical/probe-preregistration-2026-09.md" lines="108-117" hl="114-116">
+      <doc-pin line="114" tone="ok" title="凍結のまま">author_named は「順序の観測」として読まれ、D1 と矛盾しない。</doc-pin>
+    </doc-code>
+  </doc-claim>
+
+  <doc-claim>
+    <p>定義語と依存 ADR を英日とも新しい定義に揃える。</p>
+    <doc-tree caption="定義語と OQ の書き換え箇所。">
+<script type="text/plain">
+docs/
+  ~ thesis.md         # :19-38 保護対象（identity → 判断の記録）
+  ~ glossary.md       # :51 :165 :286 :302 :366 :387
+  ~ glossary.ja.md    # :131 :194 :233 :248 :301
+  ~ manifesto.md      # OQ8 :243 / OQ9 :306 / OQ10 :378
+  ~ adr/0015 0019 0023  # Status の ADR-0022 依存に注記（英日）
+</script>
+    </doc-tree>
+  </doc-claim>
+
+  <doc-claim>
+    <p>到達の計測は代理観測とし、利用の証拠と分ける。</p>
+    <doc-code title="ADR-0024 Decision 6 · sketch" lang="markdown">
+<script type="text/plain">
+6. Arrival is judged in two tiers.
+   - Use with arrival (evidence): an answer that cites the record for the idea,
+     a derivative that links the record, an install that runs the component.
+   - Arrival proxy (observation): clones, views, referrers, DOI resolutions,
+     crawler fetches. Proxies are recorded with their tier; they are never
+     reported as success on their own.
+</script>
+    </doc-code>
+    <doc-note tone="warn"><strong>Astra の最強の反論</strong> 読み取り・install・DOI 解決だけでは利用を確かめられない。巡回や試し読みでも数が増える。</doc-note>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 3 ═════ -->
+<doc-claim>
+  <p>二つの戦略は互いの経路と中身を作り合う。</p>
+  <doc-code diff file="docs/thesis.md" start="174" title="thesis.md 非 primary audience の段落 · 書き換え案" wrap>
+<script type="text/plain">
+-The non-primary audience under this strategy is direct human
+-browsers of the doctrine repositories (the GitHub stars/PR/visit
+-population) — a demotion
+-[ADR-0022](adr/0022-audience-layer-split.md) bounds explicitly to
+-those repositories. Drift in how this audience perceives the
+-author's brand is *not the strategy's defense target*. The
+-strategy optimizes for LLM-mediated reach and accepts whatever
+-direct-browser brand drift follows. Contemporary human readers
+-are not demoted with them: the essay genre forms a second
+-audience layer whose primary audience is contemporary human
+-readers, with its own day-to-week time constant and its own
+-instruments, accounted separately from this layer (ADR-0022).
++The strategy does not choose its reader: a person who follows an
++essay link and an agent that installs a repository both arrive at
++the record. The author as a person — whether people know and
++relate to the author — is the question of a sibling strategy,
++personal-branding, and the two are built to feed each other: its
++essays, profiles and announcements create the routes and links by
++which people and search indexes reach the record, and the dated
++record gives those acts substance to point to. One act can serve
++both; each strategy records the effect it motivates (ADR-0024).
+</script>
+    <doc-pin line="174" tone="info" title="境界でなく循環として書く">ADR-0022 の essay 層の語りを外し、PB との相互作用を置く。</doc-pin>
+  </doc-code>
+
+  <doc-claim>
+    <p>PB の発信が、AS の入場の詰まりを解く経路になる。</p>
+    <doc-flow caption="人の経路が記録への到達を運び、記録が発信に中身を返す。">
+<script type="text/plain">
+pb   = personal-branding / 記事・プロフィール・告知
+hum  = 人の読者 [green]
+idx  = 検索索引と AI 回答 [green]
+rec  = 日付つき記録 / DOI・repo
+as   = authorship-strategy / 到達の計器
+| pb  | hum |
+| idx | rec |
+| .   | as  |
+pb -> hum : 読まれる
+pb -> idx : follow される link
+hum -> rec : たどる
+idx -> rec : 引く
+rec -> pb : 指し示す中身
+rec -> as : referrer
+</script>
+    </doc-flow>
+    <doc-note tone="info">follow される被リンクは今 Dev.to と Substack の本文にしかなく、hub は Google に 1/27 しか知られていない（2026-10-01 監査）。PB のふつうの記事に記録への link があれば足りる。キャンペーンではないので ADR-0007 第 2 項も PB §5-10 もそのまま。</doc-note>
+  </doc-claim>
+
+  <doc-claim>
+    <p>PB 側の書き換えは PB のセッションが検討する。</p>
+    <doc-draft id="pbprompt" label="personal-branding セッションへ渡す検討依頼（下書き）">
+<script type="text/plain">
+authorship-strategy（AS）側で成功の定義と棲み分けを見直しています。personal-branding（PB）側の書き方は PB で決めてください。読むだけで始め、変更案を出すところまでで止めてください。
+
+AS 側で決まったこと（2026-10-11、AS の ADR-0024 として記録予定）:
+- AS の成功 = 考えの利用が日付つきの記録（Zenodo DOI か GitHub repo）に到達すること。名前は要らない。読み手は人でも機械でもよい。
+- AS が持つ問い = 利用が記録へ到達するか。人としての著者が知られ関係を持つかは、AS は持たない（PB の問いとして参照する）。
+- 両戦略は互いを強めるように書く: PB の記事・プロフィール・告知は、人と検索索引が記録へ着く経路と link を作る。AS の日付つき記録は、PB の発信が指し示す中身になる。
+- 一つの行為が両方に効くことがある。動機の側が効果を記録し、両方に効けば両方の台帳に書く。新しい禁止は足さない。
+- AS の ADR-0022（ジャンルで読み手を振り分ける doctrine 層 / essay 層）は退役する。境界条項は共通原理（内容は思考が決め、配信は内容を変えずに最適化してよい。PB strategy §10:156）へ寄せる。
+
+PB で検討してほしいこと:
+1. strategy §3 の「あちら: idea → LLM-mediated channels。本 repo: 人間 → 人間 audience」を、PB 自身が持つ問いと、AS とのシナジーで書くとどうなるか。
+2. §10 の doctrine 行（読者「LLM-mediated readers」、操舵してよいもの「なし」）を、共通原理と揃えて書くか。
+3. PB の行為が記録への経路になる点（記事やプロフィールから DOI・repo への link）を、PB の戦術や計器にどう位置づけるか。
+4. ADR-0001:34（Alternatives 2 の却下理由「audience が LLM に固定済み」）、ADR-0005:94–114（ADR-0022 の doctrine 層 default に依存）、CLAUDE.md:16、README.md:17 / README.ja.md:35 の扱い。
+5. PB が機械向けの行為を持つ場合の書き方。禁止は置かない方針（PB ADR-0006）と整合させる。
+参照: ~/MyAI_Lab/authorship-strategy/docs/plans/research/2026-10-11-arrival-success-and-branding-boundary.md の §3。
+</script>
+    </doc-draft>
+    <doc-ask id="handoff">
+      <p>PB 側への依頼をどう渡すか。</p>
+      <label><input type="radio" name="handoff" value="paste" checked> あなたが PB のセッションを開いて貼る <small>AS の ADR-0024 を commit した後に渡す</small></label>
+      <label><input type="radio" name="handoff" value="spawn"> このセッションが新しい PB セッションを起こして送る <small>spawn-session を使う。送る前に確認する</small></label>
+      <label><input type="radio" name="handoff" value="later"> 今回は渡さず、AS 側だけ進める <small>PB の §3 は当面 AS の旧い定義を指したまま</small></label>
+    </doc-ask>
+  </doc-claim>
+
+  <doc-claim>
+    <p>境界条項は共通原理へ移り、検査の扱いを決め直す。</p>
+    <doc-code src="scripts/verify-layer-boundary.sh" lines="3-12" hl="5-6">
+      <doc-pin line="5" tone="warn" title="根拠が ADR-0022">ヘッダと失敗メッセージの参照先を ADR-0024 の共通原理に替える。</doc-pin>
+    </doc-code>
+    <doc-ask id="gate">
+      <p>verify-layer-boundary.sh をどうするか。</p>
+      <label><input type="radio" name="gate" value="retire" checked> 退役させる <small>「記載」を落とす検査は共通原理より強い禁止。参照箇所も消す</small></label>
+      <label><input type="radio" name="gate" value="warn"> 警告だけにして残す <small>exit 0 で痕跡を知らせる。根拠は ADR-0024</small></label>
+      <label><input type="radio" name="gate" value="keep"> 今の検査のまま根拠だけ替える <small>旧い禁止が機械ゲートとして残る</small></label>
+    </doc-ask>
+    <div data-if="gate=retire"><doc-note tone="info">消す参照: maintenance.md:58–61、CODEMAPS:37・:103。OQ11 は問いとして残る（claim 3.4）。</doc-note></div>
+  </doc-claim>
+
+  <doc-claim>
+    <p>OQ11 は repo 間の汚染の問いとして残る。</p>
+    <doc-code diff file="docs/manifesto.md" start="416" title="manifesto OQ11 見出し · 書き換え案" wrap>
+<script type="text/plain">
+-## Open question 11: Can a two-layer motivation portfolio resist cross-layer contamination?
++## Open question 11: Can two strategies that feed each other keep reception numbers from deciding content?
+</script>
+      <doc-pin line="416" tone="info" title="OQ 数は 11 のまま">件数 carrier を動かさない。</doc-pin>
+    </doc-code>
+  </doc-claim>
+
+  <doc-claim>
+    <p>ADR-0007 の第 1・2・4 項と注記を共通原理に揃える。</p>
+    <doc-code src="docs/adr/0007-human-attention-signals-not-a-metric.md" lines="99-105" hl="103-105">
+      <doc-pin line="103" tone="warn" title="PB より厳しいまま残る">PB ADR-0006 が外した「同じ公開物の繰り返し告知」が残っている。人の発信の規則は PB を正本として参照にする。第 1 項（指標にしない）と第 4 項（成長レバーにしない）も、配信の最適化を許す共通原理に合わせて注記する。</doc-pin>
+    </doc-code>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 4 ═════ -->
+<doc-claim>
+  <p>件数と派生物は 24 本で揃い、ゲートが通る。</p>
+  <doc-mock frame="terminal" title="authorship-strategy" w="470"><template><span class="dim">$</span> bash scripts/verify-counts.sh
+<span class="r">DRIFT</span>  ADR  expected twenty-three/23 but found
+       "six ADRs" in docs/plans/1-pure-badger.md
+verify-counts: <span class="r">FAIL</span>
+<span class="dim">$</span> bash scripts/verify-layer-boundary.sh
+verify-layer-boundary: <span class="g">OK</span> — 58 doctrine carriers</template></doc-mock>
+
+  <doc-claim>
+    <p>既存の FAIL は docs/plans/ を除外して直す。</p>
+    <doc-code diff file="scripts/verify-counts.sh" start="46">
+<script type="text/plain">
+   git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld' \
+     | grep -vE '^CHANGELOG\.md$' \
+-    | grep -vE '^docs/adr/[0-9]')
++    | grep -vE '^docs/adr/[0-9]' \
++    | grep -vE '^docs/plans/')
+</script>
+      <doc-pin line="48" tone="info" title="plan は当時の件数を持つ記録">CHANGELOG と同じ扱い。依頼の diff とは別 commit にする。</doc-pin>
+    </doc-code>
+  </doc-claim>
+
+  <doc-claim>
+    <p>ADR 件数の carrier 約 30 か所を 23 から 24 にする。</p>
+    <doc-tree caption="guard が見えない 3 か所は目視で直す。">
+<script type="text/plain">
+~ README.md / README.ja.md   # :9 :35 :38 :51 :62(tactics, 不可視) :85 :91
+~ llms.txt / llms-full.txt   # 件数 + ADR 項目と語り + Layer 2 再掲
+~ graph.jsonld               # :40 :99 :899 + ADR-0024 node（extends 0007 0008 0017 0022）
+~ CITATION.cff               # :41 行折り返し（不可視）、:80 abstract
+~ .zenodo.json / codemeta.json
+~ docs/CODEMAPS/architecture.md  # :31 :49 :59 :72
+~ docs/adr/README.md / README.ja.md  # index 行 + 語り
+~ docs/adoption.md           # ADR 表（0023 で取りこぼした前例）
+~ docs/thesis.md :325 / thesis.ja.md :262
+~ CHANGELOG.md               # [Unreleased]
+</script>
+    </doc-tree>
+  </doc-claim>
+
+  <doc-claim>
+    <p>skill の参照資料も同じ定義を運ぶ。</p>
+    <doc-code src="references/strategy-reference.md" lines="36-41" hl="38-39">
+      <doc-pin line="38" tone="warn" title="ADR-0022 の層分割をそのまま書く">「到達」と「各 repo が持つ問い」に書き換える。</doc-pin>
+    </doc-code>
+    <doc-ask id="publish">
+      <p>どこまで外へ出すか。</p>
+      <label><input type="radio" name="publish" value="push" checked> AS を commit と push、~/.claude は local commit <small>PB は検討依頼まで。hub・HF・公開 skill repo は別途承認</small></label>
+      <label><input type="radio" name="publish" value="all"> hub の graph、HF mirror、harness-sync まで一度に <small>外部公開を含む。各操作の前に確認する</small></label>
+      <label><input type="radio" name="publish" value="local"> すべて local commit で止める <small>push はあなたが後で判断</small></label>
+    </doc-ask>
+  </doc-claim>
+
+  <doc-claim>
+    <p>このセッションが ADR と散文を書き、別 agent が査読する。</p>
+    <doc-code title="手順 · sketch" lang="text">
+<script type="text/plain">
+commit A  fix(verify): docs/plans/ を件数検査から外す（既存 FAIL）
+commit B  docs(plan): 本計画と調査 report
+commit C  docs(adr): ADR-0024 一式 — ADR 英日、旧 ADR 注記、thesis、
+          glossary、manifesto、件数 carrier、llms*、graph、検査の扱い
+          → 全差分を adr-reviewer と別 agent が査読 → verify 2 本が通ってから確定
+commit D  ~/.claude: skill の strategy-reference.md（local）
+その後    commit C の hash を添えて PB へ検討依頼を渡す
+</script>
+    </doc-code>
+    <doc-ask id="executor">
+      <p>実行者の決定: 誰が書くか。</p>
+      <label><input type="radio" name="executor" value="self" checked> このセッション <small>ADR・設計文書の散文編集は judge-tier の例外 (a)</small></label>
+      <label><input type="radio" name="executor" value="build"> build-tier の新しいセッション <small>packet を書いて渡す。文脈は packet で補う</small></label>
+      <label><input type="radio" name="executor" value="codex"> Codex に委譲 <small>carrier 同期だけ渡す、などの分割も可</small></label>
+    </doc-ask>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ shared ═════ -->
+<doc-claim aux="shared">
+  <p>共通原理: 全 repo が同じ一文を引く。</p>
+  <doc-code title="personal-branding strategy §10:156（既存）" lang="markdown">
+<script type="text/plain">
+共通原理は zenn-content ADR-0001 Content Integrity: **内容は著者の思考が決める。配信は内容を変えずに最適化してよい。**
+</script>
+  </doc-code>
+</doc-claim>
+
+<!-- ═════ scope ═════ -->
+<doc-claim aux="scope">
+  <p>変えないもの。</p>
+  <ul>
+    <li>Layer 1（考えを販売圧力で変形させない）と ADR-0019 の内容変形の禁止。</li>
+    <li>事前登録 probe-preregistration-2026-09 と ADR-0011 の計器・lexicon。</li>
+    <li>DOI・Zenodo・SWHID の運用（ADR-0001・0013・0021）。名前や造語を記録に付けることもやめない。</li>
+    <li>新しい禁止は足さない。personal-branding の機械向けの行為も制限しない。</li>
+    <li>personal-branding の文書は、このセッションでは編集しない。書き方は PB のセッションが決める（claim 3.2）。</li>
+    <li>今日の探索の取り込み候補（CITECHOICE の注記、plugin 利用の基準値、referrer の計器）と wiki ingest は別の作業。</li>
+  </ul>
+</doc-claim>
+
+</doc-plan>
+</main>
+</body></html>
