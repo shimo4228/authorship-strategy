@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-12
+
+Changes what the framework counts as success and where the program keeps
+its plans. ADR-0024 fixes the success criterion on what the author must
+protect — the dated judgment that this was thought at this time: a use of
+the author's idea succeeds when it reaches the dated record (the
+concept-DOI deposit or the timestamped repository), with the author's name
+observed rather than required. ADR-0025 moves planning and task state from
+a private ledger to a public `rfcs/` store beside the implementation log,
+with sensitive detail kept private and checked before publication. The
+cycle also records the audience-layer split (ADR-0022, superseded by
+ADR-0024 within the same cycle), the empirical layer's role (ADR-0023,
+closing open question 7), a calibration annex to the two-channel probe,
+a revision of the dual-entry decision toward entity resolution, a
+pre-registered autumn-2026 contrast, and the separation of open
+exploration from maintenance procedure.
+
 ### Added
 
 - ADR-0024 (EN/JA), *Success Is a Use That Reaches the Dated Record*:
@@ -28,6 +45,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the intervention timeline, and sensitive detail stays private and
   linked. README, llms surfaces, graph, adoption table, ADR index and
   deposit metadata are aligned; the ADR count becomes twenty-five.
+- ADR-0022 (EN/JA), *Audience-Layer Split* (2026-08-05): the essay genre
+  accounted as its own layer with contemporary human readers as its
+  primary audience. Superseded by ADR-0024 on 2026-10-11; kept for the
+  records written under it.
+- ADR-0023 (EN/JA), *Empirical-Layer Role*: reference baseline as the
+  primary role, case-study narrative bounded, validation evidence only
+  for an artifact designed as an experiment. Closes manifesto open
+  question 7.
+- ADR-0011 calibration annex (Annex A): family-stratified readings, a
+  negative-control noise floor, override asymmetry and a
+  recognition-versus-recall declaration.
+- Manifesto open questions 10 (is a deposit under the author's own
+  account self-sovereign?) and 11 (opened by ADR-0022).
+- Empirical layer: a tactic-lifecycle table (first dated observations
+  for open question 3), a held-out adoption dry run (open question 5),
+  and the pre-registration of the autumn-2026 parametric transition
+  contrast, with its 2026-10-01 amendment (retrieval schedule ended, one
+  model family withdrawn).
+- `rfcs/`: the public task store (ADR-0025) — 21 open entries migrated
+  from the private ledger and task table, and 10 terminal entries for
+  rejection guards that no ADR records.
+- `docs/plans/`: approved plans, kept as dated records and linked from
+  the ADRs and entries they produced.
 - `scripts/verify-public-detail.sh`: checks `rfcs/` and the
   implementation log for contacts, home-directory paths, run IDs and a
   private term list; `--llm` adds a Claude Haiku 5.5 reading of the
@@ -40,16 +80,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ADR-0014's private ledger as source of truth, and its update order,
   are superseded by ADR-0025; ADR-0014, ADR-0023 and ADR-0024 gain
   dated notes (EN/JA).
-- `scripts/verify-counts.sh` excludes `rfcs/` (dated records, like
-  `docs/plans/`).
-
-### Removed
-
-- `scripts/verify-layer-boundary.sh`, the textual guard for ADR-0022's
-  boundary clause (ADR-0024 Decision 8).
-- `docs/CODEMAPS/` (author decision; graph.jsonld remains the
-  concept-level map).
-
+- ADR-0009 revised: its success criterion moves to entry into the
+  consideration set and entity resolution, and figures without a source
+  are removed; ADR-0006, 0010, 0019 and 0021 are aligned.
+- ADR-0014 amended (2026-09-07): open exploration is separated from
+  maintenance and evaluation; the compulsory review loop and its
+  ideation sequence are retired.
+- Dated notes on ADR-0007 clause 2, ADR-0020 status and ADR-0022's
+  practitioner-layer scope.
+- Manifesto: open question 10 gains a dated update on disclosure
+  vocabularies, and open question 6 a dated expiry check of its
+  substrate conditions.
+- README: a clearer first screen, install section and links to related
+  work.
 - `.zenodo.json` completes the ADR-0002 reciprocal-declaration
   discipline after a four-standard review (DataCite relation graph,
   w3id.org permanent URIs, PROV-O provenance export, RAiD project
@@ -81,6 +124,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   *regurgitation test* is recorded as an `alternateName` of the
   Retrieval-Suppressed Naming Probe. Glossary and ADR files are
   unchanged; the glossary remains the definitional source of truth.
+- `.zenodo.json` references three more works cited in
+  `docs/inspiration.md` (arXiv:2506.01732, 2604.25346, 2606.28756).
+- `scripts/verify-counts.sh` excludes `docs/plans/` and `rfcs/` (dated
+  records).
+
+### Removed
+
+- The GitMCP badge (its access counter had stopped, and the service
+  offered no semantic search).
+- `scripts/verify-layer-boundary.sh`, the textual guard for ADR-0022's
+  boundary clause, added on 2026-09-07 and retired by ADR-0024
+  Decision 8.
+- `docs/CODEMAPS/` (author decision; graph.jsonld remains the
+  concept-level map).
 
 ## [1.1.0] - 2026-07-16
 
