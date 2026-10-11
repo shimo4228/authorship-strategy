@@ -34,3 +34,13 @@ README には書かない（複製は drift する）。
 | [0019](0019-watch-hosted-mcp-doc-server.md) | WATCH: zero-config・第三者 host の MCP doc-server |
 | [0020](0020-watch-raid.md) | WATCH: RAiD（研究活動の識別子） |
 | [0021](0021-defer-w3id-alias.md) | DEFER: w3id.org の永続 URI |
+| [0022](0022-no-ghost-citation-disambiguation-essay.md) | ghost citation の曖昧性解消記事を書かない |
+| [0023](0023-no-agent-benchmarks-as-seeding-channel.md) | agent benchmark と leaderboard を seeding channel にしない |
+| [0024](0024-no-repo-wiki-alternatives.md) | DeepWiki の代替サービス群に onboard しない |
+| [0025](0025-no-wikipedia-self-citation.md) | Wikipedia に自分の成果物を引用させない |
+| [0026](0026-no-2026-07-scholarly-and-community-surfaces.md) | 2026-07-01 の外部リサーチで落とした surface 群 |
+| [0027](0027-hf-daily-papers-and-posts-unavailable.md) | HF Daily Papers と HF posts は経路がないので使わない |
+| [0028](0028-ai-native-venues-2026.md) | AI-native venue 4 件と、新しい AI-native venue の line |
+| [0029](0029-no-prov-o-export.md) | PROV-O の provenance export を採らない |
+| [0030](0030-no-term-only-doi.md) | 造語単独の DOI を取らない |
+| [0031](0031-no-bulk-jsonld-embed.md) | served page を持たない repo へ JSON-LD を一括で埋め込まない |
