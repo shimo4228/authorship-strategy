@@ -20,7 +20,7 @@ scheduled task `listing-pr-daily` の書き先を、PB の行為ログから共�
 
 ## Status
 
-accepted — PB 側の準備が済んだ（2026-10-12）。PB の listing queue に「ログ ID」の列ができ、scorecard の行為ログ節は Acts 節へのリンクと切り替えまでの受け皿の表になった。queue の done 23 行（2026-10-05〜10-11 の掲載）の結果 URL と実行日は、今のところその行為の唯一の記録なので、切り替えのときに Acts 節へ移す。
+accepted（2026-10-12）。PB の文書と queue は新しい形になった: PB の listing queue に「ログ ID」の列ができ、scorecard の行為ログ節は Acts 節へのリンクと切り替えまでの受け皿の表になった。queue の done 23 行（2026-10-05〜10-11 の掲載）の結果 URL と実行日は、今のところその行為の唯一の記録なので、切り替えのときに Acts 節へ移す。
 
 **2026-10-12 plan** — [docs/plans/shared-act-log-convention.html](../docs/plans/shared-act-log-convention.html)
 
