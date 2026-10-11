@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<title>共有の行為ログ</title>
+<link rel="stylesheet" href="htmlplan.css">
+<script src="htmlplan.js" defer></script>
+<body>
+
+<header>
+  <h1>行為ログの共有と公開記録の規約統一</h1>
+  <doc-changes new="6" changed="28"></doc-changes>
+  <details class="thread"><summary>Why · 5 発言</summary>
+    <doc-quote via="prompt" from="著者">ログを共有してどちらが実施したかわかるようにした方が良くない？というのも人間向けルートが機械にも効くし逆も然りだから、意図と結果が分離できないじゃん</doc-quote>
+    <doc-quote via="prompt" from="著者">微妙だな。結局正本ログと公開用みたいになっちゃう</doc-quote>
+    <doc-quote via="prompt" from="著者">別に掲載しても支障ないんじゃないの？だってすでに公開された行為じゃん</doc-quote>
+    <doc-quote via="prompt" from="著者">そうだね。この方向で書き換えて各プロジェクトも全部規約を統一しよう。プランして</doc-quote>
+    <doc-quote via="prompt" from="著者">プランだけど一度Codexに見てもらって</doc-quote>
+  </details>
+  <p>調査 report: <a href="research/2026-10-12-shared-act-log-convention.md">research/2026-10-12-shared-act-log-convention.md</a>（内部調査）。版 2 は gpt-6-astra のレビュー 9 件（high 6 / medium 3）を反映した。</p>
+</header>
+
+<main>
+<doc-plan>
+
+<!-- ═════ 1 ═════ -->
+<doc-claim>
+  <p>著者の行為は、公開の 1 本のログに行 ID と実施元つきで並ぶ。</p>
+  <doc-code title="docs/empirical/implementation-log.md · 新しい節の sketch" lang="markdown">
+<script type="text/plain">
+## Acts (from 2026-10-12)
+
+| ID | Date | By | Act | Where | Route to the record |
+|---|---|---|---|---|---|
+| A-0001 | 2026-10-13 | PB | Listing PR to awesome-claude-code | https://github.com/…/pull/123 | repo |
+| A-0002 | 2026-10-14 | AS | URL inspection requests through a search console (private route) | — | — |
+| A-0003 | 2026-10-15 | AS | Deposit of v1.2.0 | https://doi.org/10.5281/zenodo.23305315 | DOI |
+</script>
+    <doc-pin line="3" tone="info" title="ID は安定キー">queue と task の重複防止がこの ID を指す。</doc-pin>
+    <doc-pin line="5" tone="info" title="By は実施した担当だけ">効果の帰属には使わない。到達の判定は ADR-0024 が行う。</doc-pin>
+    <doc-pin line="6" tone="info" title="非公開の経路">行為があった事実だけ。場所も URL も書かない。</doc-pin>
+  </doc-code>
+
+  <doc-claim>
+    <p>ログが網羅する範囲と網羅しない範囲は、ログの冒頭に書かれる。</p>
+    <doc-code title="範囲 · sketch" lang="text">
+<script type="text/plain">
+書く:       第三者の面での行為（掲載 PR・投稿・コメント・プロフィール編集・提出・申請）
+            記録への介入（deposit・識別子・索引への入場・機械向けの面の設置）
+網羅しない: repo 内の変更（git 履歴と CHANGELOG）
+            記事の公開（各 platform が正本。予定は zenn-content の schedule.json）
+書かない:   理由・相手の反応・連絡先・個人的な事情
+            計画・見送り・保留（rfcs/）
+</script>
+    </doc-code>
+  </doc-claim>
+
+  <doc-claim>
+    <p>既存の行は残り、名指しは日付つきの補記として足される。</p>
+    <doc-code src="docs/empirical/implementation-log.md" lines="79-87" hl="83-87">
+      <doc-pin line="86" tone="warn" title="伏せる規則が逆転する">補記で名指す。元の文と撤回・失効の記録は消さない（ADR-0021 の歴史保存）。</doc-pin>
+    </doc-code>
+    <doc-ask id="past">
+      <p>既存の 45 行をどう扱うか。</p>
+      <label><input type="radio" name="past" value="annotate" checked> 行は保ち、名指しを補記する <small>補記の日付と規約変更を明記。分からない実施元や経路は「不明」</small></label>
+      <label><input type="radio" name="past" value="keep"> 過去の行はそのまま <small>新しい節からだけ新規約。過去の行は一般語のまま</small></label>
+    </doc-ask>
+    <doc-note tone="info"><strong>移す節</strong> 「Not yet done」と「Explicitly out of scope」は計画と見送りなので、該当する rfc へのリンクに置き換える（例: RFC-0004、RFC-0025）。</doc-note>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 2 ═════ -->
+<doc-claim>
+  <p>同じ実施事実は、ログの 1 か所にだけ書かれる。</p>
+  <doc-code title="役割の分担 · sketch" lang="text">
+<script type="text/plain">
+共有ログ（AS、公開）          実施事実: ID・日付・実施元・行為・場所と URL・記録への経路
+PB の listing queue（非公開） 予定・操舵・非公開の事情。done の行は結果 URL と実行日を持たず、
+                              ログの ID だけを持つ
+PB の scorecard               行為ログ節を外し、共有ログへのリンク 1 行
+rfcs/（公開）                 計画と状態、機微でない理由
+.notes/（非公開）             相手の反応・連絡先・個人的な事情
+</script>
+  </doc-code>
+  <doc-note tone="info"><strong>二重でないもの</strong> rfc の状態や .notes/ の詳細は、同じ実施事実を持たないので二層ではない。問題は同じ事実を 2 か所で別々に更新することだけ。</doc-note>
+</doc-claim>
+
+<!-- ═════ 3 ═════ -->
+<doc-claim>
+  <p>無人の task は、ログを先に書き、その ID で queue を閉じる。</p>
+  <doc-machine name="act" caption="ログの行が先にでき、queue の done は ID を持つ。">
+<script type="text/plain">
+machine act initial queued
+state queued       # queue に予定がある。
+state acted        # PR などを実行した。
+state logged       # ログに ID つきの行を書いた。
+state done   final # queue の行を done にし、ID を書いた。
+state orphan       # 実行したが行がない、または行があるが done でない。
+
+| queued | acted  | logged | done |
+| .      | orphan | .      | .    |
+
+queued -run->   acted  : 実行
+acted  -log->   logged : 行 + ID
+logged -close-> done   : ID で done
+acted  -fail->  orphan : 途中で停止
+orphan -fix->   logged : 照合して補う
+</script>
+  </doc-machine>
+
+  <doc-claim>
+    <p>task は専用の worktree で書き、重複と欠落を照合で見つける。</p>
+    <doc-code title="listing-pr-daily の手順 · sketch" lang="text">
+<script type="text/plain">
+0. lock を取る（同時に 2 つ走らない）
+1. 専用の worktree（AS の act-log branch）を最新にする
+2. 実行する PR / issue ごとに: 同じ URL の行がログにあれば書かない（再実行の重複防止）
+3. ログに行を足し（ID を採番）、そのあと queue の行を done にして ID を書く
+4. 照合: done なのに ID の無い行、ID がログに無い行を一覧にして報告する
+5. commit は worktree の branch にだけ。main への取り込みと push は AS の session が diff を見て行う
+切り替え: AS 側（ログの節と ID）と PB 側（queue の列）の準備が済んでから task を書き換える
+</script>
+    </doc-code>
+    <doc-ask id="push">
+      <p>task の行を誰が公開するか。</p>
+      <label><input type="radio" name="push" value="human" checked> AS の session が diff を見て取り込み、push する <small>公開の前に検査と確認が入る。行が数日たまることがある</small></label>
+      <label><input type="radio" name="push" value="task"> task が検査を通して push まで行う <small>即時に公開。無人の公開書き込みになる</small></label>
+    </doc-ask>
+  </doc-claim>
+
+  <doc-claim>
+    <p>最初の公開の前に、著者が集約した一覧を見て受け入れる。</p>
+    <doc-code title="判断の材料 · sketch" lang="text">
+<script type="text/plain">
+見せるもの:   PB の行（By = PB）だけを並べた一覧（直近の掲載 PR・投稿・コメント）
+問い:         この一覧が「1 つの宣伝活動」として読まれてもよいか
+根拠:         ADR-0021 は個々の行為より累積のパターンを問題にした（Wikidata の件）
+証拠の強さ:   ログの公開が制裁を招いた証拠はない（仮説）
+維持するもの: listing-pr-daily の累積の足跡の確認と停止条件
+書き方:       By は略号と 1 行の定義だけ。宣伝を示す語（campaign・promotion）は使わない
+</script>
+    </doc-code>
+    <doc-ask id="aggregate">
+      <p>PB の行を公開のログに載せるか。</p>
+      <label><input type="radio" name="aggregate" value="review" checked> 一覧を見てから決める <small>実装は進め、最初の push の前に一覧を見せる</small></label>
+      <label><input type="radio" name="aggregate" value="accept"> 今、受け入れる <small>一覧の確認を省く</small></label>
+      <label><input type="radio" name="aggregate" value="as-only"> PB の行は載せない <small>共有ログは AS だけになり、claim 2 と 3 は PB 抜きになる</small></label>
+    </doc-ask>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 4 ═════ -->
+<doc-claim>
+  <p>規約は 3 層に分かれ、各層の正本は 1 つになる。</p>
+  <doc-code title="~/.claude/rules/common/public-records.md · sketch（共通の公開の境界だけ）" lang="markdown">
+<script type="text/plain">
+# Public Records
+
+公開 repo に残す記録（rfcs/、行為ログ、plan、report）の境界。
+- 公開の場で行った行為は、場所と URL を名指して書く
+- 非公開の経路（フォーム・申請・メール）の行為は、行為があった事実だけを書く
+- rfc には機微でない理由を書いてよい。行為ログには理由を書かない
+- 相手の反応・連絡先・個人的な事情・非公開 repo の名前とパスは公開記録に書かない（行き先は .notes/）
+- 公開前に public-detail の検査を回し、著者が diff を読む
+</script>
+  </doc-code>
+  <doc-note tone="info"><strong>ほかの 2 層</strong> AS と PB の範囲・列・保存先は AS の docs/maintenance.md（行為ログの節）。実行手順は listing-pr-daily と skill rfc-writer。rule はこの 2 つを名指さない。</doc-note>
+  <doc-note tone="warn"><strong>権限</strong> harness の rule と skill の編集は、auto mode の分類器が自己改変として止める場合がある。止まったら、その編集だけを著者に渡す。</doc-note>
+
+  <doc-claim>
+    <p>検査 script は repo の外から呼べ、検査できないときは失敗する。</p>
+    <doc-code title="~/.claude/scripts/verify-public-detail.sh · 呼び方の sketch" lang="bash">
+<script type="text/plain">
+verify-public-detail.sh --root <repo> --base origin/main \
+  --target 'rfcs/*.md' --target docs/empirical/implementation-log.md \
+  --terms <repo>/.notes/public-guard-terms.txt [--llm | --llm-all]
+# root・base・target・terms は必須の引数。cwd や script の位置から推測しない
+# claude が無い・一時ファイルが作れない・base が無い → 検査不能として exit 2
+# LLM の prompt はプライバシーの検査だけ。行為ログの書式（ID・By・範囲）は別の検査
+</script>
+    </doc-code>
+    <doc-note tone="info"><strong>済み</strong> .notes/ が無い repo で LLM の出力が消えて OK になる不具合は、この plan の前に直した（b891298）。</doc-note>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ 5 ═════ -->
+<doc-claim>
+  <p>判断は ADR-0026 に記録され、旧 ADR は注記でそこを指す。</p>
+  <doc-code title="docs/adr/0026-shared-act-log.md · sketch" lang="markdown">
+<script type="text/plain">
+# ADR-0026: One Public Act Log Shared Across the Author's Strategies
+## Decision
+1. Acts of every strategy go into one public log, with an ID and the acting strategy (By).
+2. Acts in public places name place and URL; acts through private routes record only the fact.
+3. Reasons stay out of the log; reactions, contacts and personal matters stay private.
+4. Work ledgers (queues) hold plans and the log ID, not a second record of the act.
+5. Past rows are kept; naming is added as dated annotations.
+## Alternatives  separate logs per strategy / private canonical + public projection /
+                 notes on ADR-0024 and 0025 only
+## Notes on     ADR-0024 Decision 5, ADR-0025 Decision 2, ADR-0023 (scope of the log)
+</script>
+  </doc-code>
+
+  <doc-claim>
+    <p>文書はこのセッション、script はレビューつきで別に、PB は PB の session が書く。</p>
+    <doc-code title="手順 · sketch" lang="text">
+<script type="text/plain">
+commit A  docs(plan): shared-act-log-convention 版 2
+commit B  docs(adr): ADR-0026 英日、ADR-0023/0024/0025 注記、件数 carrier 25→26
+commit C  AS: implementation-log（範囲・Acts 節・補記・移す節）、maintenance.md
+commit D  ~/.claude: rule public-records.md、rfc-writer の公開規約節
+commit E  ~/.claude: verify-public-detail.sh（引数化・検査不能の失敗）→ 別 agent がレビュー
+          AS の script は harness 版を呼ぶ wrapper に。canary で HIT / 検査不能を確かめる
+送る      PB の session: queue の列（ID）、scorecard と strategy の書き換え
+commit F  ~/.claude: listing-pr-daily（両側の準備の後）
+承認後    最初の push の前に集約の一覧（claim 3.2）、push、harness-sync
+</script>
+    </doc-code>
+    <doc-ask id="executor">
+      <p>実行者の決定: 誰が書くか。</p>
+      <label><input type="radio" name="executor" value="split" checked> 文書はこのセッション、script は build-tier <small>script の改修は build-tier が書き、別 agent がレビュー</small></label>
+      <label><input type="radio" name="executor" value="self"> このセッションが script も書く <small>速いが、文書編集の例外 (a) を超える。レビューは別 agent</small></label>
+      <label><input type="radio" name="executor" value="build"> 全部 build-tier <small>report と plan を packet にして渡す</small></label>
+    </doc-ask>
+  </doc-claim>
+</doc-claim>
+
+<!-- ═════ shared ═════ -->
+<doc-claim aux="shared">
+  <p>共通: 公開記録の 1 行を 5 つの問いで決める。</p>
+  <doc-code title="判定 · sketch" lang="text">
+<script type="text/plain">
+1 行為か（計画・見送りは rfcs/）
+2 公開の場か（そうなら場所と URL、違えば事実だけ）
+3 理由か（rfc なら機微でない理由は可、行為ログには書かない）
+4 反応・連絡先・個人的な事情・非公開 repo の名前やパスを含むか（含むなら .notes/）
+5 検査を通したか（public-detail、著者が diff を読む）
+</script>
+  </doc-code>
+</doc-claim>
+
+<!-- ═════ scope ═════ -->
+<doc-claim aux="scope">
+  <p>変えないもの。</p>
+  <ul>
+    <li>implementation-log の位置と名前、ADR-0023 の empirical な役割（介入と行為の時系列）。</li>
+    <li>効果を主張しない規約。到達の判定（ADR-0024 Decision 4）は log を読む側が行う。</li>
+    <li>rfcs/ の store の形（ADR-0025）と、.notes/ を機微の置き場にすること。</li>
+    <li>zenn-content の schedule.json と metrics。生産と計測の記録で、行為ログではない。</li>
+    <li>非公開 repo の整理（済み: 8 本を _archive へ移した）。</li>
+    <li>v1.2.0 の SWHID の記録。Software Heritage の失敗の扱いは別に決める。</li>
+  </ul>
+</doc-claim>
+
+</doc-plan>
+</main>
+</body></html>
