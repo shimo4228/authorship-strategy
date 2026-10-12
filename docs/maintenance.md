@@ -41,7 +41,7 @@
 - 機微（連絡先、第三者の返信の状況、アカウントの詳細、個人的な制約）は `.notes/` に置き、エントリからリンクする。
   リンク先のファイル名にも機微を書かない。
 - 行為を実施したら、1 つの commit で、エントリがあれば state と Status 節を更新し、log に行を足す。
-  無人の task（`listing-pr-daily` の行為ログの行、`admission-readings-monthly` の `docs/empirical/admission-readings.md` の行）が書いたものは branch `act-log`（worktree `.claude/worktrees/act-log`）に届く。
+  無人の task（`listing-pr-daily` の行為ログの行、`admission-readings-monthly` の `docs/empirical/admission-readings.md` と `docs/empirical/plugin-usage-readings.md` の行）が書いたものは branch `act-log`（worktree `.claude/worktrees/act-log`）に届く。
   `git -C <repo> diff main...act-log` を読み、検査を通してから `git -C <repo> merge --ff-only act-log` で取り込む
   （task は毎回 origin/main に rebase するので fast-forward になる）。
   作業の queue（PB の listing queue など）は計画とログの ID だけを持ち、URL や日付を二重に持たない。

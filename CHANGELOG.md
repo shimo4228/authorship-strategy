@@ -28,7 +28,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   readings of two search engines' consoles for the hub — indexed pages,
   sitemap status, and citations in one vendor's AI answers — with the
   2026-10-12 baseline taken before that day's indexing requests
-  (RFC-0013, RFC-0002).
+  (RFC-0013, RFC-0002). A second table splits repository referrers into
+  AI answer engines, search engines, github.com and other sources
+  (RFC-0014).
+- `docs/empirical/plugin-usage-readings.md` (role: baseline data):
+  monthly readings of the plugin directory's owner console for the two
+  listed plugins — installs, active accounts, uses, loads — recorded as
+  use of a scaffold, apart from arrival (RFC-0010).
 
 ## [1.2.0] - 2026-10-12
 
