@@ -18,7 +18,7 @@ Google Code Wiki に request した Tier-1 の 10 repo のうち、ページが�
 
 withdrawn — Code Wiki は終わりにする（2026-10-12、著者の判断）。
 
-- 2026-10-12 にブラウザで 10 repo すべての `codewiki.google/github.com/shimo4228/<repo>` を開いた。どれも "404 This page doesn't exist"（authorship-strategy、agent-knowledge-cycle、contemplative-agent、agent-attribution-practice、attention-not-self、shimo4228、doctrine-corpus、existence-proof、einstein-arena、zenn-content）
+- 2026-10-12 にブラウザで、Code Wiki 上の 10 repo すべてのページを開いた。どれも "404 This page doesn't exist"（authorship-strategy、agent-knowledge-cycle、contemplative-agent、agent-attribution-practice、attention-not-self、shimo4228、doctrine-corpus、existence-proof、einstein-arena、zenn-content）
 - request（2026-06-28）から 3 か月半、1 件も生成されていない。生成も更新も popularity-gated で、著者側から動かせない（manifesto OQ9 の一例）
 - 著者の判断: 今回生成されていなければ終わりにする。badge は戻さない
 

@@ -15,7 +15,7 @@ RAiD（Research Activity Identifier）で program を登録するかを、日本
 
 ## Status
 
-withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。所属のない個人は使えない（2026-08-25 照合）。日本の RA か個人向けの tier が出たら、新しい RFC として起票し直す。
+withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。self-service の登録窓口がない（2026-08-25 照合）。日本の RA か self-service の窓口ができたら、新しい RFC として起票し直す。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
