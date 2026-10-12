@@ -530,9 +530,9 @@ knowledge graph carry the qualitative mechanism only.
   null. Bearing on Annex A.1 of ADR-0011: the memory-score study above
   already found within-series agreement above cross-provider agreement;
   this study shows the cross-vendor level itself is high, so families
-  that read alike are correlated observations rather than independent
-  replications — a caution on reading cross-family results, with the
-  pre-registered decision rules unchanged. Limits the authors state: a
+  that read alike are not presumed to be independent replications — a
+  caution reported beside cross-family results; pre-registered rules
+  that count families are applied as written. Limits the authors state: a
   single topic, a narrow range of task formats, blinded selection
   rather than citation practice in the wild, annotation concentrated in
   one principal annotator. The task is selection with content in view,

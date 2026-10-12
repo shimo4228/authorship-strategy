@@ -18,9 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - *Citation Monoculture* (arXiv:2608.19230) enters the measurement
   literature: `docs/inspiration.md` carries its figures, `graph.jsonld`
   an `ExternalReference` node grounding the retrieval-suppressed naming
-  probe, and ADR-0011 Annex A.1 (EN/JA) one reading caution — model
-  families that read alike are correlated observations, not independent
-  replications. No decision rule changes (RFC-0011).
+  probe, and ADR-0011 Annex A.1 (EN/JA) a dated note with one reading
+  caution — model families that read alike are not presumed to be
+  independent replications. The caution is reported beside results; the
+  2026-09 probe pre-registration records it as an Amendment, and its
+  decision rules, including condition (b) of *Counts against*, apply as
+  written (RFC-0011).
 
 ## [1.2.0] - 2026-10-12
 

@@ -220,3 +220,17 @@ in that run was negative on both booleans. Panel config: hub
   harder to reach by 2027-03-31; this is stated, not compensated.
 - Decision rules, eligibility, cell reading and reporting deadlines are
   unchanged.
+
+### 2026-10-12 — ADR-0011 Annex A.1 gains a reading caution
+
+Recorded before any eligible model's event run; the last parametric
+event run is still the 2026-09-20 qwen substitution. Annex A.1 now
+carries a dated note: model families that read alike are not presumed
+to be independent replications (cross-provider citation-selection
+evidence, arXiv:2608.19230; figures in `docs/inspiration.md`).
+
+- The caution is reported beside a result and never used to discount
+  one. Condition (b) of *Counts against* counts two families and is
+  applied as written.
+- Decision rules, eligibility, cell reading and reporting deadlines are
+  unchanged.
