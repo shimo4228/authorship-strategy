@@ -32,4 +32,4 @@ in_progress — Google の URL 検査を 3 日に分けて送っている（2026
 
 1. 2026-10-13: URL 検査で 10 件 — harness-alignment、attention-ceiling、four-contemplative-axioms、four-business-ai-quadrants、attribution-gap、two-channel-attribution-diffusion、retrieval-suppressed-naming-probe、vocabulary-discipline、identifier-federation-triplet、security-by-absence
 2. 2026-10-14: 残り 4 件 — existence-proof-format、gatekeeper-inversion、oracle-debiasing、`traffic/dashboard/`
-3. 約 1 週間後に「ページのインデックス登録」の件数を読み、ここに書く。行為は implementation log に 1 行ずつ記録する
+3. 結果は 2026-11-01 の月次の読み（`docs/empirical/admission-readings.md`、scheduled task `admission-readings-monthly`）で確かめ、ここに書く。行為は implementation log に 1 行ずつ記録する
