@@ -234,6 +234,7 @@ author's strategies carried it out
 | A-0033 | 2026-10-12 | AS | All 27 hub sitemap URLs submitted through a second search engine's webmaster console (private route) | — | repo |
 | A-0034 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized; the Elish reference and the SSRN versions of the two position papers added | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/agent-attribution-practice) | repo |
 | A-0035 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized; scaffold dissolution's upstream reference added | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/agent-knowledge-cycle) | repo |
+| A-0036 | 2026-10-12 | AS | Profile biography rewritten in plain words; the lines are called lines of work | [ORCID record](https://orcid.org/0009-0002-6168-4162) | DOI |
 
 ## Annotations (2026-10-12)
 

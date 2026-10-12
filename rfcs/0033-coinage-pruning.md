@@ -34,7 +34,7 @@ program 全体の造語を ADR-0010 の 3 条件（既存語が覆わない・�
 | attribution gap | AAP | 残す。日本語名を 1 つに揃える（hub「寄与の事後分離不能ギャップ」と AAP graph「帰責ギャップ」） | — （AAP の glossary が Matthias 2004 の responsibility gap の狭い形と明記しており、置き換えると狭めた意味が消える） | 2026-10-12 |
 | gatekeeper inversion | EP | algorithmic gatekeeping へ置き換え。hub の造語一覧から外す | 制度による選別が LLM の prior に移るという仮説（algorithmic gatekeeping の文献に連なる）。EP の glossary は origin claim なしと明記 | 2026-10-12 |
 | oracle debiasing | EP | 畳む（平易な言い方へ） | 存在証明の供給（feasibility を答える面への）。debiasing の確立した意味と衝突する | 2026-10-12 |
-| value-layer harness engineering | hub | 畳む（著者の判断「ちょっとやりすぎ」）。hub の自己紹介（index.html と Person の説明）も平易な言い方へ。ORCID の bio は著者の操作 | 価値規範を harness の rules 層に置き、ほかの層と同じ人間の承認で扱う | 2026-10-12 |
+| value-layer harness engineering | hub | 畳む（著者の判断「ちょっとやりすぎ」）。hub の自己紹介（index.html と Person の説明）も平易な言い方へ。ORCID の bio は 2026-10-12 に著者が書き換え済み（implementation log A-0036）。hub の自己紹介はその文に揃える: "Practitioner building AI agent harnesses that carry norms, constitutions, and values alongside tools, permissions, and evals, all governed by one human-gated cycle." | 価値規範を harness の rules 層に置き、ほかの層と同じ人間の承認で扱う | 2026-10-12 |
 
 畳む 7 語の hub の解説ページ（`concepts/<語>.html`）は**消す**（転送ページは置かない。著者の判断、2026-10-12）。sitemap、hub の graph と `vocab.jsonld` からも外す。line 側の graph が同じ vocab ID を参照しているので、各 repo の実装と同じ回に揃える。
 
