@@ -16,7 +16,7 @@ hub（GitHub Pages）の concept ページを検索索引に入れる。Google S
 
 ## Status
 
-in_progress — Google の URL 検査を 3 日に分けて送っている（2026-10-12 開始）。Bing と Brave は未着手。
+in_progress — Google の URL 検査を 3 日に分けて送っている（2026-10-12 開始）。Brave は 2026-10-12 に送った（hub のトップと `/concepts/`、A-0032）。Bing は著者のサインインと取り込み待ち。
 
 **2026-10-12 診断**（Search Console を著者のブラウザで読み取り、サイト側を curl で照合）:
 
@@ -31,5 +31,5 @@ in_progress — Google の URL 検査を 3 日に分けて送っている（2026
 
 1. 2026-10-13: URL 検査で 10 件 — harness-alignment、attention-ceiling、four-contemplative-axioms、four-business-ai-quadrants、attribution-gap、two-channel-attribution-diffusion、retrieval-suppressed-naming-probe、vocabulary-discipline、identifier-federation-triplet、security-by-absence
 2. 2026-10-14: 残り 4 件 — existence-proof-format、gatekeeper-inversion、oracle-debiasing、`traffic/dashboard/`
-3. Bing Webmaster Tools に Search Console から取り込み、sitemap を送る。Brave の URL 送信フォームに hub のトップを送る
+3. Bing Webmaster Tools に Search Console から取り込む（著者のサインインと OAuth の許可が要る）。確認済みになったら、Bing の URL 送信で 27 URL をまとめて送る
 4. 約 1 週間後に「ページのインデックス登録」の件数を読み、ここに書く。行為は implementation log に 1 行ずつ記録する
