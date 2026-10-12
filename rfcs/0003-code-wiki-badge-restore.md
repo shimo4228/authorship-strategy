@@ -1,5 +1,5 @@
 ---
-state: blocked 2026-10-12
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -16,14 +16,14 @@ Google Code Wiki に request した Tier-1 の 10 repo のうち、ページが�
 
 ## Status
 
-blocked — 生成済みページの有無をブラウザで確かめる段階。2026-08-19 の棚卸しでは確かめていない。
+withdrawn — Code Wiki は終わりにする（2026-10-12、著者の判断）。
+
+- 2026-10-12 にブラウザで 10 repo すべての `codewiki.google/github.com/shimo4228/<repo>` を開いた。どれも "404 This page doesn't exist"（authorship-strategy、agent-knowledge-cycle、contemplative-agent、agent-attribution-practice、attention-not-self、shimo4228、doctrine-corpus、existence-proof、einstein-arena、zenn-content）
+- request（2026-06-28）から 3 か月半、1 件も生成されていない。生成も更新も popularity-gated で、著者側から動かせない（manifesto OQ9 の一例）
+- 著者の判断: 今回生成されていなければ終わりにする。badge は戻さない
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-```
-再開条件: Code Wiki 上に対象 repo の生成済みページが実在する（ブラウザで実体を確認する）
-照合先:   codewiki.google の各 repo の URL（ブラウザ）
-成立時:   accepted（生成された repo にだけ badge を戻す）
-```
+なし（終端）。
