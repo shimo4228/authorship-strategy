@@ -1,5 +1,5 @@
 ---
-state: draft 2026-10-12
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +15,14 @@ hub の concept ページと glossary で、造語の隣に、問う人が実際
 
 ## Status
 
-draft — 採否の判断待ち（2026-10-12）。
+withdrawn — 汎用語を足すのでなく、不要な造語を減らす方向に切り替えた（2026-10-12、著者の判断）。
+
+- concept ページには既存の語彙で書いた定義と gloss が既にある（ADR-0010 の anchoring obligation）。足りないのは問う側の言い回しだけだが、根拠の研究は vendor 著者のもので弱い（RFC-0016）
+- 著者の指示: 問う側との橋を足すより、造語そのものを整理する。ADR-0010 の 3 条件と本文での反復で 1 語ずつ判定する棚卸しを、`docs/plans/research/2026-10-12-coinage-audit.md` で行う。整理の作業は、その結果をもとに新しい RFC として起票する
+- 実際に問われる言葉は、Bing の AI Performance の grounding query に出れば一次データとして分かる（`docs/empirical/admission-readings.md`）
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が採るかを決める。採るなら対象の造語と、hub の `concepts_data.json` での置き方を決める。
+なし（終端）。
