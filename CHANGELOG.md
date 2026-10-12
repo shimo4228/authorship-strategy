@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   name place and URL, acts through private routes are facts only, and
   reasons, reactions and contacts stay out. ADR-0023, 0024 and 0025 gain
   dated notes; the ADR count becomes twenty-six.
+- *Citation Monoculture* (arXiv:2608.19230) enters the measurement
+  literature: `docs/inspiration.md` carries its figures, `graph.jsonld`
+  an `ExternalReference` node grounding the retrieval-suppressed naming
+  probe, and ADR-0011 Annex A.1 (EN/JA) one reading caution — model
+  families that read alike are correlated observations, not independent
+  replications. No decision rule changes (RFC-0011).
 
 ## [1.2.0] - 2026-10-12
 

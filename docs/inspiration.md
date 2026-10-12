@@ -512,6 +512,32 @@ knowledge graph carry the qualitative mechanism only.
   authors state a fairness caveat rather than a correction: author
   prestige, institutional visibility, and topic popularity are part of
   the exposure process the metric is designed to capture (§4.4, §5.5).
+- *When AI Writes, Who Gets Cited? Evidence of Citation Monoculture
+  Across Language Models* (Alemohammad et al., arXiv:2608.19230,
+  2026-08-03) gives eleven models from three vendors (four OpenAI,
+  four Gemini, three Claude) random panels of thirty real papers —
+  real title and abstract kept, author names fabricated, years
+  reassigned, venues and citation counts hidden — and asks each to pick
+  up to ten. Every model concentrates on a small subset: the top decile
+  of papers takes 23.3–30.2% of picks against 15.6% at random. Pearson
+  correlation between models' per-paper maps is 0.77 / 0.79 / 0.83
+  within the GPT / Gemini / Claude series, "only modestly exceeding the
+  cross-vendor 0.70, 0.70 and 0.63" (§3.2); one principal component
+  carries 68–73% of cross-model variance. Paraphrase and content-slot
+  crossover controls attribute about 90% of one model's map variance to
+  paper content (GPT-5 mini, 89.4% at 120 prompts and 93.1% at 480,
+  Table 3). Eight domain experts on the same panels sit at the random
+  null. Bearing on Annex A.1 of ADR-0011: the memory-score study above
+  already found within-series agreement above cross-provider agreement;
+  this study shows the cross-vendor level itself is high, so families
+  that read alike are correlated observations rather than independent
+  replications — a caution on reading cross-family results, with the
+  pre-registered decision rules unchanged. Limits the authors state: a
+  single topic, a narrow range of task formats, blinded selection
+  rather than citation practice in the wild, annotation concentrated in
+  one principal annotator. The task is selection with content in view,
+  not recall from weights, so nothing here calibrates the parametric
+  probe numerically.
 - *Probing for Knowledge Attribution in Large Language Models* (Brink,
   Boer and Ulmer, arXiv:2602.22787; cited above for the two-source
   split) also supplies the unequal error risk of the two override

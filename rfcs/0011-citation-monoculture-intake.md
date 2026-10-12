@@ -1,5 +1,5 @@
 ---
-state: draft 2026-10-12
+state: done 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +15,14 @@ Citation Monoculture（arXiv:2608.19230、本文照合済み）を inspiration.m
 
 ## Status
 
-draft — 取り込むかの判断待ち（2026-10-12）。
+done — 取り込んだ（2026-10-12、著者の判断）。
+
+- 本文で数字を再照合した（§3.2、Pearson）: ベンダー内 0.77 / 0.79 / 0.83（GPT / Gemini / Claude）、ベンダー間 0.70 / 0.70 / 0.63。abstract は「ベンダー間の一致はベンダー内にほぼ並ぶ」と書く
+- 入れた先: `docs/inspiration.md` の Measurement 節（数字はここだけ）、`graph.jsonld` の ExternalReference と retrieval-suppressed naming probe の `groundedIn`、ADR-0011 Annex A.1 の根拠に 1 文と Grounding の列挙（英語版と日本語版）
+- 課題は内容を見たうえでの選択で、重みからの recall ではない。だから読みの注意として入れ、較正の数値には使わない。判定規則は変えていない
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が取り込みを決める。決まれば inspiration・graph・ADR-0011 注記を 1 つの commit で入れる。
+なし（終端）。

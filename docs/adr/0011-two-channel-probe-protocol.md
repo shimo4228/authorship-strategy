@@ -294,7 +294,15 @@ and reading consequence only.
   the correlation the study reports between its memory score and
   citation counts — a spread across models, not a reliability figure.
   This protocol therefore treats a single-model reading as not
-  externally valid for the panel.
+  externally valid for the panel. A third study, of which papers models
+  choose to cite from blinded panels of real papers, finds agreement
+  across vendors only modestly below agreement within a vendor, with one
+  shared preference carrying most of the variance. Families that read
+  alike are therefore correlated observations, not independent
+  replications; this qualifies how a cross-family result is read and
+  leaves every decision rule unchanged. The study measures selection
+  with titles and abstracts in view, not recall from weights, so it
+  transfers as a reading caution, not as a calibration figure.
 - Generation changes. A generation change is always recorded as a
   series break (Decision: visible series breaks); that rule is
   untouched. What the annex adds is how readings are carried *across*
@@ -409,7 +417,8 @@ and reading consequence only.
 
 Grounding, named here per the Lineage convention: the cross-family
 memorization comparison (arXiv:2603.21658), the multi-model memory-score
-study (arXiv:2605.22176), and the white-box knowledge-attribution probe
-(arXiv:2602.22787). All three were unreviewed preprints when read
-(2026-08); figures from all three are quarantined in
-`docs/inspiration.md`.
+study (arXiv:2605.22176), the cross-vendor citation-selection study
+(arXiv:2608.19230), and the white-box knowledge-attribution probe
+(arXiv:2602.22787). All four were unreviewed preprints when read
+(2026-08; arXiv:2608.19230 on 2026-10-11); figures from all four are
+quarantined in `docs/inspiration.md`.
