@@ -229,6 +229,7 @@ author's strategies carried it out
 | A-0028 | 2026-10-12 | AS | Hub knowledge-graph mirror resynchronized; the Person sameAs now carries the OpenAlex author ID | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/research-program-hub) | repo |
 | A-0029 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized after the Citation Monoculture reference was added | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
 | A-0030 | 2026-10-12 | AS | Profile website field set to the hub | [GitHub profile](https://github.com/shimo4228) | repo |
+| A-0031 | 2026-10-12 | AS | Indexing requested for 10 hub pages through a search engine's webmaster console (private route) | — | repo |
 
 ## Annotations (2026-10-12)
 
