@@ -16,10 +16,19 @@ state: accepted 2026-10-12
 
 ## Status
 
-accepted — 著者の validate から着手できる（2026-10-12）。
+accepted — APPENDIX A の validate を済ませた。AAP の実装から着手できる（2026-10-12）。
+
+**2026-10-12 validate**（著者と確認、AAP の現物と照合）:
+
+- ReAct（arXiv:2210.03629）→ LLM Workflow Quadrant、MINJA（arXiv:2503.03704）→ ADR-0003 の境界: どちらも AAP の graph に `ExternalReference` として登録済み。結びつけ方は妥当
+- Elish, *Moral Crumple Zones*（2019、doi:10.17351/ests2019.260）: concept `moral-crumple-zone` はあるが、論文そのものの参照 node が無い。足す
+- SSRN の 2 本（6817598、6823878）: README は両方にリンクしているが、`.zenodo.json` と graph には 0 件。論文の Zenodo 記録と同じ論文の別の版として相互リンクを足す
+- AKC 以降の repo は、RFC-0033（造語の整理）の各 repo の実装と同じ回にまとめる（触るファイルが同じ）
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が APPENDIX A の prior-art edge を validate する。その後、現 graph との差分を AAP から順に埋める。
+1. AAP: graph に Elish（2019）の `ExternalReference` と、`moral-crumple-zone` からの edge を足す。HF mirror を同期する
+2. AAP: `.zenodo.json` の related_identifiers に SSRN の 2 本を足す（次の AAP の release で）
+3. AKC 以降: RFC-0033 の実装の回に、各 repo の `docs/inspiration.md` から先行研究を引き、同じ形で足す
