@@ -1,5 +1,5 @@
 ---
-state: blocked 2026-10-12
+state: done 2026-10-12
 ---
 
 ## Summary
@@ -16,7 +16,7 @@ OpenAlex で著者の ORCID に紐づく author ID が 1 つに統合された�
 
 ## Status
 
-blocked — researchmap の掲載待ち（2026-10-12）。OpenAlex の側は反映済み。
+done — OpenAlex の側を反映して閉じる（2026-10-12）。researchmap は、著者の判断で待つのをやめた。2026-10-12 の照合でも researchmap に著者のページは無い。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
@@ -28,8 +28,4 @@ line 側の graph は hub と sameAs が既にずれており、Person の正本
 
 ## Next action
 
-```
-再開条件: researchmap に著者ページが掲載される
-照合先:   researchmap の著者ページ
-成立時:   accepted（hub の Person の sameAs に反映する）
-```
+なし（終端）。
