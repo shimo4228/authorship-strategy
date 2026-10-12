@@ -234,3 +234,29 @@ evidence, arXiv:2608.19230; figures in `docs/inspiration.md`).
   applied as written.
 - Decision rules, eligibility, cell reading and reporting deadlines are
   unchanged.
+
+### 2026-10-12 — one eligible entry, and the last parametric event run
+
+Recorded before the event run it describes. The author decided on
+2026-10-12 to end the parametric channel after one more event run.
+
+- **Entry model.** `claude-sonnet-5-5` replaces `claude-sonnet-5` in the
+  anthropic column (hub `probes/config/probes-v11.yaml`, a recorded
+  series break). Eligibility is written in that file's header before
+  the run: condition 1 met (stated cutoff Jun 2026); condition 3 met
+  (claude-sonnet-5 zero baseline, 2026-07-12); condition 2 accepted by
+  the author on Anthropic's statement that anyone can chat with Claude
+  using Sonnet 5.5 on Claude.ai and two press reports, since claude.ai
+  offers no logged-out check. No other candidate was eligible (survey:
+  `docs/plans/research/2026-10-12-eligible-model-check.md`).
+- **The run.** Full parametric set, three repetitions, anthropic column
+  only, under the cell-reading and decision rules above, unchanged.
+- **After the run.** No further parametric event runs, and the monthly
+  currency check stops. One eligible family can satisfy R1 or R2 or
+  return "no transition observed"; condition (b) of *Counts against*
+  needs two eligible families and is reported as not reached because
+  the series ended, not as met or failed. The 2026-11-30 window and the
+  2027-03-31 deadline lapse with the series; this is stated, not
+  compensated.
+- Decision rules, eligibility, cell reading and the detector are
+  unchanged.
