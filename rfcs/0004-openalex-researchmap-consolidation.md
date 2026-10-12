@@ -16,14 +16,20 @@ OpenAlex で著者の ORCID に紐づく author ID が 1 つに統合された�
 
 ## Status
 
-blocked — 外部の反映待ち（2026-10-12）。
+blocked — researchmap の掲載待ち（2026-10-12）。OpenAlex の側は反映済み。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
+
+**2026-10-12 triage** — 条件 (a) が成立した。OpenAlex の authors API で ORCID と名前の両方から引くと、
+author ID は `A5130593171` の 1 件だけ（ORCID 付き、12 works）。hub の Person の sameAs に入れた
+（`graph.jsonld`、`index.html` の JSON-LD、dashboard の graph mirror。hub commit d6a156f）。
+line 側の graph は hub と sameAs が既にずれており、Person の正本は hub なので触らない。
+残りは条件 (b) だけなので blocked に戻した。
 
 ## Next action
 
 ```
-再開条件: (a) OpenAlex で ORCID 0009-0002-6168-4162 の author ID が 1 つに統合される、または (b) researchmap に掲載される
-照合先:   OpenAlex API（authors 検索）/ researchmap の著者ページ
-成立時:   accepted（graph の sameAs と hub のリンクに反映する）
+再開条件: researchmap に著者ページが掲載される
+照合先:   researchmap の著者ページ
+成立時:   accepted（hub の Person の sameAs に反映する）
 ```
