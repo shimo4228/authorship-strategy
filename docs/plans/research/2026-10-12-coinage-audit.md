@@ -59,6 +59,8 @@ scaffold dissolution について、依頼時点で観測されていた 2 つ�
 
 ### 3.2 scaffold dissolution と依頼時点で観測されていた 2 つの競合語
 
+> **訂正（2026-10-12、RFC-0033 の判定のとき）:** 下の表と結論の「scaffold fading（Wood・Bruner・Ross 1976）」は誤り。1976 年の論文は scaffolding（成功すれば支援を減らし、失敗すれば増やす）の出典で、fading は cognitive apprenticeship（Collins・Brown・Newman 1989）の「師匠が支援を少しずつ外す」段階の語（二次資料で確認、原典の本文は未読）。AKC は glossary で「Vygotsky の意味での scaffolding」と比喩を借りていると書くが、fading は引いていない。fading が当たるのは AKC の 4 つの溶解経路のうち「使い手の内面化」だけで、ホストの吸収・計測による退役・モデルの世代交代は外側にある。よって判定は replace でなく keep。著者の判断で、AKC の graph に scaffolding（1976）への上流 edge を足す。
+
 | 競合語 | 何を指すか | 確立度 | 覆う範囲 |
 |---|---|---|---|
 | harness distillation（[Arize、2026-09](https://arize.com/blog/agent-harness-distillation/)、[Harness-Zero、arXiv:2609.24974、2026-09-21](https://arxiv.org/abs/2609.24974)） | harness が与えていた振る舞いをモデル重みへ訓練で移す。Arize は "can train general scaffolding into a model" と書く | 新興。一次の出典は論文 1 本で、Arize は論文を紹介する二次記事（独立した第二の用例ではない） | AAP が「不健全な内面化（モデル重みへ）」と呼ぶ側。AKC の「健全な溶解（人間の認知パターンへ）」とは逆側 |

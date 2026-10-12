@@ -20,13 +20,28 @@ program 全体の造語を ADR-0010 の 3 条件（既存語が覆わない・�
 - hub の concept ページの扱い: 索引に入っているか、今日リクエストを出したページがある（`value-layer-harness-engineering.html` は Google の索引にある 4 件の 1 つ。RFC-0002）。消すか、新しい言い方のページや line の glossary へ転送するかは、語ごとの実装のときに決める
 - 作業は 6 repo にまたがる（authorship-strategy、agent-knowledge-cycle、agent-attribution-practice、contemplative-agent、existence-proof、hub）。判定はこの RFC で著者が決め、各 repo の変更はその repo の作業として行う
 
+## Decisions
+
+著者が決めた判定（日付は決めた日）。実装は各 repo の作業で、済んだら行に commit を書く。
+
+| 語 | 持ち主 | 判定 | 置き換えた言い方 | 決めた日 |
+|---|---|---|---|---|
+| attention ceiling | AKC | 畳む（平易な言い方へ） | operator の注意の予算（AKC ADR-0010 の題に揃える） | 2026-10-12 |
+| two-channel attribution diffusion | AS | attribution diffusion へ統合 | attribution diffusion の 2 経路（parametric / retrieval） | 2026-10-12 |
+| identifier-federation triplet | hub | 畳む（平易な言い方へ） | DOI federation（ADR-0001〜0003） | 2026-10-12 |
+| retrieval-suppressed naming probe | AS | 畳む（平易な言い方へ） | naming probe（検索なし）と citation probe（検索あり） | 2026-10-12 |
+| scaffold dissolution | AKC | 残す。AKC の graph に scaffolding（Wood・Bruner・Ross 1976）への上流 edge を足す | — （語は変えない。棚卸しの「scaffold fading へ置き換え」は誤りだった。報告 §3.2 の訂正注記） | 2026-10-12 |
+| attribution gap | AAP | 残す。日本語名を 1 つに揃える（hub「寄与の事後分離不能ギャップ」と AAP graph「帰責ギャップ」） | — （AAP の glossary が Matthias 2004 の responsibility gap の狭い形と明記しており、置き換えると狭めた意味が消える） | 2026-10-12 |
+| gatekeeper inversion | EP | algorithmic gatekeeping へ置き換え。hub の造語一覧から外す | 制度による選別が LLM の prior に移るという仮説（algorithmic gatekeeping の文献に連なる）。EP の glossary は origin claim なしと明記 | 2026-10-12 |
+| oracle debiasing | EP | 畳む（平易な言い方へ） | 存在証明の供給（feasibility を答える面への）。debiasing の確立した意味と衝突する | 2026-10-12 |
+| value-layer harness engineering | hub | 保留 | — （著者の自己紹介の 1 行でもあるので、別に決める） | — |
+
 ## Status
 
-in_progress — 棚卸しが終わり、hub の 17 語のうち変える候補 9 語の判定を著者と決めている（2026-10-12）。
+in_progress — hub の候補 9 語のうち 8 語を決めた（畳む・置き換え 6、残す 2）。value-layer harness engineering は保留。補足語 77 語の判定と、各 repo の実装はこれから（2026-10-12）。
 
 ## Next action
 
-1. hub の候補 9 語を決める: 根拠の強い 5 語（attention ceiling、two-channel attribution diffusion、identifier-federation triplet、value-layer harness engineering、retrieval-suppressed naming probe）をまとめて、不確実な置き換え（scaffold dissolution、attribution gap、gatekeeper inversion）と oracle debiasing を 1 語ずつ
-2. 決めた語の判定をこのファイルに表で残す
-3. 補足語 77 語を line ごとに決める
-4. 各 repo で実装する（glossary・graph・concept ページ・本文。deposit metadata は次の release で）
+1. value-layer harness engineering を決める（著者の自己紹介の 1 行でもある）
+2. 補足語 77 語を line ごとに決める。棚卸しの判定は誤りを含んだ（§3.2 の訂正）ので、語ごとに一次資料で確かめてから聞く
+3. 各 repo で実装する（glossary・graph・concept ページ・本文。deposit metadata は次の release で）。hub の concept ページを消すか、転送するかは実装のときに決める
