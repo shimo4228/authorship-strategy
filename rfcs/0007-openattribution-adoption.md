@@ -1,6 +1,5 @@
 ---
-state: draft 2026-10-12
-review-when: 主要 AI 製品の 1 つが OpenAttribution での送信を表明する
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -18,10 +17,19 @@ OpenAttribution（SPUR Content Telemetry v1.0、2026-09-02 final）に参加す�
 
 ## Status
 
-draft — 再開条件は成立済み。採否は著者の判断待ち（2026-10-12）。
+withdrawn — 参加しない（2026-10-12、著者の判断）。
+
+2026-10-12 の一次照合（[contenttelemetry.org](https://contenttelemetry.org)、[openattribution.org](https://openattribution.org)、[Digiday 2026-10-02](https://digiday.com/media/spur-publishes-ai-content-tracking-standard-pitches-openai-and-google-to-join-advisory-board/)）:
+
+- 規格（Content Telemetry v1.0、2026-09-02 付）は報道機関の連合 SPUR が管理し、OpenAttribution はその実装と無料の受け口を運営する別の非営利団体
+- 送る側の AI 製品は 0。SPUR が招待した 5 社（OpenAI・Anthropic・Google・Meta・Microsoft）はどれも承諾していない。OpenAttribution の画面の ChatGPT や Claude はデモ表示で、実データは "No telemetry events yet"
+- **前提の訂正**: Motivation の「送る側がゼロでも bot 訪問の dashboard は GitHub Pages に無い観測面になる」は誤り。bot 訪問の報告はサイト側の仕組みで、自分で管理する CDN edge（Cloudflare Worker）か origin のコードが要る。GitHub Pages ではどちらも置けない。`.well-known/content-telemetry.json` は受け口を宣言するだけで、データは生まない
+- したがって今参加しても得るものがない。(a) の前提だった user site も作らない（RFC-0008 withdrawn）
+
+主要な AI 製品の送信の開始は報道になり、daily-research で拾える。拾ったときに、user site と一緒に新しい RFC として起票する。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が (a) か (b) を選ぶ。(a) なら RFC-0008 を先に決める。
+なし（終端）。
