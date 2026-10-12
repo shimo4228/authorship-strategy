@@ -24,6 +24,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   2026-09 probe pre-registration records it as an Amendment, and its
   decision rules, including condition (b) of *Counts against*, apply as
   written (RFC-0011).
+- `docs/empirical/admission-readings.md` (role: baseline data): monthly
+  readings of two search engines' consoles for the hub — indexed pages,
+  sitemap status, and citations in one vendor's AI answers — with the
+  2026-10-12 baseline taken before that day's indexing requests
+  (RFC-0013, RFC-0002).
 
 ## [1.2.0] - 2026-10-12
 

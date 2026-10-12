@@ -1,5 +1,5 @@
 ---
-state: draft 2026-10-12
+state: blocked 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +15,19 @@ state: draft 2026-10-12
 
 ## Status
 
-draft — 採否と設計の判断待ち（2026-10-12）。
+blocked — 計器を作り、基準値を読んだ。次の月次の読み待ち（2026-10-12、著者の判断）。
+
+- 設計を変えた: 汎用語の質問 panel を検索つきの AI に投げる案はやめた。2026-10-01 に retrieval の定期実行を「モデルの入れ替えで系列がすぐ途切れる」として止めており（probe 事前登録の Amendment）、同じ型を戻すことになるため。API の費用もかかる
+- 代わりに、検索エンジン 2 つの console が自分で出す数字を月に 1 回読む: Google の索引数と sitemap の状態、Bing の索引数と sitemap の状態、Bing の AI Performance（Copilot などの AI 回答での hub の引用数と grounding query）。どれも無料で、一次の数字
+- 置き場所: [`docs/empirical/admission-readings.md`](../docs/empirical/admission-readings.md)（role: baseline data）。2026-10-12 の基準値は Google 4 / 0、Bing 5、Bing の AI 引用 0（2026-07-12〜10-09）。同日の索引リクエスト（A-0031〜A-0033）の前に読んだ
+- ADR-0023 に従い、リクエストの前後の差を効果として読まない
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が採るかを決める。採るなら panel と判定規則を事前登録の file に書く。
+```
+再開条件: 2026-11-01 を過ぎる（月初の currency check と同じ時期）
+照合先:   日付
+成立時:   accepted（console を読み取りだけで読み、表に 1 行足す。次の月初に日付を進めて blocked に戻す）
+```
