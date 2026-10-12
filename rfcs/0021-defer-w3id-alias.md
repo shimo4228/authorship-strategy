@@ -1,6 +1,5 @@
 ---
-state: draft 2026-10-12
-review-when: vocab URI への外部 inbound link の観測、custom domain への移行の検討、GitHub Pages の方針変更のどれか
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +14,10 @@ hub の vocab URI に w3id.org の alias を足すかを、発火条件の成立
 
 ## Status
 
-draft — 発火条件の観測待ち（2026-10-12）。
+withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。vocab URI への外部 inbound link、custom domain への移行の検討、GitHub Pages の方針変更のどれかが起きたら、alias だけを足す案から新しい RFC として起票し直す。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-発火条件のどれかが成立したら、alias だけを足す案から再評価する。
+なし（終端）。

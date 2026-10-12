@@ -1,6 +1,5 @@
 ---
-state: draft 2026-10-12
-review-when: zero-config・第三者 host・query 機能つきの MCP doc-server が公開される
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +14,10 @@ zero-config で第三者が host し、query 機能を持つ MCP doc-server が�
 
 ## Status
 
-draft — 発火条件の観測待ち（2026-10-12）。
+withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。自前の server は ADR-0020 が却下済み。zero-config・第三者 host・query 機能つきの MCP doc-server が公開されたら、ADR-0020 の基準で新しい RFC として起票し直す。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-該当するサービスが出たら ADR-0020 の基準で再 gate する。
+なし（終端）。

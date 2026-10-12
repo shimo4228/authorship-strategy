@@ -1,6 +1,5 @@
 ---
-state: draft 2026-10-12
-review-when: GitHub agent finder か HF Discover Tool の実稼働を一次資料で確認する
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -17,10 +16,10 @@ Agentic Resource Discovery（Google と Linux Foundation の WG、2026-05 末発
 
 ## Status
 
-draft — 発火条件の観測待ち（2026-10-12）。
+withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。`ai-catalog.json` は host root の `.well-known` に置くので、RFC-0008 で作らないと決めた user site が前提になる。消費側（GitHub agent finder / HF Discover Tool）が実稼働したら、user site と一緒に新しい RFC として起票し直す。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-発火条件が成立したら hub に deploy する（再 gate は不要、実装だけ）。
+なし（終端）。

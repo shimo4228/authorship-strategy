@@ -1,6 +1,5 @@
 ---
-state: draft 2026-10-12
-review-when: 2027-08 の再照合、または日本の RA か個人向け tier の出現
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -16,10 +15,10 @@ RAiD（Research Activity Identifier）で program を登録するかを、日本
 
 ## Status
 
-draft — 再照合待ち（2026-10-12）。
+withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。所属のない個人は使えない（2026-08-25 照合）。日本の RA か個人向けの tier が出たら、新しい RFC として起票し直す。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-再照合の時期か発火条件の成立で再評価する。
+なし（終端）。

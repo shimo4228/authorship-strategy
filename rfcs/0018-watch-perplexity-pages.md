@@ -1,6 +1,5 @@
 ---
-state: draft 2026-10-12
-review-when: (1) Pages の再構築完了の公式告知か、著者が直接書ける作成経路の復活、かつ (2) publish で answer index に入る仕様を公式一次資料で確認する
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -17,10 +16,10 @@ review-when: (1) Pages の再構築完了の公式告知か、著者が直接書
 
 ## Status
 
-draft — 発火条件の観測待ち（2026-10-12）。
+withdrawn — WATCH を閉じる（2026-10-12、著者の判断）。現行の作成経路は AI による変換だけで、自分で書いた本文のまま公開できない。自分で書けるスタンドアロンの作成経路が戻り、publish で answer index に入る仕様が公式に確かめられたら、新しい RFC として起票し直す。
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-両方の発火条件が揃ったら再 gate する。
+なし（終端）。
