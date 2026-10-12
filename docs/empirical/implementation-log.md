@@ -227,6 +227,7 @@ author's strategies carried it out
 | A-0026 | 2026-10-12 | AS | Save Code Now request for the repository | [Software Heritage](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/shimo4228/authorship-strategy) | repo |
 | A-0027 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized after ADR-0026 | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
 | A-0028 | 2026-10-12 | AS | Hub knowledge-graph mirror resynchronized; the Person sameAs now carries the OpenAlex author ID | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/research-program-hub) | repo |
+| A-0029 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized after the Citation Monoculture reference was added | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/authorship-strategy) | repo |
 
 ## Annotations (2026-10-12)
 
