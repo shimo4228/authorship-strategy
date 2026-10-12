@@ -1,5 +1,5 @@
 ---
-state: draft 2026-10-12
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +15,15 @@ GitHub の user-site repo `shimo4228.github.io` を作るかを決める。作�
 
 ## Status
 
-draft — 著者の判断待ち（2026-10-12）。
+withdrawn — 作らない（2026-10-12、著者の判断）。
+
+- 2026-10-12 の照合: `https://shimo4228.github.io/` と `/robots.txt`、`/.well-known/` は 404。hub は project site（`/shimo4228/`）として公開されている
+- 目的（hub の concept ページを索引に入れる）は project site で足りる。登録の申請（GSC の URL 検査、Bing、Brave）は今の URL のままできる（RFC-0002）
+- host root にしか置けないものは、どれも今は効き目が小さい。robots.txt の `Sitemap:` 行は console からの手動送信で代わりになる。`.well-known` の OpenAttribution claim は送る側の AI 製品がまだない（RFC-0007）。GSC の root property は管理が少し楽になる程度
+- RFC-0007 の再開条件（主要 AI 製品の送信の表明）が成立したら、そのときに作る。費用は repo 1 つと数ファイルで、消せば戻る
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が作るかどうかを決める。作るなら中身を robots.txt と `.well-known` に限るかも決める。
+なし（終端）。RFC-0007 が (a) で採用されたら、そこで作る。
