@@ -1,6 +1,5 @@
 ---
-state: blocked 2026-10-12
-review-when: 2026-12-31 を過ぎる
+state: done 2026-10-12
 ---
 
 ## Summary
@@ -18,7 +17,12 @@ review-when: 2026-12-31 を過ぎる
 
 ## Status
 
-blocked — eligible model の panel 入り待ち（2026-10-12）。候補が 1 つあり、Claude の列の接続の復旧と著者の確認待ち。
+done — 最後の event run を回し、事前登録の規則どおり判定して公開した（2026-10-12、著者の判断で parametric はこれで終える）。
+
+- 結果: [`docs/empirical/parametric-contrast-2026-10.md`](../docs/empirical/parametric-contrast-2026-10.md)。`claude-sonnet-5-5`（v11）の全 cell が 3 回中 2 回の規則で陰性。読みは「no transition observed」
+- 規則の外の観察: `concept-akc` の 1 回で、検索なしに Agent Knowledge Cycle の 6 phase と作者を想起した
+- 測る前の記録: hub `4e25009`（v11 と eligibility）、この repo `0bdc929`（Amendment）。どちらも run の前に push
+- 計器の退役: ADR-0011 に注記。launchd の月次 currency check と月次の cloud web check を止める
 
 **2026-10-12 eligibility 調査**（[docs/plans/research/2026-10-12-eligible-model-check.md](../docs/plans/research/2026-10-12-eligible-model-check.md)、API は呼ばず公式 doc で判定）:
 
@@ -31,8 +35,4 @@ blocked — eligible model の panel 入り待ち（2026-10-12）。候補が 1 
 
 ## Next action
 
-```
-再開条件: eligible model が panel に入り、event run が走る（直近の道筋: Claude の列の接続の復旧 → `claude-sonnet-5-5` が事前登録の条件 2（default-tier）を満たすかを確かめる → probes-v11 に入れ、eligibility を run record に先に書く → event run）
-照合先:   hub `probes/data/model-catalog.jsonl` と provider の model docs（cutoff）。run 後は `probes/data/parametric.jsonl`
-成立時:   accepted（規則どおり判定して公開する）。2026-11-30 までに eligible がなければ「窓は空」と dated note に記録して持ち越す。規則は緩めない
-```
+なし（終端）。

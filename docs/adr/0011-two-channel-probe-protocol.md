@@ -22,6 +22,16 @@ after the protocol survives three scheduled runs without revision to its
 core rules. Annex A (2026-08-19) adds calibration *reading rules* on
 top of those core rules without revising them.
 
+> **Note (2026-10-12, commit "docs(empirical): parametric contrast result — no transition observed; the parametric channel ends"):**
+> the instrument is retired. The retrieval schedule ended on 2026-10-01
+> and the parametric channel ends with the autumn event run of
+> 2026-10-12, whose pre-registered reading was "no transition observed"
+> ([result](../empirical/parametric-contrast-2026-10.md)). The protocol
+> never reached `accepted`; it stays as the record of how the series was
+> taken, and the raw data stay in the hub. The author's reading of the
+> instrument: a temporary chat with search off would have answered the
+> same question with far less machinery.
+
 ## Date
 2026-06-12
 

@@ -36,6 +36,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   listed plugins — installs, active accounts, uses, loads — recorded as
   use of a scaffold, apart from arrival (RFC-0010).
 
+### Changed
+
+- The probe instrument is retired. `docs/empirical/parametric-contrast-2026-10.md`
+  (role: result of a contrast designed before the data) reports the last
+  parametric event run, `claude-sonnet-5-5` on 2026-10-12: every cell
+  negative under the two-of-three rule, reading "no transition observed";
+  one repetition recalled the Agent Knowledge Cycle's phases and its author
+  from weights. The pre-registration gained an Amendment before the run,
+  and ADR-0011 (EN/JA) a dated note that the channel ended (RFC-0005).
+
 ## [1.2.0] - 2026-10-12
 
 Changes what the framework counts as success and where the program keeps

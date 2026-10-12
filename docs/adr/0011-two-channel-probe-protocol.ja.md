@@ -20,6 +20,13 @@ Language: [English](0011-two-channel-probe-protocol.md) | 日本語
 生き延びた時点で `accepted` に確定する。Annex A (2026-08-19) は校正の
 *読みルール* を core rule の上に追加するもので、core rule 自体は改訂しない。
 
+> **注記（2026-10-12、commit「docs(empirical): parametric contrast result — no transition observed; the parametric channel ends」）:**
+> 計器は退役した。retrieval の定期実行は 2026-10-01 に終わり、parametric は
+> 2026-10-12 の秋の event run で終わる。その事前登録どおりの読みは「no transition
+> observed」だった（[結果](../empirical/parametric-contrast-2026-10.md)）。protocol は
+> `accepted` に届かなかった。系列の取り方の記録として残し、生データは hub に残す。
+> 著者の読み: 検索を切った一時チャットなら、同じ問いにずっと少ない仕掛けで答えられた。
+
 ## Date
 2026-06-12
 
