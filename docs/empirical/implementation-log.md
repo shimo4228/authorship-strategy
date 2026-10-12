@@ -232,6 +232,8 @@ author's strategies carried it out
 | A-0031 | 2026-10-12 | AS | Indexing requested for 10 hub pages through a search engine's webmaster console (private route) | — | repo |
 | A-0032 | 2026-10-12 | AS | Re-fetch requested for the hub top page and the concepts index through a search engine's URL submission form (private route) | — | repo |
 | A-0033 | 2026-10-12 | AS | All 27 hub sitemap URLs submitted through a second search engine's webmaster console (private route) | — | repo |
+| A-0034 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized; the Elish reference and the SSRN versions of the two position papers added | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/agent-attribution-practice) | repo |
+| A-0035 | 2026-10-12 | AS | Knowledge-graph mirror resynchronized; scaffold dissolution's upstream reference added | [Hugging Face Datasets](https://huggingface.co/datasets/Shimo4228/agent-knowledge-cycle) | repo |
 
 ## Annotations (2026-10-12)
 
