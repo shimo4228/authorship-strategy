@@ -18,7 +18,7 @@ as-of: 2026-10-12。外部 URL はすべてこの日に取得した（公開日�
 - **著者が決めること（1 つ）:** `claude-sonnet-5-5` を anthropic 列の pin に入れる（`probes-v11.yaml`、series break）か。
   入れるなら、(a) claude.ai の Free で既定かを人手で確認、(b) eligibility を run record に先に書く、
   (c) 2026-11-30 までに parametric の event run（full set、`--repeat 3`、search 抑制）を回す、の順。
-  2026-10-01 の currency check で Anthropic の API key が 401（"API key is invalid."）だったので、key の復旧も要る。
+  2026-10-01 の currency check では Anthropic の列に接続できなかったので、接続の復旧も要る。
 - 副次の判断: ChatGPT Free の既定が 2026-10-07/08 に GPT-6 Luna へ動いたため、パネル方針（free chat default に追従）に
   従えば openai 列も `gpt-6-luna` へ動く。ただし eligible ではない。run しても contrast から外れ、別報告になる。
   それでも後続の eligible OpenAI モデルの「旧世代 baseline」にはなる（現パネルの `gpt-5.6-luna` には parametric 記録が無い）。
@@ -101,8 +101,8 @@ claude-sonnet-4-6 / claude-sonnet-5 / gpt-5.5 / gemini-3.5-flash / grok-4.3 / qw
   gemini（gemini-3.6-flash）は記録 0 行。「同 family の記録済み旧世代」と読むと gpt-5.5 / gemini-3.5-flash がある。
   今回は条件 1 で落ちるため判定に影響しないが、将来これらの family に eligible が出たときに効く。
   Anthropic は両読みで満たす。
-- Anthropic の event run には有効な API key が要る（2026-10-01 の currency check は
-  `401 Unauthorized` / "API key is invalid."）。key は試していない。
+- Anthropic の event run には、Anthropic の列への接続の復旧が要る（2026-10-01 の currency check は接続に失敗）。
+  接続は試していない。
 - Sonnet 5.5 の公開（2026-09-28）は 2026-10-01 の catalog check の前だが、同 check の anthropic 行は error で
   `catalog_new_ids` が空。検知の抜けではなく check 自体が走らなかった。`verified_current` は 2026-09-01 のまま、
   `staleness_days: 90` により STALE は 2026-11-30 に出る。
