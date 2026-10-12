@@ -45,3 +45,4 @@ README には書かない（複製は drift する）。
 | [0030](0030-no-term-only-doi.md) | 造語単独の DOI を取らない |
 | [0031](0031-no-bulk-jsonld-embed.md) | served page を持たない repo へ JSON-LD を一括で埋め込まない |
 | [0032](0032-switch-listing-task-to-shared-act-log.md) | listing-pr-daily の書き先を共有の行為ログへ切り替える |
+| [0033](0033-coinage-pruning.md) | 造語の整理: ADR-0010 の 3 条件と本文での反復で 94 語を判定し、残すもの以外を畳む |
