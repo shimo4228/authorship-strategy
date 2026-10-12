@@ -1,5 +1,5 @@
 ---
-state: draft 2026-10-12
+state: withdrawn 2026-10-12
 ---
 
 ## Summary
@@ -15,10 +15,14 @@ vendor 著者による研究 3 本（arXiv:2609.23162 / 2609.35077 / 2609.07559�
 
 ## Status
 
-draft — 保留寄り（2026-10-12）。
+withdrawn — 入れない（2026-10-12、著者の判断）。
+
+- 3 本とも著者の所属が当該サービスの提供側で、2609.23162 の見出しの数字は abstract にしか出ない
+- OQ9 は問いの節で、COI つきの弱い根拠を 1 文足しても問いの形は変わらない
+- 3 本は doctrine 層のどこにも引かれていない。この RFC の本文に残るので、独立の追試が出たときに同じ問いから辿れる
 
 **2026-10-12 plan** — [docs/plans/rfcs-store-consolidation.html](../docs/plans/rfcs-store-consolidation.html)（private ledger からの移送）
 
 ## Next action
 
-著者が入れるかを決める。入れないなら withdrawn にする。
+なし（終端）。独立の追試が出たら、その追試を新しい RFC として起票する。
