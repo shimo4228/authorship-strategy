@@ -55,7 +55,7 @@ adopter most plausibly wants human readers. The guide's one sentence
 on this ("if that description fits your work") asks the adopter to
 already hold the thesis's Layer 2 stance before the walk begins. An
 adopter who does not is routed out at the door without being told that
-[ADR-0022](../adr/0022-audience-layer-split.md) gives human-first
+[ADR-0022](../decision-history/0022-audience-layer-split.md) gives human-first
 prose a place inside the framework.
 
 ### The single-author caveat — *breaks*
@@ -81,7 +81,7 @@ will want the concepts. The manuscript coins at least three terms
 abbreviation, a "Structural Consequence Model", a "differential decay
 thesis"), each definable in a sentence of existing vocabulary and each
 anchored to a named prior source — the vocabulary discipline of
-[ADR-0010](../adr/0010-vocabulary-discipline.md) is already being
+[ADR-0010](../decision-history/0010-vocabulary-discipline.md) is already being
 practised here without the ADR. The guide says "per artifact, not per
 author" and leaves the adopter to decide what an artifact is.
 
@@ -97,7 +97,7 @@ signals." A book author cannot honestly confirm that. The framework
 has an answer — the audience-layer split routes human-first prose to
 an essay layer where reception is a legitimate signal — but the
 adoption guide surfaces it only as a parenthesis inside the
-[ADR-0007](../adr/0007-human-attention-signals-not-a-metric.md) table
+[ADR-0007](../decision-history/0007-human-attention-signals-not-a-metric.md) table
 row, three sections later. A reader following the steps in order meets
 the demand before the exemption.
 
@@ -108,7 +108,7 @@ the demand before the exemption.
    numbers but no tags, which is fixable in one command. What is not
    fixable from the guide is that the deposit form requires a license,
    and the target has none. The framework has a license-selection rule
-   ([ADR-0015](../adr/0015-license-selection-by-audience.md)) but the
+   ([ADR-0015](../decision-history/0015-license-selection-by-audience.md)) but the
    guide's tactic list and its ADR table both omit it. The deposit also
    requires the author name the previous section found missing.
 2. **Intrinsic-identifier archival — *holds*.** The archive's
@@ -130,7 +130,7 @@ the demand before the exemption.
    no siblings, the works-cited list has no identifiers to declare
    relations to, and mirroring a book to a dataset platform is a genre
    mismatch the framework itself addresses in
-   [ADR-0016](../adr/0016-genre-split-placement.md), which the guide
+   [ADR-0016](../decision-history/0016-genre-split-placement.md), which the guide
    does not cite. The tactic reduces to "add resolvable identifiers to
    your citations", which is sound and is not what the guide says.
 5. **Two-channel measurement — *breaks*.** Running the probe protocol

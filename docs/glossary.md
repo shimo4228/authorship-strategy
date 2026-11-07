@@ -53,7 +53,7 @@ authored content against dilutive market pressure.
 The defensive strategy at the framework's second layer:
 maximizing the uses of the author's ideas that reach the dated
 record — the concept-DOI deposit or the timestamped repository
-([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)). The author's name in an answer is observed, not
+([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md)). The author's name in an answer is observed, not
 required; see *Arrival*. "Attribution" here means *credit for
 source* (who first articulated this), not *accountability for
 action* (who is responsible for this failure). See the disjoint
@@ -64,7 +64,7 @@ entry below.
 A use of the author's idea that leads back to the record which
 timestamps it — the concept-DOI deposit or the repository with its
 commit history and archive identifier. Under
-[ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) arrival is the framework's success criterion, judged
+[ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) arrival is the framework's success criterion, judged
 in two tiers: a *use with arrival* (an answer that cites the record
 for the idea, a derivative that links it, a component installed and
 run) is evidence; an *arrival proxy* (clones, page views, referrers,
@@ -147,7 +147,7 @@ framework.
 The Zenodo (or comparable archive) Digital Object Identifier
 that resolves to the latest version of a deposit, as opposed to
 a version-specific DOI that resolves to one particular release.
-The concept DOI is the canonical reference under [ADR-0001](adr/0001-concept-doi-canonical.md);
+The concept DOI is the canonical reference ([adoption](adoption.md) step 1; the reasoning is recorded in [ADR-0001](decision-history/0001-concept-doi-canonical.md));
 the version DOI is appropriate only when citing a specific
 historical version for reproducibility.
 
@@ -158,7 +158,7 @@ specific release. Each tagged release receives a new version
 DOI. Version DOIs accumulate over time; concept DOIs do not.
 Used in this repository only for reproducibility citations of
 specific historical versions, never as the canonical reference.
-See [ADR-0001](adr/0001-concept-doi-canonical.md).
+See [ADR-0001](decision-history/0001-concept-doi-canonical.md).
 
 ## DOI federation
 
@@ -167,7 +167,7 @@ DOI-registered artifact as metadata, so that the network is
 recoverable from the metadata alone without requiring narrative
 disclosure. In this repository, federation is implemented via
 `.zenodo.json` `relatedIdentifiers` declarations. See
-[ADR-0002](adr/0002-doi-federation-via-zenodo-json.md).
+[ADR-0002](decision-history/0002-doi-federation-via-zenodo-json.md).
 
 ## Cross-platform federation
 
@@ -176,7 +176,7 @@ platforms (e.g., GitHub for repository hosting, Zenodo for DOI
 registration, Hugging Face Datasets for LLM training ingest) and
 declaring sibling relationships on each platform so that a
 reader who finds the artifact on one platform can discover its
-presence on the others. See [ADR-0003](adr/0003-cross-platform-dataset-federation.md).
+presence on the others. See [ADR-0003](decision-history/0003-cross-platform-dataset-federation.md).
 
 ## LLM-mediated channel
 
@@ -188,9 +188,9 @@ the content as part of a query), AI-assistant suggestion (where
 a developer using an AI coding assistant is shown text derived
 from the content). Each channel is one route to the record; the
 framework counts the uses that reach the record, not the depth of
-any single channel ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
+any single channel ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md)).
 
-Under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md),
+Under [ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.md),
 LLM-mediated channels resolve into two structurally distinct
 sub-populations for ingest-design purposes: *prose-reading channels*
 (conversational LLMs, in-context documentation consultation) and
@@ -209,8 +209,8 @@ prose-reading channels, the concept graph exposes inter-concept
 relationships to structured-data-ingesting channels. The pair is the
 operational embodiment of the *enclosure-to-openness* axis on the
 ingest surface; deploying only one half leaves the strategy one-lunged.
-Normatively required under [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md).
-[ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) amends this on
+Required by [adoption](adoption.md) step 3; the reasoning is recorded in [ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.md).
+[ADR-0009](decision-history/0009-dual-entry-asymmetric-rebalance.md) amends this on
 2026 evidence: the two entry points are not co-equal — the prose
 navigator's citation effect is noise, and (revised 2026-08-19) the
 concept-form graph is not a near-term citation lever either; its job is
@@ -266,8 +266,8 @@ count of coinages.
 
 The discipline governing when to coin a distinctive term and when to
 use existing vocabulary instead, introduced as the parametric-channel
-lever in [ADR-0008](adr/0008-rag-era-attribution-diffusion.md) and
-defined in [ADR-0010](adr/0010-vocabulary-discipline.md). A term is
+lever in [ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md) and
+defined in [ADR-0010](decision-history/0010-vocabulary-discipline.md). A term is
 coined only when three conditions all hold — the concept is genuinely
 new at a join of existing concepts, a one-sentence definition in
 existing vocabulary is possible, and the namespace is uncontested —
@@ -285,7 +285,7 @@ The vocabulary-level enforcement of origin-claim scope discipline.
 
 An author identifier service (Open Researcher and Contributor
 ID) that anchors works to a persistent author identity. Under
-[ADR-0004](adr/0004-authorship-metadata-orcid.md), the author's
+[ADR-0004](decision-history/0004-authorship-metadata-orcid.md), the author's
 ORCID record is enriched only with concept DOIs (not version
 DOIs) to prevent the public record from being polluted by
 version sprawl.
@@ -295,7 +295,7 @@ version sprawl.
 A maintenance policy in which locale mirrors (translations) of
 a document are added or retired based on *observed* traffic
 data, not *speculated* prospective audiences. See
-[ADR-0005](adr/0005-readme-localization-audience-driven.md). The
+[ADR-0005](decision-history/0005-readme-localization-audience-driven.md). The
 operative principle: maintenance cost is amortized over actual
 audience, not over hoped-for audience.
 
@@ -303,26 +303,26 @@ audience, not over hoped-for audience.
 
 A platform-level human-attention metric — a Git-host star count or a
 repository page-view count — rejected as a framework success metric
-under [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md). Star
+under [ADR-0007](decision-history/0007-human-attention-signals-not-a-metric.md). Star
 counts are *gameable* (purchasable) and page-views are *structurally
 blind to LLM-mediated reach*, so neither is a valid optimization target
 or success metric for an author whose primary audience is LLM-mediated.
 The framework measures success by uses that reach the dated record
-([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)); page views and referrers re-enter only as *arrival
+([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md)); page views and referrers re-enter only as *arrival
 proxies*, recorded as observation. Reception counts of essays and of
 the author as a person are accounted by the author's personal-branding
 strategy, not here.
 
 ## Audience layer (doctrine layer / essay layer) — retired
 
-*Retired 2026-10-11 by [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md), which supersedes ADR-0022:
+*Retired 2026-10-11 by [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md), which supersedes ADR-0022:
 artifacts are written for both readers, so a genre no longer selects a
 single audience; reception counts belong to the personal-branding
 strategy and the essay corpus. The entry is kept for reading the
 records written before that date.* An accounting stratum of the program's output with its own primary
 audience, time constant, and instruments, introduced by
-[ADR-0022](adr/0022-audience-layer-split.md) and routed by genre
-([ADR-0016](adr/0016-genre-split-placement.md)). The **doctrine
+[ADR-0022](decision-history/0022-audience-layer-split.md) and routed by genre
+([ADR-0016](decision-history/0016-genre-split-placement.md)). The **doctrine
 layer** — the doctrine repositories and the paper genre — keeps
 LLM-mediated channels as its primary audience on a months-to-years
 time constant. The **essay layer** — the governed essay corpus and
@@ -332,10 +332,10 @@ contemporaneous reception signals (reads, reactions, follower
 counts) are legitimate to observe and to steer by. The term is
 distinct from three neighbors: the framework's judgment stack
 (Layers 1–4), the two ingestion channels of
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
+[ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md)
 (parametric / retrieval, which run over artifacts in both audience
 layers), and the two ledger tiers of
-[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md)
+[ADR-0014](decision-history/0014-implementation-tracking-two-tier-ledger.md)
 (private ledger / public projection). The assignment governs
 accounting and metrics only; canonical, priority claim, and license
 selection are unchanged (ADR-0015/0016).
@@ -356,7 +356,7 @@ through traffic data; adoption requires separate signal (see
 
 The refinement of [Attribution Diffusion](#attribution-diffusion-layer-2)
 into two mechanisms with opposite time constants and opposite levers,
-introduced in [ADR-0008](adr/0008-rag-era-attribution-diffusion.md). The
+introduced in [ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md). The
 *parametric channel* absorbs the idea into model weights at training time
 (slow; driven by broad cross-platform co-occurrence of distinctive
 vocabulary with its source). The *retrieval channel* fetches the artifact
@@ -369,7 +369,7 @@ placement inside the authorship-diffusion strategy, not the underlying
 citation mechanics.
 
 Whether the parametric channel can be *measured* — not merely asserted, the
-open question [ADR-0008](adr/0008-rag-era-attribution-diffusion.md) leaves — is
+open question [ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md) leaves — is
 taken up by 2026 training-data-attribution work: Concept Influence
 (arXiv:2602.14869) recovers an idea as a parametric concept *direction* rather
 than verbatim text, and Mechanistic Data Attribution (arXiv:2601.21996) traces
@@ -379,13 +379,13 @@ burn-in inside a closed commercial LLM, so this framework adopts them as
 upstream evidence, not as a closure of the gap. The *black-box* side of the
 gap — behavioral measurement against closed commercial models — is closed by
 the retrieval-suppressed naming probe of
-[ADR-0011](adr/0011-two-channel-probe-protocol.md).
+[ADR-0011](decision-history/0011-two-channel-probe-protocol.md).
 
 ## Ghost Citation
 
 An answer in which a retrieval-augmented system cites an artifact's
 URL but does not name or recommend its author. The framework named it a
-failure mode until 2026-10-11; under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) a citation of an
+failure mode until 2026-10-11; under [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) a citation of an
 owned identifier is an *arrival* at the dated record, and the missing
 name is an observation. The original explanation of the pattern: the
 author's name was never burned into parametric memory. This attribution-loss sense is the
@@ -396,12 +396,12 @@ the brand is named against 10.6% when it is not — a parametric channel that
 gates the retrieval channel rather than the reverse. (The term *ghost
 citation* is also used in arXiv:2602.06718 for a disjoint phenomenon —
 fabricated or invalid citations to non-existent sources — so the two senses
-should not be conflated.) [ADR-0008](adr/0008-rag-era-attribution-diffusion.md)
+should not be conflated.) [ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md)
 places it inside the two-channel mechanism as the diagnostic that the
 parametric and retrieval channels are distinct and must be pursued in
 parallel: a working retrieval channel atop absent parametric burn-in
 produces a citation without resurfacing the attribution. Under
-[ADR-0011](adr/0011-two-channel-probe-protocol.md) ghost citation is a
+[ADR-0011](decision-history/0011-two-channel-probe-protocol.md) ghost citation is a
 measured rate: an owned identifier cited while the author goes unnamed in
 prose, derived from independently recorded booleans.
 
@@ -411,11 +411,11 @@ The measurement instrument for the parametric channel: a fixed,
 single-variable prompt sent to a model with all search and grounding tools
 suppressed, asking what a concept is and who coined or maintains it. Success
 was defined as the model producing the concept and its author's name from
-trained weights alone; under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) the output is read as
+trained weights alone; under [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) the output is read as
 observation — a recalled name, project name or DOI is a pointer back to the
 record. The probe is the behavioral, black-box counterpart to the white-box
 training-data-attribution methods above. Defined and operated by
-[ADR-0011](adr/0011-two-channel-probe-protocol.md) together with its
+[ADR-0011](decision-history/0011-two-channel-probe-protocol.md) together with its
 search-enabled twin (the citation probe, which makes ghost citation
 observable within a single answer) and a negative-control probe — a
 plausible nonexistent concept whose confident attributions quantify the

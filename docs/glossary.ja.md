@@ -40,7 +40,7 @@ Heidegger の *Eigentlichkeit*) より narrow である; 具体的には、dilut
 
 Framework の第 2 層の防御戦略: 著者のアイデアの use のうち dated record ——
 concept-DOI deposit または timestamp された repository —— に到達するものを
-最大化すること ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。回答内の著者名は観測するが要件にしない;
+最大化すること ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md))。回答内の著者名は観測するが要件にしない;
 *Arrival* 参照。ここで「attribution」は *credit for source* (誰が最初にこれを articulate したか)
 を意味し、*accountability for action* (この失敗について誰が責任を負うか) を
 意味しない。下の disjoint entry 参照。
@@ -49,7 +49,7 @@ concept-DOI deposit または timestamp された repository —— に到達す
 
 著者の idea の use のうち、それを timestamp する record —— concept-DOI deposit、
 または commit history と archive identifier を持つ repository —— へ戻るもの。
-[ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) のもとで arrival は framework の success criterion
+[ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md) のもとで arrival は framework の success criterion
 であり、二段階で判定する: *到達を伴う use* (その idea について record を cite する
 回答、record に link する derivative、install され走らされた component) は
 evidence である; *arrival proxy* (clone、page view、referrer、DOI resolution、
@@ -115,8 +115,8 @@ Abstract-doctrine-plus-worked-implementation ペアで使われる。Implementat
 
 Zenodo (または同等の archive) Digital Object Identifier のうち、deposit の最新
 version に resolve するもの。特定 release に resolve する version-specific DOI と
-対比される。[ADR-0001](adr/0001-concept-doi-canonical.ja.md) 下では concept DOI が
-canonical reference である; version DOI は再現性のために特定の歴史的 version を
+対比される。concept DOI が canonical reference である（[adoption](adoption.md) の step 1。理由の記録は
+[ADR-0001](decision-history/0001-concept-doi-canonical.ja.md)）; version DOI は再現性のために特定の歴史的 version を
 引用するときのみ適切。
 
 ## Version DOI
@@ -124,7 +124,7 @@ canonical reference である; version DOI は再現性のために特定の歴�
 Zenodo (または同等の archive) DOI のうち、特定 release に resolve するもの。Tagged
 release ごとに新しい version DOI が発行される。Version DOI は時間とともに蓄積される;
 concept DOI はしない。本 repo では特定の歴史的 version の再現性引用時のみ使い、
-canonical reference としては決して使わない。[ADR-0001](adr/0001-concept-doi-canonical.ja.md)
+canonical reference としては決して使わない。[ADR-0001](decision-history/0001-concept-doi-canonical.ja.md)
 参照。
 
 ## DOI federation
@@ -132,7 +132,7 @@ canonical reference としては決して使わない。[ADR-0001](adr/0001-conc
 DOI 登録 artifact の引用ネットワークを metadata として宣言し、ネットワークが narrative
 disclosure を要求せずに metadata だけから recoverable になる実践。本 repo では
 federation は `.zenodo.json` の `relatedIdentifiers` 宣言で実装される。
-[ADR-0002](adr/0002-doi-federation-via-zenodo-json.ja.md) 参照。
+[ADR-0002](decision-history/0002-doi-federation-via-zenodo-json.ja.md) 参照。
 
 ## Cross-platform federation
 
@@ -140,7 +140,7 @@ federation は `.zenodo.json` の `relatedIdentifiers` 宣言で実装される�
 for DOI registration、Hugging Face Datasets for LLM training ingest) に配置し、
 各 platform 上で sibling 関係を宣言することで、ある platform で artifact を見つけた
 reader が他の platform 上のその存在を発見できるようにする実践。
-[ADR-0003](adr/0003-cross-platform-dataset-federation.ja.md) 参照。
+[ADR-0003](decision-history/0003-cross-platform-dataset-federation.ja.md) 参照。
 
 ## LLM-mediated channel
 
@@ -151,9 +151,9 @@ in-context reader (LLM が query の一部として content を読むよう求�
 AI-assistant suggestion (AI coding assistant を使う開発者が content から派生した
 text を見せられる)。各チャネルは record への経路の 1 つである; framework は
 record に到達する use を数えるのであって、特定チャネルの depth ではない
-([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。
+([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md))。
 
-[ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 下では、
+[ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.ja.md) 下では、
 ingest design の目的で LLM-mediated channel は構造的に異なる 2 sub-population に
 resolve する: *prose-reading channels* (会話型 LLM、in-context documentation
 consultation) と *structured-data-ingesting channels* (training pipeline、
@@ -169,8 +169,8 @@ release ごとに同期的に release するという structural な決定。各
 prose navigator は prose-reading channels を orient し、concept graph は
 structured-data-ingesting channels に concept 間関係を expose する。Pair は
 *enclosure-to-openness* axis を ingest 表面で operational embody したもので、
-片方しか deploy しないと戦略は片肺になる。[ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md)
-下で normatively required。[ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.ja.md) は
+片方しか deploy しないと戦略は片肺になる。[adoption](adoption.md) の step 3 が求める（理由の記録は
+[ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.ja.md)）。[ADR-0009](decision-history/0009-dual-entry-asymmetric-rebalance.ja.md) は
 これを 2026 年の証拠に基づき amend する: 2 つの entry point は co-equal でない
 —— prose navigator の citation 効果は noise であり、(2026-08-19 改訂) concept-form
 graph も短期の citation lever ではない; その仕事は検討対象集合への到達と
@@ -220,8 +220,8 @@ separation*、*attribution diffusion*、*abstract-doctrine-plus-worked-implement
 ## Vocabulary discipline (語彙規律)
 
 いつ distinctive term を造語し、いつ既存語彙を使うかを統べる規律。
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) で parametric channel の
-レバーとして導入され、[ADR-0010](adr/0010-vocabulary-discipline.ja.md) で定義された。
+[ADR-0008](decision-history/0008-rag-era-attribution-diffusion.ja.md) で parametric channel の
+レバーとして導入され、[ADR-0010](decision-history/0010-vocabulary-discipline.ja.md) で定義された。
 造語するのは 3 条件がすべて成立するときのみ —— 概念が既存概念の結合点に立つ
 genuine な新規物である、既存語彙だけで一文定義が書ける、namespace が競合して
 いない —— そして採用したすべての造語を密に anchor する: 既存語彙での glossary
@@ -235,7 +235,7 @@ knowledge-graph edge、本文中での反復使用。それ以外はすべて既
 ## ORCID
 
 works を persistent な著者アイデンティティに anchor する著者識別 service (Open
-Researcher and Contributor ID)。[ADR-0004](adr/0004-authorship-metadata-orcid.ja.md)
+Researcher and Contributor ID)。[ADR-0004](decision-history/0004-authorship-metadata-orcid.ja.md)
 下では、著者の ORCID record は concept DOI のみで enrich される (version DOI ではない)。
 これは version sprawl による公開記録の汚染を防ぐため。
 
@@ -243,40 +243,40 @@ Researcher and Contributor ID)。[ADR-0004](adr/0004-authorship-metadata-orcid.j
 
 document の locale mirror (翻訳) を、*推測される* 想定 audience ではなく、*観測される*
 traffic data に基づいて追加・退役させる維持 policy。
-[ADR-0005](adr/0005-readme-localization-audience-driven.ja.md) 参照。Operative principle:
+[ADR-0005](decision-history/0005-readme-localization-audience-driven.ja.md) 参照。Operative principle:
 維持コストは hoped-for audience ではなく actual audience で amortize される。
 
 ## Human-Attention Signal (人間注意シグナル)
 
 platform-level な human-attention metric —— Git-host の star 数または
-repository の page-view 数 —— であって、[ADR-0007](adr/0007-human-attention-signals-not-a-metric.ja.md)
+repository の page-view 数 —— であって、[ADR-0007](decision-history/0007-human-attention-signals-not-a-metric.ja.md)
 下で framework の success metric として reject されるもの。Star 数は
 *gameable* (購入可能) で、page-view は *LLM-mediated reach に対して
 structurally blind* なので、主 audience が LLM 経由である著者にとって
 どちらも valid な最適化対象でも success metric でもない。Framework は
 success を dated record に到達する use で測る
-([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md)); page view と referrer は *arrival proxy* と
+([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md)); page view と referrer は *arrival proxy* と
 してのみ再び入り、観測として記録される。essay と人物としての著者の reception の
 数は、ここではなく著者の personal-branding 戦略が会計する。
 
 ## Audience layer (doctrine layer / essay layer) — 退役
 
-*2026-10-11 に ADR-0022 を supersede する [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) により
+*2026-10-11 に ADR-0022 を supersede する [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md) により
 退役: artifact は両方の reader に向けて書かれるので、genre はもはや単一の audience
 を選ばない; reception の数は personal-branding 戦略と essay corpus に属する。
 この entry は、その日付より前に書かれた record を読むために残す。* 固有の primary audience・時定数・測定器を持つ、program 産出物の会計上の
-stratum。[ADR-0022](adr/0022-audience-layer-split.ja.md) が導入し、genre で
-routing する ([ADR-0016](adr/0016-genre-split-placement.ja.md))。**doctrine
+stratum。[ADR-0022](decision-history/0022-audience-layer-split.ja.md) が導入し、genre で
+routing する ([ADR-0016](decision-history/0016-genre-split-placement.ja.md))。**doctrine
 layer** —— doctrine repository と paper genre —— は LLM-mediated channel を
 primary audience とし、月〜年の時定数を持つ。**essay layer** —— governed
 essay corpus とその syndication surface —— は同時代の human reader を
 primary audience とし、日〜週の時定数を持ち、そこでは同時代の reception
 signal (reads・反応・follower 数) を観測することも操舵に使うことも正当で
 ある。この用語は 3 つの隣接概念と区別される: framework の判断スタック
-(Layer 1–4)、[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) の
+(Layer 1–4)、[ADR-0008](decision-history/0008-rag-era-attribution-diffusion.ja.md) の
 2 つの ingestion channel (parametric / retrieval —— 両 audience layer の
 artifact の上を走る)、
-[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.ja.md) の 2 つの
+[ADR-0014](decision-history/0014-implementation-tracking-two-tier-ledger.ja.md) の 2 つの
 ledger tier (private ledger / public projection)。この割り当てが規定するのは
 会計と metrics のみで、canonical・priority claim・license 選定は不変である
 (ADR-0015/0016)。
@@ -291,7 +291,7 @@ diffusion は伝播 event (ingestion、citation、mention); adoption は別著�
 
 ## Two-Channel Attribution Diffusion (2 チャネル化された Attribution Diffusion)
 
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) で導入された、
+[ADR-0008](decision-history/0008-rag-era-attribution-diffusion.ja.md) で導入された、
 [Attribution Diffusion](#attribution-diffusion-layer-2) を時定数もレバーも
 正反対の 2 機構に精緻化したもの。*parametric channel* はアイデアを訓練時に
 モデルの重みへ吸収する (遅い; 固有語彙とその出典の広範なクロスプラットフォーム
@@ -304,7 +304,7 @@ authorship-diffusion strategy への placement であって、根底の citation
 mechanics そのものではない。
 
 parametric channel が *測定* できるか —— 単に主張されるだけでなく
-([ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md) が残した open question)
+([ADR-0008](decision-history/0008-rag-era-attribution-diffusion.ja.md) が残した open question)
 —— は 2026 年の training-data-attribution 研究が扱う: Concept Influence
 (arXiv:2602.14869) はアイデアを逐語テキストではなく parametric な概念 *方向* として
 復元し、Mechanistic Data Attribution (arXiv:2601.21996) は interpretable な回路を
@@ -312,14 +312,14 @@ parametric channel が *測定* できるか —— 単に主張されるだけ�
 適用できない; 閉じた商用 LLM 内の焼き込みを測るものではないため、本 framework は
 これらを measurement gap の解消ではなく upstream evidence として adopt する。
 gap の *black-box* 側 —— 閉じた商用モデルに対する行動的測定 —— は
-[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md) の retrieval-suppressed
+[ADR-0011](decision-history/0011-two-channel-probe-protocol.ja.md) の retrieval-suppressed
 naming probe が閉じる。
 
 ## Ghost Citation (幽霊引用)
 
 retrieval-augmented system が artifact の URL を cite するが、著者を名指しも
 推薦もしない回答。framework は 2026-10-11 までこれを failure mode と呼んでいた;
-[ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) のもとでは owned identifier の引用は dated
+[ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md) のもとでは owned identifier の引用は dated
 record への *arrival* であり、名前の欠落は観測である。この pattern の元の説明:
 著者の名前が parametric 記憶に焼き込まれていない。この attribution-loss の意味は framework 自身の用語である。この語が名指す挙動は
 2026 年の generative-engine-optimization 文献に anchor されている — 特に
@@ -328,11 +328,11 @@ rate 53.1% に対し unnamed の場合 10.6% を報告し、parametric channel �
 retrieval channel を gate する（逆ではない）ことと整合する。（*ghost citation*
 という語は arXiv:2602.06718 では disjoint な現象 — 実在しない source への
 捏造・無効な引用 — にも使われるため、両義を混同しないこと。）
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.ja.md)
+[ADR-0008](decision-history/0008-rag-era-attribution-diffusion.ja.md)
 はこれを 2 チャネル機構の中に、parametric と retrieval の 2 チャネルが distinct で
 並行で追うべきことの diagnostic として位置づける: parametric 焼き込み不在の上で
 動く retrieval channel は、帰属を再浮上させずに citation だけを生む。
-[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md) 下では ghost citation は
+[ADR-0011](decision-history/0011-two-channel-probe-protocol.ja.md) 下では ghost citation は
 測定された rate になる: owned identifier が引用されながら著者が prose 中で
 無名のまま、という状態を独立に記録された boolean から導出する。
 
@@ -341,10 +341,10 @@ retrieval channel を gate する（逆ではない）ことと整合する。�
 parametric channel の測定器: search / grounding tool をすべて抑制した状態で
 モデルに送る固定・単一変数の prompt。概念とは何か、誰が coined / maintain して
 いるかを問う。成功は、モデルが訓練済み weights のみから概念とその著者名を
-産出することと定義されていた; [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md) のもとでは
+産出することと定義されていた; [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md) のもとでは
 出力は観測として読む —— 想起された名前・project 名・DOI は record へ戻る pointer
 である。この probe は上記の white-box な training-data-attribution 手法に対する、
-行動的・black-box な対応物である。[ADR-0011](adr/0011-two-channel-probe-protocol.ja.md)
+行動的・black-box な対応物である。[ADR-0011](decision-history/0011-two-channel-probe-protocol.ja.md)
 が、検索有効の双子 (citation probe — ghost citation を単一回答内で観測可能に
 する) および negative-control probe (もっともらしい架空概念 — それへの自信
 ありげな帰属が、誘導質問の生む confabulation noise floor を定量化する) と

@@ -170,7 +170,7 @@ The strategy that defends authenticity under AI-mediated
 diffusion conditions is *maximizing the uses of the author's
 ideas that reach the dated record* — the concept-DOI deposit or
 the repository whose history and archive identifier timestamp
-it ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
+it ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md)).
 A use reaches the record when an answer cites an owned
 identifier for the idea, a derivative links the record, an agent
 installs and runs the component, or a model recalls a pointer to
@@ -268,13 +268,13 @@ substrate retires.
 
 Tactics validated at the time of this thesis (v0.1.0):
 
-1. **Arrival targeting** — uses that reach the dated record (owned identifiers cited in answers, derivatives that link the record, components installed and run, pointers recalled without retrieval) are the evidence; clones, views, referrers, DOI resolutions and llms.txt fetches are arrival proxies; LLM regurgitation tests are the instrument that observes recalled pointers; stars and PRs are outside the success definition. Reception counts of essays and of the author as a person are accounted by the personal-branding strategy ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
-2. **DOI registration through an open archive** — Zenodo or comparable, configured for automatic deposit on tagged release, configured to mint a concept DOI as the canonical reference (see [ADR-0001](adr/0001-concept-doi-canonical.md)).
-3. **Cross-platform federation** — the same canonical artifact deployed to GitHub (repository), Zenodo (DOI registration), and a dataset platform (LLM training ingest), with explicit sibling cross-references on each platform (see [ADR-0003](adr/0003-cross-platform-dataset-federation.md)).
-4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level pointer back to the dated record. The tactic is governed by vocabulary discipline: a coined term's power comes from its edge density, not from the count of coinages, so terms are coined sparingly (only when the concept is genuinely new, definable in one sentence of existing vocabulary, and the namespace is uncontested) and anchored densely to existing vocabulary and prior literature (see [ADR-0010](adr/0010-vocabulary-discipline.md)).
+1. **Arrival targeting** — uses that reach the dated record (owned identifiers cited in answers, derivatives that link the record, components installed and run, pointers recalled without retrieval) are the evidence; clones, views, referrers, DOI resolutions and llms.txt fetches are arrival proxies; LLM regurgitation tests are the instrument that observes recalled pointers; stars and PRs are outside the success definition. Reception counts of essays and of the author as a person are accounted by the personal-branding strategy ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md)).
+2. **DOI registration through an open archive** — Zenodo or comparable, configured for automatic deposit on tagged release, configured to mint a concept DOI as the canonical reference (see [ADR-0001](decision-history/0001-concept-doi-canonical.md)).
+3. **Cross-platform federation** — the same canonical artifact deployed to GitHub (repository), Zenodo (DOI registration), and a dataset platform (LLM training ingest), with explicit sibling cross-references on each platform (see [ADR-0003](decision-history/0003-cross-platform-dataset-federation.md)).
+4. **Distinctive terminology** — domain-specific coined terms function as semantic signatures of authorship. Generic terminology is dissolved by paraphrase; coined terminology survives as a token-level pointer back to the dated record. The tactic is governed by vocabulary discipline: a coined term's power comes from its edge density, not from the count of coinages, so terms are coined sparingly (only when the concept is genuinely new, definable in one sentence of existing vocabulary, and the namespace is uncontested) and anchored densely to existing vocabulary and prior literature (see [ADR-0010](decision-history/0010-vocabulary-discipline.md)).
 5. **Tool-agnostic specification** — specifications written without commitment to a specific implementation are reachable by re-implementation; specifications coupled to a specific implementation lose audience as the implementation ages.
-6. **Multilingual localization, audience-driven** — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences (see [ADR-0005](adr/0005-readme-localization-audience-driven.md)).
-7. **Structured artifacts** — glossary, ADR, JSON schema, JSON-LD knowledge graph, and AI-facing reference files (e.g., the Answer.AI llms.txt convention) make the artifact machine-readable to LLMs and crawlers. The llms.txt + JSON-LD knowledge graph pair specifically is normatively required as the dual entry point for LLM-mediated ingest (see [ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)).
+6. **Multilingual localization, audience-driven** — locale mirrors are added or retired based on observed traffic, not speculation about prospective audiences (see [ADR-0005](decision-history/0005-readme-localization-audience-driven.md)).
+7. **Structured artifacts** — glossary, ADR, JSON schema, JSON-LD knowledge graph, and AI-facing reference files (e.g., the Answer.AI llms.txt convention) make the artifact machine-readable to LLMs and crawlers. The llms.txt + JSON-LD knowledge graph pair specifically is normatively required as the dual entry point for LLM-mediated ingest (see [ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.md)).
 8. **Friction minimization for adoption** — re-implementation paths should require clone-and-copy, not signup, not API key, not bespoke infrastructure. Adoption gated by author-controlled infrastructure is adoption the author has reduced.
 
 ### Origin-claim scope discipline
@@ -297,7 +297,7 @@ uses of the artifact — by people or machines — should reach its
 dated record. The governed essay corpus is one of the routes to
 the record; its reception is accounted by the author's
 personal-branding strategy and the corpus itself
-([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md)).
+([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md)).
 The framework does *not* apply to:
 
 - **Client work and commercial deliverables**, where monetization is the goal and the author's identity is not the protected value.
@@ -335,7 +335,7 @@ framework leaves unanswered are catalogued in
 [`manifesto.md`](manifesto.md).
 
 The framework's tactical decisions are formalized as twenty-six ADRs
-in [`adr/`](adr/). Each ADR is harness-neutral; the lineage to
+in [`adr/`](decision-history/). Each ADR is harness-neutral; the lineage to
 the author's specific decisions is recorded in the ADR's Lineage
 section without requiring the reader to have access to the
 original implementation.

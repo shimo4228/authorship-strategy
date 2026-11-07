@@ -6,8 +6,8 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
 
 ## Scope searched
 
-- AS: `docs/thesis(.ja).md`、`docs/adr/0001–0023`（EN 主、JA は行番号を要所のみ）、`docs/manifesto.md`、`docs/glossary(.ja).md`、`README(.ja).md`、`llms.txt`、`llms-full.txt`、`graph.jsonld`、`docs/CODEMAPS/architecture.md`、`docs/maintenance.md`、`docs/adoption.md`、`docs/empirical/*`、`scripts/verify-layer-boundary.sh`、`scripts/verify-counts.sh`、`CITATION.cff`、`.zenodo.json`、`codemeta.json`、`CHANGELOG.md`（見出しのみ）。
-- PB: `docs/strategy.md`（全文）、`CLAUDE.md`、`docs/adr/0001`、`0005`（全文）、`0002/0003/0004/0006`（grep）、`README(.ja).md`（grep）。
+- AS: `docs/thesis(.ja).md`、`docs/decision-history/0001–0023`（EN 主、JA は行番号を要所のみ）、`docs/manifesto.md`、`docs/glossary(.ja).md`、`README(.ja).md`、`llms.txt`、`llms-full.txt`、`graph.jsonld`、`docs/CODEMAPS/architecture.md`、`docs/maintenance.md`、`docs/adoption.md`、`docs/empirical/*`、`scripts/verify-layer-boundary.sh`、`scripts/verify-counts.sh`、`CITATION.cff`、`.zenodo.json`、`codemeta.json`、`CHANGELOG.md`（見出しのみ）。
+- PB: `docs/strategy.md`（全文）、`CLAUDE.md`、`docs/decision-history/0001`、`0005`（全文）、`0002/0003/0004/0006`（grep）、`README(.ja).md`（grep）。
 - 派生: `~/.claude/skills/authorship-strategy/{SKILL.md,references/strategy-reference.md,references/action-review.md}`、`~/.claude/skills/adr-writer/SKILL.md`。
 - zenn-content は grep のみ（範囲外の参考）。
 - 制約: この session に Bash が無い。**`verify-counts.sh` / `verify-layer-boundary.sh` は実行していない（本文を読んだだけ）**。`git log` も実行できず、`.git/logs/HEAD` の reflog 4 行（commit 件名）しか見ていない。ADR-0022 / 0023 の追加 commit が実際に触ったファイル一覧は未確認で、下の carrier 一覧は現ツリーの grep から作った。
@@ -37,7 +37,7 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
 - thesis.md:263 tactic 4「Distinctive terminology … coined terminology survives as a token-level signal carrying back-reference to the author」。「author への back-reference」を「記録への pointer」と書き換えると D1 と整合する。根拠の骨格（造語 = 逆引きの手がかり）は残る。
 - thesis.ja.md の対応箇所は :52–53, :87, :131–148, :181, :207, :210。
 
-**ADR-0007**（`docs/adr/0007-human-attention-signals-not-a-metric.md`）
+**ADR-0007**（`docs/decision-history/0007-human-attention-signals-not-a-metric.md`）
 - :15–17 Summary の末文「Success continues to be measured by the breadth of LLM-mediated channels carrying the author's signature」。
 - :106–110 **clause 3「The success metric remains LLM-mediated reach」**。「machine ingestion, programmatic retrieval, knowledge-graph presence, and citation within LLM answers — is the operative measure」。D1 で書き換わる条項。
 - :117–121「Genuine human reach is pursued *through* the LLM-mediated channel」。
@@ -181,13 +181,13 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
 - docs/maintenance.md:58–61。
 - docs/adoption.md:129, :144。
 - docs/empirical/implementation-log.md:98–104, :219–229。tactic-lifecycle.md:62。adoption-dry-run-2026-09.md:58, :97–98。
-- docs/adr/README.md:19, :34, :265–287（ADR-0022 の語り）。README.ja.md の同箇所（:35 前後, :260 前後）。
+- docs/decision-history/README.md:19, :34, :265–287（ADR-0022 の語り）。README.ja.md の同箇所（:35 前後, :260 前後）。
 - .zenodo.json:10, codemeta.json:15, CITATION.cff:80–84。
 - CLAUDE.md / AGENTS.md には audience 層分割の記述が無い（変更不要）。
 
 **`scripts/verify-layer-boundary.sh` が何をするか（読んだ内容）**
 - 目的（:3–28 のコメント）: ADR-0022 の boundary 条項「essay-layer signals do not flow into doctrine-layer decisions」の「テキスト上の痕跡」を機械検出する。決定が実際に reception に左右されたかは検出できないと自認している。OQ11 が指摘した「規律を機構にする」ための執行器。
-- 走査対象（:34–40）: `git ls-files` の `docs/thesis*.md`, `docs/manifesto.md`, `docs/glossary*.md`, `docs/adr/*.md`（README と .ja を含む）, `README*.md`, `llms*.txt`, `CITATION.cff`。**走査しないもの**: `docs/empirical/`, `docs/CODEMAPS/`, `docs/maintenance.md`, `docs/adoption.md`, `graph.jsonld`, `.zenodo.json`, `codemeta.json`, `CLAUDE.md`, `AGENTS.md`。
+- 走査対象（:34–40）: `git ls-files` の `docs/thesis*.md`, `docs/manifesto.md`, `docs/glossary*.md`, `docs/decision-history/*.md`（README と .ja を含む）, `README*.md`, `llms*.txt`, `CITATION.cff`。**走査しないもの**: `docs/empirical/`, `docs/CODEMAPS/`, `docs/maintenance.md`, `docs/adoption.md`, `graph.jsonld`, `.zenodo.json`, `codemeta.json`, `CLAUDE.md`, `AGENTS.md`。
 - チェック 1 SOURCE（:58–65）: 全 doctrine carrier に対し正規表現 `metrics/snapshots|snapshots\.jsonl|schedule\.json` を grep。当たったら DRIFT。
 - チェック 2 NUMBER（:67–78）: PROSE（doctrine から `llms-full.txt` を除く）に対し「数字 + (k/K/万/件/回)? + likes/reads/views/reactions/followers/いいね/閲覧/リアクション/フォロワー」を grep。当たったら DRIFT。数字 + 名詞に固定しているので、ADR-0007 / 0022 / glossary の定義的な名詞言及は通る。
 - 終了: DRIFT があれば exit 1。メッセージ（:84–86）は「Move the passage to docs/empirical/ or the essay layer, or supersede the ADR-0022 boundary clause by ADR. Do not silence the finding here.」
@@ -197,7 +197,7 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
   - 壊れるのは機械ではなく根拠の参照先。ヘッダ（:3–28）、メッセージ（:84–86）、maintenance.md:58–61、CODEMAPS:37 / :103 はすべて「ADR-0022 boundary 条項」「doctrine 層 / essay 層」を前提にしている。D2 で ADR-0022 の層分割が畳まれると、script の説明が指す条項が存在しなくなる。
   - 検査対象の語彙（"doctrine carriers"）も、層分割が無くなると何を指すのか曖昧になる。
   - 検査の意味は残りうる。NUMBER は ADR-0007 clause 1（platform human-attention metric を成功指標にしない）の“テキスト上の痕跡”としても読め、SOURCE は「essay 側の計測 file 名を doctrine 文書に書かない」ルールとして読める。ただし D2 は「禁止を足さない」とも言うので、この 2 検査を残すか、根拠をどこに移すか（共通原理 PB strategy §10 / zenn-content ADR-0001）は未決。
-  - **ADR-0024 を書くときの実害**: ADR-0024 本文（`docs/adr/*.md` は走査対象）に `schedule.json` / `metrics/snapshots` を書く、または「63 followers」「5 reads」のような数字+名詞を書く（PB ADR-0005:15 は follower 63 を引用している）と、script が DRIFT を出す。Context / Lineage で PB の数字を引くときは注意が要る。
+  - **ADR-0024 を書くときの実害**: ADR-0024 本文（`docs/decision-history/*.md` は走査対象）に `schedule.json` / `metrics/snapshots` を書く、または「63 followers」「5 reads」のような数字+名詞を書く（PB ADR-0005:15 は follower 63 を引用している）と、script が DRIFT を出す。Context / Lineage で PB の数字を引くときは注意が要る。
 
 ### 3. personal-branding
 
@@ -216,13 +216,13 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
 - :165–169（3 つの決定）。決定 2 が「ADR-0007 第 2 項の“自己宣伝”に当たらない」を AS ADR-0007 に直接依存して述べている。
 - :168, :37 の ADR-0007 第 2 項への参照は、AS 側の Note（ADR-0007:99–105）と対になっている。
 
-**docs/adr/0001-personal-branding-as-separate-payload.md**
+**docs/decision-history/0001-personal-branding-as-separate-payload.md**
 - :17「authorship-strategy ADR-0007 は研究 line について off-page human-distribution への不投資を決定済み」。
 - :24「ADR-0007 を覆さない」。
 - :34 Alternatives 2「authorship-strategy に統合 — 却下。**audience が LLM-mediated channels に thesis レベルで固定済み**」。**AS の LLM-only audience を却下理由に引いている箇所。** D2 後は、この理由が“audience”でなく“所有する問い”の違いに言い換わる必要がある。
 - :29, :45 の 2026-10-11 注記（ADR-0006）。既に 2 つの禁止を外した記録がある。
 
-**docs/adr/0005-numbers-on-actions-rules-on-results.md**
+**docs/decision-history/0005-numbers-on-actions-rules-on-results.md**
 - :22「authorship-strategy ADR-0007 第 2 項 … ADR-0022 はこれを両層で維持した」。
 - :24–26「ADR-0022 Decision 2 は essay 層で topic 選択を reception で steer してよい」。
 - :27–28（ADR-0004 Decision 5 の practitioner 層）。
@@ -250,8 +250,8 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
 ### 5. ADR-0024 を 1 本足すときの carrier と convention
 
 **guard の範囲**（`verify-counts.sh`）
-- 対象 file: `git ls-files` の `*.md *.txt *.cff *.json *.jsonld` から `CHANGELOG.md` と `docs/adr/[0-9]*`（個別 ADR）を除いたもの。`docs/adr/README.md` / `README.ja.md` は対象に入る。
-- ADR 総数の名詞は、複数形 `ADRs`, `tactical decisions`, `tactical ADRs`, `decisions extracted`, `の ADR`, `の戦術的判断` に限る。ADR 総数 = `docs/adr/[0-9]*.md` から `.ja.md` を除いた数（現在 23）。
+- 対象 file: `git ls-files` の `*.md *.txt *.cff *.json *.jsonld` から `CHANGELOG.md` と `docs/decision-history/[0-9]*`（個別 ADR）を除いたもの。`docs/decision-history/README.md` / `README.ja.md` は対象に入る。
+- ADR 総数の名詞は、複数形 `ADRs`, `tactical decisions`, `tactical ADRs`, `decisions extracted`, `の ADR`, `の戦術的判断` に限る。ADR 総数 = `docs/decision-history/[0-9]*.md` から `.ja.md` を除いた数（現在 23）。
 - open questions 総数 = `docs/manifesto.md` の `^## Open question ` 見出し数（現在 11）。名詞は `open questions`。
 - **guard が見えない形**: 「tactics」「23 の戦術」（"の戦術的判断" でない）、行折り返し（CITATION.cff:41）、"Twenty-three" 以外の綴り。これらは目視で足す必要がある。
 - 数字は英語で `twenty-three`、日本語で `23 の ADR` / `23 の戦術的判断` の形。
@@ -267,7 +267,7 @@ D1 / D2 は著者の決定として与件。ここに Verdict は書かない。
 - `llms-full.txt:5, :35, :158, :160, :826`
 - `graph.jsonld:40, :99, :899`
 - `docs/CODEMAPS/architecture.md:31 ("23 ADRs"), :49 ("Twenty-three ADRs"), :59, :72 ("23 ADRs")`
-- ADR index 側: `docs/adr/README.md`（index 表 :13–35 の末尾に 0024 の行、:265–287 の語りと同形の 1 段落）と `docs/adr/README.ja.md` の同箇所（:35 付近, :260 付近）。
+- ADR index 側: `docs/decision-history/README.md`（index 表 :13–35 の末尾に 0024 の行、:265–287 の語りと同形の 1 段落）と `docs/decision-history/README.ja.md` の同箇所（:35 付近, :260 付近）。
 - ADR 個別項目 / 一覧が増える carrier（数字でなく行を足す）: `llms.txt`（ADR 一覧と語り）、`llms-full.txt`（ADR 節、:469 前後と :658 前後に ADR-0022 の記述）、`graph.jsonld`（新 ADR node。:828–839 の形に倣い extends を持つ。Tactics layer 側の `instantiatedBy` 辺も足す — CODEMAPS:114）、`docs/adoption.md`（ADR 表。:129–145）、`docs/CODEMAPS/architecture.md`（:31, :49 の長い cluster 記述）、`docs/empirical/tactic-lifecycle.md`（:62 の onboard / retire 行の形）、`CHANGELOG.md` の `[Unreleased]`（CODEMAPS:114）。
 - OQ 数が変わるなら: CODEMAPS:28, :46、llms*.txt、manifesto 見出し。
 - Hub back-propagation: 新規 ADR / 大規模 thesis 改訂は hub（`shimo4228/shimo4228`）の `graph.jsonld` と README に反映が要る（CODEMAPS:104、maintenance.md:54）。

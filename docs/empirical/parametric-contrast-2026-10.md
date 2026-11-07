@@ -1,7 +1,7 @@
 # Parametric Contrast — Autumn 2026 (result)
 
 *Role: result of a contrast designed before the data, per
-[ADR-0023](../adr/0023-empirical-layer-role.md) Decision 3. Reading: "no
+[ADR-0023](../decision-history/0023-empirical-layer-role.md) Decision 3. Reading: "no
 transition observed", an outcome the pre-registration names, so the
 reading is within its rules.*
 

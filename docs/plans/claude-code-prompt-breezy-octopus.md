@@ -15,7 +15,7 @@
 | Person | ORCID `0009-0002-6168-4162`(graph.jsonld Person node @id、8-link sameAs、Wikidata は ADR-0021 で完全 purge 済・残渣ゼロ) | graph.jsonld:74 |
 | Project/line | hub repo `shimo4228/shimo4228` + hub graph.jsonld の `ResearchLine` node(hub 自身は DOI なし・by design) | hub CLAUDE.md |
 | Concept | `https://shimo4228.github.io/shimo4228/vocab#concept/<slug>`(共有 3)+ `…vocab#as/concept/<slug>`(line 固有 17)、`DefinedTerm` co-typed、旧 repo-fragment URI は sameAs 保持(T36, 2026-08-25) | graph.jsonld:114-147 |
-| Decision | ADR ×23、@id = `github.com/…#adr/NNNN` fragment | docs/adr/ |
+| Decision | ADR ×23、@id = `github.com/…#adr/NNNN` fragment | docs/decision-history/ |
 | Release | concept DOI `10.5281/zenodo.20263316` + version DOI(Zenodo 自動 `IsVersionOf`/`HasVersion`) | CITATION.cff |
 | Exact source | SWHID `swh:1:snp:*` ×6(累積、**CITATION.cff のみ** — .zenodo.json / codemeta / DataCite に未投影) | CITATION.cff |
 | Relation projection | `.zenodo.json` 42 related_identifiers → DataCite へ verbatim 伝播(実測確認) | .zenodo.json |

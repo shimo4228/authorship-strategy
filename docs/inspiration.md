@@ -94,7 +94,7 @@ idea-versus-scaffold) layers above it.
 A distinct strand of 2026 work measures the *mechanics* of LLM
 citation directly, and it is this strand — not the author's own
 traffic data alone — that grounds the two-channel refinement in
-[ADR-0008](adr/0008-rag-era-attribution-diffusion.md). The
+[ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md). The
 relationship is downstream: the two-channel mechanism was
 articulated after, and on the basis of, this literature. The
 framework's contribution is the *normative placement* of the
@@ -138,7 +138,7 @@ prior art rather than originates.
   how much a fetched page contributes to the answer, across ChatGPT,
   Google AI Overview/Gemini, and Perplexity. It grounds the
   retrieval-channel measurement caution — also recorded in
-  [ADR-0007](adr/0007-human-attention-signals-not-a-metric.md) —
+  [ADR-0007](decision-history/0007-human-attention-signals-not-a-metric.md) —
   that a raw citation count is not a measure of influence.
 - *Diagnosing and Repairing Citation Failures in Generative Engine
   Optimization* (Tian et al., arXiv:2603.09296) supplies a taxonomy
@@ -163,7 +163,7 @@ prior art rather than originates.
 The framing of this literature is marketing-optimization: how to
 make a brand win citations. The framework reads the same mechanics
 the other way, through the human-attention-signal rejection
-([ADR-0007](adr/0007-human-attention-signals-not-a-metric.md)) and
+([ADR-0007](decision-history/0007-human-attention-signals-not-a-metric.md)) and
 the Layer 1 authenticity commitment (genuine articulation, with
 revenue playing no part): it asks not how to
 capture citations but whether an author's *signature* survives
@@ -181,7 +181,7 @@ side. Where the citation-mechanics literature infers two channels from
 how answers are produced, this strand probes the model's internal
 representations directly — and its independent arrival at the same
 parametric/contextual split is what raises the two-channel mechanism
-([ADR-0008](adr/0008-rag-era-attribution-diffusion.md)) above a
+([ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md)) above a
 measurement artifact of any single method.
 
 - *Probing for Knowledge Attribution in Large Language Models* (Brink
@@ -190,7 +190,7 @@ measurement artifact of any single method.
   knowledge source behind each output — separating answers driven by
   provided context from answers driven by internal (parametric)
   knowledge. That a behavioral probe (the retrieval-suppressed naming
-  probe of [ADR-0011](adr/0011-two-channel-probe-protocol.md)) and a
+  probe of [ADR-0011](decision-history/0011-two-channel-probe-protocol.md)) and a
   white-box linear probe independently resolve the same two sources is
   external support for the framework's premise that the parametric and
   retrieval channels are separately measurable entities, not two names
@@ -214,10 +214,10 @@ measurement artifact of any single method.
   across sixteen dense models from four families (74–94% within a
   single family), under a superposition-inspired account in which
   recall is gated by a signal-to-noise ratio. For the probe protocol
-  ([ADR-0011](adr/0011-two-channel-probe-protocol.md)) this makes the
+  ([ADR-0011](decision-history/0011-two-channel-probe-protocol.md)) this makes the
   parametric channel's success *predictable at design time*, and it
   sharpens the framework's own neologism caution
-  ([ADR-0010](adr/0010-vocabulary-discipline.md)): a coined term, by
+  ([ADR-0010](decision-history/0010-vocabulary-discipline.md)): a coined term, by
   construction, appears in the fewest documents — the lowest topic
   frequency — and so sits at the harshest end of the noise floor,
   which is exactly why coinage must be anchored densely rather than
@@ -227,7 +227,7 @@ measurement artifact of any single method.
   parametric memory and finds the reconstruction is gated by prior
   citation prominence — already-prominent scholars are recalled more
   reliably — though non-uniformly across fields and regions. For the
-  naming probe ([ADR-0011](adr/0011-two-channel-probe-protocol.md))
+  naming probe ([ADR-0011](decision-history/0011-two-channel-probe-protocol.md))
   this is direct evidence that what the parametric channel recalls and
   names reads back *authority* unequally rather than presence
   neutrally, and it grounds [manifesto open question 9](manifesto.md)
@@ -259,9 +259,9 @@ altogether (ADR-0009, revised 2026-08-19).
   gains, which come from the enhanced entity-page format (markup plus
   agent instructions and structured retrieval), not markup in isolation
   — external grounding for the concept-form half of the dual entry point
-  ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.md)) and for
+  ([ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.md)) and for
   the structured-graph entry point of
-  [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) (whose
+  [ADR-0009](decision-history/0009-dual-entry-asymmetric-rebalance.md) (whose
   success criterion, since the 2026-08-19 revision, is consideration-set
   entry / entity resolution rather than a citation lift), carrying the
   same presence-is-not-the-lever caveat the Fischman result makes.
@@ -362,7 +362,7 @@ altogether (ADR-0009, revised 2026-08-19).
   one engine family, small n; read against the framework, it is the
   causal counterpart of the survey above — presentation redistributes
   credit among documents already retrieved, and admission comes first.
-  Grounding for [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md).*
+  Grounding for [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md).*
 - *The Attribution Crisis in LLM Search Results* (Strauss, Yang,
   O'Reilly, Rosenblat and Moure, arXiv:2508.00838, v1 2025-06-27)
   analyzes roughly 14,000 conversation logs from search-enabled answer
@@ -375,7 +375,7 @@ altogether (ADR-0009, revised 2026-08-19).
   production traffic; read against the framework, it is why a
   success criterion that requires the answer to print the author's
   name scores much ordinary use as failure, and why
-  [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) places
+  [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) places
   success on arrival at the dated record rather than on the name.*
 - *Structural Feature Engineering for Generative Engine Optimization*
   (Yu et al., arXiv:2603.29979) and *Think Before Writing:
@@ -400,7 +400,7 @@ altogether (ADR-0009, revised 2026-08-19).
 
 The findings are not in tension once read through the
 anchor-densely discipline
-([ADR-0010](adr/0010-vocabulary-discipline.md)): structured-data
+([ADR-0010](decision-history/0010-vocabulary-discipline.md)): structured-data
 *presence* is not the lever; attribute-rich, entity-anchored structure
 is — the same edge-density asymmetry the vocabulary discipline records
 for coinage. This *refines* rather than refutes the structured-artifact
@@ -435,7 +435,7 @@ as a tactic: it suggests an authorial signature can persist through
 AI-mediated rephrasing (relevant to whether a diffused idea still
 carries its author's hand), but the framework deliberately does not
 build a stylometric self-measure, both because Layer 1's
-metric-rejection commitment ([ADR-0007](adr/0007-human-attention-signals-not-a-metric.md))
+metric-rejection commitment ([ADR-0007](decision-history/0007-human-attention-signals-not-a-metric.md))
 treats authenticity as a value rather than a score, and because the
 distinguishability is a *present* property that a later model trained
 to match human perplexity could erase — so authenticity is held as a
@@ -467,8 +467,8 @@ thesis, whose three-axis structure is held stable across releases.
 ### Measurement and channel-fidelity literature (2026)
 
 A cluster of 2026 results bears on how the framework's measurement
-layer ([ADR-0011](adr/0011-two-channel-probe-protocol.md)) and channel
-model ([ADR-0008](adr/0008-rag-era-attribution-diffusion.md)) should be
+layer ([ADR-0011](decision-history/0011-two-channel-probe-protocol.md)) and channel
+model ([ADR-0008](decision-history/0008-rag-era-attribution-diffusion.md)) should be
 calibrated. Numbers are quarantined here; the ADR bodies and the
 knowledge graph carry the qualitative mechanism only.
 
@@ -578,7 +578,7 @@ knowledge graph carry the qualitative mechanism only.
   decomposes patent claims into features and maps each to disclosing
   passages of prior art, following institutional examination records —
   a granular procedural template for the falsifiability discipline of
-  [ADR-0018](adr/0018-claim-falsifiability-criterion.md), with the caveat
+  [ADR-0018](decision-history/0018-claim-falsifiability-criterion.md), with the caveat
   that feature-level transparency and final-verdict accuracy proved to
   be separate axes.
 
@@ -589,7 +589,7 @@ knowledge graph carry the qualitative mechanism only.
   style from content for attribution and exposes a trade-off: the less
   semantically predictable a coinage, the weaker style-based
   attribution becomes. Read with
-  [ADR-0010](adr/0010-vocabulary-discipline.md), this moves the
+  [ADR-0010](decision-history/0010-vocabulary-discipline.md), this moves the
   defensible object of an origin claim from writing style to the
   occupancy of a previously unnamed conceptual coordinate.
 - *From sunblock to softblock* (Ryskina et al., arXiv:2602.13123)
@@ -624,7 +624,7 @@ knowledge graph carry the qualitative mechanism only.
   compress consumption into one or two requests invisible to
   client-side analytics — endpoint-level grounding for the
   prose-navigator asymmetry of
-  [ADR-0009](adr/0009-dual-entry-asymmetric-rebalance.md) and for the
+  [ADR-0009](decision-history/0009-dual-entry-asymmetric-rebalance.md) and for the
   attention-signal rejection of ADR-0007.
 - *Science Behind a Paywall* (Zheng and Zhan, Learned Publishing,
   doi:10.1002/leap.2059) argues paywalled access materially constrains
@@ -800,7 +800,7 @@ Each of these seven founding ADRs (0001–0007) traces to a recurring
 decision in the sibling-line operation. The lineage is recorded in each
 ADR's *Lineage* section; this document summarizes the chain for the
 founding set. The ADRs added in later releases (0008 onward) record
-their origins in their own *Lineage* sections; the [ADR index](adr/README.md)
+their origins in their own *Lineage* sections; the [ADR index](decision-history/README.md)
 lists the full current catalog and its groupings.
 
 | ADR | Origin |
@@ -840,7 +840,7 @@ debts and the sibling decisions that informed it could read in
 this order:
 
 1. [`thesis.md`](thesis.md) for the framework's core claim.
-2. The ADRs in [`adr/`](adr/), in numerical order, for the tactical decisions.
+2. The ADRs in [`adr/`](decision-history/), in numerical order, for the tactical decisions.
 3. The sibling repositories' READMEs (AKC, Contemplative Agent, AAP) for the operational context the framework was extracted from.
 4. The prior literature cited above for the framework's grounding in book history, platform economics, and scientometrics.
 5. [`manifesto.md`](manifesto.md) for the open questions the framework leaves unanswered.

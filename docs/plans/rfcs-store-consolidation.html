@@ -124,7 +124,7 @@ draft — 再開条件は成立済み。採否は著者の判断待ち（2026-10
 <script type="text/plain">
    git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld' \
      | grep -vE '^CHANGELOG\.md$' \
-     | grep -vE '^docs/adr/[0-9]' \
+     | grep -vE '^docs/decision-history/[0-9]' \
 -    | grep -vE '^docs/plans/')
 +    | grep -vE '^docs/plans/' \
 +    | grep -vE '^rfcs/')
@@ -229,7 +229,7 @@ repo の外  memory と .notes の整理（claim 5）、~/.claude の skill と 
 <!-- ═════ 4 ═════ -->
 <doc-claim>
   <p>実施の記録順は「rfc の state → implementation-log」になる。</p>
-  <doc-code title="docs/adr/0025-planning-and-state-in-the-public-rfc-store.md · sketch" lang="markdown">
+  <doc-code title="docs/decision-history/0025-planning-and-state-in-the-public-rfc-store.md · sketch" lang="markdown">
 <script type="text/plain">
 # ADR-0025: Planning and Task State in the Public RFC Store
 ## Status     accepted
@@ -260,7 +260,7 @@ repo の外  memory と .notes の整理（claim 5）、~/.claude の skill と 
 
   <doc-claim>
     <p>ADR-0014 と ADR-0024 は日付つき注記で新 ADR を指す。</p>
-    <doc-code src="docs/adr/0014-implementation-tracking-two-tier-ledger.md" lines="73-76" hl="75-76">
+    <doc-code src="docs/decision-history/0014-implementation-tracking-two-tier-ledger.md" lines="73-76" hl="75-76">
       <doc-pin line="75" tone="warn" title="ADR-0025 が採る案">この Alternatives に注記を置く。Status も「ledger location superseded by ADR-0025」にする。</doc-pin>
     </doc-code>
   </doc-claim>

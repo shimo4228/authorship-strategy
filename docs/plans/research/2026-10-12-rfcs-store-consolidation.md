@@ -209,7 +209,7 @@ kind: internal
 | R5 | plugin directory の Usage CSV を取得 → empirical 基準値 | L837–838 / L740（C24 LISTED 更新）/ X §3 #5 |
 | R6 | claude-harness 集約 sync | L835。H 自身が「AS の rfc にはしない候補」と注記 |
 | R7 | Citation Monoculture（arXiv:2608.19230）を inspiration・graph・ADR-0011 注記へ | repo 内 Grep 0 件（未取り込み）。ADR-0011 Annex A（D35）の隣接 |
-| R8 | Ahrefs DiD の適用範囲（既引用ページのみ）を ADR-0009 か OQ9 へ | D43 が ADR-0009 を改訂済み。同 ADR の Lineage（`docs/adr/0009-dual-entry-asymmetric-rebalance.md:302`）に「100+ AI …」の母集団限定の記述あり。「未引用側は未検証」の明示が Decision 側にあるかは未確認 |
+| R8 | Ahrefs DiD の適用範囲（既引用ページのみ）を ADR-0009 か OQ9 へ | D43 が ADR-0009 を改訂済み。同 ADR の Lineage（`docs/decision-history/0009-dual-entry-asymmetric-rebalance.md:302`）に「100+ AI …」の母集団限定の記述あり。「未引用側は未検証」の明示が Decision 側にあるかは未確認 |
 | R9 | admission 監査の事前登録（`docs/empirical/` 新規） | X §3 #6 / ledger になし。T29 の 2026-09 事前登録とは別系列と H が明記 |
 | R10 | referrer 三分類の集計 | L836 の計器（hub の日次 snapshot）がデータ源。集計は未着手 |
 | R11 | 翻訳層（造語の隣に汎用語を 1 文） | X §4-5 / 既存行になし |
@@ -237,7 +237,7 @@ kind: internal
 | workflow run ID | L103, 171, 182, 194, 224, 260, 289, 370, 401, 574（10 行、異なる ID 8 種）| T・H・W には 0 件 |
 | wiki / vault 参照 | W に `[[...]]` 50 行 / L に memory link 14 行（L3, 32, 44, 76, 78, 85, 89, 99, 121, 150, 295, 305, 678, 707）/ `docs/maintenance.md:46–47` が「wiki ページや vault のパスを出典として引用しない」と定める | W は L1–3 でも同じ宣言 |
 | 内部 repo・内部語彙 | T L53, 56, 45 / H L12, 28, 30 / L23, 27 | 公開 repo でない名前が混ざる（名前は写さない） |
-| 効果・結果の記述 | 数値つきの観測: L836（clone:view 比 29.0→8.1）, 540・T D24（全 0）, T D39（0/17）, T D40・D27（badge 0・referrer 0）, T L18（OpenAlex の works 数）, L603（視聴回数）/ W の効果量引用（候補 H, V, W, T の数値）| `docs/maintenance.md:15–17` は観測に “preliminary observation” または “consistent with” を要求。ADR-0023 は intervention timeline を効果主張にしないと定める（`docs/adr/0023-empirical-layer-role.md:131,158–170`）。実施記録の語尾に「効果主張なし」と書く行は ledger に多数ある |
+| 効果・結果の記述 | 数値つきの観測: L836（clone:view 比 29.0→8.1）, 540・T D24（全 0）, T D39（0/17）, T D40・D27（badge 0・referrer 0）, T L18（OpenAlex の works 数）, L603（視聴回数）/ W の効果量引用（候補 H, V, W, T の数値）| `docs/maintenance.md:15–17` は観測に “preliminary observation” または “consistent with” を要求。ADR-0023 は intervention timeline を効果主張にしないと定める（`docs/decision-history/0023-empirical-layer-role.md:131,158–170`）。実施記録の語尾に「効果主張なし」と書く行は ledger に多数ある |
 | 第三者の規約・仕様の読み | L184–190, 797（Perplexity）, T L16 | 事実記述。as-of 日付つき |
 | commit SHA | ledger・T の随所（公開 repo の SHA が大半。非公開 repo の SHA が L58 に 1 件）| |
 
@@ -248,12 +248,12 @@ kind: internal
 | 対象 | 所在 | 内容 |
 |---|---|---|
 | `docs/maintenance.md` | L29–38 | 「実施を記録するとき」節。L31 が private ledger = `diffusion-channel-status.md` を名指し、L38 が ADR-0014 を根拠とする。**ledger の所在を宣言する唯一の repo 内正本**。personal-branding・skill・scheduled task がここを経由する（下記） |
-| ADR-0014 | `docs/adr/0014-implementation-tracking-two-tier-ledger.md`（`.ja.md` あり）L3–6, 20, 29, 48, 106, 111 | Decision = 「private ledger（運用上の正本）と public timeline（日付つき・効果主張なし）の 2 層、混ぜない」。**Alternatives の第 1 項「単一の公開 tracking document」を『運用詳細と計画内容が timeline の empirical 役割と privacy を損なう』として却下**（L75–76）。Status は `accepted — amended 2026-09-07`。Lineage（L111–114）が「private ledger は project-memory note、場所は maintenance reference が持つ」と書く |
+| ADR-0014 | `docs/decision-history/0014-implementation-tracking-two-tier-ledger.md`（`.ja.md` あり）L3–6, 20, 29, 48, 106, 111 | Decision = 「private ledger（運用上の正本）と public timeline（日付つき・効果主張なし）の 2 層、混ぜない」。**Alternatives の第 1 項「単一の公開 tracking document」を『運用詳細と計画内容が timeline の empirical 役割と privacy を損なう』として却下**（L75–76）。Status は `accepted — amended 2026-09-07`。Lineage（L111–114）が「private ledger は project-memory note、場所は maintenance reference が持つ」と書く |
 | ADR-0021 | EN L219–220 / JA L201–202 | 「private implementation ledger」に言及 |
 | ADR-0022 | EN L141, 272, 424 / JA L125, 244, 373 | 「private ledger」「two-tier ledger」に言及。ADR-0024 が supersede（L835） |
 | ADR-0023 | EN L66, 312 / JA L59, 288 | 「ADR-0014 の ledger の public projection」= intervention-record genre |
 | ADR-0024 | EN L146–147, 160, 316 / JA L129–131, 140 | evidence 段の事象を「ADR-0014 の private implementation ledger」に記録、「両方の ledger」に記録、と明記。**2026-10-11 の accepted ADR が ledger の private 性に依存する** |
-| `docs/adr/README.md` / `.ja.md` | L26（2 層の記述）, L139–153, 240–267 | ADR 索引と narrative |
+| `docs/decision-history/README.md` / `.ja.md` | L26（2 層の記述）, L139–153, 240–267 | ADR 索引と narrative |
 | `docs/glossary.md` / `.ja.md` | L338–339 / L279–280 | 「ledger tier (private ledger / public projection)」の定義 |
 | `docs/empirical/implementation-log.md` | L238–242（「How this log is maintained」） | 「working detail は別の private ledger にある」。公開 projection の役割宣言 |
 | `docs/adoption.md` | L136 | ADR-0014 の要約行 |
@@ -290,7 +290,7 @@ kind: internal
 2. memory `task-ledger-wiring.md` の「二層分立」= TASKS.md（作業状態）と ledger（戦略状態）。T L7 も同じ。
 3. ADR-0022 の「二層台帳化」= doctrine layer と essay layer の audience 会計（ADR-0024 が supersede）。
 
-**verify 機構**: `.claude/verify.sh` は無い（`.claude/` には `settings.local.json` のみ。`docs/plans/ethereal-floating-bachman.md:9` も「機械ゲートは `scripts/verify-counts.sh`」と書く）。`scripts/` は `verify-counts.sh` 1 本。ガード対象は `git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld'` から **`CHANGELOG.md`、`docs/adr/[0-9]*`、`docs/plans/` を除いた集合**（`scripts/verify-counts.sh:46–50`、除外理由は L41–44 のコメント。直近 commit 369a004 の変更）。数えるのは ADR 総数（`docs/adr/[0-9]*.md` のうち `.ja.md` を除く、L96）と open question 数（`docs/manifesto.md` の `^## Open question ` 行、L110）。照合する名詞は `ADRs` / `tactical decisions` / `tactical ADRs` / `decisions extracted` / `の ADR` / `の戦術的判断` / `open questions`（L103–105, 111）。**`rfcs/*.md` は新設すれば自動的にガード対象になり、本文に「N ADRs」「N open questions」型の数が現在の総数と食い違って書かれていると DRIFT で赤くなる**。除外するなら L50 の `grep -vE` に `^rfcs/` を足す形になる（docs/plans/ と同じ扱い）。`docs/plans/research/` は `docs/plans/` 配下なので、この report 自体は対象外。
+**verify 機構**: `.claude/verify.sh` は無い（`.claude/` には `settings.local.json` のみ。`docs/plans/ethereal-floating-bachman.md:9` も「機械ゲートは `scripts/verify-counts.sh`」と書く）。`scripts/` は `verify-counts.sh` 1 本。ガード対象は `git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld'` から **`CHANGELOG.md`、`docs/decision-history/[0-9]*`、`docs/plans/` を除いた集合**（`scripts/verify-counts.sh:46–50`、除外理由は L41–44 のコメント。直近 commit 369a004 の変更）。数えるのは ADR 総数（`docs/decision-history/[0-9]*.md` のうち `.ja.md` を除く、L96）と open question 数（`docs/manifesto.md` の `^## Open question ` 行、L110）。照合する名詞は `ADRs` / `tactical decisions` / `tactical ADRs` / `decisions extracted` / `の ADR` / `の戦術的判断` / `open questions`（L103–105, 111）。**`rfcs/*.md` は新設すれば自動的にガード対象になり、本文に「N ADRs」「N open questions」型の数が現在の総数と食い違って書かれていると DRIFT で赤くなる**。除外するなら L50 の `grep -vE` に `^rfcs/` を足す形になる（docs/plans/ と同じ扱い）。`docs/plans/research/` は `docs/plans/` 配下なので、この report 自体は対象外。
 
 ### 先例（姉妹 repo）と claims.py の挙動
 
@@ -319,8 +319,8 @@ kind: internal
 - **H**: 全文 Read。**W**: 1–80 行、105–274 行を Read（81–104 は候補 K・L・M で、見出しは Grep で確認）。status 欄は見出し行の Grep から集計。
 - **`.notes/` 全ファイル**: Glob で 28 ファイルを確定。非空行数は Grep `.` の count。性質判定は、TASKS・H・W・claims.jsonl・cc-attribution・ideation・provenance・loop-blueprint・handoff-wikidata・codex・exploration（1–60, 60–90）・zenodo・toe・oq5・cc-capture・gitmcp・s2 の先頭を Read して行った。**archive の 6 ファイルと gitmcp evidence の JSON 4 本は中身を開いていない**（Glob の名前と T・L の記述による）。
 - **参照元**: T・memory への参照は Grep（ファイル名で）。`.notes` 内の相互参照は files_with_matches。
-- **repo 内参照**: `diffusion-channel-status|TASKS\.md|private ledger|private implementation ledger|private planning ledger|two-tier|\.notes/|ADR-0014|0014-` を repo 全体で Grep。長行は `-o` で語を確定した。ADR は `docs/adr/` を別に Grep。
-- **repo 外**: `~/.claude/{skills,rules,scripts,hooks,docs/adr,scheduled-tasks}` と `~/MyAI_Lab`（`diffusion-channel-status` の全 repo Grep、`personal-branding`・`daily-research`・`authorship-strategy-skill` を個別に Grep）。
+- **repo 内参照**: `diffusion-channel-status|TASKS\.md|private ledger|private implementation ledger|private planning ledger|two-tier|\.notes/|ADR-0014|0014-` を repo 全体で Grep。長行は `-o` で語を確定した。ADR は `docs/decision-history/` を別に Grep。
+- **repo 外**: `~/.claude/{skills,rules,scripts,hooks,docs/decision-history,scheduled-tasks}` と `~/MyAI_Lab`（`diffusion-channel-status` の全 repo Grep、`personal-branding`・`daily-research`・`authorship-strategy-skill` を個別に Grep）。
 - **先例**: 4 repo の `rfcs/` を Glob し README 4 本・AKC `0001` を Read。CA の `state:` は値を Grep で出せず（`-o` 指定のため）、`0001` のみ別途確認。harness ADR-0049・RFC-0001・task-stocktake SKILL・rfc-writer SKILL・`claims.py` の該当行を Read。
 - **verify**: `scripts/verify-counts.sh` を全文 Read。実行はしていない（この session に Bash が無い）。
 - **公開リスクの数え方**: 種類ごとに Grep で行を拾い、代表行を残した。「約」を付けた数は 1 行内に複数語がある場合の概算で、行数の厳密な集計ではない。

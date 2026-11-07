@@ -1,6 +1,11 @@
 Language: [English](README.md) | 日本語
 
-# Architecture Decision Records
+# 判断の経緯（Decision History）
+
+各記録は書かれた日の判断。現行の doctrine は [thesis](../thesis.ja.md)・[glossary](../glossary.ja.md)・
+[adoption](../adoption.md)・[manifesto](../manifesto.md) と著者の今の指示が決め、旧記録の Status 欄と日付つき注記は
+その日の状態。新しい判断は旧記録と衝突してよく、旧記録はそのまま置く。下の cluster の要約は各記録を書かれた
+時点のまま説明する。
 
 各 ADR は AI 経由の拡散下における著者戦略についての戦術的判断を記録する。DOI
 登録された research repo からなるエコシステムの運用から発見されたものであり、
@@ -8,34 +13,34 @@ top-down に prescribe されたものではない。
 
 ## Index
 
-| ADR | Title | Status |
-|-----|-------|--------|
-| [0001](0001-concept-doi-canonical.ja.md) | Concept DOI を canonical reference として使う | accepted |
-| [0002](0002-doi-federation-via-zenodo-json.ja.md) | `.zenodo.json` による DOI federation | accepted |
-| [0003](0003-cross-platform-dataset-federation.ja.md) | クロスプラットフォーム データセット federation | accepted |
-| [0004](0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ | accepted |
-| [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 | accepted |
-| [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points | accepted |
-| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (0022 が scope を amend、0024 が成功の項を restate) |
-| [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
-| [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (2026-08-19 改訂) | accepted |
-| [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する | accepted |
-| [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る (Annex A、2026-08: 校正の読みルール) | **experimental** |
-| [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution | accepted |
-| [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier | accepted |
-| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger による実装トラッキング | accepted; private ledger を正本とする点は 0025 が supersede |
-| [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ | accepted |
-| [0016](0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical | accepted |
-| [0017](0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— 承認済み 3 failure mode それぞれの detector と recovery 戦略 | accepted |
-| [0018](0018-claim-falsifiability-criterion.ja.md) | Origin-Claim Falsifiability —— durable artifact に公開する前に priority claim を prior art に対して test する | accepted |
-| [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない | accepted |
-| [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub | accepted (型 b は 2026-08-19 に retire) |
-| [0021](0021-self-sovereign-entity-grounding.ja.md) | self-sovereign な entity grounding —— community 統治の authority record は foundation でなく revocable な layer である | accepted |
-| [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める | superseded by 0024 |
-| [0023](0023-empirical-layer-role.ja.md) | empirical layer の role —— reference baseline を primary role とし、case-study narrative を限定し、validation evidence は明示的設計によってのみ | accepted |
-| [0024](0024-success-as-arrival-at-the-dated-record.ja.md) | 成功は日付つき記録に到達する use —— 名前は観測し、各戦略は自らが持つ問いを書く | accepted |
-| [0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md) | 計画とタスクの状態を公開の RFC store に置く | accepted |
-| [0026](0026-one-public-act-log-across-strategies.ja.md) | 著者の戦略が共有する公開の行為ログ 1 本 | accepted |
+| ADR | Title |
+|-----|-------|
+| [0001](0001-concept-doi-canonical.ja.md) | Concept DOI を canonical reference として使う |
+| [0002](0002-doi-federation-via-zenodo-json.ja.md) | `.zenodo.json` による DOI federation |
+| [0003](0003-cross-platform-dataset-federation.ja.md) | クロスプラットフォーム データセット federation |
+| [0004](0004-authorship-metadata-orcid.ja.md) | ORCID Auto-Update OFF での著者メタデータ |
+| [0005](0005-readme-localization-audience-driven.ja.md) | README ローカライズ ポリシー —— Audience-Driven な維持 |
+| [0006](0006-llm-first-ingest-dual-entry-points.ja.md) | LLM-First Ingest via Dual Entry Points |
+| [0007](0007-human-attention-signals-not-a-metric.ja.md) | Human-Attention Platform Signals Are Not a Success Metric |
+| [0008](0008-rag-era-attribution-diffusion.ja.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants |
+| [0009](0009-dual-entry-asymmetric-rebalance.ja.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (2026-08-19 改訂) |
+| [0010](0010-vocabulary-discipline.ja.md) | Vocabulary Discipline —— 控えめに造語し、密に anchor する |
+| [0011](0011-two-channel-probe-protocol.ja.md) | Two-Channel Probe Protocol —— 各チャネルを専用の測定器で測る (Annex A、2026-08: 校正の読みルール) |
+| [0012](0012-link-index-channel-selection.ja.md) | 外部 collection への link-index 型 contribution |
+| [0013](0013-intrinsic-identifier-layer.ja.md) | 補完的 priority-claim 層としての intrinsic content-derived identifier |
+| [0014](0014-implementation-tracking-two-tier-ledger.ja.md) | 二層 ledger による実装トラッキング |
+| [0015](0015-license-selection-by-audience.ja.md) | ライセンスは形式ではなく audience で選ぶ |
+| [0016](0016-genre-split-placement.ja.md) | genre 別の canonical 配置 —— essay は repository-corpus canonical + intrinsic identifier、paper は concept-DOI canonical |
+| [0017](0017-failure-mode-diagnostics.ja.md) | Failure-Mode 診断 —— 承認済み 3 failure mode それぞれの detector と recovery 戦略 |
+| [0018](0018-claim-falsifiability-criterion.ja.md) | Origin-Claim Falsifiability —— durable artifact に公開する前に priority claim を prior art に対して test する |
+| [0019](0019-structural-optimization-vs-content-authenticity.ja.md) | Structural Optimization と Content Authenticity —— transmission path を optimize し content は決して optimize しない |
+| [0020](0020-derivation-surface-onboarding.ja.md) | third-party の AI 派生 repository surface への onboarding —— synthetic wiki と documentation hub |
+| [0021](0021-self-sovereign-entity-grounding.ja.md) | self-sovereign な entity grounding —— community 統治の authority record は foundation でなく revocable な layer である |
+| [0022](0022-audience-layer-split.ja.md) | audience-layer split —— 同時代の human reader を essay genre の primary audience とし、metrics を layer scope で認める |
+| [0023](0023-empirical-layer-role.ja.md) | empirical layer の role —— reference baseline を primary role とし、case-study narrative を限定し、validation evidence は明示的設計によってのみ |
+| [0024](0024-success-as-arrival-at-the-dated-record.ja.md) | 成功は日付つき記録に到達する use —— 名前は観測し、各戦略は自らが持つ問いを書く |
+| [0025](0025-planning-and-task-state-in-a-public-rfc-store.ja.md) | 計画とタスクの状態を公開の RFC store に置く |
+| [0026](0026-one-public-act-log-across-strategies.ja.md) | 著者の戦略が共有する公開の行為ログ 1 本 |
 
 ADR set は thesis の異なる層を tracking する cluster に分かれる:
 
@@ -314,9 +319,9 @@ ADR-0024 Decision 5 が定めた両方の台帳への記録を置き換え、過
 
 ## Format
 
-各 ADR は以下に従う: Status / Date / Context / Decision / Alternatives Considered
-/ Consequences / Lineage。意図は、*decision* (何をするか、なぜか) が thesis が
-予測する substrate 変化を生き残るようにすることである。
+新しい記録の節: Date / Context / Decision / Alternatives Considered / Consequences
+/ Lineage。Review-when は任意で、Decision は過去形（何をしたかと理由）で書く。意図は、
+*decision* (何をしたか、なぜか) が thesis が予測する substrate 変化を越えて記録に残ることである。
 
 ADR は *harness-neutral* に書かれる: 特定の実装、vendor、framework 名は ADR 本文に
 出現しない。特定の vendor や framework が原 decision を shape した場合、lineage は

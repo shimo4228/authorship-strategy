@@ -1,7 +1,7 @@
 # Probe Baseline — June 2026
 
 First structured run of the two-channel probe protocol
-([ADR-0011](../adr/0011-two-channel-probe-protocol.md)). This note records
+([ADR-0011](../decision-history/0011-two-channel-probe-protocol.md)). This note records
 what the instrument observed on its first day of operation, in the
 empirical layer's standing register: every claim below is a **preliminary
 observation**, not evidence.
@@ -94,8 +94,8 @@ quota blocked its two cells; see Limitations).
   — including repository artifacts and the hub's AI-facing
   `llms-full.txt` — *and* the author named in prose. An observation
   consistent with the AI-facing entry points
-  ([ADR-0006](../adr/0006-llm-first-ingest-dual-entry-points.md) /
-  [ADR-0009](../adr/0009-dual-entry-asymmetric-rebalance.md)) being
+  ([ADR-0006](../decision-history/0006-llm-first-ingest-dual-entry-points.md) /
+  [ADR-0009](../decision-history/0009-dual-entry-asymmetric-rebalance.md)) being
   consumed by a retrieval stack. Notably, the answer's primary subject was
   the upstream academic literature the ecosystem itself cites; the owned
   artifacts appeared alongside, not instead of, the prior art.

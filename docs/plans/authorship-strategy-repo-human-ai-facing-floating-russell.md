@@ -114,7 +114,7 @@ intro 段落末尾（"…operate within its current scope." の後）に追加:
 
 ### A-6. 触らないもの
 
-deposit 済み Zenodo record 全 version / README.md:126 引用 block（record title）/ CHANGELOG.md（歴史記録）/ LICENSE / docs/adr/ 全 42 files / docs/conformance.md / docs/implementations.md / docs/skills/README.md / docs/CODEMAPS/（構造変更なし・鮮度 header 不要）/ docs/empirical/ データ files
+deposit 済み Zenodo record 全 version / README.md:126 引用 block（record title）/ CHANGELOG.md（歴史記録）/ LICENSE / docs/decision-history/ 全 42 files / docs/conformance.md / docs/implementations.md / docs/skills/README.md / docs/CODEMAPS/（構造変更なし・鮮度 header 不要）/ docs/empirical/ データ files
 
 ---
 

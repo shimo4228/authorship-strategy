@@ -5,7 +5,7 @@ from the traffic baseline: it reports what the 2024–2026 neology-and-LLM
 literature observes about when coined words survive LLM processing and
 when they are degraded or replaced, and what those observations do and
 do not say about the vocabulary discipline recorded in
-[ADR-0010](../adr/0010-vocabulary-discipline.md). All claims follow the
+[ADR-0010](../decision-history/0010-vocabulary-discipline.md). All claims follow the
 empirical layer's framing: *preliminary observation*, not evidence. The
 sources are external publications, not the ecosystem's own data, so the
 note inherits their limitations and adds one of its own — the mapping

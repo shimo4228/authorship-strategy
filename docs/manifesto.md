@@ -116,7 +116,7 @@ identifiers? GitHub release tags? Time-stamped public archives?)
 or explicitly defer these cases to a separate framework.
 
 > **Status (2026-06-13): answered by
-> [ADR-0013](adr/0013-intrinsic-identifier-layer.md).** Of the three
+> [ADR-0013](decision-history/0013-intrinsic-identifier-layer.md).** Of the three
 > candidates named above, the software-archive identifier was adopted:
 > an intrinsic, content-derived identifier (SWHID, ISO/IEC 18670) is
 > the designated substitute priority-claim mechanism for
@@ -219,7 +219,7 @@ one or the other is an open question; the current ambiguity is
 acknowledged and intentional, given the limited time series.
 
 > **Status (2026-08-12): answered by
-> [ADR-0023](adr/0023-empirical-layer-role.md).** The hybrid was
+> [ADR-0023](decision-history/0023-empirical-layer-role.md).** The hybrid was
 > formalized by structure rather than collapsed to one role:
 > reference baseline is the layer's primary role and the minimum
 > every artifact must satisfy; case-study narrative is a bounded
@@ -249,7 +249,7 @@ each failure mode and the recovery strategy for each.
 
 *Worked instance (2026-08):* the recognition half of the first
 failure mode acquired an accounting response, not a resolution.
-[ADR-0022](adr/0022-audience-layer-split.md) routes contemporary
+[ADR-0022](decision-history/0022-audience-layer-split.md) routes contemporary
 human readers to the essay layer as that layer's primary audience,
 so the program now carries one layer in which recognition is
 contemporaneously observable — while ghost citation in the doctrine
@@ -260,7 +260,7 @@ signal be re-read as purity, an unfalsifiable consolation the
 accounting split is designed to remove. Whether the split is stable
 is open question 11.
 
-*Re-read (2026-10-11):* [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) restates the first failure
+*Re-read (2026-10-11):* [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) restates the first failure
 mode. The author's name in an answer is now an observation, and the
 failure is **reach without a route back** — a concept carried with no
 identifier, link or recoverable pointer to the dated record. A citation
@@ -320,7 +320,7 @@ Open questions:
   asymmetric-authorship-claim-scope problem of Open Question 1 at
   single-author scale — claim scope gated by pre-existing authority
   rather than by contribution.
-- *Re-read (2026-10-11):* under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) the name is not required,
+- *Re-read (2026-10-11):* under [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) the name is not required,
   so the supply-side question narrows to the routes: whether a
   single author's records can enter the retrieval set at all, or whether
   admission itself is gated by authority the author cannot manufacture.
@@ -337,20 +337,20 @@ self-created entries in a community-governed authority record — was
 revoked by the host's governance as promotional at the account level,
 and every entry was mass-deleted. Self-manufactured third-party
 authority is not merely insufficient; it is revocable with sanction.
-[ADR-0021](adr/0021-self-sovereign-entity-grounding.md) records the
+[ADR-0021](decision-history/0021-self-sovereign-entity-grounding.md) records the
 resulting retirement and the revocation-control classification of
 grounding surfaces. Whether the self-controllable subset alone clears
 the citation threshold remains open.
 
 ## Open question 10: Is a deposit under the author's own account a self-sovereign layer?
 
-[ADR-0021](adr/0021-self-sovereign-entity-grounding.md) answered the
+[ADR-0021](decision-history/0021-self-sovereign-entity-grounding.md) answered the
 revocation half of open question 9 by classifying grounding surfaces
 by revocation control, and placed *registry deposits under the
 author's account* on the self-sovereign side — alongside the
 repository, the author-identifier record, and the intrinsic
 content-derived identifier layer. That classification is what lets
-[ADR-0001](adr/0001-concept-doi-canonical.md) keep the concept DOI as
+[ADR-0001](decision-history/0001-concept-doi-canonical.md) keep the concept DOI as
 the canonical priority-claim mechanism after the third-party authority
 layer was retired. The framework's entire origin claim now rests on
 identifiers minted by a registry, held in an account, under that
@@ -389,14 +389,14 @@ Open questions:
   whether it continues to resolve? If the latter, the classification
   needs a third category between self-sovereign and third-party-
   governed, and the decisions that rest on it need re-reading.
-- Does the intrinsic identifier layer ([ADR-0013](adr/0013-intrinsic-identifier-layer.md))
+- Does the intrinsic identifier layer ([ADR-0013](decision-history/0013-intrinsic-identifier-layer.md))
   *substitute* for a revoked canonical layer or merely *complement*
   it? By its own terms it proves what content existed when and carries
   no authorship semantics. A program that survived total loss of its
   extrinsic identifiers would retain provenance and lose credit —
   which is the reach-without-recognition failure mode of open question
   8 arriving through the identifier layer rather than through
-  diffusion. *Re-read (2026-10-11):* under [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) a surviving
+  diffusion. *Re-read (2026-10-11):* under [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) a surviving
   dated record is what a use must reach, so retaining provenance is
   retaining the success condition; what would be lost is the routes to
   it, not credit as such.
@@ -432,10 +432,10 @@ practice; it is recorded here before the fact rather than after it.
 
 ## Open question 11: Can two strategies that feed each other keep reception numbers from deciding content?
 
-[ADR-0022](adr/0022-audience-layer-split.md) first answered an
+[ADR-0022](decision-history/0022-audience-layer-split.md) first answered an
 accounting defect — the author's recognition-seeking motive had no
 place in which its rewards were observable — by splitting this
-framework into a doctrine layer and an essay layer. [ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.md) (2026-10-11)
+framework into a doctrine layer and an essay layer. [ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.md) (2026-10-11)
 supersedes that split: artifacts are written for both readers, this
 framework's success is a use that reaches the dated record, and
 reception counts — of essays and of the author as a person — belong to
@@ -447,7 +447,7 @@ strategies by one practitioner. It can fail in more than one direction:
 
 - **Reception steers this framework's content** — a release timed to
   reception, a deposit shaped by what scored, the failure-mode
-  diagnostics of [ADR-0017](adr/0017-failure-mode-diagnostics.md)
+  diagnostics of [ADR-0017](decision-history/0017-failure-mode-diagnostics.md)
   quietly promoted to targets. The shared principle — content is
   decided by the author's thought, distribution may be optimized
   without changing content — forbids none of the numbers and names the

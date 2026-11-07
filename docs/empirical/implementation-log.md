@@ -5,7 +5,7 @@
 > author's own ecosystem, and from 2026-10-12 the acts of every strategy
 > the author runs — and *when*, not whether they worked. All dates are
 > acts, not outcomes. From 2026-10-12 this is the one act log shared by
-> the author's strategies ([ADR-0026](../adr/0026-one-public-act-log-across-strategies.md)).
+> the author's strategies ([ADR-0026](../decision-history/0026-one-public-act-log-across-strategies.md)).
 
 ## Why this log exists
 
@@ -20,7 +20,7 @@ running the same tactics — can align an observed change in traffic or
 in probe results against the intervention that may have preceded it.
 
 The log is therefore a **methods companion** to the traffic baseline and
-the [two-channel probe protocol](../adr/0011-two-channel-probe-protocol.md),
+the [two-channel probe protocol](../decision-history/0011-two-channel-probe-protocol.md),
 not an independent results claim. It makes no statement of the form
 "intervention X changed metric Y." It records only that X was done, and
 when.
@@ -176,7 +176,7 @@ is additive, not a new canonical location.
 
 From 2026-10-12 every act is one row, in date order, whichever of the
 author's strategies carried it out
-([ADR-0026](../adr/0026-one-public-act-log-across-strategies.md)).
+([ADR-0026](../decision-history/0026-one-public-act-log-across-strategies.md)).
 
 - **Covered:** acts on third-party surfaces (listing pull requests,
   posts, comments, profile edits, submissions, applications) and
@@ -240,7 +240,7 @@ author's strategies carried it out
 
 Rows written before 2026-10-12 abstracted the places where acts
 happened. They stay as written; this table adds the names
-([ADR-0026](../adr/0026-one-public-act-log-across-strategies.md),
+([ADR-0026](../decision-history/0026-one-public-act-log-across-strategies.md),
 Decision 6). Every row above was carried out by **AS**. Acts that went
 through a private route stay unnamed.
 
@@ -298,8 +298,8 @@ about deployment order, not a claim about effect.
 
 From 2026-10-12, plans, deferrals and declined tactics are kept in the
 public [`rfcs/`](../../rfcs/README.md) store, not in this log
-([ADR-0025](../adr/0025-planning-and-task-state-in-a-public-rfc-store.md),
-[ADR-0026](../adr/0026-one-public-act-log-across-strategies.md)). Of the
+([ADR-0025](../decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md),
+[ADR-0026](../decision-history/0026-one-public-act-log-across-strategies.md)). Of the
 two sections that stood here until then, the research-community profile
 registry continues as RFC-0004 and the declined self-citation in open
 encyclopedias as RFC-0025. The deferrals of full prose localization and of
@@ -314,12 +314,12 @@ this file's history.
 The rules for this log — scope, columns, naming, and what stays out —
 are in the repository's [maintenance reference](../maintenance.md)
 ("実施を記録するとき") and in
-[ADR-0026](../adr/0026-one-public-act-log-across-strategies.md). An act
+[ADR-0026](../decision-history/0026-one-public-act-log-across-strategies.md). An act
 updates its `rfcs/` entry, if it has one, and adds its row here in the
 same commit. Rows written by an unattended task arrive on a separate
 branch and are merged by a session after the public-detail check.
 Planning stays in `rfcs/`
-([ADR-0025](../adr/0025-planning-and-task-state-in-a-public-rfc-store.md));
+([ADR-0025](../decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md));
 counterpart reactions, contacts and personal matters stay in private
 notes. The log keeps its empirical-layer role: a record of acts and their
 dates, not of their effects.

@@ -1,6 +1,13 @@
 Language: English | [日本語](README.ja.md)
 
-# Architecture Decision Records
+# Decision History
+
+Each entry is the judgment of the day it was written. The current doctrine is whatever the
+[thesis](../thesis.md), [glossary](../glossary.md), [adoption guide](../adoption.md) and
+[manifesto](../manifesto.md) say now, plus the author's current instructions; the `Status` line and the
+dated notes in an older entry are the state on that day. A new decision may conflict with an older
+entry, and the older entry stays as it is. The cluster summaries below describe each entry as it was
+written.
 
 Each ADR records a tactical judgment about authorship strategy under
 AI-mediated diffusion — discovered through operating a DOI-registered
@@ -8,34 +15,34 @@ research ecosystem, not prescribed top-down.
 
 ## Index
 
-| ADR | Title | Status |
-|-----|-------|--------|
-| [0001](0001-concept-doi-canonical.md) | Concept DOI as Canonical Reference | accepted |
-| [0002](0002-doi-federation-via-zenodo-json.md) | DOI Federation via `.zenodo.json` | accepted |
-| [0003](0003-cross-platform-dataset-federation.md) | Cross-Platform Dataset Federation | accepted |
-| [0004](0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled | accepted |
-| [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance | accepted |
-| [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points | accepted |
-| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric | accepted (scope amended by 0022; success clause restated by 0024) |
-| [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants | accepted |
-| [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (revised 2026-08-19) | accepted |
-| [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely | accepted |
-| [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (Annex A, 2026-08: calibration reading rules) | **experimental** |
-| [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections | accepted |
-| [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer | accepted |
-| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger | accepted; private ledger as source of truth superseded by 0025 |
-| [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form | accepted |
-| [0016](0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical | accepted |
-| [0017](0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes | accepted |
-| [0018](0018-claim-falsifiability-criterion.md) | Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It | accepted |
-| [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content | accepted |
-| [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs | accepted (type b retired 2026-08-19) |
-| [0021](0021-self-sovereign-entity-grounding.md) | Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation | accepted |
-| [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics | superseded by 0024 |
-| [0023](0023-empirical-layer-role.md) | Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design | accepted |
-| [0024](0024-success-as-arrival-at-the-dated-record.md) | Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns | accepted |
-| [0025](0025-planning-and-task-state-in-a-public-rfc-store.md) | Planning and Task State in a Public RFC Store | accepted |
-| [0026](0026-one-public-act-log-across-strategies.md) | One Public Act Log Shared Across the Author's Strategies | accepted |
+| ADR | Title |
+|-----|-------|
+| [0001](0001-concept-doi-canonical.md) | Concept DOI as Canonical Reference |
+| [0002](0002-doi-federation-via-zenodo-json.md) | DOI Federation via `.zenodo.json` |
+| [0003](0003-cross-platform-dataset-federation.md) | Cross-Platform Dataset Federation |
+| [0004](0004-authorship-metadata-orcid.md) | Authorship Metadata with ORCID Auto-Update Disabled |
+| [0005](0005-readme-localization-audience-driven.md) | README Localization Policy — Audience-Driven Maintenance |
+| [0006](0006-llm-first-ingest-dual-entry-points.md) | LLM-First Ingest via Dual Entry Points |
+| [0007](0007-human-attention-signals-not-a-metric.md) | Human-Attention Platform Signals Are Not a Success Metric |
+| [0008](0008-rag-era-attribution-diffusion.md) | RAG-Era Attribution Diffusion — Two Channels, Two Time Constants |
+| [0009](0009-dual-entry-asymmetric-rebalance.md) | Dual Entry Points Are Asymmetric — Structured Graph for Entity Resolution, Prose Navigator for Agent Context (revised 2026-08-19) |
+| [0010](0010-vocabulary-discipline.md) | Vocabulary Discipline — Coin Sparingly, Anchor Densely |
+| [0011](0011-two-channel-probe-protocol.md) | Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument (Annex A, 2026-08: calibration reading rules) |
+| [0012](0012-link-index-channel-selection.md) | Link-Index Contributions to External Collections |
+| [0013](0013-intrinsic-identifier-layer.md) | Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer |
+| [0014](0014-implementation-tracking-two-tier-ledger.md) | Implementation Tracking as a Two-Tier Ledger |
+| [0015](0015-license-selection-by-audience.md) | License Selection by Audience, Not Artifact Form |
+| [0016](0016-genre-split-placement.md) | Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical |
+| [0017](0017-failure-mode-diagnostics.md) | Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes |
+| [0018](0018-claim-falsifiability-criterion.md) | Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It |
+| [0019](0019-structural-optimization-vs-content-authenticity.md) | Structural Optimization versus Content Authenticity — Optimize the Transmission Path, Never the Content |
+| [0020](0020-derivation-surface-onboarding.md) | Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs |
+| [0021](0021-self-sovereign-entity-grounding.md) | Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation |
+| [0022](0022-audience-layer-split.md) | Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics |
+| [0023](0023-empirical-layer-role.md) | Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design |
+| [0024](0024-success-as-arrival-at-the-dated-record.md) | Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns |
+| [0025](0025-planning-and-task-state-in-a-public-rfc-store.md) | Planning and Task State in a Public RFC Store |
+| [0026](0026-one-public-act-log-across-strategies.md) | One Public Act Log Shared Across the Author's Strategies |
 
 The set groups into clusters, each tracking a distinct layer of the
 thesis:
@@ -338,10 +345,11 @@ ADR-0026 is the **shared-act-log decision**: the acts of every strategy the auth
 
 ## Format
 
-Each ADR follows: Status / Date / Context / Decision / Alternatives Considered
-/ Consequences / Lineage. The intent is that the *decision* — what to do, and
-why — persists across the substrate changes the thesis predicts will obsolete
-specific implementations.
+New entries use: Date / Context / Decision / Alternatives Considered /
+Consequences / Lineage, with an optional Review-when, and Decision in the past
+tense (what was done and why). The intent is that the *decision* — what was
+done, and why — stays on record across the substrate changes the thesis
+predicts will obsolete specific implementations.
 
 ADRs are written *harness-neutral*: no specific implementation, vendor, or
 framework name appears in the ADR body. Where a specific vendor or framework

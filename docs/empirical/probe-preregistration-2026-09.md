@@ -5,7 +5,7 @@ This document fixes, before any eligible model exists in the probe
 panel, what would count as the first parametric-channel transition,
 how it will be read, and what would count against the framework's
 claim. It is the pre-specified contrast that
-[ADR-0023](../adr/0023-empirical-layer-role.md) Decision 3 requires
+[ADR-0023](../decision-history/0023-empirical-layer-role.md) Decision 3 requires
 before an observation may be read as validation evidence. It satisfies
 the first of that decision's two conditions (designed before the
 fact). The second — explicit designation as validation evidence at
@@ -34,7 +34,7 @@ Two blocks recorded earlier bind this contrast and are not restated:
   author named. This document turns that expectation into decision
   rules.
 
-The reading rules of [ADR-0011 Annex A](../adr/0011-two-channel-probe-protocol.md#annex-a--calibration-of-the-probe-readings-added-2026-08-19)
+The reading rules of [ADR-0011 Annex A](../decision-history/0011-two-channel-probe-protocol.md#annex-a--calibration-of-the-probe-readings-added-2026-08-19)
 (family stratification, negative control as floor, override-direction
 asymmetry, recognition versus recall) apply as written.
 
@@ -49,7 +49,7 @@ One normative claim, narrowed so that it can fail:
 > concept recognition precedes author naming.
 
 This is the parametric half of the two-channel claim
-([ADR-0008](../adr/0008-rag-era-attribution-diffusion.md); thesis
+([ADR-0008](../decision-history/0008-rag-era-attribution-diffusion.md); thesis
 Layer 2). It is an *existence* claim about reachability plus an
 *ordering* claim. It is not a claim about magnitude, about which tactic
 did the work, or about the retrieval channel.

@@ -80,7 +80,7 @@ sibling 実装パターンを踏襲 (新規語彙ゼロ):
         │ sameAs ──→ 旧 repo-fragment URI (歴史保存)
         │ subjectOf ──→ concepts/<slug>.html   (concept page = document)
         │ recordedIn ──→ glossary.md#<anchor>  (定義の正本)
-        │ instantiatedBy ──→ #adr/NNNN ── recordedIn ──→ docs/adr/NNNN.md
+        │ instantiatedBy ──→ #adr/NNNN ── recordedIn ──→ docs/decision-history/NNNN.md
         │ groundedIn/citation ──→ arXiv / DOI (外部文献)
         ▲ definesConcept ── ResearchLine (repo, concept DOI) ── isPartOf ──→ hub
   Article/Essay: per-article node は作らない (ADR-0016: entity federation で束ねる)

@@ -50,15 +50,15 @@ flowchart TD
 
 ## 26 の戦術的 ADR
 
-ADR は枠組みから演繹したものではありません。著者自身の DOI 登録済みの repo 群の運用から抽出し、特定の作業環境に依存しない形に書き直したものです。別の著者が、元の実装を引き継がずに判断だけを採用できるようにするためです。各 ADR のタイトル・status・抽出の経緯と、ADR のまとまり方を含む全 index は [`docs/adr/README.ja.md`](docs/adr/README.ja.md) にあります。
+ADR は枠組みから演繹したものではありません。著者自身の DOI 登録済みの repo 群の運用から抽出し、特定の作業環境に依存しない形に書き直したものです。別の著者が、元の実装を引き継がずに判断だけを採用できるようにするためです。各 ADR のタイトル・status・抽出の経緯と、ADR のまとまり方を含む全 index は [`docs/decision-history/README.ja.md`](docs/decision-history/README.ja.md) にあります。
 
 ## 経験的ベースライン（予備的）
 
-[`docs/empirical/`](docs/empirical/)（英語）層は、著者の hub repo から CC0 で運用している 2 つの計測から得た **preliminary observation**（予備的な観測）を、「〜の証拠」としてではなく「〜と整合する」という形で報告します。計測の 1 つは著者の 6 つの repo（hub、Agent Knowledge Cycle・Contemplative Agent・Agent Attribution Practice という研究ラインの repo、補助の repo 2 つ）の clone 数と閲覧数を毎日記録した 24 日分の記録（2026-04-21〜2026-05-14）、もう 1 つは同じ質問を AI モデルに検索なしと検索ありの 2 通りで尋ね、ghost citation（AI の回答が作品の URL を引用しながら著者の名前を出さないこと）を測定できる率に変える問い合わせ（[ADR-0011](docs/adr/0011-two-channel-probe-protocol.ja.md)）です。その期間でいちばん明快な観測は、clone の大半が自動ツールによるもので、clone 数と閲覧数の比がおよそ 13（研究プロジェクトの 1 つ）から 100 超（hub）に及ぶことです。アクセスの大半が人間でないとき「diffusion」が何を意味するのかを、これは問い直させます。制約は結論を左右するので [`docs/empirical/README.md`](docs/empirical/README.md)（英語）に書いています: 著者 1 人（N=1）、導入前後の比較なし、アクセスの大半が自動の巡回であること、そして問い合わせの前身にあたる非公式なテスト（2026 年 5 月に 3 回、AI モデルが著者の用語を認識し著者の名前を出すかを確かめたもの）の結果が単一の期間に限られること。問い合わせの初回の実行には独自の制約（1 回、1 日だけの実行）があり、[`probe-baseline-2026-06.md`](docs/empirical/probe-baseline-2026-06.md)（英語）に書いています。
+[`docs/empirical/`](docs/empirical/)（英語）層は、著者の hub repo から CC0 で運用している 2 つの計測から得た **preliminary observation**（予備的な観測）を、「〜の証拠」としてではなく「〜と整合する」という形で報告します。計測の 1 つは著者の 6 つの repo（hub、Agent Knowledge Cycle・Contemplative Agent・Agent Attribution Practice という研究ラインの repo、補助の repo 2 つ）の clone 数と閲覧数を毎日記録した 24 日分の記録（2026-04-21〜2026-05-14）、もう 1 つは同じ質問を AI モデルに検索なしと検索ありの 2 通りで尋ね、ghost citation（AI の回答が作品の URL を引用しながら著者の名前を出さないこと）を測定できる率に変える問い合わせ（[ADR-0011](docs/decision-history/0011-two-channel-probe-protocol.ja.md)）です。その期間でいちばん明快な観測は、clone の大半が自動ツールによるもので、clone 数と閲覧数の比がおよそ 13（研究プロジェクトの 1 つ）から 100 超（hub）に及ぶことです。アクセスの大半が人間でないとき「diffusion」が何を意味するのかを、これは問い直させます。制約は結論を左右するので [`docs/empirical/README.md`](docs/empirical/README.md)（英語）に書いています: 著者 1 人（N=1）、導入前後の比較なし、アクセスの大半が自動の巡回であること、そして問い合わせの前身にあたる非公式なテスト（2026 年 5 月に 3 回、AI モデルが著者の用語を認識し著者の名前を出すかを確かめたもの）の結果が単一の期間に限られること。問い合わせの初回の実行には独自の制約（1 回、1 日だけの実行）があり、[`probe-baseline-2026-06.md`](docs/empirical/probe-baseline-2026-06.md)（英語）に書いています。
 
 ## 著者のほかの仕事
 
-- **[Wikidataから一夜でBAN — 個別編集は規約準拠のつもりでも、109 itemは宣伝判定で全削除](https://zenn.dev/shimo4228/articles/wikidata-ban-postmortem)**（[English](https://dev.to/shimo4228/banned-from-wikidata-overnight-i-believed-every-edit-was-compliant-but-all-109-items-were-57nl)）: [ADR-0021](docs/adr/0021-self-sovereign-entity-grounding.ja.md) のもとになった失敗と、doctrine が origin claim を担わせる層を著者が管理できるもの（repo、その graph、DOI の登録、ORCID の記録）に限り、共同体が管理する典拠レコードに自分で作った項目には担わせなくなった理由が分かります。
+- **[Wikidataから一夜でBAN — 個別編集は規約準拠のつもりでも、109 itemは宣伝判定で全削除](https://zenn.dev/shimo4228/articles/wikidata-ban-postmortem)**（[English](https://dev.to/shimo4228/banned-from-wikidata-overnight-i-believed-every-edit-was-compliant-but-all-109-items-were-57nl)）: [ADR-0021](docs/decision-history/0021-self-sovereign-entity-grounding.ja.md) のもとになった失敗と、doctrine が origin claim を担わせる層を著者が管理できるもの（repo、その graph、DOI の登録、ORCID の記録）に限り、共同体が管理する典拠レコードに自分で作った項目には担わせなくなった理由が分かります。
 - **[doctrine-corpus](https://github.com/shimo4228/doctrine-corpus)**: 26 の戦術の一つ、LLM-first ingest（LLM がそのまま取り込める形で公開すること）を実際に行ったもので、著者の長期プロジェクト（下の hub を参照）の記録された判断を英日の Q&A にした CC0 のコーパスを、LLM の学習データとして公開しています。DOI [10.5281/zenodo.20337008](https://doi.org/10.5281/zenodo.20337008)。
 - **[existence-proof](https://github.com/shimo4228/existence-proof)**: 同じ基盤（llms.txt、graph.jsonld、DOI）を使い、受益者が違う補完です。学位や所属を持たずに AI で検証できる仕事を作る人のためのもので、日本語が正本です。DOI [10.5281/zenodo.20558800](https://doi.org/10.5281/zenodo.20558800)。
 - **[Agent Attribution Practice](https://github.com/shimo4228/agent-attribution-practice)**: *attribution* の語を、エージェントの行為への説明責任の意味で使います。この repo では出典として認めることの意味なので、意図して分けています（[glossary](docs/glossary.ja.md) を参照）。DOI [10.5281/zenodo.19652013](https://doi.org/10.5281/zenodo.19652013)。
@@ -73,7 +73,7 @@ ADR は枠組みから演繹したものではありません。著者自身の 
 
 > Shimomoto, T. (2026). *Authorship Strategy: A Normative Framework and Tactical Catalog for AI-Era Authenticity Inversion, with Empirical Grounding from a Four-Repository Research Ecosystem*. Zenodo. https://doi.org/10.5281/zenodo.20263316
 
-タイトルは登録したときのままで、そこにある 4 つの repo は上の clone 数と閲覧数の記録期間にあった hub と研究ラインの repo（Agent Knowledge Cycle・Contemplative Agent・Agent Attribution Practice）です。完全なメタデータは [`CITATION.cff`](CITATION.cff) にあり、[`codemeta.json`](codemeta.json) としても利用できます。特定の版を引用するときは、concept DOI の Zenodo の一覧からその版の DOI を使ってください。引用先を一つに定める規律は [ADR-0001](docs/adr/0001-concept-doi-canonical.ja.md) にあります。
+タイトルは登録したときのままで、そこにある 4 つの repo は上の clone 数と閲覧数の記録期間にあった hub と研究ラインの repo（Agent Knowledge Cycle・Contemplative Agent・Agent Attribution Practice）です。完全なメタデータは [`CITATION.cff`](CITATION.cff) にあり、[`codemeta.json`](codemeta.json) としても利用できます。特定の版を引用するときは、concept DOI の Zenodo の一覧からその版の DOI を使ってください。引用先を一つに定める規律は [ADR-0001](docs/decision-history/0001-concept-doi-canonical.ja.md) にあります。
 
 ## ライセンス
 
@@ -92,6 +92,6 @@ authorship-strategy は、読み手が LLM を通じてアイデアに出会う�
 
 核となる観測の例: 著者の 6 つの repo の clone 数と閲覧数を 24 日分（2026-04-21〜2026-05-14）の毎日の記録で見ると、その比はおよそ 13（研究プロジェクトの 1 つ）から 100 超（hub）で、アクセスの大半が自動であることと整合します。この repo はこれを thesis の証拠としてではなく、予備的な観測（著者 1 人、導入前後の比較なし、アクセスの大半が自動の巡回であること）として報告しています。
 
-リンク: [graph.jsonld](graph.jsonld)（概念・ADR・反転の軸）、[llms.txt](llms.txt)（案内の索引）、[llms-full.txt](llms-full.txt)（統合した参照資料）、[docs/thesis.ja.md](docs/thesis.ja.md)、[docs/adr/README.ja.md](docs/adr/README.ja.md)、[docs/glossary.ja.md](docs/glossary.ja.md)、[docs/empirical/README.md](docs/empirical/README.md)（英語）、エコシステム全体の [hub graph](https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld) です。
+リンク: [graph.jsonld](graph.jsonld)（概念・ADR・反転の軸）、[llms.txt](llms.txt)（案内の索引）、[llms-full.txt](llms-full.txt)（統合した参照資料）、[docs/thesis.ja.md](docs/thesis.ja.md)、[docs/decision-history/README.ja.md](docs/decision-history/README.ja.md)、[docs/glossary.ja.md](docs/glossary.ja.md)、[docs/empirical/README.md](docs/empirical/README.md)（英語）、エコシステム全体の [hub graph](https://github.com/shimo4228/shimo4228/blob/main/graph.jsonld) です。
 
 </details>

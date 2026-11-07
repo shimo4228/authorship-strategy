@@ -51,7 +51,7 @@
 
   <doc-claim>
     <p>新しい ADR-0024 が決定を一本で記録する。</p>
-    <doc-code title="docs/adr/0024-success-as-arrival-at-the-dated-record.md · sketch" lang="markdown">
+    <doc-code title="docs/decision-history/0024-success-as-arrival-at-the-dated-record.md · sketch" lang="markdown">
 <script type="text/plain">
 # ADR-0024: Success Is Arrival at the Dated Record
 
@@ -84,12 +84,12 @@
 
   <doc-claim>
     <p>旧い成功定義に立つ ADR には日付つき注記が付く。</p>
-    <doc-code src="docs/adr/0007-human-attention-signals-not-a-metric.md" lines="106-110" hl="106">
+    <doc-code src="docs/decision-history/0007-human-attention-signals-not-a-metric.md" lines="106-110" hl="106">
       <doc-pin line="106" tone="warn" title="第 3 項を注記で上書き">成功の operative measure を「記録への到達」に差し替える。</doc-pin>
     </doc-code>
-    <doc-claim at="docs/adr/0008-rag-era-attribution-diffusion.md:115">
+    <doc-claim at="docs/decision-history/0008-rag-era-attribution-diffusion.md:115">
       <p><b>0008:115</b> · retrieval-only 却下理由の失効を注記</p>
-      <doc-code src="docs/adr/0008-rag-era-attribution-diffusion.md" lines="115-119" hl="117-119">
+      <doc-code src="docs/decision-history/0008-rag-era-attribution-diffusion.md" lines="115-119" hl="117-119">
         <doc-pin line="118" tone="info" title="理由の失効だけを注記">retrieval 経由の到達は成功になる。新しい必須条件は足さない。parametric への投資は別の判断として残す。</doc-pin>
       </doc-code>
     </doc-claim>
@@ -123,7 +123,7 @@
 
   <doc-claim>
     <p>ADR-0017 の失敗モードは「記録への経路なし」になる。</p>
-    <doc-code src="docs/adr/0017-failure-mode-diagnostics.md" lines="106-112" hl="106-108">
+    <doc-code src="docs/decision-history/0017-failure-mode-diagnostics.md" lines="106-112" hl="106-108">
       <doc-pin line="106" tone="warn" title="Reach without recognition">名前の不在でなく、記録へ戻れないことを失敗とする。</doc-pin>
     </doc-code>
     <div data-if="ghost=observe"><doc-note tone="info">決定 2 で「観測」を選んだ場合、ここは注記で保留にし、失敗モードの置き換えはしない。</doc-note></div>
@@ -276,7 +276,7 @@ PB で検討してほしいこと:
 
   <doc-claim>
     <p>ADR-0007 の第 1・2・4 項と注記を共通原理に揃える。</p>
-    <doc-code src="docs/adr/0007-human-attention-signals-not-a-metric.md" lines="99-105" hl="103-105">
+    <doc-code src="docs/decision-history/0007-human-attention-signals-not-a-metric.md" lines="99-105" hl="103-105">
       <doc-pin line="103" tone="warn" title="PB より厳しいまま残る">PB ADR-0006 が外した「同じ公開物の繰り返し告知」が残っている。人の発信の規則は PB を正本として参照にする。第 1 項（指標にしない）と第 4 項（成長レバーにしない）も、配信の最適化を許す共通原理に合わせて注記する。</doc-pin>
     </doc-code>
   </doc-claim>
@@ -298,8 +298,8 @@ verify-layer-boundary: <span class="g">OK</span> — 58 doctrine carriers</templ
 <script type="text/plain">
    git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld' \
      | grep -vE '^CHANGELOG\.md$' \
--    | grep -vE '^docs/adr/[0-9]')
-+    | grep -vE '^docs/adr/[0-9]' \
+-    | grep -vE '^docs/decision-history/[0-9]')
++    | grep -vE '^docs/decision-history/[0-9]' \
 +    | grep -vE '^docs/plans/')
 </script>
       <doc-pin line="48" tone="info" title="plan は当時の件数を持つ記録">CHANGELOG と同じ扱い。依頼の diff とは別 commit にする。</doc-pin>
@@ -316,7 +316,7 @@ verify-layer-boundary: <span class="g">OK</span> — 58 doctrine carriers</templ
 ~ CITATION.cff               # :41 行折り返し（不可視）、:80 abstract
 ~ .zenodo.json / codemeta.json
 ~ docs/CODEMAPS/architecture.md  # :31 :49 :59 :72
-~ docs/adr/README.md / README.ja.md  # index 行 + 語り
+~ docs/decision-history/README.md / README.ja.md  # index 行 + 語り
 ~ docs/adoption.md           # ADR 表（0023 で取りこぼした前例）
 ~ docs/thesis.md :325 / thesis.ja.md :262
 ~ CHANGELOG.md               # [Unreleased]

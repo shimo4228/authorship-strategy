@@ -8,13 +8,14 @@
 
 - 英語が正本。README、thesis、glossary、ADR は日本語 subordinate と対で更新する。
   manifesto、inspiration、empirical 層は英語のみ。
-- ADR の必須節は Status / Date / Context / Decision / Alternatives Considered /
-  Consequences。末尾に Lineage を置く。実験的な判断は Status に **experimental** と記す。
+- 判断の記録（`docs/decision-history/`、ADR-NNNN）の節は Date / Context / Decision / Alternatives Considered /
+  Consequences で、末尾に Lineage を置く。Review-when は任意。Decision は過去形（何をしたかと理由）で書き、
+  実験的な判断は Decision の冒頭に **experimental** と記す。記録は書かれた日の判断で、旧記録は書き換えない。
 - ADR の判断・理由・代替案は harness / vendor / framework neutral に書く。
   具体的な製品名や標準名は一般語へ抽象化し、実装情報は `docs/skills/` の参照先などで扱う。
-- thesis / ADR / manifesto / glossary は判断を扱う normative 層、`docs/empirical/` は
-  観測を扱う empirical 層。観測には “preliminary observation” または “consistent with” を使う。
-  観測が原則の改訂を促す場合は、対応 ADR を改訂する。
+- thesis / manifesto / glossary / adoption は現行の判断を扱う normative 層、判断の記録はその日付つきの経緯、
+  `docs/empirical/` は観測を扱う empirical 層。観測には “preliminary observation” または “consistent with” を使う。
+  観測が原則の改訂を促す場合は、normative 層の該当箇所を改訂し、その判断を新しい記録として足す。
 - `attribution` は本 repo では出典への credit、AAP では行為への accountability を意味する。
   `sibling` は研究ライン、`component` は doctrine が名指しする skill に使う。
   詳細は [glossary](glossary.md) と [skill index](skills/README.md)。
@@ -30,7 +31,7 @@
 
 - 計画とタスクの状態: [rfcs/](../rfcs/README.md)。1 エントリ 1 ファイルで、frontmatter の `state:` が正本。
   開いているものは `python3 ~/.claude/scripts/claims.py ready`（`--state blocked` / `--state draft`）で引く。
-  起票は skill `rfc-writer`、状態語は skill `task-stocktake` に従う。再提案しない判断は終端エントリか ADR にある。
+  起票は skill `rfc-writer`、状態語は skill `task-stocktake` に従う。過去に却下した案とその理由は終端エントリか判断の記録にある。
   実施状況の確認や重複確認にはこの store を使う。
 - 行為: [implementation log](empirical/implementation-log.md) の「Acts」節。著者のすべての戦略（AS / PB）の行為を
   1 行為 1 行、英語で、ID・日付・By（実施した戦略。効果の帰属には使わない）・行為・場所・記録への経路で記録する。
@@ -51,13 +52,13 @@
   personal-branding 戦略の行為も、2026-10-12 から上の log に By = PB で書く（PB 側に別の行為ログは置かない）。
 - 会話で生まれた案や問いの保存先は、記録の依頼に合わせて決める。
 
-役割分担の根拠は [ADR-0025](adr/0025-planning-and-task-state-in-a-public-rfc-store.md)
-（[ADR-0014](adr/0014-implementation-tracking-two-tier-ledger.md) を部分的に supersede）と
-[ADR-0026](adr/0026-one-public-act-log-across-strategies.md)（行為ログの共有と書き方）。
+役割分担の経緯は [ADR-0025](decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md)
+（その前の形は [ADR-0014](decision-history/0014-implementation-tracking-two-tier-ledger.md)）と
+[ADR-0026](decision-history/0026-one-public-act-log-across-strategies.md)（行為ログの共有と書き方）。
 
-## ADR・概念・graph を編集するとき
+## 記録・概念・graph を編集するとき
 
-- ADR の起草・改訂、glossary / graph 更新、release 前には research wiki の対応 concept を
+- 記録の起草、glossary / graph 更新、release 前には research wiki の対応 concept を
   read-only で参照する。場所は
   `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/wiki/concept/`。
   主担当は `authorship-strategy.md`、必要に応じて GEO / オーセンティシティ / AKC / LLM を参照する。

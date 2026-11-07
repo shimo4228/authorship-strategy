@@ -2,7 +2,7 @@ kind: external
 
 # 造語棚卸し: ADR-0010 の 3 条件と本文での反復で、プログラム内の造語 94 語を判定する（as-of 2026-10-12）
 
-判定規則は [ADR-0010](../../adr/0010-vocabulary-discipline.md) の Decision。造語してよいのは join-novelty（既存語が覆わない）、definitional anchoring（既存語彙だけで 1 文定義できる）、uncontested namespace（置き換えるべき確立した用法がない）の 3 つがすべて成り立つときだけで、残す語には glossary 定義・上流 citation・graph 節点と edge・本文での反復が要る。再出現の閾値は ADR-0010 Lineage の「約 3 回」を使った。RFC-0015（2026-10-12 withdrawn）が「汎用語を足すより造語を減らす」と切り替えた経緯を受け、本報告はその棚卸し本体にあたる。判定の根拠は 2026-10-12 時点の repo 内 grep と外部検索で、次の OQ5 sweep、または Harness-Zero 系の追随記事が出た時点で scaffold dissolution と ghost citation の行を再検索すると失効を避けられる。
+判定規則は [ADR-0010](../../decision-history/0010-vocabulary-discipline.md) の Decision。造語してよいのは join-novelty（既存語が覆わない）、definitional anchoring（既存語彙だけで 1 文定義できる）、uncontested namespace（置き換えるべき確立した用法がない）の 3 つがすべて成り立つときだけで、残す語には glossary 定義・上流 citation・graph 節点と edge・本文での反復が要る。再出現の閾値は ADR-0010 Lineage の「約 3 回」を使った。RFC-0015（2026-10-12 withdrawn）が「汎用語を足すより造語を減らす」と切り替えた経緯を受け、本報告はその棚卸し本体にあたる。判定の根拠は 2026-10-12 時点の repo 内 grep と外部検索で、次の OQ5 sweep、または Harness-Zero 系の追随記事が出た時点で scaffold dissolution と ghost citation の行を再検索すると失効を避けられる。
 
 ## 1. Summary
 

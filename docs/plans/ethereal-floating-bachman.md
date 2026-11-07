@@ -21,15 +21,15 @@ OQ5 held-out テストは実施、対象 repo はこちらで選定。
   （冒頭 why コメント、`set -euo pipefail`、`git ls-files` 由来の対象リスト、`DRIFT` 行、
   `fail` 累積、exit 0/1）。
 - 対象 = doctrine 層: `docs/thesis*.md`, `docs/manifesto.md`, `docs/glossary*.md`,
-  `docs/adr/*.md`, `README*.md`, `llms*.txt`, `CITATION.cff`。
+  `docs/decision-history/*.md`, `README*.md`, `llms*.txt`, `CITATION.cff`。
 - 検出パターン（essay 層の勘定源・反応数を doctrine 判断に持ち込む語）:
   `metrics/snapshots`, `snapshots.jsonl`, `schedule.json`, `zenn-content`, 
   `\b(likes?|view counts?|page[- ]?views?|reactions?|reads count)\b`（設計時に false positive を
   実測して絞る）。
-- 許可リスト（境界を定義・却下する側の文書は正当に語を含む）: `docs/adr/0007-*`,
+- 許可リスト（境界を定義・却下する側の文書は正当に語を含む）: `docs/decision-history/0007-*`,
   `0011-*`, `0014-*`, `0017-*`, `0022-*`（EN/JA）, `docs/glossary*.md`。各除外に理由コメント。
 - 配線: `docs/maintenance.md` の ADR 編集節に `bash scripts/verify-layer-boundary.sh` 1 行、
-  `docs/CODEMAPS/architecture.md` の invariant 段落に 1 項追加、`docs/adr/0022-*.md`（EN+JA）
+  `docs/CODEMAPS/architecture.md` の invariant 段落に 1 項追加、`docs/decision-history/0022-*.md`（EN+JA）
   Decision 5 boundary clause の末尾に 2026-09-07 dated 注記（執行器の所在）。
 - 初回実行で green を確認してから commit。
 

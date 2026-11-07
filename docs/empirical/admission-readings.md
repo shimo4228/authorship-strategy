@@ -1,7 +1,7 @@
 # Admission Readings (from 2026-10)
 
 *Role: baseline data (dated console readings), per
-[ADR-0023](../adr/0023-empirical-layer-role.md).*
+[ADR-0023](../decision-history/0023-empirical-layer-role.md).*
 
 This file records, once a month, what two search engines' own consoles
 report about the federation hub
@@ -9,7 +9,7 @@ report about the federation hub
 how many of its pages are in the index, whether the sitemap was read,
 and whether an AI answer system cited a hub page. A second table splits
 where visitors to the author's repositories came from.
-[ADR-0024](../adr/0024-success-as-arrival-at-the-dated-record.md) places
+[ADR-0024](../decision-history/0024-success-as-arrival-at-the-dated-record.md) places
 admission to an index before any arrival at the dated record; these
 readings are the dated record of that admission step. They make no
 effect claim. The acts that requested indexing are rows in the

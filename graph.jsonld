@@ -405,7 +405,7 @@
         "https://arxiv.org/abs/2602.13123"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0010-vocabulary-discipline.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#vocabulary-discipline"
       ]
     },
@@ -433,7 +433,7 @@
         "https://arxiv.org/abs/2604.02544"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0006-llm-first-ingest-dual-entry-points.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#dual-entry-point"
       ]
     },
@@ -454,7 +454,7 @@
         "https://arxiv.org/abs/2604.02544"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0006-llm-first-ingest-dual-entry-points.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#llmstxt-convention"
       ]
     },
@@ -479,7 +479,7 @@
         "https://arxiv.org/abs/2603.29979"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0006-llm-first-ingest-dual-entry-points.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#json-ld-knowledge-graph"
       ]
     },
@@ -500,7 +500,7 @@
         "https://arxiv.org/abs/2604.02544"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0007-human-attention-signals-not-a-metric.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#human-attention-signal"
       ]
     },
@@ -519,7 +519,7 @@
       "downstreamOf": "https://shimo4228.github.io/shimo4228/vocab#as/concept/attribution-diffusion",
       "instantiatedBy": "https://github.com/shimo4228/authorship-strategy#adr/0022",
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0022-audience-layer-split.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0022-audience-layer-split.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#audience-layer-doctrine-layer--essay-layer"
       ]
     },
@@ -550,7 +550,7 @@
         "https://arxiv.org/abs/2509.04499"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0008-rag-era-attribution-diffusion.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#two-channel-attribution-diffusion"
       ]
     },
@@ -581,7 +581,7 @@
         "https://arxiv.org/abs/2506.17585"
       ],
       "recordedIn": [
-        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md",
+        "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0011-two-channel-probe-protocol.md",
         "https://github.com/shimo4228/authorship-strategy/blob/main/docs/glossary.md#retrieval-suppressed-naming-probe"
       ]
     },
@@ -591,7 +591,7 @@
       "@type": "ADR",
       "name": "ADR-0001: Concept DOI as Canonical Reference",
       "description": "Every external link to a DOI-registered artifact uses the concept DOI; version-specific DOIs are used only for reproducibility citations of specific historical versions. Prevents downstream citation graphs from pinning the artifact to its initial version.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0001-concept-doi-canonical.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0001-concept-doi-canonical.md"
     },
 
     {
@@ -599,7 +599,7 @@
       "@type": "ADR",
       "name": "ADR-0002: DOI Federation via .zenodo.json",
       "description": "Sibling, source, and platform-mirror relationships are declared as relatedIdentifiers in archive deposit metadata so the citation network is recoverable from metadata alone, without requiring readers to follow prose disclosures.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0002-doi-federation-via-zenodo-json.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0002-doi-federation-via-zenodo-json.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0001"
     },
 
@@ -608,7 +608,7 @@
       "@type": "ADR",
       "name": "ADR-0003: Cross-Platform Dataset Federation",
       "description": "The same canonical artifact is mirrored to multiple platforms (Git host, DOI archive, dataset platform) with explicit sibling cross-references on each platform so readers entering from any platform can discover the artifact's presence on the others.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0003-cross-platform-dataset-federation.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0003-cross-platform-dataset-federation.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0002"
     },
 
@@ -617,7 +617,7 @@
       "@type": "ADR",
       "name": "ADR-0004: Authorship Metadata with ORCID Auto-Update Disabled",
       "description": "The author's persistent identifier record is enriched only with concept DOIs (never version DOIs); the archive-to-ORCID Auto-Update feature is explicitly disabled to prevent version sprawl from polluting the public record.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0004-authorship-metadata-orcid.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0004-authorship-metadata-orcid.md"
     },
 
     {
@@ -625,7 +625,7 @@
       "@type": "ADR",
       "name": "ADR-0005: README Localization Policy — Audience-Driven Maintenance",
       "description": "Locale mirrors of human-facing documentation are added or retired based on observed traffic data, not on speculation about prospective audiences. A mirror without measurable direct human audience is retired even when the language community seems important in the abstract.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0005-readme-localization-audience-driven.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0005-readme-localization-audience-driven.md"
     },
 
     {
@@ -633,7 +633,7 @@
       "@type": "ADR",
       "name": "ADR-0006: LLM-First Ingest via Dual Entry Points",
       "description": "Specifies that any framework-governed artifact deploys a prose-form navigator and a concept-form linked-data graph as a complementary pair, released synchronously. Each entry point addresses a distinct LLM-mediated reader sub-population the other cannot reach. The pair is the operational embodiment of the Axis 1 inversion (enclosure to openness) on the ingest surface.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0006-llm-first-ingest-dual-entry-points.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0006-llm-first-ingest-dual-entry-points.md"
     },
 
     {
@@ -641,7 +641,7 @@
       "@type": "ADR",
       "name": "ADR-0007: Human-Attention Platform Signals Are Not a Success Metric",
       "description": "Platform human-attention signals — Git-host star counts (gameable: purchasable) and repository page-view counts (structurally blind to LLM-mediated reach) — are excluded as optimization targets and success metrics, and off-page human-distribution labor is declined as a red-ocean activity operating on a near-empty human-arrival funnel. Its success clause is restated by ADR-0024: a use of the author's idea that reaches the dated record. The metric-side counterpart to the scarcity-to-diffusion inversion; on-page human quality is maintained as hygiene, not as a growth lever.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0007-human-attention-signals-not-a-metric.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0007-human-attention-signals-not-a-metric.md"
     },
 
     {
@@ -649,7 +649,7 @@
       "@type": "ADR",
       "name": "ADR-0008: RAG-Era Attribution Diffusion — Two Channels, Two Time Constants",
       "description": "Treats Attribution Diffusion as two channels with opposite time constants and levers: a parametric channel (idea absorbed into model weights at training time — slow, driven by cross-platform vocabulary co-occurrence) and a retrieval channel (artifact fetched at query time — fast, driven by freshness and structured data). The two are optimized and measured separately; ghost citation (source cited but author not named) was framed as the failure mode of pursuing retrieval without parametric burn-in; ADR-0024 reads a cited owned identifier as an arrival at the dated record. Divides the single 'diffusion' of ADR-0006 and refines the measurement layer of ADR-0007.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0008-rag-era-attribution-diffusion.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0008-rag-era-attribution-diffusion.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0006"
     },
 
@@ -658,7 +658,7 @@
       "@type": "ADR",
       "name": "ADR-0009: Dual Entry Points Are Asymmetric",
       "description": "Amends ADR-0006 on 2026 evidence that the two entry points are not co-equal, and — as revised on 2026-08-19 — relocates where the asymmetry lies. The prose-form navigator's citation effect is noise (adoption around one in ten surveyed domains, ~0.1% of agent crawls request it). The concept-form structured graph delivers no near-term citation lift either on the 2026 controlled evidence (matched-control studies of pages already inside an AI answer system's consideration set find no uplift from adding structured markup; the major search operator's guidance says no special markup is required); what those studies cannot reach is the layer before citation — whether an artifact, its concepts and its author enter the set an AI answer system crawls, indexes and resolves as entities at all. The pair is retained but made asymmetric — the graph is the registration surface for consideration-set entry and entity resolution (the retrieval-channel surface, with no citation-lift expectation attached), the navigator is rescoped to a Business-to-Agent (B2A) context surface rather than an AI-search citation lever. The effort allocation is unchanged from the 2026-05-30 decision; only its stated reason moved, and two figures that did not resolve to a primary source were removed. ADR-0006's synchronization discipline is unchanged.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0009-dual-entry-asymmetric-rebalance.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0009-dual-entry-asymmetric-rebalance.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0006",
       "groundedIn": [
         "https://arxiv.org/abs/2607.14035",
@@ -673,7 +673,7 @@
       "@type": "ADR",
       "name": "ADR-0010: Vocabulary Discipline — Coin Sparingly, Anchor Densely",
       "description": "Defines the vocabulary discipline ADR-0008 named as the parametric-channel lever but left undefined. A coined term's power comes from its edge density, not from the count of coinages: a term is coined only when three conditions all hold (join-novelty, definitional anchoring, uncontested namespace), and every retained coinage is anchored densely — glossary definition in existing vocabulary, upstream citations where prior art exists, knowledge-graph edges, repeated work in the body. Everything else is said in existing vocabulary with the upstream source cited. The vocabulary-level enforcement of origin-claim scope discipline.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0010-vocabulary-discipline.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0010-vocabulary-discipline.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0008"
     },
 
@@ -682,7 +682,7 @@
       "@type": "ADR",
       "name": "ADR-0011: Two-Channel Probe Protocol — Measuring Each Channel by Its Own Instrument",
       "description": "Builds the measurement instrument ADR-0008 demanded: a scheduled two-channel probe protocol interrogating frontier models with search suppressed (does the trained model name the concept and its author?) and search enabled (are owned identifiers cited, and does the author's name survive in prose alongside the citation?). Detection is deterministic string matching against a versioned lexicon over retained raw responses, never model judging; prompts are fixed single-variable templates with a negative control; every change to prompts, models, or lexicon is a visible series break. The retrieval channel is measured on a fast calendar cadence; the parametric channel is event-driven on model-generation changes (a frozen model's weights cannot change between runs), with a monthly currency check — silent-swap detection, provider-catalog diff, staleness guard — standing in for the calendar; the channels are never blended. The public probe log feeds the parametric channel it measures — a stated confound and an on-thesis act of diffusion. A 2026-08 calibration annex adds reading rules, bound by ADR-0007 as diagnostics rather than success metrics: readings are stratified by model family with within-family consistency reported beside cross-family comparison and no single cross-model threshold; the negative control is measured first in every run as its working noise floor; the A/B delta is read knowing the two override directions carry unequal error risk (fetched context displacing what the weights produced is the more diagnostic event); and every probe declares itself recognition or recall, with no pooling across the two.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0011-two-channel-probe-protocol.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0011-two-channel-probe-protocol.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0008"
     },
 
@@ -691,7 +691,7 @@
       "@type": "ADR",
       "name": "ADR-0012: Link-Index Contributions to External Collections",
       "description": "Applies the thesis's enclosure axis to channel selection for external curated collections (community-curated link directories, skill marketplaces, dataset registries). Contributions are link-index entries only: the canonical artifact stays in the author's repository while the host carries a hyperlink and a short factual description; vendor-type contributions, where the host would carry the artifact body in its own distribution, are declined by default. Every prospective host passes a four-condition pre-submission audit — corporate ownership, absence of an open license, content-vendoring structure, operation as a paid-product funnel — with risk rising as conditions combine and a host meeting all four excluded even for link-only entries; a listed host that later introduces paid tiers or content vendoring triggers withdrawal. Grounded in two 2026 withdrawal episodes whose shared pattern is that vendored content is captured by any subsequent enclosure the host introduces, while a link entry bounds the worst case to a one-line description inside the enclosing host.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0012-link-index-channel-selection.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0012-link-index-channel-selection.md"
     },
 
     {
@@ -699,7 +699,7 @@
       "@type": "ADR",
       "name": "ADR-0013: Intrinsic Content-Derived Identifiers as a Complementary Priority-Claim Layer",
       "description": "Adds an intrinsic, content-derived identifier layer — SWHID (ISO/IEC 18670) — to the identifier federation, complementing the DOI layer rather than replacing it. A DOI is extrinsic: an opaque name bound to a metadata record by a registry, unverifiable against the artifact's content and dependent on the registry's survival; SWHID is computed from the artifact and its version-history graph, verifiable by anyone holding the content without consulting any registry, at granularities from a repository snapshot down to a single line. Division of labor: the DOI carries citability, rich metadata, and registry-mediated scholarly discovery; the intrinsic identifier carries content-verifiable, registry-independent existence proof — each covers the other's failure mode. Every release triggers an explicit archival request to a content-addressed public software archive, whose snapshot identifier is recorded alongside the DOI in citation metadata; for artifact genres where DOI registration is impractical, the intrinsic identifier is the designated substitute priority-claim mechanism, closing the manifesto's open question 4. Archival also opens a second parametric-channel ingest surface (code-focused LLM training corpora source directly from the archive) at zero marginal authoring cost. The identifier proves what content existed when — it carries no authorship semantics, which remain with the DOI / ORCID layer.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0013-intrinsic-identifier-layer.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0013-intrinsic-identifier-layer.md",
       "extends": "https://github.com/shimo4228/authorship-strategy#adr/0003"
     },
 
@@ -708,7 +708,7 @@
       "@type": "ADR",
       "name": "ADR-0014: Implementation Tracking as a Two-Tier Ledger",
       "description": "Implementation tracking separates a private operational ledger from its dated, effect-claim-free public projection. The ledger is updated before the timeline. Records support status and implementation decisions; they do not prescribe idea generation. The 2026-09-07 amendment removes the compulsory review trigger and ideation sequence. Concrete choices receive context-relevant evaluation, and existing strategic premises may be questioned. Artifact locations live in the maintenance reference; the operational skill provides optional decision support. ADR-0025 (2026-10-12) supersedes the private ledger as source of truth and the update order: planning and task state now live in a public `rfcs/` store, and one commit updates the entry's state and adds the timeline line.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0014-implementation-tracking-two-tier-ledger.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0014-implementation-tracking-two-tier-ledger.md"
     },
 
     {
@@ -716,7 +716,7 @@
       "@type": "ADR",
       "name": "ADR-0015: License Selection by Audience, Not Artifact Form",
       "description": "Fixes license selection on the artifact's dominant audience rather than its surface form, on the standing principle that attribution is carried by the federated-identifier layer (the identifier-federation triplet 0001-0003 and the intrinsic-identifier layer 0013) rather than by the license, so the license is chosen to minimize reuse friction. Machine-mined artifacts — datasets, corpora, traffic and probe logs, runtime data, knowledge graphs, and prose published for LLM-mediated reach, which under this LLM-first program (ADR-0007) is mined not read regardless of being prose — take a public-domain dedication (CC0-1.0); executable code takes a permissive software license (MIT/Apache-2.0), carried whole-repo on a code-bearing repository for legibility since it is already absorbed freely and unfiltered; genuinely human-first artifacts may take an attribution-requiring content license (CC-BY-4.0); a split is reserved for repositories whose non-code material is the entire deliverable; non-commercial and no-derivatives terms are prohibited as enclosure that forbids the parametric channel's training-time absorption and the preference hierarchy's creative reuse. The license-layer counterpart of vocabulary discipline (0010); disjoint from ADR-0012, which governs the license a prospective external host must extend rather than the license the author applies. Triggered by a 2026-06-17 cross-repository audit that found four license patterns in simultaneous use and one non-commercial restriction contradicting the framework, and sharpened from a form axis to an audience axis when an essay collection's LLM-first designation made form classification untenable.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0015-license-selection-by-audience.md"
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0015-license-selection-by-audience.md"
     },
 
     {
@@ -724,7 +724,7 @@
       "@type": "ADR",
       "name": "ADR-0016: Genre-Split Placement — Essays as Repository-Corpus Canonical with Intrinsic Identifier, Papers as Concept-DOI Canonical",
       "description": "Records which genre takes which canonical, a routing the identifier ADRs left open: ADR-0001 fixed the concept DOI as canonical and ADR-0013 added an intrinsic content-derived identifier (SWHID) as the substitute claim for DOI-impractical genres, but neither said which genre is which. ADR-0016 routes by genre. The essay genre's canonical is the author's version-controlled repository corpus, its priority claim resting on the intrinsic content-derived identifier (a snapshot of the corpus in a content-addressed public archive) rather than a registry DOI, under a public-domain dedication (CC0-1.0, ADR-0015); the paper genre's canonical is the concept DOI (ADR-0001), with the intrinsic identifier as its complementary layer. Syndicated essay copies are bound to the canonical by entity federation — sameAs, ORCID, DOI, intrinsic identifier, and the distinctive vocabulary that survives paraphrase (ADR-0009, ADR-0010) — not by a platform canonical-URL tag, whose effect on LLM-mediated credit is unverified and which is retained only as human-reader and search-engine hygiene. Corpus membership is gated by an authenticity criterion (Layer 1: author-voiced, reader-intended pieces; study or learning drafts without an author voice are excluded), and a load-bearing essay idea is promoted to a concept-DOI deposit when it graduates into a paper (Layer 3, idea-versus-scaffold separation). It instantiates ADR-0013's DOI-impractical-genre clause concretely and complements ADR-0015's license-by-audience rule, closing the placement gap between them. Triggered by a 2026-06-25 review of where crystallized essays and papers should live for LLM-mediated diffusion, which found the essay corpus was a publishing pipeline lacking an intrinsic-identifier priority claim, a reconciled license, and entity federation; the corpus was governed accordingly as the implementation this decision records.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0016-genre-split-placement.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0016-genre-split-placement.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0013",
         "https://github.com/shimo4228/authorship-strategy#adr/0015"
@@ -736,7 +736,7 @@
       "@type": "ADR",
       "name": "ADR-0017: Failure-Mode Diagnostics — A Detector and Recovery Strategy for Each of the Three Acknowledged Failure Modes",
       "description": "Operationalizes the manifesto's eighth open question — the framework's acknowledged failure modes — by pairing each of the three named modes with a diagnostic signal and a recovery strategy. For reach without recognition (the ghost citation of authorship, where ideas diffuse but the diffusion does not carry the author's name; restated by ADR-0024 as reach without a route back to the dated record), the detector is a naming probe that succeeds at the concept level yet fails at the author level, read against a mechanism the framework borrows from the citation and interpretability literature: the parametric channel gates the retrieval channel so a source's address can be cited while its author goes unnamed, factual recall is foreseeable at design time so a coinage's low representation places it at the harsh end of the recall floor by construction, and recall reads back prior authority unequally rather than presence neutrally — the supply-side connection to the ninth open question; the recovery anchors distinctive vocabulary densely, keeps the origin claim narrow, and accepts that under full three-axis inversion reach without recognition may be a structural price rather than a defect to chase. For over-publication, the detector is the author's own identifier portfolio carrying multiple superseded versions of one idea, and the recovery is the concept-DOI canonical with version discipline. For under-investment in worked implementation, the detector is a doctrine-heavy, implementation-light portfolio, and the recovery rebalances toward the abstract-doctrine-plus-worked-implementation pair the idea-versus-scaffold layer requires. A load-bearing caveat governs all three: a diagnostic is a failure-detector, not a success metric — it never becomes an optimization target, because promoting a detector to a target re-imports the purchasable, off-page metric posture the framework rejects and re-creates the reach-chasing it prohibits, while honestly articulating one's own failure modes is consistent with the authenticity commitment at the top of the stack.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0017-failure-mode-diagnostics.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0017-failure-mode-diagnostics.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0007",
         "https://github.com/shimo4228/authorship-strategy#adr/0011",
@@ -756,7 +756,7 @@
       "@type": "ADR",
       "name": "ADR-0018: Origin-Claim Falsifiability — Test a Priority Claim Against Prior Art Before Publishing It in a Durable Artifact",
       "description": "The decision to codify the framework's informally-practiced origin-claim scope discipline into a stated procedure: before an origin claim enters a durable, citable artifact, the author runs a retrieval search for prior work that would refute the claim, and any claim that survives only because it was never tested — one that is unfalsifiable in principle, or one the search shows already anticipated by located prior work — is rescoped to its narrowest defensible form rather than dropped. The governing criterion is falsifiability: a publishable origin claim is one a prior-art search could in principle refute and did not. The check is a binary defensibility judgment feeding a human rescope decision, deliberately not a novelty score, so it composes with the metric-rejection commitment rather than turning authenticity into a number to maximize. The procedure only ever narrows a claim, making it a humility instrument that extends the vocabulary discipline's origin-claim scope clause and rests on Layer 1 authenticity; it grounds the verification step on the demonstration, by an external evidence-grounded agentic novelty-assessment system, that an externally-computed novelty check built on retrieved real prior work is feasible — cited for feasibility, never for an accuracy figure, with the framework claiming no priority over that system. Writing the habit down as an adoptable check answers the framework's begging-the-question risk by requiring every origin claim, including the framework's own, to survive a prior-art refutation search before it becomes costly to retract.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0018-claim-falsifiability-criterion.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0018-claim-falsifiability-criterion.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0010"
       ],
@@ -770,7 +770,7 @@
       "@type": "ADR",
       "name": "ADR-0019: Structural Optimization versus Content Authenticity — The Structured-Artifact Tactic Optimizes the Transmission Path, Never the Content",
       "description": "Locates the boundary between legitimate structural optimization and prohibited content deformation for the framework's structured-artifact diffusion tactic. The structured-data efficacy literature establishes that AI-retrieval citation lift attaches to a document's structure and to attribute-rich, entity-anchored markup rather than to surface text or the mere presence of markup, which justifies the structured-artifact tactic while creating a standing pressure to optimize for citation under a borrowed marketing-optimization frame. The decision draws the line at the object of optimization, not its intensity: optimizing the transmission path — document architecture, information hierarchy, entity anchoring, and the dense anchoring of distinctive vocabulary — is legitimate because it changes how the idea travels and leaves the idea's content as authored, whereas deforming the content to win citations through padded attribute-richness, keyword-stuffing, or claims shaped to a channel's reward function is prohibited because it deforms what the idea is. The rule — optimize how the idea travels, never what the idea is — makes content deformation an authenticity violation, made goalless by the prior rejection of citation and visibility as success metrics. It extends the structured-graph entry point (ADR-0009, whose criterion since 2026-08-19 is consideration-set entry / entity resolution rather than citation lift) and the anchor-densely vocabulary discipline as two surfaces of the same legitimate carrier investment, sits beneath the authenticity layer the boundary protects, and is read against the supply-side entity-grounding tension and the tactic-obsolescence question.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0019-structural-optimization-vs-content-authenticity.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0019-structural-optimization-vs-content-authenticity.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0009",
         "https://github.com/shimo4228/authorship-strategy#adr/0010",
@@ -789,7 +789,7 @@
       "@type": "ADR",
       "name": "ADR-0020: Onboarding to Third-Party AI-Derived Repository Surfaces — Synthetic Wikis and Documentation Hubs",
       "description": "Onboards idea-bearing public repositories to two third-party derivation-type surfaces that build an LLM-consumable view from the repository: a synthetic wiki that paraphrases the codebase behind a conversational query interface, and a documentation hub that serves the repository's own machine-readable documents verbatim through a model-callable interface, each attaching an adoptable badge. The decision onboards to both and blesses the derived views rather than gating them, under a per-type discipline: the synthetic wiki's paraphrase is used as a regurgitation-test drift diagnostic and defended by upstream dense anchoring rather than corrected on the derived surface, while the documentation hub's access-count badge is read as a measurement signal of the LLM-mediated channel and never as a success metric. It declines an index-only catalog whose artifact model is the installable code library as an artifact-type mismatch, and declines self-hosted query infrastructure as friction the framework does not take on, keeping the origin claim fixed on the identifier-federation layer rather than on any derived surface. It is the derivation-axis counterpart to the enclosure-axis channel-selection decision, extends the LLM-first ingest surface, is bounded by the metric-rejection decision, and connects its regurgitation-test diagnostic to the vocabulary discipline and the measurement protocol.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0020-derivation-surface-onboarding.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0020-derivation-surface-onboarding.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0006",
         "https://github.com/shimo4228/authorship-strategy#adr/0012",
@@ -803,7 +803,7 @@
       "@type": "ADR",
       "name": "ADR-0021: Self-Sovereign Entity Grounding — Community-Governed Authority Records Are a Revocable Layer, Not a Foundation",
       "description": "Retires self-created entries in community-governed authority records as a Layer 4 tactic, after the host of such a record judged the author's account promotional by its aggregate editing pattern — no individual edit cited — revoked it indefinitely, and mass-deleted every entry: the author entity, the artifact entities, bibliographic records of cited works, and the citation edges among them. The decision classifies entity-grounding surfaces by revocation control: self-sovereign layers (the repository and its knowledge graph, registry deposits under the author's account, the author-identifier record, and the intrinsic content-derived identifier layer, which alone is non-revocable by construction) may be load-bearing for the origin claim, while third-party-governed surfaces are reach amplifiers whose total loss the strategy must survive. Third-party-governed grounding is admitted only when earned — created unprompted by uninvolved parties — never self-manufactured or solicited. On revocation, dead identifiers are purged promptly from every machine-readable carrier while dated historical records are preserved unmodified; circumvention through new accounts or proxies is prohibited outright; and every future third-party deployment faces an aggregate-pattern test — how the account's cumulative footprint reads to the host's governance rather than whether each action is formally compliant. Records the sharpest observed instance of the manifesto's ninth open question without closing it.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0021-self-sovereign-entity-grounding.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0021-self-sovereign-entity-grounding.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0013",
         "https://github.com/shimo4228/authorship-strategy#adr/0002",
@@ -819,7 +819,7 @@
       "name": "ADR-0022: Audience-Layer Split — Contemporary Human Readers as the Essay Genre's Primary Audience, with Layer-Scoped Metrics",
       "creativeWorkStatus": "superseded by ADR-0024 (2026-10-11)",
       "description": "Superseded by ADR-0024 on 2026-10-11. Splits the strategy's accounting into two audience layers with different time constants, routed by genre. The doctrine layer — the doctrine repositories and the paper genre, on a months-to-years time constant — keeps LLM-mediated channels as its primary audience, with the metric-rejection decision intact. The essay layer — the governed essay corpus and its syndication surfaces, on a days-to-weeks time constant — takes contemporary human readers as its primary audience; contemporaneous reception signals (reads, reactions, follower counts) are legitimate there both to observe and to steer writing decisions by. The amendment proceeds on accounting grounds: an unqualified audience demotion had let every stagnant human-attention signal be re-read as purity — an unfalsifiable consolation — while the essay corpus shipped to contemporary human readers entirely off the strategy's books, and the author's recognition-seeking motive was structurally starved while the contemplative motive was fully served. The metric-rejection decision is amended clause by clause (its own revisit trigger, a trustworthy non-gameable human-reception signal, has not fired). Boundary clauses keep the layers from contaminating each other: essay-layer signals never steer doctrine-layer release, deposit, or federation decisions; content deformation for numbers is prohibited in both layers; essay-layer platforms remain non-load-bearing third-party-governed surfaces under the safety guards and the aggregate-pattern test; and the assignment governs accounting and metrics only, leaving license selection and canonical routing untouched. Opens the manifesto's eleventh open question: whether a two-layer motivation portfolio resists cross-layer contamination when both layers are held by a single practitioner.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0022-audience-layer-split.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0022-audience-layer-split.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0007",
         "https://github.com/shimo4228/authorship-strategy#adr/0011",
@@ -835,7 +835,7 @@
       "@type": "ADR",
       "name": "ADR-0023: Empirical-Layer Role — Reference Baseline as Primary Role, Case-Study Narrative Bounded, Validation Evidence Only by Explicit Design",
       "description": "Closes the manifesto's seventh open question — whether the empirical layer functions as validation evidence, reference baseline, or case study — by structuring the layer's intentional hybrid rather than collapsing it to one role. The three candidate roles differ less in content than in the strength of the claim the layer would assert, and the cost of the recorded ambiguity was that no artifact declared how strong a claim it was making. Reference baseline is the layer's primary role and the minimum every artifact must satisfy: reproducible data or a dated record, a documented method, stated limitations. Case-study narrative is a bounded secondary role: interpretive notes attached to specific artifacts and marked as interpretation, never elevated into effect claims. Validation evidence is a role the layer declines to claim — no artifact is read as validating the framework's normative claims unless it was designed as an experiment before the fact (a pre-specified contrast or a pre-registered protocol testing a stated claim) and is explicitly designated as validation evidence at publication, a role upgrade that is never silent, modeled on the visible-series-break rule of the two-channel probe protocol. Each artifact's role is declared in the layer's index; the intervention timeline is placed as the baseline's methods companion and the external-literature note as reporting others' evidence at the strength the cited literature itself claims. Declining the validation role does not weaken the standing rule that empirical observation may revise normative decisions: prompting a revision requires only a preliminary observation — the strength the failure-mode diagnostics already run on — while validating the framework would require evidence from an artifact designed as an experiment, which the layer does not claim to hold. The preliminary-observation tone remains the floor under everything the layer asserts.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0023-empirical-layer-role.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0023-empirical-layer-role.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0011",
         "https://github.com/shimo4228/authorship-strategy#adr/0014",
@@ -848,7 +848,7 @@
       "@type": "ADR",
       "name": "ADR-0024: Success Is a Use That Reaches the Dated Record — the Name Is Observed, and Each Strategy States the Question It Owns",
       "description": "Fixes the framework's success criterion on the dated judgment the author must protect — that this was thought at this time: a use of the author's idea that reaches the concept-DOI deposit or the repository whose history and archive identifier timestamp it. The author's name is not required: a retrieved record already carries it, and in a model's weights a recalled name, coined term, project name or DOI is a pointer back to the record. Absorption with no route back is recorded as diffusion, not counted as success. Arrival is judged in two tiers: a use with arrival (an answer citing an owned identifier for the idea, a derivative linking the record, an install that runs the component, a pointer recalled without retrieval) is evidence; clones, page views, referrers, DOI resolutions and crawler fetches are proxies. Each strategy states the question it owns — this framework arrival at the record, the author's personal-branding strategy the author as a person — and the two are written to feed each other under one principle: content is decided by the author's thought, distribution may be optimized without changing content. Supersedes ADR-0022 in full, retires its textual boundary guard, and adds dated notes to ADR-0007, 0008, 0009, 0011, 0015, 0017, 0019 and 0023.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0024-success-as-arrival-at-the-dated-record.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0024-success-as-arrival-at-the-dated-record.md",
       "groundedIn": [
         "https://arxiv.org/abs/2609.15164",
         "https://arxiv.org/abs/2508.00838"
@@ -869,7 +869,7 @@
       "@type": "ADR",
       "name": "ADR-0025: Planning and Task State in a Public RFC Store",
       "description": "Planning and task state move to a public `rfcs/` store as their source of truth, one entry per file with a `state:` field, including the rejection guards no ADR holds; the implementation log stays a separate document, the dated, effect-claim-free intervention timeline; sensitive detail (contacts, third parties' reply state, account detail, personal constraints) stays in private notes linked from an entry and is checked before publication. One commit updates an entry's state and adds the dated log line. Reverses ADR-0014's commitment that a private ledger is the source of truth; ADR-0014's reasons for keeping planning out of the timeline and detail private still hold. History before the move stays in a private archive.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0025-planning-and-task-state-in-a-public-rfc-store.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0014",
         "https://github.com/shimo4228/authorship-strategy#adr/0023",
@@ -881,7 +881,7 @@
       "@type": "ADR",
       "name": "ADR-0026: One Public Act Log Shared Across the Author's Strategies",
       "description": "The acts of the author's strategies (this framework and the author's personal-branding strategy) go into one public act log, the implementation log, with a row ID and the strategy that acted (By, responsibility only). Acts in public places name the place and URL; acts through private routes (forms, applications, e-mail) record only that they happened; the log holds no reasons, and reactions, contacts and personal matters stay private. Work queues keep plans and the log ID, not a second record; past rows are kept and named through dated annotations; unattended writers append on a dedicated branch first. Human-facing routes also reach machines and the reverse, so intent cannot separate effects; a log of publishable acts also keeps acts publishable.",
-      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/adr/0026-one-public-act-log-across-strategies.md",
+      "recordedIn": "https://github.com/shimo4228/authorship-strategy/blob/main/docs/decision-history/0026-one-public-act-log-across-strategies.md",
       "extends": [
         "https://github.com/shimo4228/authorship-strategy#adr/0012",
         "https://github.com/shimo4228/authorship-strategy#adr/0014",

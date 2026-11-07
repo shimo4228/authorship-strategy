@@ -3,7 +3,7 @@
 この repo の計画とタスクの公開台帳 — 1 エントリ 1 ファイル `NNNN-slug.md`、ID は
 `RFC-NNNN`。提案から小さな作業項目、再提案しない判断（終端エントリ）まで同居する。
 **state は各ファイルの frontmatter が唯一の正本**。判断は
-[ADR-0025](../docs/adr/0025-planning-and-task-state-in-a-public-rfc-store.md)、実施済みの介入の
+[ADR-0025](../docs/decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md)、実施済みの介入の
 日付つき時系列は [implementation log](../docs/empirical/implementation-log.md) にある。
 
 起票の手順と規約（足切り・採番・様式・公開規約）の正本は

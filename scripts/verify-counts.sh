@@ -46,7 +46,7 @@ FILES=()
 while IFS= read -r _f; do FILES+=("$_f"); done < <(
   git ls-files '*.md' '*.txt' '*.cff' '*.json' '*.jsonld' \
     | grep -vE '^CHANGELOG\.md$' \
-    | grep -vE '^docs/adr/[0-9]' \
+    | grep -vE '^docs/decision-history/[0-9]' \
     | grep -vE '^docs/plans/' \
     | grep -vE '^rfcs/')
 
@@ -91,10 +91,10 @@ check_noun() {
 }
 
 # --- ADR total ---
-# `grep -v` exits 1 when it filters out every line (e.g. docs/adr/ renamed away),
+# `grep -v` exits 1 when it filters out every line (e.g. docs/decision-history/ renamed away),
 # which under `set -e`+pipefail would silently abort the whole guard. `|| true`
 # lets a resulting count of 0 flow through and be reported as loud drift instead.
-adr=$(git ls-files 'docs/adr/[0-9]*.md' | { grep -vE '\.ja\.md$' || true; } | wc -l | tr -d ' ')
+adr=$(git ls-files 'docs/decision-history/[0-9]*.md' | { grep -vE '\.ja\.md$' || true; } | wc -l | tr -d ' ')
 # Nouns are deliberately plural ("ADRs") or の-anchored ("の ADR"): the total is
 # always restated in one of these forms, whereas singular "one ADR" / "N ADR"
 # occurs as a legitimate non-total mention (e.g. "closes one ADR") in carriers

@@ -18,7 +18,7 @@ as-of 2026-10-12。非公開 repo の中身は引用しない。所在は `<repo
 
 注:
 - G は「公開行為の予定と URL」を持つので、行為ログの一次資料として使える。ただし生成物であり、行為ログの 1 行 1 行為の形とは別物。重複して書くかの判断材料: G は date と URL を持つが、Zenn / Dev.to 以外の行為は持たない。
-- 手がかりの語で Grep した範囲（`*/docs`, `*/.notes`, 各 CLAUDE.md、~/.claude の skills / rules / scheduled-tasks / docs/adr）では、A-H のほかに「1 行 1 行為」型の行為ログは見つからなかった。`.notes/wiki-harvest/ledger.md`（attention-not-self, agent-attribution-practice, agent-knowledge-cycle, contemplative-agent）と `attention-not-self/.notes/daily-research/ledger.md` は題名に ledger を含むが、収穫・調査の台帳で、題名と配置だけの判断（中身は読んでいない）。
+- 手がかりの語で Grep した範囲（`*/docs`, `*/.notes`, 各 CLAUDE.md、~/.claude の skills / rules / scheduled-tasks / docs/decision-history）では、A-H のほかに「1 行 1 行為」型の行為ログは見つからなかった。`.notes/wiki-harvest/ledger.md`（attention-not-self, agent-attribution-practice, agent-knowledge-cycle, contemplative-agent）と `attention-not-self/.notes/daily-research/ledger.md` は題名に ledger を含むが、収穫・調査の台帳で、題名と配置だけの判断（中身は読んでいない）。
 - daily-research は記録ファイルへの書き込み規則を持たない。daily-research/CLAUDE.md:232 は「repo は read-only 参照のみ。deploy・台帳更新はしない」。
 
 ### 2. 書き手の自動化（~/.claude/scheduled-tasks/*/SKILL.md、全 7 本。うち 1 本は非公開 repo の task なので名前を伏せた）
@@ -71,7 +71,7 @@ as-of 2026-10-12。非公開 repo の中身は引用しない。所在は `<repo
 | ~/.claude/rules/common/planning.md | plan は公開可能な書き方を既定、機微はリンク先、パスは `~/`（ADR-0085）。行為ログには触れない |
 | ~/.claude/rules/common/security.md | repo 由来の文字列は untrusted。公開記録の書き方は定めない |
 | ~/.claude/skills/harness-sync/SKILL.md:51 | rfcs/ は ADR と同じく公開 copy に丸ごと。起票は公開可能な書き方が既定 |
-| ~/.claude/docs/adr/0049-unify-task-ledger-into-public-rfcs.md | 台帳を公開 rfcs/ に一元化（claude-harness ADR-0049）。無人 triage は working tree に書けるが公開へ出る commit / push は人間側 |
+| ~/.claude/docs/decision-history/0049-unify-task-ledger-into-public-rfcs.md | 台帳を公開 rfcs/ に一元化（claude-harness ADR-0049）。無人 triage は working tree に書けるが公開へ出る commit / push は人間側 |
 | authorship-strategy:docs/maintenance.md:29-47 | AS の実施記録規約（再掲は下） |
 | authorship-strategy:scripts/verify-public-detail.sh:28-42, 84-86 | 公開面の機械ゲート。対象は rfcs/*.md と implementation-log.md。LLM prompt が拾う: 連絡先 / 私人名 / 返信状況（相手が答えた・待つ・拒否した）/ アカウント詳細（block 等の運用詳細、認証手順）/ 個人事情 / ローカル絶対パスと非公開 repo 名。拾わない: 公開 PR の状態、公開サービスの処理状態、著者自身の決定、「詳細は非公開メモにある」という中立の言明 |
 
@@ -84,11 +84,11 @@ as-of 2026-10-12。非公開 repo の中身は引用しない。所在は `<repo
 |---|---|---|
 | authorship-strategy | docs/maintenance.md:29-47 | :31-34 計画とタスクは rfcs/。:35-36 実施済み介入は implementation log、日付付き介入だけを英語、効果を主張しない、host や私的運用情報は ADR-0012 水準に抽象化。:37-38 機微は `.notes/`、ファイル名にも書かない。:39 介入を実施したら 1 commit で state・Status・log 行。:40-41 push 前に verify-public-detail.sh --llm。:42-43 2026-10-12 までの履歴は `.notes/archive/diffusion-ledger-2026-06-to-10.md`（非公開）、「PB の行為で記録へ至るものは PB の行為ログ（経路の列）が正本で、ここには写さない」 |
 | authorship-strategy | docs/empirical/implementation-log.md:3-6, 86-87, 231-245 | 冒頭（dates are interventions）、External collections 節の「does not re-expose」、How this log is maintained（working detail を除外、planning は rfcs/、ADR-0025） |
-| authorship-strategy | docs/adr/0012-link-index-channel-selection.md:178-184 | 具体名を本文から抽象化した記録（large skill-component registry、eight community-curated link directories）。「抽象化の水準」の出所 |
-| authorship-strategy | docs/adr/0014-implementation-tracking-two-tier-ledger.md:33-40,52-67,129-136 | 二層（private ledger + public projection）の原典。:24-25, 60-63, 135-136 が ADR-0025 による注記。Decision 3-4 は有効 |
-| authorship-strategy | docs/adr/0023-empirical-layer-role.md:65-67, 87, 317-318 | log を intervention-record genre として empirical 層に置く。:87 に「もはや private ledger の projection ではない」の注記 |
-| authorship-strategy | docs/adr/0024-success-as-arrival-at-the-dated-record.md:135-170 | Decision 4 は evidence-tier を private ledger に記録と書く（:145-150、:163-170 に ADR-0025 注記）。Decision 5 は「両戦略に効く行為は両方の ledger に記録」（:151-161）、注記は「PB の行為は PB の act log を読み、写さない」（:168-170） |
-| authorship-strategy | docs/adr/0025-planning-and-task-state-in-a-public-rfc-store.md:93-116, 173-177 | Decision 2（log は別文書で planning を書かない）、Decision 3（機微は非公開で link、filename にも書かない、公開前に verify-public-detail.sh と著者が diff を読む）、Decision 4（1 commit）、Decision 5（旧 ledger は非公開 archive）。:173-177 Consequences に「ledger を名指した文書・scheduled task・sibling program の ledger が変わる」 |
+| authorship-strategy | docs/decision-history/0012-link-index-channel-selection.md:178-184 | 具体名を本文から抽象化した記録（large skill-component registry、eight community-curated link directories）。「抽象化の水準」の出所 |
+| authorship-strategy | docs/decision-history/0014-implementation-tracking-two-tier-ledger.md:33-40,52-67,129-136 | 二層（private ledger + public projection）の原典。:24-25, 60-63, 135-136 が ADR-0025 による注記。Decision 3-4 は有効 |
+| authorship-strategy | docs/decision-history/0023-empirical-layer-role.md:65-67, 87, 317-318 | log を intervention-record genre として empirical 層に置く。:87 に「もはや private ledger の projection ではない」の注記 |
+| authorship-strategy | docs/decision-history/0024-success-as-arrival-at-the-dated-record.md:135-170 | Decision 4 は evidence-tier を private ledger に記録と書く（:145-150、:163-170 に ADR-0025 注記）。Decision 5 は「両戦略に効く行為は両方の ledger に記録」（:151-161）、注記は「PB の行為は PB の act log を読み、写さない」（:168-170） |
+| authorship-strategy | docs/decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md:93-116, 173-177 | Decision 2（log は別文書で planning を書かない）、Decision 3（機微は非公開で link、filename にも書かない、公開前に verify-public-detail.sh と著者が diff を読む）、Decision 4（1 commit）、Decision 5（旧 ledger は非公開 archive）。:173-177 Consequences に「ledger を名指した文書・scheduled task・sibling program の ledger が変わる」 |
 | authorship-strategy | CLAUDE.md / AGENTS.md | 行為ログ・実施記録の規則は無い（「保守規約の該当節を参照」のみ）。2 本は同内容に保つ規約 |
 | zenn-content | CLAUDE.md:13, 54-60, 72-73 | schedule.json と metrics の用途（上 G, H） |
 | hub repo | CLAUDE.md | 行為ログの規則は無い（traffic 計測・dataset mirror の記述のみ） |
@@ -97,8 +97,8 @@ as-of 2026-10-12。非公開 repo の中身は引用しない。所在は `<repo
 
 - AS の旧型（private ledger + public projection）と同型の「行為の私的原簿 + 公開の投影」は、AS 以外に見つからなかった。AS 自身もすでに ADR-0025（2026-10-12）で撤去済み（ADR-0014 の Decision 1 と台帳が真の原典である点を supersede。Decision 3-4 は有効）。
 - 類縁（行為ログではない）:
-  - claude-harness ADR-0049（~/.claude/docs/adr/0049-unify-task-ledger-into-public-rfcs.md）: 台帳を公開 rfcs/ に一元化。AS ADR-0025 の原型。
-  - contemplative-agent ADR-0094 / 0095（contemplative-agent:docs/adr/0095-retire-task-ledger-machinery.md）: task ledger の機構を退役。
+  - claude-harness ADR-0049（~/.claude/docs/decision-history/0049-unify-task-ledger-into-public-rfcs.md）: 台帳を公開 rfcs/ に一元化。AS ADR-0025 の原型。
+  - contemplative-agent ADR-0094 / 0095（contemplative-agent:docs/decision-history/0095-retire-task-ledger-machinery.md）: task ledger の機構を退役。
   - contemplative-agent の episode log: 生ログは非公開（非公開の DR mirror がある）、公開 dataset（contemplative-agent-data）には載せない（DATACARD.md:89,104）。エージェントの行為の「原簿と公開の濃縮」だが、著者の行為ログとは別。
   - PB の行為ログは AS の公開 log に読まれる側（写しなし）。今回の規約で PB の行為を公開の 1 本へ移すと、この読み取り関係が消える。
 
@@ -126,13 +126,13 @@ as-of 2026-10-12。非公開 repo の中身は引用しない。所在は `<repo
 | 同 :95-104, 115-123, 134-144, 152-159 | 節頭の散文（目的・枠付け） | 理由の散文を含む。新規約の「理由は rfc か .notes/」との関係を決める要（散文は節の目的で行為の理由か不明） |
 | 同 :198-217「Not yet done」/ :219-229「Explicitly out of scope」 | 未実施・見送りの記録 | 行為ログは「行った行為」のみ。見送りと pending の置き場の決定（rfcs/ か log に残すか） |
 | 同 :231-245 How this log is maintained | 運用規則（working detail 除外、ADR-0025） | 新規約と二重定義になる。書き換えまたは maintenance.md への参照化 |
-| docs/adr/0024-success-as-arrival-at-the-dated-record.md:151-170 | Decision 5 と注記（PB の行為は PB の act log を読み、写さない） | 反転箇所。supersede か注記かは ADR の扱い（akc-cycle.md の ADR 扱い）で lead が決める |
-| docs/adr/0025-planning-and-task-state-in-a-public-rfc-store.md:93-96, 97-104 | log は別文書。機微は非公開で link。verify-public-detail.sh | 実施元つき・名指し規約と整合の確認。Decision 2 の「planning は log に書かない」は新規約の「理由は rfc」と同方向 |
-| docs/adr/0014-implementation-tracking-two-tier-ledger.md:33-40, 129-136 | 二層（歴史記録）。:130 に log の説明 | 歴史記録。:24-25, 60-63, 135-136 に注記済み。新規約では追加注記が要るか判断 |
-| docs/adr/0023-empirical-layer-role.md:65-67, 87 | intervention-record genre の定義 | 公開 log の範囲が変わるなら :65-67 の記述確認 |
-| docs/adr/0012-link-index-channel-selection.md:178-184 | 抽象化の出所 | 歴史記録（Alternatives / Lineage 相当）。書き換え対象ではなく、新規約が ADR-0012 の抽象化水準を行為ログには適用しないことの根拠として参照される |
+| docs/decision-history/0024-success-as-arrival-at-the-dated-record.md:151-170 | Decision 5 と注記（PB の行為は PB の act log を読み、写さない） | 反転箇所。supersede か注記かは ADR の扱い（akc-cycle.md の ADR 扱い）で lead が決める |
+| docs/decision-history/0025-planning-and-task-state-in-a-public-rfc-store.md:93-96, 97-104 | log は別文書。機微は非公開で link。verify-public-detail.sh | 実施元つき・名指し規約と整合の確認。Decision 2 の「planning は log に書かない」は新規約の「理由は rfc」と同方向 |
+| docs/decision-history/0014-implementation-tracking-two-tier-ledger.md:33-40, 129-136 | 二層（歴史記録）。:130 に log の説明 | 歴史記録。:24-25, 60-63, 135-136 に注記済み。新規約では追加注記が要るか判断 |
+| docs/decision-history/0023-empirical-layer-role.md:65-67, 87 | intervention-record genre の定義 | 公開 log の範囲が変わるなら :65-67 の記述確認 |
+| docs/decision-history/0012-link-index-channel-selection.md:178-184 | 抽象化の出所 | 歴史記録（Alternatives / Lineage 相当）。書き換え対象ではなく、新規約が ADR-0012 の抽象化水準を行為ログには適用しないことの根拠として参照される |
 | scripts/verify-public-detail.sh:84-86 | TARGETS = rfcs/*.md と implementation-log.md | 公開行為ログの path が変われば追加。LLM prompt（:28-42）は新規約とほぼ同じ線 |
-| 他の参照: docs/adoption.md:155, docs/empirical/README.md:130,133, docs/empirical/tactic-lifecycle.md:13,97,109,111, rfcs/README.md:7, rfcs/0002-search-index-admission.md:25, llms.txt:26,57,97, llms-full.txt:548,722,827, graph.jsonld:350,869,1365, docs/adr/README.md:334 | log を指す・説明する箇所 | log の名前と位置が変わらなければ書き換え不要。説明文（「intervention timeline」「methods companion」）が範囲変更で食い違うなら要確認。*.ja.md の対（ADR 日本語版）にも同じ行がある |
+| 他の参照: docs/adoption.md:155, docs/empirical/README.md:130,133, docs/empirical/tactic-lifecycle.md:13,97,109,111, rfcs/README.md:7, rfcs/0002-search-index-admission.md:25, llms.txt:26,57,97, llms-full.txt:548,722,827, graph.jsonld:350,869,1365, docs/decision-history/README.md:334 | log を指す・説明する箇所 | log の名前と位置が変わらなければ書き換え不要。説明文（「intervention timeline」「methods companion」）が範囲変更で食い違うなら要確認。*.ja.md の対（ADR 日本語版）にも同じ行がある |
 
 ### PB 側
 
@@ -158,7 +158,7 @@ PB 側の書き換え箇所は scorecard の行為ログ節、strategy の記録
 ## 確認
 
 読んだ範囲:
-- 全文 Read: authorship-strategy:docs/empirical/implementation-log.md（257 行）、docs/maintenance.md、docs/adr/0025（:86-117）、0024（:100-180）、0012（:170-185）、CLAUDE.md、~/.claude/scheduled-tasks の listing-pr-daily / listing-explore-rotation / akc-plugin-catalog-watch / plugin-directory-status、authorship-strategy:scripts/verify-public-detail.sh（:1-100）。
+- 全文 Read: authorship-strategy:docs/empirical/implementation-log.md（257 行）、docs/maintenance.md、docs/decision-history/0025（:86-117）、0024（:100-180）、0012（:170-185）、CLAUDE.md、~/.claude/scheduled-tasks の listing-pr-daily / listing-explore-rotation / akc-plugin-catalog-watch / plugin-directory-status、authorship-strategy:scripts/verify-public-detail.sh（:1-100）。
 - 部分的に Read / Grep: PB の文書（該当行のみ）、AS の ADR-0014、harness の rfc-writer / task-stocktake / authorship-strategy skill / action-review、zenn-content の CLAUDE.md・schedule.json（先頭 12 行）・snapshots.jsonl（先頭 2 行）、各 repo の CLAUDE.md / README の先頭数行、各 repo の `.git/logs/HEAD` 末尾行と `.git/config`。
 - 数え方: AS log の表の行数は implementation-log.md の行番号から数えた（10 表、45 行）。一般語で伏せた行は §3 に行番号を列挙して数えた（約 20、行ごとの判定は主観を含む）。PB 行為ログ・Recognition ログのデータ行は 0（表の見出し行の直後に空行）。ファイルの行数は Grep の `.` count（空行を除く可能性があり、±数行）。
 - 読んでいない: PB の listing-queue / inbox の中身（行数だけ）、AS の `.notes/` 配下（非公開メモ）、daily-research の記録ファイル、各 `.notes/wiki-harvest/ledger.md` の中身、zenn-content の `.notes/note-publishing/`。

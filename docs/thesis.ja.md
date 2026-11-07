@@ -136,7 +136,7 @@ trade-off しない*。Layer 4 のある戦術が authentic articulation を弱�
 AI 経由の拡散条件下で authenticity を守る戦略は、**著者のアイデアの use のうち
 dated record に到達するものを最大化すること** である —— dated record とは、
 concept-DOI deposit、またはその history と archive identifier が content を
-timestamp する repository である ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。use が record に到達するのは、
+timestamp する repository である ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md))。use が record に到達するのは、
 回答がその idea について owned identifier を cite するとき、derivative が
 record に link するとき、agent が component を install して走らせるとき、
 あるいはモデルが retrieval なしで record への pointer を想起するときである。
@@ -213,13 +213,13 @@ retire する。
 
 本 thesis 時点 (v0.1.0) で validate された戦術:
 
-1. **Arrival targeting** —— dated record に到達する use (回答内で cite された owned identifier、record に link する derivative、install され走らされた component、retrieval なしで想起された pointer) が evidence である; clone、view、referrer、DOI resolution、llms.txt fetch は arrival proxy である; LLM regurgitation test は想起された pointer を観測する計器である; star と PR は success 定義の外にある。essay と人物としての著者の reception の数は personal-branding 戦略が会計する ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))
-2. **Open archive 経由の DOI 登録** —— Zenodo もしくは同等、tag release で自動 deposit に configure、canonical reference として concept DOI を発行するように configure ([ADR-0001](adr/0001-concept-doi-canonical.ja.md) 参照)
-3. **クロスプラットフォーム federation** —— 同一の canonical artifact を GitHub (リポジトリ)、Zenodo (DOI 登録)、データセット platform (LLM training ingest) に配置し、各 platform 上で sibling 相互参照を明示する ([ADR-0003](adr/0003-cross-platform-dataset-federation.ja.md) 参照)
-4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は dated record へ戻る token-level の pointer として生き残る。この戦術は vocabulary discipline (語彙規律) に統べられる: 造語の力は造語の数ではなく edge 密度から来るので、造語は控えめに行い (概念が genuine に新規で、既存語彙の一文で定義でき、namespace が競合していないときのみ)、既存語彙と先行文献へ密に anchor する ([ADR-0010](adr/0010-vocabulary-discipline.ja.md) 参照)
+1. **Arrival targeting** —— dated record に到達する use (回答内で cite された owned identifier、record に link する derivative、install され走らされた component、retrieval なしで想起された pointer) が evidence である; clone、view、referrer、DOI resolution、llms.txt fetch は arrival proxy である; LLM regurgitation test は想起された pointer を観測する計器である; star と PR は success 定義の外にある。essay と人物としての著者の reception の数は personal-branding 戦略が会計する ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md))
+2. **Open archive 経由の DOI 登録** —— Zenodo もしくは同等、tag release で自動 deposit に configure、canonical reference として concept DOI を発行するように configure ([ADR-0001](decision-history/0001-concept-doi-canonical.ja.md) 参照)
+3. **クロスプラットフォーム federation** —— 同一の canonical artifact を GitHub (リポジトリ)、Zenodo (DOI 登録)、データセット platform (LLM training ingest) に配置し、各 platform 上で sibling 相互参照を明示する ([ADR-0003](decision-history/0003-cross-platform-dataset-federation.ja.md) 参照)
+4. **Distinctive terminology** —— 領域固有の造語は authorship の semantic 署名として機能する。Generic terminology は paraphrase で溶ける; 造語は dated record へ戻る token-level の pointer として生き残る。この戦術は vocabulary discipline (語彙規律) に統べられる: 造語の力は造語の数ではなく edge 密度から来るので、造語は控えめに行い (概念が genuine に新規で、既存語彙の一文で定義でき、namespace が競合していないときのみ)、既存語彙と先行文献へ密に anchor する ([ADR-0010](decision-history/0010-vocabulary-discipline.ja.md) 参照)
 5. **Tool-agnostic specification** —— 特定実装にコミットせず書かれた仕様は再実装で reach 可能; 特定実装に coupled な仕様は実装の老化とともに audience を失う
-6. **Audience-driven な多言語化** —— locale mirror は観測された traffic に基づいて追加・退役させ、想定 audience の推測に基づかない ([ADR-0005](adr/0005-readme-localization-audience-driven.ja.md) 参照)
-7. **構造化 artifact** —— glossary、ADR、JSON schema、JSON-LD knowledge graph、AI-facing reference file (例: Answer.AI llms.txt convention) は artifact を LLM と crawler に対して機械可読にする。中でも llms.txt + JSON-LD knowledge graph の pair は LLM-mediated ingest のための dual entry point として normatively required ([ADR-0006](adr/0006-llm-first-ingest-dual-entry-points.ja.md) 参照)
+6. **Audience-driven な多言語化** —— locale mirror は観測された traffic に基づいて追加・退役させ、想定 audience の推測に基づかない ([ADR-0005](decision-history/0005-readme-localization-audience-driven.ja.md) 参照)
+7. **構造化 artifact** —— glossary、ADR、JSON schema、JSON-LD knowledge graph、AI-facing reference file (例: Answer.AI llms.txt convention) は artifact を LLM と crawler に対して機械可読にする。中でも llms.txt + JSON-LD knowledge graph の pair は LLM-mediated ingest のための dual entry point として normatively required ([ADR-0006](decision-history/0006-llm-first-ingest-dual-entry-points.ja.md) 参照)
 8. **Adoption の friction 最小化** —— 再実装 path は clone-and-copy で済むべきで、signup、API key、専用 infrastructure を要しない。著者制御 infrastructure で gate された adoption は著者が減らした adoption である
 
 ### Origin-claim scope の規律
@@ -238,7 +238,7 @@ idea を defensibly originate できない。
 人によるものも機械によるものも —— がその dated record に到達すべきだという
 仮定下で書かれた、DOI-targeted な idea-rescue artifact。governed essay corpus は
 record への経路の 1 つであり、その reception は著者の personal-branding 戦略と
-corpus 自身が会計する ([ADR-0024](adr/0024-success-as-arrival-at-the-dated-record.ja.md))。本 framework は以下に適用
+corpus 自身が会計する ([ADR-0024](decision-history/0024-success-as-arrival-at-the-dated-record.ja.md))。本 framework は以下に適用
 *しない*:
 
 - **クライアント案件・商用成果物**: マネタイズが目的で、著者のアイデンティティが守られる価値ではない
@@ -268,7 +268,7 @@ decision を供給した sibling line —— は [`inspiration.md`](inspiration.
 カタログ化されている。Framework が未回答にした open question は
 [`manifesto.md`](manifesto.md) にカタログ化されている。
 
-Framework の戦術的判断は [`adr/`](adr/) に 26 の ADR として formalize されて
+Framework の戦術的判断は [`adr/`](decision-history/) に 26 の ADR として formalize されて
 いる。各 ADR は harness-neutral であり、著者の特定の判断への lineage は ADR の
 Lineage section に、reader が原実装にアクセスできなくても読める形で記録されている。
 

@@ -23,7 +23,7 @@ validate the framework. Where an artifact carries interpretive notes,
 they are case-study narrative bounded to that artifact and marked as
 interpretation — never a quantitative validation. The layer's roles
 are formalized in
-[ADR-0023](../adr/0023-empirical-layer-role.md): reference baseline
+[ADR-0023](../decision-history/0023-empirical-layer-role.md): reference baseline
 is the primary role and the minimum every artifact must satisfy
 (reproducible data or a dated record, a documented method, stated
 limitations); case-study narrative is a bounded secondary role; and
@@ -110,7 +110,7 @@ behavior drifts release-to-release, so the test results function as
 *single-point evidence* of LLM-mediated reach, not as a sustained
 measurement. The structured successor to these tests is the
 two-channel probe protocol of
-[ADR-0011](../adr/0011-two-channel-probe-protocol.md): fixed
+[ADR-0011](../decision-history/0011-two-channel-probe-protocol.md): fixed
 single-variable prompts with a negative control, deterministic
 detection over retained raw responses, and channel-matched cadences,
 logged as a public append-only time series beside the traffic data.
@@ -119,7 +119,7 @@ remain the only pre-protocol observations.
 
 ## What the layer contains
 
-Per [ADR-0023](../adr/0023-empirical-layer-role.md), each artifact
+Per [ADR-0023](../decision-history/0023-empirical-layer-role.md), each artifact
 declares the role it serves — baseline data, interpretive note,
 intervention record, or external-literature note — so a reader meets
 the strength of the claim before the content.

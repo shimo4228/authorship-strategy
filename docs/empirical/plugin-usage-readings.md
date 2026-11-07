@@ -1,7 +1,7 @@
 # Plugin Usage Readings (from 2026-10)
 
 *Role: baseline data (dated console readings), per
-[ADR-0023](../adr/0023-empirical-layer-role.md).*
+[ADR-0023](../decision-history/0023-empirical-layer-role.md).*
 
 Two of the author's repositories are listed in Anthropic's Claude plugin
 directory: [`akc-cycle`](https://github.com/shimo4228/akc-cycle) (listed
@@ -16,7 +16,7 @@ installed, loaded and run without the reader meeting the concept it
 implements or its dated record. The readings are kept apart from the
 admission readings ([`admission-readings.md`](admission-readings.md))
 and make no claim about ideas reaching the record
-([ADR-0024](../adr/0024-success-as-arrival-at-the-dated-record.md)).
+([ADR-0024](../decision-history/0024-success-as-arrival-at-the-dated-record.md)).
 
 ## What is read
 

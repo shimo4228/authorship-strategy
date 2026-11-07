@@ -16,7 +16,7 @@ ecosystem: the four **component skills** the doctrine names, the always-loaded
 | [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph) | Companion JSON-LD knowledge-graph writer for stable concept-level structure (Layer 4 tactic 7) | **Component** |
 | [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules) | The framework as a single always-loaded rule, formerly the deterministic counterpart to the skill; **frozen 2026-07**, no longer synced or developed, superseded by [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill); listed for historical traceability | Rule (frozen) |
 | [`readme-writer`](https://github.com/shimo4228/readme-writer) | Human-facing README writer and review workflow (the human-surface counterpart to `llms-txt-writer`) | Adjacent |
-| [`wikidata-federation`](https://github.com/shimo4228/wikidata-federation) | Community-authority-record federation for researchers, papers, and repositories — **retired 2026-07** after the host's governance revoked the self-created entries ([ADR-0021](../adr/0021-self-sovereign-entity-grounding.md)); listed for historical traceability | Adjacent (retired) |
+| [`wikidata-federation`](https://github.com/shimo4228/wikidata-federation) | Community-authority-record federation for researchers, papers, and repositories — **retired 2026-07** after the host's governance revoked the self-created entries ([ADR-0021](../decision-history/0021-self-sovereign-entity-grounding.md)); listed for historical traceability | Adjacent (retired) |
 | [`doctrine-corpus`](https://github.com/shimo4228/doctrine-corpus) | Bilingual judgment-eliciting Q&A corpus across the sibling research lines ([DOI 10.5281/zenodo.20337008](https://doi.org/10.5281/zenodo.20337008)) | Data sibling |
 | [`existence-proof`](https://github.com/shimo4228/existence-proof) | Pre-line complement: verifiable institution-grade artifacts by credential-less creators ([DOI 10.5281/zenodo.20558800](https://doi.org/10.5281/zenodo.20558800)) | Complement |
 | [`einstein-arena`](https://github.com/shimo4228/einstein-arena) | A worked instance of the Existence Proof Format, anchored to a public repository and an external arena | Complement |
@@ -30,11 +30,11 @@ discipline it executes — is explicitly named in the doctrine (`thesis.md`, the
 ADRs, or the Layer 4 tactic list):
 
 - The **judgment framework itself** (three-axis inversion, four-layer stack, prohibited/encouraged actions) → [`authorship-strategy-skill`](https://github.com/shimo4228/authorship-strategy-skill). Its former always-loaded counterpart, [`authorship-strategy-rules`](https://github.com/shimo4228/authorship-strategy-rules), has been frozen since July 2026.
-- The **identifier-federation triplet** (ADRs [0001](../adr/0001-concept-doi-canonical.md)–[0003](../adr/0003-cross-platform-dataset-federation.md)) → [`release-doi`](https://github.com/shimo4228/release-doi).
+- The **identifier-federation triplet** (ADRs [0001](../decision-history/0001-concept-doi-canonical.md)–[0003](../decision-history/0003-cross-platform-dataset-federation.md)) → [`release-doi`](https://github.com/shimo4228/release-doi).
 - The **`llms.txt` convention** (Layer 4 tactic 7) → [`llms-txt-writer`](https://github.com/shimo4228/llms-txt-writer).
 - **JSON-LD knowledge graphs** (Layer 4 tactic 7) → [`jsonld-knowledge-graph`](https://github.com/shimo4228/jsonld-knowledge-graph).
 
-`readme-writer` and `wikidata-federation` are **adjacent**, not components: README quality and authority-record federation are useful but not doctrine-named, so a framework-applied repository is complete without them. `wikidata-federation` is additionally **retired as a tactic** ([ADR-0021](../adr/0021-self-sovereign-entity-grounding.md)): self-created entries in community-governed authority records were revoked by the host's governance, and the doctrine now prohibits re-deploying them.
+`readme-writer` and `wikidata-federation` are **adjacent**, not components: README quality and authority-record federation are useful but not doctrine-named, so a framework-applied repository is complete without them. `wikidata-federation` is additionally **retired as a tactic** ([ADR-0021](../decision-history/0021-self-sovereign-entity-grounding.md)): self-created entries in community-governed authority records were revoked by the host's governance, and the doctrine now prohibits re-deploying them.
 
 ## Skill vs. rule
 

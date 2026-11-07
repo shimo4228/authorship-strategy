@@ -203,7 +203,7 @@ a wiki-harvest hardening pass over the knowledge graph.
 ### Sunset
 
 - Self-created authority-record federation is permanently retired as a
-  Layer 4 tactic ([ADR-0021](docs/adr/0021-self-sovereign-entity-grounding.md)).
+  Layer 4 tactic ([ADR-0021](docs/decision-history/0021-self-sovereign-entity-grounding.md)).
   All revoked Wikidata `sameAs` edges are purged from `graph.jsonld`
   (including the nineteen `ExternalReference` QIDs injected earlier the
   same week), and the retired `wikidata-federation` component is marked
@@ -299,7 +299,7 @@ carrier.
 
 ### Fixed
 
-- `docs/inspiration.md` numeric drift: four "seven ADRs" claims left over from a seven-ADR era. The "Operational origins" section is reframed as the *founding* ADRs (0001–0007) — a stable historical set — with the total count and the full list delegated to the canonical ADR index (`docs/adr/README.md`), so the section no longer restates a drift-prone current total.
+- `docs/inspiration.md` numeric drift: four "seven ADRs" claims left over from a seven-ADR era. The "Operational origins" section is reframed as the *founding* ADRs (0001–0007) — a stable historical set — with the total count and the full list delegated to the canonical ADR index (`docs/decision-history/README.md`), so the section no longer restates a drift-prone current total.
 
 ### Notes
 
@@ -419,7 +419,7 @@ comparison* limitation calls for.
 
 ### Changed
 
-- ADR-count surfaces updated from twelve to thirteen across all carriers (root README en/ja, llms.txt, llms-full.txt, CLAUDE.md, CODEMAPS; `docs/adr/README` en/ja extended with the intrinsic-identifier-decision paragraph). llms-full.txt gains the full ADR-0013 entry, the cluster-narrative sentence, the implementation-log mention in the empirical answer, and the "answered by ADR-0013" note on manifesto open question 4.
+- ADR-count surfaces updated from twelve to thirteen across all carriers (root README en/ja, llms.txt, llms-full.txt, CLAUDE.md, CODEMAPS; `docs/decision-history/README` en/ja extended with the intrinsic-identifier-decision paragraph). llms-full.txt gains the full ADR-0013 entry, the cluster-narrative sentence, the implementation-log mention in the empirical answer, and the "answered by ADR-0013" note on manifesto open question 4.
 - `docs/empirical/README.md` "What the layer contains" gains the implementation-log entry; CODEMAPS document-role index gains the implementation-log row and notes the empirical layer's English-only convention.
 
 ## [0.5.0] - 2026-06-13
@@ -442,7 +442,7 @@ layer's probe baseline.
 
 ### Changed
 
-- ADR-count surfaces updated from ten to twelve across all carriers (root README en/ja, llms.txt, llms-full.txt, CLAUDE.md, CODEMAPS); `docs/adr/README` (en/ja) extended with the measurement-instrument and channel-selection paragraphs; the diffusion-mechanism cluster becomes 0008-0011. The llms.txt / llms-full.txt ADR catalogs gain the ADR-0011 and ADR-0012 entries in the same pass.
+- ADR-count surfaces updated from ten to twelve across all carriers (root README en/ja, llms.txt, llms-full.txt, CLAUDE.md, CODEMAPS); `docs/decision-history/README` (en/ja) extended with the measurement-instrument and channel-selection paragraphs; the diffusion-mechanism cluster becomes 0008-0011. The llms.txt / llms-full.txt ADR catalogs gain the ADR-0011 and ADR-0012 entries in the same pass.
 - `docs/empirical/README.md`: the single-window regurgitation-test limitation now points to ADR-0011's protocol as its structured successor; the paragraph is retained as the record of the only pre-protocol observations. "What the layer contains" gains the probe baseline.
 
 ## [0.4.0] - 2026-06-11
@@ -467,7 +467,7 @@ edges.
 
 ### Changed
 
-- ADR-count surfaces updated from nine to ten; `docs/adr/README` (en/ja) extended with the vocabulary-discipline cluster paragraph; the diffusion-mechanism pair (0008-0009) becomes the diffusion-mechanism cluster (0008-0010).
+- ADR-count surfaces updated from nine to ten; `docs/decision-history/README` (en/ja) extended with the vocabulary-discipline cluster paragraph; the diffusion-mechanism pair (0008-0009) becomes the diffusion-mechanism cluster (0008-0010).
 - `docs/thesis` (en/ja): Layer 4 tactic 4 (Distinctive terminology) now states the coinage discipline — coin sparingly (join-novelty, one-sentence definability in existing vocabulary, uncontested namespace), anchor densely — with a reference to ADR-0010.
 - `graph.jsonld`: added the ADR-0010 node (`extends` ADR-0008), a `vocabulary-discipline` concept (appliesTo distinctive-terminology, downstream of two-channel-attribution-diffusion and origin-claim-scope-discipline), the ADR-0010 instantiation in the Tactics layer, and the vocabulary-discipline keyword; distinctive-terminology description updated; Dataset and ResearchLine descriptions updated to ten ADRs.
 - `llms.txt` / `llms-full.txt`: ADR list and cluster prose extended with ADR-0010; concept count updated to eighteen.
@@ -501,7 +501,7 @@ surfaces.
 
 ### Changed
 
-- ADR-count surfaces updated from seven to nine; `docs/adr/README` measurement cluster extended with ADR-0008 and the LLM-first ingest cluster annotated as amended by ADR-0009. ADR-0006 carries a forward-reference note to ADR-0009.
+- ADR-count surfaces updated from seven to nine; `docs/decision-history/README` measurement cluster extended with ADR-0008 and the LLM-first ingest cluster annotated as amended by ADR-0009. ADR-0006 carries a forward-reference note to ADR-0009.
 - `graph.jsonld`: added the ADR-0008 and ADR-0009 nodes (both `extends` ADR-0006), a `two-channel-attribution-diffusion` concept downstream of Attribution Diffusion, the two ADRs in the Tactics-layer instantiation list, and the asymmetric-rebalance amendment to the `dual-entry-point` concept (now `instantiatedBy` ADR-0006 and ADR-0009). Dataset description updated to nine ADRs.
 - `llms.txt` / `llms-full.txt`: ADR list and cluster prose extended with ADR-0008 and ADR-0009; concept count updated to seventeen.
 - `README` (en/ja), `docs/thesis` (en/ja), `docs/CODEMAPS/architecture`: ADR count updated to nine; ADR table extended.
@@ -527,7 +527,7 @@ surfaces.
 
 ### Changed
 
-- ADR-count surfaces updated from six to seven; `docs/adr/README` regrouped into four clusters (added the metric-rejection cluster).
+- ADR-count surfaces updated from six to seven; `docs/decision-history/README` regrouped into four clusters (added the metric-rejection cluster).
 - `graph.jsonld`: added the ADR-0007 node, a `human-attention-signal-rejection` concept downstream of the scarcity-to-diffusion axis, and the ADR-0007 instantiation in the Tactics layer; Dataset description updated to seven ADRs / four clusters.
 - `llms.txt`: ADR list completed (ADR-0006 was absent) and extended with ADR-0007; cluster prose updated.
 
@@ -544,7 +544,7 @@ Initial public release.
 v0.1.0 version DOI (for reproducibility citation only): [10.5281/zenodo.20263317](https://doi.org/10.5281/zenodo.20263317)
 
 The off-by-one between concept DOI (20263316) and initial version DOI
-(20263317) follows the pattern documented in [ADR-0001](docs/adr/0001-concept-doi-canonical.md);
+(20263317) follows the pattern documented in [ADR-0001](docs/decision-history/0001-concept-doi-canonical.md);
 this CHANGELOG entry preserves both values as historical record per
 ADR-0001's exception for changelog and history files.
 
